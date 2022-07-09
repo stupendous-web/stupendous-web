@@ -22,6 +22,7 @@ const nextConfig = {
       });
     return result;
   },
+  exclude: ["/services"],
 };
 
 module.exports = nextConfig;

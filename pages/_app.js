@@ -5,6 +5,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import { store } from "../redux/store";
 import { Provider } from "react-redux";
+import "../analytics";
 
 import Pride from "../components/Pride";
 import Footer from "../components/Footer";

@@ -56,7 +56,7 @@ export default function Contact() {
           <div className={"uk-flex-middle"} uk-grid={""}>
             <div className={"uk-width-1-3@s uk-visible@s"}>
               <img
-                src={"/images/isometrics/isometric-2-2.png"}
+                src={"/images/isometrics/isometric-2-3.png"}
                 alt={"Web App Development Services"}
               />
             </div>

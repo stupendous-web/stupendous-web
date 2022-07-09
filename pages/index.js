@@ -412,7 +412,7 @@ export default function Home() {
               <FontAwesomeIcon icon={faCheck} /> Bookings and Events Calendars
             </li>
             <li>
-              <FontAwesomeIcon icon={faCheck} /> Direct Messaging and Chatrooms
+              <FontAwesomeIcon icon={faCheck} /> Direct Messaging and Chat Rooms
             </li>
             <li>
               <FontAwesomeIcon icon={faCheck} /> Email, SMS, and Browser
