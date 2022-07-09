@@ -6,18 +6,13 @@ if (typeof window !== "undefined") {
     path.substring(1) === document.referrer.split("/")[3]
       ? "Direct"
       : document.referrer;
-  if (window.location.hostname !== "localhost") {
-    axios.post("https://analytics.stupendousweb.com/api/store", {
-      id: "stupendous-web",
+  axios
+    .post("http://analytics.stupendousweb.com/api/store", {
+      site: "stupendous-web",
       path: path,
       referrer: referrer,
-      date: new Date(),
+    })
+    .then((response) => {
+      console.log(response.data);
     });
-    console.log({
-      id: "stupendous-web",
-      path: path,
-      referrer: referrer,
-      date: new Date(),
-    });
-  }
 }
