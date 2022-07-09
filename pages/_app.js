@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import uikit from "uikit";
 import "../styles/uikit/uikit.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -12,12 +13,11 @@ import Footer from "../components/Footer";
 import Menu from "../components/Menu";
 import Loading from "../components/Loading";
 import Cursor from "../components/Cursor";
-import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     init({ url: "https://analytics.stupendousweb.com/", siteId: 1 });
-  }, [0]);
+  }, []);
   return (
     <Provider store={store}>
       <Component {...pageProps} />
