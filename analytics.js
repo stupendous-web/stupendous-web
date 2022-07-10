@@ -6,6 +6,8 @@ analytics.page().then((data) => {
   const properties = data.payload.properties;
   axios
     .post("https://analytics.stupendousweb.com/api/capture", {
+      site: "stupendous-web",
+      anonymousId: data.payload.anonymousId,
       path: properties.path,
       referrer: properties.referrer,
       height: properties.height,
