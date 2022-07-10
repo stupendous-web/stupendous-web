@@ -6,16 +6,13 @@ analytics
   .page((data) => {
     const properties = data.payload.properties;
     axios
-      .post(
-        "https://analytics-lp6sqqsdd-stupendous-web.vercel.app/api/capture",
-        {
-          path: properties.path,
-          referrer: properties.referrer,
-          search: properties.search,
-          height: properties.height,
-          width: properties.width,
-        }
-      )
+      .post("https://analytics-lac.vercel.app//api/capture", {
+        path: properties.path,
+        referrer: properties.referrer,
+        search: properties.search,
+        height: properties.height,
+        width: properties.width,
+      })
       .then((response) => {
         console.log(response.data);
       });
