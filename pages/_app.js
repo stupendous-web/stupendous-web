@@ -5,7 +5,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import { store } from "../redux/store";
 import { Provider } from "react-redux";
-import "../analytics";
+import Analytics from "../components/Analytics";
 
 import Pride from "../components/Pride";
 import Footer from "../components/Footer";
@@ -15,14 +15,17 @@ import Cursor from "../components/Cursor";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-      <Pride />
-      <Footer />
-      <Menu />
-      <Loading />
-      <Cursor />
-    </Provider>
+    <>
+      <Analytics />
+      <Provider store={store}>
+        <Component {...pageProps} />
+        <Pride />
+        <Footer />
+        <Menu />
+        <Loading />
+        <Cursor />
+      </Provider>
+    </>
   );
 }
 
