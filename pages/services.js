@@ -27,11 +27,12 @@ export default function Services() {
               />
             </div>
             <div className={"uk-width-2-3@s"}>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-                delectus doloribus id nostrum quas recusandae repellat, saepe
-                voluptate! Commodi cum cumque distinctio itaque iure laboriosam
-                modi nemo quas velit voluptatibus!
+              <p className={"uk-text-justify uk-dropcap"}>
+                Let&apos;s make it easy for you to meet your goals, build
+                relationships, improve your brand, and get your product out to
+                interested customers. We&apos;ll start by building a
+                revolutionary project. Then we&apos;ll deliver it to your
+                clients and keep it modern and new!
               </p>
             </div>
           </div>
@@ -53,10 +54,12 @@ export default function Services() {
             <div className={"uk-width-1-3@s"} />
             <div className={"uk-width-2-3@s"}>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-                delectus doloribus id nostrum quas recusandae repellat, saepe
-                voluptate! Commodi cum cumque distinctio itaque iure laboriosam
-                modi nemo quas velit voluptatibus!
+                Your project is more than just a pretty website. My web app
+                development services are more comprehensive. I&apos;m focused on
+                launching a project for you that excels your brand. I&apos;m
+                going to build you a top-of-the-line web application, give it a
+                place on the web so your community can find it and connect with
+                you, and maintain the project even after it&apos;s done.
               </p>
               <h2>Web App Development Services</h2>
               <p>
@@ -79,10 +82,9 @@ export default function Services() {
                 <li>Chat Rooms</li>
                 <li>Image Editors</li>
               </ul>
-              <p>$50/hr.</p>
               <h2>Secure Managed Domain and Hosting</h2>
               <p>
-                There are many that goes into getting your project online
+                There are many things that go into getting your project online
                 quickly, safely, and hassle-free. I&apos;m here to help with
                 those too. I&apos;ll setup and manage your domain name, SSL
                 certificates, and on-page SEO. I&apos;m also available for
@@ -98,15 +100,18 @@ export default function Services() {
                 <li>SEO</li>
                 <li>Technical Support</li>
               </ul>
-              <p>$20/mo.</p>
               <h2>Long Term Support (LTS)</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-                delectus doloribus id nostrum quas recusandae repellat, saepe
-                voluptate! Commodi cum cumque distinctio itaque iure laboriosam
-                modi nemo quas velit voluptatibus!
+                Even well-working machines need their oil changed from time to
+                time. Web applications are just the same. They will need
+                upgrades and security updates from time to time. You may even
+                want to make minor changes occasionally. I&apos;ll keep your web
+                application up-to-date with the latest technology and safe again
+                security breaches. I&apos;ll even make minor updates as needed.
+                Long term support will keep your technology fresh, your data
+                safe, and your brand unique and desirable even after your web
+                app development services are completed.
               </p>
-              <p>$30/hr.</p>
             </div>
           </div>
         </div>

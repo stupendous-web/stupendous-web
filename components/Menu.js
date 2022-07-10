@@ -10,6 +10,12 @@ import {
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 export default function Menu() {
+  const links = [
+    { href: "projects", title: "Projects" },
+    { href: "about", title: "About" },
+    { href: "services", title: "Services" },
+    { href: "contact", title: "Contact" },
+  ];
   const [menuButtonClass, setMenuButtonClass] = useState("");
   const [closeButtonClass, setCloseButtonClass] = useState("uk-hidden");
   const [backgroundClass, setBackgroundClass] = useState("");
@@ -110,48 +116,26 @@ export default function Menu() {
             </div>
             <div className={"uk-width-2-3"}>
               <ul className={"uk-list"}>
-                <li
-                  className={"uk-h1 uk-margin-remove-bottom"}
-                  onMouseEnter={() => changeIsometric(1)}
-                  onMouseLeave={() => changeIsometric(0)}
-                >
-                  <a
-                    href={"/projects"}
-                    title={
-                      "Projects | Web App Development Services | Stupendous Web"
-                    }
-                  >
-                    Projects
-                  </a>
-                </li>
-                <li
-                  className={"uk-h1 uk-margin-remove"}
-                  onMouseEnter={() => changeIsometric(2)}
-                  onMouseLeave={() => changeIsometric(0)}
-                >
-                  <a
-                    href={"/about"}
-                    title={
-                      "About | Web App Development Services | Stupendous Web"
-                    }
-                  >
-                    About
-                  </a>
-                </li>
-                <li
-                  className={"uk-h1 uk-margin-remove"}
-                  onMouseEnter={() => changeIsometric(3)}
-                  onMouseLeave={() => changeIsometric(0)}
-                >
-                  <a
-                    href={"/contact"}
-                    title={
-                      "Contact | Web App Development Services | Stupendous Web"
-                    }
-                  >
-                    Contact
-                  </a>
-                </li>
+                {links.map((link, key) => {
+                  return (
+                    <li
+                      key={key}
+                      className={"uk-h1 uk-margin-remove"}
+                      onMouseEnter={() => changeIsometric(key + 1)}
+                      onMouseLeave={() => changeIsometric(0)}
+                    >
+                      <a
+                        href={"/" + link.href}
+                        title={
+                          link.title +
+                          " | Web App Development Services | Stupendous Web"
+                        }
+                      >
+                        {link.title}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
@@ -166,33 +150,39 @@ export default function Menu() {
           position: "fixed",
           top: 0,
           right: 0,
-          transform: "translate3d(100%,0,0)",
+          transform: "translate3d(100%, 0, 0)",
         }}
       >
         <div className={"uk-width-1-1 uk-inline"}>
           <img
-            src={"/images/isometrics/isometric-2-3.png"}
+            src={"/images/isometrics/isometric-1-1-white.png"}
             alt={"Web App Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[0] }}
           />
           <img
-            src={"/images/isometrics/isometric-3-1.png"}
+            src={"/images/isometrics/isometric-1-2-white.png"}
             alt={"Web App Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[1] }}
           />
           <img
-            src={"/images/isometrics/isometric-3-2.png"}
+            src={"/images/isometrics/isometric-2-1-white.png"}
             alt={"Web App Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[2] }}
           />
           <img
-            src={"/images/isometrics/isometric-3-3.png"}
+            src={"/images/isometrics/isometric-2-2-white.png"}
             alt={"Web App Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[3] }}
+          />
+          <img
+            src={"/images/isometrics/isometric-2-3-white.png"}
+            alt={"Web App Development Services"}
+            className={"uk-position-center uk-padding-large"}
+            style={{ opacity: isometricStyles[4] }}
           />
         </div>
       </div>

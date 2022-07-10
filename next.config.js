@@ -6,7 +6,7 @@ const nextConfig = {
   reactStrictMode: true,
   siteUrl: "https://stupendousweb.com",
   generateRobotsTxt: true,
-  additionalPaths: async (config) => {
+  additionalPaths: async () => {
     const result = [];
     await axios
       .get("https://cms.stupendousweb.com/wp-json/wp/v2/posts")
@@ -22,7 +22,6 @@ const nextConfig = {
       });
     return result;
   },
-  exclude: ["/services"],
 };
 
 module.exports = nextConfig;

@@ -2,6 +2,7 @@ export default function Navigation() {
   const links = [
     { href: "projects", title: "Projects" },
     { href: "about", title: "About" },
+    { href: "services", title: "Services" },
     { href: "contact", title: "Contact" },
   ];
   return (
