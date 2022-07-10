@@ -5,7 +5,7 @@ const analytics = Analytics({});
 analytics.page().then((data) => {
   const properties = data.payload.properties;
   axios
-    .post("https://analytics-lac.vercel.app/api/capture", {
+    .post("https://analytics.stupendousweb.com/api/capture", {
       path: properties.path,
       referrer: properties.referrer,
       height: properties.height,
