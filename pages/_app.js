@@ -16,7 +16,7 @@ import Cursor from "../components/Cursor";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Analytics />
+      <Analytics site={"stupendous-web"} />
       <Provider store={store}>
         <Component {...pageProps} />
         <Pride />
