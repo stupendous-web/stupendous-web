@@ -7,7 +7,7 @@ analytics
     const properties = data.payload.properties;
     axios
       .post(
-        "https://vercel.com/stupendous-web/analytics/oRF5qHe8S4n8MTMe1s8NDtiTnB3x/api/capture",
+        "https://vercel.com/stupendous-web/analytics/BAj6ck2vor3o4N82QnxQ2d815Zdw/api/capture",
         {
           path: properties.path,
           referrer: properties.referrer,
