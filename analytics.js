@@ -7,7 +7,7 @@ analytics
     const properties = data.payload.properties;
     axios
       .post(
-        "https://vercel.com/stupendous-web/analytics/BAj6ck2vor3o4N82QnxQ2d815Zdw/api/capture",
+        "https://analytics-lp6sqqsdd-stupendous-web.vercel.app/api/capture",
         {
           path: properties.path,
           referrer: properties.referrer,
@@ -16,6 +16,8 @@ analytics
           width: properties.width,
         }
       )
-      .then();
+      .then((response) => {
+        console.log(response.data);
+      });
   })
   .then();
