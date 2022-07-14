@@ -14,6 +14,7 @@ export default function Analytics({ site }) {
             anonymousId: data.payload.anonymousId,
             path: properties.path,
             referrer: properties.referrer,
+            search: properties.search,
             height: properties.height,
             width: properties.width,
           });
