@@ -50,26 +50,10 @@ a:hover {
         font-size: @global-xlarge-font-size !important;
     }
 }
-h5 {
-    line-height: 2.5; // For horizontal alignment on two column pages
+pre {
+    border: solid 1px @global-color;
+    padding: @global-gutter;
 }
-blockquote {
-    font-size: 1rem;
-    position: relative;
-    margin: 0;
-    padding: 0 2rem;
-}
-blockquote:before {
-    position: absolute;
-    font-size: @global-xxlarge-font-size * 2;
-    width: @global-xxlarge-font-size;
-    height: @global-xxlarge-font-size;
-    content: '“';
-    left: -@global-xxlarge-font-size;
-    top: -1rem;
-    line-height: 1;
-}
-
 ::selection {
     background: @global-primary-background;
 }
