@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import Head from "next/head";
 import { useRouter } from "next/router";
+import { useLoading } from "../../lib/context";
+import Head from "next/head";
 import axios from "axios";
 import imagesloaded from "imagesloaded";
-import { useDispatch } from "react-redux";
-import { setLoading } from "../../redux/actions";
 import moment from "moment";
 
 export default function Article() {
@@ -35,10 +34,10 @@ export default function Article() {
     }
   }, [post]);
 
-  const dispatch = useDispatch();
+  const { setLoading } = useLoading();
   useEffect(() => {
     imagesloaded(document, () => {
-      dispatch(setLoading(false));
+      setLoading(false);
     });
   }, []);
 
