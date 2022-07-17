@@ -37,7 +37,7 @@ export default function Footer() {
       <CTA />
       <div className={"uk-section uk-section-secondary uk-section-xsmall"}>
         <div className={"uk-container uk-container-small uk-text-small"}>
-          <div uk-grid={""}>
+          <div data-uk-grid={""}>
             <div className={"uk-width-1-4@s"}>
               <ul className={"uk-nav uk-nav-default"}>
                 <li className={"uk-nav-header"}>Resources</li>
