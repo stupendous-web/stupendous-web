@@ -77,38 +77,22 @@ export default function Menu() {
             <div className={"uk-width-1-3"}>
               <ul className={"uk-list"} style={{ marginTop: "9px" }}>
                 <li className={"uk-margin-remove"}>
-                  <a
-                    href={"https://www.linkedin.com/in/topherjamesknoll"}
-                    target={"_blank"}
-                    rel={"nofollow noreferrer"}
-                  >
+                  <a href={"https://www.linkedin.com/in/topherjamesknoll"}>
                     <FontAwesomeIcon icon={faLinkedin} fixedWidth />
                   </a>
                 </li>
                 <li className={"uk-margin-remove"}>
-                  <a
-                    href={"https://instagram.com/stupendousweb_"}
-                    target={"_blank"}
-                    rel={"nofollow noreferrer"}
-                  >
+                  <a href={"https://instagram.com/stupendousweb_"}>
                     <FontAwesomeIcon icon={faInstagram} fixedWidth />
                   </a>
                 </li>
                 <li className={"uk-margin-remove"}>
-                  <a
-                    href={"https://twitter.com/stupendousweb"}
-                    target={"_blank"}
-                    rel={"nofollow noreferrer"}
-                  >
+                  <a href={"https://twitter.com/stupendousweb"}>
                     <FontAwesomeIcon icon={faTwitter} fixedWidth />
                   </a>
                 </li>
                 <li className={"uk-margin-remove"}>
-                  <a
-                    href={"https://facebook.com/stupendousweb"}
-                    target={"_blank"}
-                    rel={"nofollow noreferrer"}
-                  >
+                  <a href={"https://facebook.com/stupendousweb"}>
                     <FontAwesomeIcon icon={faFacebook} fixedWidth />
                   </a>
                 </li>
