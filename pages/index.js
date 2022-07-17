@@ -1,8 +1,7 @@
-import Head from "next/head";
 import { useEffect, useState } from "react";
+import Head from "next/head";
+import { useLoading } from "../lib/context";
 import imagesloaded from "imagesloaded";
-import { useDispatch } from "react-redux";
-import { setLoading } from "../redux/actions";
 import Testimonials from "../components/Testimonials";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -28,12 +27,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
+  const { setLoading } = useLoading();
   const [intro, setIntro] = useState(undefined);
-  const dispatch = useDispatch();
-
   useEffect(() => {
     imagesloaded(document, () => {
-      dispatch(setLoading(false));
+      setLoading(false);
       setTimeout(() => {
         setIntro("uk-animation-fade");
       }, 800);

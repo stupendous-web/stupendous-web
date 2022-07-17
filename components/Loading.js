@@ -1,8 +1,8 @@
+import { useLoading } from "../lib/context";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { useSelector } from "react-redux";
 
 export default function Loading() {
-  const loading = useSelector((state) => state.loading);
+  const { loading } = useLoading();
   const { text } = useTypewriter({
     words: ["Hang in there..."],
     typeSpeed: 30,

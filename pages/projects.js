@@ -1,8 +1,7 @@
-import Head from "next/head";
 import { useEffect } from "react";
+import Head from "next/head";
+import { useLoading } from "../lib/context";
 import imagesloaded from "imagesloaded";
-import { useDispatch } from "react-redux";
-import { setLoading } from "../redux/actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLaravel,
@@ -16,10 +15,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Projects() {
-  const dispatch = useDispatch();
+  const { setLoading } = useLoading();
   useEffect(() => {
     imagesloaded(document, () => {
-      dispatch(setLoading(false));
+      setLoading(false);
     });
   }, []);
 

@@ -1,8 +1,7 @@
 import { useEffect } from "react";
-import Head from "next/head";
+import { useLoading } from "../lib/context";
 import imagesloaded from "imagesloaded";
-import { useDispatch } from "react-redux";
-import { setLoading } from "../redux/actions";
+import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faVideo,
@@ -12,12 +11,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Contact() {
-  const dispatch = useDispatch();
+  const { setLoading } = useLoading();
   useEffect(() => {
     imagesloaded(document, () => {
-      dispatch(setLoading(false));
+      setLoading(false);
     });
   }, []);
+
   const links = [
     {
       title: "Book your FREE consultation",

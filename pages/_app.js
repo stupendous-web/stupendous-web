@@ -3,8 +3,7 @@ import "../styles/uikit/uikit.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-import { store } from "../redux/store";
-import { Provider } from "react-redux";
+import { Provider } from "../lib/context";
 import Analytics from "../components/Analytics";
 
 import Pride from "../components/Pride";
@@ -17,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Analytics site={"stupendous-web"} />
-      <Provider store={store}>
+      <Provider>
         <Component {...pageProps} />
         <Pride />
         <Footer />

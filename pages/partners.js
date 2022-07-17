@@ -1,14 +1,13 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import imagesloaded from "imagesloaded";
-import { useDispatch } from "react-redux";
-import { setLoading } from "../redux/actions";
+import { useLoading } from "../lib/context";
 
 export default function Partners() {
-  const dispatch = useDispatch();
+  const { setLoading } = useLoading();
   useEffect(() => {
     imagesloaded(document, () => {
-      dispatch(setLoading(false));
+      setLoading(false);
     });
   }, []);
 
