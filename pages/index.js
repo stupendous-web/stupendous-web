@@ -50,15 +50,15 @@ export default function Home() {
         className={
           "uk-section uk-section-xlarge uk-flex uk-flex-center uk-flex-middle"
         }
-        uk-height-viewport={""}
+        data-uk-height-viewport={""}
       >
         <div className={"uk-width-1-1"}>
           <div className={"uk-container"}>
-            <div className={"uk-flex-middle"} uk-grid={""}>
+            <div className={"uk-flex-middle"} data-uk-grid={""}>
               <div className={"uk-width-2-3@s"}>
                 <h1 className={intro}>Web App Development Services</h1>
                 <div className={intro} style={{ animationDelay: ".5s" }}>
-                  <div className={"uk-flex-middle"} uk-grid={""}>
+                  <div className={"uk-flex-middle"} data-uk-grid={""}>
                     <div className={"uk-width-auto@s"}>
                       <a
                         href={
@@ -75,11 +75,11 @@ export default function Home() {
                       <a
                         href={"mailto:topher@stupendousweb.com"}
                         className={"uk-margin-small-right"}
-                        uk-tooltip={"Email me!"}
+                        data-uk-tooltip={"Email me!"}
                       >
                         <FontAwesomeIcon icon={faEnvelope} />
                       </a>
-                      <a href={"tel:5102100889"} uk-tooltip={"Call me!"}>
+                      <a href={"tel:5102100889"} data-uk-tooltip={"Call me!"}>
                         <FontAwesomeIcon icon={faPhone} />
                       </a>
                     </div>
@@ -128,8 +128,8 @@ export default function Home() {
             className={
               "uk-child-width-1-4 uk-child-width-1-6@s uk-margin-large"
             }
-            uk-grid={""}
-            uk-parallax={"x: 50%, -100%"}
+            data-uk-grid={""}
+            data-uk-parallax={"x: 50%, -100%"}
           >
             <div>
               <img
@@ -172,8 +172,8 @@ export default function Home() {
             className={
               "uk-child-width-1-4 uk-child-width-1-6@s uk-margin-large"
             }
-            uk-grid={""}
-            uk-parallax={"x: 50%, -100%"}
+            data-uk-grid={""}
+            data-uk-parallax={"x: 50%, -100%"}
           >
             <div>
               <img
@@ -217,7 +217,7 @@ export default function Home() {
       <div className={"uk-section uk-section-large"}>
         <div className={"uk-container uk-container-small"}>
           <h2>Everything for Everyone</h2>
-          <ul className={"uk-subnav uk-subnav-pill"} uk-switcher={""}>
+          <ul className={"uk-subnav uk-subnav-pill"} data-uk-switcher={""}>
             <li>
               <a href={"#"}>Hosting</a>
             </li>
@@ -259,7 +259,7 @@ export default function Home() {
           <div
             className={"uk-position-relative uk-visible-toggle"}
             tabIndex={"-1"}
-            uk-slideshow={
+            data-uk-slideshow={
               "autoplay: true; autoplay-interval: 5000; pause-on-hover: false"
             }
           >
@@ -338,7 +338,7 @@ export default function Home() {
       </div>
       <div className={"uk-section uk-section-large"}>
         <div className={"uk-container uk-container-small"}>
-          <div className={"uk-child-width-1-2@s"} uk-grid={""}>
+          <div className={"uk-child-width-1-2@s"} data-uk-grid={""}>
             <div>
               <p className={"uk-margin-remove"}>eCommerce</p>
               <h2 className={"uk-margin-remove-top"}>Accept Payments</h2>
