@@ -1,12 +1,15 @@
 import { useEffect } from "react";
 import { Analytics as DWAnalytics } from "analytics";
+import { useRouter } from "next/router";
 import axios from "axios";
 
 export default function Analytics({ site }) {
-  const analytics = DWAnalytics({});
+  const router = useRouter();
   useEffect(() => {
-    if (process.env.NODE_ENV !== "development") {
-      analytics
+    if (!router.isReady) return;
+    const { analytics } = router.query;
+    if (process.env.NODE_ENV !== "development" && analytics !== "off") {
+      DWAnalytics({})
         .page((data) => {
           const properties = data.payload.properties;
           axios.post("https://analytics.stupendousweb.com/api/capture", {
@@ -21,5 +24,5 @@ export default function Analytics({ site }) {
         })
         .then();
     }
-  }, []);
+  }, [router.isReady]);
 }
