@@ -2,17 +2,7 @@ import { useEffect } from "react";
 import Head from "next/head";
 import { useLoading } from "../lib/context";
 import imagesloaded from "imagesloaded";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLaravel,
-  faReact,
-  faHtml5,
-  faCss3,
-  faLess,
-  faUikit,
-  faPhp,
-  faWordpress,
-} from "@fortawesome/free-brands-svg-icons";
+import Project from "../components/Project";
 
 export default function Projects() {
   const { setLoading } = useLoading();
@@ -32,7 +22,7 @@ export default function Projects() {
           className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}
         >
           <div className={"uk-container uk-container-small"}>
-            <div className={"uk-flex-middle"} uk-grid={""}>
+            <div className={"uk-flex-middle"} data-uk-grid={""}>
               <div className={"uk-width-1-3@s uk-visible@s"}>
                 <img
                   src={"/images/isometrics/isometric-1-1.png"}
@@ -55,7 +45,7 @@ export default function Projects() {
           <div className={"uk-container"}>
             <h1
               className={"uk-heading-2xlarge uk-text-right"}
-              uk-parallax={"x: 0, -800"}
+              data-uk-parallax={"x: 0, -800"}
             >
               Projects
             </h1>
@@ -63,42 +53,33 @@ export default function Projects() {
         </div>
         <div className={"uk-section"}>
           <div className={"uk-container uk-container-small"}>
-            <div uk-grid={""}>
+            <div data-uk-grid={""}>
               <div className={"uk-width-1-3@s"} />
               <div className={"uk-width-2-3@s"}>
-                <div className={"uk-section uk-padding-remove-top"}>
-                  <img
-                    src={"/images/projects/iwannabe-fit.jpg"}
-                    alt={"Web App Development Services"}
-                  />
-                  <h2>iwannabe&middot;fit</h2>
-                  <p className={"uk-text-emphasis"}>
-                    <FontAwesomeIcon
-                      icon={faLaravel}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faReact}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faHtml5}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faCss3}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faLess}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faUikit}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon icon={faPhp} />
+                <Project
+                  image={"/images/projects/pixel-shop.jpg"}
+                  name={"The Pixel Shop"}
+                  icons={["devicon-nextjs-plain", "devicon-wordpress-plain"]}
+                  style={{ paddingTop: 0 }}
+                  link={"https://thepixelshop.app"}
+                >
+                  <p>
+                    Because web applications can be dynamic they have the
+                    ability to engage with your audiences. The Pixel Shop wanted
+                    to create an emersive world full of narrative that shares
+                    their beautiful, pixel-perfect NFT&apos;s. The Pixel
+                    Shop&apos;s dark mode and parallax scenery keeps their
+                    visitors interested in not only the website, but their work
+                    for sale. See how my web app development services can keep
+                    your audiences engaged in you and the interesting work you
+                    do.
                   </p>
+                </Project>
+                <Project
+                  image={"/images/projects/iwannabe-fit.jpg"}
+                  name={<span>iwannabe&middot;fit</span>}
+                  icons={["devicon-laravel-plain", "devicon-react-plain"]}
+                >
                   <p>
                     Web apps can help you and your customers achieve your goals.
                     These personal fitness trainers needed an app to help train
@@ -111,36 +92,12 @@ export default function Projects() {
                     health and wellbeing while the website brings in more
                     interested customers.
                   </p>
-                </div>
-                <div className={"uk-section"}>
-                  <img
-                    src={"/images/projects/power-trip-fitness.jpg"}
-                    alt={"Web App Development Services"}
-                  />
-                  <h2>Power Trip Fitness</h2>
-                  <p className={"uk-text-emphasis"}>
-                    <FontAwesomeIcon
-                      icon={faWordpress}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faHtml5}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faCss3}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faLess}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faUikit}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon icon={faPhp} />
-                  </p>
+                </Project>
+                <Project
+                  image={"/images/projects/power-trip-fitness.jpg"}
+                  name={"Power Trip Fitness"}
+                  icons={["devicon-nextjs-plain", "devicon-wordpress-plain"]}
+                >
                   <p>
                     A content management system can help you maintain your own
                     content. The folks at PowerTrip Fitness were beginners in
@@ -154,40 +111,12 @@ export default function Projects() {
                     create, update, and delete content anytime without a web
                     developer.
                   </p>
-                </div>
-                <div className={"uk-section"}>
-                  <img
-                    src={"/images/projects/rad-training.jpg"}
-                    alt={"Web App Development Services"}
-                  />
-                  <h2>Rad Dog Training</h2>
-                  <p className={"uk-text-emphasis"}>
-                    <FontAwesomeIcon
-                      icon={faLaravel}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faReact}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faHtml5}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faCss3}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faLess}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faUikit}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon icon={faPhp} />
-                  </p>
+                </Project>
+                <Project
+                  image={"/images/projects/rad-training.jpg"}
+                  name={"Rad Dog Training"}
+                  icons={["devicon-laravel-plain", "devicon-react-plain"]}
+                >
                   <p>
                     A website can connect you and your services with the
                     customers that support your work. This client wanted to give
@@ -214,161 +143,29 @@ export default function Projects() {
                       <cite>Cloe Server</cite>
                     </footer>
                   </blockquote>
-                </div>
-                <div className={"uk-section"}>
-                  <img
-                    src={"/images/projects/lucky-artists.jpg"}
-                    alt={"Web App Development Services"}
-                  />
-                  <h2>Lucky Artists</h2>
-                  <p className={"uk-text-emphasis"}>
-                    <FontAwesomeIcon
-                      icon={faLaravel}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faReact}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faHtml5}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faCss3}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faLess}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faUikit}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon icon={faPhp} />
-                  </p>
+                </Project>
+
+                <Project
+                  image={"/images/projects/kendra-hicks.jpg"}
+                  name={"Kendra Hicks"}
+                  icons={["devicon-laravel-plain", "devicon-react-plain"]}
+                >
                   <p>
-                    A professional layout for your website adds reputation to
-                    your brand. This graphic designer wanted something reputable
-                    enough to generate reliable leads. The works are presented
-                    in a way that amplify skills and add value to the works in
-                    turn generating reliable and turstworthy leads.
+                    Web applications can integrate with social media to enhance
+                    your reach. Kendra Hicks wanted a fun social media tool
+                    where people could endorse her hard work and share it with
+                    others. This app lets you upload a selfie, your name, and a
+                    message to generate an image that users can then share on
+                    social media. This app is just plain fun, adding value to
+                    Kendra&apos;s brand already, but also increases her exposure
+                    when people share their custom social media cards.
                   </p>
-                </div>
-                <div className={"uk-section"}>
-                  <img
-                    src={"/images/projects/deriddle.jpg"}
-                    alt={"Affordable Custom Website Design"}
-                  />
-                  <h2>Deriddle</h2>
-                  <p className={"uk-text-emphasis"}>
-                    <FontAwesomeIcon
-                      icon={faLaravel}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faReact}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faHtml5}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faCss3}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faLess}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faUikit}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon icon={faPhp} />
-                  </p>
-                  <p>
-                    When two people who speak different languages chat online
-                    they often have to copy and paste text into a translator
-                    before sending every message. What if people could use
-                    instant messing apps like the ones on their phones to text
-                    anyone in any language instantly?! This web app is an
-                    instant messaging platform that translates messages into
-                    over 100 languages using the Google Translate API so people
-                    can talk to anybody quickly and easily without having to
-                    copy and paste! This app can be used by businesses, friends,
-                    or family over seas to work and communicate together faster
-                    and more efficiently.
-                  </p>
-                </div>
-                <div className={"uk-section"}>
-                  <img
-                    src={"/images/projects/brontez-purnell.jpg"}
-                    alt={"Web App Development Services"}
-                  />
-                  <h2>Brontez Purnell</h2>
-                  <p className={"uk-text-emphasis"}>
-                    <FontAwesomeIcon
-                      icon={faHtml5}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faCss3}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faLess}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faUikit}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon icon={faPhp} />
-                  </p>
-                  <p>
-                    Having a beautiful, memorable, and easy to digest portfolio
-                    of your work with a strong call to action can build the
-                    relationships you want and need. Brontez Purnell wanted to
-                    have a digital portfolio of his work online as a way for
-                    leads to contact him. This bright and funky design pulls all
-                    the stop to create an interesting layout, catchy design, and
-                    strong calls to action. The website gives Brontez a
-                    professional personal brand and generates leads and builds
-                    working relationships for him.
-                  </p>
-                </div>
-                <div className={"uk-section"}>
-                  <img
-                    src={"/images/projects/grace-avila.jpg"}
-                    alt={"Web App Development Services"}
-                  />
-                  <h2>Super Natural</h2>
-                  <p className={"uk-text-emphasis"}>
-                    <FontAwesomeIcon
-                      icon={faWordpress}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faHtml5}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faCss3}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faLess}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faUikit}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon icon={faPhp} />
-                  </p>
+                </Project>
+                <Project
+                  image={"/images/projects/grace-avila.jpg"}
+                  name={"Super Natural"}
+                  icons={["devicon-wordpress-plain"]}
+                >
                   <p>
                     A blog can be a resource for your current and potential
                     clients and give your product or service value. Grace Avila
@@ -391,51 +188,56 @@ export default function Projects() {
                       <cite>Grace Avila</cite>
                     </footer>
                   </blockquote>
-                </div>
-                <div className={"uk-section"}>
-                  <img
-                    src={"/images/projects/kendra-hicks.jpg"}
-                    alt={"Affordable Custom Website Design"}
-                  />
-                  <h2>Kendra Hicks</h2>
-                  <p className={"uk-text-emphasis"}>
-                    <FontAwesomeIcon
-                      icon={faLaravel}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faReact}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faHtml5}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faCss3}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faLess}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon
-                      icon={faUikit}
-                      className={"uk-margin-small-right"}
-                    />
-                    <FontAwesomeIcon icon={faPhp} />
-                  </p>
+                </Project>
+                <Project
+                  image={"/images/projects/brontez-purnell.jpg"}
+                  name={"Brontez Purnell"}
+                  icons={["devicon-nextjs-plain"]}
+                >
                   <p>
-                    Web applications can integrate with social media to enhance
-                    your reach. Kendra Hicks wanted a fun social media tool
-                    where people could endorse her hard work and share it with
-                    others. This app lets you upload a selfie, your name, and a
-                    message to generate an image that users can then share on
-                    social media. This app is just plain fun, adding value to
-                    Kendra&apos;s brand already, but also increases her exposure
-                    when people share their custom social media cards.
+                    Having a beautiful, memorable, and easy to digest portfolio
+                    of your work with a strong call to action can build the
+                    relationships you want and need. Brontez Purnell wanted to
+                    have a digital portfolio of his work online as a way for
+                    leads to contact him. This bright and funky design pulls all
+                    the stop to create an interesting layout, catchy design, and
+                    strong calls to action. The website gives Brontez a
+                    professional personal brand and generates leads and builds
+                    working relationships for him.
                   </p>
-                </div>
+                </Project>
+                <Project
+                  image={"/images/projects/deriddle.jpg"}
+                  name={"Deriddle"}
+                  icons={["devicon-laravel-plain", "devicon-react-plain"]}
+                >
+                  <p>
+                    When two people who speak different languages chat online
+                    they often have to copy and paste text into a translator
+                    before sending every message. What if people could use
+                    instant messing apps like the ones on their phones to text
+                    anyone in any language instantly?! This web app is an
+                    instant messaging platform that translates messages into
+                    over 100 languages using the Google Translate API so people
+                    can talk to anybody quickly and easily without having to
+                    copy and paste! This app can be used by businesses, friends,
+                    or family over seas to work and communicate together faster
+                    and more efficiently.
+                  </p>
+                </Project>
+                <Project
+                  image={"/images/projects/lucky-artists.jpg"}
+                  name={"Lucky Artists"}
+                  icons={["devicon-nextjs-plain"]}
+                >
+                  <p>
+                    A professional layout for your website adds reputation to
+                    your brand. This graphic designer wanted something reputable
+                    enough to generate reliable leads. The works are presented
+                    in a way that amplify skills and add value to the works in
+                    turn generating reliable and turstworthy leads.
+                  </p>
+                </Project>
               </div>
             </div>
           </div>
