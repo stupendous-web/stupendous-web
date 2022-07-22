@@ -97,6 +97,7 @@ export default function Projects() {
                   image={"/images/projects/power-trip-fitness.jpg"}
                   name={"Power Trip Fitness"}
                   icons={["devicon-nextjs-plain", "devicon-wordpress-plain"]}
+                  link={"https://powertrip.fitness"}
                 >
                   <p>
                     A content management system can help you maintain your own
