@@ -7,21 +7,14 @@ export default function Analytics({ site }) {
   const router = useRouter();
   const [id, setId] = useState();
 
-  const sendEndTimestamp = () => {
-    console.log(id);
-    axios
-      .post("https://analytics-api.stupendousweb.com/pageviews", {
+  useEffect(() => {
+    return () => {
+      axios.post("https://analytics-api.stupendousweb.com/pageviews", {
         id: id,
         _method: "patch",
-      })
-      .then((response) => {
-        console.log(response.data);
       });
-  };
-  useEffect(() => {
-    window.addEventListener("beforeunload", sendEndTimestamp);
-    return window.removeEventListener("beforeunload", sendEndTimestamp);
-  }, [id]);
+    };
+  }, []);
 
   useEffect(() => {
     if (!router.isReady) return;

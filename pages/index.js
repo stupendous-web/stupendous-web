@@ -25,8 +25,11 @@ import {
   faWordpress,
   faDrupal,
 } from "@fortawesome/free-brands-svg-icons";
+import Analytics from "../components/Analytics";
 
 export default function Home() {
+  <Analytics site={"stupendous-web"} />;
+
   const { setLoading } = useLoading();
   const [intro, setIntro] = useState(undefined);
   useEffect(() => {
