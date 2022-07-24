@@ -12,9 +12,9 @@ export default function Analytics({ site }) {
       DWAnalytics({})
         .page((data) => {
           const properties = data.payload.properties;
-          axios.post("https://analytics.stupendousweb.com/api/capture", {
+          axios.post("https://api-analytics.stupendousweb.com/pageviews", {
             site: site,
-            anonymousId: data.payload.anonymousId,
+            anonymousId: properties.anonymousId,
             path: properties.path,
             referrer: properties.referrer,
             search: properties.search,
