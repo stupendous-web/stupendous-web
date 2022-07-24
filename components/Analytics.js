@@ -8,10 +8,14 @@ export default function Analytics({ site }) {
   const [id, setId] = useState();
 
   const sendEndTimestamp = () => {
-    axios.post("https://analytics-api.stupendousweb.com/pagaveiws", {
-      id: id,
-      _method: "patch",
-    });
+    axios
+      .post("https://analytics-api.stupendousweb.com/pagaveiws", {
+        id: id,
+        _method: "patch",
+      })
+      .then((response) => {
+        console.log(response.data);
+      });
   };
   useEffect(() => {
     window.addEventListener("beforeunload", sendEndTimestamp);
@@ -35,6 +39,7 @@ export default function Analytics({ site }) {
             width: properties.width,
           })
           .then((response) => {
+            console.log(response.data);
             setId(response.data);
           });
       });
