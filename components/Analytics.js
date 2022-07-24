@@ -14,8 +14,8 @@ export default function Analytics({ site }) {
     });
   };
   useEffect(() => {
-    window.addEventListener("unload", sendEndTimestamp);
-    return window.removeEventListener("unload", sendEndTimestamp);
+    window.addEventListener("beforeunload", sendEndTimestamp);
+    return window.removeEventListener("beforeunload", sendEndTimestamp);
   }, []);
 
   useEffect(() => {
