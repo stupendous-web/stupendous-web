@@ -41,6 +41,7 @@ export default function Analytics({ site }) {
           .then((response) => {
             console.log(response.data);
             setId(response.data);
+            sendEndTimestamp();
           });
       });
     }
