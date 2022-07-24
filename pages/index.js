@@ -28,8 +28,6 @@ import {
 import Analytics from "../components/Analytics";
 
 export default function Home() {
-  <Analytics site={"stupendous-web"} />;
-
   const { setLoading } = useLoading();
   const [intro, setIntro] = useState(undefined);
   useEffect(() => {
@@ -43,6 +41,7 @@ export default function Home() {
 
   return (
     <>
+      <Analytics site={"stupendous-web"} />;
       <Head>
         <title>
           Web App Development Services | Stupendous Web | If you want to build
