@@ -15,7 +15,7 @@ export default function Analytics({ site }) {
           site: site,
           anonymous_id: data.payload.anonymousId,
           path: properties.path,
-          referrer: properties.referrer,
+          referrer: properties.referrer || "Direct",
           search: properties.search,
           height: properties.height,
           width: properties.width,
