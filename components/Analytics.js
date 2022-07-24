@@ -8,6 +8,7 @@ export default function Analytics({ site }) {
   const [id, setId] = useState();
 
   const sendEndTimestamp = () => {
+    console.log(id);
     axios
       .post("https://analytics-api.stupendousweb.com/pageviews", {
         id: id,
