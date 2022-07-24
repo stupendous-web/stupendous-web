@@ -14,7 +14,7 @@ export default function Analytics({ site }) {
           const properties = data.payload.properties;
           axios.post("https://api-analytics.stupendousweb.com/pageviews", {
             site: site,
-            anonymousId: properties.anonymousId,
+            anonymous_id: properties.anonymousId,
             path: properties.path,
             referrer: properties.referrer,
             search: properties.search,
