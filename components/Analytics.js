@@ -11,10 +11,11 @@ export default function Analytics({ site }) {
     if (process.env.NODE_ENV !== "development" && analytics !== "off") {
       DWAnalytics({})
         .page((data) => {
+          console.log(data);
           const properties = data.payload.properties;
           axios.post("https://api-analytics.stupendousweb.com/pageviews", {
             site: site,
-            anonymous_id: properties.anonymousId,
+            anonymous_id: data.payload.anonymousId,
             path: properties.path,
             referrer: properties.referrer,
             search: properties.search,
@@ -22,7 +23,12 @@ export default function Analytics({ site }) {
             width: properties.width,
           });
         })
-        .then();
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
   }, [router.isReady]);
 }
