@@ -11,7 +11,7 @@ export default function Analytics({ site }) {
     if (process.env.NODE_ENV !== "development" && analytics !== "off") {
       DWAnalytics({}).page((data) => {
         const properties = data.payload.properties;
-        axios.post("https://api-analytics.stupendousweb.com/pageviews", {
+        axios.post("https://analytics-api.stupendousweb.com/pageviews", {
           site: site,
           anonymous_id: data.payload.anonymousId,
           path: properties.path,
