@@ -21,7 +21,7 @@ export default function Analytics({ site }) {
   useEffect(() => {
     window.addEventListener("beforeunload", sendEndTimestamp);
     return window.removeEventListener("beforeunload", sendEndTimestamp);
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     if (!router.isReady) return;
@@ -40,9 +40,7 @@ export default function Analytics({ site }) {
             width: properties.width,
           })
           .then((response) => {
-            console.log(response.data);
             setId(response.data);
-            sendEndTimestamp();
           });
       });
     }
