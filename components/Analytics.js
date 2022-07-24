@@ -9,26 +9,18 @@ export default function Analytics({ site }) {
     if (!router.isReady) return;
     const { analytics } = router.query;
     if (process.env.NODE_ENV !== "development" && analytics !== "off") {
-      DWAnalytics({})
-        .page((data) => {
-          console.log(data);
-          const properties = data.payload.properties;
-          axios.post("https://api-analytics.stupendousweb.com/pageviews", {
-            site: site,
-            anonymous_id: data.payload.anonymousId,
-            path: properties.path,
-            referrer: properties.referrer,
-            search: properties.search,
-            height: properties.height,
-            width: properties.width,
-          });
-        })
-        .then((response) => {
-          console.log(response.data);
-        })
-        .catch((error) => {
-          console.log(error);
+      DWAnalytics({}).page((data) => {
+        const properties = data.payload.properties;
+        axios.post("https://api-analytics.stupendousweb.com/pageviews", {
+          site: site,
+          anonymous_id: data.payload.anonymousId,
+          path: properties.path,
+          referrer: properties.referrer,
+          search: properties.search,
+          height: properties.height,
+          width: properties.width,
         });
+      });
     }
   }, [router.isReady]);
 }
