@@ -25,7 +25,6 @@ import {
   faWordpress,
   faDrupal,
 } from "@fortawesome/free-brands-svg-icons";
-import Analytics from "../components/Analytics";
 
 export default function Home() {
   const { setLoading } = useLoading();
@@ -41,7 +40,6 @@ export default function Home() {
 
   return (
     <>
-      <Analytics site={"stupendous-web"} />;
       <Head>
         <title>
           Web App Development Services | Stupendous Web | If you want to build
