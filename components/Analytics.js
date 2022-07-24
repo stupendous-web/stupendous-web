@@ -9,7 +9,7 @@ export default function Analytics({ site }) {
 
   const sendEndTimestamp = () => {
     axios
-      .post("https://analytics-api.stupendousweb.com/pagaveiws", {
+      .post("https://analytics-api.stupendousweb.com/pageviews", {
         id: id,
         _method: "patch",
       })
