@@ -11489,6 +11489,10 @@ a:hover {
     font-size: 2rem !important;
   }
 }
+pre,
+pre em {
+  color: #EC008C;
+}
 pre {
   border: solid 1px #CCC;
   padding: 18px;
@@ -11598,46 +11602,4 @@ pre {
     opacity: 0;
   }
 }
-/*
-
-.ui-datepicker {
-    padding: 0 !important;
-}
-
-// Calendar Border
-
-.ui-widget-content {
-    background: none !important;
-}
-.ui-widget.ui-widget-content {
-    border: none !important;
-}
-
-// Header
-
-.ui-widget-header {
-    background: @global-inverse-color !important;
-}
-.ui-widget-content {
-    color: inherit !important;
-}
-.ui-corner-all {
-    border-radius: 0 !important;
-}
-
-// Dates
-
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
-    border: none !important;
-}
-
-// Selected Date
-
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
-    border: none !important;
-    background: @global-primary-background !important;
-}
-
-
- */
 /*# sourceMappingURL=uikit.css.map */
