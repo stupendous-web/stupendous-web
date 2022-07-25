@@ -34,7 +34,7 @@ export default function Analytics({ site }) {
             setId(response.data);
           });
       });
-      router.beforePopState(handleExit);
+      router.events.on("routeChangeStart", () => handleExit);
     }
   }, [router.isReady]);
 }
