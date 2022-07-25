@@ -42,7 +42,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Web App Development Services | Stupendous Web | If you want to build
+          s Web App Development Services | Stupendous Web | If you want to build
           community, build a stupendous web app
         </title>
       </Head>
