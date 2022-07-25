@@ -7,14 +7,12 @@ export default function Analytics({ site }) {
   const router = useRouter();
   const [id, setId] = useState();
 
-  useEffect(() => {
-    return () => {
-      axios.post("https://analytics-api.stupendousweb.com/pageviews", {
-        id: id,
-        _method: "patch",
-      });
-    };
-  }, []);
+  const handleExit = () => {
+    axios.post("https://analytics-api.stupendousweb.com/pageviews", {
+      id: id,
+      _method: "patch",
+    });
+  };
 
   useEffect(() => {
     if (!router.isReady) return;
@@ -37,5 +35,6 @@ export default function Analytics({ site }) {
           });
       });
     }
+    router.events.on("routeChangeStart", handleExit);
   }, [router.isReady]);
 }
