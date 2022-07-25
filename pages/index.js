@@ -42,7 +42,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          s Web App Development Services | Stupendous Web | If you want to build
+          Web App Development Services | Stupendous Web | If you want to build
           community, build a stupendous web app
         </title>
       </Head>
@@ -125,18 +125,40 @@ export default function Home() {
         </div>
         <div className={"uk-container uk-container-expand"}>
           <div
-            className={
-              "uk-child-width-1-4 uk-child-width-1-6@s uk-margin-large"
-            }
+            className={"uk-child-width-1-4 uk-margin-large"}
             data-uk-grid={""}
             data-uk-parallax={"x: 50%, -100%"}
           >
             <div>
               <img
-                src={"/images/projects/j-fitness.jpg"}
+                src={"/images/projects/pixel-shop.jpg"}
                 alt={"Web App Development Services"}
               />
             </div>
+            <div>
+              <img
+                src={"/images/projects/power-trip-fitness.jpg"}
+                alt={"Web App Development Services"}
+              />
+            </div>
+            <div className={"uk-visible@s"}>
+              <img
+                src={"/images/projects/rad-training.jpg"}
+                alt={"Web App Development Services"}
+              />
+            </div>
+            <div className={"uk-visible@s"}>
+              <img
+                src={"/images/projects/security-engineers.jpg"}
+                alt={"Web App Development Services"}
+              />
+            </div>
+          </div>
+          <div
+            className={"uk-child-width-1-5 uk-margin-large"}
+            data-uk-grid={""}
+            data-uk-parallax={"x: 50%, -100%"}
+          >
             <div>
               <img
                 src={"/images/projects/brontez-purnell.jpg"}
@@ -169,12 +191,16 @@ export default function Home() {
             </div>
           </div>
           <div
-            className={
-              "uk-child-width-1-4 uk-child-width-1-6@s uk-margin-large"
-            }
+            className={"uk-child-width-1-4 uk-margin-large"}
             data-uk-grid={""}
             data-uk-parallax={"x: 50%, -100%"}
           >
+            <div>
+              <img
+                src={"/images/projects/j-fitness.jpg"}
+                alt={"Web App Development Services"}
+              />
+            </div>
             <div>
               <img
                 src={"/images/projects/kendra-hicks.jpg"}
@@ -190,24 +216,6 @@ export default function Home() {
             <div>
               <img
                 src={"/images/projects/lucky-artists.jpg"}
-                alt={"Web App Development Services"}
-              />
-            </div>
-            <div>
-              <img
-                src={"/images/projects/power-trip-fitness.jpg"}
-                alt={"Web App Development Services"}
-              />
-            </div>
-            <div className={"uk-visible@s"}>
-              <img
-                src={"/images/projects/security-engineers.jpg"}
-                alt={"Web App Development Services"}
-              />
-            </div>
-            <div className={"uk-visible@s"}>
-              <img
-                src={"/images/projects/rad-training.jpg"}
                 alt={"Web App Development Services"}
               />
             </div>
