@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Analytics as DWAnalytics } from "analytics";
-import { useRouter } from "next/router";
+import { Router, useRouter } from "next/router";
 import axios from "axios";
 
 export default function Analytics({ site }) {
@@ -34,7 +34,12 @@ export default function Analytics({ site }) {
             setId(response.data);
           });
       });
-      router.events.on("routeChangeStart", () => handleExit);
+      Router.events.on("routeChangeStart", () => {
+        axios.post("https://analytics-api.stupendousweb.com/pageviews", {
+          id: id,
+          _method: "patch",
+        });
+      });
     }
   }, [router.isReady]);
 }
