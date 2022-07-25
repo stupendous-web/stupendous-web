@@ -29,5 +29,14 @@
   "devDependencies": {
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "react-hooks/exhaustive-deps": "off"
+    }
   }
 }
