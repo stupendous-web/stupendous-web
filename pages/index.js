@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
+import HeadData from "../components/HeadData";
 import { useLoading } from "../lib/context";
 import imagesloaded from "imagesloaded";
 import Testimonials from "../components/Testimonials";
@@ -45,6 +46,11 @@ export default function Home() {
           Web App Development Services | Stupendous Web | If you want to build
           community, build a stupendous web app
         </title>
+        <HeadData
+          title={
+            "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
+          }
+        />
       </Head>
       <div
         className={
