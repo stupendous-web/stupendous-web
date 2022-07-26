@@ -26,6 +26,7 @@ import {
   faWordpress,
   faDrupal,
 } from "@fortawesome/free-brands-svg-icons";
+import Blog from "../components/Blog";
 
 export default function Home() {
   const { setLoading } = useLoading();
@@ -479,6 +480,7 @@ export default function Home() {
         </div>
       </div>
       <Testimonials />
+      <Blog />
     </>
   );
 }

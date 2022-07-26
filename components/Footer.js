@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
 import CTA from "../components/CTA";
-import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
@@ -18,20 +16,7 @@ export default function Footer() {
     { href: "2022", title: "2022" },
     { href: "partners", title: "Partners" },
   ];
-  const [articles, setArticles] = useState();
-  const [examples, setExamples] = useState();
-  useEffect(() => {
-    axios
-      .get("https://cms.stupendousweb.com/wp-json/wp/v2/posts?categories=1")
-      .then((response) => {
-        setArticles(response.data);
-      });
-    axios
-      .get("https://cms.stupendousweb.com/wp-json/wp/v2/posts?categories=8")
-      .then((response) => {
-        setExamples(response.data);
-      });
-  }, []);
+
   return (
     <>
       <CTA />
@@ -57,6 +42,8 @@ export default function Footer() {
                   );
                 })}
               </ul>
+            </div>
+            <div className={"uk-width-1-4@s"}>
               <ul className={"uk-nav uk-nav-default"}>
                 <li className={"uk-nav-header"}>Projects</li>
                 <li>
@@ -69,46 +56,6 @@ export default function Footer() {
                     Trade
                   </a>
                 </li>
-              </ul>
-            </div>
-            <div className={"uk-width-1-4@s"}>
-              <ul className={"uk-nav uk-nav-default"}>
-                <li className={"uk-nav-header"}>Articles</li>
-                {articles &&
-                  articles.map((article, key) => {
-                    return (
-                      <li key={key}>
-                        <a
-                          href={"/article/" + article.slug}
-                          title={
-                            article.title.rendered +
-                            " | Web App Development Services | Stupendous Web"
-                          }
-                        >
-                          {article.title.rendered}
-                        </a>
-                      </li>
-                    );
-                  })}
-              </ul>
-              <ul className={"uk-nav uk-nav-default"}>
-                <li className={"uk-nav-header"}>Code Examples</li>
-                {examples &&
-                  examples.map((example, key) => {
-                    return (
-                      <li key={key}>
-                        <a
-                          href={"/article/" + example.slug}
-                          title={
-                            example.title.rendered +
-                            " | Web App Development Services | Stupendous Web"
-                          }
-                        >
-                          {example.title.rendered}
-                        </a>
-                      </li>
-                    );
-                  })}
               </ul>
             </div>
             <div className={"uk-width-1-2@s uk-flex-middle"}>
