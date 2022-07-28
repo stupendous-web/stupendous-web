@@ -3,29 +3,16 @@ import Head from "next/head";
 import HeadData from "../components/HeadData";
 import { useLoading } from "../lib/context";
 import imagesloaded from "imagesloaded";
-import Testimonials from "../components/Testimonials";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheck,
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faStripe,
-  faPaypal,
-  faLaravel,
-  faReact,
-  faHtml5,
-  faCss3,
-  faSass,
-  faLess,
-  faBootstrap,
-  faUikit,
-  faPhp,
-  faPython,
-  faWordpress,
-  faDrupal,
-} from "@fortawesome/free-brands-svg-icons";
+import { faStripe, faPaypal } from "@fortawesome/free-brands-svg-icons";
+import "devicon";
+
+import Testimonials from "../components/Testimonials";
 import Blog from "../components/Blog";
 
 export default function Home() {
@@ -148,13 +135,13 @@ export default function Home() {
                 alt={"Web App Development Services"}
               />
             </div>
-            <div className={"uk-visible@s"}>
+            <div>
               <img
                 src={"/images/projects/rad-training.jpg"}
                 alt={"Web App Development Services"}
               />
             </div>
-            <div className={"uk-visible@s"}>
+            <div>
               <img
                 src={"/images/projects/security-engineers.jpg"}
                 alt={"Web App Development Services"}
@@ -184,13 +171,13 @@ export default function Home() {
                 alt={"Web App Development Services"}
               />
             </div>
-            <div className={"uk-visible@s"}>
+            <div>
               <img
                 src={"/images/projects/grace-avila.jpg"}
                 alt={"Web App Development Services"}
               />
             </div>
-            <div className={"uk-visible@s"}>
+            <div>
               <img
                 src={"/images/projects/iwannabe-fit.jpg"}
                 alt={"Web App Development Services"}
@@ -452,30 +439,11 @@ export default function Home() {
             Bootstrap, UI Kit, Javascript, jQuery, React, PHP, Laravel, Python,
             Django, WordPress, Drupal, and many other tools.
           </p>
-          <p className={"uk-h3"}>
-            <FontAwesomeIcon icon={faLaravel} />
-            &nbsp;
-            <FontAwesomeIcon icon={faReact} />
-            &nbsp;
-            <FontAwesomeIcon icon={faHtml5} />
-            &nbsp;
-            <FontAwesomeIcon icon={faCss3} />
-            &nbsp;
-            <FontAwesomeIcon icon={faSass} />
-            &nbsp;
-            <FontAwesomeIcon icon={faLess} />
-            &nbsp;
-            <FontAwesomeIcon icon={faBootstrap} />
-            &nbsp;
-            <FontAwesomeIcon icon={faUikit} />
-            &nbsp;
-            <FontAwesomeIcon icon={faPhp} />
-            &nbsp;
-            <FontAwesomeIcon icon={faPython} />
-            &nbsp;
-            <FontAwesomeIcon icon={faWordpress} />
-            &nbsp;
-            <FontAwesomeIcon icon={faDrupal} />
+          <p className={"uk-h2"}>
+            <i className={"devicon-laravel-plain uk-margin-right"} />
+            <i className={"devicon-react-plain uk-margin-right"} />
+            <i className={"devicon-nextjs-plain uk-margin-right"} />
+            <i className={"devicon-wordpress-plain"} />
           </p>
         </div>
       </div>
