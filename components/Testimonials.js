@@ -10,6 +10,12 @@ export default function Testimonials() {
         "Working with Topher on my new site was a dream. He worked quickly, thoughtfully and was very responsive. I had a lot of questions on updating the site myself. He walked me through all of my concerns, polished out all the details and completed the site very quickly. I love the look of my new site! I would recommend Topher highly.",
     },
     {
+      name: "Masumi Johnson",
+      title: "Pixel Pusher",
+      review:
+        "Topher is a web design wizard. He was incredible to work with from start to finish and was able to build us a completely custom web site. He leverages several useful tools to facilitate the process and maintained great communication and transparency through the whole process. I highly recommend Stupendous Web if you’re in the market for a professional website!",
+    },
+    {
       name: "Chidi Ononuju",
       title: "Masseur",
       review:
@@ -26,7 +32,10 @@ export default function Testimonials() {
     <>
       <div className={"uk-section uk-section-large"}>
         <div className={"uk-container uk-container"}>
-          <div className={"uk-child-width-1-3@s uk-grid-match"} uk-grid={""}>
+          <div
+            className={"uk-child-width-1-4@s uk-grid-match"}
+            data-uk-grid={""}
+          >
             {testimonials.map((testimonial, key) => {
               return (
                 <div key={key}>
@@ -41,7 +50,7 @@ export default function Testimonials() {
                       <i>{testimonial.review}</i>
                     </p>
                     <div className={"uk-position-bottom"}>
-                      <div uk-grid={""}>
+                      <div data-uk-grid={""}>
                         <div className={"uk-width-expand"}>
                           <p
                             className={"uk-text-small"}
