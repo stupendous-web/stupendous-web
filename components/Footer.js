@@ -48,6 +48,16 @@ export default function Footer() {
                 <li className={"uk-nav-header"}>Projects</li>
                 <li>
                   <a
+                    href={"https://analytics.stupendousweb.com"}
+                    title={
+                      "Next JS Analytics by Stupendous Web | Web App Development Services | Stupendous Web"
+                    }
+                  >
+                    Next JS Analytics
+                  </a>
+                </li>
+                <li>
+                  <a
                     href={"https://trade.stupendousweb.com"}
                     title={
                       "Trade by Stupendous Web | Web App Development Services | Stupendous Web"
