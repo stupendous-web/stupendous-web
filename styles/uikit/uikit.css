@@ -11497,6 +11497,11 @@ pre {
   border: solid 1px #CCC;
   padding: 18px;
 }
+blockquote {
+  font-size: 18px;
+  border-left: 1px solid #CCC;
+  padding-left: 0.75rem;
+}
 ::selection {
   background: #EC008C;
 }

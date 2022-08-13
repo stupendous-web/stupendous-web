@@ -74,6 +74,17 @@ export default function Projects() {
                     your audiences engaged in you and the interesting work you
                     do.
                   </p>
+                  <blockquote>
+                    <p>
+                      Topher is a web design wizard. He was incredible to work
+                      with from start to finish and was able to build us a
+                      completely custom web site. He leverages several useful
+                      tools to facilitate the process and maintained great
+                      communication and transparency through the whole process.
+                      I highly recommend Stupendous Web if you’re in the market
+                      for a professional website!&quot;
+                    </p>
+                  </blockquote>
                 </Project>
                 <Project
                   image={"/images/projects/iwannabe-fit.jpg"}
