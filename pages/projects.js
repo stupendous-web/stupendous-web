@@ -84,6 +84,9 @@ export default function Projects() {
                       I highly recommend Stupendous Web if you’re in the market
                       for a professional website!&quot;
                     </p>
+                    <footer>
+                      <cite>Masumi Johnson</cite>
+                    </footer>
                   </blockquote>
                 </Project>
                 <Project

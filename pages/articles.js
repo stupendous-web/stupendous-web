@@ -82,6 +82,17 @@ export default function Articles() {
                         __html: article.excerpt.rendered,
                       }}
                     />
+                    <p>
+                      <a
+                        href={"/article/" + article.slug}
+                        title={
+                          article.title.rendered +
+                          " | Web App Development Services | Stupendous Web"
+                        }
+                      >
+                        Read more.
+                      </a>
+                    </p>
                   </div>
                 );
               })}
