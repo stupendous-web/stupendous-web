@@ -38,7 +38,6 @@ export default function Articles() {
       </Head>
       <div className={"uk-section uk-section-xlarge"}>
         <div className={"uk-container uk-container-small"}>
-          <h1>Articles</h1>
           <div
             className={"uk-child-width-1-2@s"}
             data-uk-grid={"masonry: true"}

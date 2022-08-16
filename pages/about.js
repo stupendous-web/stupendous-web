@@ -18,7 +18,7 @@ export default function About() {
       </Head>
       <div className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}>
         <div className={"uk-container uk-container-small"}>
-          <div className={"uk-flex-middle"} uk-grid={""}>
+          <div className={"uk-flex-middle"} data-uk-grid={""}>
             <div className={"uk-width-1-3@s uk-visible@s"}>
               <img
                 src={"/images/isometrics/isometric-2-1.png"}
@@ -40,7 +40,7 @@ export default function About() {
         <div className={"uk-container"}>
           <h1
             className={"uk-heading-2xlarge uk-text-right"}
-            uk-parallax={"x: 0, -800"}
+            data-uk-parallax={"x: 0, -800"}
           >
             About
           </h1>
@@ -48,7 +48,7 @@ export default function About() {
       </div>
       <div className={"uk-section"}>
         <div className={"uk-container uk-container-small"}>
-          <div uk-grid={""}>
+          <div data-uk-grid={""}>
             <div className={"uk-width-1-3@s"} />
             <div className={"uk-width-2-3@s"}>
               <div className={"uk-align-left uk-margin-remove-adjacent"}>
@@ -88,8 +88,8 @@ export default function About() {
               <h2>How Does this Work?</h2>
               <p>
                 Let&apos;s get you up and running with web app development
-                services in four easy steps. First, schedule your FREE 1-hour
-                consultation. You&apos;ll receive a free creative brief and
+                services in four easy steps. First, schedule your 2 FREE 1-hour
+                consultations. You&apos;ll receive a free creative brief and
                 project plan. We&apos;ll build you a secret website where you
                 can preview our progress anytime. Then when the time is right,
                 we&apos;ll launch it to the web publicly. I&apos;m always here

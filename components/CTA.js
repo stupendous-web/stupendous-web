@@ -8,13 +8,16 @@ class CTA extends React.Component {
       <>
         <div
           className={"uk-section uk-section-primary uk-flex uk-flex-middle"}
-          uk-height-viewport={"offset-bottom: true"}
+          data-uk-height-viewport={"offset-bottom: true"}
         >
           <div className={"uk-container uk-container-small"}>
-            <div className={"uk-child-width-1-2@m uk-flex-middle"} uk-grid={""}>
+            <div
+              className={"uk-child-width-1-2@m uk-flex-middle"}
+              data-uk-grid={""}
+            >
               <div>
-                <h2>Your Consultation is FREE!</h2>
-                <div className={"uk-flex-middle"} uk-grid={""}>
+                <h2>Access Two FREE Consultations!</h2>
+                <div className={"uk-flex-middle"} data-uk-grid={""}>
                   <div className={"uk-width-auto@s"}>
                     <a
                       href={
@@ -29,11 +32,11 @@ class CTA extends React.Component {
                     <a
                       href={"mailto:topher@stupendousweb.com"}
                       className={"uk-margin-small-right"}
-                      uk-tooltip={"Email me!"}
+                      data-uk-tooltip={"Email me!"}
                     >
                       <FontAwesomeIcon icon={faEnvelope} />
                     </a>
-                    <a href={"tel:5102100889"} uk-tooltip={"Call me!"}>
+                    <a href={"tel:5102100889"} data-uk-tooltip={"Call me!"}>
                       <FontAwesomeIcon icon={faPhone} />
                     </a>
                   </div>
