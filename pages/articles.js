@@ -55,14 +55,17 @@ export default function Articles() {
                           " | Web App Development Services | Stupendous Web"
                         }
                       >
-                        <img
-                          src={
-                            media?.filter(
-                              (image) => image?.post === article.id
-                            )[0]?.source_url
-                          }
-                          alt={article.title.rendered}
-                        />
+                        <div className={"uk-height-medium uk-cover-container"}>
+                          <img
+                            src={
+                              media?.filter(
+                                (image) => image?.post === article.id
+                              )[0]?.source_url
+                            }
+                            alt={article.title.rendered}
+                            data-uk-cover={""}
+                          />
+                        </div>
                       </a>
                     )}
                     <h2>
