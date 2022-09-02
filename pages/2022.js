@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { useLoading } from "../lib/context";
+import { useGlobal } from "../lib/context";
 import imagesloaded from "imagesloaded";
 import Head from "next/head";
 
 export default function Review() {
-  const { setLoading } = useLoading();
+  const { setLoading } = useGlobal();
   useEffect(() => {
     imagesloaded(document, () => {
       setLoading(false);
@@ -39,7 +39,7 @@ export default function Review() {
         <div className={"uk-container uk-container-expand"}>
           <p
             className={"uk-h2 uk-text-uppercase uk-text-center"}
-            uk-parallax={"x: 800, -1600"}
+            data-uk-parallax={"x: 800, -1600"}
           >
             Compassion &middot; Tolerance &middot; Equality &middot; Meaningful
             Work &middot; Authenticity

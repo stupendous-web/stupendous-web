@@ -1,8 +1,8 @@
-import { useLoading } from "../lib/context";
+import { useGlobal } from "../lib/context";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 export default function Loading() {
-  const { loading } = useLoading();
+  const { loading } = useGlobal();
   const { text } = useTypewriter({
     words: ["Hang in there..."],
     typeSpeed: 30,
@@ -22,7 +22,7 @@ export default function Loading() {
       >
         <div
           className={"uk-section-primary uk-flex uk-flex-middle"}
-          uk-height-viewport={""}
+          data-uk-height-viewport={""}
         >
           <div className={"uk-width-1-1"}>
             <div className={"uk-container uk-container-xsmall"}>

@@ -1,22 +1,7 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useGlobal } from "../lib/context";
 
 export default function Blog() {
-  const [articles, setArticles] = useState();
-  const [examples, setExamples] = useState();
-
-  useEffect(() => {
-    axios
-      .get("https://cms.stupendousweb.com/wp-json/wp/v2/posts?categories=1")
-      .then((response) => {
-        setArticles(response.data);
-      });
-    axios
-      .get("https://cms.stupendousweb.com/wp-json/wp/v2/posts?categories=8")
-      .then((response) => {
-        setExamples(response.data);
-      });
-  }, []);
+  const { articles, examples } = useGlobal();
 
   return (
     <>

@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { useLoading } from "../lib/context";
+import { useGlobal } from "../lib/context";
 import imagesloaded from "imagesloaded";
 import Head from "next/head";
 
 export default function About() {
-  const { setLoading } = useLoading();
+  const { setLoading } = useGlobal();
   useEffect(() => {
     imagesloaded(document, () => {
       setLoading(false);

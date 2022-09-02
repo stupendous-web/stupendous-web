@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import imagesloaded from "imagesloaded";
-import { useLoading } from "../lib/context";
+import { useGlobal } from "../lib/context";
 
 export default function Services() {
-  const { setLoading } = useLoading();
+  const { setLoading } = useGlobal();
 
   const sections = ["Consultation", "Development", "Hosting", "LTS"];
 

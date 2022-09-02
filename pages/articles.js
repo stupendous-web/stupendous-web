@@ -1,35 +1,16 @@
-import { useEffect, useState } from "react";
-import { useLoading } from "../lib/context";
+import { useEffect } from "react";
+import { useGlobal } from "../lib/context";
 import imagesloaded from "imagesloaded";
-import axios from "axios";
 import Head from "next/head";
 
 export default function Articles() {
-  const { setLoading } = useLoading();
-
-  const [articles, setArticles] = useState();
-  const [media, setMedia] = useState();
+  const { setLoading, articles, photos } = useGlobal();
 
   useEffect(() => {
     imagesloaded(document, () => {
       setLoading(false);
     });
-    axios
-      .get("https://cms.stupendousweb.com/wp-json/wp/v2/posts?categories=1")
-      .then((response) => {
-        setArticles(response.data);
-      });
   }, []);
-
-  useEffect(() => {
-    if (articles) {
-      axios
-        .get("https://cms.stupendousweb.com/wp-json/wp/v2/media/")
-        .then((response) => {
-          setMedia(response.data);
-        });
-    }
-  }, [articles]);
 
   return (
     <>
@@ -46,7 +27,7 @@ export default function Articles() {
               articles.map((article, key) => {
                 return (
                   <div key={key}>
-                    {media?.filter((image) => image?.post === article.id)[0]
+                    {photos?.filter((photo) => photo?.post === article.id)[0]
                       ?.source_url && (
                       <a
                         href={"/article/" + article.slug}
@@ -58,8 +39,8 @@ export default function Articles() {
                         <div className={"uk-height-medium uk-cover-container"}>
                           <img
                             src={
-                              media?.filter(
-                                (image) => image?.post === article.id
+                              photos?.filter(
+                                (photo) => photo?.post === article.id
                               )[0]?.source_url
                             }
                             alt={article.title.rendered}

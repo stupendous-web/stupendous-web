@@ -1,40 +1,28 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { useLoading } from "../../lib/context";
+import { useGlobal } from "../../lib/context";
 import Head from "next/head";
-import axios from "axios";
 import imagesloaded from "imagesloaded";
 import moment from "moment";
 
 export default function Article() {
   const router = useRouter();
-  const [post, setPost] = useState();
-  const [media, setMedia] = useState();
+  const { setLoading, articles, photos } = useGlobal();
+  const [article, setArticle] = useState();
+  const [photo, setPhoto] = useState();
 
   useEffect(() => {
     if (!router.isReady) return;
     const { slug } = router.query;
-    axios
-      .get("https://cms.stupendousweb.com/wp-json/wp/v2/posts?slug=" + slug)
-      .then((response) => {
-        setPost(response.data[0]);
-      });
-  }, [router.isReady]);
+    setArticle(articles?.find((article) => article.slug === slug));
+  }, [router.isReady, articles]);
 
   useEffect(() => {
-    if (post) {
-      axios
-        .get(
-          "https://cms.stupendousweb.com/wp-json/wp/v2/media/" +
-            post?.featured_media
-        )
-        .then((response) => {
-          setMedia(response.data);
-        });
+    if (article) {
+      setPhoto(photos?.find((photo) => photo.id === article?.featured_media));
     }
-  }, [post]);
+  }, [article]);
 
-  const { setLoading } = useLoading();
   useEffect(() => {
     imagesloaded(document, () => {
       setLoading(false);
@@ -45,30 +33,32 @@ export default function Article() {
     <>
       <Head>
         <title>
-          {post?.title.rendered +
+          {article?.title.rendered +
             " | Stupendous Web | If you want to build community, build a stupendous web app"}
         </title>
       </Head>
 
       <div className={"uk-section uk-section-xlarge"}>
         <div className={"uk-container uk-container-small"}>
-          {media?.source_url && (
+          {photo?.source_url && (
             <div className={"uk-height-medium uk-width-1-1 uk-cover-container"}>
               <img
-                src={media?.source_url}
-                alt={post?.title.rendered}
+                src={photo?.source_url}
+                alt={article?.title.rendered}
                 uk-cover={""}
               />
             </div>
           )}
-          <h1>{post?.title.rendered}</h1>
+          <h1>{article?.title.rendered}</h1>
           <p className={"uk-text-small uk-text-meta"}>
             Published{" "}
-            <time dateTime={moment(post?.date).format("YYYY-MM-DD")}>
-              {moment(post?.date).fromNow()}
+            <time dateTime={moment(article?.date).format("YYYY-MM-DD")}>
+              {moment(article?.date).fromNow()}
             </time>
           </p>
-          <div dangerouslySetInnerHTML={{ __html: post?.content.rendered }} />
+          <div
+            dangerouslySetInnerHTML={{ __html: article?.content.rendered }}
+          />
         </div>
       </div>
     </>

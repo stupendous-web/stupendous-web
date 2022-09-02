@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import HeadData from "../components/HeadData";
-import { useLoading } from "../lib/context";
+import { useGlobal } from "../lib/context";
 import imagesloaded from "imagesloaded";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,7 +16,7 @@ import Testimonials from "../components/Testimonials";
 import Blog from "../components/Blog";
 
 export default function Home() {
-  const { setLoading } = useLoading();
+  const { setLoading } = useGlobal();
   const [intro, setIntro] = useState(undefined);
   useEffect(() => {
     imagesloaded(document, () => {

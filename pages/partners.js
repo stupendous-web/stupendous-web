@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import imagesloaded from "imagesloaded";
-import { useLoading } from "../lib/context";
+import { useGlobal } from "../lib/context";
 
 export default function Partners() {
-  const { setLoading } = useLoading();
+  const { setLoading } = useGlobal();
   useEffect(() => {
     imagesloaded(document, () => {
       setLoading(false);
@@ -18,7 +18,7 @@ export default function Partners() {
       </Head>
       <div
         className={"uk-section uk-section-xlarge"}
-        uk-height-viewport={"offset-bottom: true"}
+        data-uk-height-viewport={"offset-bottom: true"}
       >
         <div className={"uk-container uk-container-small"}>
           <h1>Partners</h1>
