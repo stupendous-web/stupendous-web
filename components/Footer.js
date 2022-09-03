@@ -1,3 +1,4 @@
+import { useGlobal } from "../lib/context";
 import CTA from "../components/CTA";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,6 +18,8 @@ export default function Footer() {
     { href: "partners", title: "Partners" },
     { href: "articles", title: "Articles" },
   ];
+
+  const { articles } = useGlobal();
 
   return (
     <>
@@ -67,6 +70,26 @@ export default function Footer() {
                     Trade
                   </a>
                 </li>
+              </ul>
+              <ul className={"uk-nav uk-nav-default"}>
+                <li className={"uk-nav-header"}>Recent</li>
+                {articles?.map((article, key) => {
+                  if (key < 4) {
+                    return (
+                      <li key={key}>
+                        <a
+                          href={"/article/" + article.slug}
+                          title={
+                            article.title.rendered +
+                            " | Web App Development Services | Stupendous Web"
+                          }
+                        >
+                          {article.title.rendered}
+                        </a>
+                      </li>
+                    );
+                  }
+                })}
               </ul>
             </div>
             <div className={"uk-width-1-2@s uk-flex-middle"}>
