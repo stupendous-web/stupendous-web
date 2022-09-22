@@ -76,7 +76,7 @@ export default function Services() {
                 it a place on the web so your community can find it and connect
                 with you, and maintain the project even after it&apos;s done.
               </p>
-              <h2 id={"Consultation"}>Two FREE Software Consultations</h2>
+              <h2 id={"Consultation"}>Two FREE Consultations</h2>
               <p>
                 I enjoy offering these consultations at no charge because I
                 believe working closely together is how we build strong

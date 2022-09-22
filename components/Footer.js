@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useGlobal } from "../lib/context";
 import CTA from "../components/CTA";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -33,44 +34,15 @@ export default function Footer() {
                 {links.map((link, key) => {
                   return (
                     <li key={key}>
-                      <a
-                        href={"/" + link.href}
-                        title={
-                          link.title +
-                          " | Web App Development Services | Stupendous Web"
-                        }
-                      >
-                        {link.title}
-                      </a>
+                      <Link href={"/" + link.href}>
+                        <a>{link.title}</a>
+                      </Link>
                     </li>
                   );
                 })}
               </ul>
             </div>
             <div className={"uk-width-1-4@s"}>
-              <ul className={"uk-nav uk-nav-default"}>
-                <li className={"uk-nav-header"}>Projects</li>
-                <li>
-                  <a
-                    href={"https://analytics.stupendousweb.com"}
-                    title={
-                      "Next JS Analytics by Stupendous Web | Web App Development Services | Stupendous Web"
-                    }
-                  >
-                    Next JS Analytics
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={"https://trade.stupendousweb.com"}
-                    title={
-                      "Trade by Stupendous Web | Web App Development Services | Stupendous Web"
-                    }
-                  >
-                    Trade
-                  </a>
-                </li>
-              </ul>
               <ul className={"uk-nav uk-nav-default"}>
                 <li className={"uk-nav-header"}>Recent</li>
                 {articles?.map((article, key) => {

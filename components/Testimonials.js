@@ -31,7 +31,7 @@ export default function Testimonials() {
   return (
     <>
       <div className={"uk-section uk-section-large"}>
-        <div className={"uk-container uk-container"}>
+        <div className={"uk-container"}>
           <div
             className={"uk-child-width-1-4@s uk-grid-match"}
             data-uk-grid={""}
