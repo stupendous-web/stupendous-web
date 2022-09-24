@@ -35,7 +35,14 @@ export default function Footer() {
                   return (
                     <li key={key}>
                       <Link href={"/" + link.href}>
-                        <a>{link.title}</a>
+                        <a
+                          title={
+                            link.title +
+                            " | Web App Development Services | Stupendous Web"
+                          }
+                        >
+                          {link.title}
+                        </a>
                       </Link>
                     </li>
                   );
