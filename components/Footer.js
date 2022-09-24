@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useGlobal } from "../lib/context";
 import CTA from "../components/CTA";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +7,8 @@ import {
   faFacebook,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+
+import Transition from "./Transition";
 
 export default function Footer() {
   const links = [
@@ -34,16 +35,16 @@ export default function Footer() {
                 {links.map((link, key) => {
                   return (
                     <li key={key}>
-                      <Link href={"/" + link.href}>
-                        <a
-                          title={
-                            link.title +
-                            " | Web App Development Services | Stupendous Web"
-                          }
-                        >
+                      <a
+                        title={
+                          link.title +
+                          " | Web App Development Services | Stupendous Web"
+                        }
+                      >
+                        <Transition url={"/" + link.href}>
                           {link.title}
-                        </a>
-                      </Link>
+                        </Transition>
+                      </a>
                     </li>
                   );
                 })}
@@ -56,16 +57,16 @@ export default function Footer() {
                   if (key < 4) {
                     return (
                       <li key={key}>
-                        <Link href={"/article/" + article.slug}>
-                          <a
-                            title={
-                              article.title.rendered +
-                              " | Web App Development Services | Stupendous Web"
-                            }
-                          >
+                        <a
+                          title={
+                            article.title.rendered +
+                            " | Web App Development Services | Stupendous Web"
+                          }
+                        >
+                          <Transition url={"/article/" + article.slug}>
                             {article.title.rendered}
-                          </a>
-                        </Link>
+                          </Transition>
+                        </a>
                       </li>
                     );
                   }
@@ -99,15 +100,15 @@ export default function Footer() {
                 <div className={"uk-margin uk-text-muted"}>
                   <div>
                     &copy; Copyright{" "}
-                    <Link href={"/"}>
-                      <a
-                        title={
-                          "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
-                        }
-                      >
+                    <a
+                      title={
+                        "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
+                      }
+                    >
+                      <Transition url={"/"}>
                         Stupendous Web Marketing LLC
-                      </a>
-                    </Link>{" "}
+                      </Transition>
+                    </a>
                     2022.
                   </div>
                   <div>All rights reserved. Made in Oakland</div>

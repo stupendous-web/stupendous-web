@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,6 +10,7 @@ import {
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 import Navigation from "./Navigation";
+import Logo from "./Logo";
 
 export default function Menu() {
   const links = [
@@ -180,27 +180,7 @@ export default function Menu() {
           />
         </div>
       </div>
-      <Link href={"/"}>
-        <a
-          title={
-            "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
-          }
-          className={"uk-background-primary"}
-          style={{
-            height: "5rem",
-            width: "4rem",
-            position: "fixed",
-            top: 0,
-            left: "1rem",
-          }}
-        >
-          <img
-            src={"/images/logo.png"}
-            alt={"Web App Development Services"}
-            className={"uk-margin-top"}
-          />
-        </a>
-      </Link>
+      <Logo />
       <div style={{ position: "fixed", top: "30px", right: "30px" }}>
         <div onClick={showMenu} className={menuButtonClass}>
           <a>

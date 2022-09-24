@@ -9,6 +9,7 @@ import Analytics from "../components/Analytics";
 import Pride from "../components/Pride";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
+import Logo from "../components/Logo";
 import Loading from "../components/Loading";
 import Cursor from "../components/Cursor";
 
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }) {
         <Pride />
         <Footer />
         <Menu />
+        <Logo />
         <Loading />
         <Cursor />
       </Provider>
