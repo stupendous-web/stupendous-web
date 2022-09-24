@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Navigation() {
   const links = [
     { href: "projects", title: "Projects" },
@@ -11,15 +13,16 @@ export default function Navigation() {
         {links.map((link, key) => {
           return (
             <li className={"uk-margin-large-right"} key={key}>
-              <a
-                href={"/" + link.href}
-                title={
-                  link.title +
-                  " | Web App Development Services | Stupendous Web"
-                }
-              >
-                {link.title}
-              </a>
+              <Link href={"/" + link.href}>
+                <a
+                  title={
+                    link.title +
+                    " | Web App Development Services | Stupendous Web"
+                  }
+                >
+                  {link.title}
+                </a>
+              </Link>
             </li>
           );
         })}

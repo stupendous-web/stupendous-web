@@ -49,15 +49,16 @@ export default function Footer() {
                   if (key < 4) {
                     return (
                       <li key={key}>
-                        <a
-                          href={"/article/" + article.slug}
-                          title={
-                            article.title.rendered +
-                            " | Web App Development Services | Stupendous Web"
-                          }
-                        >
-                          {article.title.rendered}
-                        </a>
+                        <Link href={"/article/" + article.slug}>
+                          <a
+                            title={
+                              article.title.rendered +
+                              " | Web App Development Services | Stupendous Web"
+                            }
+                          >
+                            {article.title.rendered}
+                          </a>
+                        </Link>
                       </li>
                     );
                   }
@@ -91,14 +92,15 @@ export default function Footer() {
                 <div className={"uk-margin uk-text-muted"}>
                   <div>
                     &copy; Copyright{" "}
-                    <a
-                      href={"/"}
-                      title={
-                        "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
-                      }
-                    >
-                      Stupendous Web Marketing LLC
-                    </a>{" "}
+                    <Link href={"/"}>
+                      <a
+                        title={
+                          "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
+                        }
+                      >
+                        Stupendous Web Marketing LLC
+                      </a>
+                    </Link>{" "}
                     2022.
                   </div>
                   <div>All rights reserved. Made in Oakland</div>

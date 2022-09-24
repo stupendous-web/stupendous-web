@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Navigation from "./Navigation";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
@@ -8,6 +9,8 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+
+import Navigation from "./Navigation";
 
 export default function Menu() {
   const links = [
@@ -35,6 +38,7 @@ export default function Menu() {
     setMenuButtonClass("uk-visible");
     setCloseButtonClass("uk-hidden");
   };
+
   const changeIsometric = (isometric) => {
     if (isometric === 0) {
       setIsometricStyles([1, 0, 0, 0, 0]);
@@ -52,6 +56,9 @@ export default function Menu() {
       setIsometricStyles([0, 0, 0, 0, 1]);
     }
   };
+
+  const router = useRouter();
+
   return (
     <>
       <Navigation />
@@ -66,14 +73,14 @@ export default function Menu() {
           left: "0",
           transform: "translate3d(100%,0,0)",
         }}
-        uk-grid={""}
+        data-uk-grid={""}
       >
         <div
           className={"uk-flex uk-flex-middle"}
           style={{ marginLeft: "1rem" }}
-          uk-height-viewport={""}
+          data-uk-height-viewport={""}
         >
-          <div className={"uk-width-1-1"} uk-grid={""}>
+          <div className={"uk-width-1-1"} data-uk-grid={""}>
             <div className={"uk-width-1-3"}>
               <ul className={"uk-list"} style={{ marginTop: "9px" }}>
                 <li className={"uk-margin-remove"}>
@@ -109,11 +116,14 @@ export default function Menu() {
                       onMouseLeave={() => changeIsometric(0)}
                     >
                       <a
-                        href={"/" + link.href}
                         title={
                           link.title +
                           " | Web App Development Services | Stupendous Web"
                         }
+                        onClick={() => {
+                          router.push("/" + link.href);
+                          hideMenu();
+                        }}
                       >
                         {link.title}
                       </a>
@@ -170,26 +180,27 @@ export default function Menu() {
           />
         </div>
       </div>
-      <a
-        href={"/"}
-        title={
-          "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
-        }
-        className={"uk-background-primary"}
-        style={{
-          height: "5rem",
-          width: "4rem",
-          position: "fixed",
-          top: 0,
-          left: "1rem",
-        }}
-      >
-        <img
-          src={"/images/logo.png"}
-          alt={"Web App Development Services"}
-          className={"uk-margin-top"}
-        />
-      </a>
+      <Link href={"/"}>
+        <a
+          title={
+            "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
+          }
+          className={"uk-background-primary"}
+          style={{
+            height: "5rem",
+            width: "4rem",
+            position: "fixed",
+            top: 0,
+            left: "1rem",
+          }}
+        >
+          <img
+            src={"/images/logo.png"}
+            alt={"Web App Development Services"}
+            className={"uk-margin-top"}
+          />
+        </a>
+      </Link>
       <div style={{ position: "fixed", top: "30px", right: "30px" }}>
         <div onClick={showMenu} className={menuButtonClass}>
           <a>

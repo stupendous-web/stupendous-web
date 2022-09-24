@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useGlobal } from "../lib/context";
 
 export default function Blog() {
@@ -15,15 +16,16 @@ export default function Blog() {
                   articles.map((article, key) => {
                     return (
                       <li key={key}>
-                        <a
-                          href={"/article/" + article.slug}
-                          title={
-                            article.title.rendered +
-                            " | Web App Development Services | Stupendous Web"
-                          }
-                        >
-                          {article.title.rendered}
-                        </a>
+                        <Link href={"/article/" + article.slug}>
+                          <a
+                            title={
+                              article.title.rendered +
+                              " | Web App Development Services | Stupendous Web"
+                            }
+                          >
+                            {article.title.rendered}
+                          </a>
+                        </Link>
                       </li>
                     );
                   })}
@@ -36,15 +38,16 @@ export default function Blog() {
                   examples.map((example, key) => {
                     return (
                       <li key={key}>
-                        <a
-                          href={"/article/" + example.slug}
-                          title={
-                            example.title.rendered +
-                            " | Web App Development Services | Stupendous Web"
-                          }
-                        >
-                          {example.title.rendered}
-                        </a>
+                        <Link href={"/article/" + example.slug}>
+                          <a
+                            title={
+                              example.title.rendered +
+                              " | Web App Development Services | Stupendous Web"
+                            }
+                          >
+                            {example.title.rendered}
+                          </a>
+                        </Link>
                       </li>
                     );
                   })}
