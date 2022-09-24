@@ -1,16 +1,6 @@
-import { useEffect } from "react";
 import Head from "next/head";
-import imagesloaded from "imagesloaded";
-import { useGlobal } from "../lib/context";
 
 export default function Partners() {
-  const { setLoading } = useGlobal();
-  useEffect(() => {
-    imagesloaded(document, () => {
-      setLoading(false);
-    });
-  }, []);
-
   return (
     <>
       <Head>

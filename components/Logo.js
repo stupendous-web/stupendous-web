@@ -1,4 +1,4 @@
-import Transition from "./Transition";
+import Link from "next/link";
 
 export default function Logo() {
   return (
@@ -16,13 +16,13 @@ export default function Logo() {
           left: "1rem",
         }}
       >
-        <Transition url={"/"}>
+        <Link href={"/"}>
           <img
             src={"/images/logo.png"}
             alt={"Web App Development Services"}
             className={"uk-margin-top"}
           />
-        </Transition>
+        </Link>
       </a>
     </>
   );

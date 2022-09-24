@@ -1,4 +1,4 @@
-import Transition from "./Transition";
+import Link from "next/link";
 
 export default function Navigation() {
   const links = [
@@ -13,14 +13,16 @@ export default function Navigation() {
         {links.map((link, key) => {
           return (
             <li className={"uk-margin-large-right"} key={key}>
-              <a
-                title={
-                  link.title +
-                  " | Web App Development Services | Stupendous Web"
-                }
-              >
-                <Transition url={"/" + link.href}>{link.title}</Transition>
-              </a>
+              <Link href={"/" + link.href}>
+                <a
+                  title={
+                    link.title +
+                    " | Web App Development Services | Stupendous Web"
+                  }
+                >
+                  {link.title}
+                </a>
+              </Link>
             </li>
           );
         })}

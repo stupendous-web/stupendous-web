@@ -2,18 +2,14 @@ import { useGlobal } from "../lib/context";
 import Router from "next/router";
 
 export default function Transition({ url, children }) {
-  const { setLoading } = useGlobal();
+  const { setTransitioning } = useGlobal();
   const transition = () => {
-    setLoading(true);
+    setTransitioning(true);
     setTimeout(() => {
       Router.push(url);
-      setLoading(false);
+      setTransitioning(false);
     }, 500);
   };
 
-  return (
-    <>
-      <span onClick={transition}>{children}</span>
-    </>
-  );
+  return <>{children}</>;
 }

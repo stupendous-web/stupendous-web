@@ -1,16 +1,8 @@
-import { useEffect } from "react";
 import { useGlobal } from "../lib/context";
-import imagesloaded from "imagesloaded";
 import Head from "next/head";
 
 export default function Articles() {
-  const { setLoading, articles, photos } = useGlobal();
-
-  useEffect(() => {
-    imagesloaded(document, () => {
-      setLoading(false);
-    });
-  }, []);
+  const { articles, photos } = useGlobal();
 
   return (
     <>

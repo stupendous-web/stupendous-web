@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import { useGlobal } from "../lib/context";
-import imagesloaded from "imagesloaded";
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,13 +8,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Contact() {
-  const { setLoading } = useGlobal();
-  useEffect(() => {
-    imagesloaded(document, () => {
-      setLoading(false);
-    });
-  }, []);
-
   const links = [
     {
       title: "Book your FREE consultation",

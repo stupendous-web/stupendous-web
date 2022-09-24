@@ -1,16 +1,6 @@
-import { useEffect } from "react";
-import { useGlobal } from "../lib/context";
-import imagesloaded from "imagesloaded";
 import Head from "next/head";
 
 export default function Review() {
-  const { setLoading } = useGlobal();
-  useEffect(() => {
-    imagesloaded(document, () => {
-      setLoading(false);
-    });
-  }, []);
-
   return (
     <>
       <Head>

@@ -1,17 +1,7 @@
-import { useEffect } from "react";
 import Head from "next/head";
-import { useGlobal } from "../lib/context";
-import imagesloaded from "imagesloaded";
 import Project from "../components/Project";
 
 export default function Projects() {
-  const { setLoading } = useGlobal();
-  useEffect(() => {
-    imagesloaded(document, () => {
-      setLoading(false);
-    });
-  }, []);
-
   return (
     <>
       <Head>
