@@ -1,4 +1,7 @@
 import Head from "next/head";
+import Image from "next/image";
+
+import isometric from "../images/isometrics/isometric-2-2.png";
 
 export default function Services() {
   const sections = ["Consultation", "Development", "Hosting", "LTS"];
@@ -12,9 +15,10 @@ export default function Services() {
         <div className={"uk-container uk-container-small"}>
           <div className={"uk-flex-middle"} data-uk-grid={""}>
             <div className={"uk-width-1-3@s uk-visible@s"}>
-              <img
-                src={"/images/isometrics/isometric-2-2.png"}
+              <Image
+                src={isometric}
                 alt={"Web App Development Services"}
+                priority
               />
             </div>
             <div className={"uk-width-2-3@s"}>

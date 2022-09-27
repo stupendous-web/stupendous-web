@@ -1,5 +1,8 @@
 import Head from "next/head";
+import Image from "next/image";
 import Project from "../components/Project";
+
+import isometric from "../images/isometrics/isometric-1-1.png";
 
 export default function Projects() {
   return (
@@ -14,9 +17,10 @@ export default function Projects() {
           <div className={"uk-container uk-container-small"}>
             <div className={"uk-flex-middle"} data-uk-grid={""}>
               <div className={"uk-width-1-3@s uk-visible@s"}>
-                <img
-                  src={"/images/isometrics/isometric-1-1.png"}
+                <Image
+                  src={isometric}
                   alt={"Web App Development Services"}
+                  priority
                 />
               </div>
               <div className={"uk-width-2-3@s"}>
