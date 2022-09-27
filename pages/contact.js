@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faVideo,
@@ -6,6 +7,8 @@ import {
   faPhone,
   faWrench,
 } from "@fortawesome/free-solid-svg-icons";
+
+import isometric from "../images/isometrics/isometric-2-3.png";
 
 export default function Contact() {
   const links = [
@@ -45,10 +48,7 @@ export default function Contact() {
         <div className={"uk-container uk-container-small"}>
           <div className={"uk-flex-middle"} data-uk-grid={""}>
             <div className={"uk-width-1-3@s uk-visible@s"}>
-              <img
-                src={"/images/isometrics/isometric-2-3.png"}
-                alt={"Web App Development Services"}
-              />
+              <Image src={isometric} alt={"Web App Development Services"} />
             </div>
             <div className={"uk-width-2-3@s"}>
               <p className={"uk-text-justify uk-dropcap"}>
