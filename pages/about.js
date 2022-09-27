@@ -1,9 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useGlobal } from "../lib/context";
 
 import isometric from "../images/isometrics/isometric-2-1.png";
 
 export default function About() {
+  const { setLoading } = useGlobal();
+
   return (
     <>
       <Head>
@@ -17,6 +20,7 @@ export default function About() {
                 src={isometric}
                 alt={"Web App Development Services"}
                 priority
+                onLoadingComplete={setLoading(false)}
               />
             </div>
             <div className={"uk-width-2-3@s"}>

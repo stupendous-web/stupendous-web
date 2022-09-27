@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useGlobal } from "../lib/context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faVideo,
@@ -11,6 +12,8 @@ import {
 import isometric from "../images/isometrics/isometric-2-3.png";
 
 export default function Contact() {
+  const { setLoading } = useGlobal();
+
   const links = [
     {
       title: "Book your FREE consultation",
@@ -52,6 +55,7 @@ export default function Contact() {
                 src={isometric}
                 alt={"Web App Development Services"}
                 priority
+                onLoadingComplete={setLoading(false)}
               />
             </div>
             <div className={"uk-width-2-3@s"}>

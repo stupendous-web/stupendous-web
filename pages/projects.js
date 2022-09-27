@@ -7,6 +7,7 @@ import isometric from "../images/isometrics/isometric-1-1.png";
 
 export default function Projects() {
   const { setLoading } = useGlobal();
+
   return (
     <>
       <Head>
