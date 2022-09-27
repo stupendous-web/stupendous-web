@@ -48,7 +48,11 @@ export default function Contact() {
         <div className={"uk-container uk-container-small"}>
           <div className={"uk-flex-middle"} data-uk-grid={""}>
             <div className={"uk-width-1-3@s uk-visible@s"}>
-              <Image src={isometric} alt={"Web App Development Services"} />
+              <Image
+                src={isometric}
+                alt={"Web App Development Services"}
+                priority
+              />
             </div>
             <div className={"uk-width-2-3@s"}>
               <p className={"uk-text-justify uk-dropcap"}>
