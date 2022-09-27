@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useGlobal } from "../../lib/context";
 import Head from "next/head";
-import imagesloaded from "imagesloaded";
 import moment from "moment";
 
 export default function Article() {
@@ -24,10 +23,10 @@ export default function Article() {
   }, [article]);
 
   useEffect(() => {
-    imagesloaded(document, () => {
+    if (article && photo) {
       setLoading(false);
-    });
-  }, []);
+    }
+  }, [article, photo]);
 
   return (
     <>
@@ -45,7 +44,7 @@ export default function Article() {
               <img
                 src={photo?.source_url}
                 alt={article?.title.rendered}
-                uk-cover={""}
+                data-uk-cover={""}
               />
             </div>
           )}

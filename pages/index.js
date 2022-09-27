@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Head from "next/head";
+import Image from "next/image";
 import HeadData from "../components/HeadData";
 import { useGlobal } from "../lib/context";
-import imagesloaded from "imagesloaded";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheck,
@@ -14,18 +14,19 @@ import "devicon";
 
 import Testimonials from "../components/Testimonials";
 import Blog from "../components/Blog";
+import isometric from "../images/isometrics/isometric-1-2.png";
 
 export default function Home() {
   const { setLoading } = useGlobal();
+
   const [intro, setIntro] = useState(undefined);
-  useEffect(() => {
-    imagesloaded(document, () => {
-      setLoading(false);
-      setTimeout(() => {
-        setIntro("uk-animation-fade");
-      }, 800);
-    });
-  }, []);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+    setTimeout(() => {
+      setIntro("uk-animation-fade");
+    }, 800);
+  };
 
   return (
     <>
@@ -86,9 +87,11 @@ export default function Home() {
                 </p>
               </div>
               <div className={"uk-width-1-3@s"}>
-                <img
-                  src={"/images/isometrics/isometric-1-2.png"}
+                <Image
+                  src={isometric}
                   alt={"Web App Development Services"}
+                  priority
+                  onLoadingComplete={handleLoadingComplete}
                 />
               </div>
             </div>

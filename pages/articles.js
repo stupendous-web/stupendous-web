@@ -1,8 +1,15 @@
+import { useEffect } from "react";
 import { useGlobal } from "../lib/context";
 import Head from "next/head";
 
 export default function Articles() {
-  const { articles, photos } = useGlobal();
+  const { setLoading, articles, photos } = useGlobal();
+
+  useEffect(() => {
+    if (articles && photos) {
+      setLoading(false);
+    }
+  }, [articles, photos]);
 
   return (
     <>

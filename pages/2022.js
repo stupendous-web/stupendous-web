@@ -1,6 +1,14 @@
+import { useEffect } from "react";
 import Head from "next/head";
+import { useGlobal } from "../lib/context";
 
 export default function Review() {
+  const { setLoading } = useGlobal();
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
   return (
     <>
       <Head>
