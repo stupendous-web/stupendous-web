@@ -7,6 +7,7 @@ export default function Navigation() {
     { href: "services", title: "Services" },
     { href: "contact", title: "Contact" },
   ];
+
   return (
     <div className={"uk-position-top-center"}>
       <ul className={"uk-subnav uk-visible@s"} style={{ paddingTop: "2rem" }}>
