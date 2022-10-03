@@ -12,10 +12,12 @@ import Menu from "../components/Menu";
 import Logo from "../components/Logo";
 import Loading from "../components/Loading";
 import Cursor from "../components/Cursor";
+import StupendousAnalytics from "stupendous-analytics";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <StupendousAnalytics site={"ee351665-bf97-4002-9089-516bed52a880"} />
       <Analytics site={"stupendous-web"} />
       <Provider>
         <Component {...pageProps} />

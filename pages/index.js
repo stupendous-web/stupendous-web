@@ -11,7 +11,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faStripe, faPaypal } from "@fortawesome/free-brands-svg-icons";
 import "devicon";
-import StupendousAnalytics from "stupendous-analytics";
 
 import Testimonials from "../components/Testimonials";
 import Blog from "../components/Blog";
@@ -31,7 +30,6 @@ export default function Home() {
 
   return (
     <>
-      <StupendousAnalytics site={"ee351665-bf97-4002-9089-516bed52a880"} />
       <Head>
         <title>
           Web App Development Services | Stupendous Web | If you want to build
