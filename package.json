@@ -23,7 +23,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-simple-typewriter": "^3.0.1",
-    "stupendous-analytics": "^1.0.12",
+    "stupendous-analytics": "^1.0.17",
     "uikit": "^3.14.3"
   },
   "devDependencies": {

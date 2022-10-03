@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useGlobal } from "../lib/context";
+import StupendousAnalytics from "stupendous-analytics";
 
 import Project from "../components/Project";
 import isometric from "../images/isometrics/isometric-1-1.png";
@@ -10,6 +11,7 @@ export default function Projects() {
 
   return (
     <>
+      <StupendousAnalytics site={"ee351665-bf97-4002-9089-516bed52a880"} />
       <Head>
         <title>Projects | Web App Development Services | Stupendous Web</title>
       </Head>
