@@ -4,7 +4,6 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import { Provider } from "../lib/context";
-import Analytics from "../components/Analytics";
 
 import Pride from "../components/Pride";
 import Footer from "../components/Footer";
@@ -18,7 +17,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <StupendousAnalytics site={"ee351665-bf97-4002-9089-516bed52a880"} />
-      <Analytics site={"stupendous-web"} />
       <Provider>
         <Component {...pageProps} />
         <Pride />
