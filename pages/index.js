@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import HeadData from "../components/HeadData";
@@ -14,19 +13,11 @@ import "devicon";
 
 import Testimonials from "../components/Testimonials";
 import Blog from "../components/Blog";
+
 import isometric from "../images/isometrics/isometric-1-2.png";
 
 export default function Home() {
   const { setLoading } = useGlobal();
-
-  const [intro, setIntro] = useState(undefined);
-
-  const handleLoadingComplete = () => {
-    setLoading(false);
-    setTimeout(() => {
-      setIntro("uk-animation-fade");
-    }, 800);
-  };
 
   return (
     <>
@@ -51,8 +42,7 @@ export default function Home() {
           <div className={"uk-container"}>
             <div className={"uk-flex-middle"} data-uk-grid={""}>
               <div className={"uk-width-2-3@s"}>
-                <h1 className={intro}>Web App Development Services</h1>
-                <div className={intro} style={{ animationDelay: ".5s" }}>
+                <h1>Web App Development Services</h1>
                   <div className={"uk-flex-middle"} data-uk-grid={""}>
                     <div className={"uk-width-auto@s"}>
                       <a
@@ -77,10 +67,9 @@ export default function Home() {
                       <a href={"tel:5102100889"} data-uk-tooltip={"Call me!"}>
                         <FontAwesomeIcon icon={faPhone} />
                       </a>
-                    </div>
                   </div>
                 </div>
-                <p className={intro} style={{ animationDelay: "1s" }}>
+                <p>
                   I help people with something to share who want to engage with
                   their community by delivering web app development services
                   that improve their brand awareness and authority.
@@ -91,7 +80,7 @@ export default function Home() {
                   src={isometric}
                   alt={"Web App Development Services"}
                   priority
-                  onLoadingComplete={handleLoadingComplete}
+                  onLoadingComplete={setLoading(false)}
                 />
               </div>
             </div>

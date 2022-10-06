@@ -3,6 +3,7 @@ import Link from "next/link";
 export default function Logo() {
   return (
     <>
+    <Link href={"/"}>
       <a
         title={
           "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
@@ -16,14 +17,13 @@ export default function Logo() {
           left: "1rem",
         }}
       >
-        <Link href={"/"}>
           <img
             src={"/images/logo.png"}
             alt={"Web App Development Services"}
             className={"uk-margin-top"}
           />
-        </Link>
       </a>
+    </Link>
     </>
   );
 }
