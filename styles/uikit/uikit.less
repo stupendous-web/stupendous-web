@@ -3,18 +3,12 @@
 
 @global-font-family:                            new-order, sans-serif;
 @base-heading-font-family:                      bitcount-mono-single-circle, monospace;
-@global-font-size:                              18px;
+@global-font-size:                              16px;
 @global-line-height:                            1.5;
-@global-xxlarge-font-size:                      4rem; // h1
+@global-2xlarge-font-size:                      4rem; // h1
 @global-xlarge-font-size:                       2rem; // h2
-@global-large-font-size:                        1rem; // 1.5rem Lead
+@global-large-font-size:                        1rem; // Lead
 @global-small-font-size:                        0.75rem;
-
-@cyan:                                          #00AEEF;
-@magenta:                                       #EC008C;
-@yellow:                                        #FFF200;
-
-@legacy:                                        #073391;
 
 @global-color:                                  #CCC;
 @global-emphasis-color:                         #FFF;
@@ -22,20 +16,20 @@
 @global-link-color:                             @global-inverse-color;
 @global-link-hover-color:                       darken(@global-inverse-color, 5%);
 @global-inverse-color:                          #FFF;
-@global-background:                             #000312;
+@global-background:                             #000;
 @global-muted-background:                       #333;
-@global-primary-background:                     @magenta;
+@global-primary-background:                     #EC008C;
 @global-secondary-background:                   #000;
 
 @global-margin:                                 @global-font-size;
 @global-small-margin:                           @global-small-font-size;
 @global-medium-margin:                          @global-xlarge-font-size;
-@global-large-margin:                           @global-xxlarge-font-size;
-@global-xlarge-margin:                          6.854rem;
+@global-large-margin:                           @global-2xlarge-font-size;
+@global-xlarge-margin:                          6rem;
 @global-gutter:                                 @global-font-size;
 @global-small-gutter:                           @global-small-font-size;
 @global-medium-gutter:                          @global-xlarge-font-size;
-@global-large-gutter:                           @global-xxlarge-font-size;
+@global-large-gutter:                           @global-2xlarge-font-size;
 
 @base-em-color:                                 @global-color;
 
@@ -81,6 +75,10 @@ blockquote {
 .uk-text-lead {
     font-size: @global-font-size !important; // Leave this because it will change on mobile :/
 }
+
+// Heading
+
+@heading-2xlarge-font-size-l:                   8rem;
 
 // Container
 

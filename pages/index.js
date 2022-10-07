@@ -89,7 +89,7 @@ export default function Home() {
       </div>
       <div className={"uk-section uk-section-large"}>
         <div className={"uk-container uk-container-small"}>
-          <p className={"uk-heading-medium"}>
+          <p className={"uk-h1"}>
             If you want to build community, build a stupendous web app.
           </p>
           <p>
