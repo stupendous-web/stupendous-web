@@ -61,7 +61,7 @@ export default function Contact() {
             <div className={"uk-width-2-3@s"}>
               <p className={"uk-text-justify uk-dropcap"}>
                 Let&apos;s discuss your goals. Get in touch below or schedule
-                your FREE consultation. After your consultation you&apos;ll
+                your 2 FREE consultations. After your consultation you&apos;ll
                 receive a creative brief, project plan, and secret website where
                 you can preview your project. Lastly, we&apos;ll launch your web
                 app development services to the internet!

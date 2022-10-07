@@ -112,9 +112,7 @@ export default function Services() {
                 quickly, safely, and hassle-free. I&apos;m here to help with
                 those too. I&apos;ll setup and manage your domain name, SSL
                 certificates, and on-page SEO. I&apos;m also available for
-                support via text, phone, email, video chat, and more! When you
-                sign up for my web app development services, you&apos;ll receive
-                all this for a small monthly charge. Let me take all the dirty
+                support via text, phone, email, video chat, and more! Let me take all the dirty
                 work out of launching and maintaining your web application.
               </p>
               <ul className={"uk-list uk-list-disc"}>
@@ -126,8 +124,7 @@ export default function Services() {
               </ul>
               <h2 id={"LTS"}>Long Term Support (LTS)</h2>
               <p>
-                Even well-working machines need their oil changed from time to
-                time. Web applications are just the same. They will need
+                Even well-working machines need their oil changed. Web applications are just the same. They will need
                 upgrades and security updates from time to time. You may even
                 want to make minor changes occasionally. I&apos;ll keep your web
                 application up-to-date with the latest technology and safe again

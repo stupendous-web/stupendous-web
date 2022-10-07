@@ -227,8 +227,7 @@ export default function Home() {
               Don&apos;t know what a server is? No problem! Let me take care of
               all the technical work getting you, your brand, and your message
               online with my web app development services. Your website hosting
-              will be fully managed. Your website will be fast, secure, and
-              green. And, best of all, you don&apos;t have to do a thing!.
+              will be fully managed. Your website will be fast and secure. And, best of all, you don&apos;t have to do a thing!.
             </li>
             <li>
               Let&apos;s get this right! We&apos;ll work closely together to
@@ -384,15 +383,15 @@ export default function Home() {
           <p className={"uk-margin-remove"}>Web Apps</p>
           <h2 className={"uk-margin-remove-top"}>Engage with your Audience</h2>
           <p>
-            Your website will excel far past other static websites! With the
+            Your web app will excel far past your competitors&apos; static websites! With the
             added power of a database and powerful server technologies your web
-            app development services will be more dynamic. This ability
+            app development services will be more dynamic. This power [use it wisely]
             let&apos;s you engage with your audiences in many fun, creative, and
             profitable ways:
           </p>
           <ul className={"uk-list"}>
             <li>
-              <FontAwesomeIcon icon={faCheck} /> Client Login
+              <FontAwesomeIcon icon={faCheck} /> Client Logins
             </li>
             <li>
               <FontAwesomeIcon icon={faCheck} /> Online Forms
