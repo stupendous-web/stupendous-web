@@ -6,10 +6,10 @@ export default function Articles() {
   const { setLoading, articles, photos } = useGlobal();
 
   useEffect(() => {
-    if (articles && photos) {
+    if (articles) {
       setLoading(false);
     }
-  }, [articles, photos]);
+  }, [articles]);
 
   return (
     <>
@@ -23,11 +23,13 @@ export default function Articles() {
             data-uk-grid={"masonry: true"}
           >
             {articles &&
-              articles.map((article, key) => {
+              articles.map((article) => {
+                const src = photos?.find(
+                  (photo) => photo?.post === article.id
+                )?.source_url;
                 return (
-                  <div key={key}>
-                    {photos?.filter((photo) => photo?.post === article.id)[0]
-                      ?.source_url && (
+                  <div key={article.id}>
+                    {src && (
                       <a
                         href={"/article/" + article.slug}
                         title={
@@ -37,11 +39,7 @@ export default function Articles() {
                       >
                         <div className={"uk-height-medium uk-cover-container"}>
                           <img
-                            src={
-                              photos?.filter(
-                                (photo) => photo?.post === article.id
-                              )[0]?.source_url
-                            }
+                            src={src}
                             alt={article.title.rendered}
                             data-uk-cover={""}
                           />

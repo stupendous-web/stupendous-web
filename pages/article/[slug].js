@@ -23,10 +23,10 @@ export default function Article() {
   }, [article]);
 
   useEffect(() => {
-    if (article && photo) {
+    if (article) {
       setLoading(false);
     }
-  }, [article, photo]);
+  }, [article]);
 
   return (
     <>
