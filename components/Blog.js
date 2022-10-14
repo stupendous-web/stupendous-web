@@ -26,7 +26,7 @@ export default function Blog() {
                 {articles?.slice(0, 8).map((article, key) => {
                   return (
                     <li key={key}>
-                      <Link href={"/article/" + article.slug}>
+                      <Link href={"/articles/" + article.slug}>
                         <a
                           title={
                             article.title.rendered +
@@ -48,7 +48,7 @@ export default function Blog() {
                   examples.map((example, key) => {
                     return (
                       <li key={key}>
-                        <Link href={"/article/" + example.slug}>
+                        <Link href={"/articles/" + example.slug}>
                           <a
                             title={
                               example.title.rendered +

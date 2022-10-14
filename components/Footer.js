@@ -55,7 +55,7 @@ export default function Footer() {
                 {articles?.slice(0, 4).map((article, key) => {
                   return (
                     <li key={key}>
-                      <Link href={"/article/" + article.slug}>
+                      <Link href={"/articles/" + article.slug}>
                         <a
                           title={
                             article.title.rendered +

@@ -11,7 +11,7 @@ export default function Article() {
   const [photo, setPhoto] = useState();
 
   useEffect(() => {
-    if (!router.isReady) return;
+    if (!router.isReady && !articles) return;
     const { slug } = router.query;
     setArticle(articles?.find((article) => article.slug === slug));
   }, [router.isReady, articles]);

@@ -30,7 +30,7 @@ export default function Articles() {
                 <div key={article.id}>
                   {src && (
                     <a
-                      href={"/article/" + article.slug}
+                      href={"/articles/" + article.slug}
                       title={
                         article.title.rendered +
                         " | Web App Development Services | Stupendous Web"
@@ -47,7 +47,7 @@ export default function Articles() {
                   )}
                   <h2>
                     <a
-                      href={"/article/" + article.slug}
+                      href={"/articles/" + article.slug}
                       title={
                         article.title.rendered +
                         " | Web App Development Services | Stupendous Web"
@@ -63,7 +63,7 @@ export default function Articles() {
                   />
                   <p>
                     <a
-                      href={"/article/" + article.slug}
+                      href={"/articles/" + article.slug}
                       title={
                         article.title.rendered +
                         " | Web App Development Services | Stupendous Web"
