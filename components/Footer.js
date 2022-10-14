@@ -52,23 +52,21 @@ export default function Footer() {
             <div className={"uk-width-1-4@s"}>
               <ul className={"uk-nav uk-nav-default"}>
                 <li className={"uk-nav-header"}>Recent</li>
-                {articles?.map((article, key) => {
-                  if (key < 4) {
-                    return (
-                      <li key={key}>
-                        <Link href={"/article/" + article.slug}>
-                          <a
-                            title={
-                              article.title.rendered +
-                              " | Web App Development Services | Stupendous Web"
-                            }
-                          >
-                            {article.title.rendered}
-                          </a>
-                        </Link>
-                      </li>
-                    );
-                  }
+                {articles?.slice(0, 4).map((article, key) => {
+                  return (
+                    <li key={key}>
+                      <Link href={"/article/" + article.slug}>
+                        <a
+                          title={
+                            article.title.rendered +
+                            " | Web App Development Services | Stupendous Web"
+                          }
+                        >
+                          {article.title.rendered}
+                        </a>
+                      </Link>
+                    </li>
+                  );
                 })}
               </ul>
             </div>
