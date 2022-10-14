@@ -22,60 +22,59 @@ export default function Articles() {
             className={"uk-child-width-1-2@s"}
             data-uk-grid={"masonry: true"}
           >
-            {articles &&
-              articles.map((article) => {
-                const src = photos?.find(
-                  (photo) => photo?.post === article.id
-                )?.source_url;
-                return (
-                  <div key={article.id}>
-                    {src && (
-                      <a
-                        href={"/article/" + article.slug}
-                        title={
-                          article.title.rendered +
-                          " | Web App Development Services | Stupendous Web"
-                        }
-                      >
-                        <div className={"uk-height-medium uk-cover-container"}>
-                          <img
-                            src={src}
-                            alt={article.title.rendered}
-                            data-uk-cover={""}
-                          />
-                        </div>
-                      </a>
-                    )}
-                    <h2>
-                      <a
-                        href={"/article/" + article.slug}
-                        title={
-                          article.title.rendered +
-                          " | Web App Development Services | Stupendous Web"
-                        }
-                      >
-                        {article.title.rendered}
-                      </a>
-                    </h2>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: article.excerpt.rendered,
-                      }}
-                    />
-                    <p>
-                      <a
-                        href={"/article/" + article.slug}
-                        title={
-                          article.title.rendered +
-                          " | Web App Development Services | Stupendous Web"
-                        }
-                      >
-                        Read more.
-                      </a>
-                    </p>
-                  </div>
-                );
-              })}
+            {articles?.map((article) => {
+              const src = photos?.find(
+                (photo) => photo?.post === article.id
+              )?.source_url;
+              return (
+                <div key={article.id}>
+                  {src && (
+                    <a
+                      href={"/article/" + article.slug}
+                      title={
+                        article.title.rendered +
+                        " | Web App Development Services | Stupendous Web"
+                      }
+                    >
+                      <div className={"uk-height-medium uk-cover-container"}>
+                        <img
+                          src={src}
+                          alt={article.title.rendered}
+                          data-uk-cover={""}
+                        />
+                      </div>
+                    </a>
+                  )}
+                  <h2>
+                    <a
+                      href={"/article/" + article.slug}
+                      title={
+                        article.title.rendered +
+                        " | Web App Development Services | Stupendous Web"
+                      }
+                    >
+                      {article.title.rendered}
+                    </a>
+                  </h2>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: article.excerpt.rendered,
+                    }}
+                  />
+                  <p>
+                    <a
+                      href={"/article/" + article.slug}
+                      title={
+                        article.title.rendered +
+                        " | Web App Development Services | Stupendous Web"
+                      }
+                    >
+                      Read more.
+                    </a>
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
