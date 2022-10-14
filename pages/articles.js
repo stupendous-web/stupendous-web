@@ -24,7 +24,7 @@ export default function Articles() {
           >
             {articles?.map((article) => {
               const src = photos?.find(
-                (photo) => photo?.post === article.id
+                (photo) => photo?.id === article.featured_media
               )?.source_url;
               return (
                 <div key={article.id}>
