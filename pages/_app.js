@@ -16,7 +16,7 @@ import StupendousAnalytics from "stupendous-analytics";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <StupendousAnalytics site={"tPtveDpYwQJhg0q690aBLiIbW0qlidYF"} />
+      <StupendousAnalytics site={"634ccc0b79e4a6140a713f68"} />
       <Provider>
         <Component {...pageProps} />
         <Pride />
