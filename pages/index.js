@@ -21,7 +21,7 @@ import axios from "axios";
 export default function Home() {
   useEffect(() => {
     const data = {
-      site: "topher",
+      site: "topher2",
     };
     axios
       .post("https://analytics.stupendousweb.com/api/create-pageview", data, {
