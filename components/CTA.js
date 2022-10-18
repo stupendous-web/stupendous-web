@@ -36,7 +36,7 @@ class CTA extends React.Component {
                     >
                       <FontAwesomeIcon icon={faEnvelope} />
                     </a>
-                    <a href={"tel:5102100889"} data-uk-tooltip={"Call me!"}>
+                    <a href={"tel:5109440331"} data-uk-tooltip={"Call me!"}>
                       <FontAwesomeIcon icon={faPhone} />
                     </a>
                   </div>

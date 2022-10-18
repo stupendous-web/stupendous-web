@@ -26,8 +26,8 @@ export default function Contact() {
       icon: faEnvelope,
     },
     {
-      title: "+1 510.210.0889 (Call or Text!)",
-      href: "tel:5102100889",
+      title: "+1 510.944.0331 (Call or Text!)",
+      href: "tel:5109440331",
       icon: faPhone,
     },
     {
