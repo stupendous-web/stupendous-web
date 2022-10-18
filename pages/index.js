@@ -15,8 +15,18 @@ import Testimonials from "../components/Testimonials";
 import Blog from "../components/Blog";
 
 import isometric from "../images/isometrics/isometric-1-2.png";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const data = {
+      site: "topher",
+    };
+    axios
+      .post("https://analytics.stupendousweb.com/api/create-pageview", data)
+      .then((response) => console.log(response.data))
+      .catch((error) => console.log(error));
+  }, []);
   const { setLoading } = useGlobal();
 
   return (
@@ -43,30 +53,28 @@ export default function Home() {
             <div className={"uk-flex-middle"} data-uk-grid={""}>
               <div className={"uk-width-2-3@s"}>
                 <h1>Web App Development Services</h1>
-                  <div className={"uk-flex-middle"} data-uk-grid={""}>
-                    <div className={"uk-width-auto@s"}>
-                      <a
-                        href={
-                          "https://calendly.com/stupendousweb/free-consultation"
-                        }
-                        className={
-                          "uk-button uk-button-primary uk-button-large"
-                        }
-                      >
-                        Start Yours Now
-                      </a>
-                    </div>
-                    <div className={"uk-width-expand@s"}>
-                      <a
-                        href={"mailto:topher@stupendousweb.com"}
-                        className={"uk-margin-small-right"}
-                        data-uk-tooltip={"Email me!"}
-                      >
-                        <FontAwesomeIcon icon={faEnvelope} />
-                      </a>
-                      <a href={"tel:5102100889"} data-uk-tooltip={"Call me!"}>
-                        <FontAwesomeIcon icon={faPhone} />
-                      </a>
+                <div className={"uk-flex-middle"} data-uk-grid={""}>
+                  <div className={"uk-width-auto@s"}>
+                    <a
+                      href={
+                        "https://calendly.com/stupendousweb/free-consultation"
+                      }
+                      className={"uk-button uk-button-primary uk-button-large"}
+                    >
+                      Start Yours Now
+                    </a>
+                  </div>
+                  <div className={"uk-width-expand@s"}>
+                    <a
+                      href={"mailto:topher@stupendousweb.com"}
+                      className={"uk-margin-small-right"}
+                      data-uk-tooltip={"Email me!"}
+                    >
+                      <FontAwesomeIcon icon={faEnvelope} />
+                    </a>
+                    <a href={"tel:5102100889"} data-uk-tooltip={"Call me!"}>
+                      <FontAwesomeIcon icon={faPhone} />
+                    </a>
                   </div>
                 </div>
                 <p>
@@ -227,7 +235,8 @@ export default function Home() {
               Don&apos;t know what a server is? No problem! Let me take care of
               all the technical work getting you, your brand, and your message
               online with my web app development services. Your website hosting
-              will be fully managed. Your website will be fast and secure. And, best of all, you don&apos;t have to do a thing!.
+              will be fully managed. Your website will be fast and secure. And,
+              best of all, you don&apos;t have to do a thing!.
             </li>
             <li>
               Let&apos;s get this right! We&apos;ll work closely together to
@@ -383,11 +392,11 @@ export default function Home() {
           <p className={"uk-margin-remove"}>Web Apps</p>
           <h2 className={"uk-margin-remove-top"}>Engage with your Audience</h2>
           <p>
-            Your web app will excel far past your competitors&apos; static websites! With the
-            added power of a database and powerful server technologies your web
-            app development services will be more dynamic. This power [use it wisely]
-            let&apos;s you engage with your audiences in many fun, creative, and
-            profitable ways:
+            Your web app will excel far past your competitors&apos; static
+            websites! With the added power of a database and powerful server
+            technologies your web app development services will be more dynamic.
+            This power [use it wisely] let&apos;s you engage with your audiences
+            in many fun, creative, and profitable ways:
           </p>
           <ul className={"uk-list"}>
             <li>
