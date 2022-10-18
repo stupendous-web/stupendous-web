@@ -16,6 +16,7 @@ import Blog from "../components/Blog";
 
 import isometric from "../images/isometrics/isometric-1-2.png";
 import { useEffect } from "react";
+import axios from "axios";
 
 export default function Home() {
   useEffect(() => {
