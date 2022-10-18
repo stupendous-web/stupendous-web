@@ -15,21 +15,8 @@ import Testimonials from "../components/Testimonials";
 import Blog from "../components/Blog";
 
 import isometric from "../images/isometrics/isometric-1-2.png";
-import { useEffect } from "react";
-import axios from "axios";
 
 export default function Home() {
-  useEffect(() => {
-    const data = {
-      site: "topher2",
-    };
-    axios
-      .post("https://analytics.stupendousweb.com/api/create-pageview", data, {
-        headers: { "Content-Type": "application/json" },
-      })
-      .then((response) => console.log(response.data))
-      .catch((error) => console.log(error));
-  }, []);
   const { setLoading } = useGlobal();
 
   return (
