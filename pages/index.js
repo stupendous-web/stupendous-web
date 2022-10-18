@@ -25,7 +25,7 @@ export default function Home() {
     };
     axios
       .post("https://analytics.stupendousweb.com/api/create-pageview", data, {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { "Content-Type": "application/json" },
       })
       .then((response) => console.log(response.data))
       .catch((error) => console.log(error));
