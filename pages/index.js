@@ -24,7 +24,9 @@ export default function Home() {
       site: "topher",
     };
     axios
-      .post("https://analytics.stupendousweb.com/api/create-pageview", data)
+      .post("https://analytics.stupendousweb.com/api/create-pageview", data, {
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      })
       .then((response) => console.log(response.data))
       .catch((error) => console.log(error));
   }, []);
