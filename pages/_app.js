@@ -14,6 +14,13 @@ import Cursor from "../components/Cursor";
 import StupendousAnalytics from "stupendous-analytics";
 
 function MyApp({ Component, pageProps }) {
+  console.log(
+    "  ___ _                          _            __      __   _    \n" +
+      " / __| |_ _  _ _ __  ___ _ _  __| |___ _  _ __\\ \\    / /__| |__ \n" +
+      " \\__ \\  _| || | '_ \\/ -_) ' \\/ _` / _ \\ || (_-<\\ \\/\\/ / -_) '_ \\\n" +
+      " |___/\\__|\\_,_| .__/\\___|_||_\\__,_\\___/\\_,_/__/ \\_/\\_/\\___|_.__/.COM\n" +
+      "              |_| "
+  );
   return (
     <>
       <StupendousAnalytics site={"topher@stupendousweb.com"} />
