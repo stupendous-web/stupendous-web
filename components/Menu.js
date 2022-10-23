@@ -9,7 +9,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
-import Navigation from "./Navigation";
 import Logo from "./Logo";
 
 export default function Menu() {
@@ -61,7 +60,6 @@ export default function Menu() {
 
   return (
     <>
-      <Navigation />
       <div
         className={
           "uk-section-secondary uk-light uk-width-1-1 uk-grid-collapse uk-child-width-2-3@s " +
