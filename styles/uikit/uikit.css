@@ -4856,7 +4856,7 @@ ul.uk-nav-sub {
   column-gap: 0.25em;
   /* 3 */
   box-sizing: border-box;
-  min-height: 80px;
+  min-height: 6rem;
   padding: 0 15px;
   /* 4 */
   font-size: 16px;
@@ -4868,7 +4868,7 @@ ul.uk-nav-sub {
  * Nav items
  */
 .uk-navbar-nav > li > a {
-  color: #666;
+  color: #FFF;
 }
 /*
  * Hover
@@ -4876,7 +4876,7 @@ ul.uk-nav-sub {
  */
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a[aria-expanded="true"] {
-  color: #CCC;
+  color: #FFF;
 }
 /* OnClick */
 .uk-navbar-nav > li > a:active {
@@ -5095,11 +5095,11 @@ ul.uk-nav-sub {
   /* 2 */
   column-gap: 0.25em;
   /* 3 */
-  color: #FFF;
+  color: #666;
 }
 /* Hover */
 .uk-subnav > * > a:hover {
-  color: #FFF;
+  color: #CCC;
   text-decoration: none;
 }
 /* Active */
@@ -5141,7 +5141,7 @@ ul.uk-nav-sub {
 .uk-subnav-pill > * > :first-child {
   padding: 5px 10px;
   background: transparent;
-  color: #FFF;
+  color: #666;
 }
 /* Hover */
 .uk-subnav-pill > * > a:hover {
