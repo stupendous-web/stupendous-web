@@ -10,7 +10,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className={"uk-navbar-container uk-navbar-transparent"}
+      className={"uk-navbar-container uk-navbar-transparent uk-visible@s"}
       data-uk-navbar={""}
     >
       <div className={"uk-navbar-center"}>
