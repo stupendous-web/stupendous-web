@@ -112,8 +112,9 @@ export default function Services() {
                 quickly, safely, and hassle-free. I&apos;m here to help with
                 those too. I&apos;ll setup and manage your domain name, SSL
                 certificates, and on-page SEO. I&apos;m also available for
-                support via text, phone, email, video chat, and more! Let me take all the dirty
-                work out of launching and maintaining your web application.
+                support via text, phone, email, video chat, and more! Let me
+                take all the dirty work out of launching and maintaining your
+                web application.
               </p>
               <ul className={"uk-list uk-list-disc"}>
                 <li>Domain Name</li>
@@ -124,15 +125,23 @@ export default function Services() {
               </ul>
               <h2 id={"LTS"}>Long Term Support (LTS)</h2>
               <p>
-                Even well-working machines need their oil changed. Web applications are just the same. They will need
-                upgrades and security updates from time to time. You may even
-                want to make minor changes occasionally. I&apos;ll keep your web
-                application up-to-date with the latest technology and safe again
-                security breaches. I&apos;ll even make minor updates as needed.
-                Long term support will keep your technology fresh, your data
-                safe, and your brand unique and desirable even after your web
-                app development services are completed.
+                Even well-working machines need their oil changed. Web
+                applications are just the same. They will need upgrades and
+                security updates from time to time. You may even want to make
+                minor changes occasionally. I&apos;ll keep your web application
+                up-to-date with the latest technology and safe again security
+                breaches. I&apos;ll even make minor updates as needed. Long term
+                support will keep your technology fresh, your data safe, and
+                your brand unique and desirable even after your web app
+                development services are completed.
               </p>
+              <ul className={"uk-list uk-list-disc"}>
+                <li>Managed domain and hosting</li>
+                <li>Productivity Tools</li>
+                <li>
+                  Two FREE hours of updates a month (Not including new features)
+                </li>
+              </ul>
             </div>
           </div>
         </div>
