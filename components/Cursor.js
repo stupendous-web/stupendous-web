@@ -59,7 +59,7 @@ export default function Cursor() {
           mixBlendMode: "difference",
         }}
       >
-        <circle cx={50} cy={50} r={49} style={{ fill: "#EC008A" }} />
+        <circle cx={50} cy={50} r={49} style={{ fill: "#d02670" }} />
       </svg>
     </>
   );
