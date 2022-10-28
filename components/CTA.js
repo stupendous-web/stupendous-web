@@ -1,6 +1,9 @@
 import React from "react";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+
+import isometric from "/images/isometrics/isometric-1-3-white.png";
 
 class CTA extends React.Component {
   render() {
@@ -48,10 +51,7 @@ class CTA extends React.Component {
                 </p>
               </div>
               <div>
-                <img
-                  src={"/images/isometrics/isometric-1-3-white.png"}
-                  alt={"Web App Development Services"}
-                />
+                <Image src={isometric} alt={"Web App Development Services"} />
               </div>
             </div>
           </div>
