@@ -10,20 +10,17 @@ export default function Navigation() {
 
   return (
     <nav
-      className={"uk-navbar-container uk-navbar-transparent uk-visible@s"}
+      className={
+        "uk-width-1-1 uk-navbar-container uk-navbar-transparent uk-position-top uk-visible@s"
+      }
       data-uk-navbar={""}
     >
       <div className={"uk-navbar-center"}>
         <ul className={"uk-navbar-nav"}>
-          {/*
-          <li className={"uk-margin-large-right"}>
-            <a href={""}>Solutions</a>
-            <div className={"uk-navbar-dropdown"}>asdf</div>
-          </li>*/}
           {links.map((link, key) => {
             return (
               <li
-                className={key < links.length && "uk-margin-large-right"}
+                className={key < links.length - 1 && "uk-margin-large-right"}
                 key={key}
               >
                 <Link href={"/" + link.href}>

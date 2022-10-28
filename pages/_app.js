@@ -27,10 +27,10 @@ function MyApp({ Component, pageProps }) {
     <>
       <StupendousAnalytics site={"topher@stupendousweb.com"} />
       <Provider>
-        <Navigation />
         <Component {...pageProps} />
         <Pride />
         <Footer />
+        <Navigation />
         <Menu />
         <Logo />
         <Loading />
