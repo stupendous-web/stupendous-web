@@ -7,6 +7,27 @@ import isometric from "../images/isometrics/isometric-3-1.png";
 export default function Philosophy() {
   const { setLoading } = useGlobal();
 
+  const magenta = [
+    { name: "Magenta 100", hex: "2a0a18" },
+    { name: "Magenta 70", hex: "9f1853" },
+    { name: "Magenta 60", hex: "d02670" },
+    { name: "Magenta 50", hex: "ee5396" },
+  ];
+
+  const cyan = [
+    { name: "Cyan 100", hex: "061727" },
+    { name: "Cyan 70", hex: "00539a" },
+    { name: "Cyan 60", hex: "0072c3" },
+    { name: "Cyan 50", hex: "1192e8" },
+  ];
+
+  const gray = [
+    { name: "Gray 100", hex: "161616" },
+    { name: "Gray 30", hex: "c6c6c6" },
+    { name: "Gray 20", hex: "e0e0e0" },
+    { name: "Gray 10", hex: "f4f4f4" },
+  ];
+
   return (
     <>
       <Head>
@@ -26,12 +47,7 @@ export default function Philosophy() {
               />
             </div>
             <div className={"uk-width-2-3@s"}>
-              <p className={"uk-text-justify uk-dropcap"}>
-                Do you value community, equality, meaningful work, and
-                authenticity? My web app development services help people like
-                you to engage with their audiences and tribes in creative and
-                impactful ways.
-              </p>
+              <p className={"uk-text-justify uk-dropcap"}>&nbsp;</p>
             </div>
           </div>
         </div>
@@ -51,51 +67,70 @@ export default function Philosophy() {
           <div data-uk-grid={""}>
             <div className={"uk-width-1-3@s"} />
             <div className={"uk-width-2-3@s"}>
-              <div className={"uk-align-left uk-margin-remove-adjacent"}>
-                <img
-                  src={"/images/me.png"}
-                  alt={"Web App Development Services"}
-                  className={"uk-border-circle"}
-                  height={"100px"}
-                  width={"100px"}
-                />
+              <h2>Some Shades</h2>
+              <div className={"uk-margin"}>
+                <div className={"uk-flex uk-light"}>
+                  {magenta.map((color) => {
+                    return (
+                      <div
+                        className={"uk-padding-small square"}
+                        style={{
+                          background: `#${color.hex}`,
+                        }}
+                        key={color.hex}
+                      >
+                        <div className={"uk-text-small square-content"}>
+                          <div>{color.name}</div>
+                          <div>#{color.hex}</div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className={"uk-flex uk-light"}>
+                  {cyan.map((color) => {
+                    return (
+                      <div
+                        className={"uk-padding-small square"}
+                        style={{
+                          background: `#${color.hex}`,
+                        }}
+                        key={color.hex}
+                      >
+                        <div className={"uk-text-small square-content"}>
+                          <div>{color.name}</div>
+                          <div>#{color.hex}</div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className={"uk-flex uk-light"}>
+                  {gray.map((color) => {
+                    return (
+                      <div
+                        className={"uk-padding-small square"}
+                        style={{
+                          background: `#${color.hex}`,
+                        }}
+                        key={color.hex}
+                      >
+                        <div className={"uk-text-small square-content"}>
+                          <div>{color.name}</div>
+                          <div>#{color.hex}</div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-              <p>
-                Hello, pioneers. I&apos;m Topher [INFP]. I&apos;m here to help
-                elevate your projects that support community, compassion,
-                tolerance, equality, meaningful work, and authenticity through
-                my custom web app development services. My degree in web
-                application development from CSU, award-winning projects, and
-                years of work experience are all at your disposal.
-              </p>
-              <h2>What&apos;s a Web App???</h2>
-              <p>
-                Take your product further. Server technology and database access
-                will make your web app powerful and engaging. Web apps are like
-                tool kits that are hosted online, similar to a website. But most
-                websites are still, inactive, and boring. Your web app will know
-                no limits. My web app development services will add value to
-                your brand.
-              </p>
-              <h2>Strategy</h2>
-              <p>
-                Your mission and objectives are at the forefront throughout the
-                entire development process. We&apos;ll look at your values and
-                the communities you serve to fine-tune your product and pitch
-                even before production. Let&apos;s work together to create web
-                app development services that reflect you and your goals.
-              </p>
-              <h2>How Does this Work?</h2>
-              <p>
-                Let&apos;s get you up and running with web app development
-                services in four easy steps. First, schedule your 2 FREE 1-hour
-                consultations. You&apos;ll receive a free creative brief and
-                project plan. We&apos;ll build you a secret website where you
-                can preview our progress anytime. Then when the time is right,
-                we&apos;ll launch it to the web publicly. I&apos;m always here
-                to answer questions, make updates, and be your guide to making
-                this fast, easy, and even fun!
-              </p>
+              <h2>Some Fonts</h2>
+              <div className={"uk-text-right"}>
+                <p className={"uk-margin-remove"}>Pragraph</p>
+                <h3 className={"uk-margin-remove"}>Heading 3</h3>
+                <h2 className={"uk-margin-remove"}>Heading 2</h2>
+                <h1 className={"uk-margin-remove"}>Heading 1</h1>
+              </div>
             </div>
           </div>
         </div>
