@@ -1,4 +1,16 @@
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPenNib,
+  faHeart,
+  faDog,
+  faGavel,
+  faCamera,
+  faBriefcase,
+  faBitcoinSign,
+  faStethoscope,
+  faHashtag,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Navigation() {
   const links = [
@@ -6,6 +18,18 @@ export default function Navigation() {
     { href: "about", title: "About" },
     { href: "services", title: "Services" },
     { href: "contact", title: "Contact" },
+  ];
+
+  const industries = [
+    { title: "Healthcare", icon: faStethoscope },
+    { title: "Art and Design", icon: faPenNib },
+    { title: "Pet Care", icon: faDog },
+    { title: "Photography", icon: faCamera },
+    { title: "Social Media", icon: faHashtag },
+    { title: "Health and Fitness", icon: faHeart },
+    { title: "Legal", icon: faGavel },
+    { title: "Business", icon: faBriefcase },
+    { title: "Crypto and NFT's", icon: faBitcoinSign },
   ];
 
   return (
@@ -17,10 +41,40 @@ export default function Navigation() {
     >
       <div className={"uk-navbar-center"}>
         <ul className={"uk-navbar-nav"}>
+          <div className="uk-inline">
+            <div data-uk-dropdown="mode: click"></div>
+          </div>
+          <li className={"uk-margin-large-right"}>
+            <a
+              title={
+                "Solutions | Web App Development Services | Stupendous Web"
+              }
+            >
+              Solutions
+            </a>
+            <div data-uk-dropdown={"pos: bottom-center"}>
+              <div
+                className={
+                  "uk-width-2xlarge uk-dropdown-grid uk-grid-small uk-child-width-1-3@s"
+                }
+                data-uk-grid={""}
+              >
+                {industries.map((industry, key) => (
+                  <div key={key}>
+                    <p>
+                      <FontAwesomeIcon icon={industry.icon} />
+                      <span className={"uk-margin-left"}>{industry.title}</span>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </li>
+
           {links.map((link, key) => {
             return (
               <li
-                className={key < links.length - 1 && "uk-margin-large-right"}
+                className={key < links.length && "uk-margin-large-right"}
                 key={key}
               >
                 <Link href={"/" + link.href}>
