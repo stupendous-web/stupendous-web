@@ -57,6 +57,7 @@ export default function Cursor() {
           transition: "transform .5s ease-in-out",
           transform: transform,
           mixBlendMode: "difference",
+          zIndex: 2000,
         }}
       >
         <circle cx={50} cy={50} r={49} style={{ fill: "#d02670" }} />

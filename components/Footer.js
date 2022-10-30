@@ -21,6 +21,14 @@ export default function Footer() {
     { href: "articles", title: "Articles" },
   ];
 
+  const projects = [
+    { href: "https://stupendouscms.com", title: "Stupendous CMS" },
+    {
+      href: "https://analytics.stupendousweb.com",
+      title: "Stupendous Analytics",
+    },
+  ];
+
   const { articles } = useGlobal();
 
   return (
@@ -33,6 +41,23 @@ export default function Footer() {
               <ul className={"uk-nav uk-nav-default"}>
                 <li className={"uk-nav-header"}>Resources</li>
                 {links.map((link, key) => {
+                  return (
+                    <li key={key}>
+                      <Link href={"/" + link.href}>
+                        <a
+                          title={
+                            link.title +
+                            " | Web App Development Services | Stupendous Web"
+                          }
+                        >
+                          {link.title}
+                        </a>
+                      </Link>
+                    </li>
+                  );
+                })}
+                <li className={"uk-nav-header"}>Tools</li>
+                {projects.map((link, key) => {
                   return (
                     <li key={key}>
                       <Link href={"/" + link.href}>
