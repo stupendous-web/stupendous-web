@@ -430,10 +430,10 @@ export default function Home() {
             Django, WordPress, Drupal, and many other tools.
           </p>
           <p className={"uk-h2"}>
-            <i className={"devicon-laravel-plain uk-margin-right"} />
-            <i className={"devicon-react-plain uk-margin-right"} />
-            <i className={"devicon-nextjs-plain uk-margin-right"} />
-            <i className={"devicon-wordpress-plain"} />
+            <i className={"devicon-react-original uk-margin-right"} />
+            <i className={"devicon-nextjs-original uk-margin-right"} />
+            <i className={"devicon-mongodb-plain-wordmark uk-margin-right"} />
+            <i className={"devicon-googlecloud-plain"} />
           </p>
         </div>
       </div>
