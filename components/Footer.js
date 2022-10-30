@@ -60,7 +60,7 @@ export default function Footer() {
                 {projects.map((link, key) => {
                   return (
                     <li key={key}>
-                      <Link href={"/" + link.href}>
+                      <Link href={link.href}>
                         <a
                           title={
                             link.title +
