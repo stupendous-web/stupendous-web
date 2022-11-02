@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-
 export default function Testimonials() {
   const testimonials = [
     {
@@ -50,21 +47,27 @@ export default function Testimonials() {
                       <i>{testimonial.review}</i>
                     </p>
                     <div className={"uk-position-bottom"}>
-                      <div data-uk-grid={""}>
+                      <div className={"uk-flex-middle"} data-uk-grid={""}>
                         <div className={"uk-width-expand"}>
                           <p
                             className={"uk-text-small"}
                             style={{ color: "#fff200" }}
                           >
-                            <FontAwesomeIcon icon={faStar} />
-                            &nbsp;
-                            <FontAwesomeIcon icon={faStar} />
-                            &nbsp;
-                            <FontAwesomeIcon icon={faStar} />
-                            &nbsp;
-                            <FontAwesomeIcon icon={faStar} />
-                            &nbsp;
-                            <FontAwesomeIcon icon={faStar} />
+                            <span className={"material-symbols-sharp"}>
+                              star
+                            </span>
+                            <span className={"material-symbols-sharp"}>
+                              star
+                            </span>
+                            <span className={"material-symbols-sharp"}>
+                              star
+                            </span>
+                            <span className={"material-symbols-sharp"}>
+                              star
+                            </span>
+                            <span className={"material-symbols-sharp"}>
+                              star
+                            </span>
                           </p>
                         </div>
                         <div className={"uk-width-auto"}>
