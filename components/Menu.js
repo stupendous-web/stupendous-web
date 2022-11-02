@@ -7,7 +7,6 @@ import {
   faFacebook,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 import Logo from "./Logo";
 
@@ -182,12 +181,12 @@ export default function Menu() {
       <div style={{ position: "fixed", top: "30px", right: "30px" }}>
         <div onClick={showMenu} className={menuButtonClass}>
           <a>
-            <FontAwesomeIcon icon={faBars} size={"2x"} />
+            <span className={"material-symbols-sharp"}>menu</span>
           </a>
         </div>
         <div onClick={hideMenu} className={closeButtonClass}>
           <a>
-            <FontAwesomeIcon icon={faClose} size={"2x"} />
+            <span className={"material-symbols-sharp"}>close</span>
           </a>
         </div>
       </div>
