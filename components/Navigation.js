@@ -1,16 +1,4 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPenNib,
-  faHeart,
-  faDog,
-  faGavel,
-  faCamera,
-  faBriefcase,
-  faBitcoinSign,
-  faStethoscope,
-  faHashtag,
-} from "@fortawesome/free-solid-svg-icons";
 
 export default function Navigation() {
   const links = [
@@ -21,15 +9,15 @@ export default function Navigation() {
   ];
 
   const industries = [
-    { title: "Healthcare", icon: faStethoscope },
-    { title: "Art and Design", icon: faPenNib },
-    { title: "Pet Care", icon: faDog },
-    { title: "Photography", icon: faCamera },
-    { title: "Social Media", icon: faHashtag },
-    { title: "Health and Fitness", icon: faHeart },
-    { title: "Legal", icon: faGavel },
-    { title: "Business", icon: faBriefcase },
-    { title: "Crypto and NFT's", icon: faBitcoinSign },
+    { title: "Healthcare", icon: "medication" },
+    { title: "Art and Design", icon: "brush" },
+    { title: "Pet Care", icon: "pets" },
+    { title: "Photography", icon: "photo_camera" },
+    { title: "Health and Fitness", icon: "favorite" },
+    { title: "Social Media Apps", icon: "tag" },
+    { title: "Business", icon: "work" },
+    { title: "Legal", icon: "gavel" },
+    { title: "Crypto and NFT's", icon: "currency_bitcoin" },
   ];
 
   return (
@@ -61,8 +49,10 @@ export default function Navigation() {
               >
                 {industries.map((industry, key) => (
                   <div key={key}>
-                    <p>
-                      <FontAwesomeIcon icon={industry.icon} />
+                    <p className={"uk-flex uk-flex-middle"}>
+                      <span className={"material-symbols-sharp"}>
+                        {industry.icon}
+                      </span>
                       <span className={"uk-margin-left"}>{industry.title}</span>
                     </p>
                   </div>
