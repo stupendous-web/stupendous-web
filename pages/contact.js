@@ -1,13 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useGlobal } from "../lib/context";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faVideo,
-  faEnvelope,
-  faPhone,
-  faWrench,
-} from "@fortawesome/free-solid-svg-icons";
 
 import isometric from "../images/isometrics/isometric-2-3.png";
 
@@ -18,27 +11,27 @@ export default function Contact() {
     {
       title: "Book your FREE consultation",
       href: "https://calendly.com/stupendousweb/free-consultation",
-      icon: faVideo,
+      icon: "calendar_month",
     },
     {
       title: "topher@stupendousweb.com",
       href: "mailto:topher@stupendousweb.com",
-      icon: faEnvelope,
+      icon: "email",
     },
     {
       title: "+1 510.944.0331 (Call or Text!)",
       href: "tel:5109440331",
-      icon: faPhone,
+      icon: "phone",
     },
     {
       title: "Client 1-1",
       href: "https://calendly.com/stupendousweb/client-1-1",
-      icon: faVideo,
+      icon: "calendar_month",
     },
     {
       title: "Feature Requests",
       href: "https://plan.toggl.com/#timeline",
-      icon: faWrench,
+      icon: "build",
     },
   ];
 
@@ -89,12 +82,14 @@ export default function Contact() {
                 {links.map((link, key) => {
                   return (
                     <li key={key}>
-                      <a href={link.href}>
-                        <FontAwesomeIcon
-                          icon={link.icon}
-                          fixedWidth
-                          className={"uk-margin-small-right"}
-                        />
+                      <a className={"uk-flex uk-flex-middle"} href={link.href}>
+                        <span
+                          className={
+                            "material-symbols-sharp uk-margin-small-right"
+                          }
+                        >
+                          {link.icon}
+                        </span>
                         {link.title}
                       </a>
                     </li>

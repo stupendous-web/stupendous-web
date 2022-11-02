@@ -1,13 +1,6 @@
 import Link from "next/link";
 import { useGlobal } from "../lib/context";
 import CTA from "../components/CTA";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTwitter,
-  faInstagram,
-  faFacebook,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   const links = [
@@ -107,18 +100,25 @@ export default function Footer() {
                   </a>
                 </p>
                 <p>
-                  <a href={"https://www.linkedin.com/in/topherjamesknoll"}>
-                    <FontAwesomeIcon icon={faLinkedin} fixedWidth />
+                  <a
+                    className={"uk-margin-small-right"}
+                    href={"https://www.linkedin.com/in/topherjamesknoll"}
+                  >
+                    Ln
                   </a>
-                  <a href={"https://instagram.com/stupendousweb_"}>
-                    <FontAwesomeIcon icon={faInstagram} fixedWidth />
+                  <a
+                    className={"uk-margin-small-right"}
+                    href={"https://instagram.com/stupendousweb_"}
+                  >
+                    In
                   </a>
-                  <a href={"https://twitter.com/stupendousweb"}>
-                    <FontAwesomeIcon icon={faTwitter} fixedWidth />
+                  <a
+                    className={"uk-margin-small-right"}
+                    href={"https://twitter.com/stupendousweb"}
+                  >
+                    Tw
                   </a>
-                  <a href={"https://facebook.com/stupendousweb"}>
-                    <FontAwesomeIcon icon={faFacebook} fixedWidth />
-                  </a>
+                  <a href={"https://facebook.com/stupendousweb"}>Fa</a>
                 </p>
                 <div className={"uk-margin uk-text-muted"}>
                   <div>

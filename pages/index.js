@@ -36,36 +36,32 @@ export default function Home() {
             <div className={"uk-flex-middle"} data-uk-grid={""}>
               <div className={"uk-width-2-3@s"}>
                 <h1>Web App Development Services</h1>
-                <div className={"uk-flex-middle"} data-uk-grid={""}>
-                  <div className={"uk-width-auto@s"}>
-                    <a
-                      href={
-                        "https://calendly.com/stupendousweb/free-consultation"
-                      }
-                      className={"uk-button uk-button-primary uk-button-large"}
-                    >
-                      Start Yours Now
-                    </a>
-                  </div>
-                  <div className={"uk-width-auto@s"}>
-                    <a
-                      href={"mailto:topher@stupendousweb.com"}
-                      className={"uk-flex"}
-                      data-uk-tooltip={"Email me!"}
-                    >
-                      <span className={"material-symbols-sharp"}>mail</span>
-                    </a>
-                  </div>
-                  <div className={"uk-width-auto@s"}>
-                    <a
-                      href={"tel:5109440331"}
-                      className={"uk-flex"}
-                      data-uk-tooltip={"Call me!"}
-                    >
-                      <span className={"material-symbols-sharp"}>call</span>
-                    </a>
-                  </div>
-                </div>
+                <p className={"uk-flex uk-flex-middle"}>
+                  <a
+                    href={
+                      "https://calendly.com/stupendousweb/free-consultation"
+                    }
+                    className={
+                      "uk-button uk-button-primary uk-button-large uk-margin-small-right"
+                    }
+                  >
+                    Start Yours Now
+                  </a>
+                  <a
+                    href={"mailto:topher@stupendousweb.com"}
+                    className={"uk-flex uk-margin-small-right"}
+                    data-uk-tooltip={"Email me!"}
+                  >
+                    <span className={"material-symbols-sharp"}>mail</span>
+                  </a>
+                  <a
+                    href={"tel:5109440331"}
+                    className={"uk-flex"}
+                    data-uk-tooltip={"Call me!"}
+                  >
+                    <span className={"material-symbols-sharp"}>call</span>
+                  </a>
+                </p>
                 <p>
                   I help people with something to share who want to engage with
                   their community by delivering web app development services

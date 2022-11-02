@@ -1,12 +1,5 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTwitter,
-  faInstagram,
-  faFacebook,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "./Logo";
 
@@ -82,23 +75,17 @@ export default function Menu() {
               <ul className={"uk-list"} style={{ marginTop: "9px" }}>
                 <li className={"uk-margin-remove"}>
                   <a href={"https://www.linkedin.com/in/topherjamesknoll"}>
-                    <FontAwesomeIcon icon={faLinkedin} fixedWidth />
+                    Ln
                   </a>
                 </li>
                 <li className={"uk-margin-remove"}>
-                  <a href={"https://instagram.com/stupendousweb_"}>
-                    <FontAwesomeIcon icon={faInstagram} fixedWidth />
-                  </a>
+                  <a href={"https://instagram.com/stupendousweb_"}>In</a>
                 </li>
                 <li className={"uk-margin-remove"}>
-                  <a href={"https://twitter.com/stupendousweb"}>
-                    <FontAwesomeIcon icon={faTwitter} fixedWidth />
-                  </a>
+                  <a href={"https://twitter.com/stupendousweb"}>Tw</a>
                 </li>
                 <li className={"uk-margin-remove"}>
-                  <a href={"https://facebook.com/stupendousweb"}>
-                    <FontAwesomeIcon icon={faFacebook} fixedWidth />
-                  </a>
+                  <a href={"https://facebook.com/stupendousweb"}>Fa</a>
                 </li>
               </ul>
             </div>

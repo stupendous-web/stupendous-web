@@ -10,7 +10,7 @@
 html {
   /* 1 */
   font-family: new-order, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 2;
   /* 2 */
@@ -186,7 +186,7 @@ pre,
 address,
 fieldset,
 figure {
-  margin: 0 0 16px 0;
+  margin: 0 0 14px 0;
 }
 /* Add margin if adjacent element */
 * + p,
@@ -197,7 +197,7 @@ figure {
 * + address,
 * + fieldset,
 * + figure {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /* Headings
  ========================================================================== */
@@ -218,7 +218,7 @@ h6,
 .uk-heading-large,
 .uk-heading-xlarge,
 .uk-heading-2xlarge {
-  margin: 0 0 16px 0;
+  margin: 0 0 14px 0;
   font-family: bitcount-mono-single-circle, monospace;
   font-weight: normal;
   color: #f4f4f4;
@@ -269,7 +269,7 @@ h4,
 }
 h5,
 .uk-h5 {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
 }
 h6,
@@ -325,14 +325,14 @@ hr,
   /* 2 */
   text-align: inherit;
   /* 3 */
-  margin: 0 0 16px 0;
+  margin: 0 0 14px 0;
   border: 0;
   border-top: 1px solid #e0e0e0;
 }
 /* Add margin if adjacent element */
 * + hr,
 * + .uk-hr {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /* Address
  ========================================================================== */
@@ -342,14 +342,14 @@ address {
 /* Blockquotes
  ========================================================================== */
 blockquote {
-  margin: 0 0 16px 0;
+  margin: 0 0 14px 0;
   font-size: 1rem;
   line-height: 1.5;
   font-style: italic;
 }
 /* Add margin if adjacent element */
 * + blockquote {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /*
  * Content
@@ -628,11 +628,11 @@ a.uk-link-reset,
   /* 1 */
   border: none;
   /* 2 */
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 /* Add margin if adjacent element */
 * + [class*='uk-divider'] {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /* Icon
  ========================================================================== */
@@ -815,7 +815,7 @@ a.uk-link-reset,
  ========================================================================== */
 .uk-list-large > :nth-child(n+2),
 .uk-list-large > * > ul {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 .uk-list-collapse > :nth-child(n+2),
 .uk-list-collapse > * > ul {
@@ -825,8 +825,8 @@ a.uk-link-reset,
  * Divider
  */
 .uk-list-large.uk-list-divider > :nth-child(n+2) {
-  margin-top: 16px;
-  padding-top: 16px;
+  margin-top: 14px;
+  padding-top: 14px;
 }
 .uk-list-collapse.uk-list-divider > :nth-child(n+2) {
   margin-top: 0;
@@ -836,7 +836,7 @@ a.uk-link-reset,
  * Striped
  */
 .uk-list-large.uk-list-striped > * {
-  padding: 16px 0.875rem;
+  padding: 14px 0.875rem;
 }
 .uk-list-collapse.uk-list-striped > * {
   padding-top: 0;
@@ -856,7 +856,7 @@ a.uk-link-reset,
   color: #f4f4f4;
 }
 .uk-description-list > dt:nth-child(n+2) {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /*
  * Description
@@ -867,8 +867,8 @@ a.uk-link-reset,
  * Line
  */
 .uk-description-list-divider > dt:nth-child(n+2) {
-  margin-top: 16px;
-  padding-top: 16px;
+  margin-top: 14px;
+  padding-top: 14px;
   border-top: 1px solid #e0e0e0;
 }
 /* ========================================================================
@@ -886,11 +886,11 @@ a.uk-link-reset,
   /* 2 */
   width: 100%;
   /* 3 */
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 /* Add margin if adjacent element */
 * + .uk-table {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /* Header cell
  ========================================================================== */
@@ -902,7 +902,7 @@ a.uk-link-reset,
   text-align: left;
   vertical-align: bottom;
   /* 1 */
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #e0e0e0;
 }
@@ -1851,9 +1851,9 @@ select.uk-form-width-xsmall {
   /* 7 */
   display: inline-block;
   box-sizing: border-box;
-  padding: 0 16px;
+  padding: 0 14px;
   vertical-align: middle;
-  font-size: 16px;
+  font-size: 14px;
   /* 8 */
   line-height: 40px;
   /* 9 */
@@ -2056,12 +2056,12 @@ select.uk-form-width-xsmall {
   /* 4 */
   background-color: #161616;
   /* 5 */
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   height: 15px;
 }
 /* Add margin if adjacent element */
 * + .uk-progress {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /*
  * Show background color set on `uk-progress` in Chrome, Safari and Edge.
@@ -2115,8 +2115,8 @@ select.uk-form-width-xsmall {
  * XSmall
  */
 .uk-section-xsmall {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 /*
  * Small
@@ -2199,21 +2199,21 @@ select.uk-form-width-xsmall {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
   .uk-container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
   .uk-container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
 /*
@@ -2261,34 +2261,34 @@ select.uk-form-width-xsmall {
 @media (min-width: 640px) {
   .uk-container-expand-left.uk-container-xsmall,
   .uk-container-expand-right.uk-container-xsmall {
-    max-width: calc(50% + (750px / 2) - 16px);
+    max-width: calc(50% + (750px / 2) - 14px);
   }
   .uk-container-expand-left.uk-container-small,
   .uk-container-expand-right.uk-container-small {
-    max-width: calc(50% + (900px / 2) - 16px);
+    max-width: calc(50% + (900px / 2) - 14px);
   }
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
   .uk-container-expand-left,
   .uk-container-expand-right {
-    max-width: calc(50% + (1200px / 2) - 16px);
+    max-width: calc(50% + (1200px / 2) - 14px);
   }
   .uk-container-expand-left.uk-container-xsmall,
   .uk-container-expand-right.uk-container-xsmall {
-    max-width: calc(50% + (750px / 2) - 16px);
+    max-width: calc(50% + (750px / 2) - 14px);
   }
   .uk-container-expand-left.uk-container-small,
   .uk-container-expand-right.uk-container-small {
-    max-width: calc(50% + (900px / 2) - 16px);
+    max-width: calc(50% + (900px / 2) - 14px);
   }
   .uk-container-expand-left.uk-container-large,
   .uk-container-expand-right.uk-container-large {
-    max-width: calc(50% + (1400px / 2) - 16px);
+    max-width: calc(50% + (1400px / 2) - 14px);
   }
   .uk-container-expand-left.uk-container-xlarge,
   .uk-container-expand-right.uk-container-xlarge {
-    max-width: calc(50% + (1600px / 2) - 16px);
+    max-width: calc(50% + (1600px / 2) - 14px);
   }
 }
 /* Item
@@ -2299,38 +2299,38 @@ select.uk-form-width-xsmall {
  */
 .uk-container-item-padding-remove-left,
 .uk-container-item-padding-remove-right {
-  width: calc(100% + 16px);
+  width: calc(100% + 14px);
 }
 .uk-container-item-padding-remove-left {
-  margin-left: -16px;
+  margin-left: -14px;
 }
 .uk-container-item-padding-remove-right {
-  margin-right: -16px;
+  margin-right: -14px;
 }
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
   .uk-container-item-padding-remove-left,
   .uk-container-item-padding-remove-right {
-    width: calc(100% + 16px);
+    width: calc(100% + 14px);
   }
   .uk-container-item-padding-remove-left {
-    margin-left: -16px;
+    margin-left: -14px;
   }
   .uk-container-item-padding-remove-right {
-    margin-right: -16px;
+    margin-right: -14px;
   }
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
   .uk-container-item-padding-remove-left,
   .uk-container-item-padding-remove-right {
-    width: calc(100% + 16px);
+    width: calc(100% + 14px);
   }
   .uk-container-item-padding-remove-left {
-    margin-left: -16px;
+    margin-left: -14px;
   }
   .uk-container-item-padding-remove-right {
-    margin-right: -16px;
+    margin-right: -14px;
   }
 }
 /* ========================================================================
@@ -2348,8 +2348,8 @@ select.uk-form-width-xsmall {
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
   .uk-tile {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
 /* Tablet landscape and bigger */
@@ -2373,8 +2373,8 @@ select.uk-form-width-xsmall {
  * XSmall
  */
 .uk-tile-xsmall {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 /*
  * Small
@@ -2448,15 +2448,15 @@ select.uk-form-width-xsmall {
  ========================================================================== */
 .uk-card-body {
   display: flow-root;
-  padding: 16px 16px;
+  padding: 14px 14px;
 }
 .uk-card-header {
   display: flow-root;
-  padding: 8px 16px;
+  padding: 7px 14px;
 }
 .uk-card-footer {
   display: flow-root;
-  padding: 8px 16px;
+  padding: 7px 14px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
@@ -2577,13 +2577,13 @@ select.uk-form-width-xsmall {
  */
 .uk-card-small.uk-card-body,
 .uk-card-small .uk-card-body {
-  padding: 16px 16px;
+  padding: 14px 14px;
 }
 .uk-card-small .uk-card-header {
-  padding: 11px 16px;
+  padding: 9px 14px;
 }
 .uk-card-small .uk-card-footer {
-  padding: 11px 16px;
+  padding: 9px 14px;
 }
 /*
  * Large
@@ -2695,14 +2695,14 @@ select.uk-form-width-xsmall {
  ========================================================================== */
 .uk-alert {
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   padding: 15px 29px 15px 15px;
   background: #161616;
   color: #e0e0e0;
 }
 /* Add margin if adjacent element */
 * + .uk-alert {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /*
  * Remove margin from the last-child
@@ -2761,13 +2761,13 @@ select.uk-form-width-xsmall {
    Component: Placeholder
  ========================================================================== */
 .uk-placeholder {
-  margin-bottom: 16px;
-  padding: 16px 16px;
+  margin-bottom: 14px;
+  padding: 14px 14px;
   background: #161616;
 }
 /* Add margin if adjacent element */
 * + .uk-placeholder {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /*
  * Remove margin from the last-child
@@ -2845,7 +2845,7 @@ select.uk-form-width-xsmall {
    Component: Overlay
  ========================================================================== */
 .uk-overlay {
-  padding: 16px 16px;
+  padding: 14px 14px;
 }
 /*
  * Remove margin from the last-child
@@ -2917,7 +2917,7 @@ select.uk-form-width-xsmall {
 }
 .uk-comment-header {
   display: flow-root;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 /*
  * Remove margin from the last-child
@@ -3186,7 +3186,7 @@ select.uk-form-width-xsmall {
 /* Item
  ========================================================================== */
 .uk-accordion > :nth-child(n+2) {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /* Title
  ========================================================================== */
@@ -3205,7 +3205,7 @@ select.uk-form-width-xsmall {
  ========================================================================== */
 .uk-accordion-content {
   display: flow-root;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /*
  * Remove margin from the last-child
@@ -3227,7 +3227,7 @@ select.uk-form-width-xsmall {
   /* 2 */
   position: absolute;
   z-index: 1020;
-  --uk-position-offset: 16px;
+  --uk-position-offset: 14px;
   /* 3 */
   box-sizing: border-box;
   width: 300px;
@@ -3350,7 +3350,7 @@ select.uk-form-width-xsmall {
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
   .uk-modal {
-    padding: 50px 16px;
+    padding: 50px 14px;
   }
 }
 /* Tablet landscape and bigger */
@@ -3437,16 +3437,16 @@ select.uk-form-width-xsmall {
  ========================================================================== */
 .uk-modal-body {
   display: flow-root;
-  padding: 16px 16px;
+  padding: 14px 14px;
 }
 .uk-modal-header {
   display: flow-root;
-  padding: 8px 16px;
+  padding: 7px 14px;
   background: #161616;
 }
 .uk-modal-footer {
   display: flow-root;
-  padding: 8px 16px;
+  padding: 7px 14px;
   background: #161616;
 }
 /*
@@ -3710,7 +3710,7 @@ select.uk-form-width-xsmall {
   /* 2 */
   box-sizing: border-box;
   width: 270px;
-  padding: 16px 16px;
+  padding: 14px 14px;
   background: #222;
   /* 3 */
   overflow-y: auto;
@@ -4212,16 +4212,16 @@ select.uk-form-width-xsmall {
  */
 /* Horizontal */
 .uk-grid {
-  margin-left: -16px;
+  margin-left: -14px;
 }
 .uk-grid > * {
-  padding-left: 16px;
+  padding-left: 14px;
 }
 /* Vertical */
 .uk-grid + .uk-grid,
 .uk-grid > .uk-grid-margin,
 * + .uk-grid-margin {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
@@ -4265,11 +4265,11 @@ select.uk-form-width-xsmall {
 /* Horizontal */
 .uk-grid-medium,
 .uk-grid-column-medium {
-  margin-left: -16px;
+  margin-left: -14px;
 }
 .uk-grid-medium > *,
 .uk-grid-column-medium > * {
-  padding-left: 16px;
+  padding-left: 14px;
 }
 /* Vertical */
 .uk-grid + .uk-grid-medium,
@@ -4277,7 +4277,7 @@ select.uk-form-width-xsmall {
 .uk-grid-medium > .uk-grid-margin,
 .uk-grid-row-medium > .uk-grid-margin,
 * + .uk-grid-margin-medium {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /*
  * Large
@@ -4363,21 +4363,21 @@ select.uk-form-width-xsmall {
  */
 /* Horizontal */
 .uk-grid-divider {
-  margin-left: -32px;
+  margin-left: -28px;
 }
 .uk-grid-divider > * {
-  padding-left: 32px;
+  padding-left: 28px;
 }
 .uk-grid-divider > :not(.uk-first-column)::before {
-  left: 16px;
+  left: 14px;
 }
 /* Vertical */
 .uk-grid-divider.uk-grid-stack > .uk-grid-margin {
-  margin-top: 32px;
+  margin-top: 28px;
 }
 .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before {
-  top: -16px;
-  left: 32px;
+  top: -14px;
+  left: 28px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
@@ -4437,30 +4437,30 @@ select.uk-form-width-xsmall {
 /* Horizontal */
 .uk-grid-divider.uk-grid-medium,
 .uk-grid-divider.uk-grid-column-medium {
-  margin-left: -32px;
+  margin-left: -28px;
 }
 .uk-grid-divider.uk-grid-medium > *,
 .uk-grid-divider.uk-grid-column-medium > * {
-  padding-left: 32px;
+  padding-left: 28px;
 }
 .uk-grid-divider.uk-grid-medium > :not(.uk-first-column)::before,
 .uk-grid-divider.uk-grid-column-medium > :not(.uk-first-column)::before {
-  left: 16px;
+  left: 14px;
 }
 /* Vertical */
 .uk-grid-divider.uk-grid-medium.uk-grid-stack > .uk-grid-margin,
 .uk-grid-divider.uk-grid-row-medium.uk-grid-stack > .uk-grid-margin {
-  margin-top: 32px;
+  margin-top: 28px;
 }
 .uk-grid-divider.uk-grid-medium.uk-grid-stack > .uk-grid-margin::before {
-  top: -16px;
-  left: 32px;
+  top: -14px;
+  left: 28px;
 }
 .uk-grid-divider.uk-grid-row-medium.uk-grid-stack > .uk-grid-margin::before {
-  top: -16px;
+  top: -14px;
 }
 .uk-grid-divider.uk-grid-column-medium.uk-grid-stack > .uk-grid-margin::before {
-  left: 32px;
+  left: 28px;
 }
 /*
  * Large
@@ -4622,7 +4622,7 @@ ul.uk-nav-sub {
   font-size: 0.875rem;
 }
 .uk-nav-header:not(:first-child) {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /* Divider
  ========================================================================== */
@@ -4859,7 +4859,7 @@ ul.uk-nav-sub {
   min-height: 6rem;
   padding: 0 15px;
   /* 4 */
-  font-size: 16px;
+  font-size: 14px;
   font-family: new-order, sans-serif;
   /* 5 */
   text-decoration: none;
@@ -4954,14 +4954,14 @@ ul.uk-nav-sub {
  */
 /* Gutter Horizontal */
 .uk-navbar-dropdown-grid {
-  margin-left: -16px;
+  margin-left: -14px;
 }
 .uk-navbar-dropdown-grid > * {
-  padding-left: 16px;
+  padding-left: 14px;
 }
 /* Gutter Vertical */
 .uk-navbar-dropdown-grid > .uk-grid-margin {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /* Stack */
 .uk-navbar-dropdown-stack .uk-navbar-dropdown-grid > * {
@@ -6646,7 +6646,7 @@ ul.uk-nav-sub {
   line-height: 1.5;
 }
 .uk-text-default {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 2;
 }
 /* Weight modifier
@@ -6848,7 +6848,7 @@ td.uk-text-break {
    Component: Column
  ========================================================================== */
 [class*='uk-column-'] {
-  column-gap: 16px;
+  column-gap: 14px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
@@ -6870,7 +6870,7 @@ td.uk-text-break {
 .uk-column-divider {
   column-rule: 1px solid #e0e0e0;
   /* 1 */
-  column-gap: 32px;
+  column-gap: 28px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
@@ -7184,10 +7184,10 @@ iframe[data-uk-cover] {
  */
 [class*='uk-align'] {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 * + [class*='uk-align'] {
-  margin-top: 16px;
+  margin-top: 14px;
 }
 /*
  * Center
@@ -7201,24 +7201,24 @@ iframe[data-uk-cover] {
  */
 .uk-align-left {
   margin-top: 0;
-  margin-right: 16px;
+  margin-right: 14px;
   float: left;
 }
 .uk-align-right {
   margin-top: 0;
-  margin-left: 16px;
+  margin-left: 14px;
   float: right;
 }
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
   .uk-align-left\@s {
     margin-top: 0;
-    margin-right: 16px;
+    margin-right: 14px;
     float: left;
   }
   .uk-align-right\@s {
     margin-top: 0;
-    margin-left: 16px;
+    margin-left: 14px;
     float: right;
   }
 }
@@ -7226,12 +7226,12 @@ iframe[data-uk-cover] {
 @media (min-width: 960px) {
   .uk-align-left\@m {
     margin-top: 0;
-    margin-right: 16px;
+    margin-right: 14px;
     float: left;
   }
   .uk-align-right\@m {
     margin-top: 0;
-    margin-left: 16px;
+    margin-left: 14px;
     float: right;
   }
 }
@@ -7991,22 +7991,22 @@ iframe[data-uk-cover] {
  * Default
  */
 .uk-margin {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 * + .uk-margin {
-  margin-top: 16px !important;
+  margin-top: 14px !important;
 }
 .uk-margin-top {
-  margin-top: 16px !important;
+  margin-top: 14px !important;
 }
 .uk-margin-bottom {
-  margin-bottom: 16px !important;
+  margin-bottom: 14px !important;
 }
 .uk-margin-left {
-  margin-left: 16px !important;
+  margin-left: 14px !important;
 }
 .uk-margin-right {
-  margin-right: 16px !important;
+  margin-right: 14px !important;
 }
 /* Small
  ========================================================================== */
@@ -8272,7 +8272,7 @@ iframe[data-uk-cover] {
    Component: Padding
  ========================================================================== */
 .uk-padding {
-  padding: 16px;
+  padding: 14px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
@@ -8452,12 +8452,12 @@ iframe[data-uk-cover] {
   --uk-position-margin-offset: 0.875rem;
 }
 .uk-position-medium {
-  margin: 16px;
-  --uk-position-margin-offset: 16px;
+  margin: 14px;
+  --uk-position-margin-offset: 14px;
 }
 .uk-position-large {
-  margin: 16px;
-  --uk-position-margin-offset: 16px;
+  margin: 14px;
+  --uk-position-margin-offset: 14px;
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
@@ -11480,421 +11480,421 @@ iframe[data-uk-cover] {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 100;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 100;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 100;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 100;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 100;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 100;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 100;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 100;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 100;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 100;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxOLozCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 200;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxMLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxPVojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxOLojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxO5ojCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 600;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxNVpTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReaU4bHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H_OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H5OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H7OdzEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-H0OezEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Material Symbols Sharp';
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v62/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/materialsymbolssharp/v67/gNNBW2J8Roq16WD5tFNRaeLQk6-SHQ_R00k4c2_whPnoY9ruReYU3rHmz74m0ZkGH-VBYe1x0TV6x4yFH8F-HxOezEL3sVTgJtfbYxNspTCO.ttf) format('truetype');
 }
 .material-symbols-sharp {
   font-family: 'Material Symbols Sharp';
@@ -11928,10 +11928,10 @@ pre em {
 }
 pre {
   border: solid 1px #e0e0e0;
-  padding: 16px;
+  padding: 14px;
 }
 blockquote {
-  font-size: 16px;
+  font-size: 14px;
   border-left: 1px solid #e0e0e0;
   padding-left: 0.875rem;
 }
@@ -11942,7 +11942,7 @@ blockquote {
 /* UI Kit */
 /**********/
 .uk-text-lead {
-  font-size: 16px !important;
+  font-size: 14px !important;
 }
 .uk-button {
   text-transform: uppercase;

@@ -18,36 +18,32 @@ class CTA extends React.Component {
             >
               <div>
                 <h2>Access Two FREE Consultations!</h2>
-                <div className={"uk-flex-middle"} data-uk-grid={""}>
-                  <div className={"uk-width-auto@s"}>
-                    <a
-                      href={
-                        "https://calendly.com/stupendousweb/free-consultation"
-                      }
-                      className={"uk-button uk-button-primary uk-button-large"}
-                    >
-                      Start Yours Now
-                    </a>
-                  </div>
-                  <div className={"uk-width-auto@s"}>
-                    <a
-                      href={"mailto:topher@stupendousweb.com"}
-                      className={"uk-flex"}
-                      data-uk-tooltip={"Email me!"}
-                    >
-                      <span className={"material-symbols-sharp"}>mail</span>
-                    </a>
-                  </div>
-                  <div className={"uk-width-auto@s"}>
-                    <a
-                      href={"tel:5109440331"}
-                      className={"uk-flex"}
-                      data-uk-tooltip={"Call me!"}
-                    >
-                      <span className={"material-symbols-sharp"}>call</span>
-                    </a>
-                  </div>
-                </div>
+                <p className={"uk-flex uk-flex-middle"}>
+                  <a
+                    href={
+                      "https://calendly.com/stupendousweb/free-consultation"
+                    }
+                    className={
+                      "uk-button uk-button-primary uk-button-large uk-margin-small-right"
+                    }
+                  >
+                    Start Yours Now
+                  </a>
+                  <a
+                    href={"mailto:topher@stupendousweb.com"}
+                    className={"uk-flex uk-margin-small-right"}
+                    data-uk-tooltip={"Email me!"}
+                  >
+                    <span className={"material-symbols-sharp"}>mail</span>
+                  </a>
+                  <a
+                    href={"tel:5109440331"}
+                    className={"uk-flex"}
+                    data-uk-tooltip={"Call me!"}
+                  >
+                    <span className={"material-symbols-sharp"}>call</span>
+                  </a>
+                </p>
                 <p>
                   Every tribe needs a strong leader and people are ready to join
                   yours. So, give them the tools they need with my web app
