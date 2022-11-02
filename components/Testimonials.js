@@ -51,7 +51,7 @@ export default function Testimonials() {
                         <div className={"uk-width-expand"}>
                           <p
                             className={"uk-text-small"}
-                            style={{ color: "#fff200" }}
+                            style={{ color: "#00539a" }}
                           >
                             <span className={"material-symbols-sharp"}>
                               star
