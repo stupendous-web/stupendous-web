@@ -2,13 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import HeadData from "../components/HeadData";
 import { useGlobal } from "../lib/context";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheck,
-  faEnvelope,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
-import { faStripe, faPaypal } from "@fortawesome/free-brands-svg-icons";
 import "devicon";
 
 import Testimonials from "../components/Testimonials";
@@ -54,16 +47,22 @@ export default function Home() {
                       Start Yours Now
                     </a>
                   </div>
-                  <div className={"uk-width-expand@s"}>
+                  <div className={"uk-width-auto@s"}>
                     <a
                       href={"mailto:topher@stupendousweb.com"}
-                      className={"uk-margin-small-right"}
+                      className={"uk-flex"}
                       data-uk-tooltip={"Email me!"}
                     >
-                      <FontAwesomeIcon icon={faEnvelope} />
+                      <span className={"material-symbols-sharp"}>mail</span>
                     </a>
-                    <a href={"tel:5109440331"} data-uk-tooltip={"Call me!"}>
-                      <FontAwesomeIcon icon={faPhone} />
+                  </div>
+                  <div className={"uk-width-auto@s"}>
+                    <a
+                      href={"tel:5109440331"}
+                      className={"uk-flex"}
+                      data-uk-tooltip={"Call me!"}
+                    >
+                      <span className={"material-symbols-sharp"}>call</span>
                     </a>
                   </div>
                 </div>
@@ -357,13 +356,6 @@ export default function Home() {
                 accounts. Let your web app make you money so you can focus on
                 your work.
               </p>
-              <p className={"uk-h2"}>
-                <FontAwesomeIcon
-                  icon={faStripe}
-                  className={"uk-margin-small-right"}
-                />
-                <FontAwesomeIcon icon={faPaypal} />
-              </p>
             </div>
             <div>
               <p className={"uk-margin-remove"}>Analytics</p>
@@ -390,32 +382,58 @@ export default function Home() {
           </p>
           <ul className={"uk-list"}>
             <li>
-              <FontAwesomeIcon icon={faCheck} /> Client Logins
+              <span className={"material-symbols-sharp uk-margin-small-right"}>
+                done
+              </span>
+              Client Logins
             </li>
             <li>
-              <FontAwesomeIcon icon={faCheck} /> Online Forms
+              <span className={"material-symbols-sharp uk-margin-small-right"}>
+                done
+              </span>
+              Online Forms
             </li>
             <li>
-              <FontAwesomeIcon icon={faCheck} /> Comments
+              <span className={"material-symbols-sharp uk-margin-small-right"}>
+                done
+              </span>
+              Comments
             </li>
             <li>
-              <FontAwesomeIcon icon={faCheck} /> Bookings and Events Calendars
+              <span className={"material-symbols-sharp uk-margin-small-right"}>
+                done
+              </span>
+              Bookings and Events Calendars
             </li>
             <li>
-              <FontAwesomeIcon icon={faCheck} /> Direct Messaging and Chat Rooms
+              <span className={"material-symbols-sharp uk-margin-small-right"}>
+                done
+              </span>
+              Direct Messaging and Chat Rooms
             </li>
             <li>
-              <FontAwesomeIcon icon={faCheck} /> Email, SMS, and Browser
-              Notifications
+              <span className={"material-symbols-sharp uk-margin-small-right"}>
+                done
+              </span>
+              Email, SMS, and Browser Notifications
             </li>
             <li>
-              <FontAwesomeIcon icon={faCheck} /> Media Uploads
+              <span className={"material-symbols-sharp uk-margin-small-right"}>
+                done
+              </span>
+              Media Uploads
             </li>
             <li>
-              <FontAwesomeIcon icon={faCheck} /> File Scanning and Conversion
+              <span className={"material-symbols-sharp uk-margin-small-right"}>
+                done
+              </span>
+              File Scanning and Conversion
             </li>
             <li>
-              <FontAwesomeIcon icon={faCheck} /> Reviews
+              <span className={"material-symbols-sharp uk-margin-small-right"}>
+                done
+              </span>
+              Reviews
             </li>
           </ul>
         </div>

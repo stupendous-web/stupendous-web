@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import isometric from "/images/isometrics/isometric-1-3-white.png";
 
@@ -31,16 +29,22 @@ class CTA extends React.Component {
                       Start Yours Now
                     </a>
                   </div>
-                  <div className={"uk-width-expand@s"}>
+                  <div className={"uk-width-auto@s"}>
                     <a
                       href={"mailto:topher@stupendousweb.com"}
-                      className={"uk-margin-small-right"}
+                      className={"uk-flex"}
                       data-uk-tooltip={"Email me!"}
                     >
-                      <FontAwesomeIcon icon={faEnvelope} />
+                      <span className={"material-symbols-sharp"}>mail</span>
                     </a>
-                    <a href={"tel:5109440331"} data-uk-tooltip={"Call me!"}>
-                      <FontAwesomeIcon icon={faPhone} />
+                  </div>
+                  <div className={"uk-width-auto@s"}>
+                    <a
+                      href={"tel:5109440331"}
+                      className={"uk-flex"}
+                      data-uk-tooltip={"Call me!"}
+                    >
+                      <span className={"material-symbols-sharp"}>call</span>
                     </a>
                   </div>
                 </div>
