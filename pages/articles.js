@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import { useGlobal } from "../lib/context";
 import Head from "next/head";
+import Image from "next/image";
+import { useGlobal } from "../lib/context";
 
 export default function Articles() {
   const { setLoading, articles } = useGlobal();
@@ -34,10 +35,11 @@ export default function Articles() {
                       }
                     >
                       <div className={"uk-height-medium uk-cover-container"}>
-                        <img
-                          src={article.featured_image}
+                        <Image
+                          src={article?.featured_image}
                           alt={article?.title}
-                          data-uk-cover={""}
+                          layout={"fill"}
+                          priority
                         />
                       </div>
                     </a>

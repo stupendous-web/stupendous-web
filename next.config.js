@@ -22,6 +22,9 @@ const nextConfig = {
       });
     return result;
   },
+  images: {
+    domains: ["kinwebdesign.files.wordpress.com"],
+  },
 };
 
 module.exports = nextConfig;
