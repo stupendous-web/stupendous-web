@@ -3,7 +3,7 @@ import { useGlobal } from "../lib/context";
 import Head from "next/head";
 
 export default function Articles() {
-  const { setLoading, articles, photos } = useGlobal();
+  const { setLoading, articles } = useGlobal();
 
   useEffect(() => {
     if (articles) {
@@ -23,23 +23,20 @@ export default function Articles() {
             data-uk-grid={"masonry: true"}
           >
             {articles?.map((article) => {
-              const src = photos?.find(
-                (photo) => photo?.id === article.featured_media
-              )?.source_url;
               return (
                 <div key={article.id}>
-                  {src && (
+                  {article?.featured_image && (
                     <a
-                      href={"/articles/" + article.slug}
+                      href={"/articles/" + article?.slug}
                       title={
-                        article.title.rendered +
+                        article?.title +
                         " | Web App Development Services | Stupendous Web"
                       }
                     >
                       <div className={"uk-height-medium uk-cover-container"}>
                         <img
-                          src={src}
-                          alt={article.title.rendered}
+                          src={article.featured_image}
+                          alt={article?.title}
                           data-uk-cover={""}
                         />
                       </div>
@@ -47,25 +44,25 @@ export default function Articles() {
                   )}
                   <h2>
                     <a
-                      href={"/articles/" + article.slug}
+                      href={"/articles/" + article?.slug}
                       title={
-                        article.title.rendered +
+                        article?.title +
                         " | Web App Development Services | Stupendous Web"
                       }
                     >
-                      {article.title.rendered}
+                      {article?.title}
                     </a>
                   </h2>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: article.excerpt.rendered,
+                      __html: article?.content,
                     }}
                   />
                   <p>
                     <a
-                      href={"/articles/" + article.slug}
+                      href={"/articles/" + article?.slug}
                       title={
-                        article.title.rendered +
+                        article?.title +
                         " | Web App Development Services | Stupendous Web"
                       }
                     >

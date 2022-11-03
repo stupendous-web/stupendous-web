@@ -71,17 +71,17 @@ export default function Footer() {
             <div className={"uk-width-1-4@s"}>
               <ul className={"uk-nav uk-nav-default"}>
                 <li className={"uk-nav-header"}>Recent</li>
-                {articles?.slice(0, 4).map((article, key) => {
+                {articles?.slice(0, 4).map((article) => {
                   return (
-                    <li key={key}>
-                      <Link href={"/articles/" + article.slug}>
+                    <li key={article?.id}>
+                      <Link href={"/articles/" + article?.slug}>
                         <a
                           title={
-                            article.title.rendered +
+                            article?.title +
                             " | Web App Development Services | Stupendous Web"
                           }
                         >
-                          {article.title.rendered}
+                          {article?.title}
                         </a>
                       </Link>
                     </li>

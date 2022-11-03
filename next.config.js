@@ -9,11 +9,11 @@ const nextConfig = {
   additionalPaths: async () => {
     const result = [];
     await axios
-      .get("https://cms.stupendousweb.com/wp-json/wp/v2/posts")
+      .get("https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts")
       .then((response) => {
-        response.data.map((post) => {
+        response.data?.posts?.map((post) => {
           result.push({
-            loc: "/article/" + post.slug,
+            loc: "/articles/" + post.slug,
             changefreq: "daily",
             priority: 0.7,
             lastmod: new Date().toISOString(),
