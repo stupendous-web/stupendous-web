@@ -5,6 +5,8 @@ import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
 
+dayjs.extend(calendar);
+
 export default function Article() {
   const router = useRouter();
   const { setLoading, articles } = useGlobal();
@@ -17,12 +19,8 @@ export default function Article() {
   }, [router.isReady, articles]);
 
   useEffect(() => {
-    if (article) {
-      setLoading(false);
-    }
+    article && setLoading(false);
   }, [article]);
-
-  dayjs.extend(calendar);
 
   return (
     <>
@@ -48,7 +46,7 @@ export default function Article() {
           <p className={"uk-text-small uk-text-meta"}>
             Published{" "}
             <time dateTime={dayjs(article?.date).format("YYYY-MM-DD")}>
-              {dayjs().calendar(dayjs(article?.date))}
+              {dayjs(article?.date).calendar()}
             </time>
           </p>
           <div dangerouslySetInnerHTML={{ __html: article?.content }} />
