@@ -20,28 +20,24 @@ export default function Blog() {
               </a>
             </h3>
           </Link>
-          <div className={"uk-child-width-1-2@s"} data-uk-grid={""}>
-            <div>
-              <ul className={"uk-nav uk-nav-default"}>
-                {articles?.slice(0, 4).map((article, key) => {
-                  return (
-                    <li key={key}>
-                      <Link href={"/articles/" + article?.slug}>
-                        <a
-                          title={
-                            article?.title +
-                            " | Web App Development Services | Stupendous Web"
-                          }
-                        >
-                          {article?.title}
-                        </a>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
+          <ul className={"uk-list"}>
+            {articles?.map((article) => {
+              return (
+                <li key={article?.id}>
+                  <Link href={"/articles/" + article?.slug}>
+                    <a
+                      title={
+                        article?.title +
+                        " | Web App Development Services | Stupendous Web"
+                      }
+                    >
+                      {article?.title}
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </>
