@@ -55,7 +55,7 @@ export default function Articles() {
                   </h2>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: article?.content,
+                      __html: article?.excerpt,
                     }}
                   />
                   <p>
