@@ -30,7 +30,7 @@ export default function Contact() {
     },
     {
       title: "Feature Requests",
-      href: "https://plan.toggl.com/#timeline",
+      href: "https://stupendousweb.atlassian.net",
       icon: "build",
     },
   ];
