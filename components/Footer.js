@@ -17,7 +17,7 @@ export default function Footer() {
   const projects = [
     { href: "https://stupendouscms.com", title: "Stupendous CMS" },
     {
-      href: "https://analytics.stupendousweb.com",
+      href: "https://stupendousanalytics.com",
       title: "Stupendous Analytics",
     },
   ];
