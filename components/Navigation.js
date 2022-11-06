@@ -9,15 +9,13 @@ export default function Navigation() {
   ];
 
   const industries = [
-    { title: "Healthcare", icon: "medication" },
-    { title: "Art and Design", icon: "brush" },
-    { title: "Pet Care", icon: "pets" },
-    { title: "Photography", icon: "photo_camera" },
-    { title: "Health and Fitness", icon: "favorite" },
-    { title: "Social Media Apps", icon: "tag" },
-    { title: "Business", icon: "work" },
-    { title: "Legal", icon: "gavel" },
-    { title: "Crypto and NFT's", icon: "currency_bitcoin" },
+    { title: "Healthcare", icon: "ri-stethoscope-fill" },
+    { title: "Art and Design", icon: "ri-brush-fill" },
+    { title: "Photography", icon: "ri-camera-fill" },
+    { title: "Health and Fitness", icon: "ri-heart-fill" },
+    { title: "Social Media Apps", icon: "ri-hashtag" },
+    { title: "Business", icon: "ri-briefcase-fill" },
+    { title: "Crypto and NFT's", icon: "ri-bit-coin-fill" },
   ];
 
   return (
@@ -50,9 +48,7 @@ export default function Navigation() {
                 {industries.map((industry, key) => (
                   <div key={key}>
                     <p className={"uk-flex uk-flex-middle"}>
-                      <span className={"material-symbols-sharp"}>
-                        {industry.icon}
-                      </span>
+                      <i className={industry.icon} />
                       <span className={"uk-margin-left"}>{industry.title}</span>
                     </p>
                   </div>
