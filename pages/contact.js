@@ -11,27 +11,27 @@ export default function Contact() {
     {
       title: "Book your FREE consultation",
       href: "https://calendly.com/stupendousweb/free-consultation",
-      icon: "calendar_month",
+      icon: "ri-calendar-fill",
     },
     {
       title: "topher@stupendousweb.com",
       href: "mailto:topher@stupendousweb.com",
-      icon: "email",
+      icon: "ri-mail-fill",
     },
     {
       title: "+1 510.944.0331 (Call or Text!)",
       href: "tel:5109440331",
-      icon: "phone",
+      icon: "ri-phone-fill",
     },
     {
       title: "Client 1-1",
       href: "https://calendly.com/stupendousweb/client-1-1",
-      icon: "calendar_month",
+      icon: "ri-vidicon-fill",
     },
     {
       title: "Feature Requests",
       href: "https://stupendousweb.atlassian.net",
-      icon: "build",
+      icon: "ri-tools-fill",
     },
   ];
 
@@ -83,13 +83,7 @@ export default function Contact() {
                   return (
                     <li key={key}>
                       <a className={"uk-flex uk-flex-middle"} href={link.href}>
-                        <span
-                          className={
-                            "material-symbols-sharp uk-margin-small-right"
-                          }
-                        >
-                          {link.icon}
-                        </span>
+                        <i className={`${link.icon} uk-margin-right`} />
                         {link.title}
                       </a>
                     </li>

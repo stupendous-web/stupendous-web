@@ -75,17 +75,26 @@ export default function Menu() {
               <ul className={"uk-list"} style={{ marginTop: "9px" }}>
                 <li className={"uk-margin-remove"}>
                   <a href={"https://www.linkedin.com/in/topherjamesknoll"}>
-                    Ln
+                    <i className="ri-linkedin-fill" />
                   </a>
                 </li>
                 <li className={"uk-margin-remove"}>
-                  <a href={"https://instagram.com/stupendousweb_"}>In</a>
+                  <a href={"https://instagram.com/stupendousweb_"}>
+                    {" "}
+                    <i className="ri-instagram-fill" />
+                  </a>
                 </li>
                 <li className={"uk-margin-remove"}>
-                  <a href={"https://twitter.com/stupendousweb"}>Tw</a>
+                  <a href={"https://twitter.com/stupendousweb"}>
+                    {" "}
+                    <i className="ri-twitter-fill" />
+                  </a>
                 </li>
                 <li className={"uk-margin-remove"}>
-                  <a href={"https://facebook.com/stupendousweb"}>Fa</a>
+                  <a href={"https://facebook.com/stupendousweb"}>
+                    {" "}
+                    <i className="ri-facebook-fill" />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -165,18 +174,21 @@ export default function Menu() {
         </div>
       </div>
       <Logo />
-      <div style={{ position: "fixed", top: "30px", right: "30px" }}>
+      <h3
+        className={"uk-margin-remove"}
+        style={{ position: "fixed", top: "1.5rem", right: "1rem" }}
+      >
         <div onClick={showMenu} className={menuButtonClass}>
           <a>
-            <span className={"material-symbols-sharp"}>menu</span>
+            <i className={"ri-menu-fill"} />
           </a>
         </div>
         <div onClick={hideMenu} className={closeButtonClass}>
           <a>
-            <span className={"material-symbols-sharp"}>close</span>
+            <i className="ri-close-fill" />
           </a>
         </div>
-      </div>
+      </h3>
     </>
   );
 }

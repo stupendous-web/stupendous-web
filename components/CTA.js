@@ -34,14 +34,14 @@ class CTA extends React.Component {
                     className={"uk-flex uk-margin-small-right"}
                     data-uk-tooltip={"Email me!"}
                   >
-                    <span className={"material-symbols-sharp"}>mail</span>
+                    <i className="ri-mail-fill" />
                   </a>
                   <a
                     href={"tel:5109440331"}
                     className={"uk-flex"}
                     data-uk-tooltip={"Call me!"}
                   >
-                    <span className={"material-symbols-sharp"}>call</span>
+                    <i className="ri-phone-fill" />
                   </a>
                 </p>
                 <p>

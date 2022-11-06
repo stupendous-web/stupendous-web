@@ -1,5 +1,6 @@
 import uikit from "uikit";
 import "../styles/uikit/uikit.css";
+import "remixicon/fonts/remixicon.css";
 import { Provider } from "../lib/context";
 
 import Navigation from "../components/Navigation";

@@ -53,21 +53,11 @@ export default function Testimonials() {
                             className={"uk-text-small"}
                             style={{ color: "#00539a" }}
                           >
-                            <span className={"material-symbols-sharp"}>
-                              star
-                            </span>
-                            <span className={"material-symbols-sharp"}>
-                              star
-                            </span>
-                            <span className={"material-symbols-sharp"}>
-                              star
-                            </span>
-                            <span className={"material-symbols-sharp"}>
-                              star
-                            </span>
-                            <span className={"material-symbols-sharp"}>
-                              star
-                            </span>
+                            <i className="ri-star-fill" />
+                            <i className="ri-star-fill" />
+                            <i className="ri-star-fill" />
+                            <i className="ri-star-fill" />
+                            <i className="ri-star-fill" />
                           </p>
                         </div>
                         <div className={"uk-width-auto"}>

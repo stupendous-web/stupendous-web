@@ -104,21 +104,24 @@ export default function Footer() {
                     className={"uk-margin-small-right"}
                     href={"https://www.linkedin.com/in/topherjamesknoll"}
                   >
-                    Ln
+                    <i className="ri-linkedin-fill" />
                   </a>
                   <a
                     className={"uk-margin-small-right"}
                     href={"https://instagram.com/stupendousweb_"}
                   >
-                    In
+                    <i className="ri-instagram-fill" />
                   </a>
                   <a
                     className={"uk-margin-small-right"}
                     href={"https://twitter.com/stupendousweb"}
                   >
-                    Tw
+                    <i className="ri-twitter-fill" />
                   </a>
-                  <a href={"https://facebook.com/stupendousweb"}>Fa</a>
+                  <a href={"https://facebook.com/stupendousweb"}>
+                    {" "}
+                    <i className="ri-facebook-fill" />
+                  </a>
                 </p>
                 <div className={"uk-margin uk-text-muted"}>
                   <div>

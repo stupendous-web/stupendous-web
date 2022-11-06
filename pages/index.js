@@ -52,14 +52,14 @@ export default function Home() {
                     className={"uk-flex uk-margin-small-right"}
                     data-uk-tooltip={"Email me!"}
                   >
-                    <span className={"material-symbols-sharp"}>mail</span>
+                    <i className="ri-mail-fill" />
                   </a>
                   <a
                     href={"tel:5109440331"}
                     className={"uk-flex"}
                     data-uk-tooltip={"Call me!"}
                   >
-                    <span className={"material-symbols-sharp"}>call</span>
+                    <i className="ri-phone-fill" />
                   </a>
                 </p>
                 <p>
@@ -378,57 +378,39 @@ export default function Home() {
           </p>
           <ul className={"uk-list"}>
             <li>
-              <span className={"material-symbols-sharp uk-margin-small-right"}>
-                done
-              </span>
+              <i className="ri-check-fill uk-margin-right" />
               Client Logins
             </li>
             <li>
-              <span className={"material-symbols-sharp uk-margin-small-right"}>
-                done
-              </span>
+              <i className="ri-check-fill uk-margin-right" />
               Online Forms
             </li>
             <li>
-              <span className={"material-symbols-sharp uk-margin-small-right"}>
-                done
-              </span>
+              <i className="ri-check-fill uk-margin-right" />
               Comments
             </li>
             <li>
-              <span className={"material-symbols-sharp uk-margin-small-right"}>
-                done
-              </span>
+              <i className="ri-check-fill uk-margin-right" />
               Bookings and Events Calendars
             </li>
             <li>
-              <span className={"material-symbols-sharp uk-margin-small-right"}>
-                done
-              </span>
+              <i className="ri-check-fill uk-margin-right" />
               Direct Messaging and Chat Rooms
             </li>
             <li>
-              <span className={"material-symbols-sharp uk-margin-small-right"}>
-                done
-              </span>
+              <i className="ri-check-fill uk-margin-right" />
               Email, SMS, and Browser Notifications
             </li>
             <li>
-              <span className={"material-symbols-sharp uk-margin-small-right"}>
-                done
-              </span>
+              <i className="ri-check-fill uk-margin-right" />
               Media Uploads
             </li>
             <li>
-              <span className={"material-symbols-sharp uk-margin-small-right"}>
-                done
-              </span>
+              <i className="ri-check-fill uk-margin-right" />
               File Scanning and Conversion
             </li>
             <li>
-              <span className={"material-symbols-sharp uk-margin-small-right"}>
-                done
-              </span>
+              <i className="ri-check-fill uk-margin-right" />
               Reviews
             </li>
           </ul>
