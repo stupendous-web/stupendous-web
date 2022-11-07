@@ -30,7 +30,7 @@ export default function Contact() {
     },
     {
       title: "Feature Requests",
-      href: "https://stupendousweb.atlassian.net",
+      href: "https://stupendousweb.atlassian.net/jira/projects",
       icon: "ri-tools-fill",
     },
   ];
