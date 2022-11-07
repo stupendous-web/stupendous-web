@@ -29,20 +29,24 @@ class CTA extends React.Component {
                   >
                     Start Yours Now
                   </a>
-                  <a
-                    href={"mailto:topher@stupendousweb.com"}
-                    className={"uk-flex uk-margin-small-right"}
-                    data-uk-tooltip={"Email me!"}
-                  >
-                    <i className="ri-mail-fill" />
-                  </a>
-                  <a
-                    href={"tel:5109440331"}
-                    className={"uk-flex"}
-                    data-uk-tooltip={"Call me!"}
-                  >
-                    <i className="ri-phone-fill" />
-                  </a>
+                  <div className={"uk-text-large"}>
+                    <a
+                      href={"mailto:topher@stupendousweb.com"}
+                      className={"uk-flex uk-margin-small-right"}
+                      data-uk-tooltip={"Email me!"}
+                    >
+                      <i className="ri-mail-fill" />
+                    </a>
+                  </div>
+                  <div className={"uk-text-large"}>
+                    <a
+                      href={"tel:5109440331"}
+                      className={"uk-flex"}
+                      data-uk-tooltip={"Call me!"}
+                    >
+                      <i className="ri-phone-fill" />
+                    </a>
+                  </div>
                 </p>
                 <p>
                   Every tribe needs a strong leader and people are ready to join

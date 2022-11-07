@@ -47,20 +47,24 @@ export default function Home() {
                   >
                     Start Yours Now
                   </a>
-                  <a
-                    href={"mailto:topher@stupendousweb.com"}
-                    className={"uk-flex uk-margin-small-right"}
-                    data-uk-tooltip={"Email me!"}
-                  >
-                    <i className="ri-mail-fill" />
-                  </a>
-                  <a
-                    href={"tel:5109440331"}
-                    className={"uk-flex"}
-                    data-uk-tooltip={"Call me!"}
-                  >
-                    <i className="ri-phone-fill" />
-                  </a>
+                  <div className={"uk-text-large"}>
+                    <a
+                      href={"mailto:topher@stupendousweb.com"}
+                      className={"uk-flex uk-margin-small-right"}
+                      data-uk-tooltip={"Email me!"}
+                    >
+                      <i className="ri-mail-fill" />
+                    </a>
+                  </div>
+                  <div className={"uk-text-large"}>
+                    <a
+                      href={"tel:5109440331"}
+                      className={"uk-flex"}
+                      data-uk-tooltip={"Call me!"}
+                    >
+                      <i className="ri-phone-fill" />
+                    </a>
+                  </div>
                 </p>
                 <p>
                   I help people with something to share who want to engage with
