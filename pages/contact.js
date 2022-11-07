@@ -33,6 +33,16 @@ export default function Contact() {
       href: "https://stupendousweb.atlassian.net/jira/projects",
       icon: "ri-tools-fill",
     },
+    {
+      title: "Analytics",
+      href: "https://stupendousanalytics.com",
+      icon: "ri-pie-chart-fill",
+    },
+    {
+      title: "Content Management",
+      href: "https://wordpress.com",
+      icon: "ri-file-text-fill",
+    },
   ];
 
   return (
