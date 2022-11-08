@@ -9,13 +9,29 @@ export default function Navigation() {
   ];
 
   const industries = [
-    { title: "Healthcare", icon: "ri-stethoscope-fill" },
-    { title: "Art and Design", icon: "ri-brush-fill" },
-    { title: "Photography", icon: "ri-camera-fill" },
-    { title: "Health and Fitness", icon: "ri-heart-fill" },
-    { title: "Social Media Apps", icon: "ri-hashtag" },
-    { title: "Business", icon: "ri-briefcase-fill" },
-    { title: "Crypto and NFT's", icon: "ri-bit-coin-fill" },
+    {
+      title: "Healthcare",
+      icon: "ri-stethoscope-fill",
+      href: "articles/why-you-need-a-web-app-as-a-healthcare-professional",
+    },
+    {
+      title: "Photography",
+      icon: "ri-camera-fill",
+      href: "articles/three-ways-photographers-can-use-online-technology-to-market-themselves",
+    },
+    {
+      title: "Health and Fitness",
+      icon: "ri-heart-fill",
+      href: "articles/how-personal-fitness-trainers-can-use-online-technology-to-market-themselves",
+    },
+    {
+      title: "Business",
+      icon: "ri-briefcase-fill",
+      href: "articles/building-a-custom-web-application-4-ways-your-business-will-benefit",
+    },
+    // { title: "Crypto and NFT's", icon: "ri-bit-coin-fill", href: "" },
+    // { title: "Art and Design", icon: "ri-brush-fill", href: "" },
+    // { title: "Social Media Apps", icon: "ri-hashtag", href: "" },
   ];
 
   return (
@@ -41,15 +57,21 @@ export default function Navigation() {
             <div data-uk-dropdown={"pos: bottom-center"}>
               <div
                 className={
-                  "uk-width-2xlarge uk-dropdown-grid uk-grid-small uk-child-width-1-3@s"
+                  "uk-width-xlarge uk-dropdown-grid uk-grid-small uk-child-width-1-2@s"
                 }
                 data-uk-grid={""}
               >
                 {industries.map((industry, key) => (
                   <div key={key}>
                     <p className={"uk-flex uk-flex-middle"}>
-                      <i className={industry.icon} />
-                      <span className={"uk-margin-left"}>{industry.title}</span>
+                      <Link href={industry.href}>
+                        <a title={industry.title}>
+                          <i className={industry.icon} />
+                          <span className={"uk-margin-left"}>
+                            {industry.title}
+                          </span>
+                        </a>
+                      </Link>
                     </p>
                   </div>
                 ))}

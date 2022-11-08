@@ -53,7 +53,7 @@ export default function Home() {
                       className={"uk-flex uk-margin-small-right"}
                       data-uk-tooltip={"Email me!"}
                     >
-                      <i className="ri-mail-fill" />
+                      <i className={"ri-mail-fill"} />
                     </a>
                   </div>
                   <div className={"uk-text-large"}>
@@ -62,7 +62,7 @@ export default function Home() {
                       className={"uk-flex"}
                       data-uk-tooltip={"Call me!"}
                     >
-                      <i className="ri-phone-fill" />
+                      <i className={"ri-phone-fill"} />
                     </a>
                   </div>
                 </p>

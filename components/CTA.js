@@ -35,7 +35,7 @@ class CTA extends React.Component {
                       className={"uk-flex uk-margin-small-right"}
                       data-uk-tooltip={"Email me!"}
                     >
-                      <i className="ri-mail-fill" />
+                      <i className={"ri-mail-fill"} />
                     </a>
                   </div>
                   <div className={"uk-text-large"}>
@@ -44,7 +44,7 @@ class CTA extends React.Component {
                       className={"uk-flex"}
                       data-uk-tooltip={"Call me!"}
                     >
-                      <i className="ri-phone-fill" />
+                      <i className={"ri-phone-fill"} />
                     </a>
                   </div>
                 </p>
