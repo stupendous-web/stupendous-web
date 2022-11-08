@@ -139,7 +139,7 @@ export default function Services() {
                 <li>Managed domain and hosting</li>
                 <li>Productivity Tools</li>
                 <li>
-                  Two FREE hours of updates a month (Not including new features)
+                  1-3 FREE hours of updates a month (Not including new features)
                 </li>
               </ul>
             </div>
