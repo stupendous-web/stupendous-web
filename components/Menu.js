@@ -71,7 +71,7 @@ export default function Menu() {
           data-uk-height-viewport={""}
         >
           <div className={"uk-width-1-1"} data-uk-grid={""}>
-            <div className={"uk-width-1-3"}>
+            <div className={"uk-width-1-4"}>
               <ul className={"uk-list"} style={{ marginTop: "9px" }}>
                 <li className={"uk-margin-remove"}>
                   <a href={"https://www.linkedin.com/in/topherjamesknoll"}>
@@ -98,7 +98,7 @@ export default function Menu() {
                 </li>
               </ul>
             </div>
-            <div className={"uk-width-2-3"}>
+            <div className={"uk-width-3-4"}>
               <ul className={"uk-list"}>
                 {links.map((link, key) => {
                   return (
