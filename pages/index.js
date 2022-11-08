@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import HeadData from "../components/HeadData";
 import { useGlobal } from "../lib/context";
 import "devicon";
@@ -8,6 +9,8 @@ import Testimonials from "../components/Testimonials";
 import Blog from "../components/Blog";
 
 import isometric from "../images/isometrics/isometric-1-2.png";
+import analytics from "../images/analytics.jpg";
+import cms from "../images/cms.jpg";
 
 export default function Home() {
   const { setLoading } = useGlobal();
@@ -230,9 +233,10 @@ export default function Home() {
             <li>
               Let&apos;s get this right! We&apos;ll work closely together to
               make your website perfect as part of my web app development
-              services. I&apos;m available via email, phone, or video chat. You
-              can email me anytime with your required updates and concerns or
-              tell me via a video call. I&apos;m always here.
+              services. I&apos;m available via email, phone, video chat, and
+              even in person in Oakland. You can email me anytime with your
+              required updates and concerns or tell me via a video call.
+              I&apos;m always here.
             </li>
             <li>
               Search engine optimization plays an important role in getting your
@@ -329,8 +333,8 @@ export default function Home() {
       </div>
       <div className={"uk-section uk-section-large"}>
         <div className={"uk-container uk-container-small"}>
-          <div className={"uk-child-width-1-2@s"} data-uk-grid={""}>
-            <div>
+          <div data-uk-grid={""}>
+            <div className={"uk-width-1-1"}>
               <p className={"uk-margin-remove"}>eCommerce</p>
               <h2 className={"uk-margin-remove-top"}>Accept Payments</h2>
               <p>
@@ -357,13 +361,39 @@ export default function Home() {
                 your work.
               </p>
             </div>
-            <div>
+            <div className={"uk-width-1-2@s"}>
+              <Image src={cms} alt={"Web App Development Services"} priority />
+              <p className={"uk-margin-remove"}>CMS</p>
+              <h2 className={"uk-margin-remove-top"}>Publish Content</h2>
+              <p>
+                Your content management system is included with your web app
+                development services. Give your content a fresh new home and
+                easily publish text and media of all kinds through your own
+                dashboard.&nbsp;
+                <Link href={"https://stupendouscms.com"}>
+                  <a title={"Stupendous CMS"} target={"_blank"}>
+                    Learn More
+                  </a>
+                </Link>
+              </p>
+            </div>
+            <div className={"uk-width-1-2@s"}>
+              <Image
+                src={analytics}
+                alt={"Web App Development Services"}
+                priority
+              />
               <p className={"uk-margin-remove"}>Analytics</p>
               <h2 className={"uk-margin-remove-top"}>Find Customers</h2>
               <p>
-                My custom web app development services come with cutomized
+                My custom web app development services come with customized
                 analytics at no extra charge. Learn more about your current
-                audience and discover new ones with analytics.
+                audience and discover new ones with analytics.&nbsp;
+                <Link href={"https://stupendousanalytics.com"}>
+                  <a title={"Stupendous Analytics"} target={"_blank"}>
+                    Learn More
+                  </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -426,8 +456,9 @@ export default function Home() {
             I’m a certified web developer and have many years of experience
             offering intentional and powerful web app development services. I
             can create projects with a combination of HTML, CSS, Sass, Less,
-            Bootstrap, UI Kit, Javascript, jQuery, React, PHP, Laravel, Python,
-            Django, WordPress, Drupal, and many other tools.
+            Bootstrap, UI Kit, Javascript, jQuery, React, NextJS, PHP, Laravel,
+            Python, Django, MySQL, MongoDB Atlas, WordPress, Drupal, and many
+            other tools.
           </p>
           <p className={"uk-h2"}>
             <i className={"devicon-react-original uk-margin-right"} />
