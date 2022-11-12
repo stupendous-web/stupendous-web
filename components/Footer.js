@@ -132,7 +132,7 @@ export default function Footer() {
                           "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
                         }
                       >
-                        Stupendous Web Marketing LLC
+                        Stupendous Web
                       </a>
                     </Link>{" "}
                     2022.

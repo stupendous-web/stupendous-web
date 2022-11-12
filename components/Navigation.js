@@ -29,9 +29,9 @@ export default function Navigation() {
       icon: "ri-briefcase-fill",
       href: "articles/building-a-custom-web-application-4-ways-your-business-will-benefit",
     },
-    { title: "Crypto and NFT's", icon: "ri-bit-coin-fill" },
-    { title: "Art and Design", icon: "ri-brush-fill" },
-    { title: "Social Media Apps", icon: "ri-hashtag" },
+    // { title: "Crypto and NFT's", icon: "ri-bit-coin-fill" },
+    // { title: "Art and Design", icon: "ri-brush-fill" },
+    //{ title: "Social Media Apps", icon: "ri-hashtag" },
   ];
 
   return (
@@ -64,23 +64,14 @@ export default function Navigation() {
                 {industries.map((industry, key) => (
                   <div key={key}>
                     <p className={"uk-flex uk-flex-middle"}>
-                      {industry.href ? (
-                        <Link href={industry.href}>
-                          <a title={industry.title}>
-                            <i className={industry.icon} />
-                            <span className={"uk-margin-left"}>
-                              {industry.title}
-                            </span>
-                          </a>
-                        </Link>
-                      ) : (
-                        <div>
+                      <Link href={industry.href}>
+                        <a title={industry.title}>
                           <i className={industry.icon} />
                           <span className={"uk-margin-left"}>
                             {industry.title}
                           </span>
-                        </div>
-                      )}
+                        </a>
+                      </Link>
                     </p>
                   </div>
                 ))}

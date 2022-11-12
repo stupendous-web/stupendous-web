@@ -16,13 +16,13 @@
 @global-color:                                  #e0e0e0; // Gray 20
 @global-emphasis-color:                         #f4f4f4; // Gray 10
 @global-muted-color:                            #c6c6c6; // Gray 30
-@global-link-color:                             #fff;
-@global-link-hover-color:                       #fff;
+@global-link-color:                             #ee5396; // Magenta 50
+@global-link-hover-color:                       #d02670; // Magenta 60
 // @global-inverse-color:                          #000;
 @global-background:                             #000;
 @global-muted-background:                       #161616; // Gray 100
 @global-primary-background:                     #d02670; // Magenta 70
-// @global-secondary-background:                   #262626; // Gray 90
+// @global-secondary-background:                   #00539a; // Cyan 70
 // @global-success-background:                     #0e6027; // Green 70
 // @global-warning-background:                     #faa05a;
 // @global-danger-background:                      #a2191f; // Red 70
@@ -97,15 +97,8 @@ blockquote {
 .uk-button {
     text-transform: uppercase;
 }
-
 .uk-section-primary:not(.uk-preserve-color) .uk-button-primary {
     color: @global-primary-background !important;
-}
-
-// Modal
-
-.uk-close, .uk-close:hover {
-    color: @global-inverse-color;
 }
 
 // Animation
@@ -137,38 +130,6 @@ blockquote {
     position: absolute;
     width: 100%;
     height: 100%;
-}
-
-// Marquee
-
-.marquee {
-    display: flex;
-    width: 100%;
-}
-.marquee div {
-    white-space: nowrap;
-    animation: marquee1 30s linear infinite;
-    animation-delay: -30s;
-}
-@keyframes marquee1 {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-.marquee div:nth-child(2) {
-    animation: marquee2 30s linear infinite;
-    animation-delay: -15s;
-}
-@keyframes marquee2 {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-200%);
-    }
 }
 
 // Transitions
