@@ -45,7 +45,7 @@ export default function Home() {
                       "https://calendly.com/stupendousweb/free-consultation"
                     }
                     className={
-                      "uk-button uk-button-primary uk-button-large uk-margin-small-right"
+                      "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
                     }
                   >
                     Start Yours Now
