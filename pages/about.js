@@ -24,7 +24,7 @@ export default function About() {
               />
             </div>
             <div className={"uk-width-2-3@s"}>
-              <p className={"uk-text-justify uk-dropcap"}>
+              <p className={"uk-text-justify uk-dropcap monospace"}>
                 Do you value community, equality, meaningful work, and
                 authenticity? My web app development services help people like
                 you to engage with their audiences and tribes in creative and

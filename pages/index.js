@@ -333,37 +333,39 @@ export default function Home() {
       </div>
       <div className={"uk-section uk-section-large"}>
         <div className={"uk-container uk-container-small"}>
+          <h6 className={"uk-margin-remove"}>eCommerce</h6>
+          <h2 className={"uk-margin-remove-top"}>Accept Payments</h2>
+          <p>
+            Let&apos;s keep your work sustainable. My web app development
+            services integrate with your{" "}
+            <a
+              href={"https://stripe.com/payments"}
+              title={"Stripe Payments"}
+              target={"_blank"}
+              rel={"nofollow noreferrer"}
+            >
+              Stripe
+            </a>{" "}
+            and{" "}
+            <a
+              href={"https://www.paypal.com/us/business/accept-payments"}
+              title={"Paypal Payments"}
+              target={"_blank"}
+              rel={"nofollow noreferrer"}
+            >
+              Paypal
+            </a>{" "}
+            accounts. Let your web app make you money so you can focus on your
+            work.
+          </p>
+        </div>
+      </div>
+      <div className={"uk-section uk-section-large"}>
+        <div className={"uk-container uk-container-small"}>
           <div data-uk-grid={""}>
-            <div className={"uk-width-1-1"}>
-              <p className={"uk-margin-remove"}>eCommerce</p>
-              <h2 className={"uk-margin-remove-top"}>Accept Payments</h2>
-              <p>
-                Let&apos;s keep your work sustainable. My web app development
-                services integrate with your{" "}
-                <a
-                  href={"https://stripe.com/payments"}
-                  title={"Stripe Payments"}
-                  target={"_blank"}
-                  rel={"nofollow noreferrer"}
-                >
-                  Stripe
-                </a>{" "}
-                and{" "}
-                <a
-                  href={"https://www.paypal.com/us/business/accept-payments"}
-                  title={"Paypal Payments"}
-                  target={"_blank"}
-                  rel={"nofollow noreferrer"}
-                >
-                  Paypal
-                </a>{" "}
-                accounts. Let your web app make you money so you can focus on
-                your work.
-              </p>
-            </div>
             <div className={"uk-width-1-2@s"}>
               <Image src={cms} alt={"Web App Development Services"} priority />
-              <p className={"uk-margin-remove"}>CMS</p>
+              <h6 className={"uk-margin-remove-bottom"}>CMS</h6>
               <h2 className={"uk-margin-remove-top"}>Publish Content</h2>
               <p>
                 Your content management system is included with your web app
@@ -383,7 +385,7 @@ export default function Home() {
                 alt={"Web App Development Services"}
                 priority
               />
-              <p className={"uk-margin-remove"}>Analytics</p>
+              <h6 className={"uk-margin-remove-bottom"}>Analytics</h6>
               <h2 className={"uk-margin-remove-top"}>Find Customers</h2>
               <p>
                 My custom web app development services come with customized
@@ -401,7 +403,7 @@ export default function Home() {
       </div>
       <div className={"uk-section"}>
         <div className={"uk-container uk-container-small"}>
-          <p className={"uk-margin-remove"}>Web Apps</p>
+          <h6 className={"uk-margin-remove"}>Web Apps</h6>
           <h2 className={"uk-margin-remove-top"}>Engage with your Audience</h2>
           <p>
             Your web app will excel far past your competitors&apos; static

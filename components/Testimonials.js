@@ -37,7 +37,7 @@ export default function Testimonials() {
               return (
                 <div key={key}>
                   <div className={"uk-inline uk-height-1-1"}>
-                    <div className={"uk-text-bold"}>{testimonial.name}</div>
+                    <h6>{testimonial.name}</h6>
                     <div>{testimonial.title}</div>
                     <p
                       className={

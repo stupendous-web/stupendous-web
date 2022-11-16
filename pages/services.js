@@ -26,7 +26,7 @@ export default function Services() {
               />
             </div>
             <div className={"uk-width-2-3@s"}>
-              <p className={"uk-text-justify uk-dropcap"}>
+              <p className={"uk-text-justify uk-dropcap monospace"}>
                 Let&apos;s make it easy for you to meet your goals, build
                 relationships, improve your brand, and get your product out to
                 interested customers. We&apos;ll start by building a

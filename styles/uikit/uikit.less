@@ -1,11 +1,13 @@
 @import 'components/_import.less';
-@import url('https://use.typekit.net/zuw2bkp.css');
+@import 'https://use.typekit.net/aqk5kto.css';
 
-@global-font-family:                            new-order, sans-serif;
-@base-heading-font-family:                      bitcount-mono-single-circle, monospace;
+@global-font-family:                            transducer, sans-serif;
+@base-body-font-weight:                         100;
+@base-heading-font-family:                      transducer, sans-serif;
+@base-heading-font-weight:                      900;
 @base-h1-line-height:                           1;
 @base-h2-line-height:                           1;
-@global-font-size:                              18px;
+@global-font-size:                              16px;
 @global-line-height:                            2;
 @global-2xlarge-font-size:                      4rem;
 @global-xlarge-font-size:                       3rem;
@@ -16,8 +18,8 @@
 @global-color:                                  #e0e0e0; // Gray 20
 @global-emphasis-color:                         #f4f4f4; // Gray 10
 @global-muted-color:                            #c6c6c6; // Gray 30
-@global-link-color:                             #ee5396; // Magenta 50
-@global-link-hover-color:                       #d02670; // Magenta 60
+@global-link-color:                             #d02670; // Magenta 70
+@global-link-hover-color:                       #d02670; // Magenta 70
 // @global-inverse-color:                          #000;
 @global-background:                             #000;
 @global-muted-background:                       #161616; // Gray 100
@@ -42,14 +44,20 @@
 html, body {
     overflow-x: hidden;
 }
+a {
+    font-weight: 400;
+}
 a:hover {
     text-decoration: none;
 }
+/*
 @media (max-width: @breakpoint-medium) {
     h1, .uk-h1 {
         font-size: @global-xlarge-font-size !important;
     }
 }
+
+ */
 pre, pre em {
     color: @global-primary-background;
 }
@@ -114,6 +122,12 @@ blockquote {
 /**********/
 /* CUSTOM */
 /**********/
+
+// Font
+
+.monospace {
+    font-family: anonymous-pro, monospace;
+}
 
 // Color Swatch
 

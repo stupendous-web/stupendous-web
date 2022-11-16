@@ -28,7 +28,7 @@ export default function Projects() {
                 />
               </div>
               <div className={"uk-width-2-3@s"}>
-                <p className={"uk-text-justify uk-dropcap"}>
+                <p className={"uk-text-justify uk-dropcap monospace"}>
                   Let&apos;s build better internet community through my custom
                   web app development services. Look at a few of the certified,
                   award-winning, and engaging web apps I’ve created. These
