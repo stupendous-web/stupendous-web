@@ -11486,14 +11486,12 @@ a {
 a:hover {
   text-decoration: none;
 }
-/*
-@media (max-width: @breakpoint-medium) {
-    h1, .uk-h1 {
-        font-size: @global-xlarge-font-size !important;
-    }
+@media (max-width: 960px) {
+  h1,
+  .uk-h1 {
+    font-size: 3rem !important;
+  }
 }
-
- */
 pre,
 pre em {
   color: #d02670;
@@ -11513,9 +11511,6 @@ blockquote {
 /**********/
 /* UI Kit */
 /**********/
-.uk-text-lead {
-  font-size: 16px !important;
-}
 .uk-button {
   text-transform: uppercase;
 }
