@@ -19,7 +19,7 @@
     "react-dom": "18.2.0",
     "react-simple-typewriter": "^3.0.1",
     "remixicon": "^2.5.0",
-    "stupendous-analytics": "^1.0.60",
+    "stupendous-analytics-next": "^1.0.0",
     "uikit": "^3.14.3"
   },
   "devDependencies": {
