@@ -175,7 +175,7 @@ export default function Menu() {
       </div>
       <Logo />
       <h3
-        className={"uk-margin-remove"}
+        className={"uk-margin-remove uk-light"}
         style={{ position: "fixed", top: "1.5rem", right: "1rem" }}
       >
         <div onClick={showMenu} className={menuButtonClass}>
