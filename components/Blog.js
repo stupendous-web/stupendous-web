@@ -8,8 +8,8 @@ export default function Blog() {
     <>
       <div className={"uk-section uk-section-large"}>
         <div className={"uk-container uk-container-small"}>
-          <Link href={"/articles"}>
-            <h3>
+          <h3>
+            <Link href={"/articles"} legacyBehavior>
               <a
                 title={
                   "Articles | Web App Development Services | Stupendous Web"
@@ -18,13 +18,13 @@ export default function Blog() {
               >
                 Articles
               </a>
-            </h3>
-          </Link>
+            </Link>
+          </h3>
           <ul className={"uk-list uk-column-1-2@s"}>
             {articles?.map((article) => {
               return (
                 <li key={article?.id}>
-                  <Link href={"/articles/" + article?.slug}>
+                  <Link href={"/articles/" + article?.slug} legacyBehavior>
                     <a
                       title={
                         article?.title +

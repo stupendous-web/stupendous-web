@@ -66,7 +66,7 @@ export default function Home() {
             <div className={"uk-flex-middle"} data-uk-grid={""}>
               <div className={"uk-width-2-3@s"}>
                 <h1>Web App Development Services</h1>
-                <p className={"uk-flex uk-flex-middle"}>
+                <div className={"uk-flex uk-flex-middle"}>
                   <a
                     href={
                       "https://calendly.com/stupendousweb/free-consultation"
@@ -95,7 +95,7 @@ export default function Home() {
                       <i className={"ri-phone-fill"} />
                     </a>
                   </div>
-                </p>
+                </div>
                 <p>
                   I help people with something to share who want to engage with
                   their community by delivering web app development services
@@ -399,7 +399,7 @@ export default function Home() {
                 development services. Give your content a fresh new home and
                 easily publish text and media of all kinds through your own
                 dashboard.&nbsp;
-                <Link href={"https://stupendouscms.com"}>
+                <Link href={"https://stupendouscms.com"} legacyBehavior>
                   <a title={"Stupendous CMS"} target={"_blank"}>
                     Learn More
                   </a>
@@ -418,7 +418,7 @@ export default function Home() {
                 My custom web app development services come with customized
                 analytics at no extra charge. Learn more about your current
                 audience and discover new ones with analytics.&nbsp;
-                <Link href={"https://stupendousanalytics.com"}>
+                <Link href={"https://stupendousanalytics.com"} legacyBehavior>
                   <a title={"Stupendous Analytics"} target={"_blank"}>
                     Learn More
                   </a>

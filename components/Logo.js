@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Logo() {
   return (
     <>
-      <Link href={"/"}>
+      <Link href={"/"} legacyBehavior>
         <a
           title={
             "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"

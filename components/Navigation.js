@@ -64,7 +64,7 @@ export default function Navigation() {
                 {industries.map((industry, key) => (
                   <div key={key}>
                     <p className={"uk-flex uk-flex-middle"}>
-                      <Link href={industry.href}>
+                      <Link href={industry.href} legacyBehavior>
                         <a title={industry.title}>
                           <i className={industry.icon} />
                           <span className={"uk-margin-left"}>
@@ -85,7 +85,7 @@ export default function Navigation() {
                 className={key < links.length && "uk-margin-large-right"}
                 key={key}
               >
-                <Link href={"/" + link.href}>
+                <Link href={"/" + link.href} legacyBehavior>
                   <a
                     title={
                       link.title +

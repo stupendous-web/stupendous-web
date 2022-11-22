@@ -36,7 +36,7 @@ export default function Footer() {
                 {links.map((link, key) => {
                   return (
                     <li key={key}>
-                      <Link href={"/" + link.href}>
+                      <Link href={"/" + link.href} legacyBehavior>
                         <a
                           title={
                             link.title +
@@ -53,7 +53,7 @@ export default function Footer() {
                 {projects.map((link, key) => {
                   return (
                     <li key={key}>
-                      <Link href={link.href}>
+                      <Link href={link.href} legacyBehavior>
                         <a
                           title={
                             link.title +
@@ -74,7 +74,7 @@ export default function Footer() {
                 {articles?.slice(0, 4).map((article) => {
                   return (
                     <li key={article?.id}>
-                      <Link href={"/articles/" + article?.slug}>
+                      <Link href={"/articles/" + article?.slug} legacyBehavior>
                         <a
                           title={
                             article?.title +
@@ -126,7 +126,7 @@ export default function Footer() {
                 <div className={"uk-margin uk-text-muted"}>
                   <div>
                     &copy; Copyright{" "}
-                    <Link href={"/"}>
+                    <Link href={"/"} legacyBehavior>
                       <a
                         title={
                           "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"

@@ -18,7 +18,7 @@ class CTA extends React.Component {
             >
               <div>
                 <h2>Access Two FREE Consultations!</h2>
-                <p className={"uk-flex uk-flex-middle"}>
+                <div className={"uk-flex uk-flex-middle"}>
                   <a
                     href={
                       "https://calendly.com/stupendousweb/free-consultation"
@@ -47,7 +47,7 @@ class CTA extends React.Component {
                       <i className={"ri-phone-fill"} />
                     </a>
                   </div>
-                </p>
+                </div>
                 <p>
                   Every tribe needs a strong leader and people are ready to join
                   yours. So, give them the tools they need with my web app
