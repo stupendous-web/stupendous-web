@@ -15,6 +15,33 @@ import cms from "../images/cms.jpg";
 export default function Home() {
   const { setLoading } = useGlobal();
 
+  const solutions = [
+    "CRM, Customer Relationship Managers",
+    "Project Management Systems",
+    "Collaboration Software Apps",
+    "Data and Analytics Dashboards",
+    "Patient Portals and CRM’s",
+    "Inventory and Delivery Managers",
+    "Maps",
+    "Language Support Apps",
+    "Support Ticket Managers",
+    "Tax Filing Systems",
+    "Ecommerce Web Apps",
+    "Partner Portal Apps",
+    "LMS, Learning Management Systems",
+    "Financial and Tax Systems",
+    "Client and Customer Logins",
+    "Online Submission Forms",
+    "Discussion Forum Apps",
+    "Social Media Platforms",
+    "Bookings and Events Calendars",
+    "Direct Messaging and Chat Rooms",
+    "Email, SMS, and Browser Notifications",
+    "Media Upload and Management System",
+    "File Scanning and Conversion",
+    "Online Review Apps",
+  ];
+
   return (
     <>
       <Head>
@@ -412,43 +439,15 @@ export default function Home() {
             This power [use it wisely] let&apos;s you engage with your audiences
             in many fun, creative, and profitable ways:
           </p>
-          <ul className={"uk-list"}>
-            <li>
-              <i className="ri-check-fill uk-margin-right" />
-              Client Logins
-            </li>
-            <li>
-              <i className="ri-check-fill uk-margin-right" />
-              Online Forms
-            </li>
-            <li>
-              <i className="ri-check-fill uk-margin-right" />
-              Comments
-            </li>
-            <li>
-              <i className="ri-check-fill uk-margin-right" />
-              Bookings and Events Calendars
-            </li>
-            <li>
-              <i className="ri-check-fill uk-margin-right" />
-              Direct Messaging and Chat Rooms
-            </li>
-            <li>
-              <i className="ri-check-fill uk-margin-right" />
-              Email, SMS, and Browser Notifications
-            </li>
-            <li>
-              <i className="ri-check-fill uk-margin-right" />
-              Media Uploads
-            </li>
-            <li>
-              <i className="ri-check-fill uk-margin-right" />
-              File Scanning and Conversion
-            </li>
-            <li>
-              <i className="ri-check-fill uk-margin-right" />
-              Reviews
-            </li>
+          <ul className={"uk-list uk-column-1-2@s"}>
+            {solutions.map((solution) => {
+              return (
+                <li key={solution}>
+                  <i className="ri-check-fill uk-margin-right" />
+                  {solution}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

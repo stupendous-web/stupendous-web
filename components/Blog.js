@@ -20,7 +20,7 @@ export default function Blog() {
               </a>
             </h3>
           </Link>
-          <ul className={"uk-list"}>
+          <ul className={"uk-list uk-column-1-2@s"}>
             {articles?.map((article) => {
               return (
                 <li key={article?.id}>
