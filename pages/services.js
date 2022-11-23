@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useGlobal } from "../lib/context";
 
 import isometric from "../images/isometrics/isometric-2-2.png";
+import HeadData from "../components/HeadData";
 
 export default function Services() {
   const { setLoading } = useGlobal();
@@ -13,6 +14,9 @@ export default function Services() {
     <>
       <Head>
         <title>Services | Web App Development Services | Stupendous Web</title>
+        <HeadData
+          title={"Services | Web App Development Services | Stupendous Web"}
+        />
       </Head>
       <div className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}>
         <div className={"uk-container uk-container-small"}>

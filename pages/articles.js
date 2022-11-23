@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import { useGlobal } from "../lib/context";
+import HeadData from "../components/HeadData";
 
 export default function Articles() {
   const { setLoading, articles } = useGlobal();
@@ -15,6 +16,9 @@ export default function Articles() {
     <>
       <Head>
         <title>Articles | Web App Development Services | Stupendous Web</title>
+        <HeadData
+          title={"Articles | Web App Development Services | Stupendous Web"}
+        />
       </Head>
       <div className={"uk-section uk-section-xlarge"}>
         <div className={"uk-container uk-container-small"}>

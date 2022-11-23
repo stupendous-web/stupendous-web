@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
+import HeadData from "../../components/HeadData";
 
 dayjs.extend(calendar);
 
@@ -28,12 +29,10 @@ export default function Article() {
     <>
       <Head>
         <title>
-          {article?.title +
-            " | Stupendous Web | If you want to build community, build a stupendous web app"}
+          {`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
         </title>
-        <meta
-          property={"og:title"}
-          content={`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
+        <HeadData
+          title={`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
         />
       </Head>
 

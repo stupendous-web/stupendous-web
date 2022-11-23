@@ -4,6 +4,7 @@ import { useGlobal } from "../lib/context";
 
 import Project from "../components/Project";
 import isometric from "../images/isometrics/isometric-1-1.png";
+import HeadData from "../components/HeadData";
 
 export default function Projects() {
   const { setLoading } = useGlobal();
@@ -12,6 +13,9 @@ export default function Projects() {
     <>
       <Head>
         <title>Projects | Web App Development Services | Stupendous Web</title>
+        <HeadData
+          title={"Projects | Web App Development Services | Stupendous Web"}
+        />
       </Head>
       <div>
         <div

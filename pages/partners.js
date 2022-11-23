@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import { useGlobal } from "../lib/context";
+import HeadData from "../components/HeadData";
 
 export default function Partners() {
   const { setLoading } = useGlobal();
@@ -13,6 +14,9 @@ export default function Partners() {
     <>
       <Head>
         <title>Partners | Web App Development Services | Stupendous Web</title>
+        <HeadData
+          title={"Partners | Web App Development Services | Stupendous Web"}
+        />
       </Head>
       <div
         className={"uk-section uk-section-xlarge"}
