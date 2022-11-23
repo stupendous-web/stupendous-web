@@ -8,18 +8,19 @@ import calendar from "dayjs/plugin/calendar";
 dayjs.extend(calendar);
 
 export default function Article() {
+  const router = useRouter();
+  const { setLoading, articles } = useGlobal();
   const [article, setArticle] = useState();
 
-  const { setLoading, articles } = useGlobal();
-
-  const router = useRouter();
-
-  const { slug } = router.query;
+  useEffect(() => {
+    if (!router.isReady && !articles) return;
+    const { slug } = router.query;
+    setArticle(articles?.find((article) => article.slug === slug));
+  }, [router.isReady, articles]);
 
   useEffect(() => {
-    setArticle(articles?.find((article) => article.slug === slug));
     article && setLoading(false);
-  }, [articles]);
+  }, [article]);
 
   return (
     <>
