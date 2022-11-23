@@ -1,9 +1,8 @@
-import Head from "next/head";
 import Image from "next/image";
 import { useGlobal } from "../lib/context";
+import { NextSeo } from "next-seo";
 
 import isometric from "../images/isometrics/isometric-3-1.png";
-import HeadData from "../components/HeadData";
 
 export default function Philosophy() {
   const { setLoading } = useGlobal();
@@ -31,14 +30,11 @@ export default function Philosophy() {
 
   return (
     <>
-      <Head>
-        <title>
-          Philosophy | Web App Development Services | Stupendous Web
-        </title>
-        <HeadData
-          title={"Philosophy | Web App Development Services | Stupendous Web"}
-        />
-      </Head>
+      <NextSeo
+        title={
+          "Philosophy | Stupendous Web | If you want to build community, build a stupendous web app"
+        }
+      />
       <div className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}>
         <div className={"uk-container uk-container-small"}>
           <div className={"uk-flex-middle"} data-uk-grid={""}>

@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Head from "next/head";
 import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
-import HeadData from "../../components/HeadData";
+import { NextSeo } from "next-seo";
 
 dayjs.extend(calendar);
 
@@ -27,15 +26,9 @@ export default function Article() {
 
   return (
     <>
-      <Head>
-        <title>
-          {`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
-        </title>
-        <HeadData
-          title={`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
-        />
-      </Head>
-
+      <NextSeo
+        title={`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
+      />
       <div className={"uk-section uk-section-xlarge"}>
         <div className={"uk-container uk-container-small"}>
           {article?.featured_image && (

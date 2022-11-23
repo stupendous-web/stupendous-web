@@ -11,8 +11,11 @@ export default function Projects() {
   return (
     <>
       <NextSeo
-        title={"Projects | Web App Development Services | Stupendous Web"}
+        title={
+          "Projects | Stupendous Web | If you want to build community, build a stupendous web app"
+        }
       />
+
       <div>
         <div
           className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}

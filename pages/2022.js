@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import Head from "next/head";
 import { useGlobal } from "../lib/context";
-import HeadData from "../components/HeadData";
+import { NextSeo } from "next-seo";
 
 export default function Review() {
   const { setLoading } = useGlobal();
@@ -12,14 +11,11 @@ export default function Review() {
 
   return (
     <>
-      <Head>
-        <title>
-          2022 Review | Web App Development Services | Stupendous Web
-        </title>
-        <HeadData
-          title={"2022 Review | Web App Development Services | Stupendous Web"}
-        />
-      </Head>
+      <NextSeo
+        title={
+          "2022 | Stupendous Web | If you want to build community, build a stupendous web app"
+        }
+      />
       <div className={"uk-section uk-section-xlarge"}>
         <div className={"uk-container uk-container-small"}>
           <h1>2022 Review</h1>
