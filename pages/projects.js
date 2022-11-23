@@ -1,22 +1,18 @@
-import Head from "next/head";
 import Image from "next/image";
 import { useGlobal } from "../lib/context";
+import { NextSeo } from "next-seo";
 
 import Project from "../components/Project";
 import isometric from "../images/isometrics/isometric-1-1.png";
-import HeadData from "../components/HeadData";
 
 export default function Projects() {
   const { setLoading } = useGlobal();
 
   return (
     <>
-      <Head>
-        <title>Projects | Web App Development Services | Stupendous Web</title>
-        <HeadData
-          title={"Projects | Web App Development Services | Stupendous Web"}
-        />
-      </Head>
+      <NextSeo
+        title={"Projects | Web App Development Services | Stupendous Web"}
+      />
       <div>
         <div
           className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}
