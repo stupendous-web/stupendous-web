@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useGlobal } from "../lib/context";
+import { NextSeo } from "next-seo";
 import "devicon";
 
 import Testimonials from "../components/Testimonials";
@@ -42,6 +43,11 @@ export default function Home() {
 
   return (
     <>
+      <NextSeo
+        title={
+          "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
+        }
+      />
       <div
         className={
           "uk-section uk-section-xlarge uk-flex uk-flex-center uk-flex-middle"

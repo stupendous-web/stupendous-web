@@ -27,9 +27,6 @@ function MyApp({ Component, pageProps }) {
       <StupendousAnalytics site={"topher@stupendousweb.com"} />
       <Provider>
         <DefaultSeo
-          title={
-            "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
-          }
           description="If you want to build community, build a stupendous web app."
           openGraph={{
             url: "https://stupendousweb.com",
