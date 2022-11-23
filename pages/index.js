@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useGlobal } from "../lib/context";
-import { NextSeo } from "next-seo";
 import "devicon";
 
 import Testimonials from "../components/Testimonials";
@@ -43,27 +42,6 @@ export default function Home() {
 
   return (
     <>
-      <NextSeo
-        title={
-          "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
-        }
-        openGraph={{
-          url: "https://stupendousweb.com",
-          title:
-            "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app",
-          images: [
-            {
-              url: "https://stupendousweb.com/images/social.jpg",
-            },
-          ],
-          siteName: "Stupendous Web",
-        }}
-        twitter={{
-          handle: "@stupendousweb",
-          site: "@stupendousweb",
-          cardType: "summary_large_image",
-        }}
-      />
       <div
         className={
           "uk-section uk-section-xlarge uk-flex uk-flex-center uk-flex-middle"
