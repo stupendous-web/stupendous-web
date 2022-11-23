@@ -26,7 +26,7 @@ export default function Articles() {
           >
             {articles?.map((article) => {
               return (
-                <div key={article.id}>
+                <div key={article.ID}>
                   {article?.featured_image && (
                     <a
                       href={"/articles/" + article?.slug}

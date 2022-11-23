@@ -23,7 +23,7 @@ export default function Blog() {
           <ul className={"uk-list uk-column-1-2@s"}>
             {articles?.map((article) => {
               return (
-                <li key={article?.id}>
+                <li key={article?.ID}>
                   <Link href={"/articles/" + article?.slug} legacyBehavior>
                     <a
                       title={

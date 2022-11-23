@@ -73,7 +73,7 @@ export default function Footer() {
                 <li className={"uk-nav-header"}>Recent</li>
                 {articles?.slice(0, 4).map((article) => {
                   return (
-                    <li key={article?.id}>
+                    <li key={article?.ID}>
                       <Link href={"/articles/" + article?.slug} legacyBehavior>
                         <a
                           title={
