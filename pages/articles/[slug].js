@@ -12,15 +12,17 @@ export default function Article() {
   const { setLoading, articles } = useGlobal();
   const [article, setArticle] = useState();
 
+  const { slug } = router.query;
+
   useEffect(() => {
-    if (!router.isReady && !articles) return;
-    const { slug } = router.query;
     setArticle(articles?.find((article) => article.slug === slug));
-  }, [router.isReady, articles]);
+  }, [articles]);
 
   useEffect(() => {
     article && setLoading(false);
   }, [article]);
+
+  if (!article) return null;
 
   return (
     <>
