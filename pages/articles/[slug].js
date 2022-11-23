@@ -31,6 +31,10 @@ export default function Article() {
           {article?.title +
             " | Stupendous Web | If you want to build community, build a stupendous web app"}
         </title>
+        <meta
+          property={"og:title"}
+          content={`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
+        />
       </Head>
 
       <div className={"uk-section uk-section-xlarge"}>
