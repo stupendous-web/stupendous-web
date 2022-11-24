@@ -28,6 +28,20 @@ export default function Article() {
     <>
       <NextSeo
         title={`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
+        openGraph={{
+          url: "https://stupendousweb.com",
+          title: `${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`,
+          description:
+            "If you want to build community, build a stupendous web app.",
+          images: [
+            {
+              url: article?.featured_image,
+              alt: `${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`,
+              type: "image/jpeg",
+            },
+          ],
+          siteName: `${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`,
+        }}
       />
       <div className={"uk-section uk-section-xlarge"}>
         <div className={"uk-container uk-container-small"}>

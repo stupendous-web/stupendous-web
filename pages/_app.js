@@ -30,7 +30,9 @@ function MyApp({ Component, pageProps }) {
           title={
             "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
           }
-          description="If you want to build community, build a stupendous web app."
+          description={
+            "I help people with something to share who want to engage with their community by delivering web app development services that improve their brand awareness and authority."
+          }
           openGraph={{
             url: "https://stupendousweb.com",
             title:
