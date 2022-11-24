@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
@@ -9,10 +8,10 @@ import axios from "axios";
 dayjs.extend(calendar);
 
 export default function Article({ article }) {
-  const { setLoading } = useGlobal();
+  const { setIsLoading } = useGlobal();
 
   useEffect(() => {
-    article && setLoading(false);
+    article && setIsLoading(false);
   }, [article]);
 
   return (

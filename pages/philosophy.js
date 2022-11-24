@@ -5,7 +5,7 @@ import { NextSeo } from "next-seo";
 import isometric from "../images/isometrics/isometric-3-1.png";
 
 export default function Philosophy() {
-  const { setLoading } = useGlobal();
+  const { setIsLoading } = useGlobal();
 
   const magenta = [
     { name: "Magenta 100", hex: "2a0a18" },
@@ -43,7 +43,7 @@ export default function Philosophy() {
                 src={isometric}
                 alt={"Web App Development Services"}
                 priority
-                onLoadingComplete={setLoading(false)}
+                onLoadingComplete={setIsLoading(false)}
               />
             </div>
             <div className={"uk-width-2-3@s"}>

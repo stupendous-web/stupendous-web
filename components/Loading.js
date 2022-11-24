@@ -2,7 +2,7 @@ import { useGlobal } from "../lib/context";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 export default function Loading() {
-  const { loading } = useGlobal();
+  const { isLoading } = useGlobal();
   const { text } = useTypewriter({
     words: ["Hang in there..."],
     typeSpeed: 30,
@@ -11,7 +11,7 @@ export default function Loading() {
   return (
     <>
       <div
-        className={loading ? undefined : "slide-out-left"}
+        className={isLoading ? undefined : "slide-out-left"}
         style={{
           width: "100%",
           position: "fixed",

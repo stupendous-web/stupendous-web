@@ -11,7 +11,7 @@ import analytics from "../images/analytics.jpg";
 import cms from "../images/cms.jpg";
 
 export default function Home() {
-  const { setLoading } = useGlobal();
+  const { setIsLoading } = useGlobal();
 
   const solutions = [
     "CRM, Customer Relationship Managers",
@@ -94,7 +94,7 @@ export default function Home() {
                   src={isometric}
                   alt={"Web App Development Services"}
                   priority
-                  onLoadingComplete={setLoading(false)}
+                  onLoadingComplete={setIsLoading(false)}
                 />
               </div>
             </div>

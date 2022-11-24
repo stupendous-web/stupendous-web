@@ -3,11 +3,11 @@ import { useGlobal } from "../../lib/context";
 import { NextSeo } from "next-seo";
 
 export default function Articles() {
-  const { articles, setLoading } = useGlobal();
+  const { articles, setIsLoading } = useGlobal();
 
   useEffect(() => {
     if (!!articles?.length) {
-      setLoading(false);
+      setIsLoading(false);
     }
   }, [articles]);
 

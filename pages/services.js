@@ -5,7 +5,7 @@ import { NextSeo } from "next-seo";
 import isometric from "../images/isometrics/isometric-2-2.png";
 
 export default function Services() {
-  const { setLoading } = useGlobal();
+  const { setIsLoading } = useGlobal();
 
   const sections = ["Consultation", "Development", "Hosting", "LTS"];
 
@@ -24,7 +24,7 @@ export default function Services() {
                 src={isometric}
                 alt={"Web App Development Services"}
                 priority
-                OnLoadingComplete={setLoading(false)}
+                OnLoadingComplete={setIsLoading(false)}
               />
             </div>
             <div className={"uk-width-2-3@s"}>

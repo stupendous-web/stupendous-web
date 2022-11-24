@@ -3,10 +3,10 @@ import { useGlobal } from "../lib/context";
 import { NextSeo } from "next-seo";
 
 export default function Partners() {
-  const { setLoading } = useGlobal();
+  const { setIsLoading } = useGlobal();
 
   useEffect(() => {
-    setLoading(false);
+    setIsLoading(false);
   }, []);
 
   return (
