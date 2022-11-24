@@ -29,9 +29,6 @@ function MyApp({ Component, pageProps }) {
         <DefaultSeo
           description="If you want to build community, build a stupendous web app."
           openGraph={{
-            url: "https://stupendousweb.com",
-            title:
-              "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app.",
             description:
               "I help people with something to share who want to engage with their community by delivering web app development services that improve their brand awareness and authority.",
             images: [
@@ -41,8 +38,6 @@ function MyApp({ Component, pageProps }) {
                 type: "image/jpeg",
               },
             ],
-            siteName:
-              "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app",
           }}
           twitter={{
             handle: "@stupendousweb",
