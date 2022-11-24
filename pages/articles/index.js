@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import { useGlobal } from "../lib/context";
+import { useGlobal } from "../../lib/context";
 import { NextSeo } from "next-seo";
 
 export default function Articles() {
-  const { setLoading, articles } = useGlobal();
+  const { articles, setLoading } = useGlobal();
 
   useEffect(() => {
-    if (articles) {
+    if (!!articles?.length) {
       setLoading(false);
     }
   }, [articles]);
