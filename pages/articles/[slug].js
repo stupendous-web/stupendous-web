@@ -21,6 +21,8 @@ export default function Article() {
     }
   }, [articles, router]);
 
+  if (!article) return null;
+
   return (
     <>
       <NextSeo
