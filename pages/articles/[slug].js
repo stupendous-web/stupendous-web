@@ -4,24 +4,16 @@ import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
 import { NextSeo } from "next-seo";
+import axios from "axios";
 
 dayjs.extend(calendar);
 
-export default function Article() {
-  const router = useRouter();
-  const { setLoading, articles } = useGlobal();
-  const [article, setArticle] = useState();
+export default function Article({ article }) {
+  const { setLoading } = useGlobal();
 
   useEffect(() => {
-    if (router.isReady) {
-      setArticle(
-        articles?.find((article) => article.slug === router.query?.slug)
-      );
-      article && setLoading(false);
-    }
-  }, [articles, router]);
-
-  if (!article) return null;
+    article && setLoading(false);
+  }, [article]);
 
   return (
     <>
@@ -67,4 +59,18 @@ export default function Article() {
       </div>
     </>
   );
+}
+
+export async function getServerSideProps({ query }) {
+  const article = await axios
+    .get(
+      `https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts/slug:${query?.slug}`
+    )
+    .then((response) => response.data);
+
+  return {
+    props: {
+      article: article,
+    },
+  };
 }
