@@ -19,8 +19,6 @@ export default function Article() {
     article && setLoading(false);
   }, [article]);
 
-  if (!article) return null;
-
   return (
     <>
       <NextSeo
