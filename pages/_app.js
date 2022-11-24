@@ -27,10 +27,16 @@ function MyApp({ Component, pageProps }) {
       <StupendousAnalytics site={"topher@stupendousweb.com"} />
       <Provider>
         <DefaultSeo
+          title={
+            "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
+          }
           description="If you want to build community, build a stupendous web app."
           openGraph={{
+            url: "https://stupendousweb.com",
+            title:
+              "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app.",
             description:
-              "I help people with something to share who want to engage with their community by delivering web app development services that improve their brand awareness and authority.",
+              "If you want to build community, build a stupendous web app.",
             images: [
               {
                 url: "https://stupendousweb.com/images/social.jpg",
@@ -38,6 +44,8 @@ function MyApp({ Component, pageProps }) {
                 type: "image/jpeg",
               },
             ],
+            siteName:
+              "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app",
           }}
           twitter={{
             handle: "@stupendousweb",
