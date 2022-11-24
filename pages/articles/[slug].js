@@ -16,13 +16,8 @@ export default function Article() {
 
   useEffect(() => {
     setArticle(articles?.find((article) => article.slug === slug));
-  }, [articles]);
-
-  useEffect(() => {
     article && setLoading(false);
   }, [article]);
-
-  if (!article) return null;
 
   return (
     <>
