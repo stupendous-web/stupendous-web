@@ -12,9 +12,12 @@ export default function Article() {
   const [article, setArticle] = useState();
 
   useEffect(() => {
-    const { slug } = router.query;
-    setArticle(articles?.find((article) => article.slug === slug));
-    article && setLoading(false);
+    if (router.isReady) {
+      setArticle(
+        articles?.find((article) => article.slug === router.query?.slug)
+      );
+      article && setLoading(false);
+    }
   }, [articles, router]);
 
   return (
