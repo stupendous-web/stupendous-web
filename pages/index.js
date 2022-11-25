@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useGlobal } from "../lib/context";
+import { LocalBusinessJsonLd } from "next-seo";
 import "devicon";
 
 import Testimonials from "../components/Testimonials";
@@ -42,6 +43,27 @@ export default function Home() {
 
   return (
     <>
+      <LocalBusinessJsonLd
+        type={"Web Designer"}
+        id={"https://stupendousweb.com"}
+        name={"Stupendous Web App Development Services"}
+        description={
+          "I help people with something to share who want to engage with their community by delivering web app development services that improve their brand awareness and authority."
+        }
+        url={"https://stupendousweb.com"}
+        telephone={"+15109440331"}
+        address={{
+          streetAddress: "2201 Broadway",
+          addressLocality: "Oakland",
+          addressRegion: "CA",
+          postalCode: "94612",
+          addressCountry: "US",
+        }}
+        geo={{
+          latitude: "37.811200",
+          longitude: "-122.267490",
+        }}
+      />
       <div
         className={
           "uk-section uk-section-xlarge uk-flex uk-flex-center uk-flex-middle"
