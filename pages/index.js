@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <>
       <LocalBusinessJsonLd
-        type={"Web Designer"}
+        type={"ProfessionalService"}
         id={"https://stupendousweb.com"}
         name={"Stupendous Web App Development Services"}
         description={
