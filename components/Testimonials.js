@@ -28,47 +28,76 @@ export default function Testimonials() {
   return (
     <>
       <div className={"uk-section uk-section-large"}>
-        <div className={"uk-container"}>
-          <div
-            className={"uk-child-width-1-4@s uk-grid-match"}
-            data-uk-grid={""}
-          >
-            {testimonials.map((testimonial, key) => {
-              return (
-                <div key={key}>
-                  <div className={"uk-inline uk-height-1-1"}>
-                    <h6>{testimonial.name}</h6>
-                    <div>{testimonial.title}</div>
-                    <p
-                      className={
-                        "uk-padding-large uk-padding-remove-horizontal"
-                      }
-                    >
-                      <i>{testimonial.review}</i>
-                    </p>
-                    <div className={"uk-position-bottom"}>
-                      <div className={"uk-flex-middle"} data-uk-grid={""}>
-                        <div className={"uk-width-expand"}>
-                          <p
-                            className={"uk-text-small"}
-                            style={{ color: "#00539a" }}
-                          >
-                            <i className={"ri-star-fill"} />
-                            <i className={"ri-star-fill"} />
-                            <i className={"ri-star-fill"} />
-                            <i className={"ri-star-fill"} />
-                            <i className={"ri-star-fill"} />
-                          </p>
+        <div className={"uk-container uk-container-small"}>
+          <div data-uk-slider={""}>
+            <div className={"uk-position-relative"}>
+              <div className={"uk-slider-container uk-light"}>
+                <ul className={"uk-slider-items uk-child-width-1-2"}>
+                  {testimonials.map((testimonial, key) => {
+                    return (
+                      <li key={key}>
+                        <div className={"uk-inline uk-padding"}>
+                          <div className={"uk-text-bold"}>
+                            {testimonial.name}
+                          </div>
+                          <div>{testimonial.title}</div>
+                          <div className={"uk-margin"}>
+                            {testimonial.review}
+                          </div>
+                          <div className={"uk-margin"}>
+                            <div className={"uk-flex-middle"} data-uk-grid={""}>
+                              <div className={"uk-width-expand"}>
+                                <div
+                                  className={"uk-text-small"}
+                                  style={{ color: "#00539a" }}
+                                >
+                                  <i className={"ri-star-fill"} />
+                                  <i className={"ri-star-fill"} />
+                                  <i className={"ri-star-fill"} />
+                                  <i className={"ri-star-fill"} />
+                                  <i className={"ri-star-fill"} />
+                                </div>
+                              </div>
+                              <div className={"uk-width-auto"}>
+                                <div>5.0</div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div className={"uk-width-auto"}>
-                          <p>5.0</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              <div className={"uk-hidden@s uk-light"}>
+                <a
+                  className={"uk-position-center-left uk-position-small"}
+                  href={"#"}
+                  data-uk-slidenav-previous={""}
+                  data-uk-slider-item={"previous"}
+                />
+                <a
+                  className={"uk-position-center-right uk-position-small"}
+                  href={"#"}
+                  data-uk-slidenav-next={""}
+                  data-uk-slider-item={"next"}
+                />
+              </div>
+              <div className={"uk-visible@s"}>
+                <a
+                  className={"uk-position-center-left-out uk-position-small"}
+                  href={"#"}
+                  data-uk-slidenav-previous={""}
+                  data-uk-slider-item={"previous"}
+                />
+                <a
+                  className={"uk-position-center-right-out uk-position-small"}
+                  href={"#"}
+                  data-uk-slidenav-next={""}
+                  data-uk-slider-item={"next"}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
