@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Image from "next/image";
 import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
@@ -10,10 +9,6 @@ dayjs.extend(calendar);
 
 export default function Article({ article }) {
   const { setIsLoading } = useGlobal();
-
-  useEffect(() => {
-    article && setIsLoading(false);
-  }, [article]);
 
   return (
     <>
@@ -45,6 +40,7 @@ export default function Article({ article }) {
                 alt={article?.title}
                 fill
                 style={{ objectFit: "cover" }}
+                onLoadingComplete={setIsLoading(false)}
               />
             </div>
           )}
