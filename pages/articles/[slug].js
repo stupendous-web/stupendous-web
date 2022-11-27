@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Image from "next/image";
 import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
@@ -39,10 +40,11 @@ export default function Article({ article }) {
         <div className={"uk-container uk-container-small"}>
           {article?.featured_image && (
             <div className={"uk-height-medium uk-width-1-1 uk-cover-container"}>
-              <img
+              <Image
                 src={article?.featured_image}
                 alt={article?.title}
-                data-uk-cover={""}
+                fill
+                style={{ objectFit: "cover" }}
               />
             </div>
           )}
