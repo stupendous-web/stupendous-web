@@ -40,6 +40,7 @@ export default function Article({ article }) {
                 alt={article?.title}
                 fill
                 style={{ objectFit: "cover" }}
+                priority
                 onLoadingComplete={setIsLoading(false)}
               />
             </div>
