@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Image from "next/image";
 import { useGlobal } from "../../lib/context";
 import { NextSeo } from "next-seo";
 
@@ -36,9 +37,11 @@ export default function Articles() {
                       }
                     >
                       <div className={"uk-height-medium uk-cover-container"}>
-                        <img
+                        <Image
                           src={article?.featured_image}
                           alt={article?.title}
+                          fill
+                          style={{ objectFit: "cover" }}
                         />
                       </div>
                     </a>
