@@ -2,12 +2,13 @@ import Image from "next/image";
 import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
-import { NextSeo } from "next-seo";
+import { NextSeo, ArticleJsonLd } from "next-seo";
 import axios from "axios";
 
 dayjs.extend(calendar);
 
 export default function Article({ article }) {
+  console.log(article);
   const { setIsLoading } = useGlobal();
 
   return (
@@ -30,6 +31,22 @@ export default function Article({ article }) {
           ],
           siteName: `${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`,
         }}
+      />
+      <ArticleJsonLd
+        url={`https://stupendousweb.com/articles/${article?.slug}`}
+        title={article?.title}
+        description={article?.excerpt}
+        images={[article?.featured_image]}
+        datePublished={dayjs(article?.date).toDate()}
+        authorName={[
+          {
+            name: "Topher",
+            url: "https://stupendousweb.com",
+          },
+        ]}
+        publisherName={"Stupendous Web"}
+        publisherLogo={"https://stupendousweb.com/images/logo.png"}
+        isAccessibleForFree={true}
       />
       <div className={"uk-section uk-section-xlarge"}>
         <div className={"uk-container uk-container-small"}>
