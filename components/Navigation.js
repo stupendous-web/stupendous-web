@@ -8,32 +8,6 @@ export default function Navigation() {
     { href: "contact", title: "Contact" },
   ];
 
-  const industries = [
-    {
-      title: "Healthcare",
-      icon: "ri-stethoscope-fill",
-      href: "articles/why-you-need-a-web-app-as-a-healthcare-professional",
-    },
-    {
-      title: "Photography",
-      icon: "ri-camera-fill",
-      href: "articles/three-ways-photographers-can-use-online-technology-to-market-themselves",
-    },
-    {
-      title: "Health and Fitness",
-      icon: "ri-heart-fill",
-      href: "articles/how-personal-fitness-trainers-can-use-online-technology-to-market-themselves",
-    },
-    {
-      title: "Business",
-      icon: "ri-briefcase-fill",
-      href: "articles/building-a-custom-web-application-4-ways-your-business-will-benefit",
-    },
-    // { title: "Crypto and NFT's", icon: "ri-bit-coin-fill" },
-    // { title: "Art and Design", icon: "ri-brush-fill" },
-    //{ title: "Social Media Apps", icon: "ri-hashtag" },
-  ];
-
   return (
     <nav
       className={
@@ -46,43 +20,10 @@ export default function Navigation() {
           <div className="uk-inline">
             <div data-uk-dropdown="mode: click"></div>
           </div>
-          <li className={"uk-margin-large-right"}>
-            <a
-              title={
-                "Solutions | Web App Development Services | Stupendous Web"
-              }
-            >
-              Solutions
-            </a>
-            <div data-uk-dropdown={"pos: bottom-center"}>
-              <div
-                className={
-                  "uk-width-xlarge uk-dropdown-grid uk-grid-small uk-child-width-1-2@s"
-                }
-                data-uk-grid={""}
-              >
-                {industries.map((industry, key) => (
-                  <div key={key}>
-                    <p className={"uk-flex uk-flex-middle"}>
-                      <Link href={industry.href} legacyBehavior>
-                        <a title={industry.title}>
-                          <i className={industry.icon} />
-                          <span className={"uk-margin-left"}>
-                            {industry.title}
-                          </span>
-                        </a>
-                      </Link>
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </li>
-
           {links.map((link, key) => {
             return (
               <li
-                className={key < links.length && "uk-margin-large-right"}
+                className={key < links.length - 1 && "uk-margin-large-right"}
                 key={key}
               >
                 <Link href={"/" + link.href} legacyBehavior>

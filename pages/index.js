@@ -41,6 +41,23 @@ export default function Home() {
     "Online Review Apps",
   ];
 
+  const industries = [
+    "Healthcare",
+    "Finance",
+    "Manufacturing",
+    "Retail",
+    "Telecommunication",
+    "Insurance",
+    "Law",
+    "Art and Design",
+    "Crypto and NFT's",
+    "Sustainability",
+    "Marketing and Advertising",
+    "Professional Services",
+    "Logistics",
+    "Much More",
+  ];
+
   return (
     <>
       <LocalBusinessJsonLd
@@ -479,6 +496,28 @@ export default function Home() {
         </div>
       </div>
       <Testimonials />
+      <div className={"uk-section"}>
+        <div className={"uk-container uk-container-small"}>
+          <h6 className={"uk-margin-remove"}>Business</h6>
+          <h2 className={"uk-margin-remove-top"}>Expand your Reach</h2>
+          <p>
+            Do what you do! A web app can be useful in any industry. My web app
+            development services provide people like you with the tools they
+            need to grow their business, reaching existing and new customers and
+            increasing profitability so you can continue to do what you love.
+          </p>
+          <ul className={"uk-list uk-column-1-2@s"}>
+            {industries.map((industry) => {
+              return (
+                <li key={industry}>
+                  <i className="ri-check-fill uk-margin-right" />
+                  {industry}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
       <Blog />
     </>
   );
