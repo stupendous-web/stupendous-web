@@ -37,7 +37,7 @@ export default function Testimonials() {
                     return (
                       <li key={key}>
                         <div className={"uk-inline uk-padding"}>
-                          <div className={"uk-text-bold"}>
+                          <div className={"uk-text-bold uk-text-emphasis"}>
                             {testimonial.name}
                           </div>
                           <div>{testimonial.title}</div>
