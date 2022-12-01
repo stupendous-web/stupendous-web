@@ -5,7 +5,6 @@ const axios = require("axios");
 const nextConfig = {
   reactStrictMode: true,
   siteUrl: "https://stupendousweb.com",
-  generateRobotsTxt: true,
   generateIndexSitemap: false,
   additionalPaths: async () => {
     const result = [];
