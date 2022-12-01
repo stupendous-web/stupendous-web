@@ -2,8 +2,9 @@ import Image from "next/image";
 import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
-import { NextSeo, ArticleJsonLd } from "next-seo";
+import { ArticleJsonLd } from "next-seo";
 import axios from "axios";
+import Head from "next/head";
 
 dayjs.extend(calendar);
 
@@ -12,26 +13,24 @@ export default function Article({ article }) {
 
   return (
     <>
-      <NextSeo
-        title={`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
-        description={
-          "I help people with something to share who want to engage with their community by delivering web app development services that improve their brand awareness and authority."
-        }
-        openGraph={{
-          url: `https://stupendousweb.com/articles/${article?.slug}`,
-          title: `${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`,
-          description:
-            "If you want to build community, build a stupendous web app.",
-          images: [
-            {
-              url: article?.featured_image,
-              alt: article?.title,
-              type: "image/jpeg",
-            },
-          ],
-          siteName: `${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`,
-        }}
-      />
+      <Head>
+        <title>{`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}</title>
+        <description>
+          I help people with something to share who want to engage with their
+          community by delivering web app development services that improve
+          their brand awareness and authority.
+        </description>
+        <meta
+          property={"og:url"}
+          content={`https://stupendousweb.com/articles/${article?.slug}`}
+        />
+        <meta
+          property={"og:title"}
+          content={`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
+        />
+        <meta property={"og:image"} content={article?.featured_image} />
+        <meta property={"og:type"} content={"website    "} />
+      </Head>
       <ArticleJsonLd
         url={`https://stupendousweb.com/articles/${article?.slug}`}
         title={article?.title}
