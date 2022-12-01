@@ -29,7 +29,13 @@ export default function Article({ article }) {
           content={`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
         />
         <meta property={"og:image"} content={article?.featured_image} />
-        <meta property={"og:type"} content={"website    "} />
+        <meta property={"og:type"} content={"website"} />
+        <meta name={"twitter:card"} content={"summary_large_image"} />
+        <meta name={"twitter:site"} content={"@stupendousweb"} />
+        <meta name={"twitter:creator"} content={"@stupendousweb"} />
+        <meta name={"twitter:title"} content={"Something"} />
+        <meta name={"twitter:description"} content={"description"} />
+        <meta name={"twitter:image"} content={article?.featured_image} />
       </Head>
       <ArticleJsonLd
         url={`https://stupendousweb.com/articles/${article?.slug}`}
