@@ -5,6 +5,7 @@ const axios = require("axios");
 const nextConfig = {
   reactStrictMode: true,
   siteUrl: "https://stupendousweb.com",
+  generateRobotsTxt: false,
   generateIndexSitemap: false,
   additionalPaths: async () => {
     const result = [];
@@ -23,7 +24,7 @@ const nextConfig = {
     return result;
   },
   images: {
-    domains: ["wordpress.com"],
+    domains: ["kinwebdesign.files.wordpress.com"],
   },
 };
 
