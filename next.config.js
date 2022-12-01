@@ -24,7 +24,7 @@ const nextConfig = {
     return result;
   },
   images: {
-    domains: ["kinwebdesign.files.wordpress.com"],
+    domains: ["wordpress.com"],
   },
 };
 
