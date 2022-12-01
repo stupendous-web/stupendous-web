@@ -15,11 +15,6 @@ export default function Article({ article }) {
     <>
       <Head>
         <title>{`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}</title>
-        <description>
-          I help people with something to share who want to engage with their
-          community by delivering web app development services that improve
-          their brand awareness and authority.
-        </description>
         <meta
           property={"og:url"}
           content={`https://stupendousweb.com/articles/${article?.slug}`}
@@ -30,11 +25,6 @@ export default function Article({ article }) {
         />
         <meta property={"og:image"} content={article?.featured_image} />
         <meta property={"og:type"} content={"website"} />
-        <meta name={"twitter:card"} content={"summary_large_image"} />
-        <meta name={"twitter:site"} content={"@stupendousweb"} />
-        <meta name={"twitter:creator"} content={"@stupendousweb"} />
-        <meta name={"twitter:title"} content={article?.title} />
-        <meta name={"twitter:image"} content={article?.featured_image} />
       </Head>
       <ArticleJsonLd
         url={`https://stupendousweb.com/articles/${article?.slug}`}
