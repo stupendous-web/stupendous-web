@@ -33,8 +33,7 @@ export default function Article({ article }) {
         <meta name={"twitter:card"} content={"summary_large_image"} />
         <meta name={"twitter:site"} content={"@stupendousweb"} />
         <meta name={"twitter:creator"} content={"@stupendousweb"} />
-        <meta name={"twitter:title"} content={"Something"} />
-        <meta name={"twitter:description"} content={"description"} />
+        <meta name={"twitter:title"} content={article?.title} />
         <meta name={"twitter:image"} content={article?.featured_image} />
       </Head>
       <ArticleJsonLd
