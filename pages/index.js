@@ -490,8 +490,6 @@ export default function Home() {
           <p className={"uk-h2"}>
             <i className={"devicon-react-original uk-margin-right"} />
             <i className={"devicon-nextjs-original uk-margin-right"} />
-            <i className={"devicon-mongodb-plain-wordmark uk-margin-right"} />
-            <i className={"devicon-googlecloud-plain"} />
           </p>
         </div>
       </div>
