@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useGlobal } from "../lib/context";
-import { LocalBusinessJsonLd } from "next-seo";
+import { LocalBusinessJsonLd, NextSeo } from "next-seo";
 import "devicon";
 
 import Testimonials from "../components/Testimonials";
@@ -60,6 +60,35 @@ export default function Home() {
 
   return (
     <>
+      <NextSeo
+        title={
+          "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
+        }
+        description={
+          "I help people with something to share who want to engage with their community by delivering web app development services that improve their brand awareness and authority."
+        }
+        openGraph={{
+          url: "https://stupendousweb.com",
+          title:
+            "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app.",
+          description:
+            "I help people with something to share who want to engage with their community by delivering web app development services that improve their brand awareness and authority.",
+          images: [
+            {
+              url: "https://stupendousweb.com/images/social.jpg",
+              alt: "Web App Development Services",
+              type: "image/jpeg",
+            },
+          ],
+          siteName:
+            "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app",
+        }}
+        twitter={{
+          handle: "@stupendousweb",
+          site: "@stupendousweb",
+          cardType: "summary_large_image",
+        }}
+      />
       <LocalBusinessJsonLd
         type={"ProfessionalService"}
         id={"https://stupendousweb.com"}

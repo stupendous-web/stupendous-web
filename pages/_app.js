@@ -2,7 +2,6 @@ import uikit from "uikit";
 import "../styles/uikit/uikit.css";
 import "remixicon/fonts/remixicon.css";
 import { Provider } from "../lib/context";
-import { DefaultSeo } from "next-seo";
 
 import Navigation from "../components/Navigation";
 import Pride from "../components/Pride";
