@@ -66,11 +66,12 @@ export default function Home() {
           Web App Development Services | Stupendous Web | If you want to build
           community, build a stupendous web app
         </title>
-        <description>
-          I help people with something to share who want to engage with their
-          community by delivering web app development services that improve
-          their brand awareness and authority.
-        </description>
+        <meta
+          name={"description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web app development services that improve their brand awareness and authority."
+          }
+        />
       </Head>
       <LocalBusinessJsonLd
         type={"ProfessionalService"}
