@@ -1,7 +1,7 @@
 import { useEffect } from "react";
+import Head from "next/head";
 import Image from "next/image";
 import { useGlobal } from "../../lib/context";
-import { NextSeo } from "next-seo";
 
 export default function Articles() {
   const { articles, setIsLoading } = useGlobal();
@@ -14,11 +14,9 @@ export default function Articles() {
 
   return (
     <>
-      <NextSeo
-        title={
-          "Articles | Stupendous Web | If you want to build community, build a stupendous web app"
-        }
-      />
+      <Head>
+        <title>Articles | Web App Development Services | Stupendous Web</title>
+      </Head>
       <div className={"uk-section uk-section-xlarge"}>
         <div className={"uk-container uk-container-small"}>
           <div

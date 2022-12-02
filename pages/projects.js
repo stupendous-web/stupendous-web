@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Head from "next/head";
 import { useGlobal } from "../lib/context";
-import { NextSeo } from "next-seo";
 
 import Project from "../components/Project";
+
 import isometric from "../images/isometrics/isometric-1-1.png";
 
 export default function Projects() {
@@ -10,12 +11,9 @@ export default function Projects() {
 
   return (
     <>
-      <NextSeo
-        title={
-          "Projects | Stupendous Web | If you want to build community, build a stupendous web app"
-        }
-      />
-
+      <Head>
+        <title>Projects | Web App Development Services | Stupendous Web</title>
+      </Head>
       <div>
         <div
           className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}

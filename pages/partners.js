@@ -1,6 +1,6 @@
 import { useEffect } from "react";
+import Head from "next/head";
 import { useGlobal } from "../lib/context";
-import { NextSeo } from "next-seo";
 
 export default function Partners() {
   const { setIsLoading } = useGlobal();
@@ -11,11 +11,9 @@ export default function Partners() {
 
   return (
     <>
-      <NextSeo
-        title={
-          "Partners | Stupendous Web | If you want to build community, build a stupendous web app"
-        }
-      />
+      <Head>
+        <title>Partners | Web App Development Services | Stupendous Web</title>
+      </Head>
       <div
         className={"uk-section uk-section-xlarge"}
         data-uk-height-viewport={"offset-bottom: true"}
