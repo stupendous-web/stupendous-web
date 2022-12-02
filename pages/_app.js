@@ -4,6 +4,7 @@ import "remixicon/fonts/remixicon.css";
 import { Provider } from "../lib/context";
 
 import Navigation from "../components/Navigation";
+import Contact from "../components/Contact";
 import Pride from "../components/Pride";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
@@ -29,6 +30,7 @@ function MyApp({ Component, pageProps }) {
         <Pride />
         <Footer />
         <Navigation />
+        <Contact />
         <Menu />
         <Logo />
         <Loading />
