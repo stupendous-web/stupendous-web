@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import Head from "next/head";
 import { useGlobal } from "../lib/context";
 
+import CTA from "../components/CTA";
+
 export default function Partners() {
   const { setIsLoading } = useGlobal();
 
@@ -26,6 +28,7 @@ export default function Partners() {
           </p>
         </div>
       </div>
+      <CTA />
     </>
   );
 }

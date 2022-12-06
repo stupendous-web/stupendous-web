@@ -2,6 +2,8 @@ import Image from "next/image";
 import Head from "next/head";
 import { useGlobal } from "../lib/context";
 
+import CTA from "../components/CTA";
+
 import isometric from "../images/isometrics/isometric-2-2.png";
 
 export default function Services() {
@@ -146,6 +148,7 @@ export default function Services() {
           </div>
         </div>
       </div>
+      <CTA />
     </>
   );
 }

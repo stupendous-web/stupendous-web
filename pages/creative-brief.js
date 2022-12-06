@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import UIkit from "uikit";
+import axios from "axios";
+import Link from "next/link";
 
 import valuesImage from "../public/images/brief/values.jpg";
 import communitiesImage from "../public/images/brief/communities.jpg";
@@ -26,7 +28,7 @@ export default function CreativeBrief() {
       description: (
         <>
           <p>
-            Let’s work through the following slides together to build you a
+            Let’s work through the following sections together to build you a
             stupendous website. Doing this will allow me to have your mission,
             values, product, and objectives always in the back of my head as I
             tinker with the ones and zeros of your new website, web app, or
@@ -148,7 +150,7 @@ export default function CreativeBrief() {
           </p>
           <em>
             What is your number one call to action for this project and are
-            there any other secondary calls to action you’d like to implement?{" "}
+            there any other secondary calls to action you’d like to implement?
           </em>
         </>
       ),
@@ -200,68 +202,109 @@ export default function CreativeBrief() {
   ];
 
   const handleSubmit = () => {
-    alert(
-      name + email + values + communities + product + action + culture + tech
-    );
+    if (!email) {
+      UIkit.notification({
+        message: "Please enter an email address in the introduction section.",
+        status: "warning",
+      });
+    } else {
+      axios
+        .post("/api/send", {
+          name: name,
+          email: email,
+          values: values,
+          communities: communities,
+          product: product,
+          action: action,
+          culture: culture,
+          tech: tech,
+        })
+        .then(() => {
+          UIkit.modal("#success-modal").show();
+        });
+    }
   };
 
   return (
-    <div
-      className={"uk-section uk-section-xlarge"}
-      data-uk-height-viewport={""}
-    >
-      <div className={"uk-container uk-container-small"}>
-        <div data-uk-grid={""}>
-          <div className={"uk-width-auto@s"}>
-            <ul
-              className={"uk-tab-left"}
-              data-uk-tab={
-                "connect: #component-tab-left; animation: uk-animation-fade"
-              }
-              id={"switcher"}
-            >
-              {sections.map((section) => (
-                <li key={section.tab}>
-                  <a href={"#"}>{section.tab}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={"uk-width-expand@s"}>
-            <ul id={"component-tab-left"} className={"uk-switcher"}>
-              {sections.map((section, key) => (
-                <li key={key}>
-                  {section?.image && (
-                    <div className={"uk-margin"}>
-                      <div className={"uk-height-medium uk-cover-container"}>
-                        <Image
-                          src={section?.image}
-                          alt={section?.heading}
-                          style={{ objectFit: "cover" }}
-                          fill
-                        />
+    <>
+      <div
+        className={"uk-section uk-section-xlarge"}
+        data-uk-height-viewport={""}
+      >
+        <div className={"uk-container uk-container-small"}>
+          <div data-uk-grid={""}>
+            <div className={"uk-width-auto@s"}>
+              <ul
+                className={"uk-tab-left"}
+                data-uk-tab={
+                  "connect: #component-tab-left; animation: uk-animation-fade"
+                }
+                id={"switcher"}
+              >
+                {sections.map((section) => (
+                  <li key={section.tab}>
+                    <a href={"#"}>{section.tab}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className={"uk-width-expand@s"}>
+              <ul id={"component-tab-left"} className={"uk-switcher"}>
+                {sections.map((section, key) => (
+                  <li key={key}>
+                    {section?.image && (
+                      <div className={"uk-margin"}>
+                        <div className={"uk-height-medium uk-cover-container"}>
+                          <Image
+                            src={section?.image}
+                            alt={section?.heading}
+                            style={{ objectFit: "cover" }}
+                            fill
+                          />
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  <h2>{section.heading}</h2>
-                  <div className={"uk-margin"}>{section.description}</div>
-                  <div className={"uk-margin"}>{section.inputs}</div>
-                  <a
-                    className={"uk-button uk-button-primary"}
-                    onClick={
-                      key < sections.length - 1
-                        ? () => UIkit.tab("#switcher").show(key + 1)
-                        : () => handleSubmit()
-                    }
-                  >
-                    {key < sections.length - 1 ? "Continue" : "Finish"}
-                  </a>
-                </li>
-              ))}
-            </ul>
+                    )}
+                    <h2>{section.heading}</h2>
+                    <div className={"uk-margin"}>{section.description}</div>
+                    <div className={"uk-margin"}>{section.inputs}</div>
+                    <a
+                      className={"uk-button uk-button-primary"}
+                      onClick={
+                        key < sections.length - 1
+                          ? () => UIkit.tab("#switcher").show(key + 1)
+                          : () => handleSubmit()
+                      }
+                    >
+                      {key < sections.length - 1 ? "Continue" : "Finish"}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <div id={"success-modal"} data-uk-modal={""}>
+        <div className={"uk-modal-dialog uk-modal-body"}>
+          <h2 className={"uk-modal-title"}>Let&apos;s Go!</h2>
+          <p>
+            Your responses were saved. Want more? Schedule the first of your two
+            FREE consultations to review your answers and receive a free PDF
+            version of your creative brief.
+          </p>
+          <Link
+            href={"https://calendly.com/stupendousweb/free-consultation"}
+            legacyBehavior
+          >
+            <a className={"uk-button uk-button-primary uk-margin-right"}>
+              Schedule Yours!
+            </a>
+          </Link>
+          <Link href={"/"} legacyBehavior>
+            <a className={"uk-button uk-button-default"}>Return Home</a>
+          </Link>
+        </div>
+      </div>
+    </>
   );
 }

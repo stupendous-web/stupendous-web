@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { useGlobal } from "../../lib/context";
 
+import CTA from "../../components/CTA";
+
 export default function Articles() {
   const { articles, setIsLoading } = useGlobal();
 
@@ -77,6 +79,7 @@ export default function Articles() {
           </div>
         </div>
       </div>
+      <CTA />
     </>
   );
 }

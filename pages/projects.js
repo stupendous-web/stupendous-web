@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useGlobal } from "../lib/context";
 
 import Project from "../components/Project";
+import CTA from "../components/CTA";
 
 import isometric from "../images/isometrics/isometric-1-1.png";
 
@@ -257,6 +258,7 @@ export default function Projects() {
           </div>
         </div>
       </div>
+      <CTA />
     </>
   );
 }

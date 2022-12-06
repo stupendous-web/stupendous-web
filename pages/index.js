@@ -7,6 +7,7 @@ import "devicon";
 
 import Testimonials from "../components/Testimonials";
 import Blog from "../components/Blog";
+import CTA from "../components/CTA";
 
 import isometric from "../images/isometrics/isometric-1-2.png";
 import analytics from "../images/analytics.jpg";
@@ -107,9 +108,7 @@ export default function Home() {
                 <h1>Web App Development Services</h1>
                 <div className={"uk-flex uk-flex-middle"}>
                   <a
-                    href={
-                      "https://calendly.com/stupendousweb/free-consultation"
-                    }
+                    href={"/creative-brief"}
                     className={
                       "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
                     }
@@ -530,6 +529,7 @@ export default function Home() {
         </div>
       </div>
       <Blog />
+      <CTA />
     </>
   );
 }

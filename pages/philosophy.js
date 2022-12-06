@@ -2,6 +2,8 @@ import Image from "next/image";
 import Head from "next/head";
 import { useGlobal } from "../lib/context";
 
+import CTA from "../components/CTA";
+
 import isometric from "../images/isometrics/isometric-3-1.png";
 
 export default function Philosophy() {
@@ -135,6 +137,7 @@ export default function Philosophy() {
           </div>
         </div>
       </div>
+      <CTA />
     </>
   );
 }

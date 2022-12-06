@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useGlobal } from "../lib/context";
-import CTA from "../components/CTA";
 
 export default function Footer() {
   const links = [
@@ -26,7 +25,6 @@ export default function Footer() {
 
   return (
     <>
-      <CTA />
       <div className={"uk-section uk-section-muted uk-section-xsmall"}>
         <div className={"uk-container uk-container-small uk-text-small"}>
           <div data-uk-grid={""}>

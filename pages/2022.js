@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import Head from "next/head";
 import { useGlobal } from "../lib/context";
 
+import CTA from "../components/CTA";
+
 export default function Review() {
   const { setIsLoading } = useGlobal();
 
@@ -69,6 +71,7 @@ export default function Review() {
           </p>
         </div>
       </div>
+      <CTA />
     </>
   );
 }

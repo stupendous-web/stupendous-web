@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Head from "next/head";
 import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
 import { ArticleJsonLd } from "next-seo";
 import axios from "axios";
-import Head from "next/head";
+
+import CTA from "../../components/CTA";
 
 dayjs.extend(calendar);
 
@@ -66,6 +68,7 @@ export default function Article({ article }) {
           <div dangerouslySetInnerHTML={{ __html: article?.content }} />
         </div>
       </div>
+      <CTA />
     </>
   );
 }
