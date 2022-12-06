@@ -45,8 +45,8 @@ export default function handler(request, response) {
   transorter
     .sendMail(message)
     .then(() => response.send("Good things come to those who wait."))
-    .catch((err) => {
-      console.log(err);
-      response.status(500).send(err);
+    .catch((error) => {
+      console.log(error);
+      response.status(500).send(error);
     });
 }
