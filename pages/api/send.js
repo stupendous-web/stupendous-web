@@ -1,15 +1,23 @@
-import sgMail from "@sendgrid/mail";
+import nodemailer from "nodemailer";
 
 export default function handler(request, response) {
   const body = request?.body;
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  sgMail
-    .send({
-      to: "topher@stupendousweb.com",
-      from: "topher@stupendousweb.com",
-      subject: "New Lead!",
-      text: `
+  let transorter = nodemailer.createTransport({
+    host: "smtp-relay.sendinblue.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: process.env.SENDINBLUE_USER,
+      pass: process.env.SENDINBLUE_PASS,
+    },
+  });
+
+  let message = {
+    from: "topher@stupendousweb.com",
+    to: "topher@stupendousweb.com",
+    subject: "New Lead!",
+    text: `
         Name:
         ${body?.name}
         
@@ -34,11 +42,12 @@ export default function handler(request, response) {
         Tech:
         ${body?.tech}
        `,
-    })
-    .then(() => {
-      return response.send("Good things come to those who wait.");
-    })
-    .catch((error) => {
-      return response.status(500).send(error);
-    });
+  };
+
+  transorter.sendMail(message, (err, info) => {
+    err && console.log(err);
+    info && console.log(info);
+  });
+
+  return response.send("Good things come to those who wait.");
 }
