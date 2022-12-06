@@ -4,9 +4,10 @@ export default function handler(request, response) {
   const body = request?.body;
 
   let transorter = nodemailer.createTransport({
-    host: "smtp-relay.sendinblue.com",
-    port: 465,
-    secure: true,
+    service: "SendinBlue",
+    // host: "smtp-relay.sendinblue.com",
+    // port: 587,
+    // secure: false,
     auth: {
       user: process.env.SENDINBLUE_USER,
       pass: process.env.SENDINBLUE_PASS,
@@ -44,10 +45,11 @@ export default function handler(request, response) {
        `,
   };
 
-  transorter.sendMail(message, (err, info) => {
-    err && console.log(err);
-    info && console.log(info);
-  });
-
-  return response.send("Good things come to those who wait.");
+  transorter
+    .sendMail(message)
+    .then(() => response.send("Good things come to those who wait."))
+    .catch((err) => {
+      console.log(err);
+      response.status(500).send(err);
+    });
 }
