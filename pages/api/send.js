@@ -5,9 +5,6 @@ export default function handler(request, response) {
 
   let transorter = nodemailer.createTransport({
     service: "SendinBlue",
-    // host: "smtp-relay.sendinblue.com",
-    // port: 587,
-    // secure: false,
     auth: {
       user: process.env.SENDINBLUE_USER,
       pass: process.env.SENDINBLUE_PASS,
