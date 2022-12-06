@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import isometric from "/images/isometrics/isometric-1-3-white.png";
 
@@ -19,16 +20,15 @@ class CTA extends React.Component {
               <div>
                 <h2>Access Two FREE Consultations!</h2>
                 <div className={"uk-flex uk-flex-middle"}>
-                  <a
-                    href={
-                      "https://calendly.com/stupendousweb/free-consultation"
-                    }
-                    className={
-                      "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
-                    }
-                  >
-                    Start Yours Now
-                  </a>
+                  <Link href={"/creative-brief"} legacyBehavior>
+                    <a
+                      className={
+                        "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
+                      }
+                    >
+                      Start Yours Now
+                    </a>
+                  </Link>
                   <div className={"uk-text-large"}>
                     <a
                       href={"mailto:topher@stupendousweb.com"}

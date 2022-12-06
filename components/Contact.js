@@ -1,11 +1,6 @@
 export default function Contact() {
   const links = [
     {
-      tooltip: "Book your FREE consultation",
-      href: "https://calendly.com/stupendousweb/free-consultation",
-      icon: "ri-video-chat-fill",
-    },
-    {
       tooltip: "+1 510.944.0331 (Call or Text!)",
       href: "tel:5109440331",
       icon: "ri-phone-fill",

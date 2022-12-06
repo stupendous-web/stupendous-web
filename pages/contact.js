@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from "next/head";
+import Link from "next/link";
 import { useGlobal } from "../lib/context";
 
 import isometric from "../images/isometrics/isometric-2-3.png";
@@ -7,11 +8,11 @@ import isometric from "../images/isometrics/isometric-2-3.png";
 export default function Contact() {
   const { setIsLoading } = useGlobal();
 
-  const links = [
+  const contactLinks = [
     {
-      title: "Book your FREE consultation",
-      href: "https://calendly.com/stupendousweb/free-consultation",
-      icon: "ri-calendar-fill",
+      title: "Start yours Now",
+      href: "/creative-brief",
+      icon: "ri-pencil-fill",
     },
     {
       title: "topher@stupendousweb.com",
@@ -23,8 +24,10 @@ export default function Contact() {
       href: "tel:5109440331",
       icon: "ri-phone-fill",
     },
+  ];
+  const adminLinks = [
     {
-      title: "Client 1-1",
+      title: "1-1",
       href: "https://calendly.com/stupendousweb/client-1-1",
       icon: "ri-vidicon-fill",
     },
@@ -89,13 +92,30 @@ export default function Contact() {
             <div className={"uk-width-1-3@s"} />
             <div className={"uk-width-2-3@s"}>
               <ul className={"uk-list uk-list-divider"}>
-                {links.map((link, key) => {
+                {contactLinks.map((link, key) => {
                   return (
                     <li key={key}>
-                      <a className={"uk-flex uk-flex-middle"} href={link.href}>
-                        <i className={`${link.icon} uk-margin-right`} />
-                        {link.title}
-                      </a>
+                      <Link href={link.href} legacyBehavior>
+                        <a className={"uk-flex uk-flex-middle"}>
+                          <i className={`${link.icon} uk-margin-right`} />
+                          {link.title}
+                        </a>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+              <p>Clients</p>
+              <ul className={"uk-list uk-list-divider"}>
+                {adminLinks.map((link, key) => {
+                  return (
+                    <li key={key}>
+                      <Link href={link.href} legacyBehavior>
+                        <a className={"uk-flex uk-flex-middle"}>
+                          <i className={`${link.icon} uk-margin-right`} />
+                          {link.title}
+                        </a>
+                      </Link>
                     </li>
                   );
                 })}

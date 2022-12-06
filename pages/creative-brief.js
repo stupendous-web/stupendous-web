@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import Head from "next/head";
 import UIkit from "uikit";
 import axios from "axios";
-import Link from "next/link";
 
 import valuesImage from "../public/images/brief/values.jpg";
 import communitiesImage from "../public/images/brief/communities.jpg";
@@ -227,6 +228,11 @@ export default function CreativeBrief() {
 
   return (
     <>
+      <Head>
+        <title>
+          Creative Brief | Web App Development Services | Stupendous Web
+        </title>
+      </Head>
       <div
         className={"uk-section uk-section-xlarge"}
         data-uk-height-viewport={""}

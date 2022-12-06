@@ -107,14 +107,15 @@ export default function Home() {
               <div className={"uk-width-2-3@s"}>
                 <h1>Web App Development Services</h1>
                 <div className={"uk-flex uk-flex-middle"}>
-                  <a
-                    href={"/creative-brief"}
-                    className={
-                      "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
-                    }
-                  >
-                    Start Yours Now
-                  </a>
+                  <Link href={"/creative-brief"} legacyBehavior>
+                    <a
+                      className={
+                        "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
+                      }
+                    >
+                      Start Yours Now
+                    </a>
+                  </Link>
                   <div className={"uk-text-large"}>
                     <a
                       href={"mailto:topher@stupendousweb.com"}
