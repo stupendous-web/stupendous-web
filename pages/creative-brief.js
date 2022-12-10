@@ -29,8 +29,10 @@ export default function CreativeBrief() {
       description: (
         <>
           <p>
-            Let’s work through the following sections together to build you a
-            stupendous website. Doing this will allow me to have your mission,
+            This free tool will help you find your audience, refine your
+            product, and create solutions for your customers. Answer six brief
+            questions and receive your free PDF download and access two free
+            consultations. Doing this will allow me to have your mission,
             values, product, and objectives always in the back of my head as I
             tinker with the ones and zeros of your new website, web app, or
             phone app.
