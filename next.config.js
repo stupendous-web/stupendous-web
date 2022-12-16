@@ -15,7 +15,7 @@ const nextConfig = {
         response.data?.posts?.map((post) => {
           result.push({
             loc: "/articles/" + post.slug,
-            changefreq: "never",
+            changefreq: "daily",
             priority: 0.7,
             lastmod: new Date(post.date).toISOString(),
           });

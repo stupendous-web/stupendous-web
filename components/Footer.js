@@ -10,6 +10,7 @@ export default function Footer() {
     { href: "philosophy", title: "Philosophy" },
     { href: "2022", title: "2022" },
     { href: "partners", title: "Partners" },
+    { href: "nextjs-mentorship", title: "NextJS Mentorship" },
     { href: "articles", title: "Articles" },
   ];
 
