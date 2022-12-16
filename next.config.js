@@ -17,7 +17,7 @@ const nextConfig = {
             loc: "/articles/" + post.slug,
             changefreq: "daily",
             priority: 0.7,
-            lastmod: new Date().toISOString(),
+            lastmod: new Date(post.date).toISOString(),
           });
         });
       });
