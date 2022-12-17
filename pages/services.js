@@ -97,16 +97,43 @@ export default function Services() {
                 technologies, the possibilities are endless, but here are a few
                 things we can build to help you build community:
               </p>
-              <ul className={"uk-list uk-list-disc"}>
-                <li>Websites</li>
-                <li>E-Commerce</li>
-                <li>Web Portals</li>
-                <li>Content Management Systems (CMS)</li>
-                <li>Social Media</li>
-                <li>Discussion Forums</li>
-                <li>Email</li>
-                <li>Chat Rooms</li>
-                <li>Image Editors</li>
+              <ul className={"uk-list"}>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Websites
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  E-Commerce
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Web Portals
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Content Management Systems (CMS)
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Social Media
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Discussion Forums
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Email
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Chat Rooms
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Image Editors
+                </li>
               </ul>
               <h2 id={"Hosting"}>Secure Managed Domain and Hosting</h2>
               <p>
@@ -118,12 +145,27 @@ export default function Services() {
                 take all the dirty work out of launching and maintaining your
                 web application.
               </p>
-              <ul className={"uk-list uk-list-disc"}>
-                <li>Domain Name</li>
-                <li>SSL Certificate</li>
-                <li>Web Hosting</li>
-                <li>SEO</li>
-                <li>Technical Support</li>
+              <ul className={"uk-list"}>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Domain Name
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  SSL Certificate
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Web Hosting
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  SEO
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Technical Support
+                </li>
               </ul>
               <h2 id={"LTS"}>Long Term Support (LTS)</h2>
               <p>
@@ -137,10 +179,17 @@ export default function Services() {
                 your brand unique and desirable even after your web app
                 development services are completed.
               </p>
-              <ul className={"uk-list uk-list-disc"}>
-                <li>Managed domain and hosting</li>
-                <li>Productivity Tools</li>
+              <ul className={"uk-list"}>
                 <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Managed domain and hosting
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Productivity Tools
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
                   1-3 FREE hours of updates a month (Not including new features)
                 </li>
               </ul>
