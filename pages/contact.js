@@ -28,7 +28,7 @@ export default function Contact() {
   const adminLinks = [
     {
       title: "1-1",
-      href: "https://calendly.com/stupendousweb/client-1-1",
+      href: "https://cal.com/stupendousweb/client-1-1",
       icon: "ri-vidicon-fill",
     },
     {

@@ -301,7 +301,7 @@ export default function CreativeBrief() {
             version of your creative brief.
           </p>
           <Link
-            href={"https://calendly.com/stupendousweb/free-consultation"}
+            href={"https://cal.com/stupendousweb/consultation"}
             legacyBehavior
           >
             <a className={"uk-button uk-button-primary uk-margin-right"}>
