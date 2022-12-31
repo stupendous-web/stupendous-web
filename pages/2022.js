@@ -1,74 +1,104 @@
-import { useEffect } from "react";
+import Image from "next/image";
 import Head from "next/head";
 import { useGlobal } from "../lib/context";
 
 import CTA from "../components/CTA";
 
-export default function Review() {
-  const { setIsLoading } = useGlobal();
+import isometric from "../images/isometrics/isometric-2-1.png";
 
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
+export default function Review2022() {
+  const { setIsLoading } = useGlobal();
 
   return (
     <>
       <Head>
-        <title>2022 | Web App Development Services | Stupendous Web</title>
+        <title>
+          2022 Review | Web App Development Services | Stupendous Web
+        </title>
       </Head>
-      <div className={"uk-section uk-section-xlarge"}>
+      <div className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}>
         <div className={"uk-container uk-container-small"}>
-          <h1>2022 Review</h1>
-          <p>
-            I want to make a positive impact just like you. I help elevate
-            communities with website design and digital marketing. In addition
-            to that, every year I assess and try to understand my core values
-            using them to decide where and how to leave a lasting impact. In
-            2022 I&apos;ll be focusing on compassion, tolerance, equality,
-            meaningful work, and authenticity. That&apos;s why every month I
-            will donate 0.1% of my income to The Alameda County Food Bank to
-            help feed those who need food and Out in Tech to help center LGBTQ+
-            voices. Plus I&apos;ll do my part to maintain a sustainable Earth.
-            We&apos;re in this together.
-          </p>
+          <div className={"uk-flex-middle"} data-uk-grid={""}>
+            <div className={"uk-width-1-3@s uk-visible@s"}>
+              <Image
+                src={isometric}
+                alt={"Web App Development Services"}
+                priority
+                onLoadingComplete={setIsLoading(false)}
+              />
+            </div>
+            <div className={"uk-width-2-3@s"}>
+              <p className={"uk-text-justify uk-dropcap monospace"}>
+                At the end of every year I try my best with various tools and
+                methods to assess who I am and my values to better serve myself,
+                my communities, and my clients. Here are some conclusions I drew
+                from 2022.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div className={"uk-section"}>
-        <div className={"uk-container uk-container-expand"}>
-          <p
-            className={"uk-h2 uk-text-uppercase uk-text-center"}
-            data-uk-parallax={"x: 800, -1600"}
+        <div className={"uk-container"}>
+          <h1
+            className={"uk-heading-2xlarge uk-text-right"}
+            data-uk-parallax={"x: 0, -800"}
           >
-            Compassion &middot; Tolerance &middot; Equality &middot; Meaningful
-            Work &middot; Authenticity
-          </p>
+            2022 Review
+          </h1>
         </div>
       </div>
       <div className={"uk-section"}>
         <div className={"uk-container uk-container-small"}>
-          <p>
-            I&apos;ve given away <span className={"uk-text-bold"}>1</span>{" "}
-            community impact scholarships this year
-          </p>
-          <p>
-            I&apos;ve helped <span className={"uk-text-bold"}>4</span> awesome
-            clients reach their goals this year.
-          </p>
-          <p className={"uk-margin-remove-top"}>
-            So far, $14.39 was donated to the Alameda County Food Bank which has
-            helped feed about <span className={"uk-text-bold"}>28</span> people.
-          </p>
-          <p className={"uk-margin-remove-top"}>
-            So far, <span className={"uk-text-bold"}>$14.39</span> was donated
-            to the Out in Tech to help encourage diversity and inclusion in the
-            workplace.
-          </p>
-          <p className={"uk-margin-remove-top"}>
-            Green Geeks has also helped offset{" "}
-            <span className={"uk-text-bold"}>300%</span> of my server&apos;s
-            carbon emissions with clean renewable energy, helping to fight
-            climate change.
-          </p>
+          <div data-uk-grid={""}>
+            <div className={"uk-width-1-3@s"} />
+            <div className={"uk-width-2-3@s"}>
+              <ul className={"uk-list"}>
+                <li>🤝 6 amazing new clients</li>
+                <li>☕ ~1,095 cups of coffee</li>
+              </ul>
+              <p>
+                I ask all my clients what their values are because I think it
+                comes up in what all of us do. According to{" "}
+                <a href={"https://personalvalu.es"} target={"_blank"}>
+                  this test
+                </a>{" "}
+                at the end of 2022 I valued{" "}
+                <i>
+                  meaningful work, tolerance, equality, creativity, and
+                  authenticity
+                </i>
+                . Building web apps makes me happy but when I build something
+                meaningful to someone it gives me true happiness. Building
+                meaningful websites helps my clients create a more diverse and
+                tolerant world through inventiveness.
+              </p>
+              <p>
+                I&apos;m also a mediator, INFP, or at least according to{" "}
+                <a href={"https://www.16personalities.com/"} target={"_blank"}>
+                  Meyer Briggs
+                </a>
+                . I identify as someone who tends to be open-minded and creative
+                while also taking care in what I do.
+              </p>
+              <p>
+                I love working with and connecting with people who want to see
+                their values shine through their projects. My web app
+                development services are centered heavily around this. I&apos;d
+                love to hear about what&apos;s driving you in this new year. We
+                can also connect over music; follow me on{" "}
+                <a
+                  href={
+                    "https://open.spotify.com/user/128910259?si=49165d893098424f"
+                  }
+                  target={"_blank"}
+                >
+                  Spotify
+                </a>{" "}
+                to see what I&apos;ve been listening to. Happy new year!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <CTA />

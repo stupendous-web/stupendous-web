@@ -8,7 +8,7 @@ export default function Footer() {
     { href: "services", title: "Services" },
     { href: "contact", title: "Contact" },
     { href: "philosophy", title: "Philosophy" },
-    { href: "2022", title: "2022" },
+    { href: "2022", title: "2022 Review" },
     { href: "partners", title: "Partners" },
     { href: "nextjs-mentorship", title: "NextJS Mentorship" },
     { href: "articles", title: "Articles" },
