@@ -60,7 +60,11 @@ export default function Review2022() {
               <p>
                 I ask all my clients what their values are because I think it
                 comes up in what all of us do. According to{" "}
-                <a href={"https://personalvalu.es"} target={"_blank"}>
+                <a
+                  href={"https://personalvalu.es"}
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                >
                   this test
                 </a>{" "}
                 at the end of 2022 I valued{" "}
@@ -75,7 +79,11 @@ export default function Review2022() {
               </p>
               <p>
                 I&apos;m also a mediator, INFP, or at least according to{" "}
-                <a href={"https://www.16personalities.com/"} target={"_blank"}>
+                <a
+                  href={"https://www.16personalities.com/"}
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                >
                   Meyer Briggs
                 </a>
                 . I identify as someone who tends to be open-minded and creative
@@ -92,6 +100,7 @@ export default function Review2022() {
                     "https://open.spotify.com/user/128910259?si=49165d893098424f"
                   }
                   target={"_blank"}
+                  rel={"noreferrer"}
                 >
                   Spotify
                 </a>{" "}
