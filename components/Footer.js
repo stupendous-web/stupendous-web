@@ -212,6 +212,7 @@ export default function Footer() {
       new google.maps.Marker({
         position: { lat: 42.9634, lng: -85.6681 },
         map,
+        icon: "https://stupendousweb.com/images/map-marker.png",
       });
       // San Francisco
       new google.maps.Marker({
