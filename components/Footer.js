@@ -218,11 +218,13 @@ export default function Footer() {
       new google.maps.Marker({
         position: { lat: 37.7749, lng: -122.4194 },
         map,
+        icon: "https://stupendousweb.com/images/map-marker.png",
       });
       // Las Vegas
       new google.maps.Marker({
         position: { lat: 36.1716, lng: -115.1391 },
         map,
+        icon: "https://stupendousweb.com/images/map-marker.png",
       });
     });
   }, []);
