@@ -1,20 +1,36 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 import Logo from "./Logo";
 
 export default function Menu() {
+  const [menuButtonClass, setMenuButtonClass] = useState("");
+  const [closeButtonClass, setCloseButtonClass] = useState("uk-hidden");
+  const [backgroundClass, setBackgroundClass] = useState("");
+  const [isometricStyles, setIsometricStyles] = useState([1, 0, 0, 0, 0]);
+  const [menuClass, setMenuClass] = useState("");
+
   const links = [
     { href: "projects", title: "Projects" },
     { href: "about", title: "About" },
     { href: "services", title: "Services" },
     { href: "contact", title: "Contact" },
   ];
-  const [menuButtonClass, setMenuButtonClass] = useState("");
-  const [closeButtonClass, setCloseButtonClass] = useState("uk-hidden");
-  const [backgroundClass, setBackgroundClass] = useState("");
-  const [isometricStyles, setIsometricStyles] = useState([1, 0, 0, 0, 0]);
-  const [menuClass, setMenuClass] = useState("");
+
+  const socialLinks = [
+    {
+      href: "https://www.linkedin.com/in/topherjamesknoll",
+      icon: "ri-linkedin-fill",
+    },
+    { href: "https://instagram.com/stupendousweb_", icon: "ri-instagram-fill" },
+    { href: "https://twitter.com/stupendousweb", icon: "ri-twitter-fill" },
+    { href: "https://facebook.com/stupendousweb", icon: "ri-facebook-fill" },
+    {
+      href: "https://open.spotify.com/user/128910259",
+      icon: "ri-spotify-fill",
+    },
+  ];
 
   const showMenu = () => {
     setBackgroundClass("slide-in-right");
@@ -72,30 +88,14 @@ export default function Menu() {
         >
           <div className={"uk-width-1-1"} data-uk-grid={""}>
             <div className={"uk-width-1-4"}>
-              <ul className={"uk-list"} style={{ marginTop: "9px" }}>
-                <li className={"uk-margin-remove"}>
-                  <a href={"https://www.linkedin.com/in/topherjamesknoll"}>
-                    <i className="ri-linkedin-fill" />
-                  </a>
-                </li>
-                <li className={"uk-margin-remove"}>
-                  <a href={"https://instagram.com/stupendousweb_"}>
-                    {" "}
-                    <i className="ri-instagram-fill" />
-                  </a>
-                </li>
-                <li className={"uk-margin-remove"}>
-                  <a href={"https://twitter.com/stupendousweb"}>
-                    {" "}
-                    <i className="ri-twitter-fill" />
-                  </a>
-                </li>
-                <li className={"uk-margin-remove"}>
-                  <a href={"https://facebook.com/stupendousweb"}>
-                    {" "}
-                    <i className="ri-facebook-fill" />
-                  </a>
-                </li>
+              <ul className={"uk-list"}>
+                {socialLinks?.map((link) => (
+                  <li key={link.href} className={"uk-margin-remove"}>
+                    <Link href={link.href} target={"_blank"}>
+                      <i className={link.icon} />
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className={"uk-width-3-4"}>

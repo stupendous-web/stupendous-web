@@ -16,6 +16,20 @@ export default function Footer() {
     { href: "articles", title: "Articles" },
   ];
 
+  const socialLinks = [
+    {
+      href: "https://www.linkedin.com/in/topherjamesknoll",
+      icon: "ri-linkedin-fill",
+    },
+    { href: "https://instagram.com/stupendousweb_", icon: "ri-instagram-fill" },
+    { href: "https://twitter.com/stupendousweb", icon: "ri-twitter-fill" },
+    { href: "https://facebook.com/stupendousweb", icon: "ri-facebook-fill" },
+    {
+      href: "https://open.spotify.com/user/128910259",
+      icon: "ri-spotify-fill",
+    },
+  ];
+
   const projects = [
     { href: "https://stupendouscms.com", title: "Stupendous CMS" },
     {
@@ -304,28 +318,16 @@ export default function Footer() {
                   </a>
                 </p>
                 <p>
-                  <a
-                    className={"uk-margin-small-right"}
-                    href={"https://www.linkedin.com/in/topherjamesknoll"}
-                  >
-                    <i className="ri-linkedin-fill" />
-                  </a>
-                  <a
-                    className={"uk-margin-small-right"}
-                    href={"https://instagram.com/stupendousweb_"}
-                  >
-                    <i className="ri-instagram-fill" />
-                  </a>
-                  <a
-                    className={"uk-margin-small-right"}
-                    href={"https://twitter.com/stupendousweb"}
-                  >
-                    <i className="ri-twitter-fill" />
-                  </a>
-                  <a href={"https://facebook.com/stupendousweb"}>
-                    {" "}
-                    <i className="ri-facebook-fill" />
-                  </a>
+                  {socialLinks?.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      target={"_blank"}
+                      className={"uk-margin-small-right"}
+                    >
+                      <i className={link.icon} />
+                    </Link>
+                  ))}
                 </p>
                 <div className={"uk-margin uk-text-muted"}>
                   <div>
