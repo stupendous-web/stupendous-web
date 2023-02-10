@@ -24,7 +24,7 @@ export default function Services() {
                 src={isometric}
                 alt={"Web App Development Services"}
                 priority
-                OnLoadingComplete={setIsLoading(false)}
+                onLoadingComplete={() => setIsLoading(false)}
               />
             </div>
             <div className={"uk-width-2-3@s"}>

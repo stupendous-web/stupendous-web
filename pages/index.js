@@ -149,7 +149,7 @@ export default function Home() {
                   src={isometric}
                   alt={"Web App Development Services"}
                   priority
-                  onLoadingComplete={setIsLoading(false)}
+                  onLoadingComplete={() => setIsLoading(false)}
                 />
               </div>
             </div>

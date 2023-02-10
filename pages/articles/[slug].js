@@ -54,7 +54,7 @@ export default function Article({ article }) {
                 fill
                 style={{ objectFit: "cover" }}
                 priority
-                onLoadingComplete={setIsLoading(false)}
+                onLoadingComplete={() => setIsLoading(false)}
               />
             </div>
           )}
