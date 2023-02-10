@@ -322,7 +322,7 @@ export default function Home() {
         <div className={"uk-container uk-container-small"}>
           <div
             className={"uk-position-relative uk-visible-toggle"}
-            tabIndex={"-1"}
+            tabIndex={-1}
             data-uk-slideshow={
               "autoplay: true; autoplay-interval: 5000; pause-on-hover: false"
             }

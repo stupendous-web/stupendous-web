@@ -17,13 +17,15 @@ export default function Navigation() {
     >
       <div className={"uk-navbar-center"}>
         <ul className={"uk-navbar-nav"}>
-          <div className="uk-inline">
+          <div className={"uk-inline"}>
             <div data-uk-dropdown="mode: click"></div>
           </div>
           {links.map((link, key) => {
             return (
               <li
-                className={key < links.length - 1 && "uk-margin-large-right"}
+                className={
+                  key < links.length - 1 ? "uk-margin-large-right" : undefined
+                }
                 key={key}
               >
                 <Link href={"/" + link.href} legacyBehavior>
