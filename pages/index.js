@@ -82,7 +82,7 @@ export default function Home() {
           "I help people with something to share who want to engage with their community by delivering web app development services that improve their brand awareness and authority."
         }
         url={"https://stupendousweb.com"}
-        telephone={"+15109440331"}
+        telephone={"+15108906429"}
         address={{
           streetAddress: "2201 Broadway",
           addressLocality: "Oakland",
@@ -130,7 +130,7 @@ export default function Home() {
                   </div>
                   <div className={"uk-text-large"}>
                     <a
-                      href={"tel:5109440331"}
+                      href={"tel:5108906429"}
                       className={"uk-flex"}
                       data-uk-tooltip={"Call me!"}
                     >

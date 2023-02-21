@@ -1,8 +1,8 @@
 export default function Contact() {
   const links = [
     {
-      tooltip: "+1 510.944.0331 (Call or Text!)",
-      href: "tel:5109440331",
+      tooltip: "+1 510.890.6429 (Call or Text!)",
+      href: "tel:5108906429",
       icon: "ri-phone-fill",
     },
     {

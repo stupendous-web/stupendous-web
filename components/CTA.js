@@ -43,7 +43,7 @@ class CTA extends React.Component {
                   </div>
                   <div className={"uk-text-large"}>
                     <a
-                      href={"tel:5109440331"}
+                      href={"tel:5108906429"}
                       className={"uk-flex"}
                       data-uk-tooltip={"Call me!"}
                     >
