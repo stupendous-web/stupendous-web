@@ -10,9 +10,9 @@ export default function Contact() {
 
   const contactLinks = [
     {
-      title: "Start yours Now",
-      href: "/creative-brief",
-      icon: "ri-pencil-fill",
+      title: "Schedule your FREE consultations",
+      href: "https://cal.com/stupendousweb/consultation",
+      icon: "ri-vidicon-fill",
     },
     {
       title: "topher@stupendousweb.com",

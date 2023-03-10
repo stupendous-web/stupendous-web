@@ -18,18 +18,18 @@ class CTA extends React.Component {
               data-uk-grid={""}
             >
               <div>
-                <h2>Download your FREE Custom Design Brief!</h2>
+                <h2>Your two consultations are now FREE!</h2>
                 <div className={"uk-flex uk-flex-middle"}>
-                  <Link href={"/creative-brief"} legacyBehavior>
+                  <Link
+                    href={"https://cal.com/stupendousweb/consultation"}
+                    legacyBehavior
+                  >
                     <a
                       className={
                         "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
                       }
-                      title={
-                        "Creative Brief | Web App Development Services | Stupendous Web"
-                      }
                     >
-                      Start Yours Now
+                      Get Yours Now
                     </a>
                   </Link>
                   <div className={"uk-text-large"}>
@@ -52,13 +52,13 @@ class CTA extends React.Component {
                   </div>
                 </div>
                 <p>
-                  This free tool will help you find your audience, refine your
-                  product, and create solutions for your customers. After,
-                  receive your free PDF download and two free consultations.
+                  Find your audience, refine your product, and create solutions
+                  for your customers in the first of your two free
+                  consultations.
                 </p>
               </div>
               <div>
-                <Image src={isometric} alt={"Web App Development Services"} />
+                <Image src={isometric} alt={"Software Development Services"} />
               </div>
             </div>
           </div>

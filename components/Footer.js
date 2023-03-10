@@ -258,7 +258,7 @@ export default function Footer() {
                         <a
                           title={
                             link.title +
-                            " | Web App Development Services | Stupendous Web"
+                            " | Software Development Services | Stupendous Web"
                           }
                         >
                           {link.title}
@@ -275,7 +275,7 @@ export default function Footer() {
                         <a
                           title={
                             link.title +
-                            " | Web App Development Services | Stupendous Web"
+                            " | Software Development Services | Stupendous Web"
                           }
                         >
                           {link.title}
@@ -296,7 +296,7 @@ export default function Footer() {
                         <a
                           title={
                             article?.title +
-                            " | Web App Development Services | Stupendous Web"
+                            " | Software Development Services | Stupendous Web"
                           }
                         >
                           {article?.title}
@@ -342,7 +342,7 @@ export default function Footer() {
                     <Link href={"/"} legacyBehavior>
                       <a
                         title={
-                          "Web App Development Services | Stupendous Web | If you want to build community, build a stupendous web app"
+                          "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
                         }
                       >
                         Stupendous Web

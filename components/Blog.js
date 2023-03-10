@@ -12,7 +12,7 @@ export default function Blog() {
             <Link href={"/articles"} legacyBehavior>
               <a
                 title={
-                  "Articles | Web App Development Services | Stupendous Web"
+                  "Articles | Software Development Services | Stupendous Web"
                 }
                 className={"uk-link-reset"}
               >
@@ -28,7 +28,7 @@ export default function Blog() {
                     <a
                       title={
                         article?.title +
-                        " | Web App Development Services | Stupendous Web"
+                        " | Software Development Services | Stupendous Web"
                       }
                     >
                       {article?.title}

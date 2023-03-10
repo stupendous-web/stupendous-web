@@ -32,7 +32,7 @@ export default function Navigation() {
                   <a
                     title={
                       link.title +
-                      " | Web App Development Services | Stupendous Web"
+                      " | Software Development Services | Stupendous Web"
                     }
                   >
                     {link.title}

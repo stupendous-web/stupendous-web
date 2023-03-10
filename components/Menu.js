@@ -111,7 +111,7 @@ export default function Menu() {
                       <a
                         title={
                           link.title +
-                          " | Web App Development Services | Stupendous Web"
+                          " | Software Development Services | Stupendous Web"
                         }
                         onClick={() => {
                           router.push("/" + link.href);
@@ -143,31 +143,31 @@ export default function Menu() {
         <div className={"uk-width-1-1 uk-inline"}>
           <img
             src={"/images/isometrics/isometric-1-1-white.png"}
-            alt={"Web App Development Services"}
+            alt={"Software Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[0] }}
           />
           <img
             src={"/images/isometrics/isometric-1-2-white.png"}
-            alt={"Web App Development Services"}
+            alt={"Software Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[1] }}
           />
           <img
             src={"/images/isometrics/isometric-2-1-white.png"}
-            alt={"Web App Development Services"}
+            alt={"Software Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[2] }}
           />
           <img
             src={"/images/isometrics/isometric-2-2-white.png"}
-            alt={"Web App Development Services"}
+            alt={"Software Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[3] }}
           />
           <img
             src={"/images/isometrics/isometric-2-3-white.png"}
-            alt={"Web App Development Services"}
+            alt={"Software Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[4] }}
           />

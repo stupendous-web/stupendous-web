@@ -64,22 +64,22 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Web App Development Services | Stupendous Web | If you want to build
-          community, build a stupendous web app
+          Software Development Services | Stupendous Web | If you want to build
+          community, build stupendous software
         </title>
         <meta
           name={"description"}
           content={
-            "I help people with something to share who want to engage with their community by delivering web app development services that improve their brand awareness and authority."
+            "I help people with something to share who want to engage with their community by delivering software development services that improve their brand awareness and authority."
           }
         />
       </Head>
       <LocalBusinessJsonLd
         type={"ProfessionalService"}
         id={"https://stupendousweb.com"}
-        name={"Stupendous Web App Development Services"}
+        name={"Stupendous Software Development Services"}
         description={
-          "I help people with something to share who want to engage with their community by delivering web app development services that improve their brand awareness and authority."
+          "I help people with something to share who want to engage with their community by delivering software development services that improve their brand awareness and authority."
         }
         url={"https://stupendousweb.com"}
         telephone={"+15108906429"}
@@ -105,18 +105,18 @@ export default function Home() {
           <div className={"uk-container"}>
             <div className={"uk-flex-middle"} data-uk-grid={""}>
               <div className={"uk-width-2-3@s"}>
-                <h1>Web App Development Services</h1>
+                <h1>Software Development Services</h1>
                 <div className={"uk-flex uk-flex-middle"}>
-                  <Link href={"/creative-brief"} legacyBehavior>
+                  <Link
+                    href={"https://cal.com/stupendousweb/consultation"}
+                    legacyBehavior
+                  >
                     <a
                       className={
                         "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
                       }
-                      title={
-                        "Creative Brief | Web App Development Services | Stupendous Web"
-                      }
                     >
-                      Start Yours Now
+                      Get Yours Now
                     </a>
                   </Link>
                   <div className={"uk-text-large"}>
@@ -140,14 +140,14 @@ export default function Home() {
                 </div>
                 <p>
                   I help people with something to share who want to engage with
-                  their community by delivering web app development services
+                  their community by delivering software development services
                   that improve their brand awareness and authority.
                 </p>
               </div>
               <div className={"uk-width-1-3@s"}>
                 <Image
                   src={isometric}
-                  alt={"Web App Development Services"}
+                  alt={"Software Development Services"}
                   priority
                   onLoadingComplete={() => setIsLoading(false)}
                 />
@@ -159,7 +159,7 @@ export default function Home() {
       <div className={"uk-section uk-section-large"}>
         <div className={"uk-container uk-container-small"}>
           <p className={"uk-h1"}>
-            If you want to build community, build a stupendous web app.
+            If you want to build community, build stupendous software.
           </p>
           <p>
             [topher@stupendous ~]$ <span className={"flash"}>▌</span>
@@ -173,9 +173,9 @@ export default function Home() {
               "uk-width-1-2@s uk-padding-large uk-padding-remove-horizontal"
             }
           >
-            I build engaging web apps. Together we can create you a website,
-            broaden your digital presence, and build stronger internet
-            community.
+            I build engaging software. Together we can create websites and apps,
+            broaden your digital presence, and build stronger digital
+            communities.
           </p>
         </div>
         <div className={"uk-container uk-container-expand"}>
@@ -187,25 +187,25 @@ export default function Home() {
             <div>
               <img
                 src={"/images/projects/pixel-shop.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
             <div>
               <img
                 src={"/images/projects/power-trip-fitness.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
             <div>
               <img
                 src={"/images/projects/rad-training.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
             <div>
               <img
                 src={"/images/projects/security-engineers.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
           </div>
@@ -217,31 +217,31 @@ export default function Home() {
             <div>
               <img
                 src={"/images/projects/brontez-purnell.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
             <div>
               <img
                 src={"/images/projects/denvers-cupid.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
             <div>
               <img
                 src={"/images/projects/deriddle.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
             <div>
               <img
                 src={"/images/projects/grace-avila.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
             <div>
               <img
                 src={"/images/projects/iwannabe-fit.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
           </div>
@@ -253,25 +253,25 @@ export default function Home() {
             <div>
               <img
                 src={"/images/projects/j-fitness.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
             <div>
               <img
                 src={"/images/projects/kendra-hicks.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
             <div>
               <img
                 src={"/images/projects/lp-solutions.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
             <div>
               <img
                 src={"/images/projects/lucky-artists.jpg"}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
               />
             </div>
           </div>
@@ -295,13 +295,13 @@ export default function Home() {
             <li>
               Don&apos;t know what a server is? No problem! Let me take care of
               all the technical work getting you, your brand, and your message
-              online with my web app development services. Your website hosting
+              online with my software development services. Your website hosting
               will be fully managed. Your website will be fast and secure. And,
               best of all, you don&apos;t have to do a thing!.
             </li>
             <li>
               Let&apos;s get this right! We&apos;ll work closely together to
-              make your website perfect as part of my web app development
+              make your website perfect as part of my software development
               services. I&apos;m available via email, phone, video chat, and
               even in person in Oakland. You can email me anytime with your
               required updates and concerns or tell me via a video call.
@@ -311,7 +311,7 @@ export default function Home() {
               Search engine optimization plays an important role in getting your
               product to your audiences. So, let&apos;s keep your website up to
               date with the latest SEO. Your website will be optimized for
-              on-page SEO. My web app development services include pulling all
+              on-page SEO. My software development services include pulling all
               the stops to getting your website to appear correctly in search
               engines like Google. Let&apos;s work some magic!
             </li>
@@ -331,7 +331,7 @@ export default function Home() {
               <li>
                 <img
                   src={"/images/domains/business.jpg"}
-                  alt={"Web App Development Services"}
+                  alt={"Software Development Services"}
                   className={"uk-cover"}
                 />
                 <div
@@ -350,7 +350,7 @@ export default function Home() {
               <li>
                 <img
                   src={"/images/domains/pictures.jpg"}
-                  alt={"Web App Development Services"}
+                  alt={"Software Development Services"}
                   className={"uk-cover"}
                 />
                 <div
@@ -369,7 +369,7 @@ export default function Home() {
               <li>
                 <img
                   src={"/images/domains/org.jpg"}
-                  alt={"Web App Development Services"}
+                  alt={"Software Development Services"}
                   className={"uk-cover"}
                 />
                 <div
@@ -384,7 +384,7 @@ export default function Home() {
               <li>
                 <img
                   src={"/images/domains/fans.jpg"}
-                  alt={"Web App Development Services"}
+                  alt={"Software Development Services"}
                   className={"uk-cover"}
                 />
                 <div
@@ -405,7 +405,7 @@ export default function Home() {
           <h6 className={"uk-margin-remove"}>eCommerce</h6>
           <h2 className={"uk-margin-remove-top"}>Accept Payments</h2>
           <p>
-            Let&apos;s keep your work sustainable. My web app development
+            Let&apos;s keep your work sustainable. My software development
             services integrate with your{" "}
             <a
               href={"https://stripe.com/payments"}
@@ -433,11 +433,11 @@ export default function Home() {
         <div className={"uk-container uk-container-small"}>
           <div data-uk-grid={""}>
             <div className={"uk-width-1-2@s"}>
-              <Image src={cms} alt={"Web App Development Services"} priority />
+              <Image src={cms} alt={"Software Development Services"} priority />
               <h6 className={"uk-margin-remove-bottom"}>CMS</h6>
               <h2 className={"uk-margin-remove-top"}>Publish Content</h2>
               <p>
-                Your content management system is included with your web app
+                Your content management system is included with your software
                 development services. Give your content a fresh new home and
                 easily publish text and media of all kinds through your own
                 dashboard.&nbsp;
@@ -451,13 +451,13 @@ export default function Home() {
             <div className={"uk-width-1-2@s"}>
               <Image
                 src={analytics}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
                 priority
               />
               <h6 className={"uk-margin-remove-bottom"}>Analytics</h6>
               <h2 className={"uk-margin-remove-top"}>Find Customers</h2>
               <p>
-                My custom web app development services come with customized
+                My custom software development services come with customized
                 analytics at no extra charge. Learn more about your current
                 audience and discover new ones with analytics.&nbsp;
                 <Link href={"https://stupendousanalytics.com"} legacyBehavior>
@@ -477,9 +477,9 @@ export default function Home() {
           <p>
             Your web app will excel far past your competitors&apos; static
             websites! With the added power of a database and powerful server
-            technologies your web app development services will be more dynamic.
-            This power [use it wisely] let&apos;s you engage with your audiences
-            in many fun, creative, and profitable ways:
+            technologies your software development services will be more
+            dynamic. This power [use it wisely] let&apos;s you engage with your
+            audiences in many fun, creative, and profitable ways:
           </p>
           <ul className={"uk-list uk-column-1-2@s"}>
             {solutions.map((solution) => {
@@ -497,7 +497,7 @@ export default function Home() {
         <div className={"uk-container uk-container-small"}>
           <p>
             I’m a certified web developer and have many years of experience
-            offering intentional and powerful web app development services. I
+            offering intentional and powerful software development services. I
             can create projects with a combination of HTML, CSS, Sass, Less,
             Bootstrap, UI Kit, Javascript, jQuery, React, NextJS, PHP, Laravel,
             Python, Django, MySQL, MongoDB Atlas, WordPress, Drupal, and many
