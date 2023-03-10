@@ -12,7 +12,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About | Web App Development Services | Stupendous Web</title>
+        <title>About | Software Development Services | Stupendous Web</title>
       </Head>
       <div className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}>
         <div className={"uk-container uk-container-small"}>
@@ -20,7 +20,7 @@ export default function About() {
             <div className={"uk-width-1-3@s uk-visible@s"}>
               <Image
                 src={isometric}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
                 priority
                 onLoadingComplete={() => setIsLoading(false)}
               />
@@ -28,7 +28,7 @@ export default function About() {
             <div className={"uk-width-2-3@s"}>
               <p className={"uk-text-justify uk-dropcap monospace"}>
                 Do you value community, equality, meaningful work, and
-                authenticity? My web app development services help people like
+                authenticity? My software development services help people like
                 you to engage with their audiences and tribes in creative and
                 impactful ways.
               </p>
@@ -54,7 +54,7 @@ export default function About() {
               <div className={"uk-align-left uk-margin-remove-adjacent"}>
                 <img
                   src={"/images/me.png"}
-                  alt={"Web App Development Services"}
+                  alt={"Software Development Services"}
                   className={"uk-border-circle"}
                   height={"100px"}
                   width={"100px"}
@@ -64,7 +64,7 @@ export default function About() {
                 Hello, pioneers. I&apos;m Topher [INFP]. I&apos;m here to help
                 elevate your projects that support community, compassion,
                 tolerance, equality, meaningful work, and authenticity through
-                my custom web app development services. My degree in web
+                my custom software development services. My degree in web
                 application development from CSU, award-winning projects, and
                 years of work experience are all at your disposal.
               </p>
@@ -74,7 +74,7 @@ export default function About() {
                 will make your web app powerful and engaging. Web apps are like
                 tool kits that are hosted online, similar to a website. But most
                 websites are still, inactive, and boring. Your web app will know
-                no limits. My web app development services will add value to
+                no limits. My software development services will add value to
                 your brand.
               </p>
               <h2>Strategy</h2>

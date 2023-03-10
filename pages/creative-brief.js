@@ -232,7 +232,7 @@ export default function CreativeBrief() {
     <>
       <Head>
         <title>
-          Creative Brief | Web App Development Services | Stupendous Web
+          Creative Brief | Software Development Services | Stupendous Web
         </title>
       </Head>
       <div

@@ -34,7 +34,7 @@ export default function Philosophy() {
     <>
       <Head>
         <title>
-          Philosophy | Web App Development Services | Stupendous Web
+          Philosophy | Software Development Services | Stupendous Web
         </title>
       </Head>
       <div className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}>
@@ -43,7 +43,7 @@ export default function Philosophy() {
             <div className={"uk-width-1-3@s uk-visible@s"}>
               <Image
                 src={isometric}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
                 priority
                 onLoadingComplete={() => setIsLoading(false)}
               />

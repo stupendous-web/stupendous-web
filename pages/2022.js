@@ -13,7 +13,7 @@ export default function Review2022() {
     <>
       <Head>
         <title>
-          2022 Review | Web App Development Services | Stupendous Web
+          2022 Review | Software Development Services | Stupendous Web
         </title>
       </Head>
       <div className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}>
@@ -22,7 +22,7 @@ export default function Review2022() {
             <div className={"uk-width-1-3@s uk-visible@s"}>
               <Image
                 src={isometric}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
                 priority
                 onLoadingComplete={() => setIsLoading(false)}
               />

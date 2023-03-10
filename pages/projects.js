@@ -13,7 +13,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects | Web App Development Services | Stupendous Web</title>
+        <title>Projects | Software Development Services | Stupendous Web</title>
       </Head>
       <div>
         <div
@@ -24,7 +24,7 @@ export default function Projects() {
               <div className={"uk-width-1-3@s uk-visible@s"}>
                 <Image
                   src={isometric}
-                  alt={"Web App Development Services"}
+                  alt={"Software Development Services"}
                   priority
                   onLoadingComplete={() => setIsLoading(false)}
                 />
@@ -32,7 +32,7 @@ export default function Projects() {
               <div className={"uk-width-2-3@s"}>
                 <p className={"uk-text-justify uk-dropcap monospace"}>
                   Let&apos;s build better internet community through my custom
-                  web app development services. Look at a few of the certified,
+                  software development services. Look at a few of the certified,
                   award-winning, and engaging web apps I’ve created. These
                   projects helped build my clients stronger brand awareness and
                   authority.
@@ -70,7 +70,7 @@ export default function Projects() {
                     their beautiful, pixel-perfect NFT&apos;s. The Pixel
                     Shop&apos;s dark mode and parallax scenery keeps their
                     visitors interested in not only the website, but their work
-                    for sale. See how my web app development services can keep
+                    for sale. See how my software development services can keep
                     your audiences engaged in you and the interesting work you
                     do.
                   </p>

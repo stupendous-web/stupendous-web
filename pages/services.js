@@ -14,7 +14,7 @@ export default function Services() {
   return (
     <>
       <Head>
-        <title>Services | Web App Development Services | Stupendous Web</title>
+        <title>Services | Software Development Services | Stupendous Web</title>
       </Head>
       <div className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}>
         <div className={"uk-container uk-container-small"}>
@@ -22,7 +22,7 @@ export default function Services() {
             <div className={"uk-width-1-3@s uk-visible@s"}>
               <Image
                 src={isometric}
-                alt={"Web App Development Services"}
+                alt={"Software Development Services"}
                 priority
                 onLoadingComplete={() => setIsLoading(false)}
               />
@@ -87,7 +87,7 @@ export default function Services() {
                 consultations are designed for us to better deliver your product
                 in a more impactful way over the web.
               </p>
-              <h2 id={"Development"}>Web App Development Services</h2>
+              <h2 id={"Development"}>Software Development Services</h2>
               <p>
                 Building a community is probably one of your highest goals. It
                 can be challenging, but the internet is a good place to start. I

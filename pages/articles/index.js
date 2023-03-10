@@ -17,7 +17,7 @@ export default function Articles() {
   return (
     <>
       <Head>
-        <title>Articles | Web App Development Services | Stupendous Web</title>
+        <title>Articles | Software Development Services | Stupendous Web</title>
       </Head>
       <div className={"uk-section uk-section-xlarge"}>
         <div className={"uk-container uk-container-small"}>
@@ -33,7 +33,7 @@ export default function Articles() {
                       href={"/articles/" + article?.slug}
                       title={
                         article?.title +
-                        " | Web App Development Services | Stupendous Web"
+                        " | Software Development Services | Stupendous Web"
                       }
                     >
                       <div className={"uk-height-medium uk-cover-container"}>
@@ -51,7 +51,7 @@ export default function Articles() {
                       href={"/articles/" + article?.slug}
                       title={
                         article?.title +
-                        " | Web App Development Services | Stupendous Web"
+                        " | Software Development Services | Stupendous Web"
                       }
                     >
                       {article?.title}
@@ -67,7 +67,7 @@ export default function Articles() {
                       href={"/articles/" + article?.slug}
                       title={
                         article?.title +
-                        " | Web App Development Services | Stupendous Web"
+                        " | Software Development Services | Stupendous Web"
                       }
                     >
                       Read more.

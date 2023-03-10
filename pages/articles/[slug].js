@@ -16,14 +16,14 @@ export default function Article({ article }) {
   return (
     <>
       <Head>
-        <title>{`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}</title>
+        <title>{`${article?.title} | Software Development Services | Stupendous Web`}</title>
         <meta
           property={"og:url"}
           content={`https://stupendousweb.com/articles/${article?.slug}`}
         />
         <meta
           property={"og:title"}
-          content={`${article?.title} | Stupendous Web | If you want to build community, build a stupendous web app`}
+          content={`${article?.title} | Software Development Services | Stupendous Web`}
         />
         <meta property={"og:image"} content={article?.featured_image} />
         <meta property={"og:type"} content={"website"} />
