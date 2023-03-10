@@ -6,6 +6,7 @@ module.exports = {
   siteUrl: "https://stupendousweb.com",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
+  exclude: ["/creative-brief"],
   additionalPaths: async () => {
     const result = [];
     await axios
