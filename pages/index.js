@@ -10,8 +10,8 @@ import Blog from "../components/Blog";
 import CTA from "../components/CTA";
 
 import isometric from "../images/isometrics/isometric-1-2.png";
-import analytics from "../images/analytics.jpg";
-import cms from "../images/cms.jpg";
+import analytics from "../images/analytics.png";
+import cms from "../images/cms.png";
 
 export default function Home() {
   const { setIsLoading } = useGlobal();
@@ -173,8 +173,8 @@ export default function Home() {
               "uk-width-1-2@s uk-padding-large uk-padding-remove-horizontal"
             }
           >
-            I build engaging software. Together we can create websites and apps,
-            broaden your digital presence, and build stronger digital
+            I build engaging software. Together we can create websites and phone
+            apps, broaden your digital presence, and build stronger digital
             communities.
           </p>
         </div>
@@ -288,32 +288,31 @@ export default function Home() {
               <a href={"#"}>Support</a>
             </li>
             <li>
-              <a href={"#"}>SEO</a>
+              <a href={"#"}>SEO and ASO</a>
             </li>
           </ul>
           <ul className={"uk-switcher"}>
             <li>
-              Don&apos;t know what a server is? No problem! Let me take care of
-              all the technical work getting you, your brand, and your message
-              online with my software development services. Your website hosting
-              will be fully managed. Your website will be fast and secure. And,
-              best of all, you don&apos;t have to do a thing!.
+              I&apos;ll handle the technical work of getting you, your brand,
+              and your message online. I&apos;ll set you up with your managed,
+              fast, and secure website hosting and Google Play and Apple App
+              Store listings as part of my software development services. Sit
+              back, relax, and continue to do the work you love.
             </li>
             <li>
               Let&apos;s get this right! We&apos;ll work closely together to
-              make your website perfect as part of my software development
-              services. I&apos;m available via email, phone, video chat, and
-              even in person in Oakland. You can email me anytime with your
-              required updates and concerns or tell me via a video call.
-              I&apos;m always here.
+              make sure your website and phone app are perfect as part of my
+              software development services. I&apos;m available via email,
+              phone, video chat, and even in person in Las Vegas. You can email
+              me anytime with your required updates and concerns. I&apos;m
+              always here.
             </li>
             <li>
-              Search engine optimization plays an important role in getting your
-              product to your audiences. So, let&apos;s keep your website up to
-              date with the latest SEO. Your website will be optimized for
-              on-page SEO. My software development services include pulling all
-              the stops to getting your website to appear correctly in search
-              engines like Google. Let&apos;s work some magic!
+              Search engine and app store optimization play important roles in
+              getting your product to your audiences. So, let&apos;s keep your
+              website and app up to date with the latest SEO and ASO. My
+              software development services get people to your website and
+              increase your number of app downloads. Let&apos;s work some magic!
             </li>
           </ul>
         </div>
@@ -342,9 +341,7 @@ export default function Home() {
                   <p className={"uk-heading-medium uk-margin-remove"}>
                     .business
                   </p>
-                  <p className={"uk-margin-remove"}>
-                    hello@your-domain.business
-                  </p>
+                  <p className={"uk-margin-remove"}>hello@yourwork.business</p>
                 </div>
               </li>
               <li>
@@ -361,9 +358,7 @@ export default function Home() {
                   <p className={"uk-heading-medium uk-margin-remove"}>
                     .pictures
                   </p>
-                  <p className={"uk-margin-remove"}>
-                    hello@your-domain.pictures
-                  </p>
+                  <p className={"uk-margin-remove"}>hello@yourwork.pictures</p>
                 </div>
               </li>
               <li>
@@ -378,7 +373,7 @@ export default function Home() {
                   }
                 >
                   <p className={"uk-heading-medium uk-margin-remove"}>.org</p>
-                  <p className={"uk-margin-remove"}>hello@your-domain.org</p>
+                  <p className={"uk-margin-remove"}>hello@yourwork.org</p>
                 </div>
               </li>
               <li>
@@ -393,7 +388,7 @@ export default function Home() {
                   }
                 >
                   <p className={"uk-heading-medium uk-margin-remove"}>.fans</p>
-                  <p className={"uk-margin-remove"}>hello@your-domain.fans</p>
+                  <p className={"uk-margin-remove"}>hello@yourwork.fans</p>
                 </div>
               </li>
             </ul>
@@ -424,7 +419,7 @@ export default function Home() {
             >
               Paypal
             </a>{" "}
-            accounts. Let your web app make you money so you can focus on your
+            accounts. Let your software make you money so you can focus on your
             work.
           </p>
         </div>
@@ -437,15 +432,10 @@ export default function Home() {
               <h6 className={"uk-margin-remove-bottom"}>CMS</h6>
               <h2 className={"uk-margin-remove-top"}>Publish Content</h2>
               <p>
-                Your content management system is included with your software
-                development services. Give your content a fresh new home and
-                easily publish text and media of all kinds through your own
-                dashboard.&nbsp;
-                <Link href={"https://stupendouscms.com"} legacyBehavior>
-                  <a title={"Stupendous CMS"} target={"_blank"}>
-                    Learn More
-                  </a>
-                </Link>
+                Managing your website or app text, images, and even videos is
+                easy! My software development services include a content
+                management system. Now you can easily add, update, and remove
+                content at any time.
               </p>
             </div>
             <div className={"uk-width-1-2@s"}>
@@ -457,14 +447,10 @@ export default function Home() {
               <h6 className={"uk-margin-remove-bottom"}>Analytics</h6>
               <h2 className={"uk-margin-remove-top"}>Find Customers</h2>
               <p>
-                My custom software development services come with customized
-                analytics at no extra charge. Learn more about your current
-                audience and discover new ones with analytics.&nbsp;
-                <Link href={"https://stupendousanalytics.com"} legacyBehavior>
-                  <a title={"Stupendous Analytics"} target={"_blank"}>
-                    Learn More
-                  </a>
-                </Link>
+                There are many new people out there waiting to meet you that are
+                very interested in what you do! My software development services
+                come with analytics at now extra charge. Learn more about your
+                current audience while also discovering new ones with analytics.
               </p>
             </div>
           </div>
@@ -472,14 +458,15 @@ export default function Home() {
       </div>
       <div className={"uk-section"}>
         <div className={"uk-container uk-container-small"}>
-          <h6 className={"uk-margin-remove"}>Web Apps</h6>
+          <h6 className={"uk-margin-remove"}>Web and Phone Apps</h6>
           <h2 className={"uk-margin-remove-top"}>Engage with your Audience</h2>
           <p>
-            Your web app will excel far past your competitors&apos; static
-            websites! With the added power of a database and powerful server
-            technologies your software development services will be more
-            dynamic. This power [use it wisely] let&apos;s you engage with your
-            audiences in many fun, creative, and profitable ways:
+            My software development services will excel you and your work far
+            past your competitors and their websites! With the added power of a
+            database and powerful server technologies your web and phone app
+            will be full of useful features. This power [use it wisely]
+            let&apos;s you engage with your audiences in many fun, creative, and
+            profitable ways:
           </p>
           <ul className={"uk-list uk-column-1-2@s"}>
             {solutions.map((solution) => {
@@ -496,12 +483,11 @@ export default function Home() {
       <div className={"uk-section uk-section-large"}>
         <div className={"uk-container uk-container-small"}>
           <p>
-            I’m a certified web developer and have many years of experience
+            I&apos;m a certified web developer and have many years of experience
             offering intentional and powerful software development services. I
-            can create projects with a combination of HTML, CSS, Sass, Less,
-            Bootstrap, UI Kit, Javascript, jQuery, React, NextJS, PHP, Laravel,
-            Python, Django, MySQL, MongoDB Atlas, WordPress, Drupal, and many
-            other tools.
+            can create your tools with a combination of HTML, CSS, Less, UI Kit,
+            Bootstrap, Material UI, Tailwind, Javascript, React, Next.js,
+            jQuery, PHP, Laravel, MySQL, MongoDB, and many other tools.
           </p>
           <p className={"uk-h2"}>
             <i className={"devicon-react-original uk-margin-right"} />
@@ -515,10 +501,11 @@ export default function Home() {
           <h6 className={"uk-margin-remove"}>Business</h6>
           <h2 className={"uk-margin-remove-top"}>Expand your Reach</h2>
           <p>
-            Do what you do! A web app can be useful in any industry. My web app
-            development services provide people like you with the tools they
-            need to grow their business, reaching existing and new customers and
-            increasing profitability so you can continue to do what you love.
+            Do what you do! Web and phone apps can be useful in any industry. My
+            software development services provide people like you with the tools
+            they need to grow their business while reaching existing and new
+            customers and increasing profitability so you can continue to do
+            what you love.
           </p>
           <ul className={"uk-list uk-column-1-2@s"}>
             {industries.map((industry) => {
