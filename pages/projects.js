@@ -31,10 +31,10 @@ export default function Projects() {
               </div>
               <div className={"uk-width-2-3@s"}>
                 <p className={"uk-text-justify uk-dropcap monospace"}>
-                  Let&apos;s build better internet community through my custom
-                  software development services. Look at a few of the certified,
-                  award-winning, and engaging web apps I’ve created. These
-                  projects helped build my clients stronger brand awareness and
+                  Let&apos;s build internet community through my custom software
+                  development services. Look at a few of the certified,
+                  award-winning, and engaging apps I’ve created. They&apos;ve
+                  helped build my clients stronger brand awareness and
                   authority.
                 </p>
               </div>

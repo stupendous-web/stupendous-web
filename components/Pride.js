@@ -7,11 +7,11 @@ export default function Pride() {
       >
         <span
           data-uk-tooltip={
-            "Stupendous Web is gay owned and believes that the most vibrant creativity and impactful problem-solving comes only from diversity!"
+            "Tolerance, equality, creativity, and authenticity show up everywhere in my work. Let me know if it does in yours too!"
           }
           style={{ cursor: "pointer" }}
         >
-          #gayowned&nbsp; 🌈
+          (◍•ᴗ•◍)❤
         </span>
       </div>
     </>

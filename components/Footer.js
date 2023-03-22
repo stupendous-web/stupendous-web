@@ -29,14 +29,6 @@ export default function Footer() {
     },
   ];
 
-  const projects = [
-    { href: "https://stupendouscms.com", title: "Stupendous CMS" },
-    {
-      href: "https://stupendousanalytics.com",
-      title: "Stupendous Analytics",
-    },
-  ];
-
   const { articles } = useGlobal();
 
   const googleMap = useRef();
@@ -254,23 +246,6 @@ export default function Footer() {
                   return (
                     <li key={key}>
                       <Link href={"/" + link.href} legacyBehavior>
-                        <a
-                          title={
-                            link.title +
-                            " | Software Development Services | Stupendous Web"
-                          }
-                        >
-                          {link.title}
-                        </a>
-                      </Link>
-                    </li>
-                  );
-                })}
-                <li className={"uk-nav-header"}>Tools</li>
-                {projects.map((link, key) => {
-                  return (
-                    <li key={key}>
-                      <Link href={link.href} legacyBehavior>
                         <a
                           title={
                             link.title +

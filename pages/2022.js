@@ -72,10 +72,10 @@ export default function Review2022() {
                   meaningful work, tolerance, equality, creativity, and
                   authenticity
                 </i>
-                . Building web apps makes me happy but when I build something
+                . Building software makes me happy but when I build something
                 meaningful to someone it gives me true happiness. Building
-                meaningful websites helps my clients create a more diverse and
-                tolerant world through inventiveness.
+                meaningful web and phone apps helps my clients create a more
+                diverse and tolerant world through inventiveness.
               </p>
               <p>
                 I&apos;m also a mediator, INFP, or at least according to{" "}
@@ -91,7 +91,7 @@ export default function Review2022() {
               </p>
               <p>
                 I love working with and connecting with people who want to see
-                their values shine through their projects. My web app
+                their values shine through their projects. My software
                 development services are centered heavily around this. I&apos;d
                 love to hear about what&apos;s driving you in this new year. We
                 can also connect over music; follow me on{" "}

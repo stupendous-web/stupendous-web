@@ -29,11 +29,10 @@ export default function Services() {
             </div>
             <div className={"uk-width-2-3@s"}>
               <p className={"uk-text-justify uk-dropcap monospace"}>
-                Let&apos;s make it easy for you to meet your goals, build
-                relationships, improve your brand, and get your product out to
-                interested customers. We&apos;ll start by building a
-                revolutionary project. Then we&apos;ll deliver it to your
-                clients and keep it modern and new!
+                My software development services make it easy for you to build
+                your brand and relationships with interested customers by
+                building you a revolutionary project, delivering it to your
+                clients, and keeping it modern and new!
               </p>
             </div>
           </div>
