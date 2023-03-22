@@ -22,6 +22,7 @@ export default function Footer() {
     { href: "https://instagram.com/stupendousweb_", icon: "ri-instagram-fill" },
     { href: "https://twitter.com/stupendousweb", icon: "ri-twitter-fill" },
     { href: "https://facebook.com/stupendousweb", icon: "ri-facebook-fill" },
+    { href: "https://github.com/stupendous-web", icon: "ri-github-fill" },
     {
       href: "https://open.spotify.com/user/128910259",
       icon: "ri-spotify-fill",
