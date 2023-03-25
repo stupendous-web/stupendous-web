@@ -66,32 +66,33 @@ export default function Services() {
                 })}
               </ul>
               <p>
-                Your project is more than just a pretty website. My web app
+                Your project is more than just a pretty website. My software
                 development services are more comprehensive than that. I&apos;m
                 focused on launching a project for you that excels your brand.
-                I&apos;m going to surround myself in your product, build you a
-                top-of-the-line web application that reflects your product, give
-                it a place on the web so your community can find it and connect
-                with you, and maintain the project even after it&apos;s done.
+                I&apos;m going to surround myself in your product, build you
+                top-of-the-line web, iOS, and Android applications that reflect
+                your product, give it a place on the web and on everybody&apos;s
+                phone, so your community can find it and connect with you, and
+                maintain the project even after it&apos;s done.
               </p>
               <h2 id={"Consultation"}>Two FREE Consultations</h2>
               <p>
                 I enjoy offering these consultations at no charge because I
                 believe working closely together is how we build strong
-                communities. I offer two consultations alongside my web app
+                communities. I offer two consultations alongside my software
                 development services. In the first, I&apos;ll get to know you
                 and the value your product is providing your communities. In the
                 second, we&apos;ll make a plan for getting your product in the
-                hands of those who need it most via your web app. These
-                consultations are designed for us to better deliver your product
-                in a more impactful way over the web.
+                hands of those who need it most via your web, iOS, and Android
+                apps. These consultations are designed for us to better deliver
+                your product in a more impactful way.
               </p>
               <h2 id={"Development"}>Software Development Services</h2>
               <p>
                 Building a community is probably one of your highest goals. It
                 can be challenging, but the internet is a good place to start. I
-                can help you engage with your audiences through website and web
-                app development services. We&apos;ll work together to start a
+                can help you engage with your audiences through software
+                development services. We&apos;ll work together to start a
                 project that helps you achieve your goals best. With the latest
                 technologies, the possibilities are endless, but here are a few
                 things we can build to help you build community:
@@ -99,7 +100,7 @@ export default function Services() {
               <ul className={"uk-list"}>
                 <li>
                   <i className="ri-check-fill uk-margin-right" />
-                  Websites
+                  Web Apps
                 </li>
                 <li>
                   <i className="ri-check-fill uk-margin-right" />
@@ -134,15 +135,16 @@ export default function Services() {
                   Image Editors
                 </li>
               </ul>
-              <h2 id={"Hosting"}>Secure Managed Domain and Hosting</h2>
+              <h2 id={"Hosting"}>Secure, Managed Domain and Hosting</h2>
               <p>
                 There are many things that go into getting your project online
                 quickly, safely, and hassle-free. I&apos;m here to help with
                 those too. I&apos;ll setup and manage your domain name, SSL
-                certificates, and on-page SEO. I&apos;m also available for
-                support via text, phone, email, video chat, and more! Let me
-                take all the dirty work out of launching and maintaining your
-                web application.
+                certificates, and on-page SEO. In addition, I will get your iOS
+                and Android apps listed. I&apos;m also available for support via
+                text, phone, email, video chat, and more! Let me take all the
+                dirty work out of launching and maintaining your web, iOS, and
+                Android apps with my software development services.
               </p>
               <ul className={"uk-list"}>
                 <li>
@@ -159,6 +161,14 @@ export default function Services() {
                 </li>
                 <li>
                   <i className="ri-check-fill uk-margin-right" />
+                  Apple App Store Listing
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
+                  Google Play Listing
+                </li>
+                <li>
+                  <i className="ri-check-fill uk-margin-right" />
                   SEO
                 </li>
                 <li>
@@ -168,28 +178,28 @@ export default function Services() {
               </ul>
               <h2 id={"LTS"}>Long Term Support (LTS)</h2>
               <p>
-                Even well-working machines need their oil changed. Web
-                applications are just the same. They will need upgrades and
-                security updates from time to time. You may even want to make
-                minor changes occasionally. I&apos;ll keep your web application
-                up-to-date with the latest technology and safe again security
+                Even well-working machines need their oil changed. Web, iOS, and
+                Android applications are just the same. They will need upgrades
+                and security updates from time to time. You may even want to
+                make minor changes occasionally. I&apos;ll keep your application
+                up-to-date with the latest technology and safe against security
                 breaches. I&apos;ll even make minor updates as needed. Long term
                 support will keep your technology fresh, your data safe, and
-                your brand unique and desirable even after your web app
+                your brand unique and desirable even after your software
                 development services are completed.
               </p>
               <ul className={"uk-list"}>
                 <li>
                   <i className="ri-check-fill uk-margin-right" />
-                  Managed domain and hosting
+                  Essentials to Keeping your Apps Active
                 </li>
                 <li>
                   <i className="ri-check-fill uk-margin-right" />
-                  Productivity Tools
+                  Access to Productivity Tools
                 </li>
                 <li>
                   <i className="ri-check-fill uk-margin-right" />
-                  1-3 FREE hours of updates a month (Not including new features)
+                  1-3 FREE Hours of Updates a Month (Less New Features)
                 </li>
               </ul>
             </div>
