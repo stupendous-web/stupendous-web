@@ -18,7 +18,7 @@ export default function Cursor() {
       setOpacity(0);
     };
     const expandCursor = (event) => {
-      if (event.target.tagName === "A") {
+      if (event.target.closest("a")) {
         setTransform("scale(2)");
       } else {
         setTransform("scale(1)");
