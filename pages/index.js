@@ -9,7 +9,7 @@ import Testimonials from "../components/Testimonials";
 import Blog from "../components/Blog";
 import CTA from "../components/CTA";
 
-import isometric from "../images/isometrics/isometric-1-2.png";
+import mockup from "../images/mockup.png";
 import analytics from "../images/analytics.png";
 import cms from "../images/cms.png";
 
@@ -103,8 +103,11 @@ export default function Home() {
       >
         <div className={"uk-width-1-1"}>
           <div className={"uk-container"}>
-            <div className={"uk-flex-middle"} data-uk-grid={""}>
-              <div className={"uk-width-2-3@s"}>
+            <div
+              className={"uk-child-width-1-2@s uk-flex-middle"}
+              data-uk-grid={""}
+            >
+              <div>
                 <h1>Software Development Services</h1>
                 <div className={"uk-flex uk-flex-middle"}>
                   <Link
@@ -144,9 +147,9 @@ export default function Home() {
                   that improve their brand awareness and authority.
                 </p>
               </div>
-              <div className={"uk-width-1-3@s"}>
+              <div>
                 <Image
-                  src={isometric}
+                  src={mockup}
                   alt={"Software Development Services"}
                   priority
                   onLoadingComplete={() => setIsLoading(false)}
@@ -186,7 +189,7 @@ export default function Home() {
           >
             <div>
               <img
-                src={"/images/projects/pixel-shop.jpg"}
+                src={"/images/projects/denvers-cupid.jpg"}
                 alt={"Software Development Services"}
               />
             </div>
@@ -210,19 +213,13 @@ export default function Home() {
             </div>
           </div>
           <div
-            className={"uk-child-width-1-5 uk-margin-large"}
+            className={"uk-child-width-1-4 uk-margin-large"}
             data-uk-grid={""}
             data-uk-parallax={"x: 50%, -100%"}
           >
             <div>
               <img
                 src={"/images/projects/brontez-purnell.jpg"}
-                alt={"Software Development Services"}
-              />
-            </div>
-            <div>
-              <img
-                src={"/images/projects/denvers-cupid.jpg"}
                 alt={"Software Development Services"}
               />
             </div>
