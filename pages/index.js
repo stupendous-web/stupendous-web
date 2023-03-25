@@ -173,9 +173,9 @@ export default function Home() {
               "uk-width-1-2@s uk-padding-large uk-padding-remove-horizontal"
             }
           >
-            I build engaging software. Together we can create websites and phone
-            apps, broaden your digital presence, and build stronger digital
-            communities.
+            I build engaging software. Together we can create web, iOS, and
+            Android apps, broaden your digital presence, and build stronger
+            digital communities.
           </p>
         </div>
         <div className={"uk-container uk-container-expand"}>
@@ -301,8 +301,8 @@ export default function Home() {
             </li>
             <li>
               Let&apos;s get this right! We&apos;ll work closely together to
-              make sure your website and phone app are perfect as part of my
-              software development services. I&apos;m available via email,
+              make sure your web, iOS, and Android apps are perfect as part of
+              my software development services. I&apos;m available via email,
               phone, video chat, and even in person in Las Vegas. You can email
               me anytime with your required updates and concerns. I&apos;m
               always here.
@@ -310,9 +310,9 @@ export default function Home() {
             <li>
               Search engine and app store optimization play important roles in
               getting your product to your audiences. So, let&apos;s keep your
-              website and app up to date with the latest SEO and ASO. My
-              software development services get people to your website and
-              increase your number of app downloads. Let&apos;s work some magic!
+              web, iOS, and Android apps up to date with the latest SEO and ASO.
+              My software development services get more people to your app.
+              Let&apos;s work some magic!
             </li>
           </ul>
         </div>
@@ -432,10 +432,10 @@ export default function Home() {
               <h6 className={"uk-margin-remove-bottom"}>CMS</h6>
               <h2 className={"uk-margin-remove-top"}>Publish Content</h2>
               <p>
-                Managing your website or app text, images, and even videos is
-                easy! My software development services include a content
-                management system. Now you can easily add, update, and remove
-                content at any time.
+                Managing your web, iOS, and Android app text, images, and even
+                videos is easy! My software development services include a
+                content management system. Now you can easily add, update, and
+                remove content at any time.
               </p>
             </div>
             <div className={"uk-width-1-2@s"}>
@@ -463,7 +463,7 @@ export default function Home() {
           <p>
             My software development services will excel you and your work far
             past your competitors and their websites! With the added power of a
-            database and powerful server technologies your web and phone app
+            database and powerful server technologies, your web and phone apps
             will be full of useful features. This power [use it wisely]
             let&apos;s you engage with your audiences in many fun, creative, and
             profitable ways:

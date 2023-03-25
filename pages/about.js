@@ -62,39 +62,61 @@ export default function About() {
               </div>
               <p>
                 Hello, pioneers. I&apos;m Topher [INFP]. I&apos;m here to help
-                elevate your projects that support community, compassion,
-                tolerance, equality, meaningful work, and authenticity through
-                my custom software development services. My degree in web
-                application development from CSU, award-winning projects, and
-                years of work experience are all at your disposal.
+                elevate your projects that support meaningful work, tolerance,
+                equality, creativity, and authenticity through my custom
+                software development services. My degree in web application
+                development from CSU, award-winning projects, and years of work
+                experience are all at your disposal.
               </p>
-              <h2>What&apos;s a Web App???</h2>
+              <h2>Website or App?</h2>
               <p>
-                Take your product further. Server technology and database access
-                will make your web app powerful and engaging. Web apps are like
-                tool kits that are hosted online, similar to a website. But most
-                websites are still, inactive, and boring. Your web app will know
-                no limits. My software development services will add value to
-                your brand.
+                Your customers need power and utility, and not just another
+                still, inactive, and even boring website. Engaging with your
+                customers means investing in more than just a website. My
+                software development services will bring value to your product
+                via your new web app. Not to be entirely confused with apps on
+                your phone, web apps integrate the latest web technologies with
+                your data to bring your audiences something better than just a
+                landing page. Don&apos;t leave your customers in the dust; give
+                them the latest, greatest, and most value with a sparkly new web
+                app.
+              </p>
+              <h2>iOS and Android</h2>
+              <p>
+                Keep your product at your customers&apos; finger tips. In
+                addition to building something powerful and useful, together we
+                can build something your customers can access easily anywhere in
+                the world. In addition to building for the web, my software
+                development services also include building apps for phones. With
+                the latest technologies we&apos;ll create easier access to you
+                and your brand in the form of a iOS and Android apps. Keep your
+                customer engagement high, increasing your product value, by
+                allowing your customers to take you in their pockets anywhere.
               </p>
               <h2>Strategy</h2>
               <p>
-                Your mission and objectives are at the forefront throughout the
-                entire development process. We&apos;ll look at your values and
-                the communities you serve to fine-tune your product and pitch
-                even before production. Let&apos;s work together to create web
-                app development services that reflect you and your goals.
+                Tell me about your values, the communities your serve, your
+                mission, and your objectives! Better knowing you, your brand,
+                and your product or service creates a stronger and more valuable
+                application. My software development services are focused on and
+                centered around your mission and objectives throughout the
+                entire development process. Before, during, and even after
+                production, we&apos;ll continue to fine-tune your product and
+                pitch. I will ensure your web, iOS, and Android apps embody you
+                and your values boldly and proudly.
               </p>
-              <h2>How Does this Work?</h2>
+              <h2>Process</h2>
               <p>
-                Let&apos;s get you up and running with web app development
-                services in four easy steps. First, schedule your 2 FREE 1-hour
-                consultations. You&apos;ll receive a free creative brief and
-                project plan. We&apos;ll build you a secret website where you
-                can preview our progress anytime. Then when the time is right,
-                we&apos;ll launch it to the web publicly. I&apos;m always here
-                to answer questions, make updates, and be your guide to making
-                this fast, easy, and even fun!
+                Let&apos;s get you up and running with software development
+                services in three easy steps. First, schedule the first of your
+                two FREE 1-hour consultations. After your first consultation,
+                you&apos;ll receive a creative brief and project plan. Secondly,
+                we&apos;ll build you a secret website where you can preview our
+                progress anytime. Then, when the time is right, we&apos;ll
+                launch your apps to the web and app stores publicly. I&apos;m
+                always here to answer questions, maintain your software and make
+                updates to it, and be your guide to making this fast, easy, and
+                even fun!
               </p>
             </div>
           </div>
