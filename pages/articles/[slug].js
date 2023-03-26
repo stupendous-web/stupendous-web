@@ -2,13 +2,13 @@ import Image from "next/image";
 import Head from "next/head";
 import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
-import calendar from "dayjs/plugin/calendar";
+import relativeTime from "dayjs/plugin/relativeTime";
 import { ArticleJsonLd } from "next-seo";
 import axios from "axios";
 
 import CTA from "../../components/CTA";
 
-dayjs.extend(calendar);
+dayjs.extend(relativeTime);
 
 export default function Article({ article }) {
   const { setIsLoading } = useGlobal();
@@ -62,8 +62,10 @@ export default function Article({ article }) {
           <p className={"uk-text-small uk-text-meta"}>
             Published{" "}
             <time dateTime={dayjs(article?.date).format("YYYY-MM-DD")}>
-              {dayjs(article?.date).calendar()}
-            </time>
+              {dayjs(article?.date).from(dayjs())}
+            </time>{" "}
+            &middot; {Math.round(article?.content.split(" ").length / 200)} min
+            read
           </p>
           <div dangerouslySetInnerHTML={{ __html: article?.content }} />
         </div>

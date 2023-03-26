@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["kinwebdesign.files.wordpress.com"],
+    domains: ["kinwebdesign.files.wordpress.com", "2.gravatar.com"],
   },
 };
 
