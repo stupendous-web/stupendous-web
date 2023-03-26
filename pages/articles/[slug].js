@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from "next/head";
+import Link from "next/link";
 import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -58,15 +59,31 @@ export default function Article({ article }) {
               />
             </div>
           )}
-          <h1>{article?.title}</h1>
-          <p className={"uk-text-small uk-text-meta"}>
-            Published{" "}
-            <time dateTime={dayjs(article?.date).format("YYYY-MM-DD")}>
-              {dayjs(article?.date).from(dayjs())}
-            </time>{" "}
-            &middot; {Math.round(article?.content.split(" ").length / 200)} min
-            read
+          <p className={"uk-flex"}>
+            <div>
+              <Image
+                src={article?.author?.avatar_URL}
+                alt={article?.author?.name}
+                height={64}
+                width={64}
+                className={"uk-border-circle uk-margin-small-right"}
+              />
+            </div>
+            <div>
+              <div>
+                <Link href={article?.author?.URL}>{article?.author?.name}</Link>
+              </div>
+              <div className={"uk-text-small uk-text-meta"}>
+                Published{" "}
+                <time dateTime={dayjs(article?.date).format("YYYY-MM-DD")}>
+                  {dayjs(article?.date).from(dayjs())}
+                </time>{" "}
+                &middot; {Math.round(article?.content.split(" ").length / 200)}{" "}
+                min read
+              </div>
+            </div>
           </p>
+          <h1>{article?.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: article?.content }} />
         </div>
       </div>
