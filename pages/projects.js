@@ -54,19 +54,22 @@ export default function Projects() {
         <div className={"uk-section"}>
           <div className={"uk-container uk-container-small"}>
             <div data-uk-grid={""}>
-              <div className={"uk-width-1-3@s"} />
-              <div className={"uk-width-2-3@s"}>
+              <div className={"uk-width-1-1@s"}>
                 <Project
-                  image={"/images/projects/pixel-shop.jpg"}
+                  images={[
+                    "/images/projects/pixel-shop-1.png",
+                    "/images/projects/pixel-shop-2.png",
+                    "/images/projects/pixel-shop-3.png",
+                    "/images/projects/pixel-shop-4.png",
+                  ]}
                   name={"The Pixel Shop"}
                   icons={["devicon-nextjs-plain", "devicon-wordpress-plain"]}
                   style={{ paddingTop: 0 }}
-                  link={"https://thepixelshop.app"}
                 >
                   <p>
                     Because web applications can be dynamic they have the
                     ability to engage with your audiences. The Pixel Shop wanted
-                    to create an emersive world full of narrative that shares
+                    to create an immersive world full of narrative that shares
                     their beautiful, pixel-perfect NFT&apos;s. The Pixel
                     Shop&apos;s dark mode and parallax scenery keeps their
                     visitors interested in not only the website, but their work
@@ -90,7 +93,7 @@ export default function Projects() {
                   </blockquote>
                 </Project>
                 <Project
-                  image={"/images/projects/iwannabe-fit.jpg"}
+                  images={["/images/projects/iwannabe-fit.jpg"]}
                   name={<span>iwannabe&middot;fit</span>}
                   icons={["devicon-laravel-plain", "devicon-react-plain"]}
                 >
@@ -108,10 +111,9 @@ export default function Projects() {
                   </p>
                 </Project>
                 <Project
-                  image={"/images/projects/power-trip-fitness.jpg"}
+                  images={["/images/projects/power-trip-fitness.jpg"]}
                   name={"Power Trip Fitness"}
                   icons={["devicon-nextjs-plain", "devicon-wordpress-plain"]}
-                  link={"https://powertrip.fitness"}
                 >
                   <p>
                     A content management system can help you maintain your own
@@ -128,7 +130,7 @@ export default function Projects() {
                   </p>
                 </Project>
                 <Project
-                  image={"/images/projects/rad-training.jpg"}
+                  images={["/images/projects/rad-training.jpg"]}
                   name={"Rad Dog Training"}
                   icons={["devicon-laravel-plain", "devicon-react-plain"]}
                 >
@@ -161,7 +163,7 @@ export default function Projects() {
                 </Project>
 
                 <Project
-                  image={"/images/projects/kendra-hicks.jpg"}
+                  images={["/images/projects/kendra-hicks.jpg"]}
                   name={"Kendra Hicks"}
                   icons={["devicon-laravel-plain", "devicon-react-plain"]}
                 >
@@ -177,7 +179,7 @@ export default function Projects() {
                   </p>
                 </Project>
                 <Project
-                  image={"/images/projects/grace-avila.jpg"}
+                  images={["/images/projects/grace-avila.jpg"]}
                   name={"Super Natural"}
                   icons={["devicon-wordpress-plain"]}
                 >
@@ -205,7 +207,7 @@ export default function Projects() {
                   </blockquote>
                 </Project>
                 <Project
-                  image={"/images/projects/brontez-purnell.jpg"}
+                  images={["/images/projects/brontez-purnell.jpg"]}
                   name={"Brontez Purnell"}
                   icons={["devicon-nextjs-plain"]}
                 >
@@ -222,7 +224,7 @@ export default function Projects() {
                   </p>
                 </Project>
                 <Project
-                  image={"/images/projects/deriddle.jpg"}
+                  images={["/images/projects/deriddle.jpg"]}
                   name={"Deriddle"}
                   icons={["devicon-laravel-plain", "devicon-react-plain"]}
                 >
@@ -241,7 +243,7 @@ export default function Projects() {
                   </p>
                 </Project>
                 <Project
-                  image={"/images/projects/lucky-artists.jpg"}
+                  images={["/images/projects/lucky-artists.jpg"]}
                   name={"Lucky Artists"}
                   icons={["devicon-nextjs-plain"]}
                 >
