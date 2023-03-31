@@ -38,7 +38,7 @@ export default function Contact() {
     },
     {
       title: "Analytics",
-      href: "https://stupendousanalytics.com",
+      href: "https://analytics.google.com",
       icon: "ri-pie-chart-fill",
     },
     {
