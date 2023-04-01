@@ -13,13 +13,13 @@ import isometric from "../../images/isometrics/isometric-1-2.png";
 dayjs.extend(relativeTime);
 
 export default function Articles() {
-  const { articles, setIsLoading } = useGlobal();
+  const { articles, tags, setIsLoading } = useGlobal();
 
   useEffect(() => {
-    if (!!articles?.length) {
+    if (!!articles?.length && !!tags?.length) {
       setIsLoading(false);
     }
-  }, [articles]);
+  }, [articles, tags]);
 
   return (
     <>
@@ -60,6 +60,19 @@ export default function Articles() {
       </div>
       <div className={"uk-section uk-section-xlarge"}>
         <div className={"uk-container uk-container-small"}>
+          <div className={"uk-margin-large-bottom"}>
+            {tags?.map((tag) => (
+              <Link
+                key={tag.slug}
+                href={`/articles/tags/${tag.slug}`}
+                className={
+                  "uk-button uk-button-secondary uk-button-small uk-margin-small-right"
+                }
+              >
+                {tag.name}
+              </Link>
+            ))}
+          </div>
           {articles?.map((article) => {
             let excerpt = "";
             article?.excerpt
