@@ -60,13 +60,14 @@ export default function Articles() {
       </div>
       <div className={"uk-section uk-section-xlarge"}>
         <div className={"uk-container uk-container-small"}>
-          <div className={"uk-margin-large-bottom"}>
+          <div className={"uk-width-1-2@s uk-margin-large-bottom"}>
             {tags?.map((tag) => (
               <Link
                 key={tag.slug}
                 href={`/articles/tags/${tag.slug}`}
+                title={`${tag.name} | Software Development Services | Stupendous Web`}
                 className={
-                  "uk-button uk-button-secondary uk-button-small uk-margin-small-right"
+                  "uk-button uk-button-secondary uk-button-small uk-margin-small-right uk-margin-small-bottom"
                 }
               >
                 {tag.name}
