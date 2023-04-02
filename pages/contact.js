@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useGlobal } from "../lib/context";
 
 import isometric from "../images/isometrics/isometric-2-3.png";
+import contact from "../images/pages/contact.png";
 
 export default function Contact() {
   const { setIsLoading } = useGlobal();
@@ -91,6 +92,7 @@ export default function Contact() {
           <div data-uk-grid={""}>
             <div className={"uk-width-1-3@s"} />
             <div className={"uk-width-2-3@s"}>
+              <Image src={contact} alt={"Software Development Services"} />
               <ul className={"uk-list uk-list-divider"}>
                 {contactLinks.map((link, key) => {
                   return (

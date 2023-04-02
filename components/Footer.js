@@ -9,7 +9,6 @@ export default function Footer() {
     { href: "about", title: "About" },
     { href: "services", title: "Services" },
     { href: "contact", title: "Contact" },
-    { href: "philosophy", title: "Philosophy" },
     { href: "2022", title: "2022 Review" },
     { href: "articles", title: "Articles" },
   ];

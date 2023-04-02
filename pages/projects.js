@@ -54,7 +54,8 @@ export default function Projects() {
         <div className={"uk-section"}>
           <div className={"uk-container uk-container-small"}>
             <div data-uk-grid={""}>
-              <div className={"uk-width-1-1@s"}>
+              <div className={"uk-width-1-3@s"} />
+              <div className={"uk-width-2-3@s"}>
                 <Project
                   images={[
                     "/images/projects/pixel-shop-1.png",

@@ -5,6 +5,7 @@ import { useGlobal } from "../lib/context";
 import CTA from "../components/CTA";
 
 import isometric from "../images/isometrics/isometric-2-2.png";
+import services from "../images/pages/services.png";
 
 export default function Services() {
   const { setIsLoading } = useGlobal();
@@ -75,6 +76,7 @@ export default function Services() {
                 phone, so your community can find it and connect with you, and
                 maintain the project even after it&apos;s done.
               </p>
+              <Image src={services} alt={"Software Development Services"} />
               <h2 id={"Consultation"}>Two FREE Consultations</h2>
               <p>
                 I enjoy offering these consultations at no charge because I
