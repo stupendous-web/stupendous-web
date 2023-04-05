@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }) {
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
-      <StupendousAnalytics site={"topher@stupendousweb.com"} />
+      <StupendousAnalytics site={"642cf18729b904f37d859011"} />
       <Provider>
         <Component {...pageProps} />
         <Footer />
