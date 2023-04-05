@@ -7,6 +7,7 @@ import "../styles/uikit/uikit.css";
 import "remixicon/fonts/remixicon.css";
 import { Provider } from "../lib/context";
 import * as gtag from "../lib/gtag";
+import StupendousAnalytics from "stupendous-analytics-next";
 
 import Navigation from "../components/Navigation";
 import Contact from "../components/Contact";
@@ -61,6 +62,7 @@ function MyApp({ Component, pageProps }) {
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
+      <StupendousAnalytics site={"topher@stupendousweb.com"} />
       <Provider>
         <Component {...pageProps} />
         <Footer />
