@@ -112,15 +112,11 @@ export default function Home() {
                 <div className={"uk-flex uk-flex-middle"}>
                   <Link
                     href={"https://cal.com/stupendousweb/consultation"}
-                    legacyBehavior
+                    className={
+                      "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
+                    }
                   >
-                    <a
-                      className={
-                        "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
-                      }
-                    >
-                      Get Yours Now
-                    </a>
+                    Get Yours Now
                   </Link>
                   <div className={"uk-text-large"}>
                     <a
@@ -446,8 +442,15 @@ export default function Home() {
               <p>
                 There are many new people out there waiting to meet you that are
                 very interested in what you do! My software development services
-                come with analytics at now extra charge. Learn more about your
-                current audience while also discovering new ones with analytics.
+                come with web analytics at now extra charge. Learn more about
+                your current audience while also discovering new ones with
+                analytics.{" "}
+                <Link
+                  href={"https://stupendousanalytics.com"}
+                  title={"NextJS Website Analytics Dashboard"}
+                >
+                  Learn more
+                </Link>
               </p>
             </div>
           </div>

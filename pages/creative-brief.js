@@ -302,14 +302,12 @@ export default function CreativeBrief() {
           </p>
           <Link
             href={"https://cal.com/stupendousweb/consultation"}
-            legacyBehavior
+            className={"uk-button uk-button-primary uk-margin-right"}
           >
-            <a className={"uk-button uk-button-primary uk-margin-right"}>
-              Schedule Yours!
-            </a>
+            Schedule Yours!
           </Link>
-          <Link href={"/"} legacyBehavior>
-            <a className={"uk-button uk-button-default"}>Return Home</a>
+          <Link href={"/"} className={"uk-button uk-button-default"}>
+            Return Home
           </Link>
         </div>
       </div>

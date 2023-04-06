@@ -22,15 +22,11 @@ class CTA extends React.Component {
                 <div className={"uk-flex uk-flex-middle"}>
                   <Link
                     href={"https://cal.com/stupendousweb/consultation"}
-                    legacyBehavior
+                    className={
+                      "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
+                    }
                   >
-                    <a
-                      className={
-                        "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
-                      }
-                    >
-                      Get Yours Now
-                    </a>
+                    Get Yours Now
                   </Link>
                   <div className={"uk-text-large"}>
                     <a

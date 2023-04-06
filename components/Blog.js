@@ -9,34 +9,30 @@ export default function Blog() {
       <div className={"uk-section uk-section-large"}>
         <div className={"uk-container uk-container-small"}>
           <h3>
-            <Link href={"/articles"} legacyBehavior>
-              <a
-                title={
-                  "Articles | Software Development Services | Stupendous Web"
-                }
-                className={"uk-link-reset"}
-              >
-                Articles
-              </a>
+            <Link
+              href={"/articles"}
+              title={
+                "Articles | Software Development Services | Stupendous Web"
+              }
+              className={"uk-link-reset"}
+            >
+              Articles
             </Link>
           </h3>
           <ul className={"uk-list uk-column-1-2@s"}>
-            {articles?.map((article) => {
-              return (
-                <li key={article?.ID}>
-                  <Link href={"/articles/" + article?.slug} legacyBehavior>
-                    <a
-                      title={
-                        article?.title +
-                        " | Software Development Services | Stupendous Web"
-                      }
-                    >
-                      {article?.title}
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
+            {articles?.map((article) => (
+              <li key={article?.ID}>
+                <Link
+                  href={"/articles/" + article?.slug}
+                  title={
+                    article?.title +
+                    " | Software Development Services | Stupendous Web"
+                  }
+                >
+                  {article?.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

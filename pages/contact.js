@@ -11,39 +11,40 @@ export default function Contact() {
 
   const contactLinks = [
     {
-      title: "Schedule your FREE consultations",
+      anchor: "Schedule your FREE consultations",
       href: "https://cal.com/stupendousweb/consultation",
       icon: "ri-vidicon-fill",
     },
     {
-      title: "topher@stupendousweb.com",
+      anchor: "topher@stupendousweb.com",
       href: "mailto:topher@stupendousweb.com",
       icon: "ri-mail-fill",
     },
     {
-      title: "+1 510.890.6429 (Call or Text!)",
+      anchor: "+1 510.890.6429 (Call or Text!)",
       href: "tel:5108906429",
       icon: "ri-phone-fill",
     },
   ];
   const adminLinks = [
     {
-      title: "1-1",
+      anchor: "1-1",
       href: "https://cal.com/stupendousweb/client-1-1",
       icon: "ri-vidicon-fill",
     },
     {
-      title: "Feature Requests",
+      anchor: "Feature Requests",
       href: "https://stupendousweb.atlassian.net/jira/projects",
       icon: "ri-tools-fill",
     },
     {
-      title: "Analytics",
-      href: "https://analytics.google.com",
+      anchor: "Analytics",
+      title: "NextJS Website Analytics Dashboard",
+      href: "https://stupendousanalytics.com",
       icon: "ri-pie-chart-fill",
     },
     {
-      title: "Content Management",
+      anchor: "Content Management",
       href: "https://wordpress.com",
       icon: "ri-file-text-fill",
     },
@@ -94,33 +95,33 @@ export default function Contact() {
             <div className={"uk-width-2-3@s"}>
               <Image src={contact} alt={"Software Development Services"} />
               <ul className={"uk-list uk-list-divider"}>
-                {contactLinks.map((link, key) => {
-                  return (
-                    <li key={key}>
-                      <Link href={link.href} legacyBehavior>
-                        <a className={"uk-flex uk-flex-middle"}>
-                          <i className={`${link.icon} uk-margin-right`} />
-                          {link.title}
-                        </a>
-                      </Link>
-                    </li>
-                  );
-                })}
+                {contactLinks.map((link, key) => (
+                  <li key={key}>
+                    <Link
+                      href={link.href}
+                      title={link?.title}
+                      className={"uk-flex uk-flex-middle"}
+                    >
+                      <i className={`${link.icon} uk-margin-right`} />
+                      {link.anchor}
+                    </Link>
+                  </li>
+                ))}
               </ul>
               <p>Clients</p>
               <ul className={"uk-list uk-list-divider"}>
-                {adminLinks.map((link, key) => {
-                  return (
-                    <li key={key}>
-                      <Link href={link.href} legacyBehavior>
-                        <a className={"uk-flex uk-flex-middle"}>
-                          <i className={`${link.icon} uk-margin-right`} />
-                          {link.title}
-                        </a>
-                      </Link>
-                    </li>
-                  );
-                })}
+                {adminLinks.map((link, key) => (
+                  <li key={key}>
+                    <Link
+                      href={link.href}
+                      title={link?.title}
+                      className={"uk-flex uk-flex-middle"}
+                    >
+                      <i className={`${link.icon} uk-margin-right`} />
+                      {link.anchor}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

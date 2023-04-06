@@ -20,27 +20,24 @@ export default function Navigation() {
           <div className={"uk-inline"}>
             <div data-uk-dropdown="mode: click"></div>
           </div>
-          {links.map((link, key) => {
-            return (
-              <li
-                className={
-                  key < links.length - 1 ? "uk-margin-large-right" : undefined
+          {links.map((link, key) => (
+            <li
+              className={
+                key < links.length - 1 ? "uk-margin-large-right" : undefined
+              }
+              key={key}
+            >
+              <Link
+                href={"/" + link.href}
+                title={
+                  link.title +
+                  " | Software Development Services | Stupendous Web"
                 }
-                key={key}
               >
-                <Link href={"/" + link.href} legacyBehavior>
-                  <a
-                    title={
-                      link.title +
-                      " | Software Development Services | Stupendous Web"
-                    }
-                  >
-                    {link.title}
-                  </a>
-                </Link>
-              </li>
-            );
-          })}
+                {link.title}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

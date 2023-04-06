@@ -241,43 +241,48 @@ export default function Footer() {
             <div className={"uk-width-1-4@s"}>
               <ul className={"uk-nav uk-nav-default"}>
                 <li className={"uk-nav-header"}>Resources</li>
-                {links.map((link, key) => {
-                  return (
-                    <li key={key}>
-                      <Link href={"/" + link.href} legacyBehavior>
-                        <a
-                          title={
-                            link.title +
-                            " | Software Development Services | Stupendous Web"
-                          }
-                        >
-                          {link.title}
-                        </a>
-                      </Link>
-                    </li>
-                  );
-                })}
+                {links.map((link, key) => (
+                  <li key={key}>
+                    <Link
+                      href={"/" + link.href}
+                      title={
+                        link.title +
+                        " | Software Development Services | Stupendous Web"
+                      }
+                    >
+                      {link.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className={"uk-nav uk-nav-default"}>
+                <li className={"uk-nav-header"}>Tools</li>
+                <li>
+                  <Link
+                    href={"https://stupendousanalytics.com"}
+                    title={"NextJS Website Analytics Dashboard"}
+                  >
+                    Stupendous Analytics
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className={"uk-width-1-4@s"}>
               <ul className={"uk-nav uk-nav-default"}>
                 <li className={"uk-nav-header"}>Recent</li>
-                {articles?.slice(0, 4).map((article) => {
-                  return (
-                    <li key={article?.ID}>
-                      <Link href={"/articles/" + article?.slug} legacyBehavior>
-                        <a
-                          title={
-                            article?.title +
-                            " | Software Development Services | Stupendous Web"
-                          }
-                        >
-                          {article?.title}
-                        </a>
-                      </Link>
-                    </li>
-                  );
-                })}
+                {articles?.slice(0, 5).map((article) => (
+                  <li key={article?.ID}>
+                    <Link
+                      href={"/articles/" + article?.slug}
+                      title={
+                        article?.title +
+                        " | Software Development Services | Stupendous Web"
+                      }
+                    >
+                      {article?.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className={"uk-width-1-2@s uk-flex-middle"}>
@@ -312,14 +317,13 @@ export default function Footer() {
                 <div className={"uk-margin uk-text-muted"}>
                   <div>
                     &copy; Copyright{" "}
-                    <Link href={"/"} legacyBehavior>
-                      <a
-                        title={
-                          "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
-                        }
-                      >
-                        Stupendous Web
-                      </a>
+                    <Link
+                      href={"/"}
+                      title={
+                        "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
+                      }
+                    >
+                      Stupendous Web
                     </Link>{" "}
                     2022. All rights reserved.
                   </div>
