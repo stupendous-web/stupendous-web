@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useGlobal } from "../lib/context";
 
 export default function Navigation() {
+  const { services } = useGlobal();
   const links = [
     { href: "projects", title: "Projects" },
     { href: "about", title: "About" },
@@ -36,6 +38,25 @@ export default function Navigation() {
               >
                 {link.title}
               </Link>
+              {link.title === "Services" && (
+                <div data-uk-dropdown={""}>
+                  <ul className={"uk-nav uk-dropdown-nav"}>
+                    {services.map((service) => (
+                      <li key={service.target}>
+                        <Link
+                          href={`/services#${service.target}`}
+                          title={
+                            service.longTitle +
+                            " | Software Development Services | Stupendous Web"
+                          }
+                        >
+                          {service.shortTitle}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </li>
           ))}
         </ul>

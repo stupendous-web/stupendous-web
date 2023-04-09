@@ -2,15 +2,14 @@ import Image from "next/image";
 import Head from "next/head";
 import { useGlobal } from "../lib/context";
 
+import List from "../components/List";
 import CTA from "../components/CTA";
 
 import isometric from "../images/isometrics/isometric-2-2.png";
-import services from "../images/pages/services.png";
+import servicesImage from "../images/pages/services.png";
 
 export default function Services() {
-  const { setIsLoading } = useGlobal();
-
-  const sections = ["Consultation", "Development", "Hosting", "LTS"];
+  const { setIsLoading, services } = useGlobal();
 
   return (
     <>
@@ -58,10 +57,10 @@ export default function Services() {
                 className={"uk-subnav uk-margin-large"}
                 data-uk-scrollspy-nav={"scroll: true; offset: 36"}
               >
-                {sections.map((section, key) => {
+                {services.map((service) => {
                   return (
-                    <li key={key}>
-                      <a href={"#" + section}>{section}</a>
+                    <li key={service.target}>
+                      <a href={"#" + service.target}>{service.shortTitle}</a>
                     </li>
                   );
                 })}
@@ -76,8 +75,73 @@ export default function Services() {
                 phone, so your community can find it and connect with you, and
                 maintain the project even after it&apos;s done.
               </p>
-              <Image src={services} alt={"Software Development Services"} />
-              <h2 id={"Consultation"}>Two FREE Consultations</h2>
+              <h2 id={"websites"}>Web Pages and Web Apps</h2>
+              <p>
+                A website or even a web app is still a must-have. It is my
+                pleasure to build people with strong purpose in life websites
+                that help them meet their goals. That&apos;s why my software
+                development services include building you a website or web app.
+                A website is just the beginning, but the internet is still a
+                powerful community to share your work in. Your website or web
+                app will bring awareness and authority to you, your business,
+                and what you do.
+              </p>
+              <List
+                items={[
+                  "Brand Awareness",
+                  "Products and Services Pages",
+                  "Contact Forms",
+                  "SEO Content",
+                  "Blogs",
+                  "CMS",
+                  "E-Commerce",
+                  "Help Desks",
+                  "CRM",
+                  "Discussion Forms",
+                  "Chat Rooms",
+                  "Image Editors",
+                ]}
+              />
+              <h2 id={"ios-and-android-apps"}>iOS and Android Apps</h2>
+              <p>
+                Bring the hard work you do to everyone&apos;s pocket. Your
+                life&apos;s work, products, services, and ideas can be
+                accessible all day every day via a phone app. That&apos;s why my
+                software development services also include iOS and Android app
+                development. Your iOS and Android apps will be about your, your
+                brand, and what you do and make them all more accessible to new
+                and existing audiences. With phone apps we will easily connect
+                you and what you do with more people.
+              </p>
+              <List
+                items={[
+                  "Social Media",
+                  "Instant Messaging",
+                  "Contact Forms",
+                  "Photography",
+                  "Music and Audio",
+                  "Email",
+                  "Maps",
+                  "Health",
+                  "Dating",
+                  "Shopping",
+                  "Banking",
+                  "Smart Home",
+                  "Security",
+                  "Weather",
+                  "Astronomy",
+                  "File Sharing",
+                  "eBooks",
+                  "Astrology",
+                  "Finance",
+                ]}
+              />
+              <Image
+                src={servicesImage}
+                alt={"Software Development Services"}
+                id={"consulting"}
+              />
+              <h2>Two FREE Consultations</h2>
               <p>
                 I enjoy offering these consultations at no charge because I
                 believe working closely together is how we build strong
@@ -89,55 +153,19 @@ export default function Services() {
                 apps. These consultations are designed for us to better deliver
                 your product in a more impactful way.
               </p>
-              <h2 id={"Development"}>Software Development Services</h2>
+              <h2 id={"software-development"}>Software Development</h2>
               <p>
-                Building a community is probably one of your highest goals. It
-                can be challenging, but the internet is a good place to start. I
-                can help you engage with your audiences through software
-                development services. We&apos;ll work together to start a
-                project that helps you achieve your goals best. With the latest
-                technologies, the possibilities are endless, but here are a few
-                things we can build to help you build community:
+                Are you and your product tapping into all the available channels
+                these days? The web has extended well beyond computer screens
+                and into the air waves. My software development services put you
+                on the internet <em>and</em> on people&apos;s smart phones. Both
+                of these communities are vital to what you do. Engage with your
+                community, audiences, and people who love and need your product
+                the most with a website and iOS/Android app.
               </p>
-              <ul className={"uk-list"}>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Web Apps
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  E-Commerce
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Web Portals
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Content Management Systems (CMS)
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Social Media
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Discussion Forums
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Email
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Chat Rooms
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Image Editors
-                </li>
-              </ul>
-              <h2 id={"Hosting"}>Secure, Managed Domain and Hosting</h2>
+              <h2 id={"secure-managed-domain-and-hosting"}>
+                Secure, Managed Domain and Hosting
+              </h2>
               <p>
                 There are many things that go into getting your project online
                 quickly, safely, and hassle-free. I&apos;m here to help with
@@ -148,37 +176,18 @@ export default function Services() {
                 dirty work out of launching and maintaining your web, iOS, and
                 Android apps with my software development services.
               </p>
-              <ul className={"uk-list"}>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Domain Name
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  SSL Certificate
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Web Hosting
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Apple App Store Listing
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Google Play Listing
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  SEO
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Technical Support
-                </li>
-              </ul>
-              <h2 id={"LTS"}>Long Term Support (LTS)</h2>
+              <List
+                items={[
+                  "Domain Name",
+                  "SSL Certificate",
+                  "Web Hosting",
+                  "Apple App Store Listing",
+                  "Google Play Listing",
+                  "SEO",
+                  "Technical Support",
+                ]}
+              />
+              <h2 id={"long-term-support"}>Long Term Support (LTS)</h2>
               <p>
                 Even well-working machines need their oil changed. Web, iOS, and
                 Android applications are just the same. They will need upgrades
@@ -190,20 +199,14 @@ export default function Services() {
                 your brand unique and desirable even after your software
                 development services are completed.
               </p>
-              <ul className={"uk-list"}>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Essentials to Keeping your Apps Active
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  Access to Productivity Tools
-                </li>
-                <li>
-                  <i className="ri-check-fill uk-margin-right" />
-                  1-3 FREE Hours of Updates a Month (Less New Features)
-                </li>
-              </ul>
+              <List
+                items={[
+                  "Essentials to Keeping your Apps Active",
+                  "Access to Productivity Tools",
+                  "1-3 FREE Hours of Updates a Month (Minus New Features)",
+                ]}
+                singleColumn
+              />
             </div>
           </div>
         </div>
