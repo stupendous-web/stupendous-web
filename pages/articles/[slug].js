@@ -92,16 +92,26 @@ export default function Article({ article }) {
   );
 }
 
-export async function getServerSideProps({ query }) {
-  const article = await axios
-    .get(
-      `https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts/slug:${query?.slug}`
-    )
-    .then((response) => response.data);
+export async function getStaticPaths() {
+  const { data } = await axios.get(
+    `https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts`
+  );
+  const paths = data?.posts?.map((post) => ({
+    params: { slug: post.slug },
+  }));
+
+  return { paths, fallback: "blocking" };
+}
+
+export async function getStaticProps({ params }) {
+  const { data } = await axios.get(
+    `https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts/slug:${params.slug}`
+  );
 
   return {
     props: {
-      article: article,
+      article: data,
     },
+    revalidate: 10,
   };
 }
