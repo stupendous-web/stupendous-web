@@ -1,9 +1,6 @@
 import Link from "next/link";
-import { useGlobal } from "../lib/context";
 
-export default function Blog() {
-  const { articles } = useGlobal();
-
+export default function Blog({ articles }) {
   return (
     <>
       <div className={"uk-section uk-section-large"}>

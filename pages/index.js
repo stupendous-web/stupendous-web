@@ -2,6 +2,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import { useGlobal } from "../lib/context";
+import axios from "axios";
 import { LocalBusinessJsonLd } from "next-seo";
 import "devicon";
 
@@ -13,7 +14,7 @@ import mockup from "../images/mockup.png";
 import analytics from "../images/analytics.png";
 import cms from "../images/cms.png";
 
-export default function Home() {
+export default function Home({ articles }) {
   const { setIsLoading } = useGlobal();
 
   const solutions = [
@@ -519,8 +520,23 @@ export default function Home() {
           </ul>
         </div>
       </div>
-      <Blog />
+      <Blog articles={articles} />
       <CTA />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const posts = (
+    await axios.get(
+      "https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts"
+    )
+  ).data?.posts;
+
+  return {
+    props: {
+      articles: posts,
+    },
+    revalidate: 10,
+  };
 }
