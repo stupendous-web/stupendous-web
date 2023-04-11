@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useGlobal } from "../../../lib/context";
+import axios from "axios";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
@@ -13,8 +14,8 @@ import isometric from "../../../images/isometrics/isometric-1-2.png";
 
 dayjs.extend(relativeTime);
 
-export default function Articles() {
-  const { articles, setIsLoading } = useGlobal();
+export default function Articles({ articles }) {
+  const { setIsLoading } = useGlobal();
   const router = useRouter();
   const tag = `${router.query?.tag
     ?.charAt(0)
@@ -151,4 +152,32 @@ export default function Articles() {
       <CTA />
     </>
   );
+}
+
+export async function getStaticPaths() {
+  const tags = (
+    await axios.get(
+      "https://public-api.wordpress.com/rest/v1.1/sites/67222684/tags"
+    )
+  ).data?.tags;
+  const paths = tags?.map((tag) => ({
+    params: { tag: tag.slug },
+  }));
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps() {
+  const posts = (
+    await axios.get(
+      "https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts"
+    )
+  ).data?.posts;
+
+  return {
+    props: {
+      articles: posts,
+    },
+    revalidate: 10,
+  };
 }

@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useGlobal } from "../../lib/context";
+import axios from "axios";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
@@ -12,8 +13,8 @@ import isometric from "../../images/isometrics/isometric-1-2.png";
 
 dayjs.extend(relativeTime);
 
-export default function Articles() {
-  const { articles, tags, setIsLoading } = useGlobal();
+export default function Articles({ articles, tags }) {
+  const { setIsLoading } = useGlobal();
 
   useEffect(() => {
     if (!!articles?.length && !!tags?.length) {
@@ -156,4 +157,26 @@ export default function Articles() {
       <CTA />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const posts = (
+    await axios.get(
+      "https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts"
+    )
+  ).data?.posts;
+
+  const tags = (
+    await axios.get(
+      "https://public-api.wordpress.com/rest/v1.1/sites/67222684/tags"
+    )
+  ).data?.tags;
+
+  return {
+    props: {
+      articles: posts,
+      tags: tags,
+    },
+    revalidate: 10,
+  };
 }

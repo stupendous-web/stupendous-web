@@ -93,24 +93,28 @@ export default function Article({ article }) {
 }
 
 export async function getStaticPaths() {
-  const { data } = await axios.get(
-    `https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts`
-  );
-  const paths = data?.posts?.map((post) => ({
+  const posts = (
+    await axios.get(
+      "https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts"
+    )
+  ).data?.posts;
+  const paths = posts?.map((post) => ({
     params: { slug: post.slug },
   }));
 
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-  const { data } = await axios.get(
-    `https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts/slug:${params.slug}`
-  );
+  const post = (
+    await axios.get(
+      `https://public-api.wordpress.com/rest/v1.1/sites/67222684/posts/slug:${params.slug}`
+    )
+  ).data;
 
   return {
     props: {
-      article: data,
+      article: post,
     },
     revalidate: 10,
   };
