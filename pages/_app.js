@@ -44,10 +44,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta
-          name={"viewport"}
-          content={"width=device-width, user-scalable=no"}
-        />
+        <meta name={"viewport"} content={"width=device-width"} />
         <link
           href={"https://use.typekit.net/aqk5kto.css"}
           rel={"preload"}

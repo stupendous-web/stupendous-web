@@ -381,7 +381,7 @@ export default function Home({ articles }) {
       </div>
       <div className={"uk-section uk-section-large"}>
         <div className={"uk-container uk-container-small"}>
-          <h6 className={"uk-margin-remove"}>eCommerce</h6>
+          <div className={"uk-h6 uk-margin-remove"}>eCommerce</div>
           <h2 className={"uk-margin-remove-top"}>Accept Payments</h2>
           <p>
             Let&apos;s keep your work sustainable. My software development
@@ -413,7 +413,7 @@ export default function Home({ articles }) {
           <div data-uk-grid={""}>
             <div className={"uk-width-1-2@s"}>
               <Image src={cms} alt={"Software Development Services"} priority />
-              <h6 className={"uk-margin-remove-bottom"}>CMS</h6>
+              <div className={"uk-h6 uk-margin-remove-bottom"}>CMS</div>
               <h2 className={"uk-margin-remove-top"}>Publish Content</h2>
               <p>
                 Managing your web, iOS, and Android app text, images, and even
@@ -428,7 +428,7 @@ export default function Home({ articles }) {
                 alt={"Software Development Services"}
                 priority
               />
-              <h6 className={"uk-margin-remove-bottom"}>Analytics</h6>
+              <div className={"uk-h6 uk-margin-remove-bottom"}>Analytics</div>
               <h2 className={"uk-margin-remove-top"}>Find Customers</h2>
               <p>
                 There are many new people out there waiting to meet you that are
@@ -449,7 +449,7 @@ export default function Home({ articles }) {
       </div>
       <div className={"uk-section"}>
         <div className={"uk-container uk-container-small"}>
-          <h6 className={"uk-margin-remove"}>Web and Phone Apps</h6>
+          <div className={"uk-h6 uk-margin-remove"}>Web and Phone Apps</div>
           <h2 className={"uk-margin-remove-top"}>Engage with your Audience</h2>
           <p>
             My software development services will excel you and your work far
@@ -489,7 +489,7 @@ export default function Home({ articles }) {
       <Testimonials />
       <div className={"uk-section"}>
         <div className={"uk-container uk-container-small"}>
-          <h6 className={"uk-margin-remove"}>Business</h6>
+          <div className={"uk-h6 uk-margin-remove"}>Business</div>
           <h2 className={"uk-margin-remove-top"}>Expand your Reach</h2>
           <p>
             Do what you do! Web and phone apps can be useful in any industry. My
