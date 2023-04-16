@@ -10,7 +10,24 @@ import Testimonials from "../components/Testimonials";
 import Blog from "../components/Blog";
 import CTA from "../components/CTA";
 
-import mockup from "../images/mockup.png";
+import mockup from "/images/mockup.png";
+import denversCupid from "/images/projects/denvers-cupid.jpg";
+import powerTripFitness from "/images/projects/power-trip-fitness.jpg";
+import radTraining from "/images/projects/rad-training.jpg";
+import securityEngineers from "/images/projects/security-engineers.jpg";
+import brontezPurnell from "/images/projects/brontez-purnell.jpg";
+import deriddle from "/images/projects/deriddle.jpg";
+import graceAvila from "/images/projects/grace-avila.jpg";
+import iWannaBeFit from "/images/projects/iwannabe-fit.jpg";
+import jFitness from "/images/projects/j-fitness.jpg";
+import kendraHicks from "/images/projects/kendra-hicks.jpg";
+import lPSolutions from "/images/projects/lp-solutions.jpg";
+import luckyArtists from "/images/projects/lucky-artists.jpg";
+import business from "/images/domains/business.jpg";
+import pictures from "/images/domains/pictures.jpg";
+import org from "/images/domains/org.jpg";
+import fans from "/images/domains/fans.jpg";
+
 import analytics from "../images/analytics.png";
 import cms from "../images/cms.png";
 
@@ -85,15 +102,15 @@ export default function Home({ articles }) {
         url={"https://stupendousweb.com"}
         telephone={"+15108906429"}
         address={{
-          streetAddress: "2201 Broadway",
-          addressLocality: "Oakland",
-          addressRegion: "CA",
-          postalCode: "94612",
+          streetAddress: "5150 Spyglass Hill Dr.",
+          addressLocality: "Las Vegas",
+          addressRegion: "NV",
+          postalCode: "89142",
           addressCountry: "US",
         }}
         geo={{
-          latitude: "37.811200",
-          longitude: "-122.267490",
+          latitude: "36.140720",
+          longitude: "-115.061710",
         }}
       />
       <div
@@ -185,26 +202,20 @@ export default function Home({ articles }) {
             data-uk-parallax={"x: 50%, -100%"}
           >
             <div>
-              <img
-                src={"/images/projects/denvers-cupid.jpg"}
+              <Image src={denversCupid} alt={"Software Development Services"} />
+            </div>
+            <div>
+              <Image
+                src={powerTripFitness}
                 alt={"Software Development Services"}
               />
             </div>
             <div>
-              <img
-                src={"/images/projects/power-trip-fitness.jpg"}
-                alt={"Software Development Services"}
-              />
+              <Image src={radTraining} alt={"Software Development Services"} />
             </div>
             <div>
-              <img
-                src={"/images/projects/rad-training.jpg"}
-                alt={"Software Development Services"}
-              />
-            </div>
-            <div>
-              <img
-                src={"/images/projects/security-engineers.jpg"}
+              <Image
+                src={securityEngineers}
                 alt={"Software Development Services"}
               />
             </div>
@@ -215,28 +226,19 @@ export default function Home({ articles }) {
             data-uk-parallax={"x: 50%, -100%"}
           >
             <div>
-              <img
-                src={"/images/projects/brontez-purnell.jpg"}
+              <Image
+                src={brontezPurnell}
                 alt={"Software Development Services"}
               />
             </div>
             <div>
-              <img
-                src={"/images/projects/deriddle.jpg"}
-                alt={"Software Development Services"}
-              />
+              <Image src={deriddle} alt={"Software Development Services"} />
             </div>
             <div>
-              <img
-                src={"/images/projects/grace-avila.jpg"}
-                alt={"Software Development Services"}
-              />
+              <Image src={graceAvila} alt={"Software Development Services"} />
             </div>
             <div>
-              <img
-                src={"/images/projects/iwannabe-fit.jpg"}
-                alt={"Software Development Services"}
-              />
+              <Image src={iWannaBeFit} alt={"Software Development Services"} />
             </div>
           </div>
           <div
@@ -245,28 +247,16 @@ export default function Home({ articles }) {
             data-uk-parallax={"x: 50%, -100%"}
           >
             <div>
-              <img
-                src={"/images/projects/j-fitness.jpg"}
-                alt={"Software Development Services"}
-              />
+              <Image src={jFitness} alt={"Software Development Services"} />
             </div>
             <div>
-              <img
-                src={"/images/projects/kendra-hicks.jpg"}
-                alt={"Software Development Services"}
-              />
+              <Image src={kendraHicks} alt={"Software Development Services"} />
             </div>
             <div>
-              <img
-                src={"/images/projects/lp-solutions.jpg"}
-                alt={"Software Development Services"}
-              />
+              <Image src={lPSolutions} alt={"Software Development Services"} />
             </div>
             <div>
-              <img
-                src={"/images/projects/lucky-artists.jpg"}
-                alt={"Software Development Services"}
-              />
+              <Image src={luckyArtists} alt={"Software Development Services"} />
             </div>
           </div>
         </div>
@@ -322,8 +312,8 @@ export default function Home({ articles }) {
           >
             <ul className={"uk-slideshow-items"}>
               <li>
-                <img
-                  src={"/images/domains/business.jpg"}
+                <Image
+                  src={business}
                   alt={"Software Development Services"}
                   className={"uk-cover"}
                 />
@@ -339,8 +329,8 @@ export default function Home({ articles }) {
                 </div>
               </li>
               <li>
-                <img
-                  src={"/images/domains/pictures.jpg"}
+                <Image
+                  src={pictures}
                   alt={"Software Development Services"}
                   className={"uk-cover"}
                 />
@@ -356,8 +346,8 @@ export default function Home({ articles }) {
                 </div>
               </li>
               <li>
-                <img
-                  src={"/images/domains/org.jpg"}
+                <Image
+                  src={org}
                   alt={"Software Development Services"}
                   className={"uk-cover"}
                 />
@@ -371,8 +361,8 @@ export default function Home({ articles }) {
                 </div>
               </li>
               <li>
-                <img
-                  src={"/images/domains/fans.jpg"}
+                <Image
+                  src={fans}
                   alt={"Software Development Services"}
                   className={"uk-cover"}
                 />
