@@ -6,7 +6,6 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  * 3. Style
  */
-@import 'https://use.typekit.net/aqk5kto.css';
 html {
   /* 1 */
   font-family: transducer, sans-serif;

@@ -44,7 +44,15 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta
+          name={"viewport"}
+          content={"width=device-width, user-scalable=no"}
+        />
+        <link
+          href={"https://use.typekit.net/aqk5kto.css"}
+          rel={"preload"}
+          as={"font"}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -59,7 +67,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Script
-        strategy="afterInteractive"
+        strategy={"afterInteractive"}
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
       <StupendousAnalytics site={"642cf18729b904f37d859011"} />

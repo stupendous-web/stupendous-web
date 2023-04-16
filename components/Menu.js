@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 
 import Logo from "./Logo";
+
+import isometric11 from "../images/isometrics/isometric-1-1-white.png";
+import isometric12 from "../images/isometrics/isometric-1-2-white.png";
+import isometric21 from "../images/isometrics/isometric-2-1-white.png";
+import isometric22 from "../images/isometrics/isometric-2-2-white.png";
+import isometric23 from "../images/isometrics/isometric-2-3-white.png";
 
 export default function Menu() {
   const [menuButtonClass, setMenuButtonClass] = useState("");
@@ -106,6 +113,7 @@ export default function Menu() {
                     <li
                       key={key}
                       className={"uk-h1 uk-margin-remove"}
+                      style={{ width: "fit-content" }}
                       onMouseEnter={() => changeIsometric(key + 1)}
                       onMouseLeave={() => changeIsometric(0)}
                     >
@@ -142,32 +150,32 @@ export default function Menu() {
         }}
       >
         <div className={"uk-width-1-1 uk-inline"}>
-          <img
-            src={"/images/isometrics/isometric-1-1-white.png"}
+          <Image
+            src={isometric11}
             alt={"Software Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[0] }}
           />
-          <img
-            src={"/images/isometrics/isometric-1-2-white.png"}
+          <Image
+            src={isometric12}
             alt={"Software Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[1] }}
           />
-          <img
-            src={"/images/isometrics/isometric-2-1-white.png"}
+          <Image
+            src={isometric21}
             alt={"Software Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[2] }}
           />
-          <img
-            src={"/images/isometrics/isometric-2-2-white.png"}
+          <Image
+            src={isometric22}
             alt={"Software Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[3] }}
           />
-          <img
-            src={"/images/isometrics/isometric-2-3-white.png"}
+          <Image
+            src={isometric23}
             alt={"Software Development Services"}
             className={"uk-position-center uk-padding-large"}
             style={{ opacity: isometricStyles[4] }}
