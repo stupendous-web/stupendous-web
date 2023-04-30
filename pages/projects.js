@@ -58,10 +58,10 @@ export default function Projects() {
               <div className={"uk-width-2-3@s"}>
                 <Project
                   images={[
-                    "/images/projects/pixel-shop-1.png",
-                    "/images/projects/pixel-shop-2.png",
-                    "/images/projects/pixel-shop-3.png",
-                    "/images/projects/pixel-shop-4.png",
+                    "pixel-shop-1.png",
+                    "pixel-shop-2.png",
+                    "pixel-shop-3.png",
+                    "pixel-shop-4.png",
                   ]}
                   name={"The Pixel Shop"}
                   icons={["devicon-nextjs-plain", "devicon-wordpress-plain"]}
@@ -94,7 +94,7 @@ export default function Projects() {
                   </blockquote>
                 </Project>
                 <Project
-                  images={["/images/projects/iwannabe-fit.jpg"]}
+                  images={["iwannabe-fit.jpg"]}
                   name={<span>iwannabe&middot;fit</span>}
                   icons={["devicon-laravel-plain", "devicon-react-plain"]}
                 >
@@ -112,7 +112,7 @@ export default function Projects() {
                   </p>
                 </Project>
                 <Project
-                  images={["/images/projects/power-trip-fitness.jpg"]}
+                  images={["power-trip-fitness.jpg"]}
                   name={"Power Trip Fitness"}
                   icons={["devicon-nextjs-plain", "devicon-wordpress-plain"]}
                 >
@@ -131,7 +131,7 @@ export default function Projects() {
                   </p>
                 </Project>
                 <Project
-                  images={["/images/projects/rad-training.jpg"]}
+                  images={["rad-training.jpg"]}
                   name={"Rad Dog Training"}
                   icons={["devicon-laravel-plain", "devicon-react-plain"]}
                 >
@@ -164,7 +164,7 @@ export default function Projects() {
                 </Project>
 
                 <Project
-                  images={["/images/projects/kendra-hicks.jpg"]}
+                  images={["kendra-hicks.jpg"]}
                   name={"Kendra Hicks"}
                   icons={["devicon-laravel-plain", "devicon-react-plain"]}
                 >
@@ -180,7 +180,7 @@ export default function Projects() {
                   </p>
                 </Project>
                 <Project
-                  images={["/images/projects/grace-avila.jpg"]}
+                  images={["grace-avila.jpg"]}
                   name={"Super Natural"}
                   icons={["devicon-wordpress-plain"]}
                 >
@@ -208,7 +208,7 @@ export default function Projects() {
                   </blockquote>
                 </Project>
                 <Project
-                  images={["/images/projects/brontez-purnell.jpg"]}
+                  images={["brontez-purnell.jpg"]}
                   name={"Brontez Purnell"}
                   icons={["devicon-nextjs-plain"]}
                 >
@@ -225,7 +225,7 @@ export default function Projects() {
                   </p>
                 </Project>
                 <Project
-                  images={["/images/projects/deriddle.jpg"]}
+                  images={["deriddle.jpg"]}
                   name={"Deriddle"}
                   icons={["devicon-laravel-plain", "devicon-react-plain"]}
                 >
@@ -244,7 +244,7 @@ export default function Projects() {
                   </p>
                 </Project>
                 <Project
-                  images={["/images/projects/lucky-artists.jpg"]}
+                  images={["lucky-artists.jpg"]}
                   name={"Lucky Artists"}
                   icons={["devicon-nextjs-plain"]}
                 >

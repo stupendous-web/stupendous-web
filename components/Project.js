@@ -1,4 +1,5 @@
 import "devicon";
+import Image from "next/image";
 
 export default function Project({
   children,
@@ -8,18 +9,33 @@ export default function Project({
   quote,
   style,
 }) {
+  function importImages(require) {
+    let images = {};
+    require.keys().forEach((item) => {
+      images[item.replace("./", "")] = require(item);
+    });
+
+    return images;
+  }
+  const context = importImages(
+    require.context("/images/projects", false, /\.(png|jpe?g|svg)$/)
+  );
+
   return (
     <>
       <div className={"uk-section"} style={style}>
-        <img
-          src={images[0]}
+        <Image
+          src={context[images[0]]}
           alt={"Software Development Services"}
           className={"uk-margin"}
         />
         <div className={"uk-child-width-1-3 uk-margin"} data-uk-grid={""}>
           {images?.slice(1, 4).map((image) => (
             <div key={image}>
-              <img src={image} alt={"Software Development Services"} />
+              <Image
+                src={context[image]}
+                alt={"Software Development Services"}
+              />
             </div>
           ))}
         </div>

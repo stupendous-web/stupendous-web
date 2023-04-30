@@ -5,6 +5,7 @@ import { useGlobal } from "../lib/context";
 import CTA from "../components/CTA";
 
 import isometric from "../images/isometrics/isometric-2-1.png";
+import me from "../images/me.png";
 
 export default function About() {
   const { setIsLoading } = useGlobal();
@@ -52,12 +53,11 @@ export default function About() {
             <div className={"uk-width-1-3@s"} />
             <div className={"uk-width-2-3@s"}>
               <div className={"uk-align-left uk-margin-remove-adjacent"}>
-                <img
-                  src={"/images/me.png"}
+                <Image
+                  src={me}
                   alt={"Software Development Services"}
                   className={"uk-border-circle"}
-                  height={"100px"}
-                  width={"100px"}
+                  width={100}
                 />
               </div>
               <p>
