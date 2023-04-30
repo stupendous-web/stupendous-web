@@ -412,7 +412,7 @@ export default function Home({ articles }) {
         <div className={"uk-container uk-container-small"}>
           <div data-uk-grid={""}>
             <div className={"uk-width-1-2@s"}>
-              <Image src={cms} alt={"Software Development Services"} priority />
+              <Image src={cms} alt={"Software Development Services"} />
               <div className={"uk-h6 uk-margin-remove-bottom"}>CMS</div>
               <h2 className={"uk-margin-remove-top"}>Publish Content</h2>
               <p>
@@ -423,11 +423,7 @@ export default function Home({ articles }) {
               </p>
             </div>
             <div className={"uk-width-1-2@s"}>
-              <Image
-                src={analytics}
-                alt={"Software Development Services"}
-                priority
-              />
+              <Image src={analytics} alt={"Software Development Services"} />
               <div className={"uk-h6 uk-margin-remove-bottom"}>Analytics</div>
               <h2 className={"uk-margin-remove-top"}>Find Customers</h2>
               <p>
