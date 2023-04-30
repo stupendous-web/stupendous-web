@@ -3,7 +3,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import uikit from "uikit";
-import "../styles/uikit/uikit.css";
+import "../styles/uikit/uikit.min.css";
 import "remixicon/fonts/remixicon.css";
 import { Provider } from "../lib/context";
 import * as gtag from "../lib/gtag";

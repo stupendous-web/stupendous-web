@@ -29,22 +29,24 @@ class CTA extends React.Component {
                     Get Yours Now
                   </Link>
                   <div className={"uk-text-large"}>
-                    <a
+                    <Link
                       href={"mailto:topher@stupendousweb.com"}
+                      title={"Email me!"}
                       className={"uk-flex uk-margin-small-right"}
                       data-uk-tooltip={"Email me!"}
                     >
                       <i className={"ri-mail-fill"} />
-                    </a>
+                    </Link>
                   </div>
                   <div className={"uk-text-large"}>
-                    <a
+                    <Link
                       href={"tel:5108906429"}
+                      title={"Call me!"}
                       className={"uk-flex"}
                       data-uk-tooltip={"Call me!"}
                     >
                       <i className={"ri-phone-fill"} />
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <p>

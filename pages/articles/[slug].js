@@ -19,6 +19,12 @@ export default function Article({ article }) {
       <Head>
         <title>{`${article?.title} | Software Development Services | Stupendous Web`}</title>
         <meta
+          name={"description"}
+          content={article?.excerpt
+            ?.replace("[&hellip;]", "")
+            ?.replace(/(<([^>]+)>)/gi, "")}
+        />
+        <meta
           property={"og:url"}
           content={`https://stupendousweb.com/articles/${article?.slug}`}
         />

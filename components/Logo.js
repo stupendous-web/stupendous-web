@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+
+import logo from "/images/logo.png";
 
 export default function Logo() {
   return (
@@ -15,8 +18,8 @@ export default function Logo() {
           left: "1rem",
         }}
       >
-        <img
-          src={"/images/logo.png"}
+        <Image
+          src={logo}
           alt={"Software Development Services"}
           className={"uk-margin-top"}
           style={{ width: "4rem" }}

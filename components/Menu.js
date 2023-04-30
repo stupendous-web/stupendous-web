@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -27,14 +26,32 @@ export default function Menu() {
 
   const socialLinks = [
     {
+      title: "LinkedIn",
       href: "https://www.linkedin.com/in/topherjamesknoll",
       icon: "ri-linkedin-fill",
     },
-    { href: "https://instagram.com/stupendousweb_", icon: "ri-instagram-fill" },
-    { href: "https://twitter.com/stupendousweb", icon: "ri-twitter-fill" },
-    { href: "https://facebook.com/stupendousweb", icon: "ri-facebook-fill" },
-    { href: "https://github.com/stupendous-web", icon: "ri-github-fill" },
     {
+      title: "Instagram",
+      href: "https://instagram.com/stupendousweb_",
+      icon: "ri-instagram-fill",
+    },
+    {
+      title: "Twitter",
+      href: "https://twitter.com/stupendousweb",
+      icon: "ri-twitter-fill",
+    },
+    {
+      title: "Facebook",
+      href: "https://facebook.com/stupendousweb",
+      icon: "ri-facebook-fill",
+    },
+    {
+      title: "GitHub",
+      href: "https://github.com/stupendous-web",
+      icon: "ri-github-fill",
+    },
+    {
+      title: "Spotify",
       href: "https://open.spotify.com/user/128910259",
       icon: "ri-spotify-fill",
     },
@@ -72,8 +89,6 @@ export default function Menu() {
     }
   };
 
-  const router = useRouter();
-
   return (
     <>
       <div
@@ -99,7 +114,11 @@ export default function Menu() {
               <ul className={"uk-list"}>
                 {socialLinks?.map((link) => (
                   <li key={link.href} className={"uk-margin-remove"}>
-                    <Link href={link.href} target={"_blank"}>
+                    <Link
+                      href={link.href}
+                      title={`Find me on ${link.title}!`}
+                      target={"_blank"}
+                    >
                       <i className={link.icon} />
                     </Link>
                   </li>
@@ -117,18 +136,16 @@ export default function Menu() {
                       onMouseEnter={() => changeIsometric(key + 1)}
                       onMouseLeave={() => changeIsometric(0)}
                     >
-                      <a
+                      <Link
+                        href={"/" + link.href}
                         title={
                           link.title +
                           " | Software Development Services | Stupendous Web"
                         }
-                        onClick={() => {
-                          router.push("/" + link.href);
-                          hideMenu();
-                        }}
+                        onClick={() => hideMenu()}
                       >
                         {link.title}
-                      </a>
+                      </Link>
                     </li>
                   );
                 })}

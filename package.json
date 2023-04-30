@@ -10,7 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@googlemaps/js-api-loader": "^1.15.1",
     "axios": "^0.27.2",
     "dayjs": "^1.11.6",
     "devicon": "^2.15.1",
