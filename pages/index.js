@@ -7,6 +7,7 @@ import { LocalBusinessJsonLd } from "next-seo";
 import { RiMailFill, RiPhoneFill, RiCheckFill } from "react-icons/ri";
 import { DiReact } from "react-icons/di";
 import { Parallax } from "react-scroll-parallax";
+import Slider from "react-slick";
 import {
   Box,
   Button,
@@ -299,19 +300,21 @@ export default function Home({ articles }) {
           </TabPanels>
         </Tabs>
       </Container>
-      <Container maxW={"container.sm"} pY={[16, 64]}>
-        {/*<Slide*/}
-        {/*  image={0}*/}
-        {/*  heading={".business"}*/}
-        {/*  text={"hello@yourwork.business"}*/}
-        {/*/>*/}
-        {/*<Slide*/}
-        {/*  image={1}*/}
-        {/*  heading={".pictures"}*/}
-        {/*  text={"hello@yourwork.pictures"}*/}
-        {/*/>*/}
-        {/*<Slide image={2} heading={".org"} text={"hello@yourwork.org"} />*/}
-        {/*<Slide image={3} heading={".fans"} text={"hello@yourwork.fans"} />*/}
+      <Container maxW={"container.lg"} py={[16, 64]}>
+        <Slider autoplay={true} infinite={true} arrows={false}>
+          <Slide
+            image={0}
+            heading={".business"}
+            text={"hello@yourwork.business"}
+          />
+          <Slide
+            image={1}
+            heading={".pictures"}
+            text={"hello@yourwork.pictures"}
+          />
+          <Slide image={2} heading={".org"} text={"hello@yourwork.org"} />
+          <Slide image={3} heading={".fans"} text={"hello@yourwork.fans"} />
+        </Slider>
       </Container>
       <Container maxW={"container.lg"} py={[16, 64]}>
         <Text>eCommerce</Text>

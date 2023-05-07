@@ -12,7 +12,7 @@ export default function Slide({ image, heading, text }) {
     <Flex
       align={"center"}
       justify={"center"}
-      h={"350px"}
+      h={"400px"}
       position={"relative"}
       overflow={"hidden"}
     >
