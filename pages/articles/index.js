@@ -6,6 +6,7 @@ import { useGlobal } from "../../lib/context";
 import axios from "axios";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import { Parallax } from "react-scroll-parallax";
 import {
   AspectRatio,
   Box,
@@ -16,7 +17,6 @@ import {
   Link,
   Button,
 } from "@chakra-ui/react";
-import { Parallax } from "react-scroll-parallax";
 
 import CTA from "../../components/CTA";
 
@@ -49,12 +49,12 @@ export default function Articles({ articles, tags }) {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text as={"code"}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-              deserunt illo nemo! Aliquam commodi cum dolore, eum iste labore
-              optio quam sed sunt. Corporis debitis maiores neque perferendis
-              quo quod.
-            </Text>
+            {/*<Text as={"code"}>*/}
+            {/*  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque*/}
+            {/*  deserunt illo nemo! Aliquam commodi cum dolore, eum iste labore*/}
+            {/*  optio quam sed sunt. Corporis debitis maiores neque perferendis*/}
+            {/*  quo quod.*/}
+            {/*</Text>*/}
           </Box>
         </Flex>
       </Container>
@@ -90,6 +90,7 @@ export default function Articles({ articles, tags }) {
                   excerpt = excerpt + `${index ? " " : ""}${word}`;
                 });
               excerpt = excerpt + "...</p>";
+              const tag = Object.keys(article.tags)[0]?.toLowerCase();
 
               return (
                 <Flex key={article.ID}>
@@ -133,6 +134,18 @@ export default function Articles({ articles, tags }) {
                       >
                         {dayjs(article?.date).from(dayjs())}
                       </Text>{" "}
+                      {tag && (
+                        <span>
+                          &middot;{" "}
+                          <Link
+                            as={NextLink}
+                            href={`/articles/tags/${tag}`}
+                            color={"gray.300"}
+                          >
+                            {tag}
+                          </Link>{" "}
+                        </span>
+                      )}
                       &middot;{" "}
                       {Math.round(article?.content.split(" ").length / 200)} min
                       read

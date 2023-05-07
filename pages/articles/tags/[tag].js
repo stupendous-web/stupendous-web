@@ -1,12 +1,22 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { useGlobal } from "../../../lib/context";
 import axios from "axios";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import {
+  AspectRatio,
+  Box,
+  Link,
+  Container,
+  Flex,
+  Heading,
+  Text,
+} from "@chakra-ui/react";
+import { Parallax } from "react-scroll-parallax";
 
 import CTA from "../../../components/CTA";
 
@@ -32,123 +42,123 @@ export default function Articles({ articles }) {
       <Head>
         <title>{`${tag} | Software Development Services | Stupendous Web`}</title>
       </Head>
-      <div className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}>
-        <div className={"uk-container uk-container-small"}>
-          <div className={"uk-flex-middle"} data-uk-grid={""}>
-            <div className={"uk-width-1-3@s uk-visible@s"}>
-              <Image
-                src={isometric}
-                alt={"Software Development Services"}
-                priority
-                onLoadingComplete={() => setIsLoading(false)}
-              />
-            </div>
-            {/*<div className={"uk-width-2-3@s"}>*/}
-            {/*  <p className={"uk-text-justify uk-dropcap monospace"}>*/}
-            {/*    Do you value meaningful work, tolerance, equality, creativity,*/}
-            {/*    and authenticity? My software development services help people*/}
-            {/*    like you to engage with their audiences and tribes in creative*/}
-            {/*    and impactful ways.*/}
-            {/*  </p>*/}
-            {/*</div>*/}
-          </div>
-        </div>
-      </div>
-      <div className={"uk-section"}>
-        <div className={"uk-container"}>
-          <h1
-            className={"uk-heading-2xlarge uk-text-right"}
-            data-uk-parallax={"x: 0, -800"}
-          >
+      <Container maxW={"container.xl"} pt={[16, 32]} pb={8}>
+        <Flex direction={["column", "row"]} align={"center"}>
+          <Box w={["100%", "33.33%"]} pr={4} mb={8}>
+            <Image
+              src={isometric}
+              alt={"Software Development Services"}
+              priority
+              onLoadingComplete={() => setIsLoading(false)}
+            />
+          </Box>
+          <Box w={["100%", "66.66%"]}>
+            {/*<Text as={"code"}>*/}
+            {/*  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque*/}
+            {/*  deserunt illo nemo! Aliquam commodi cum dolore, eum iste labore*/}
+            {/*  optio quam sed sunt. Corporis debitis maiores neque perferendis*/}
+            {/*  quo quod.*/}
+            {/*</Text>*/}
+          </Box>
+        </Flex>
+      </Container>
+      <Parallax translateY={[0, 0]} translateX={[250, -100]}>
+        <Container maxW={"container.xl"} py={8}>
+          <Heading as={"h1"} size={"4xl"}>
             {tag}
-          </h1>
-        </div>
-      </div>
-      <div className={"uk-section uk-section-xlarge"}>
-        <div className={"uk-container uk-container-small"}>
-          {articles
-            ?.filter((article) => article?.tags[tag])
-            ?.map((article) => {
-              let excerpt = "";
-              article?.excerpt
-                .split(" ")
-                .slice(0, 20)
-                .map((word, index) => {
-                  excerpt = excerpt + `${index ? " " : ""}${word}`;
-                });
-              excerpt = excerpt + "...</p>";
+          </Heading>
+        </Container>
+      </Parallax>
+      <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
+        <Flex justify={"flex-end"}>
+          <Box w={["100%", "66.66%"]}>
+            {articles
+              ?.filter((article) => article?.tags[tag])
+              ?.map((article) => {
+                let excerpt = "";
+                article?.excerpt
+                  .split(" ")
+                  .slice(0, 20)
+                  .map((word, index) => {
+                    excerpt = excerpt + `${index ? " " : ""}${word}`;
+                  });
+                excerpt = excerpt + "...</p>";
 
-              return (
-                <div key={article.ID} data-uk-grid={""}>
-                  <div className={"uk-width-2-3@s"}>
-                    <div className={"uk-flex"}>
-                      <div>
+                return (
+                  <Flex key={article.ID}>
+                    <Box w={"66.66%"} pr={8}>
+                      <Flex align={"center"} mb={4}>
                         <Image
                           src={article?.author?.avatar_URL}
                           alt={article?.author?.name}
                           height={32}
                           width={32}
-                          className={"uk-border-circle uk-margin-small-right"}
+                          style={{
+                            borderRadius: "16px",
+                            marginRight: "1rem",
+                          }}
                         />
-                      </div>
-                      <div>
-                        <Link href={article?.author?.URL}>
+                        <Link as={NextLink} href={article?.author?.URL}>
                           {article?.author?.name}
                         </Link>
-                      </div>
-                    </div>
-                    <h2 className={"uk-h3 uk-margin-remove-top"}>
-                      <Link
-                        href={"/articles/" + article?.slug}
-                        title={
-                          article?.title +
-                          " | Software Development Services | Stupendous Web"
-                        }
-                      >
-                        {article?.title}
-                      </Link>
-                    </h2>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: excerpt,
-                      }}
-                    />
-                    <p className={"uk-text-small uk-text-meta"}>
-                      <time
-                        dateTime={dayjs(article?.date).format("YYYY-MM-DD")}
-                      >
-                        {dayjs(article?.date).from(dayjs())}
-                      </time>{" "}
-                      &middot;{" "}
-                      {Math.round(article?.content.split(" ").length / 200)} min
-                      read
-                    </p>
-                  </div>
-                  <div className={"uk-width-1-3@s"}>
-                    {article?.featured_image && (
-                      <Link
-                        href={"/articles/" + article?.slug}
-                        title={
-                          article?.title +
-                          " | Software Development Services | Stupendous Web"
-                        }
-                      >
-                        <div className={"uk-height-small uk-cover-container"}>
-                          <Image
-                            src={article?.featured_image}
-                            alt={article?.title}
-                            fill
-                            style={{ objectFit: "cover" }}
-                          />
-                        </div>
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
-        </div>
-      </div>
+                      </Flex>
+                      <Heading className={"uk-h3 uk-margin-remove-top"}>
+                        <Link
+                          href={"/articles/" + article?.slug}
+                          title={
+                            article?.title +
+                            " | Software Development Services | Stupendous Web"
+                          }
+                        >
+                          {article?.title}
+                        </Link>
+                      </Heading>
+                      <Box
+                        mb={4}
+                        dangerouslySetInnerHTML={{
+                          __html: excerpt,
+                        }}
+                      />
+                      <Text fontSize={"sm"} color={"gray.300"}>
+                        <Text
+                          as={"time"}
+                          dateTime={dayjs(article?.date).format("YYYY-MM-DD")}
+                        >
+                          {dayjs(article?.date).from(dayjs())}
+                        </Text>{" "}
+                        &middot;{" "}
+                        {Math.round(article?.content.split(" ").length / 200)}{" "}
+                        min read
+                      </Text>
+                    </Box>
+                    <Box w={"33.33%"}>
+                      {article?.featured_image && (
+                        <Link
+                          href={"/articles/" + article?.slug}
+                          title={
+                            article?.title +
+                            " | Software Development Services | Stupendous Web"
+                          }
+                        >
+                          <div className={"uk-height-small uk-cover-container"}>
+                            <AspectRatio maxW={"100%"} ratio={16 / 9} mb={8}>
+                              <Image
+                                src={article?.featured_image}
+                                alt={article?.title}
+                                fill
+                                style={{ objectFit: "cover" }}
+                              />
+                            </AspectRatio>
+                          </div>
+                        </Link>
+                      )}
+                    </Box>
+                  </Flex>
+                );
+              })}
+          </Box>
+        </Flex>
+      </Container>
       <CTA />
     </>
   );
