@@ -18,8 +18,8 @@ export default function Projects() {
         <title>Projects | Software Development Services | Stupendous Web</title>
       </Head>
       <Container maxW={"container.xl"} pt={[16, 32]} pb={8}>
-        <Flex align={"center"}>
-          <Box w={"33.33%"}>
+        <Flex direction={["column", "row"]} align={"center"}>
+          <Box w={["100%", "33.33%"]} pr={4} mb={8}>
             <Image
               src={isometric}
               alt={"Software Development Services"}

@@ -18,8 +18,8 @@ export default function About() {
         <title>About | Software Development Services | Stupendous Web</title>
       </Head>
       <Container maxW={"container.xl"} pt={[16, 32]} pb={8}>
-        <Flex align={"center"}>
-          <Box w={"33.33%"}>
+        <Flex direction={["column", "row"]} align={"center"}>
+          <Box w={["100%", "33.33%"]} pr={4} mb={8}>
             <Image
               src={isometric}
               alt={"Software Development Services"}
@@ -27,7 +27,7 @@ export default function About() {
               onLoadingComplete={() => setIsLoading(false)}
             />
           </Box>
-          <Box w={"66.66%"}>
+          <Box w={["100%", "66.66%"]}>
             <Text as={"code"}>
               Do you value meaningful work, tolerance, equality, creativity, and
               authenticity? My software development services help people like
