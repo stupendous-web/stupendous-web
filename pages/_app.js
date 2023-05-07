@@ -80,7 +80,7 @@ function MyApp({ Component, pageProps }) {
             <Navigation />
             {/*<Contact />*/}
             {/*<Menu />*/}
-            {/*<Logo />*/}
+            <Logo />
             {/*<Loading />*/}
             {/*<Cursor />*/}
           </Provider>

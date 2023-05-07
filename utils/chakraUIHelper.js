@@ -99,7 +99,6 @@ const theme = extendTheme({
           bg: "gray.900",
         },
         content: {
-          width: "100%",
           border: "none",
         },
       },
