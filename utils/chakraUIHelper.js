@@ -72,6 +72,12 @@ const theme = extendTheme({
       baseStyle: {
         color: "white",
         fontWeight: "bold",
+        mb: 8,
+      },
+    },
+    Text: {
+      baseStyle: {
+        mb: 4,
       },
     },
     Button: {
