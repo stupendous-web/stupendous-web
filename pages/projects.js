@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Head from "next/head";
 import { useGlobal } from "../lib/context";
+import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { Parallax } from "react-scroll-parallax";
 
 import Project from "../components/Project";
 import CTA from "../components/CTA";
 
 import isometric from "../images/isometrics/isometric-1-1.png";
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
-import { Parallax } from "react-scroll-parallax";
 
 export default function Projects() {
   const { setIsLoading } = useGlobal();
@@ -27,7 +27,7 @@ export default function Projects() {
               onLoadingComplete={() => setIsLoading(false)}
             />
           </Box>
-          <Box w={"66.66%"}>
+          <Box w={["100%", "66.66%"]}>
             <Text as={"code"}>
               Let&apos;s build internet community through my custom software
               development services. Look at a few of the certified,

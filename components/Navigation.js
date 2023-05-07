@@ -29,7 +29,9 @@ export default function Navigation() {
             <Box key={link.href} mr={8}>
               <Popover trigger={"hover"}>
                 <PopoverTrigger>
-                  <Link color={"white"}>{link.title}</Link>
+                  <Link as={NextLink} href={`/${link.href}`} color={"white"}>
+                    {link.title}
+                  </Link>
                 </PopoverTrigger>
                 <PopoverContent>
                   <PopoverBody>
