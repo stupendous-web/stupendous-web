@@ -1,7 +1,28 @@
 import Image from "next/image";
 import Head from "next/head";
-import Link from "next/link";
+import NextLink from "next/link";
 import { useGlobal } from "../lib/context";
+import { Parallax } from "react-scroll-parallax";
+import {
+  RiVideoFill,
+  RiMailFill,
+  RiPhoneFill,
+  RiToolsFill,
+  RiPieChartFill,
+  RiFileTextFill,
+} from "react-icons/ri";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  List,
+  ListIcon,
+  ListItem,
+  Text,
+  Link,
+  AspectRatio,
+} from "@chakra-ui/react";
 
 import isometric from "../images/isometrics/isometric-2-3.png";
 import contact from "../images/pages/contact.png";
@@ -13,40 +34,40 @@ export default function Contact() {
     {
       anchor: "Schedule your FREE consultations",
       href: "https://cal.com/stupendousweb/consultation",
-      icon: "ri-vidicon-fill",
+      icon: RiVideoFill,
     },
     {
       anchor: "topher@stupendousweb.com",
       href: "mailto:topher@stupendousweb.com",
-      icon: "ri-mail-fill",
+      icon: RiMailFill,
     },
     {
       anchor: "+1 510.890.6429 (Call or Text!)",
       href: "tel:5108906429",
-      icon: "ri-phone-fill",
+      icon: RiPhoneFill,
     },
   ];
   const adminLinks = [
     {
       anchor: "1-1",
       href: "https://cal.com/stupendousweb/client-1-1",
-      icon: "ri-vidicon-fill",
+      icon: RiVideoFill,
     },
     {
       anchor: "Feature Requests",
       href: "https://stupendousweb.atlassian.net/jira/projects",
-      icon: "ri-tools-fill",
+      icon: RiToolsFill,
     },
     {
       anchor: "Analytics",
       title: "NextJS Website Analytics Dashboard",
       href: "https://stupendousanalytics.com",
-      icon: "ri-pie-chart-fill",
+      icon: RiPieChartFill,
     },
     {
       anchor: "Content Management",
       href: "https://wordpress.com",
-      icon: "ri-file-text-fill",
+      icon: RiFileTextFill,
     },
   ];
 
@@ -55,78 +76,75 @@ export default function Contact() {
       <Head>
         <title>Contact | Software Development Services | Stupendous Web</title>
       </Head>
-      <div className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}>
-        <div className={"uk-container uk-container-small"}>
-          <div className={"uk-flex-middle"} data-uk-grid={""}>
-            <div className={"uk-width-1-3@s uk-visible@s"}>
-              <Image
-                src={isometric}
-                alt={"Software Development Services"}
-                priority
-                onLoadingComplete={() => setIsLoading(false)}
-              />
-            </div>
-            <div className={"uk-width-2-3@s"}>
-              <p className={"uk-text-justify uk-dropcap monospace"}>
-                Let&apos;s talk goals. Get in touch below or schedule your 2
-                FREE consultations. You&apos;ll receive a creative brief,
-                project plan, and secret website where you can preview your
-                project. Lastly, we&apos;ll launch your website and app to the
-                internet!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={"uk-section"}>
-        <div className={"uk-container"}>
-          <h1
-            className={"uk-heading-2xlarge uk-text-right"}
-            data-uk-parallax={"x: 0, -800"}
-          >
+      <Container maxW={"container.xl"} pt={[16, 32]} pb={8}>
+        <Flex direction={["column", "row"]} align={"center"}>
+          <Box w={["100%", "33.33%"]} pr={4} mb={8}>
+            <Image
+              src={isometric}
+              alt={"Software Development Services"}
+              priority
+              onLoadingComplete={() => setIsLoading(false)}
+            />
+          </Box>
+          <Box w={["100%", "66.66%"]}>
+            <Text as={"code"}>
+              Let&apos;s talk goals. Get in touch below or schedule your 2 FREE
+              consultations. You&apos;ll receive a creative brief, project plan,
+              and secret website where you can preview your project. Lastly,
+              we&apos;ll launch your website and app to the internet!
+            </Text>
+          </Box>
+        </Flex>
+      </Container>
+      <Parallax translateY={[0, 0]} translateX={[250, -100]}>
+        <Container maxW={"container.xl"} py={8}>
+          <Heading as={"h1"} size={"4xl"}>
             Contact
-          </h1>
-        </div>
-      </div>
-      <div className={"uk-section"}>
-        <div className={"uk-container uk-container-small"}>
-          <div data-uk-grid={""}>
-            <div className={"uk-width-1-3@s"} />
-            <div className={"uk-width-2-3@s"}>
-              <Image src={contact} alt={"Software Development Services"} />
-              <ul className={"uk-list uk-list-divider"}>
-                {contactLinks.map((link, key) => (
-                  <li key={key}>
-                    <Link
-                      href={link.href}
-                      title={link?.title}
-                      className={"uk-flex uk-flex-middle"}
-                    >
-                      <i className={`${link.icon} uk-margin-right`} />
-                      {link.anchor}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <p>Clients</p>
-              <ul className={"uk-list uk-list-divider"}>
-                {adminLinks.map((link, key) => (
-                  <li key={key}>
-                    <Link
-                      href={link.href}
-                      title={link?.title}
-                      className={"uk-flex uk-flex-middle"}
-                    >
-                      <i className={`${link.icon} uk-margin-right`} />
-                      {link.anchor}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+          </Heading>
+        </Container>
+      </Parallax>
+      <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
+        <Flex justify={"flex-end"}>
+          <Box w={["100%", "66.66%"]}>
+            <AspectRatio maxW={"100%"} ratio={4 / 3} mb={8}>
+              <Image
+                src={contact}
+                alt={"Software Development Services"}
+                id={"consulting"}
+                style={{ objectFit: "cover" }}
+              />
+            </AspectRatio>
+            <List fontSize={"xl"} mb={8} __css={{ columns: 1 }}>
+              {contactLinks.map((link, key) => (
+                <ListItem key={key} borderBottom={"solid 1px"} py={4}>
+                  <ListIcon as={link.icon} color={"primary.500"} />
+                  <Link as={NextLink} href={link.href} title={link.title}>
+                    <i className={`${link.icon} uk-margin-right`} />
+                    {link.anchor}
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+            <Text mb={4}>Clients</Text>
+            <List fontSize={"xl"} mb={8} __css={{ columns: 1 }}>
+              {adminLinks.map((link, key) => (
+                <ListItem key={key} borderBottom={"solid 1px"} py={4}>
+                  <ListIcon as={link.icon} color={"primary.500"} />
+                  <Link
+                    as={NextLink}
+                    href={link.href}
+                    title={link.title}
+                    className={"uk-flex uk-flex-middle"}
+                  >
+                    <i className={`${link.icon} uk-margin-right`} />
+                    {link.anchor}
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+        </Flex>
+      </Container>
     </>
   );
 }

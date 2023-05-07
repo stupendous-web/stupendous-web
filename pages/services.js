@@ -12,6 +12,7 @@ import {
   List,
   ListItem,
   ListIcon,
+  AspectRatio,
 } from "@chakra-ui/react";
 import { Parallax } from "react-scroll-parallax";
 import { RiCheckFill } from "react-icons/ri";
@@ -58,7 +59,7 @@ export default function Services() {
       </Parallax>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <Flex justify={"flex-end"}>
-          <Box w={"66.66%"}>
+          <Box w={["100%", "66.66%"]}>
             <Flex mb={8}>
               {services.map((service) => {
                 return (
@@ -158,12 +159,14 @@ export default function Services() {
                 </ListItem>
               ))}
             </List>
-            <Image
-              src={servicesImage}
-              alt={"Software Development Services"}
-              id={"consulting"}
-              style={{ marginBottom: "1rem" }}
-            />
+            <AspectRatio maxW={"100%"} ratio={4 / 3} mb={4}>
+              <Image
+                src={servicesImage}
+                alt={"Software Development Services"}
+                id={"consulting"}
+                style={{ objectFit: "cover" }}
+              />
+            </AspectRatio>
             <Heading mb={8}>Two FREE Consultations</Heading>
             <Text mb={4}>
               I enjoy offering these consultations at no charge because I

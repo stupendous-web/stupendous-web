@@ -24,7 +24,7 @@ class CTA extends React.Component {
         align={"center"}
         justify={"center"}
         bg={"primary.500"}
-        h={["calc(100vh - 376px)", "calc(100vh - 232px)"]}
+        h={["calc(100vh - 304px)", "calc(100vh - 176px)"]}
         py={8}
       >
         <Container maxW={"container.xl"}>

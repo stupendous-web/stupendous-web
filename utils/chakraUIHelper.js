@@ -98,6 +98,13 @@ const theme = extendTheme({
         },
       },
     },
+    List: {
+      baseStyle: {
+        container: {
+          columns: 2,
+        },
+      },
+    },
   },
 });
 

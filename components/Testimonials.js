@@ -49,11 +49,11 @@ export default function Testimonials() {
               </Box>
               <Box>
                 <Flex>
-                  <Icon as={RiStarFill} color={"yellow.500"} />
-                  <Icon as={RiStarFill} color={"yellow.500"} />
-                  <Icon as={RiStarFill} color={"yellow.500"} />
-                  <Icon as={RiStarFill} color={"yellow.500"} />
-                  <Icon as={RiStarFill} color={"yellow.500"} />
+                  <Icon as={RiStarFill} color={"cyan.500"} />
+                  <Icon as={RiStarFill} color={"cyan.500"} />
+                  <Icon as={RiStarFill} color={"cyan.500"} />
+                  <Icon as={RiStarFill} color={"cyan.500"} />
+                  <Icon as={RiStarFill} color={"cyan.500"} />
                 </Flex>
                 5.0
               </Box>

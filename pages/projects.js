@@ -46,7 +46,7 @@ export default function Projects() {
       </Parallax>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <Flex justify={"flex-end"}>
-          <Box w={"66.66%"}>
+          <Box w={["100%", "66.66%"]}>
             <Project
               images={[
                 "pixel-shop-1.png",
