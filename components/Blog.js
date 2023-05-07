@@ -3,7 +3,7 @@ import { Container, Heading, List, ListItem, Link } from "@chakra-ui/react";
 
 export default function Blog({ articles }) {
   return (
-    <Container maxW={"container.lg"} py={[16, 64]}>
+    <Container maxW={"container.lg"} py={[16, 32]}>
       <Heading mb={8}>
         <Link
           as={NextLink}

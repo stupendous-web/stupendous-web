@@ -186,7 +186,7 @@ export default function Home({ articles }) {
           </Flex>
         </Container>
       </Flex>
-      <Container maxW={"container.sm"} pt={[16, 0]} pb={[16, 64]}>
+      <Container maxW={"container.sm"} pt={[16, 0]} pb={[16, 32]}>
         <Heading size={"2xl"} mb={8}>
           If you want to build community, build stupendous software.
         </Heading>
@@ -194,14 +194,14 @@ export default function Home({ articles }) {
           [topher@stupendous ~]$ <span className={"flash"}>▌</span>
         </Text>
       </Container>
-      <Container maxW={"container.lg"} pt={[16, 64]} mb={8}>
+      <Container maxW={"container.lg"} pt={[16, 32]} mb={8}>
         <Text w={["100%", "50%"]}>
           I build engaging software. Together we can create web, iOS, and
           Android apps, broaden your digital presence, and build stronger
           digital communities.
         </Text>
       </Container>
-      <Container maxW={"100%"} pb={[16, 64]}>
+      <Container maxW={"100%"} pb={[16, 32]}>
         <Parallax translateY={[0, 0]} translateX={[100, -100]}>
           <SimpleGrid columns={4} spacing={[4, 8]} mb={[4, 8]}>
             <Box>
@@ -260,7 +260,7 @@ export default function Home({ articles }) {
           </SimpleGrid>
         </Parallax>
       </Container>
-      <Container maxW={"container.lg"} py={[16, 64]}>
+      <Container maxW={"container.lg"} py={[16, 32]}>
         <Heading pb={8}>Everything for Everyone</Heading>
         <Tabs colorScheme={"primary"}>
           <TabList>
@@ -300,7 +300,7 @@ export default function Home({ articles }) {
           </TabPanels>
         </Tabs>
       </Container>
-      <Container maxW={"container.lg"} py={[16, 64]}>
+      <Container maxW={"container.lg"} py={[16, 32]}>
         <Slider autoplay={true} infinite={true} arrows={false}>
           <Slide
             image={0}
@@ -316,7 +316,7 @@ export default function Home({ articles }) {
           <Slide image={3} heading={".fans"} text={"hello@yourwork.fans"} />
         </Slider>
       </Container>
-      <Container maxW={"container.lg"} py={[16, 64]}>
+      <Container maxW={"container.lg"} py={[16, 32]}>
         <Text>eCommerce</Text>
         <Heading mb={8}>Accept Payments</Heading>
         <Text mb={8}>
@@ -384,7 +384,7 @@ export default function Home({ articles }) {
           </Box>
         </SimpleGrid>
       </Container>
-      <Container maxW={"container.lg"} py={[16, 64]}>
+      <Container maxW={"container.lg"} py={[16, 32]}>
         <Text>Web &amp; Phone Apps</Text>
         <Heading mb={8}>Engage with your Audience</Heading>
         <Text mb={8}>
@@ -404,7 +404,7 @@ export default function Home({ articles }) {
           ))}
         </List>
       </Container>
-      <Container maxW={"container.xl"} pt={[16, 64]} mb={8}>
+      <Container maxW={"container.xl"} pt={[16, 32]} mb={8}>
         <Text w={["100%", "66.66%"]} mb={4}>
           I&apos;m a certified web developer and have many years of experience
           offering intentional and powerful software development services. I can
@@ -415,7 +415,7 @@ export default function Home({ articles }) {
         <Icon as={DiReact} boxSize={16} />
       </Container>
       <Testimonials />
-      <Container maxW={"container.lg"} py={[16, 64]}>
+      <Container maxW={"container.lg"} py={[16, 32]}>
         <Text>Business</Text>
         <Heading mb={8}>Expand your Reach</Heading>
         <Text mb={8}>

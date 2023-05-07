@@ -6,6 +6,7 @@ import Project from "../components/Project";
 import CTA from "../components/CTA";
 
 import isometric from "../images/isometrics/isometric-1-1.png";
+import { Box, Container, Flex, SimpleGrid } from "@chakra-ui/react";
 
 export default function Projects() {
   const { setIsLoading } = useGlobal();
@@ -15,6 +16,18 @@ export default function Projects() {
       <Head>
         <title>Projects | Software Development Services | Stupendous Web</title>
       </Head>
+      <Container maxW={"container.xl"} pt={[16, 0]} pb={[16, 32]}>
+        <Flex>
+          <Box w={"33.33%"}>
+            <Image
+              src={isometric}
+              alt={"Software Development Services"}
+              priority
+              onLoadingComplete={() => setIsLoading(false)}
+            />
+          </Box>
+        </Flex>
+      </Container>
       <div>
         <div
           className={"uk-section uk-section-xlarge uk-padding-remove-bottom"}
