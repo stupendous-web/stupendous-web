@@ -1,21 +1,18 @@
-import Link from "next/link";
+import NextLink from "next/link";
+import { Tooltip, Link, Box } from "@chakra-ui/react";
 
 export default function Pride() {
   return (
-    <>
-      <Link
-        href={"/contact"}
-        className={"uk-position-fixed uk-padding"}
-        style={{ bottom: 0, left: 0 }}
-      >
-        <span
-          data-uk-tooltip={
+    <Box position={"fixed"} bottom={0} left={0} p={12} hideBelow={"sm"}>
+      <Link as={NextLink} href={"/contact"}>
+        <Tooltip
+          label={
             "Tolerance, equality, creativity, and authenticity show up everywhere in my work. Let me know if it does in yours too!"
           }
         >
           (◍•ᴗ•◍)❤
-        </span>
+        </Tooltip>
       </Link>
-    </>
+    </Box>
   );
 }

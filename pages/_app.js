@@ -2,12 +2,14 @@ import { useEffect } from "react";
 import Head from "next/head";
 import Script from "next/script";
 import { useRouter } from "next/router";
-import uikit from "uikit";
-import "../styles/uikit/uikit.min.css";
 import "remixicon/fonts/remixicon.css";
 import { Provider } from "../lib/context";
 import * as gtag from "../lib/gtag";
 import StupendousAnalytics from "stupendous-analytics-next";
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "../utils/chakraUIHelper";
+import { ParallaxProvider } from "react-scroll-parallax";
+import "../styles/global.css";
 
 import Navigation from "../components/Navigation";
 import Contact from "../components/Contact";
@@ -68,17 +70,21 @@ function MyApp({ Component, pageProps }) {
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
       <StupendousAnalytics site={"642cf18729b904f37d859011"} />
-      <Provider>
-        <Component {...pageProps} />
-        <Footer />
-        <Pride />
-        <Navigation />
-        <Contact />
-        <Menu />
-        <Logo />
-        <Loading />
-        <Cursor />
-      </Provider>
+      <ChakraProvider theme={theme}>
+        <ParallaxProvider>
+          <Provider>
+            <Component {...pageProps} />
+            <Footer />
+            <Pride />
+            <Navigation />
+            {/*<Contact />*/}
+            {/*<Menu />*/}
+            {/*<Logo />*/}
+            {/*<Loading />*/}
+            {/*<Cursor />*/}
+          </Provider>
+        </ParallaxProvider>
+      </ChakraProvider>
     </>
   );
 }

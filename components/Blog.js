@@ -1,38 +1,32 @@
-import Link from "next/link";
+import NextLink from "next/link";
+import { Container, Heading, List, ListItem, Link } from "@chakra-ui/react";
 
 export default function Blog({ articles }) {
   return (
-    <>
-      <div className={"uk-section uk-section-large"}>
-        <div className={"uk-container uk-container-small"}>
-          <h3>
+    <Container maxW={"container.lg"} py={[16, 64]}>
+      <Heading mb={8}>
+        <Link
+          as={NextLink}
+          href={"/articles"}
+          title={"Articles | Software Development Services | Stupendous Web"}
+          color={"white"}
+        >
+          Articles
+        </Link>
+      </Heading>
+      <List spacing={4}>
+        {articles?.map((article) => (
+          <ListItem key={article?.ID}>
             <Link
-              href={"/articles"}
-              title={
-                "Articles | Software Development Services | Stupendous Web"
-              }
-              className={"uk-link-reset"}
+              as={NextLink}
+              href={`/articles/${article?.slug}`}
+              title={`${article?.title} | Software Development Services | Stupendous Web`}
             >
-              Articles
+              {article?.title}
             </Link>
-          </h3>
-          <ul className={"uk-list uk-column-1-2@s"}>
-            {articles?.map((article) => (
-              <li key={article?.ID}>
-                <Link
-                  href={"/articles/" + article?.slug}
-                  title={
-                    article?.title +
-                    " | Software Development Services | Stupendous Web"
-                  }
-                >
-                  {article?.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </>
+          </ListItem>
+        ))}
+      </List>
+    </Container>
   );
 }

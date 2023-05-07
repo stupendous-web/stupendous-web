@@ -1,5 +1,16 @@
-import Link from "next/link";
+import NextLink from "next/link";
 import { useGlobal } from "../lib/context";
+import {
+  Box,
+  Center,
+  Link,
+  List,
+  ListItem,
+  Popover,
+  PopoverBody,
+  PopoverContent,
+  PopoverTrigger,
+} from "@chakra-ui/react";
 
 export default function Navigation() {
   const { services } = useGlobal();
@@ -11,56 +22,49 @@ export default function Navigation() {
   ];
 
   return (
-    <nav
-      className={
-        "uk-width-1-1 uk-navbar-container uk-navbar-transparent uk-position-top uk-visible@s"
-      }
-      data-uk-navbar={""}
-    >
-      <div className={"uk-navbar-center"}>
-        <ul className={"uk-navbar-nav"}>
-          <div className={"uk-inline"}>
-            <div data-uk-dropdown="mode: click"></div>
-          </div>
-          {links.map((link, key) => (
-            <li
-              className={
-                key < links.length - 1 ? "uk-margin-large-right" : undefined
-              }
-              key={key}
+    <Box w={"100%"} position={"fixed"} top={0} left={0} p={8} hideBelow={"sm"}>
+      <Center>
+        {links.map((link, key) =>
+          link.title === "Services" ? (
+            <Box key={link.href} mr={8}>
+              <Popover trigger={"hover"}>
+                <PopoverTrigger>
+                  <Link color={"white"}>{link.title}</Link>
+                </PopoverTrigger>
+                <PopoverContent>
+                  <PopoverBody>
+                    <List spacing={4}>
+                      {services.map((service) => (
+                        <ListItem key={service.target}>
+                          <Link
+                            as={NextLink}
+                            href={`/services#${service.target}`}
+                            title={`${service.longTitle} | Software Development Services | Stupendous Web`}
+                            color={"white"}
+                          >
+                            {service.shortTitle}
+                          </Link>
+                        </ListItem>
+                      ))}
+                    </List>
+                  </PopoverBody>
+                </PopoverContent>
+              </Popover>
+            </Box>
+          ) : (
+            <Link
+              key={link.href}
+              as={NextLink}
+              href={`/${link.href}`}
+              title={`${link.title} | Software Development Services | Stupendous Web`}
+              color={"white"}
+              mr={key < links.length - 1 ? 8 : 0}
             >
-              <Link
-                href={"/" + link.href}
-                title={
-                  link.title +
-                  " | Software Development Services | Stupendous Web"
-                }
-              >
-                {link.title}
-              </Link>
-              {link.title === "Services" && (
-                <div data-uk-dropdown={""}>
-                  <ul className={"uk-nav uk-dropdown-nav"}>
-                    {services.map((service) => (
-                      <li key={service.target}>
-                        <Link
-                          href={`/services#${service.target}`}
-                          title={
-                            service.longTitle +
-                            " | Software Development Services | Stupendous Web"
-                          }
-                        >
-                          {service.shortTitle}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+              {link.title}
+            </Link>
+          )
+        )}
+      </Center>
+    </Box>
   );
 }

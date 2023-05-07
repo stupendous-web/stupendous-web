@@ -1,67 +1,78 @@
 import React from "react";
+import NextLink from "next/link";
 import Image from "next/image";
-import Link from "next/link";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  Icon,
+  SimpleGrid,
+  Text,
+  Tooltip,
+  Link,
+} from "@chakra-ui/react";
 
 import isometric from "/images/isometrics/isometric-1-3-white.png";
+import { RiMailFill, RiPhoneFill } from "react-icons/ri";
 
 class CTA extends React.Component {
   render() {
     return (
-      <>
-        <div
-          className={"uk-section uk-section-primary uk-flex uk-flex-middle"}
-          data-uk-height-viewport={"offset-bottom: true"}
-        >
-          <div className={"uk-container uk-container-small"}>
-            <div
-              className={"uk-child-width-1-2@m uk-flex-middle"}
-              data-uk-grid={""}
-            >
-              <div>
-                <h2>Your two consultations are now FREE!</h2>
-                <div className={"uk-flex uk-flex-middle"}>
+      <Flex
+        align={"center"}
+        justify={"center"}
+        bg={"primary.500"}
+        h={["calc(100vh - 376px)", "calc(100vh - 232px)"]}
+        py={8}
+      >
+        <Container maxW={"container.xl"}>
+          <SimpleGrid columns={[1, 2]} spacing={4}>
+            <Box>
+              <Heading size={"4xl"} mb={4}>
+                Your two consultations are now FREE!
+              </Heading>
+              <Flex align={"center"} mt={8}>
+                <Box mr={4}>
                   <Link
+                    as={NextLink}
                     href={"https://cal.com/stupendousweb/consultation"}
-                    className={
-                      "uk-button uk-button-primary uk-button-large uk-margin-medium-right"
-                    }
                   >
-                    Get Yours Now
+                    <Button color={"white"} variant={"outline"} size={"lg"}>
+                      Get yours Now
+                    </Button>
                   </Link>
-                  <div className={"uk-text-large"}>
+                </Box>
+                <Box mr={4}>
+                  <Tooltip label={"Email me!"} fontSize={"md"}>
                     <Link
+                      as={NextLink}
                       href={"mailto:topher@stupendousweb.com"}
-                      title={"Email me!"}
-                      className={"uk-flex uk-margin-small-right"}
-                      data-uk-tooltip={"Email me!"}
                     >
-                      <i className={"ri-mail-fill"} />
+                      <Icon as={RiMailFill} boxSize={8} />
                     </Link>
-                  </div>
-                  <div className={"uk-text-large"}>
-                    <Link
-                      href={"tel:5108906429"}
-                      title={"Call me!"}
-                      className={"uk-flex"}
-                      data-uk-tooltip={"Call me!"}
-                    >
-                      <i className={"ri-phone-fill"} />
+                  </Tooltip>
+                </Box>
+                <Box>
+                  <Tooltip label={"Call or Text Me!"} fontSize={"md"}>
+                    <Link as={NextLink} href={"tel:5108906429"}>
+                      <Icon as={RiPhoneFill} boxSize={8} />
                     </Link>
-                  </div>
-                </div>
-                <p>
-                  Find your audience, refine your product, and create solutions
-                  for your customers in the first of your two free
-                  consultations.
-                </p>
-              </div>
-              <div>
-                <Image src={isometric} alt={"Software Development Services"} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </>
+                  </Tooltip>
+                </Box>
+              </Flex>
+              <Text mt={8}>
+                Find your audience, refine your product, and create solutions
+                for your customers in the first of your two free consultations.
+              </Text>
+            </Box>
+            <Box hideBelow={"sm"}>
+              <Image src={isometric} alt={"Software Development Services"} />
+            </Box>
+          </SimpleGrid>
+        </Container>
+      </Flex>
     );
   }
 }

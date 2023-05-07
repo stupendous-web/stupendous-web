@@ -1,3 +1,14 @@
+import {
+  Box,
+  Container,
+  Heading,
+  Icon,
+  SimpleGrid,
+  Text,
+  Flex,
+} from "@chakra-ui/react";
+import { RiStarFill } from "react-icons/ri";
+
 export default function Testimonials() {
   const testimonials = [
     {
@@ -26,43 +37,30 @@ export default function Testimonials() {
     },
   ];
   return (
-    <>
-      <div className={"uk-section uk-section-large"}>
-        <div className={"uk-container uk-container-xlarge"}>
-          <div className={"uk-grid uk-child-width-expand@s"}>
-            {testimonials.map((testimonial, key) => {
-              return (
-                <div key={key}>
-                  <div className={"uk-text-bold uk-text-emphasis"}>
-                    {testimonial.name}
-                  </div>
-                  <div>{testimonial.title}</div>
-                  <div className={"uk-margin"}>{testimonial.review}</div>
-                  <div className={"uk-margin"}>
-                    <div className={"uk-flex-middle"} data-uk-grid={""}>
-                      <div className={"uk-width-expand"}>
-                        <div
-                          className={"uk-text-small"}
-                          style={{ color: "#00539a" }}
-                        >
-                          <i className={"ri-star-fill"} />
-                          <i className={"ri-star-fill"} />
-                          <i className={"ri-star-fill"} />
-                          <i className={"ri-star-fill"} />
-                          <i className={"ri-star-fill"} />
-                        </div>
-                      </div>
-                      <div className={"uk-width-auto"}>
-                        <div>5.0</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </>
+    <Container maxW={"container.xl"} pb={[16, 64]}>
+      <SimpleGrid columns={[1, 4]} spacing={8}>
+        {testimonials.map((testimonial, key) => (
+          <Box key={key}>
+            <Flex h={"100%"} direction={"column"} justify={"space-between"}>
+              <Box>
+                <Text>{testimonial.name}</Text>
+                <Heading mb={8}>{testimonial.title}</Heading>
+                <Text mb={8}>{testimonial.review}</Text>
+              </Box>
+              <Box>
+                <Flex>
+                  <Icon as={RiStarFill} color={"yellow.500"} />
+                  <Icon as={RiStarFill} color={"yellow.500"} />
+                  <Icon as={RiStarFill} color={"yellow.500"} />
+                  <Icon as={RiStarFill} color={"yellow.500"} />
+                  <Icon as={RiStarFill} color={"yellow.500"} />
+                </Flex>
+                5.0
+              </Box>
+            </Flex>
+          </Box>
+        ))}
+      </SimpleGrid>
+    </Container>
   );
 }

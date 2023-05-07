@@ -1,4 +1,23 @@
-import Link from "next/link";
+import NextLink from "next/link";
+import {
+  Box,
+  Container,
+  Flex,
+  Icon,
+  Link,
+  List,
+  ListItem,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
+import {
+  RiLinkedinFill,
+  RiFacebookFill,
+  RiInstagramFill,
+  RiTwitterFill,
+  RiGithubFill,
+  RiSpotifyFill,
+} from "react-icons/ri";
 
 export default function Footer() {
   const links = [
@@ -15,99 +34,90 @@ export default function Footer() {
     {
       title: "LinkedIn",
       href: "https://www.linkedin.com/in/topherjamesknoll",
-      icon: "ri-linkedin-fill",
+      icon: RiLinkedinFill,
     },
     {
       title: "Instagram",
       href: "https://instagram.com/stupendousweb_",
-      icon: "ri-instagram-fill",
+      icon: RiInstagramFill,
     },
     {
       title: "Twitter",
       href: "https://twitter.com/stupendousweb",
-      icon: "ri-twitter-fill",
+      icon: RiTwitterFill,
     },
     {
       title: "Facebook",
       href: "https://facebook.com/stupendousweb",
-      icon: "ri-facebook-fill",
+      icon: RiFacebookFill,
     },
     {
       title: "GitHub",
       href: "https://github.com/stupendous-web",
-      icon: "ri-github-fill",
+      icon: RiGithubFill,
     },
     {
       title: "Spotify",
       href: "https://open.spotify.com/user/128910259",
-      icon: "ri-spotify-fill",
+      icon: RiSpotifyFill,
     },
   ];
 
   return (
-    <>
-      <div className={"uk-section uk-section-muted uk-section-xsmall"}>
-        <div className={"uk-container uk-container-small uk-text-small"}>
-          <div className={"uk-child-width-1-2@s"} data-uk-grid={""}>
-            <div>
-              <ul className={"uk-nav uk-nav-default uk-column-1-2@s"}>
-                {links.map((link, key) => (
-                  <li key={key}>
-                    <Link
-                      href={link.href}
-                      title={
-                        link.title +
-                        " | Software Development Services | Stupendous Web"
-                      }
-                    >
-                      {link.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className={"uk-width-1-2@s uk-flex-middle"}>
-              <div>
-                <p>
-                  <a
-                    href={"mailto:topher@stupendousweb.com"}
-                    style={{ fontSize: "1rem" }}
+    <Box bg={"gray.900"}>
+      <Container maxW={"container.xl"} py={8}>
+        <SimpleGrid columns={[1, 2]}>
+          <Box mb={[8, 0]}>
+            <List>
+              {links.map((link, key) => (
+                <ListItem key={key}>
+                  <Link
+                    as={NextLink}
+                    href={link.href}
+                    title={`${link.title} | Software Development Services | Stupendous Web`}
                   >
-                    topher@stupendousweb.com
-                  </a>
-                </p>
-                <p>
-                  {socialLinks?.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      title={`Find me on ${link.title}!`}
-                      target={"_blank"}
-                      className={"uk-margin-small-right"}
-                    >
-                      <i className={link.icon} />
-                    </Link>
-                  ))}
-                </p>
-                <div className={"uk-margin uk-text-muted"}>
-                  <div>
-                    &copy; Copyright{" "}
-                    <Link
-                      href={"/"}
-                      title={
-                        "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
-                      }
-                    >
-                      Stupendous Web
-                    </Link>{" "}
-                    2022. All rights reserved.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+                    {link.title}
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+          <Box>
+            <Text as={"strong"} fontSize={"xl"}>
+              <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
+                topher@stupendousweb.com
+              </Link>
+            </Text>
+            <Flex mt={2} mb={8}>
+              {socialLinks?.map((link) => (
+                <Link
+                  as={NextLink}
+                  key={link.href}
+                  href={link.href}
+                  title={`Find me on ${link.title}!`}
+                  target={"_blank"}
+                  mr={4}
+                >
+                  <Icon as={link.icon} />
+                </Link>
+              ))}
+            </Flex>
+            <Text fontSize={"xs"} color={"gray.500"}>
+              &copy; Copyright{" "}
+              <Link
+                as={NextLink}
+                href={"/"}
+                title={
+                  "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
+                }
+              >
+                Stupendous Web
+              </Link>{" "}
+              2022. All rights reserved.
+            </Text>
+          </Box>
+        </SimpleGrid>
+      </Container>
+    </Box>
   );
 }
