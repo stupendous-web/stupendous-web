@@ -1,13 +1,12 @@
-import "devicon";
 import Image from "next/image";
+import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 
 export default function Project({
   children,
   images,
   name,
-  icons,
   quote,
-  style,
+  quoteAuthor,
 }) {
   function importImages(require) {
     let images = {};
@@ -22,32 +21,31 @@ export default function Project({
   );
 
   return (
-    <>
-      <div className={"uk-section"} style={style}>
-        <Image
-          src={context[images[0]]}
-          alt={"Software Development Services"}
-          className={"uk-margin"}
-        />
-        <div className={"uk-child-width-1-3 uk-margin"} data-uk-grid={""}>
-          {images?.slice(1, 4).map((image) => (
-            <div key={image}>
-              <Image
-                src={context[image]}
-                alt={"Software Development Services"}
-              />
-            </div>
-          ))}
-        </div>
-        <h2>{name}</h2>
-        <div>{children}</div>
-        {quote}
-        <p className={"uk-h2 uk-text-right"}>
-          {icons.map((icon, key) => (
-            <i key={key} className={icon + " uk-margin-small-left"} />
-          ))}
-        </p>
-      </div>
-    </>
+    <Box py={[16, 32]}>
+      <Image src={context[images[0]]} alt={"Software Development Services"} />
+      <SimpleGrid columns={3} spacing={4} mt={4}>
+        {images?.slice(1, 4).map((image) => (
+          <div key={image}>
+            <Image src={context[image]} alt={"Software Development Services"} />
+          </div>
+        ))}
+      </SimpleGrid>
+      <Heading my={4}>{name}</Heading>
+      {children}
+      {quote && (
+        <Text
+          as={"blockquote"}
+          px={8}
+          mt={4}
+          borderLeft={"1px solid"}
+          borderColor={"primary.500"}
+        >
+          {quote}
+          <Text as={"footer"} mt={4}>
+            <Text as={"cite"}>{quoteAuthor}</Text>
+          </Text>
+        </Text>
+      )}
+    </Box>
   );
 }
