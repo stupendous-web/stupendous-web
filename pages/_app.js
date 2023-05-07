@@ -79,7 +79,7 @@ function MyApp({ Component, pageProps }) {
             <Pride />
             <Navigation />
             <Contact />
-            {/*<Menu />*/}
+            <Menu />
             <Logo />
             <Loading />
             <Cursor />

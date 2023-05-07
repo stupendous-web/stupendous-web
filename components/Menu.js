@@ -1,21 +1,39 @@
 import { useState } from "react";
-import Link from "next/link";
+import NextLink from "next/link";
 import Image from "next/image";
-
-import Logo from "./Logo";
+import {
+  RiMenuFill,
+  RiCloseFill,
+  RiLinkedinFill,
+  RiInstagramFill,
+  RiTwitterFill,
+  RiFacebookFill,
+  RiGithubFill,
+  RiSpotifyFill,
+} from "react-icons/ri";
+import {
+  Box,
+  Flex,
+  Heading,
+  Icon,
+  Link,
+  List,
+  ListIcon,
+  ListItem,
+} from "@chakra-ui/react";
 
 import isometric11 from "../images/isometrics/isometric-1-1-white.png";
 import isometric12 from "../images/isometrics/isometric-1-2-white.png";
 import isometric21 from "../images/isometrics/isometric-2-1-white.png";
 import isometric22 from "../images/isometrics/isometric-2-2-white.png";
 import isometric23 from "../images/isometrics/isometric-2-3-white.png";
+import contact from "../images/pages/contact.png";
 
 export default function Menu() {
-  const [menuButtonClass, setMenuButtonClass] = useState("");
-  const [closeButtonClass, setCloseButtonClass] = useState("uk-hidden");
   const [backgroundClass, setBackgroundClass] = useState("");
   const [isometricStyles, setIsometricStyles] = useState([1, 0, 0, 0, 0]);
   const [menuClass, setMenuClass] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     { href: "projects", title: "Projects" },
@@ -28,47 +46,45 @@ export default function Menu() {
     {
       title: "LinkedIn",
       href: "https://www.linkedin.com/in/topherjamesknoll",
-      icon: "ri-linkedin-fill",
+      icon: RiLinkedinFill,
     },
     {
       title: "Instagram",
       href: "https://instagram.com/stupendousweb_",
-      icon: "ri-instagram-fill",
+      icon: RiInstagramFill,
     },
     {
       title: "Twitter",
       href: "https://twitter.com/stupendousweb",
-      icon: "ri-twitter-fill",
+      icon: RiTwitterFill,
     },
     {
       title: "Facebook",
       href: "https://facebook.com/stupendousweb",
-      icon: "ri-facebook-fill",
+      icon: RiFacebookFill,
     },
     {
       title: "GitHub",
       href: "https://github.com/stupendous-web",
-      icon: "ri-github-fill",
+      icon: RiGithubFill,
     },
     {
       title: "Spotify",
       href: "https://open.spotify.com/user/128910259",
-      icon: "ri-spotify-fill",
+      icon: RiSpotifyFill,
     },
   ];
 
   const showMenu = () => {
+    setIsOpen(true);
     setBackgroundClass("slide-in-right");
     setMenuClass("slide-in-right");
-    setMenuButtonClass("uk-hidden");
-    setCloseButtonClass("uk-visible");
   };
 
   const hideMenu = () => {
+    setIsOpen(false);
     setBackgroundClass("slide-out-right");
     setMenuClass("slide-out-right");
-    setMenuButtonClass("uk-visible");
-    setCloseButtonClass("uk-hidden");
   };
 
   const changeIsometric = (isometric) => {
@@ -91,52 +107,46 @@ export default function Menu() {
 
   return (
     <>
-      <div
-        className={
-          "uk-section-secondary uk-light uk-width-1-1 uk-grid-collapse uk-child-width-2-3@s " +
-          menuClass
-        }
+      <Box
+        bg={"gray.800"}
+        w={"100%"}
+        position={"fixed"}
+        top={0}
+        left={0}
+        className={backgroundClass}
         style={{
-          position: "fixed",
-          top: 0,
-          left: "0",
-          transform: "translate3d(100%,0,0)",
+          transform: "translateX(100%)",
         }}
-        data-uk-grid={""}
       >
-        <div
-          className={"uk-flex uk-flex-middle"}
-          style={{ marginLeft: "1rem" }}
-          data-uk-height-viewport={""}
-        >
-          <div className={"uk-width-1-1"} data-uk-grid={""}>
-            <div className={"uk-width-1-4"}>
-              <ul className={"uk-list"}>
+        <Flex align={"center"} h={"100vh"} w={"66.66%"} ml={4}>
+          <Flex w={"100%"}>
+            <Box w={"25%"}>
+              <List spacing={4} mt={1} style={{ columns: 1 }}>
                 {socialLinks?.map((link) => (
-                  <li key={link.href} className={"uk-margin-remove"}>
-                    <Link
+                  <ListItem key={link.href}>
+                    <NextLink
                       href={link.href}
                       title={`Find me on ${link.title}!`}
                       target={"_blank"}
                     >
-                      <i className={link.icon} />
-                    </Link>
-                  </li>
+                      <ListIcon as={link.icon} />
+                    </NextLink>
+                  </ListItem>
                 ))}
-              </ul>
-            </div>
-            <div className={"uk-width-3-4"}>
-              <ul className={"uk-list"}>
+              </List>
+            </Box>
+            <Box w={"75%"}>
+              <List spacing={8} style={{ columns: 1 }}>
                 {links.map((link, key) => {
                   return (
-                    <li
+                    <ListItem
                       key={key}
-                      className={"uk-h1 uk-margin-remove"}
-                      style={{ width: "fit-content" }}
                       onMouseEnter={() => changeIsometric(key + 1)}
                       onMouseLeave={() => changeIsometric(0)}
+                      w={"fit-content"}
                     >
                       <Link
+                        as={NextLink}
                         href={"/" + link.href}
                         title={
                           link.title +
@@ -144,77 +154,76 @@ export default function Menu() {
                         }
                         onClick={() => hideMenu()}
                       >
-                        {link.title}
+                        <Heading size={"3xl"}>{link.title}</Heading>
                       </Link>
-                    </li>
+                    </ListItem>
                   );
                 })}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className={
-          "uk-background-primary uk-width-1-3 uk-height-viewport uk-flex uk-flex-center uk-flex-middle uk-visible@s " +
-          backgroundClass
-        }
-        style={{
-          position: "fixed",
-          top: 0,
-          right: 0,
-          transform: "translate3d(100%, 0, 0)",
-        }}
-      >
-        <div className={"uk-width-1-1 uk-inline"}>
-          <Image
-            src={isometric11}
-            alt={"Software Development Services"}
-            className={"uk-position-center uk-padding-large"}
-            style={{ opacity: isometricStyles[0] }}
-          />
-          <Image
-            src={isometric12}
-            alt={"Software Development Services"}
-            className={"uk-position-center uk-padding-large"}
-            style={{ opacity: isometricStyles[1] }}
-          />
-          <Image
-            src={isometric21}
-            alt={"Software Development Services"}
-            className={"uk-position-center uk-padding-large"}
-            style={{ opacity: isometricStyles[2] }}
-          />
-          <Image
-            src={isometric22}
-            alt={"Software Development Services"}
-            className={"uk-position-center uk-padding-large"}
-            style={{ opacity: isometricStyles[3] }}
-          />
-          <Image
-            src={isometric23}
-            alt={"Software Development Services"}
-            className={"uk-position-center uk-padding-large"}
-            style={{ opacity: isometricStyles[4] }}
-          />
-        </div>
-      </div>
-      <Logo />
-      <h3
-        className={"uk-margin-remove uk-light"}
-        style={{ position: "fixed", top: "1.5rem", right: "1rem" }}
-      >
-        <div onClick={showMenu} className={menuButtonClass}>
-          <a>
-            <i className={"ri-menu-fill"} />
-          </a>
-        </div>
-        <div onClick={hideMenu} className={closeButtonClass}>
-          <a>
-            <i className="ri-close-fill" />
-          </a>
-        </div>
-      </h3>
+              </List>
+            </Box>
+          </Flex>
+        </Flex>
+        <Flex
+          align={"center"}
+          bg={"primary.500"}
+          h={"100%"}
+          w={"33.33%"}
+          position={"fixed"}
+          top={0}
+          right={0}
+          hideBelow={"sm"}
+          className={menuClass}
+          style={{
+            transform: "translateX(100%)",
+          }}
+        >
+          <Flex
+            align={"center"}
+            justify={"center"}
+            h={"100%"}
+            w={"100%"}
+            position={"relative"}
+            m={40}
+          >
+            <Image
+              src={isometric11}
+              alt={"Software Development Services"}
+              style={{ position: "absolute", opacity: isometricStyles[0] }}
+            />
+            <Image
+              src={isometric12}
+              alt={"Software Development Services"}
+              style={{ position: "absolute", opacity: isometricStyles[1] }}
+            />
+            <Image
+              src={isometric21}
+              alt={"Software Development Services"}
+              style={{ position: "absolute", opacity: isometricStyles[2] }}
+            />
+            <Image
+              src={isometric22}
+              alt={"Software Development Services"}
+              style={{ position: "absolute", opacity: isometricStyles[3] }}
+            />
+            <Image
+              src={isometric23}
+              alt={"Software Development Services"}
+              style={{ position: "absolute", opacity: isometricStyles[4] }}
+            />
+          </Flex>
+        </Flex>
+      </Box>
+      <Box position={"fixed"} top={7} right={4} cursor={"pointer"}>
+        {isOpen ? (
+          <Box onClick={hideMenu}>
+            <Icon as={RiCloseFill} color={"white"} boxSize={8} />
+          </Box>
+        ) : (
+          <Box onClick={showMenu}>
+            <Icon as={RiMenuFill} color={"white"} boxSize={8} />
+          </Box>
+        )}
+      </Box>
     </>
   );
 }
