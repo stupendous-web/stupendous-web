@@ -14,3 +14,14 @@
     }
 
 }
+.slide-out-left {
+    animation: slide-out-left .5s cubic-bezier(0.550, 0.055, 0.675, 0.190) forwards;
+}
+@keyframes slide-out-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

@@ -1,5 +1,6 @@
 import { useGlobal } from "../lib/context";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Box, Text, Flex } from "@chakra-ui/react";
 
 export default function Loading() {
   const { isLoading } = useGlobal();
@@ -9,31 +10,22 @@ export default function Loading() {
   });
 
   return (
-    <>
-      <div
-        className={isLoading ? undefined : "slide-out-left"}
-        style={{
-          width: "100%",
-          position: "fixed",
-          top: 0,
-          left: 0,
-          animationDelay: ".5s",
-        }}
-      >
-        <div
-          className={"uk-section-primary uk-flex uk-flex-middle"}
-          data-uk-height-viewport={""}
-        >
-          <div className={"uk-width-1-1"}>
-            <div className={"uk-container uk-container-xsmall"}>
-              <p style={{ fontFamily: "monospace" }}>
-                {text}
-                <Cursor cursorStyle={"█"} />
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    <Box
+      w={"100%"}
+      position={"fixed"}
+      top={0}
+      left={0}
+      className={isLoading ? undefined : "slide-out-left"}
+      style={{
+        animationDelay: ".5s",
+      }}
+    >
+      <Flex align={"center"} justify={"center"} bg={"primary.500"} h={"100vh"}>
+        <Text as={"code"}>
+          {text}
+          <Cursor cursorStyle={"█"} />
+        </Text>
+      </Flex>
+    </Box>
   );
 }

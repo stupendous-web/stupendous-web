@@ -81,7 +81,7 @@ function MyApp({ Component, pageProps }) {
             <Contact />
             {/*<Menu />*/}
             <Logo />
-            {/*<Loading />*/}
+            <Loading />
             <Cursor />
           </Provider>
         </ParallaxProvider>
