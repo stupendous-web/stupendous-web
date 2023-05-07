@@ -38,7 +38,7 @@ export default function Articles({ articles, tags }) {
       <Head>
         <title>Articles | Software Development Services | Stupendous Web</title>
       </Head>
-      <Container maxW={"container.xl"} pt={[16, 32]} pb={8}>
+      <Container maxW={"container.xl"} pt={32} pb={8}>
         <Flex direction={["column", "row"]} align={"center"}>
           <Box w={["100%", "33.33%"]} pr={4} mb={8}>
             <Image

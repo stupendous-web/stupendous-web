@@ -61,7 +61,7 @@ export default function Article({ article }) {
         publisherLogo={"https://stupendousweb.com/images/logo.png"}
         isAccessibleForFree={true}
       />
-      <Container maxW={"container.lg"} pt={8} pb={[16, 32]}>
+      <Container maxW={"container.lg"} pt={32} pb={8}>
         {article?.featured_image && (
           <AspectRatio maxW={"100%"} ratio={16 / 9} mb={8}>
             <Image

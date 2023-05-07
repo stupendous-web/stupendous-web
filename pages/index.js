@@ -137,7 +137,7 @@ export default function Home({ articles }) {
         <Container maxW={"container.xl"}>
           <Flex direction={["column", "row"]} align={"center"}>
             <Box w={["100%", "50%"]}>
-              <Heading as={"h1"} size={"4xl"} mb={4}>
+              <Heading as={"h1"} size={"4xl"} mb={4} mt={[44, 0]}>
                 Software Development Services
               </Heading>
               <Flex align={"center"} mt={8}>
