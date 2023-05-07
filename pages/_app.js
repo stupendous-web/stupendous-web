@@ -78,11 +78,11 @@ function MyApp({ Component, pageProps }) {
             <Footer />
             <Pride />
             <Navigation />
-            {/*<Contact />*/}
+            <Contact />
             {/*<Menu />*/}
             <Logo />
             {/*<Loading />*/}
-            {/*<Cursor />*/}
+            <Cursor />
           </Provider>
         </ParallaxProvider>
       </ChakraProvider>
