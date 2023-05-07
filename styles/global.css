@@ -1,3 +1,7 @@
+::selection {
+    background: #d02670;
+}
+
 .flash {
     animation: flash .8s;
     animation-iteration-count: infinite;
