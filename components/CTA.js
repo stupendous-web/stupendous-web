@@ -50,14 +50,14 @@ class CTA extends React.Component {
                       as={NextLink}
                       href={"mailto:topher@stupendousweb.com"}
                     >
-                      <Icon as={RiMailFill} boxSize={8} />
+                      <Icon as={RiMailFill} color={"white"} boxSize={8} />
                     </Link>
                   </Tooltip>
                 </Box>
                 <Box>
                   <Tooltip label={"Call or Text Me!"} fontSize={"md"}>
                     <Link as={NextLink} href={"tel:5108906429"}>
-                      <Icon as={RiPhoneFill} boxSize={8} />
+                      <Icon as={RiPhoneFill} color={"white"} boxSize={8} />
                     </Link>
                   </Tooltip>
                 </Box>
