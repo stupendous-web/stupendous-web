@@ -28,8 +28,20 @@ export default function Projects() {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text as={"code"}>
-              Let&apos;s build internet community through my custom software
+            <Text
+              as={"span"}
+              fontFamily={"mono"}
+              fontSize={"64px"}
+              float={"left"}
+              lineHeight={"60px"}
+              pt={1}
+              pr={2}
+              mb={0}
+            >
+              L
+            </Text>
+            <Text as={"span"} fontFamily={"mono"}>
+              et&apos;s build internet community through my custom software
               development services. Look at a few of the certified,
               award-winning, and engaging apps I’ve created. They&apos;ve helped
               build my clients stronger brand awareness and authority.

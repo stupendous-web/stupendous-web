@@ -28,8 +28,20 @@ export default function About() {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text as={"code"}>
-              Do you value meaningful work, tolerance, equality, creativity, and
+            <Text
+              as={"span"}
+              fontFamily={"mono"}
+              fontSize={"64px"}
+              float={"left"}
+              lineHeight={"60px"}
+              pt={1}
+              pr={2}
+              mb={0}
+            >
+              D
+            </Text>
+            <Text as={"span"} fontFamily={"mono"}>
+              o you value meaningful work, tolerance, equality, creativity, and
               authenticity? My software development services help people like
               you to engage with their audiences and tribes in creative and
               impactful ways.

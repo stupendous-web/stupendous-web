@@ -39,8 +39,20 @@ export default function Review2022() {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text as={"code"}>
-              At the end of every year I try my best with various tools and
+            <Text
+              as={"span"}
+              fontFamily={"mono"}
+              fontSize={"64px"}
+              float={"left"}
+              lineHeight={"60px"}
+              pt={1}
+              pr={2}
+              mb={0}
+            >
+              A
+            </Text>
+            <Text as={"span"} fontFamily={"mono"}>
+              t the end of every year I try my best with various tools and
               methods to assess who I am and my values to better serve myself,
               my communities, and my clients. Here are some conclusions I drew
               from 2022.

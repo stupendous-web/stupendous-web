@@ -41,10 +41,22 @@ export default function Services() {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text as={"code"}>
-              My software development services make it easy for you to build
-              your brand and relationships with interested customers by building
-              you a revolutionary project, delivering it to your clients, and
+            <Text
+              as={"span"}
+              fontFamily={"mono"}
+              fontSize={"64px"}
+              float={"left"}
+              lineHeight={"60px"}
+              pt={1}
+              pr={2}
+              mb={0}
+            >
+              M
+            </Text>
+            <Text as={"span"} fontFamily={"mono"}>
+              y software development services make it easy for you to build your
+              brand and relationships with interested customers by building you
+              a revolutionary project, delivering it to your clients, and
               keeping it modern and new!
             </Text>
           </Box>

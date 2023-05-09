@@ -87,8 +87,20 @@ export default function Contact() {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text as={"code"}>
-              Let&apos;s talk goals. Get in touch below or schedule your 2 FREE
+            <Text
+              as={"span"}
+              fontFamily={"mono"}
+              fontSize={"64px"}
+              float={"left"}
+              lineHeight={"60px"}
+              pt={1}
+              pr={2}
+              mb={0}
+            >
+              L
+            </Text>
+            <Text as={"span"} fontFamily={"mono"}>
+              et&apos;s talk goals. Get in touch below or schedule your 2 FREE
               consultations. You&apos;ll receive a creative brief, project plan,
               and secret website where you can preview your project. Lastly,
               we&apos;ll launch your website and app to the internet!
