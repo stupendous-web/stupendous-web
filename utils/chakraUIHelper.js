@@ -45,6 +45,7 @@ const theme = extendTheme({
         bg: "black",
         color: "gray.200",
         overflowX: "hidden",
+        lineHeight: 2,
       },
     },
   },
@@ -52,6 +53,11 @@ const theme = extendTheme({
     heading: "transducer, sans-serif",
     body: "transducer, sans-serif",
     mono: "anonymous-pro, monospace",
+  },
+  fontSizes: {
+    "4xl": "3rem", // Heading
+    "5xl": "4rem", // Heading size={"2xl"}
+    "7xl": "6rem", // Heading size={"4xl"}
   },
   fontWeights: {
     bold: 800,

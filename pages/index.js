@@ -137,7 +137,7 @@ export default function Home({ articles }) {
         <Container maxW={"container.xl"}>
           <Flex direction={["column", "row"]} align={"center"}>
             <Box w={["100%", "50%"]}>
-              <Heading as={"h1"} size={"4xl"} mb={4} mt={[44, 0]}>
+              <Heading as={"h1"} size={"2xl"} mb={4} mt={[44, 0]}>
                 Software Development Services
               </Heading>
               <Flex align={"center"} mt={8}>
@@ -187,7 +187,7 @@ export default function Home({ articles }) {
         </Container>
       </Flex>
       <Container maxW={"container.sm"} pt={[16, 0]} pb={[16, 32]}>
-        <Heading size={"2xl"} mb={8}>
+        <Heading size={"xl"} mb={8}>
           If you want to build community, build stupendous software.
         </Heading>
         <Text as={"code"}>
