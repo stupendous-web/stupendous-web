@@ -55,6 +55,7 @@ const theme = extendTheme({
     mono: "anonymous-pro, monospace",
   },
   fontSizes: {
+    xl: "2rem", // Heading size={"lg"}
     "4xl": "3rem", // Heading
     "5xl": "4rem", // Heading size={"2xl"}
     "7xl": "6rem", // Heading size={"4xl"}

@@ -53,12 +53,14 @@ export default function Articles({ articles }) {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            {/*<Text as={"code"}>*/}
-            {/*  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque*/}
-            {/*  deserunt illo nemo! Aliquam commodi cum dolore, eum iste labore*/}
-            {/*  optio quam sed sunt. Corporis debitis maiores neque perferendis*/}
-            {/*  quo quod.*/}
-            {/*</Text>*/}
+            <Text as={"code"}>
+              Inspiration for getting you, your work, and your service to the
+              people that need it most. Email{" "}
+              <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
+                topher@stupendousweb.com
+              </Link>{" "}
+              to contribute your story!
+            </Text>
           </Box>
         </Flex>
       </Container>
@@ -86,7 +88,7 @@ export default function Articles({ articles }) {
 
                 return (
                   <Flex key={article.ID}>
-                    <Box w={"66.66%"} pr={8}>
+                    <Box w={"66.66%"} pr={8} mb={4}>
                       <Flex align={"center"} mb={4}>
                         <Image
                           src={article?.author?.avatar_URL}
@@ -102,7 +104,7 @@ export default function Articles({ articles }) {
                           {article?.author?.name}
                         </Link>
                       </Flex>
-                      <Heading className={"uk-h3 uk-margin-remove-top"}>
+                      <Heading size={"lg"} mb={4}>
                         <Link
                           href={"/articles/" + article?.slug}
                           title={
