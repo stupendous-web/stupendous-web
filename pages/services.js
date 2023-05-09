@@ -84,7 +84,7 @@ export default function Services() {
               phone, so your community can find it and connect with you, and
               maintain the project even after it&apos;s done.
             </Text>
-            <Heading id={"websites"} mb={8}>
+            <Heading mb={8} style={{ scrollMarginTop: "8rem" }} id={"websites"}>
               Web Pages and Web Apps
             </Heading>
             <Text mb={4}>
@@ -118,7 +118,11 @@ export default function Services() {
                 </ListItem>
               ))}
             </List>
-            <Heading id={"ios-and-android-apps"} mb={8}>
+            <Heading
+              mb={8}
+              style={{ scrollMarginTop: "8rem" }}
+              id={"ios-and-android-apps"}
+            >
               iOS and Android Apps
             </Heading>
             <Text mb={4}>
@@ -164,7 +168,7 @@ export default function Services() {
                 src={servicesImage}
                 alt={"Software Development Services"}
                 id={"consulting"}
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", scrollMarginTop: "8rem" }}
               />
             </AspectRatio>
             <Heading mb={8}>Two FREE Consultations</Heading>
@@ -179,7 +183,11 @@ export default function Services() {
               apps. These consultations are designed for us to better deliver
               your product in a more impactful way.
             </Text>
-            <Heading id={"software-development"} mb={8}>
+            <Heading
+              mb={8}
+              style={{ scrollMarginTop: "8rem" }}
+              id={"software-development"}
+            >
               Software Development
             </Heading>
             <Text mb={4}>
@@ -191,7 +199,11 @@ export default function Services() {
               community, audiences, and people who love and need your product
               the most with a website and iOS/Android app.
             </Text>
-            <Heading id={"secure-managed-domain-and-hosting"} mb={8}>
+            <Heading
+              mb={8}
+              style={{ scrollMarginTop: "8rem" }}
+              id={"secure-managed-domain-and-hosting"}
+            >
               Secure, Managed Domain and Hosting
             </Heading>
             <Text mb={4}>
