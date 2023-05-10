@@ -60,9 +60,9 @@ export default function Review2022() {
           </Box>
         </Flex>
       </Container>
-      <Parallax translateY={[0, 0]} translateX={[250, -100]}>
+      <Parallax translateY={[0, 0]} translateX={[75, -100]}>
         <Container maxW={"container.xl"} py={8}>
-          <Heading as={"h1"} size={"4xl"}>
+          <Heading as={"h1"} size={"4xl"} textAlign={"right"}>
             2022 Review
           </Heading>
         </Container>

@@ -44,7 +44,9 @@ export default function Testimonials() {
             <Flex h={"100%"} direction={"column"} justify={"space-between"}>
               <Box>
                 <Text>{testimonial.name}</Text>
-                <Heading mb={8}>{testimonial.title}</Heading>
+                <Heading size={"lg"} mb={8}>
+                  {testimonial.title}
+                </Heading>
                 <Text mb={8}>{testimonial.review}</Text>
               </Box>
               <Box>

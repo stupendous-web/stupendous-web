@@ -24,13 +24,13 @@ class CTA extends React.Component {
         align={"center"}
         justify={"center"}
         bg={"primary.500"}
-        h={["calc(100vh - 304px)", "calc(100vh - 176px)"]}
+        h={["calc(100vh - 304px)", "calc(100vh - 240px)"]}
         py={8}
       >
         <Container maxW={"container.xl"}>
           <SimpleGrid columns={[1, 2]} spacing={4}>
             <Box>
-              <Heading size={"4xl"} mb={4}>
+              <Heading size={"3xl"} mb={4}>
                 Your two consultations are now FREE!
               </Heading>
               <Flex align={"center"} mt={8}>

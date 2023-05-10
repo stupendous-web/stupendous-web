@@ -83,7 +83,7 @@ export default function Footer() {
             </List>
           </Box>
           <Box>
-            <Text as={"strong"} fontSize={"xl"}>
+            <Text as={"strong"} fontSize={"lg"}>
               <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
                 topher@stupendousweb.com
               </Link>

@@ -108,9 +108,9 @@ export default function Contact() {
           </Box>
         </Flex>
       </Container>
-      <Parallax translateY={[0, 0]} translateX={[250, -100]}>
+      <Parallax translateY={[0, 0]} translateX={[75, -100]}>
         <Container maxW={"container.xl"} py={8}>
-          <Heading as={"h1"} size={"4xl"}>
+          <Heading as={"h1"} size={"4xl"} textAlign={"right"}>
             Contact
           </Heading>
         </Container>
@@ -126,7 +126,7 @@ export default function Contact() {
                 style={{ objectFit: "cover" }}
               />
             </AspectRatio>
-            <List fontSize={"xl"} mb={8} __css={{ columns: 1 }}>
+            <List fontSize={"lg"} mb={8} __css={{ columns: 1 }}>
               {contactLinks.map((link, key) => (
                 <ListItem key={key} borderBottom={"solid 1px"} py={4}>
                   <ListIcon as={link.icon} color={"primary.500"} />
@@ -138,7 +138,7 @@ export default function Contact() {
               ))}
             </List>
             <Text mb={4}>Clients</Text>
-            <List fontSize={"xl"} mb={8} __css={{ columns: 1 }}>
+            <List fontSize={"lg"} mb={8} __css={{ columns: 1 }}>
               {adminLinks.map((link, key) => (
                 <ListItem key={key} borderBottom={"solid 1px"} py={4}>
                   <ListIcon as={link.icon} color={"primary.500"} />

@@ -29,7 +29,12 @@ export default function Navigation() {
             <Box key={link.href} mr={8}>
               <Popover trigger={"hover"}>
                 <PopoverTrigger>
-                  <Link as={NextLink} href={`/${link.href}`} color={"white"}>
+                  <Link
+                    as={NextLink}
+                    href={`/${link.href}`}
+                    color={"white"}
+                    fontWeight={"bold"}
+                  >
                     {link.title}
                   </Link>
                 </PopoverTrigger>
@@ -60,6 +65,7 @@ export default function Navigation() {
               href={`/${link.href}`}
               title={`${link.title} | Software Development Services | Stupendous Web`}
               color={"white"}
+              fontWeight={"bold"}
               mr={key < links.length - 1 ? 8 : 0}
             >
               {link.title}
