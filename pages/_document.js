@@ -7,6 +7,7 @@ export default function Document() {
       <Head>
         {process.env.NODE_ENV !== "development" && (
           <>
+            <Script src={"https://stupendousanalytics.com/capture.js"} />
             <Script
               strategy={"lazyOnload"}
               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
