@@ -1,5 +1,4 @@
 import Head from "next/head";
-import "remixicon/fonts/remixicon.css";
 import { Provider } from "../lib/context";
 import StupendousAnalytics from "stupendous-analytics-next";
 import { ChakraProvider } from "@chakra-ui/react";

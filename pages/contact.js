@@ -131,7 +131,6 @@ export default function Contact() {
                 <ListItem key={key} borderBottom={"solid 1px"} py={4}>
                   <ListIcon as={link.icon} color={"primary.500"} />
                   <Link as={NextLink} href={link.href} title={link.title}>
-                    <i className={`${link.icon} uk-margin-right`} />
                     {link.anchor}
                   </Link>
                 </ListItem>
@@ -148,7 +147,6 @@ export default function Contact() {
                     title={link.title}
                     className={"uk-flex uk-flex-middle"}
                   >
-                    <i className={`${link.icon} uk-margin-right`} />
                     {link.anchor}
                   </Link>
                 </ListItem>
