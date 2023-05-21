@@ -5,12 +5,14 @@ export default function Document() {
   return (
     <Html lang={"en"}>
       <Head>
-        <Script
-          strategy={"lazyOnload"}
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-        />
-        <Script strategy={"lazyOnload"} id={"google-analytics"}>
-          {`
+        {process.env.NODE_ENV !== "development" && (
+          <>
+            <Script
+              strategy={"lazyOnload"}
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+            />
+            <Script strategy={"lazyOnload"} id={"google-analytics"}>
+              {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
@@ -18,7 +20,9 @@ export default function Document() {
           page_path: window.location.pathname,
           });
       `}
-        </Script>
+            </Script>
+          </>
+        )}
         <link
           href={"https://use.typekit.net/aqk5kto.css"}
           rel={"preload"}
