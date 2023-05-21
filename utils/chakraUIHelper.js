@@ -61,7 +61,7 @@ const theme = extendTheme({
     "7xl": "6rem", // Heading size={"4xl"}
   },
   fontWeights: {
-    bold: 800,
+    bold: 900,
   },
   radii: {
     none: 0,
