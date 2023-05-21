@@ -1,8 +1,6 @@
-import { useEffect } from "react";
-import { useRouter } from "next/router";
+import Head from "next/head";
 import "remixicon/fonts/remixicon.css";
 import { Provider } from "../lib/context";
-import * as gtag from "../lib/gtag";
 import StupendousAnalytics from "stupendous-analytics-next";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../utils/chakraUIHelper";
@@ -20,19 +18,6 @@ import Loading from "../components/Loading";
 import Cursor from "../components/Cursor";
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      document.location.hostname !== "localhost" && gtag.pageview(url);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
-
   console.log(
     "%c ███  █████ █   █ ████  ████ █   █ ███   ███  █   █  ███  █     █ ████ ████\n" +
       "█       █   █   █ █   █ █    ██  █ █  █ █   █ █   █ █     █     █ █    █   █\n" +
@@ -45,6 +30,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <StupendousAnalytics site={"642cf18729b904f37d859011"} />
+      <Head>
+        <meta name={"viewport"} content={"width=device-width"} />
+      </Head>
       <ChakraProvider theme={theme}>
         <ParallaxProvider>
           <Provider>
