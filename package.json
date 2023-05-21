@@ -28,7 +28,7 @@
     "remixicon": "^2.5.0",
     "sharp": "^0.32.1",
     "slick-carousel": "^1.8.1",
-    "stupendous-analytics-next": "^1.0.5"
+    "stupendous-analytics-next": "^1.0.6"
   },
   "devDependencies": {
     "eslint": "8.19.0",
