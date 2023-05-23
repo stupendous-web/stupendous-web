@@ -9,7 +9,10 @@ export default function Document() {
           strategy={"lazyOnload"}
           id={"stupendous-analytics"}
         >{`const site = "642cf18729b904f37d859011";`}</Script>
-        <Script src={"https://stupendousanalytics.com/footprint.js"} />
+        <Script
+          strategy={"lazyOnload"}
+          src={"https://stupendousanalytics.com/footprint.js"}
+        />
         {process.env.NODE_ENV !== "development" && (
           <>
             <Script
