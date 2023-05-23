@@ -18,7 +18,7 @@ import Cursor from "../components/Cursor";
 
 function MyApp({ Component, pageProps }) {
   console.log(
-    "%c🦸 STUPENDOUS WEB\n\n Email topher@stupendousweb.com to learn more.",
+    "%c🦸 STUPENDOUS WEB\n\nEmail topher@stupendousweb.com to learn more.",
     "color: #d02670"
   );
 

@@ -5,13 +5,13 @@ export default function Document() {
   return (
     <Html lang={"en"}>
       <Head>
+        <Script
+          strategy={"lazyOnload"}
+          id={"stupendous-analytics"}
+        >{`const site = "642cf18729b904f37d859011";`}</Script>
+        <Script src={"https://stupendousanalytics.com/footprint.js"} />
         {process.env.NODE_ENV !== "development" && (
           <>
-            <Script
-              strategy={"lazyOnload"}
-              id={"stupendous-analytics"}
-            >{`const site = "642cf18729b904f37d859011";`}</Script>
-            <Script src={"https://stupendousanalytics.com/footprint.js"} />
             <Script
               strategy={"lazyOnload"}
               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
