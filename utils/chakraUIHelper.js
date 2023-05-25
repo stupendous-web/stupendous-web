@@ -91,6 +91,16 @@ const theme = extendTheme({
       baseStyle: {
         textTransform: "uppercase",
       },
+      variants: {
+        bonkers: {
+          color: "white",
+          border: "1px solid white",
+          boxShadow: "white .5rem .5rem 0 0, white .5rem .5rem 0 1px",
+          _hover: {
+            background: "primary.500",
+          },
+        },
+      },
     },
     Link: {
       baseStyle: {

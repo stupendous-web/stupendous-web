@@ -146,7 +146,7 @@ export default function Home({ articles }) {
                   as={NextLink}
                   href={"https://cal.com/stupendousweb/consultation"}
                 >
-                  <Button colorScheme={"primary"} size={"lg"} mr={8}>
+                  <Button variant={"bonkers"} size={"lg"} mr={8}>
                     Get yours Now
                   </Button>
                 </Link>
@@ -158,6 +158,7 @@ export default function Home({ articles }) {
                       aria-label={"Email me!"}
                       size={"lg"}
                       icon={<RiMailFill />}
+                      pt={4}
                     />
                   </Link>
                 </Tooltip>
@@ -169,6 +170,7 @@ export default function Home({ articles }) {
                       aria-label={"Email me!"}
                       size={"lg"}
                       icon={<RiPhoneFill />}
+                      pt={4}
                     />
                   </Link>
                 </Tooltip>
