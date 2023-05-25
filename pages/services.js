@@ -85,6 +85,9 @@ export default function Services() {
                   </Link>
                 );
               })}
+              <Link as={NextLink} href={"/services/web-app-development"} mr={4}>
+                Web Apps
+              </Link>
             </Flex>
             <Text mb={4}>
               Your project is more than just a pretty website. My software
