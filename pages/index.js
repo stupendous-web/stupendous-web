@@ -27,6 +27,7 @@ import {
   ListItem,
   ListIcon,
   List,
+  IconButton,
 } from "@chakra-ui/react";
 
 import Slide from "../components/Slide";
@@ -137,37 +138,40 @@ export default function Home({ articles }) {
         <Container maxW={"container.xl"}>
           <Flex direction={["column", "row"]} align={"center"}>
             <Box w={["100%", "50%"]}>
-              <Heading as={"h1"} size={"2xl"} mb={4} mt={[44, 0]}>
+              <Heading as={"h1"} size={"2xl"} mb={16} mt={[44, 0]}>
                 Software Development Services
               </Heading>
-              <Flex align={"center"} mt={8}>
-                <Box mr={4}>
-                  <Link
-                    as={NextLink}
-                    href={"https://cal.com/stupendousweb/consultation"}
-                  >
-                    <Button colorScheme={"primary"} size={"lg"}>
-                      Get yours Now
-                    </Button>
+              <Flex align={"center"} mb={8}>
+                <Link
+                  as={NextLink}
+                  href={"https://cal.com/stupendousweb/consultation"}
+                >
+                  <Button colorScheme={"primary"} size={"lg"} mr={8}>
+                    Get yours Now
+                  </Button>
+                </Link>
+                <Tooltip label={"Email me!"} fontSize={"md"}>
+                  <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
+                    <IconButton
+                      colorScheme={"primary"}
+                      variant={"link"}
+                      aria-label={"Email me!"}
+                      size={"lg"}
+                      icon={<RiMailFill />}
+                    />
                   </Link>
-                </Box>
-                <Box mr={4}>
-                  <Tooltip label={"Email me!"} fontSize={"md"}>
-                    <Link
-                      as={NextLink}
-                      href={"mailto:topher@stupendousweb.com"}
-                    >
-                      <Icon as={RiMailFill} boxSize={8} />
-                    </Link>
-                  </Tooltip>
-                </Box>
-                <Box>
-                  <Tooltip label={"Call or Text Me!"} fontSize={"md"}>
-                    <Link as={NextLink} href={"tel:5108906429"}>
-                      <Icon as={RiPhoneFill} boxSize={8} />
-                    </Link>
-                  </Tooltip>
-                </Box>
+                </Tooltip>
+                <Tooltip label={"Call or Text Me!"} fontSize={"md"}>
+                  <Link as={NextLink} href={"tel:5108906429"}>
+                    <IconButton
+                      colorScheme={"primary"}
+                      variant={"link"}
+                      aria-label={"Email me!"}
+                      size={"lg"}
+                      icon={<RiPhoneFill />}
+                    />
+                  </Link>
+                </Tooltip>
               </Flex>
               <Text mt={8}>
                 I help people with something to share who want to engage with
