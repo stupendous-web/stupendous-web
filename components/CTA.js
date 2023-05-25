@@ -7,11 +7,10 @@ import {
   Container,
   Flex,
   Heading,
-  Icon,
-  SimpleGrid,
   Text,
   Tooltip,
   Link,
+  IconButton,
 } from "@chakra-ui/react";
 
 import isometric from "/images/isometrics/isometric-1-3-white.png";
@@ -24,53 +23,66 @@ class CTA extends React.Component {
         align={"center"}
         justify={"center"}
         bg={"primary.500"}
-        h={["calc(100vh - 304px)", "calc(100vh - 240px)"]}
+        h={[null, "calc(100vh - 212px)"]}
         py={8}
       >
-        <Container maxW={"container.xl"}>
-          <SimpleGrid columns={[1, 2]} spacing={4}>
+        <Container maxW={"container.xl"} color={"white"}>
+          <Flex direction={["column", "row"]} align={"center"}>
             <Box>
-              <Heading size={"3xl"} mb={4}>
+              <Heading size={["xl", "3xl"]} mb={16}>
                 Your two consultations are now FREE!
               </Heading>
-              <Flex align={"center"} mt={8}>
-                <Box mr={4}>
-                  <Link
-                    as={NextLink}
-                    href={"https://cal.com/stupendousweb/consultation"}
+              <Flex align={"center"} mb={8}>
+                <Link
+                  as={NextLink}
+                  href={"https://cal.com/stupendousweb/consultation"}
+                >
+                  <Button
+                    color={"white"}
+                    variant={"outline"}
+                    size={"lg"}
+                    mr={8}
                   >
-                    <Button color={"white"} variant={"outline"} size={"lg"}>
-                      Get yours Now
-                    </Button>
+                    Get yours Now
+                  </Button>
+                </Link>
+                <Tooltip label={"Email me!"} fontSize={"md"}>
+                  <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
+                    <IconButton
+                      color={"white"}
+                      variant={"link"}
+                      aria-label={"Email me!"}
+                      size={"lg"}
+                      icon={<RiMailFill />}
+                    />
                   </Link>
-                </Box>
-                <Box mr={4}>
-                  <Tooltip label={"Email me!"} fontSize={"md"}>
-                    <Link
-                      as={NextLink}
-                      href={"mailto:topher@stupendousweb.com"}
-                    >
-                      <Icon as={RiMailFill} color={"white"} boxSize={8} />
-                    </Link>
-                  </Tooltip>
-                </Box>
-                <Box>
-                  <Tooltip label={"Call or Text Me!"} fontSize={"md"}>
-                    <Link as={NextLink} href={"tel:5108906429"}>
-                      <Icon as={RiPhoneFill} color={"white"} boxSize={8} />
-                    </Link>
-                  </Tooltip>
-                </Box>
+                </Tooltip>
+                <Tooltip label={"Call or Text Me!"} fontSize={"md"}>
+                  <Link as={NextLink} href={"tel:5108906429"}>
+                    <IconButton
+                      color={"white"}
+                      variant={"link"}
+                      aria-label={"Email me!"}
+                      size={"lg"}
+                      icon={<RiPhoneFill />}
+                    />
+                  </Link>
+                </Tooltip>
               </Flex>
-              <Text mt={8}>
+              <Text>
                 Find your audience, refine your product, and create solutions
                 for your customers in the first of your two free consultations.
               </Text>
             </Box>
             <Box hideBelow={"sm"}>
-              <Image src={isometric} alt={"Software Development Services"} />
+              <Image
+                src={isometric}
+                alt={
+                  "Your two consultations are now FREE! | Software Development Services"
+                }
+              />
             </Box>
-          </SimpleGrid>
+          </Flex>
         </Container>
       </Flex>
     );
