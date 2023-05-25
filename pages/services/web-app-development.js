@@ -17,7 +17,7 @@ import { RiCheckFill } from "react-icons/ri";
 
 import CTA from "../../components/CTA";
 
-import isometric from "../../images/isometrics/isometric-2-2.png";
+import isometric from "../../images/isometrics/isometric-2-1.png";
 import servicesImage from "../../images/pages/services.png";
 
 export default function WebAppDevelopment() {

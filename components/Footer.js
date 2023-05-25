@@ -27,6 +27,7 @@ export default function Footer() {
     { href: "/contact", title: "Contact" },
     { href: "/2022", title: "2022 Review" },
     { href: "/articles", title: "Articles" },
+    { href: "/services/web-app-development", title: "Web App Development" },
     { href: "https://stupendousanalytics.com", title: "Stupendous Analytics" },
   ];
 

@@ -53,6 +53,18 @@ export default function Navigation() {
                           </Link>
                         </ListItem>
                       ))}
+                      <ListItem>
+                        <Link
+                          as={NextLink}
+                          href={"/services/web-app-development"}
+                          title={
+                            "Web App Development | Software Development Services | Stupendous Web"
+                          }
+                          color={"white"}
+                        >
+                          Web Apps
+                        </Link>
+                      </ListItem>
                     </List>
                   </PopoverBody>
                 </PopoverContent>
