@@ -134,63 +134,70 @@ export default function Home({ articles }) {
           longitude: "-115.061710",
         }}
       />
-      <Flex h={"100vh"} align={"center"} justify={"center"}>
-        <Container maxW={"container.xl"}>
-          <Flex direction={["column", "row"]} align={"center"}>
-            <Box w={["100%", "50%"]}>
-              <Heading as={"h1"} size={"2xl"} mb={16}>
-                Software Development Services
-              </Heading>
-              <Flex align={"center"} mb={8}>
-                <Link
-                  as={NextLink}
-                  href={"https://cal.com/stupendousweb/consultation"}
-                >
-                  <Button variant={"bonkers"} size={"lg"} mr={8}>
-                    Get yours Now
-                  </Button>
-                </Link>
-                <Tooltip label={"Email me!"} fontSize={"md"}>
-                  <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
-                    <IconButton
-                      colorScheme={"primary"}
-                      variant={"link"}
-                      aria-label={"Email me!"}
-                      size={"lg"}
-                      icon={<RiMailFill />}
-                      pt={4}
-                    />
-                  </Link>
-                </Tooltip>
-                <Tooltip label={"Call or Text Me!"} fontSize={"md"}>
-                  <Link as={NextLink} href={"tel:5108906429"}>
-                    <IconButton
-                      colorScheme={"primary"}
-                      variant={"link"}
-                      aria-label={"Email me!"}
-                      size={"lg"}
-                      icon={<RiPhoneFill />}
-                      pt={4}
-                    />
-                  </Link>
-                </Tooltip>
-              </Flex>
-              <Text mt={8}>
-                I help people with something to share who want to engage with
-                their community by delivering software development services that
-                improve their brand awareness and authority.
-              </Text>
-            </Box>
-            <Box w={["100%", "50%"]}>
-              <Image
-                src={mockup}
-                alt={"Software Development Services"}
-                priority
-                onLoadingComplete={() => setIsLoading(false)}
-              />
-            </Box>
+      <Flex
+        direction={["column", "row"]}
+        align={"center"}
+        justify={"center"}
+        h={"100vh"}
+        w={"100%"}
+        maxW={"container.xl"}
+        px={4}
+        py={32}
+        mx={"auto"}
+        my={[32, 0]}
+      >
+        <Box w={["100%", "50%"]}>
+          <Heading as={"h1"} size={"2xl"} mb={16}>
+            Software Development Services
+          </Heading>
+          <Flex align={"center"} mb={8}>
+            <Link
+              as={NextLink}
+              href={"https://cal.com/stupendousweb/consultation"}
+            >
+              <Button variant={"bonkers"} size={"lg"} mr={8}>
+                Get yours Now
+              </Button>
+            </Link>
+            <Tooltip label={"Email me!"} fontSize={"md"}>
+              <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
+                <IconButton
+                  colorScheme={"primary"}
+                  variant={"link"}
+                  aria-label={"Email me!"}
+                  size={"lg"}
+                  icon={<RiMailFill />}
+                  pt={4}
+                />
+              </Link>
+            </Tooltip>
+            <Tooltip label={"Call or Text Me!"} fontSize={"md"}>
+              <Link as={NextLink} href={"tel:5108906429"}>
+                <IconButton
+                  colorScheme={"primary"}
+                  variant={"link"}
+                  aria-label={"Email me!"}
+                  size={"lg"}
+                  icon={<RiPhoneFill />}
+                  pt={4}
+                />
+              </Link>
+            </Tooltip>
           </Flex>
-        </Container>
+          <Text mt={8}>
+            I help people with something to share who want to engage with their
+            community by delivering software development services that improve
+            their brand awareness and authority.
+          </Text>
+        </Box>
+        <Box w={["100%", "50%"]}>
+          <Image
+            src={mockup}
+            alt={"Software Development Services"}
+            priority
+            onLoadingComplete={() => setIsLoading(false)}
+          />
+        </Box>
       </Flex>
       <Container maxW={"container.sm"} pt={[16, 0]} pb={[16, 32]}>
         <Heading size={"xl"} mb={8}>
