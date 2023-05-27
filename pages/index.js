@@ -146,7 +146,7 @@ export default function Home({ articles }) {
         mx={"auto"}
         my={[32, 0]}
       >
-        <Box w={["100%", "50%"]}>
+        <Box w={["100%", "50%"]} pr={[0, 4]}>
           <Heading as={"h1"} size={"2xl"} mb={16}>
             Software Development Services
           </Heading>
@@ -193,7 +193,8 @@ export default function Home({ articles }) {
         <Box w={["100%", "50%"]}>
           <Image
             src={mockup}
-            alt={"Software Development Services"}
+            alt={"Mockup | Software Development Services"}
+            size={50}
             priority
             onLoadingComplete={() => setIsLoading(false)}
           />
