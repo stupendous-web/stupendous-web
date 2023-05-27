@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import { Provider } from "../lib/context";
 import StupendousAnalytics from "stupendous-analytics-next";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -29,7 +30,7 @@ function MyApp({ Component, pageProps }) {
         {/* https://nextjs.org/docs/messages/next-script-for-ga */}
         {process.env.NODE_ENV !== "development" && (
           <>
-            <script
+            <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
             />
             <script>
