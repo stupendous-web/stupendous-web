@@ -37,12 +37,7 @@ class CTA extends React.Component {
                   as={NextLink}
                   href={"https://cal.com/stupendousweb/consultation"}
                 >
-                  <Button
-                    color={"white"}
-                    variant={"outline"}
-                    size={"lg"}
-                    mr={8}
-                  >
+                  <Button variant={"bonkers"} size={"lg"} mr={8}>
                     Get yours Now
                   </Button>
                 </Link>
