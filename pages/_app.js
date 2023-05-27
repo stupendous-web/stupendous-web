@@ -26,6 +26,24 @@ function MyApp({ Component, pageProps }) {
     <>
       <StupendousAnalytics site={"642cf18729b904f37d859011"} />
       <Head>
+        {/* https://nextjs.org/docs/messages/next-script-for-ga */}
+        {process.env.NODE_ENV !== "development" && (
+          <>
+            <script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+            />
+            <script>
+              {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                  page_path: window.location.pathname,
+                  });
+                `}
+            </script>
+          </>
+        )}
         <meta name={"viewport"} content={"width=device-width"} />
       </Head>
       <ChakraProvider theme={theme}>
