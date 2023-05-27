@@ -6,7 +6,8 @@ module.exports = {
   siteUrl: "https://stupendousweb.com",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
-  exclude: ["/creative-brief"],
+  autoLastmod: false,
+  priority: false,
   additionalPaths: async () => {
     const result = [];
     await axios
@@ -15,9 +16,9 @@ module.exports = {
         response.data?.posts?.map((post) => {
           result.push({
             loc: `/articles/${post.slug}`,
-            changefreq: "daily",
-            priority: 0.7,
-            lastmod: new Date(post.date).toISOString(),
+            changefreq: "monthly",
+            // priority: 0.7,
+            // lastmod: new Date(post.date).toISOString(),
           });
         });
       });
@@ -27,9 +28,9 @@ module.exports = {
         response.data?.tags?.map((tag) => {
           result.push({
             loc: `/articles/tags/${tag.slug}`,
-            changefreq: "daily",
-            priority: 0.7,
-            lastmod: new Date().toISOString(),
+            changefreq: "monthly",
+            // priority: 0.7,
+            // lastmod: new Date().toISOString(),
           });
         });
       });
