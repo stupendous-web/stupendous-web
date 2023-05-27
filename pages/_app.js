@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import Script from "next/script";
 import { Provider } from "../lib/context";
@@ -18,10 +19,12 @@ import Loading from "../components/Loading";
 import Cursor from "../components/Cursor";
 
 function MyApp({ Component, pageProps }) {
-  console.log(
-    "%c🦸 STUPENDOUS WEB\nEmail topher@stupendousweb.com to learn more.\n",
-    "color: #d02670"
-  );
+  useEffect(() => {
+    console.log(
+      "%c🦸 STUPENDOUS WEB\nEmail topher@stupendousweb.com to learn more.\n",
+      "color: #d02670"
+    );
+  }, []);
 
   return (
     <>

@@ -8,6 +8,7 @@ module.exports = {
   generateIndexSitemap: false,
   autoLastmod: false,
   priority: false,
+  changefreq: "monthly",
   additionalPaths: async () => {
     const result = [];
     await axios
@@ -16,7 +17,6 @@ module.exports = {
         response.data?.posts?.map((post) => {
           result.push({
             loc: `/articles/${post.slug}`,
-            changefreq: "monthly",
             // priority: 0.7,
             // lastmod: new Date(post.date).toISOString(),
           });
@@ -28,7 +28,6 @@ module.exports = {
         response.data?.tags?.map((tag) => {
           result.push({
             loc: `/articles/tags/${tag.slug}`,
-            changefreq: "monthly",
             // priority: 0.7,
             // lastmod: new Date().toISOString(),
           });
