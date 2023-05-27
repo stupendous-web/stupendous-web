@@ -26,13 +26,15 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <StupendousAnalytics site={"642cf18729b904f37d859011"} />
+      {process.env.NODE_ENV !== "development" && (
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+          strategy={"lazyOnload"}
+        />
+      )}
       <Head>
-        {/* https://nextjs.org/docs/messages/next-script-for-ga */}
         {process.env.NODE_ENV !== "development" && (
           <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-            />
             <script>
               {`
                   window.dataLayer = window.dataLayer || [];
