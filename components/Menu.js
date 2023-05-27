@@ -27,7 +27,6 @@ import isometric12 from "../images/isometrics/isometric-1-2-white.png";
 import isometric21 from "../images/isometrics/isometric-2-1-white.png";
 import isometric22 from "../images/isometrics/isometric-2-2-white.png";
 import isometric23 from "../images/isometrics/isometric-2-3-white.png";
-import contact from "../images/pages/contact.png";
 
 export default function Menu() {
   const [backgroundClass, setBackgroundClass] = useState("");
@@ -154,7 +153,7 @@ export default function Menu() {
                         }
                         onClick={() => hideMenu()}
                       >
-                        <Heading size={"3xl"}>{link.title}</Heading>
+                        <Heading size={["2xl", "3xl"]}>{link.title}</Heading>
                       </Link>
                     </ListItem>
                   );
