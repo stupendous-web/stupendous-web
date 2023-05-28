@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
       {process.env.NODE_ENV !== "development" && (
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-          strategy={"lazyOnload"}
+          strategy={"afterInteractive"}
         />
       )}
       <Head>
