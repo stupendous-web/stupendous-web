@@ -174,16 +174,14 @@ export default function Articles({ articles, tags }) {
                           " | Software Development Services | Stupendous Web"
                         }
                       >
-                        <div className={"uk-height-small uk-cover-container"}>
-                          <AspectRatio maxW={"100%"} ratio={16 / 9} mb={8}>
-                            <Image
-                              src={article?.featured_image}
-                              alt={article?.title}
-                              fill
-                              style={{ objectFit: "cover" }}
-                            />
-                          </AspectRatio>
-                        </div>
+                        <AspectRatio maxW={"100%"} ratio={16 / 9} mb={8}>
+                          <Image
+                            src={article?.featured_image}
+                            alt={article?.title}
+                            fill
+                            style={{ objectFit: "cover" }}
+                          />
+                        </AspectRatio>
                       </Link>
                     )}
                   </Box>

@@ -38,6 +38,12 @@ const theme = extendTheme({
       800: "#262626",
       900: "#161616",
     },
+    red: {
+      300: "#ffb3b8", // Error on Magenta
+    },
+    green: {
+      300: "#6fdc8c", // Success on Magenta
+    },
   },
   styles: {
     global: {
@@ -99,6 +105,10 @@ const theme = extendTheme({
           _hover: {
             background: "primary.500",
           },
+          _focus: {
+            boxShadow:
+              "white .5rem .5rem 0 0, white .5rem .5rem 0 1px !important",
+          },
         },
       },
     },
@@ -124,6 +134,31 @@ const theme = extendTheme({
       baseStyle: {
         container: {
           columns: 2,
+        },
+      },
+    },
+    Input: {
+      baseStyle: {
+        field: {
+          fontFamily: "anonymous-pro, monospace",
+          mb: 4,
+          _focus: {
+            boxShadow: "none !important",
+            borderColor: "white !important",
+          },
+        },
+      },
+    },
+    Textarea: {
+      baseStyle: {
+        fontFamily: "anonymous-pro, monospace",
+        mb: 4,
+        _focus: {
+          boxShadow: "none !important",
+          borderColor: "white !important",
+        },
+        _placeholder: {
+          color: "gray.100",
         },
       },
     },

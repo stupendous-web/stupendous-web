@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { Show } from "@chakra-ui/react";
 
 export default function Cursor() {
   const [x, setX] = useState(-101);
@@ -41,11 +42,10 @@ export default function Cursor() {
   }, []);
 
   return (
-    <>
+    <Show above={"md"}>
       <svg
         xmlns={"http://www.w3.org/2000/svg"}
         viewBox={"0 0 100 100"}
-        className={"uk-visible@m"}
         style={{
           height: "100px",
           width: "100px",
@@ -62,6 +62,6 @@ export default function Cursor() {
       >
         <circle cx={50} cy={50} r={49} style={{ fill: "#d02670" }} />
       </svg>
-    </>
+    </Show>
   );
 }
