@@ -1,5 +1,4 @@
 import NextLink from "next/link";
-import { useGlobal } from "../lib/context";
 import {
   Box,
   Center,
@@ -13,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 
 export default function Navigation() {
-  const { services: legacyServices } = useGlobal();
   const links = [
     { href: "projects", title: "Projects" },
     { href: "about", title: "About" },
@@ -23,6 +21,22 @@ export default function Navigation() {
   const services = [
     { href: "web-app-development", anchor: "Web App Development" },
     { href: "mvp-software-development", anchor: "MVP Software Development" },
+    { anchor: "Websites" },
+    {
+      anchor: "iOS and Android Apps",
+    },
+    {
+      anchor: "Consulting",
+    },
+    {
+      anchor: "Software Development",
+    },
+    {
+      anchor: "Secure, Managed Domain and Hosting",
+    },
+    {
+      anchor: "Long Term Support",
+    },
   ];
 
   return (
@@ -45,23 +59,15 @@ export default function Navigation() {
                 <PopoverContent minW={"600px"}>
                   <PopoverBody>
                     <List spacing={4}>
-                      {legacyServices.map((service) => (
-                        <ListItem key={service.target}>
-                          <Link
-                            as={NextLink}
-                            href={`/services#${service.target}`}
-                            title={`${service.longTitle} | Software Development Services | Stupendous Web`}
-                            color={"white"}
-                          >
-                            {service.shortTitle}
-                          </Link>
-                        </ListItem>
-                      ))}
                       {services?.map((service) => (
                         <ListItem key={service.anchor}>
                           <Link
                             as={NextLink}
-                            href={`/services/${service.href}`}
+                            href={
+                              service.href
+                                ? `/services/${service.href}`
+                                : "/services"
+                            }
                             title={`${service.anchor} | Software Development Services | Stupendous Web`}
                             color={"white"}
                           >
