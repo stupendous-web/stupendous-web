@@ -13,12 +13,16 @@ import {
 } from "@chakra-ui/react";
 
 export default function Navigation() {
-  const { services } = useGlobal();
+  const { services: legacyServices } = useGlobal();
   const links = [
     { href: "projects", title: "Projects" },
     { href: "about", title: "About" },
     { href: "services", title: "Services" },
     { href: "contact", title: "Contact" },
+  ];
+  const services = [
+    { href: "web-app-development", anchor: "Web App Development" },
+    { href: "mvp-software-development", anchor: "MVP Software Development" },
   ];
 
   return (
@@ -27,7 +31,7 @@ export default function Navigation() {
         {links.map((link, key) =>
           link.title === "Services" ? (
             <Box key={link.href} mr={8}>
-              <Popover trigger={"hover"}>
+              <Popover trigger={"hover"} gutter={32}>
                 <PopoverTrigger>
                   <Link
                     as={NextLink}
@@ -38,10 +42,10 @@ export default function Navigation() {
                     {link.title}
                   </Link>
                 </PopoverTrigger>
-                <PopoverContent>
+                <PopoverContent minW={"600px"}>
                   <PopoverBody>
                     <List spacing={4}>
-                      {services.map((service) => (
+                      {legacyServices.map((service) => (
                         <ListItem key={service.target}>
                           <Link
                             as={NextLink}
@@ -53,18 +57,18 @@ export default function Navigation() {
                           </Link>
                         </ListItem>
                       ))}
-                      <ListItem>
-                        <Link
-                          as={NextLink}
-                          href={"/services/web-app-development"}
-                          title={
-                            "Web App Development | Software Development Services | Stupendous Web"
-                          }
-                          color={"white"}
-                        >
-                          Web Apps
-                        </Link>
-                      </ListItem>
+                      {services?.map((service) => (
+                        <ListItem key={service.anchor}>
+                          <Link
+                            as={NextLink}
+                            href={`/services/${service.href}`}
+                            title={`${service.anchor} | Software Development Services | Stupendous Web`}
+                            color={"white"}
+                          >
+                            {service.anchor}
+                          </Link>
+                        </ListItem>
+                      ))}
                     </List>
                   </PopoverBody>
                 </PopoverContent>

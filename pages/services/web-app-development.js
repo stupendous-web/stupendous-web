@@ -35,7 +35,7 @@ export default function WebAppDevelopment() {
           <Box w={["100%", "33.33%"]} pr={4} mb={8}>
             <Image
               src={isometric}
-              alt={"Software Development Services"}
+              alt={"Web App Development | Software Development Services"}
               priority
               onLoadingComplete={() => setIsLoading(false)}
             />
@@ -80,7 +80,7 @@ export default function WebAppDevelopment() {
             <AspectRatio maxW={"100%"} ratio={4 / 3} mb={4}>
               <Image
                 src={servicesImage}
-                alt={"Software Development Services"}
+                alt={"Web App Development | Software Development Services"}
                 id={"consulting"}
                 style={{ objectFit: "cover", scrollMarginTop: "8rem" }}
               />

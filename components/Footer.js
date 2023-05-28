@@ -28,6 +28,10 @@ export default function Footer() {
     { href: "/2022", title: "2022 Review" },
     { href: "/articles", title: "Articles" },
     { href: "/services/web-app-development", title: "Web App Development" },
+    {
+      href: "/services/mvp-software-development",
+      title: "MVP Software Development",
+    },
     { href: "https://stupendousanalytics.com", title: "Stupendous Analytics" },
   ];
 

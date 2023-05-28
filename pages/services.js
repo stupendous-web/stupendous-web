@@ -23,7 +23,11 @@ import isometric from "../images/isometrics/isometric-2-2.png";
 import servicesImage from "../images/pages/services.png";
 
 export default function Services() {
-  const { setIsLoading, services } = useGlobal();
+  const { setIsLoading } = useGlobal();
+  const services = [
+    { href: "web-app-development", anchor: "Web App Development" },
+    { href: "mvp-software-development", anchor: "MVP Software Development" },
+  ];
 
   return (
     <>
@@ -76,18 +80,16 @@ export default function Services() {
               {services.map((service) => {
                 return (
                   <Link
-                    key={service.target}
+                    key={service.href}
                     as={NextLink}
-                    href={`#${service.target}`}
+                    href={`/services/${service.href}`}
+                    title={`${service.anchor} | Software Development Services | Stupendous Web`}
                     mr={4}
                   >
-                    {service.shortTitle}
+                    {service.anchor}
                   </Link>
                 );
               })}
-              <Link as={NextLink} href={"/services/web-app-development"} mr={4}>
-                Web Apps
-              </Link>
             </Flex>
             <Text mb={4}>
               Your project is more than just a pretty website. My software
@@ -99,9 +101,7 @@ export default function Services() {
               phone, so your community can find it and connect with you, and
               maintain the project even after it&apos;s done.
             </Text>
-            <Heading mb={8} style={{ scrollMarginTop: "8rem" }} id={"websites"}>
-              Web Pages and Web Apps
-            </Heading>
+            <Heading mb={8}>Web Pages and Web Apps</Heading>
             <Text mb={4}>
               A website or even a web app is still a must-have. It is my
               pleasure to build people with strong purpose in life websites that
@@ -133,13 +133,7 @@ export default function Services() {
                 </ListItem>
               ))}
             </List>
-            <Heading
-              mb={8}
-              style={{ scrollMarginTop: "8rem" }}
-              id={"ios-and-android-apps"}
-            >
-              iOS and Android Apps
-            </Heading>
+            <Heading mb={8}>iOS and Android Apps</Heading>
             <Text mb={4}>
               Bring the hard work you do to everyone&apos;s pocket. Your
               life&apos;s work, products, services, and ideas can be accessible
@@ -182,8 +176,7 @@ export default function Services() {
               <Image
                 src={servicesImage}
                 alt={"Software Development Services"}
-                id={"consulting"}
-                style={{ objectFit: "cover", scrollMarginTop: "8rem" }}
+                style={{ objectFit: "cover" }}
               />
             </AspectRatio>
             <Heading mb={8}>Two FREE Consultations</Heading>
@@ -198,13 +191,7 @@ export default function Services() {
               apps. These consultations are designed for us to better deliver
               your product in a more impactful way.
             </Text>
-            <Heading
-              mb={8}
-              style={{ scrollMarginTop: "8rem" }}
-              id={"software-development"}
-            >
-              Software Development
-            </Heading>
+            <Heading mb={8}>Software Development</Heading>
             <Text mb={4}>
               Are you and your product tapping into all the available channels
               these days? The web has extended well beyond computer screens and
@@ -214,13 +201,7 @@ export default function Services() {
               community, audiences, and people who love and need your product
               the most with a website and iOS/Android app.
             </Text>
-            <Heading
-              mb={8}
-              style={{ scrollMarginTop: "8rem" }}
-              id={"secure-managed-domain-and-hosting"}
-            >
-              Secure, Managed Domain and Hosting
-            </Heading>
+            <Heading mb={8}>Secure, Managed Domain and Hosting</Heading>
             <Text mb={4}>
               There are many things that go into getting your project online
               quickly, safely, and hassle-free. I&apos;m here to help with those
@@ -247,9 +228,7 @@ export default function Services() {
                 </ListItem>
               ))}
             </List>
-            <Heading id={"long-term-support"} mb={8}>
-              Long Term Support (LTS)
-            </Heading>
+            <Heading mb={8}>Long Term Support (LTS)</Heading>
             <Text mb={4}>
               Even well-working machines need their oil changed. Web, iOS, and
               Android applications are just the same. They will need upgrades
