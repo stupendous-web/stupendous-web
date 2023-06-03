@@ -3,6 +3,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { Provider } from "../lib/context";
 import StupendousAnalytics from "stupendous-analytics-next";
+import { Analytics } from "@vercel/analytics/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../utils/chakraUIHelper";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -56,6 +57,7 @@ function MyApp({ Component, pageProps }) {
         <ParallaxProvider>
           <Provider>
             <Component {...pageProps} />
+            <Analytics />
             <Footer />
             <Pride />
             <Navigation />
