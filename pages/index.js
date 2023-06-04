@@ -32,6 +32,7 @@ import {
 
 import Slide from "../components/Slide";
 import Testimonials from "../components/Testimonials";
+import Questions from "../components/questions";
 import Blog from "../components/Blog";
 import CTA from "../components/CTA";
 
@@ -429,6 +430,7 @@ export default function Home({ articles }) {
         <Icon as={DiReact} boxSize={16} />
       </Container>
       <Testimonials />
+      <Questions />
       <Container maxW={"container.lg"} py={[16, 32]}>
         <Text>Business</Text>
         <Heading mb={8}>Expand your Reach</Heading>
