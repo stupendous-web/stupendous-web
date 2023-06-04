@@ -28,6 +28,7 @@ import {
   ListIcon,
   List,
   IconButton,
+  Highlight,
 } from "@chakra-ui/react";
 
 import Slide from "../components/Slide";
@@ -141,15 +142,20 @@ export default function Home({ articles }) {
         justify={"center"}
         h={"100vh"}
         w={"100%"}
-        maxW={"container.xl"}
+        maxW={"160rem"}
         px={4}
         py={32}
         mx={"auto"}
         my={[32, 0]}
       >
         <Box w={["100%", "50%"]} pr={[0, 4]}>
-          <Heading as={"h1"} size={"2xl"} mb={16}>
-            Software Development Services
+          <Heading as={"p"} fontSize={["2rem", "6rem"]} lineHeight={1.33}>
+            <Highlight
+              query={["community", "software"]}
+              styles={{ px: [2, 8], bg: "primary.500" }}
+            >
+              If you want to build community, build stupendous software.
+            </Highlight>
           </Heading>
           <Flex align={"center"} mb={8}>
             <Link
@@ -185,27 +191,24 @@ export default function Home({ articles }) {
               </Link>
             </Tooltip>
           </Flex>
-          <Text mt={8}>
-            I help people with something to share who want to engage with their
-            community by delivering software development services that improve
-            their brand awareness and authority.
-          </Text>
         </Box>
-        <Box w={["100%", "50%"]}>
+        <Flex justify={"center"} w={["100%", "50%"]}>
           <Image
             src={mockup}
             alt={"Mockup | Software Development Services"}
-            size={50}
             priority
             onLoadingComplete={() => setIsLoading(false)}
           />
-        </Box>
+        </Flex>
       </Flex>
-      <Container maxW={"container.sm"} pt={[16, 0]} pb={[16, 32]}>
-        <Heading size={"xl"} mb={8}>
-          If you want to build community, build stupendous software.
-        </Heading>
-        <Text as={"code"}>
+      <Container maxW={"container.lg"} pt={[16, 0]} pb={[16, 32]}>
+        <Heading as={"h1"}>Software Development Services</Heading>
+        <Text mb={8}>
+          I help people with something to share who want to engage with their
+          community by delivering software development services that improve
+          their brand awareness and authority.
+        </Text>
+        <Text as={"code"} color={"primary.500"}>
           [topher@stupendous ~]$ <span className={"flash"}>▌</span>
         </Text>
       </Container>
