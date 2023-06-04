@@ -10,7 +10,6 @@ import {
   List,
   ListItem,
   ListIcon,
-  AspectRatio,
 } from "@chakra-ui/react";
 import { Parallax } from "react-scroll-parallax";
 import { RiCheckFill } from "react-icons/ri";
@@ -18,7 +17,6 @@ import { RiCheckFill } from "react-icons/ri";
 import CTA from "../../components/CTA";
 
 import isometric from "../../images/isometrics/isometric-2-1.png";
-import servicesImage from "../../images/pages/services.png";
 
 export default function MVPSoftwareDevelopment() {
   const { setIsLoading } = useGlobal();
@@ -78,14 +76,6 @@ export default function MVPSoftwareDevelopment() {
               and marketing campaigns. Most of all, you need an MVP to get your
               work into the hands of those who need it most.
             </Text>
-            <AspectRatio maxW={"100%"} ratio={4 / 3} mb={4}>
-              <Image
-                src={servicesImage}
-                alt={"MVP Software Development | Software Development Services"}
-                id={"consulting"}
-                style={{ objectFit: "cover", scrollMarginTop: "8rem" }}
-              />
-            </AspectRatio>
             <Heading>What is an MVP</Heading>
             <Text>
               My MVP software development services are backed by education in

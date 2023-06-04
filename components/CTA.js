@@ -95,7 +95,7 @@ export default function CTA() {
           </Box>
           <Box w={["100%", "50%"]}>
             <form onSubmit={(event) => handleSubmit(event)}>
-              <FormControl isRequired px={24}>
+              <FormControl isRequired px={[0, 24]}>
                 <FormLabel>Email</FormLabel>
                 <Input
                   type={"email"}

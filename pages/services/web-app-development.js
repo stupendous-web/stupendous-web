@@ -10,7 +10,6 @@ import {
   List,
   ListItem,
   ListIcon,
-  AspectRatio,
 } from "@chakra-ui/react";
 import { Parallax } from "react-scroll-parallax";
 import { RiCheckFill } from "react-icons/ri";
@@ -18,7 +17,6 @@ import { RiCheckFill } from "react-icons/ri";
 import CTA from "../../components/CTA";
 
 import isometric from "../../images/isometrics/isometric-2-1.png";
-import servicesImage from "../../images/pages/services.png";
 
 export default function WebAppDevelopment() {
   const { setIsLoading } = useGlobal();
@@ -77,14 +75,6 @@ export default function WebAppDevelopment() {
               Busy work can be necessary, but it doesn’t leave you with much
               time or energy to focus on what’s important or to do it well.
             </Text>
-            <AspectRatio maxW={"100%"} ratio={4 / 3} mb={4}>
-              <Image
-                src={servicesImage}
-                alt={"Web App Development | Software Development Services"}
-                id={"consulting"}
-                style={{ objectFit: "cover", scrollMarginTop: "8rem" }}
-              />
-            </AspectRatio>
             <Heading>What is Web App Development?</Heading>
             <Text>
               Web app development allows you to run these processes while you
