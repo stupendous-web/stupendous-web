@@ -1,5 +1,7 @@
 import { useState } from "react";
 import NextLink from "next/link";
+import va from "@vercel/analytics";
+import { useRouter } from "next/router";
 import axios from "axios";
 import {
   Box,
@@ -25,6 +27,7 @@ export default function CTA() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccessful, setIsSuccessful] = useState(false);
   const [isInvalid, setIsInvalid] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -58,8 +61,10 @@ export default function CTA() {
             </Heading>
             <Flex align={"center"} mb={8}>
               <Link
-                as={NextLink}
-                href={"https://cal.com/stupendousweb/consultation"}
+                onClick={async () => {
+                  await va.track("Consultation Started");
+                  router.push("https://cal.com/stupendousweb/consultation");
+                }}
               >
                 <Button variant={"bonkers"} size={"lg"} mr={8}>
                   Get yours Now
