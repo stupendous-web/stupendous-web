@@ -142,14 +142,14 @@ export default function Home({ articles }) {
         justify={"center"}
         h={"100vh"}
         w={"100%"}
-        maxW={"160rem"}
+        maxW={"120rem"}
         px={4}
         py={32}
         mx={"auto"}
         my={[32, 0]}
       >
         <Box w={["100%", "50%"]} pr={[0, 4]}>
-          <Heading as={"p"} fontSize={["2rem", "6rem"]} lineHeight={1.33}>
+          <Heading as={"p"} fontSize={["2rem", "4rem"]} lineHeight={1.33}>
             <Highlight
               query={["community", "software"]}
               styles={{ px: [2, 8], bg: "primary.500" }}
@@ -157,7 +157,7 @@ export default function Home({ articles }) {
               If you want to build community, build stupendous software.
             </Highlight>
           </Heading>
-          <Flex align={"center"} mb={8}>
+          <Flex align={"center"} pt={[8, 16]}>
             <Link
               as={NextLink}
               href={"https://cal.com/stupendousweb/consultation"}
