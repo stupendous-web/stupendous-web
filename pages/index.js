@@ -142,14 +142,18 @@ export default function Home({ articles }) {
         justify={"center"}
         h={"100vh"}
         w={"100%"}
-        maxW={"120rem"}
+        maxW={"90rem"}
         px={4}
         py={32}
         mx={"auto"}
         my={[32, 0]}
       >
-        <Box w={["100%", "50%"]} pr={[0, 4]}>
-          <Heading as={"p"} fontSize={["2rem", "4rem"]} lineHeight={1.33}>
+        <Box w={["100%", "66.66%"]} pr={[0, 4]}>
+          <Heading
+            as={"p"}
+            fontSize={["2rem", "3rem"]}
+            lineHeight={[1.5, 1.66]}
+          >
             <Highlight
               query={["community", "software"]}
               styles={{ px: [2, 8], bg: "primary.500" }}
@@ -201,7 +205,7 @@ export default function Home({ articles }) {
           />
         </Flex>
       </Flex>
-      <Container maxW={"container.lg"} pt={[16, 0]} pb={[16, 32]}>
+      <Container maxW={"container.sm"} pt={[16, 0]} pb={[16, 32]}>
         <Heading as={"h1"}>Software Development Services</Heading>
         <Text mb={8}>
           I help people with something to share who want to engage with their

@@ -40,7 +40,7 @@ export default function Navigation() {
   ];
 
   return (
-    <Box w={"100%"} position={"fixed"} top={0} left={0} p={8} hideBelow={"sm"}>
+    <Box w={"100%"} position={"fixed"} top={0} left={0} p={7} hideBelow={"sm"}>
       <Center>
         {links.map((link, key) =>
           link.title === "Services" ? (

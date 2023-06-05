@@ -19,10 +19,16 @@ export default function Contact() {
   ];
 
   return (
-    <Flex direction={"column"} position={"fixed"} right={0} bottom={0} p={16}>
+    <Flex direction={"column"} position={"fixed"} right={0} bottom={0} p={4}>
       {links.map((link) => (
         <Tooltip key={link.href} label={link.tooltip} placement={"left"}>
-          <Link as={NextLink} href={link.href} title={link.title}>
+          <Link
+            as={NextLink}
+            href={link.href}
+            title={link.title}
+            lineHeight={1}
+            mt={2}
+          >
             <Icon as={link.icon} boxSize={8} />
           </Link>
         </Tooltip>
