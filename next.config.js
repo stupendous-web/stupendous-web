@@ -7,7 +7,11 @@ const nextConfig = {
     defaultLocale: "en-US",
   },
   images: {
-    domains: ["kinwebdesign.files.wordpress.com", "2.gravatar.com"],
+    domains: [
+      "kinwebdesign.files.wordpress.com",
+      "2.gravatar.com",
+      "1.gravatar.com",
+    ],
   },
 };
 
