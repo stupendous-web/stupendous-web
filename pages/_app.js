@@ -5,7 +5,7 @@ import { Provider } from "../lib/context";
 import StupendousAnalytics from "stupendous-analytics-next";
 import { Analytics } from "@vercel/analytics/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import theme from "../utils/chakraUIHelper";
+import theme from "../utils/chakra";
 import { ParallaxProvider } from "react-scroll-parallax";
 import "../styles/global.css";
 import "slick-carousel/slick/slick.css";
