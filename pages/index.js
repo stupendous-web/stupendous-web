@@ -206,7 +206,10 @@ export default function Home({ articles }) {
         </Flex>
       </Flex>
       <Container maxW={"container.sm"} pt={[16, 0]} pb={[16, 32]}>
-        <Heading as={"h1"}>Software Development Services</Heading>
+        <Text as={"h1"}>Software Development Services</Text>
+        <Heading as={"p"} mb={8}>
+          Websites, Web Apps, and Phone Apps
+        </Heading>
         <Text mb={8}>
           I help people with something to share who want to engage with their
           community by delivering software development services that improve
@@ -366,6 +369,8 @@ export default function Home({ articles }) {
           accounts. Let your software make you money so you can focus on your
           work.
         </Text>
+      </Container>
+      <Container maxW={"container.lg"} py={[16, 32]}>
         <SimpleGrid columns={[1, 2]} spacing={8}>
           <Box>
             <Image
