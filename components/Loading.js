@@ -21,7 +21,7 @@ export default function Loading() {
       }}
     >
       <Flex align={"center"} justify={"center"} bg={"primary.500"} h={"100vh"}>
-        <Text as={"code"}>
+        <Text as={"code"} color={"white"}>
           {text}
           <Cursor cursorStyle={"█"} />
         </Text>
