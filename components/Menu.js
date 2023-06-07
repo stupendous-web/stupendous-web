@@ -36,7 +36,7 @@ export default function Menu() {
 
   const links = [
     { href: "projects", title: "Projects" },
-    { href: "about", title: "About" },
+    { href: "mood", title: "Mood" },
     { href: "services", title: "Services" },
     { href: "contact", title: "Contact" },
   ];
