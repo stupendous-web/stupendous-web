@@ -14,7 +14,6 @@ import {
   ListIcon,
   AspectRatio,
 } from "@chakra-ui/react";
-import { Parallax } from "react-scroll-parallax";
 import { RiCheckFill } from "react-icons/ri";
 
 import CTA from "../components/CTA";
@@ -45,34 +44,23 @@ export default function Services() {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text
-              as={"span"}
-              fontFamily={"mono"}
-              fontSize={"64px"}
-              float={"left"}
-              lineHeight={"60px"}
-              pt={1}
-              pr={2}
-              mb={0}
-            >
-              M
-            </Text>
-            <Text as={"span"} fontFamily={"mono"}>
-              y software development services make it easy for you to build your
-              brand and relationships with interested customers by building you
-              a revolutionary project, delivering it to your clients, and
-              keeping it modern and new!
+            <Text as={"code"} color={"white"}>
+              My software development services make it easy for you to build
+              your brand and relationships with interested customers by building
+              you a revolutionary project, delivering it to your clients, and
+              keeping it modern and new!{" "}
+              <Text as={"span"} className={"flash"}>
+                ▌
+              </Text>
             </Text>
           </Box>
         </Flex>
       </Container>
-      <Parallax translateY={[0, 0]} translateX={[75, -100]}>
-        <Container maxW={"container.xl"} py={8}>
-          <Heading as={"h1"} size={"4xl"} textAlign={"right"}>
-            Services
-          </Heading>
-        </Container>
-      </Parallax>
+      <Container maxW={"container.xl"} py={8}>
+        <Heading as={"h1"} fontSize={"12rem"}>
+          Services
+        </Heading>
+      </Container>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <Flex justify={"flex-end"}>
           <Box w={["100%", "66.66%"]}>

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Head from "next/head";
 import { useGlobal } from "../lib/context";
 import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
-import { Parallax } from "react-scroll-parallax";
 
 import Project from "../components/Project";
 import CTA from "../components/CTA";
@@ -28,34 +27,23 @@ export default function Projects() {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text
-              as={"span"}
-              fontFamily={"mono"}
-              fontSize={"64px"}
-              float={"left"}
-              lineHeight={"60px"}
-              pt={1}
-              pr={2}
-              mb={0}
-            >
-              L
-            </Text>
-            <Text as={"span"} fontFamily={"mono"}>
-              et&apos;s build internet community through my custom software
+            <Text as={"code"} color={"white"}>
+              Let&apos;s build internet community through my custom software
               development services. Look at a few of the certified,
               award-winning, and engaging apps I’ve created. They&apos;ve helped
-              build my clients stronger brand awareness and authority.
+              build my clients stronger brand awareness and authority.{" "}
+              <Text as={"span"} className={"flash"}>
+                ▌
+              </Text>
             </Text>
           </Box>
         </Flex>
       </Container>
-      <Parallax translateY={[0, 0]} translateX={[75, -100]}>
-        <Container maxW={"container.xl"} py={8}>
-          <Heading as={"h1"} size={"4xl"} textAlign={"right"}>
-            Projects
-          </Heading>
-        </Container>
-      </Parallax>
+      <Container maxW={"container.xl"} py={8}>
+        <Heading as={"h1"} fontSize={"12rem"}>
+          Projects
+        </Heading>
+      </Container>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <Flex justify={"flex-end"}>
           <Box w={["100%", "66.66%"]}>
