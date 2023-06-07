@@ -14,7 +14,7 @@ import {
 export default function Navigation() {
   const links = [
     { href: "projects", title: "Projects" },
-    { href: "about", title: "Mood" },
+    { href: "mood", title: "Mood" },
     { href: "services", title: "Services" },
     { href: "contact", title: "Contact" },
   ];
