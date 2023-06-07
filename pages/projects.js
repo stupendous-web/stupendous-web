@@ -40,7 +40,7 @@ export default function Projects() {
         </Flex>
       </Container>
       <Container maxW={"container.xl"} py={8}>
-        <Heading as={"h1"} fontSize={"12rem"}>
+        <Heading as={"h1"} fontSize={["4rem", "12rem"]}>
           Projects
         </Heading>
       </Container>

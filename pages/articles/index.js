@@ -6,7 +6,6 @@ import { useGlobal } from "../../lib/context";
 import axios from "axios";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { Parallax } from "react-scroll-parallax";
 import {
   AspectRatio,
   Box,
@@ -72,13 +71,11 @@ export default function Articles({ articles, tags }) {
           </Box>
         </Flex>
       </Container>
-      <Parallax translateY={[0, 0]} translateX={[250, -100]}>
-        <Container maxW={"container.xl"} py={8}>
-          <Heading as={"h1"} size={"4xl"}>
-            Articles
-          </Heading>
-        </Container>
-      </Parallax>
+      <Container maxW={"container.xl"} py={8}>
+        <Heading as={"h1"} fontSize={["4rem", "12rem"]}>
+          Articles
+        </Heading>
+      </Container>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <Flex justify={"flex-end"}>
           <Box w={["100%", "66.66%"]}>

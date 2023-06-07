@@ -16,7 +16,6 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
-import { Parallax } from "react-scroll-parallax";
 
 import CTA from "../../../components/CTA";
 
@@ -76,13 +75,11 @@ export default function Articles({ articles }) {
           </Box>
         </Flex>
       </Container>
-      <Parallax translateY={[0, 0]} translateX={[250, -100]}>
-        <Container maxW={"container.xl"} py={8}>
-          <Heading as={"h1"} size={"4xl"}>
-            {tag}
-          </Heading>
-        </Container>
-      </Parallax>
+      <Container maxW={"container.xl"} py={8}>
+        <Heading as={"h1"} fontSize={["4rem", "12rem"]}>
+          {tag}
+        </Heading>
+      </Container>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <Flex justify={"flex-end"}>
           <Box w={["100%", "66.66%"]}>

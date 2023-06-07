@@ -57,7 +57,7 @@ export default function Services() {
         </Flex>
       </Container>
       <Container maxW={"container.xl"} py={8}>
-        <Heading as={"h1"} fontSize={"12rem"}>
+        <Heading as={"h1"} fontSize={["4rem", "12rem"]}>
           Services
         </Heading>
       </Container>
