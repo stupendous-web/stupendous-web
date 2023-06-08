@@ -16,7 +16,6 @@ import {
   Text,
   Link,
 } from "@chakra-ui/react";
-import { Parallax } from "react-scroll-parallax";
 
 export default function Review2022() {
   const { setIsLoading } = useGlobal();
@@ -60,13 +59,11 @@ export default function Review2022() {
           </Box>
         </Flex>
       </Container>
-      <Parallax translateY={[0, 0]} translateX={[75, -100]}>
-        <Container maxW={"container.xl"} py={8}>
-          <Heading as={"h1"} size={"4xl"} textAlign={"right"}>
-            2022 Review
-          </Heading>
-        </Container>
-      </Parallax>
+      <Container maxW={"container.xl"} py={8}>
+        <Heading as={"h1"} fontSize={["4rem", "12rem"]}>
+          2022
+        </Heading>
+      </Container>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <Flex justify={"flex-end"}>
           <Box w={["100%", "66.66%"]}>

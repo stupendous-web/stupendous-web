@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import NextLink from "next/link";
@@ -12,21 +13,58 @@ import {
   List,
   ListItem,
   ListIcon,
-  AspectRatio,
+  Button,
 } from "@chakra-ui/react";
-import { Parallax } from "react-scroll-parallax";
 import { RiCheckFill } from "react-icons/ri";
 
 import CTA from "../components/CTA";
 
 import isometric from "../images/isometrics/isometric-2-2.png";
-import servicesImage from "../images/pages/services.png";
 
 export default function Services() {
   const { setIsLoading } = useGlobal();
-  const services = [
+
+  const strategyServices = [
+    "Consulting",
+    "Brand Strategy",
+    "Search Engine Optimization (SEO)",
+  ];
+
+  const designServices = ["Brand Awareness", "Web Design", "UX/UI Design"];
+
+  const developmentServices = [
     { href: "web-app-development", anchor: "Web App Development" },
     { href: "mvp-software-development", anchor: "MVP Software Development" },
+    { anchor: "Web Apps" },
+    { anchor: "iOS and Android Apps" },
+  ];
+
+  const developmentExamples = [
+    "Contact Forms",
+    "Blogs",
+    "CMS",
+    "E-Commerce",
+    "Help Desks",
+    "Customer Portals",
+    "CRM",
+    "Discussion Forms",
+    "Chat Rooms",
+    "Social Media",
+    "Instant Messaging",
+    "Photography",
+    "Music and Audio",
+    "Health",
+    "Dating",
+    "Shopping",
+    "Banking",
+    "Smart Home",
+    "Finance",
+  ];
+
+  const supportServices = [
+    "Keep your Apps Active",
+    "Productivity Tools",
+    "1-3 FREE Hours of Updates a Month",
   ];
 
   return (
@@ -45,52 +83,26 @@ export default function Services() {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text
-              as={"span"}
-              fontFamily={"mono"}
-              fontSize={"64px"}
-              float={"left"}
-              lineHeight={"60px"}
-              pt={1}
-              pr={2}
-              mb={0}
-            >
-              M
-            </Text>
-            <Text as={"span"} fontFamily={"mono"}>
-              y software development services make it easy for you to build your
-              brand and relationships with interested customers by building you
-              a revolutionary project, delivering it to your clients, and
-              keeping it modern and new!
+            <Text as={"code"} color={"white"}>
+              My software development services make it easy for you to build
+              your brand and relationships with interested customers by building
+              you a revolutionary project, delivering it to your clients, and
+              keeping it modern and new!{" "}
+              <Text as={"span"} className={"flash"}>
+                ▌
+              </Text>
             </Text>
           </Box>
         </Flex>
       </Container>
-      <Parallax translateY={[0, 0]} translateX={[75, -100]}>
-        <Container maxW={"container.xl"} py={8}>
-          <Heading as={"h1"} size={"4xl"} textAlign={"right"}>
-            Services
-          </Heading>
-        </Container>
-      </Parallax>
+      <Container maxW={"container.xl"} py={8}>
+        <Heading as={"h1"} fontSize={["4rem", "12rem"]}>
+          Services
+        </Heading>
+      </Container>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <Flex justify={"flex-end"}>
           <Box w={["100%", "66.66%"]}>
-            <Flex mb={8}>
-              {services.map((service) => {
-                return (
-                  <Link
-                    key={service.href}
-                    as={NextLink}
-                    href={`/services/${service.href}`}
-                    title={`${service.anchor} | Software Development Services | Stupendous Web`}
-                    mr={4}
-                  >
-                    {service.anchor}
-                  </Link>
-                );
-              })}
-            </Flex>
             <Text mb={4}>
               Your project is more than just a pretty website. My software
               development services are more comprehensive than that. I&apos;m
@@ -101,86 +113,24 @@ export default function Services() {
               phone, so your community can find it and connect with you, and
               maintain the project even after it&apos;s done.
             </Text>
-            <Heading mb={8}>Web Pages and Web Apps</Heading>
-            <Text mb={4}>
-              A website or even a web app is still a must-have. It is my
-              pleasure to build people with strong purpose in life websites that
-              help them meet their goals. That&apos;s why my software
-              development services include building you a website or web app. A
-              website is just the beginning, but the internet is still a
-              powerful community to share your work in. Your website or web app
-              will bring awareness and authority to you, your business, and what
-              you do.
-            </Text>
-            <List mb={4}>
-              {[
-                "Brand Awareness",
-                "Products and Services Pages",
-                "Contact Forms",
-                "SEO Content",
-                "Blogs",
-                "CMS",
-                "E-Commerce",
-                "Help Desks",
-                "CRM",
-                "Discussion Forms",
-                "Chat Rooms",
-                "Image Editors",
-              ].map((item) => (
-                <ListItem key={item}>
-                  <ListIcon as={RiCheckFill} />
-                  {item}
-                </ListItem>
+            <Heading>1.0 Strategy</Heading>
+            <Box mb={4}>
+              {strategyServices?.map((service) => (
+                <Button
+                  key={service}
+                  colorScheme={"primary"}
+                  variant={"link"}
+                  size={"sm"}
+                  mr={4}
+                  mb={4}
+                  css={{ cursor: "default" }}
+                  _hover={{ textDecoration: "none" }}
+                >
+                  {service}
+                </Button>
               ))}
-            </List>
-            <Heading mb={8}>iOS and Android Apps</Heading>
-            <Text mb={4}>
-              Bring the hard work you do to everyone&apos;s pocket. Your
-              life&apos;s work, products, services, and ideas can be accessible
-              all day every day via a phone app. That&apos;s why my software
-              development services also include iOS and Android app development.
-              Your iOS and Android apps will be about your, your brand, and what
-              you do and make them all more accessible to new and existing
-              audiences. With phone apps we will easily connect you and what you
-              do with more people.
-            </Text>
-            <List mb={4}>
-              {[
-                "Social Media",
-                "Instant Messaging",
-                "Contact Forms",
-                "Photography",
-                "Music and Audio",
-                "Email",
-                "Maps",
-                "Health",
-                "Dating",
-                "Shopping",
-                "Banking",
-                "Smart Home",
-                "Security",
-                "Weather",
-                "Astronomy",
-                "File Sharing",
-                "eBooks",
-                "Astrology",
-                "Finance",
-              ].map((item) => (
-                <ListItem key={item}>
-                  <ListIcon as={RiCheckFill} />
-                  {item}
-                </ListItem>
-              ))}
-            </List>
-            <AspectRatio maxW={"100%"} ratio={4 / 3} mb={4}>
-              <Image
-                src={servicesImage}
-                alt={"Software Development Services"}
-                style={{ objectFit: "cover" }}
-              />
-            </AspectRatio>
-            <Heading mb={8}>Two FREE Consultations</Heading>
-            <Text mb={4}>
+            </Box>
+            <Text>
               I enjoy offering these consultations at no charge because I
               believe working closely together is how we build strong
               communities. I offer two consultations alongside my software
@@ -191,8 +141,73 @@ export default function Services() {
               apps. These consultations are designed for us to better deliver
               your product in a more impactful way.
             </Text>
-            <Heading mb={8}>Software Development</Heading>
-            <Text mb={4}>
+            <Heading>2.0 Design</Heading>
+            <Box mb={4}>
+              {designServices?.map((service) => (
+                <Button
+                  key={service}
+                  colorScheme={"primary"}
+                  variant={"link"}
+                  size={"sm"}
+                  mr={4}
+                  mb={4}
+                  css={{ cursor: "default" }}
+                  _hover={{ textDecoration: "none" }}
+                >
+                  {service}
+                </Button>
+              ))}
+            </Box>
+            <Text>
+              A website or even a web app is still a must-have. It is my
+              pleasure to build people with strong purpose in life websites that
+              help them meet their goals. That&apos;s why my software
+              development services include building you a website or web app. A
+              website is just the beginning, but the internet is still a
+              powerful community to share your work in. Your website or web app
+              will bring awareness and authority to you, your business, and what
+              you do.
+            </Text>
+            <Heading>3.0 Development</Heading>
+            <Box mb={4}>
+              {developmentServices?.map((service, index) => (
+                <Fragment key={index}>
+                  {service.href ? (
+                    <Link
+                      key={service.href}
+                      as={NextLink}
+                      href={`/services/${service.href}`}
+                      title={`${service.anchor} | Software Development Services | Stupendous Web`}
+                    >
+                      <Button colorScheme={"primary"} mr={4} mb={4}>
+                        {service.anchor}
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Button colorScheme={"primary"} mr={4} mb={4}>
+                      {service.anchor}
+                    </Button>
+                  )}
+                </Fragment>
+              ))}
+            </Box>
+            <Box mb={4}>
+              {developmentExamples?.map((service) => (
+                <Button
+                  key={service}
+                  colorScheme={"primary"}
+                  variant={"link"}
+                  size={"sm"}
+                  mr={4}
+                  mb={4}
+                  css={{ cursor: "default" }}
+                  _hover={{ textDecoration: "none" }}
+                >
+                  {service}
+                </Button>
+              ))}
+            </Box>
+            <Text>
               Are you and your product tapping into all the available channels
               these days? The web has extended well beyond computer screens and
               into the air waves. My software development services put you on
@@ -201,8 +216,23 @@ export default function Services() {
               community, audiences, and people who love and need your product
               the most with a website and iOS/Android app.
             </Text>
-            <Heading mb={8}>Secure, Managed Domain and Hosting</Heading>
-            <Text mb={4}>
+            <Heading as={"h3"} size={"lg"}>
+              iOS and Android Apps
+            </Heading>
+            <Text>
+              Bring the hard work you do to everyone&apos;s pocket. Your
+              life&apos;s work, products, services, and ideas can be accessible
+              all day every day via a phone app. That&apos;s why my software
+              development services also include iOS and Android app development.
+              Your iOS and Android apps will be about your, your brand, and what
+              you do and make them all more accessible to new and existing
+              audiences. With phone apps we will easily connect you and what you
+              do with more people.
+            </Text>
+            <Heading as={"h3"} size={"lg"}>
+              Secure, Managed Domain and Hosting
+            </Heading>
+            <Text>
               There are many things that go into getting your project online
               quickly, safely, and hassle-free. I&apos;m here to help with those
               too. I&apos;ll setup and manage your domain name, SSL
@@ -228,8 +258,24 @@ export default function Services() {
                 </ListItem>
               ))}
             </List>
-            <Heading mb={8}>Long Term Support (LTS)</Heading>
-            <Text mb={4}>
+            <Heading>4.0 Long Term Support (LTS)</Heading>
+            <Box mb={4}>
+              {supportServices?.map((service) => (
+                <Button
+                  key={service}
+                  colorScheme={"primary"}
+                  variant={"link"}
+                  size={"sm"}
+                  mr={4}
+                  mb={4}
+                  css={{ cursor: "default" }}
+                  _hover={{ textDecoration: "none" }}
+                >
+                  {service}
+                </Button>
+              ))}
+            </Box>
+            <Text>
               Even well-working machines need their oil changed. Web, iOS, and
               Android applications are just the same. They will need upgrades
               and security updates from time to time. You may even want to make
@@ -240,18 +286,6 @@ export default function Services() {
               brand unique and desirable even after your software development
               services are completed.
             </Text>
-            <List mb={4}>
-              {[
-                "Essentials to Keeping your Apps Active",
-                "Access to Productivity Tools",
-                "1-3 FREE Hours of Updates a Month (Minus New Features)",
-              ].map((item) => (
-                <ListItem key={item}>
-                  <ListIcon as={RiCheckFill} />
-                  {item}
-                </ListItem>
-              ))}
-            </List>
           </Box>
         </Flex>
       </Container>

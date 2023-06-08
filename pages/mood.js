@@ -13,7 +13,6 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
-import { Parallax } from "react-scroll-parallax";
 
 import CTA from "../components/CTA";
 
@@ -68,34 +67,23 @@ export default function Mood() {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text
-              as={"span"}
-              fontFamily={"mono"}
-              fontSize={"64px"}
-              float={"left"}
-              lineHeight={"60px"}
-              pt={1}
-              pr={2}
-              mb={0}
-            >
-              D
-            </Text>
-            <Text as={"span"} fontFamily={"mono"}>
-              o you value meaningful work, tolerance, equality, creativity, and
+            <Text as={"code"} color={"white"}>
+              Do you value meaningful work, tolerance, equality, creativity, and
               authenticity? My software development services help people like
               you to engage with their audiences and tribes in creative and
-              impactful ways.
+              impactful ways.{" "}
+              <Text as={"span"} className={"flash"}>
+                ▌
+              </Text>
             </Text>
           </Box>
         </Flex>
       </Container>
-      <Parallax translateY={[0, 0]} translateX={[75, -100]}>
-        <Container maxW={"container.xl"} py={8}>
-          <Heading as={"h1"} size={"4xl"} textAlign={"right"}>
-            Mood
-          </Heading>
-        </Container>
-      </Parallax>
+      <Container maxW={"container.xl"} py={8}>
+        <Heading as={"h1"} fontSize={["4rem", "12rem"]}>
+          Mood
+        </Heading>
+      </Container>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <Flex justify={"flex-end"}>
           <Box w={["100%", "66.66%"]}>

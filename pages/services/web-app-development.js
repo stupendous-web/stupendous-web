@@ -11,7 +11,6 @@ import {
   ListItem,
   ListIcon,
 } from "@chakra-ui/react";
-import { Parallax } from "react-scroll-parallax";
 import { RiCheckFill } from "react-icons/ri";
 
 import CTA from "../../components/CTA";
@@ -59,13 +58,11 @@ export default function WebAppDevelopment() {
           </Box>
         </Flex>
       </Container>
-      <Parallax translateY={[0, 0]} translateX={[75, -100]}>
-        <Container maxW={"container.xl"} py={8}>
-          <Heading as={"h1"} size={"4xl"} textAlign={"right"}>
-            Web App Development
-          </Heading>
-        </Container>
-      </Parallax>
+      <Container maxW={"container.xl"} py={8}>
+        <Heading as={"h1"} fontSize={["2rem", "4rem"]}>
+          Web App Development
+        </Heading>
+      </Container>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <Flex justify={"flex-end"}>
           <Box w={["100%", "66.66%"]}>
