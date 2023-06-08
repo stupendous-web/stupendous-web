@@ -60,7 +60,7 @@ export default function MVPSoftwareDevelopment() {
         </Flex>
       </Container>
       <Container maxW={"container.xl"} py={8}>
-        <Heading as={"h1"} fontSize={["4rem", "12rem"]}>
+        <Heading as={"h1"} fontSize={["2rem", "4rem"]}>
           MVP Software Development
         </Heading>
       </Container>
