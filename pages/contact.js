@@ -29,7 +29,7 @@ export default function Contact() {
 
   const contactLinks = [
     {
-      anchor: "Schedule your FREE consultations",
+      anchor: "FREE consultation",
       href: "https://cal.com/stupendousweb/consultation",
       icon: RiVideoFill,
     },
@@ -39,7 +39,7 @@ export default function Contact() {
       icon: RiMailFill,
     },
     {
-      anchor: "+1 510.890.6429 (Call or Text!)",
+      anchor: "+1 510.890.6429",
       href: "tel:5108906429",
       icon: RiPhoneFill,
     },
