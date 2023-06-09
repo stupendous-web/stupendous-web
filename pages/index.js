@@ -33,7 +33,7 @@ import {
 
 import Slide from "../components/Slide";
 import Testimonials from "../components/Testimonials";
-import Questions from "../components/questions";
+import Questions from "../components/Questions";
 import Blog from "../components/Blog";
 import CTA from "../components/CTA";
 
