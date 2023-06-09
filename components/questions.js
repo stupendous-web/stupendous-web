@@ -4,7 +4,6 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
-  Box,
   Container,
   Heading,
   Text,
@@ -41,14 +40,12 @@ export default function Questions() {
       <Accordion>
         {faqs.map((faq) => (
           <AccordionItem key={faq.question}>
-            <Heading mb={1}>
-              <AccordionButton>
-                <Box as="span" flex="1" textAlign="left">
-                  {faq.question}
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </Heading>
+            <AccordionButton>
+              <Heading as={"h3"} fontSize={"1rem"} m={0}>
+                {faq.question}
+              </Heading>
+              <AccordionIcon />
+            </AccordionButton>
             <AccordionPanel pb={4}>{faq.answer}</AccordionPanel>
           </AccordionItem>
         ))}

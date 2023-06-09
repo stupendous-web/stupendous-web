@@ -97,7 +97,7 @@ export default function Mood() {
               }}
               width={100}
             />
-            <Text>
+            <Text mt={-2}>
               Hello, pioneers. I&apos;m Topher. People say I&apos;m INFP which
               means, though sometimes I&apos;m introverted, I&apos;m also
               intuitive, feeling, and prospecting. I&apos;m here to help elevate

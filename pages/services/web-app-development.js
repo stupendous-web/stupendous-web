@@ -38,22 +38,13 @@ export default function WebAppDevelopment() {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text
-              as={"span"}
-              fontFamily={"mono"}
-              fontSize={"64px"}
-              float={"left"}
-              lineHeight={"60px"}
-              pt={1}
-              pr={2}
-              mb={0}
-            >
-              A
-            </Text>
-            <Text as={"span"} fontFamily={"mono"}>
-              re you doing powerful and impactful work that you love and care
+            <Text as={"code"} color={"white"}>
+              Are you doing powerful and impactful work that you love and care
               about? Do you want to have more time to put towards the work you
-              truly love and enjoy doing?
+              truly love and enjoy doing?{" "}
+              <Text as={"span"} className={"flash"}>
+                ▌
+              </Text>
             </Text>
           </Box>
         </Flex>

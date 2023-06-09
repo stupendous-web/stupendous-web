@@ -48,25 +48,16 @@ export default function Articles({ articles, tags }) {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text
-              as={"span"}
-              fontFamily={"mono"}
-              fontSize={"64px"}
-              float={"left"}
-              lineHeight={"60px"}
-              pt={1}
-              pr={2}
-              mb={0}
-            >
-              E
-            </Text>
-            <Text as={"span"} fontFamily={"mono"}>
-              njoy some inspiration for getting you, your work, and your service
-              to the people that need it most. Email{" "}
+            <Text as={"code"} color={"white"}>
+              Enjoy some inspiration for getting you, your work, and your
+              service to the people that need it most. Email{" "}
               <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
                 topher@stupendousweb.com
               </Link>{" "}
-              to contribute your story!
+              to contribute your story!{" "}
+              <Text as={"span"} className={"flash"}>
+                ▌
+              </Text>
             </Text>
           </Box>
         </Flex>

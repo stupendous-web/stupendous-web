@@ -39,22 +39,13 @@ export default function MVPSoftwareDevelopment() {
             />
           </Box>
           <Box w={["100%", "66.66%"]}>
-            <Text
-              as={"span"}
-              fontFamily={"mono"}
-              fontSize={"64px"}
-              float={"left"}
-              lineHeight={"60px"}
-              pt={1}
-              pr={2}
-              mb={0}
-            >
-              D
-            </Text>
-            <Text as={"span"} fontFamily={"mono"}>
-              o you have great ideas on how to improve our lives? Do you have an
-              idea for an app or website that can help you help others
-              accomplish this?
+            <Text as={"code"} color={"white"}>
+              Do you have great ideas on how to improve our lives? Do you have
+              an idea for an app or website that can help you help others
+              accomplish this?{" "}
+              <Text as={"span"} className={"flash"}>
+                ▌
+              </Text>
             </Text>
           </Box>
         </Flex>

@@ -289,38 +289,38 @@ export default function Home({ articles }) {
         <Heading pb={8}>Everything for Everyone</Heading>
         <Tabs colorScheme={"primary"}>
           <TabList>
-            <Tab>Hosting</Tab>
-            <Tab>Support</Tab>
-            <Tab>SEO &amp; ASO</Tab>
+            <Tab fontWeight={"bold"}>Hosting</Tab>
+            <Tab fontWeight={"bold"}>Support</Tab>
+            <Tab fontWeight={"bold"}>SEO &amp; ASO</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
-              <p>
+              <Text>
                 I&apos;ll handle the technical work of getting you, your brand,
                 and your message online. I&apos;ll set you up with your managed,
                 fast, and secure website hosting and Google Play and Apple App
                 Store listings as part of my software development services. Sit
                 back, relax, and continue to do the work you love.
-              </p>
+              </Text>
             </TabPanel>
             <TabPanel>
-              <p>
+              <Text>
                 Let&apos;s get this right! We&apos;ll work closely together to
                 make sure your web, iOS, and Android apps are perfect as part of
                 my software development services. I&apos;m available via email,
                 phone, video chat, and even in person in Las Vegas. You can
                 email me anytime with your required updates and concerns.
                 I&apos;m always here.
-              </p>
+              </Text>
             </TabPanel>
             <TabPanel>
-              <p>
+              <Text>
                 Search engine and app store optimization play important roles in
                 getting your product to your audiences. So, let&apos;s keep your
                 web, iOS, and Android apps up to date with the latest SEO and
                 ASO. My software development services get more people to your
                 app. Let&apos;s work some magic!
-              </p>
+              </Text>
             </TabPanel>
           </TabPanels>
         </Tabs>
