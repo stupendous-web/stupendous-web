@@ -20,8 +20,8 @@ export default function Navigation() {
   ];
   const services = [
     { href: "web-app-development", anchor: "Web App Development" },
+    { href: "web-site-development", anchor: "Web Site Development" },
     { href: "mvp-software-development", anchor: "MVP Software Development" },
-    { anchor: "Websites" },
     {
       anchor: "iOS and Android Apps",
     },
@@ -30,9 +30,6 @@ export default function Navigation() {
     },
     {
       anchor: "Software Development",
-    },
-    {
-      anchor: "Secure, Managed Domain and Hosting",
     },
     {
       anchor: "Long Term Support",

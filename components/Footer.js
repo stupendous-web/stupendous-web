@@ -28,6 +28,7 @@ export default function Footer() {
     { href: "/2022", title: "2022 Review" },
     { href: "/articles", title: "Articles" },
     { href: "/services/web-app-development", title: "Web App Development" },
+    { href: "/services/web-site-development", title: "Web Site Development" },
     {
       href: "/services/mvp-software-development",
       title: "MVP Software Development",

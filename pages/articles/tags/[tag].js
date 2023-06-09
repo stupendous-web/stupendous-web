@@ -43,7 +43,7 @@ export default function Articles({ articles }) {
       </Head>
       <Container maxW={"container.xl"} pt={32} pb={8}>
         <Flex direction={["column", "row"]} align={"center"}>
-          <Box w={["100%", "33.33%"]} pr={4} mb={8}>
+          <Box w={["100%", "33.33%"]} pr={4} mb={[8, 0]}>
             <Image
               src={isometric}
               alt={"Software Development Services"}
