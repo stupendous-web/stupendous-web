@@ -39,8 +39,8 @@ export default function Contact() {
       icon: RiMailFill,
     },
     {
-      anchor: "+1 510.890.6429",
-      href: "tel:5108906429",
+      anchor: "+1 702.308.9375",
+      href: "tel:7023089375",
       icon: RiPhoneFill,
     },
   ];

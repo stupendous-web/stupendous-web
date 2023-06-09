@@ -1,5 +1,4 @@
 import { useState } from "react";
-import NextLink from "next/link";
 import axios from "axios";
 import {
   Box,
@@ -8,16 +7,13 @@ import {
   Flex,
   Heading,
   Text,
-  Tooltip,
-  Link,
-  IconButton,
   FormControl,
   FormLabel,
   Input,
   Textarea,
 } from "@chakra-ui/react";
 
-import { RiMailFill, RiPhoneFill } from "react-icons/ri";
+import ContactRow from "./ContactRow";
 
 export default function CTA() {
   const [email, setEmail] = useState("");
@@ -56,38 +52,7 @@ export default function CTA() {
             <Heading size={["xl", "3xl"]} mb={16}>
               Your two consultations are now FREE!
             </Heading>
-            <Flex align={"center"} mb={8}>
-              <Link
-                as={NextLink}
-                href={"https://cal.com/stupendousweb/consultation"}
-              >
-                <Button variant={"bonkers"} size={"lg"} mr={8}>
-                  Get yours Now
-                </Button>
-              </Link>
-              <Tooltip label={"Email me!"} fontSize={"md"}>
-                <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
-                  <IconButton
-                    color={"white"}
-                    variant={"link"}
-                    aria-label={"Email me!"}
-                    size={"lg"}
-                    icon={<RiMailFill />}
-                  />
-                </Link>
-              </Tooltip>
-              <Tooltip label={"Call or Text Me!"} fontSize={"md"}>
-                <Link as={NextLink} href={"tel:5108906429"}>
-                  <IconButton
-                    color={"white"}
-                    variant={"link"}
-                    aria-label={"Email me!"}
-                    size={"lg"}
-                    icon={<RiPhoneFill />}
-                  />
-                </Link>
-              </Tooltip>
-            </Flex>
+            <ContactRow />
             <Text>
               Find your audience, refine your product, and create solutions for
               your customers in the first of your two free consultations.

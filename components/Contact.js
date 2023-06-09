@@ -5,9 +5,9 @@ import { Flex, Tooltip, Link, Icon } from "@chakra-ui/react";
 export default function Contact() {
   const links = [
     {
-      tooltip: "+1 510.890.6429 (Call or Text!)",
+      tooltip: "+1 702.308.9375 (Call or Text!)",
       title: "Call me!",
-      href: "tel:5108906429",
+      href: "tel:7023089375",
       icon: RiPhoneFill,
     },
     {

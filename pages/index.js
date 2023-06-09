@@ -4,18 +4,16 @@ import NextLink from "next/link";
 import { useGlobal } from "../lib/context";
 import axios from "axios";
 import { LocalBusinessJsonLd } from "next-seo";
-import { RiMailFill, RiPhoneFill, RiCheckFill } from "react-icons/ri";
+import { RiCheckFill } from "react-icons/ri";
 import { DiReact } from "react-icons/di";
 import { Parallax } from "react-scroll-parallax";
 import Slider from "react-slick";
 import {
   Box,
-  Button,
   Container,
   Flex,
   Heading,
   Icon,
-  Tooltip,
   Text,
   SimpleGrid,
   Tabs,
@@ -27,10 +25,10 @@ import {
   ListItem,
   ListIcon,
   List,
-  IconButton,
   Highlight,
 } from "@chakra-ui/react";
 
+import ContactRow from "../components/ContactRow";
 import Slide from "../components/Slide";
 import Testimonials from "../components/Testimonials";
 import Questions from "../components/Questions";
@@ -161,40 +159,7 @@ export default function Home({ articles }) {
               If you want to build community, build stupendous software.
             </Highlight>
           </Heading>
-          <Flex align={"center"} pt={[8, 16]}>
-            <Link
-              as={NextLink}
-              href={"https://cal.com/stupendousweb/consultation"}
-            >
-              <Button variant={"bonkers"} size={"lg"} mr={8}>
-                Get yours Now
-              </Button>
-            </Link>
-            <Tooltip label={"Email me!"} fontSize={"md"}>
-              <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
-                <IconButton
-                  colorScheme={"primary"}
-                  variant={"link"}
-                  aria-label={"Email me!"}
-                  size={"lg"}
-                  icon={<RiMailFill />}
-                  pt={4}
-                />
-              </Link>
-            </Tooltip>
-            <Tooltip label={"Call or Text Me!"} fontSize={"md"}>
-              <Link as={NextLink} href={"tel:5108906429"}>
-                <IconButton
-                  colorScheme={"primary"}
-                  variant={"link"}
-                  aria-label={"Email me!"}
-                  size={"lg"}
-                  icon={<RiPhoneFill />}
-                  pt={4}
-                />
-              </Link>
-            </Tooltip>
-          </Flex>
+          <ContactRow />
         </Box>
         <Flex justify={"center"} w={["100%", "50%"]}>
           <Image
