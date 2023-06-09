@@ -96,6 +96,36 @@ export default function Services() {
         <Flex justify={"flex-end"}>
           <Box w={["100%", "66.66%"]}>
             <Box pb={[16, 32]}>
+              <Text color={"white"} fontWeight={"bold"}>
+                🔎
+                <Text as={"span"} ml={4}>
+                  Plan
+                </Text>
+              </Text>
+              <Text color={"white"} fontWeight={"bold"}>
+                🎨
+                <Text as={"span"} ml={4}>
+                  Design
+                </Text>
+              </Text>
+              <Text color={"white"} fontWeight={"bold"}>
+                💻
+                <Text as={"span"} ml={4}>
+                  Develop
+                </Text>
+              </Text>
+              <Text color={"white"} fontWeight={"bold"}>
+                🧪
+                <Text as={"span"} ml={4}>
+                  Test
+                </Text>
+              </Text>
+              <Text color={"white"} fontWeight={"bold"}>
+                🔁
+                <Text as={"span"} ml={4}>
+                  Repeat
+                </Text>
+              </Text>
               <Text mb={4}>
                 Your project is more than just a pretty website. My software
                 development services are more comprehensive than that. I&apos;m
