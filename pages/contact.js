@@ -20,11 +20,9 @@ import {
   ListItem,
   Text,
   Link,
-  AspectRatio,
 } from "@chakra-ui/react";
 
 import isometric from "../images/isometrics/isometric-2-3.png";
-import contact from "../images/pages/contact.png";
 
 export default function Contact() {
   const { setIsLoading } = useGlobal();
@@ -106,34 +104,49 @@ export default function Contact() {
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <Flex justify={"flex-end"}>
           <Box w={["100%", "66.66%"]}>
-            <AspectRatio maxW={"100%"} ratio={4 / 3} mb={8}>
-              <Image
-                src={contact}
-                alt={"Software Development Services"}
-                id={"consulting"}
-                style={{ objectFit: "cover" }}
-              />
-            </AspectRatio>
             <List fontSize={"lg"} mb={8} __css={{ columns: 1 }}>
-              {contactLinks.map((link, key) => (
-                <ListItem key={key} borderBottom={"solid 1px"} py={4}>
-                  <ListIcon as={link.icon} color={"primary.500"} />
-                  <Link as={NextLink} href={link.href} title={link.title}>
+              {contactLinks.map((link, index) => (
+                <ListItem
+                  key={link.href}
+                  borderBottom={
+                    index < contactLinks.length - 1 ? "solid 1px" : "none"
+                  }
+                  borderColor={"primary.500"}
+                  display={"flex"}
+                  py={4}
+                >
+                  <ListIcon as={link.icon} color={"primary.500"} mr={4} />
+                  <Link
+                    as={NextLink}
+                    href={link.href}
+                    title={link.title}
+                    lineHeight={1}
+                  >
                     {link.anchor}
                   </Link>
                 </ListItem>
               ))}
             </List>
-            <Text mb={4}>Clients</Text>
+            <Heading as={"h2"} size={"lg"} mb={4}>
+              Clients
+            </Heading>
             <List fontSize={"lg"} mb={8} __css={{ columns: 1 }}>
-              {adminLinks.map((link, key) => (
-                <ListItem key={key} borderBottom={"solid 1px"} py={4}>
-                  <ListIcon as={link.icon} color={"primary.500"} />
+              {adminLinks.map((link, index) => (
+                <ListItem
+                  key={link.href}
+                  borderBottom={
+                    index < adminLinks.length - 1 ? "solid 1px" : "none"
+                  }
+                  borderColor={"primary.500"}
+                  display={"flex"}
+                  py={4}
+                >
+                  <ListIcon as={link.icon} color={"primary.500"} mr={4} />
                   <Link
                     as={NextLink}
                     href={link.href}
                     title={link.title}
-                    className={"uk-flex uk-flex-middle"}
+                    lineHeight={1}
                   >
                     {link.anchor}
                   </Link>
