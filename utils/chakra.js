@@ -48,7 +48,7 @@ const theme = extendTheme({
   styles: {
     global: {
       "html, body": {
-        bg: "black",
+        bg: "gray.900",
         color: "gray.200",
         overflowX: "hidden",
         lineHeight: 2,
@@ -62,12 +62,17 @@ const theme = extendTheme({
   },
   fontSizes: {
     xl: "2rem", // Heading size={"lg"}
-    "4xl": "3rem", // Heading
+    "4xl": "2rem", // Heading
     "5xl": "4rem", // Heading size={"2xl"}
     "7xl": "6rem", // Heading size={"4xl"}
   },
   fontWeights: {
     bold: 900,
+  },
+  sizes: {
+    container: {
+      xl: "102rem",
+    },
   },
   radii: {
     none: 0,
@@ -114,7 +119,7 @@ const theme = extendTheme({
     },
     Link: {
       baseStyle: {
-        color: "primary.500",
+        color: "white",
         _hover: {
           textDecoration: "none",
         },

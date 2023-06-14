@@ -60,7 +60,7 @@ export default function Cursor() {
           zIndex: 2000,
         }}
       >
-        <circle cx={50} cy={50} r={49} style={{ fill: "#d02670" }} />
+        <circle cx={50} cy={50} r={49} style={{ fill: "#ffffff" }} />
       </svg>
     </Show>
   );

@@ -1,5 +1,3 @@
-import { useState } from "react";
-import axios from "axios";
 import {
   Box,
   Button,
@@ -7,95 +5,92 @@ import {
   Flex,
   Heading,
   Text,
-  FormControl,
-  FormLabel,
-  Input,
-  Textarea,
+  Link,
+  Grid,
+  GridItem,
+  Divider,
 } from "@chakra-ui/react";
-
-import ContactRow from "./ContactRow";
+import NextLink from "next/link";
+import cTA from "../images/cTA.png";
+import Image from "next/image";
+import { RiMailLine, RiPhoneLine, RiArrowRightLine } from "react-icons/ri";
 
 export default function CTA() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [isSuccessful, setIsSuccessful] = useState(false);
-  const [isInvalid, setIsInvalid] = useState(false);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setIsLoading(true);
-    axios
-      .post("/api/send", { email, message })
-      .then(() => {
-        setIsSuccessful(true);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setIsInvalid(true);
-        setIsLoading(false);
-      });
-  };
-
   return (
-    <Flex
-      align={"center"}
-      justify={"center"}
-      bg={"primary.500"}
-      h={[null, "calc(100vh - 212px)"]}
-      py={8}
-    >
-      <Container maxW={"container.xl"} color={"white"}>
-        <Flex direction={["column", "row"]} align={"center"}>
-          <Box w={["100%", "50%"]}>
-            <Heading size={["xl", "3xl"]} mb={16}>
-              Your two consultations are now FREE!
-            </Heading>
-            <ContactRow />
-            <Text>
-              Find your audience, refine your product, and create solutions for
-              your customers in the first of your two free consultations.
-            </Text>
+    <Container maxW={"container.xl"} color={"white"}>
+      <Grid templateColumns={"repeat(8, 1fr)"} gap={"2px"} h={"599px"}>
+        <GridItem colSpan={3}>
+          <Flex
+            h={"100%"}
+            direction={"column"}
+            justify={"space-between"}
+            bg={"primary.500"}
+            _hover={{ bg: "primary.400" }}
+            p={4}
+          >
+            <Box>
+              <Heading as={"p"} fontSize={"4rem"} mb={4}>
+                Your two consultations are now FREE!
+              </Heading>
+              <Text>
+                Find your audience, refine your product, and create solutions
+                for your customers in the first of your two free consultations.
+              </Text>
+            </Box>
+            <Box>
+              <Link
+                as={NextLink}
+                href={"https://cal.com/stupendousweb/consultation"}
+              >
+                <Button
+                  bg={"white"}
+                  color={"primary.500"}
+                  size={"lg"}
+                  _hover={{ bg: "white", color: "primary.500" }}
+                  mr={12}
+                  rightIcon={<RiArrowRightLine />}
+                >
+                  Get yours Now
+                </Button>
+              </Link>
+            </Box>
+          </Flex>
+        </GridItem>
+        <GridItem colSpan={3}>
+          <Box h={"100%"} position={"relative"} overflow={"hidden"}>
+            <Image
+              src={cTA}
+              alt={"Women Talking"}
+              fill
+              style={{ objectFit: "cover" }}
+            />
           </Box>
-          <Box w={["100%", "50%"]}>
-            <form onSubmit={(event) => handleSubmit(event)}>
-              <FormControl isRequired px={[0, 24]}>
-                <FormLabel>Email</FormLabel>
-                <Input
-                  type={"email"}
-                  autoComplete={"email"}
-                  value={email}
-                  onChange={(event) => setEmail(event.currentTarget.value)}
-                />
-                <FormLabel>Message</FormLabel>
-                <Textarea
-                  placeholder="What excites you about your project?"
-                  value={message}
-                  onChange={(event) => setMessage(event.currentTarget.value)}
-                />
-                {(isSuccessful || isInvalid) && (
-                  <Text color={isSuccessful ? "green.300" : "red.300"}>
-                    {isSuccessful
-                      ? "Yahoo! I'll email you back soon. Thanks!"
-                      : "Hmm. Something went wrong. Please email topher@stupendousweb.com instead."}
-                  </Text>
-                )}
-                {!isSuccessful && !isInvalid && (
-                  <Button
-                    type={"submit"}
-                    variant={"bonkers"}
-                    size={"sm"}
-                    isLoading={isLoading}
-                  >
-                    Send!
-                  </Button>
-                )}
-              </FormControl>
-            </form>
+        </GridItem>
+        <GridItem colSpan={2}>
+          <Box bg={"gray.800"} p={4} h={"100%"} _hover={{ bg: "gray.700" }}>
+            <Link
+              as={NextLink}
+              href={"mailto:topher@stupendousweb.com"}
+              color={"primary.500"}
+            >
+              <Text fontWeight={"bold"} m={0}>
+                topher@stupendousweb.com
+              </Text>
+              <Text color={"gray.500"}>Say hi!</Text>
+              <RiMailLine size={32} />
+            </Link>
+            <Divider mt={4} mb={8} />
+            <Link as={NextLink} href={"tel:7023089375"} color={"primary.500"}>
+              <Text fontWeight={"bold"} m={0}>
+                +1 702.308.9375
+              </Text>
+              <Text color={"gray.500"}>Text or Call</Text>
+              <RiPhoneLine size={32} />
+            </Link>
+            <Divider mt={4} />
           </Box>
-        </Flex>
-      </Container>
-    </Flex>
+        </GridItem>
+      </Grid>
+    </Container>
   );
 }

@@ -35,7 +35,7 @@ import Questions from "../components/Questions";
 import Blog from "../components/Blog";
 import CTA from "../components/CTA";
 
-import mockup from "/images/mockup.png";
+import mockup from "/images/cTA.png";
 import denversCupid from "/images/projects/denvers-cupid.jpg";
 import powerTripFitness from "/images/projects/power-trip-fitness.jpg";
 import radTraining from "/images/projects/rad-training.jpg";
