@@ -4,7 +4,12 @@ import NextLink from "next/link";
 import { useGlobal } from "../lib/context";
 import axios from "axios";
 import { LocalBusinessJsonLd } from "next-seo";
-import { RiCheckFill } from "react-icons/ri";
+import {
+  RiArrowRightLine,
+  RiCheckFill,
+  RiMailLine,
+  RiPhoneLine,
+} from "react-icons/ri";
 import { DiReact } from "react-icons/di";
 import { Parallax } from "react-scroll-parallax";
 import Slider from "react-slick";
@@ -25,17 +30,18 @@ import {
   ListItem,
   ListIcon,
   List,
-  Highlight,
+  Grid,
+  GridItem,
+  Button,
+  Divider,
 } from "@chakra-ui/react";
 
-import ContactRow from "../components/ContactRow";
 import Slide from "../components/Slide";
 import Testimonials from "../components/Testimonials";
 import Questions from "../components/Questions";
 import Blog from "../components/Blog";
 import CTA from "../components/CTA";
 
-import mockup from "/images/cTA.png";
 import denversCupid from "/images/projects/denvers-cupid.jpg";
 import powerTripFitness from "/images/projects/power-trip-fitness.jpg";
 import radTraining from "/images/projects/rad-training.jpg";
@@ -51,6 +57,7 @@ import luckyArtists from "/images/projects/lucky-artists.jpg";
 
 import analytics from "../images/analytics.png";
 import cms from "../images/cms.png";
+import cTA from "../images/cTA.png";
 
 export default function Home({ articles }) {
   const { setIsLoading } = useGlobal();
@@ -134,51 +141,91 @@ export default function Home({ articles }) {
           longitude: "-115.061710",
         }}
       />
-      <Flex
-        direction={["column", "row"]}
-        align={"center"}
-        justify={"center"}
-        h={"100vh"}
-        w={"100%"}
-        maxW={"90rem"}
-        px={4}
-        py={32}
-        mx={"auto"}
-        my={[32, 0]}
-      >
-        <Box w={["100%", "66.66%"]} pr={[0, 4]}>
-          <Heading
-            as={"p"}
-            fontSize={["2rem", "3rem"]}
-            lineHeight={[1.5, 1.66]}
-          >
-            <Highlight
-              query={["community", "software"]}
-              styles={{ px: [2, 8], bg: "primary.500" }}
+      <Container maxW={"container.xl"} color={"white"} py={"200px"}>
+        <Grid
+          templateColumns={["repeat(1, 1fr)", "repeat(8, 1fr)"]}
+          gap={"2px"}
+          h={"600px"}
+        >
+          <GridItem colSpan={3}>
+            <Flex
+              h={"100%"}
+              direction={"column"}
+              justify={"space-between"}
+              bg={"gray.900"}
+              _hover={{ bg: "gray.800" }}
+              p={4}
             >
-              If you want to build community, build stupendous software.
-            </Highlight>
-          </Heading>
-          <ContactRow />
-        </Box>
-        <Flex justify={"center"} w={["100%", "50%"]}>
-          <Image
-            src={mockup}
-            alt={"Mockup | Software Development Services"}
-            priority
-            onLoadingComplete={() => setIsLoading(false)}
-          />
-        </Flex>
-      </Flex>
-      <Container maxW={"container.sm"} pt={[16, 0]} pb={[16, 32]}>
-        <Text as={"h1"}>Software Development Services</Text>
-        <Heading as={"p"} mb={8}>
-          Websites, Web Apps, and Phone Apps
+              <Box>
+                <Heading as={"p"} fontSize={"4rem"} mb={4}>
+                  Websites, Web Apps, and Phone Apps
+                </Heading>
+                <Text>
+                  I help people with something to share who want to engage with
+                  their community by delivering software development services
+                  that improve their brand awareness and authority.
+                </Text>
+              </Box>
+              <Box>
+                <Link
+                  as={NextLink}
+                  href={"https://cal.com/stupendousweb/consultation"}
+                >
+                  <Button
+                    colorScheme={"primary"}
+                    size={"lg"}
+                    mr={12}
+                    rightIcon={<RiArrowRightLine />}
+                  >
+                    Get yours Now
+                  </Button>
+                </Link>
+              </Box>
+            </Flex>
+          </GridItem>
+          <GridItem colSpan={3}>
+            <Box h={"100%"} position={"relative"} overflow={"hidden"}>
+              <Image
+                src={cTA}
+                alt={"Women Talking"}
+                fill
+                style={{ objectFit: "cover" }}
+                onLoadingComplete={() => setIsLoading(false)}
+              />
+            </Box>
+          </GridItem>
+          <GridItem colSpan={2}>
+            <Box bg={"gray.900"} p={4} h={"100%"} _hover={{ bg: "gray.800" }}>
+              <Link
+                as={NextLink}
+                href={"mailto:topher@stupendousweb.com"}
+                color={"primary.500"}
+              >
+                <Text fontWeight={"bold"} m={0}>
+                  topher@stupendousweb.com
+                </Text>
+                <Text color={"gray.500"}>Say hi!</Text>
+                <RiMailLine size={32} />
+              </Link>
+              <Divider mt={4} mb={8} />
+              <Link as={NextLink} href={"tel:7023089375"} color={"primary.500"}>
+                <Text fontWeight={"bold"} m={0}>
+                  +1 702.308.9375
+                </Text>
+                <Text color={"gray.500"}>Text or Call</Text>
+                <RiPhoneLine size={32} />
+              </Link>
+              <Divider mt={4} />
+            </Box>
+          </GridItem>
+        </Grid>
+      </Container>
+      <Container maxW={"container.sm"} py={"200px"}>
+        <Heading as={"h1"} mb={4}>
+          Software Development Services
         </Heading>
         <Text mb={8}>
-          I help people with something to share who want to engage with their
-          community by delivering software development services that improve
-          their brand awareness and authority.
+          If you want to build community, build stupendous software.
         </Text>
         <Text as={"code"} color={"primary.500"}>
           [topher@stupendous ~]$ <span className={"flash"}>▌</span>

@@ -48,7 +48,7 @@ const theme = extendTheme({
   styles: {
     global: {
       "html, body": {
-        bg: "gray.900",
+        bg: "black",
         color: "gray.200",
         overflowX: "hidden",
         lineHeight: 2,

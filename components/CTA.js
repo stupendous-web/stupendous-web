@@ -71,7 +71,7 @@ export default function CTA() {
           </Box>
         </GridItem>
         <GridItem colSpan={2}>
-          <Box bg={"gray.800"} p={4} h={"100%"} _hover={{ bg: "gray.700" }}>
+          <Box bg={"gray.900"} p={4} h={"100%"} _hover={{ bg: "gray.800" }}>
             <Link
               as={NextLink}
               href={"mailto:topher@stupendousweb.com"}
