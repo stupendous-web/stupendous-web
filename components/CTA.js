@@ -18,7 +18,11 @@ import { RiMailLine, RiPhoneLine, RiArrowRightLine } from "react-icons/ri";
 export default function CTA() {
   return (
     <Container maxW={"container.xl"} color={"white"}>
-      <Grid templateColumns={"repeat(8, 1fr)"} gap={"2px"} h={"599px"}>
+      <Grid
+        templateColumns={["repeat(1, 1fr)", "repeat(8, 1fr)"]}
+        gap={"2px"}
+        h={"600px"}
+      >
         <GridItem colSpan={3}>
           <Flex
             h={"100%"}
