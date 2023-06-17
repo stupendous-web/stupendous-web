@@ -15,7 +15,6 @@ import Contact from "../components/Contact";
 import Pride from "../components/Pride";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
-import Logo from "../components/Logo";
 import Loading from "../components/Loading";
 import Cursor from "../components/Cursor";
 
@@ -63,7 +62,6 @@ function MyApp({ Component, pageProps }) {
             <Navigation />
             <Contact />
             <Menu />
-            <Logo />
             <Loading />
             <Cursor />
           </Provider>
