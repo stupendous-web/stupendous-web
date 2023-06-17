@@ -8,7 +8,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../utils/chakra";
 import { ParallaxProvider } from "react-scroll-parallax";
 import "../styles/global.css";
-import "slick-carousel/slick/slick.css";
 
 import Navigation from "../components/Navigation";
 import Contact from "../components/Contact";

@@ -6,23 +6,19 @@ import {
   Heading,
   Text,
   Link,
-  Grid,
   GridItem,
   Divider,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import cTA from "../images/cTA.png";
-import Image from "next/image";
 import { RiMailLine, RiPhoneLine, RiArrowRightLine } from "react-icons/ri";
+import CarbonGrid from "./CarbonGrid";
+import CarbonGridImage from "./CarbonGridImage";
 
 export default function CTA() {
   return (
     <Container maxW={"container.xl"} color={"white"}>
-      <Grid
-        templateColumns={["repeat(1, 1fr)", "repeat(8, 1fr)"]}
-        gap={"2px"}
-        h={"600px"}
-      >
+      <CarbonGrid height={3}>
         <GridItem colSpan={3}>
           <Flex
             h={"100%"}
@@ -60,16 +56,11 @@ export default function CTA() {
             </Box>
           </Flex>
         </GridItem>
-        <GridItem colSpan={3}>
-          <Box h={"100%"} position={"relative"} overflow={"hidden"}>
-            <Image
-              src={cTA}
-              alt={"Women Talking"}
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </Box>
-        </GridItem>
+        <CarbonGridImage
+          colSpan={3}
+          src={cTA}
+          alt={"Women Working | Software Development Services"}
+        />
         <GridItem colSpan={2}>
           <Box bg={"gray.900"} p={4} h={"100%"} _hover={{ bg: "gray.800" }}>
             <Link
@@ -94,7 +85,7 @@ export default function CTA() {
             <Divider mt={4} />
           </Box>
         </GridItem>
-      </Grid>
+      </CarbonGrid>
     </Container>
   );
 }

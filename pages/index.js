@@ -12,7 +12,6 @@ import {
 } from "react-icons/ri";
 import { DiReact } from "react-icons/di";
 import { Parallax } from "react-scroll-parallax";
-import Slider from "react-slick";
 import {
   Box,
   Container,
@@ -21,22 +20,15 @@ import {
   Icon,
   Text,
   SimpleGrid,
-  Tabs,
-  Tab,
-  TabList,
-  TabPanels,
-  TabPanel,
   Link,
   ListItem,
   ListIcon,
   List,
-  Grid,
   GridItem,
   Button,
   Divider,
 } from "@chakra-ui/react";
 
-import Slide from "../components/Slide";
 import Testimonials from "../components/Testimonials";
 import Questions from "../components/Questions";
 import Blog from "../components/Blog";
@@ -55,14 +47,15 @@ import kendraHicks from "/images/projects/kendra-hicks.jpg";
 import lPSolutions from "/images/projects/lp-solutions.jpg";
 import luckyArtists from "/images/projects/lucky-artists.jpg";
 
-import analytics from "../images/analytics.png";
-import cms from "../images/cms.png";
 import cTA from "../images/cTA.png";
+import CarbonGrid from "../components/CarbonGrid";
+import CarbonGridImage from "../components/CarbonGridImage";
+import Solutions from "../components/Solutions";
 
 export default function Home({ articles }) {
   const { setIsLoading } = useGlobal();
 
-  const solutions = [
+  const apps = [
     "CRM, Customer Relationship Managers",
     "Project Management Systems",
     "Collaboration Software Apps",
@@ -142,11 +135,7 @@ export default function Home({ articles }) {
         }}
       />
       <Container maxW={"container.xl"} color={"white"} py={"200px"}>
-        <Grid
-          templateColumns={["repeat(1, 1fr)", "repeat(8, 1fr)"]}
-          gap={"2px"}
-          h={"600px"}
-        >
+        <CarbonGrid height={3}>
           <GridItem colSpan={3}>
             <Flex
               h={"100%"}
@@ -183,17 +172,12 @@ export default function Home({ articles }) {
               </Box>
             </Flex>
           </GridItem>
-          <GridItem colSpan={3}>
-            <Box h={"100%"} position={"relative"} overflow={"hidden"}>
-              <Image
-                src={cTA}
-                alt={"Women Talking"}
-                fill
-                style={{ objectFit: "cover" }}
-                onLoadingComplete={() => setIsLoading(false)}
-              />
-            </Box>
-          </GridItem>
+          <CarbonGridImage
+            colSpan={3}
+            src={cTA}
+            alt={"Women Working | Software Development Services"}
+            onLoadingComplete={setIsLoading(false)}
+          />
           <GridItem colSpan={2}>
             <Box bg={"gray.900"} p={4} h={"100%"} _hover={{ bg: "gray.800" }}>
               <Link
@@ -218,7 +202,7 @@ export default function Home({ articles }) {
               <Divider mt={4} />
             </Box>
           </GridItem>
-        </Grid>
+        </CarbonGrid>
       </Container>
       <Container maxW={"container.sm"} py={"200px"}>
         <Heading as={"h1"} mb={4}>
@@ -297,132 +281,7 @@ export default function Home({ articles }) {
           </SimpleGrid>
         </Parallax>
       </Container>
-      <Container maxW={"container.lg"} py={[16, 32]}>
-        <Heading pb={8}>Everything for Everyone</Heading>
-        <Tabs colorScheme={"primary"}>
-          <TabList>
-            <Tab fontWeight={"bold"}>Hosting</Tab>
-            <Tab fontWeight={"bold"}>Support</Tab>
-            <Tab fontWeight={"bold"}>SEO &amp; ASO</Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel>
-              <Text>
-                I&apos;ll handle the technical work of getting you, your brand,
-                and your message online. I&apos;ll set you up with your managed,
-                fast, and secure website hosting and Google Play and Apple App
-                Store listings as part of my software development services. Sit
-                back, relax, and continue to do the work you love.
-              </Text>
-            </TabPanel>
-            <TabPanel>
-              <Text>
-                Let&apos;s get this right! We&apos;ll work closely together to
-                make sure your web, iOS, and Android apps are perfect as part of
-                my software development services. I&apos;m available via email,
-                phone, video chat, and even in person in Las Vegas. You can
-                email me anytime with your required updates and concerns.
-                I&apos;m always here.
-              </Text>
-            </TabPanel>
-            <TabPanel>
-              <Text>
-                Search engine and app store optimization play important roles in
-                getting your product to your audiences. So, let&apos;s keep your
-                web, iOS, and Android apps up to date with the latest SEO and
-                ASO. My software development services get more people to your
-                app. Let&apos;s work some magic!
-              </Text>
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
-      </Container>
-      <Container maxW={"container.lg"} py={[16, 32]}>
-        <Slider autoplay={true} infinite={true} arrows={false}>
-          <Slide
-            image={0}
-            heading={".business"}
-            text={"hello@yourwork.business"}
-          />
-          <Slide
-            image={1}
-            heading={".pictures"}
-            text={"hello@yourwork.pictures"}
-          />
-          <Slide image={2} heading={".org"} text={"hello@yourwork.org"} />
-          <Slide image={3} heading={".fans"} text={"hello@yourwork.fans"} />
-        </Slider>
-      </Container>
-      <Container maxW={"container.lg"} py={[16, 32]}>
-        <Text>eCommerce</Text>
-        <Heading mb={8}>Accept Payments</Heading>
-        <Text mb={8}>
-          Let&apos;s keep your work sustainable. My software development
-          services integrate with your{" "}
-          <Link
-            as={NextLink}
-            href={"https://stripe.com/payments"}
-            title={"Stripe Payments"}
-            target={"_blank"}
-            rel={"nofollow noreferrer"}
-          >
-            Stripe
-          </Link>{" "}
-          and{" "}
-          <Link
-            as={NextLink}
-            href={"https://www.paypal.com/us/business/accept-payments"}
-            title={"Paypal Payments"}
-            target={"_blank"}
-            rel={"nofollow noreferrer"}
-          >
-            Paypal
-          </Link>{" "}
-          accounts. Let your software make you money so you can focus on your
-          work.
-        </Text>
-      </Container>
-      <Container maxW={"container.lg"} py={[16, 32]}>
-        <SimpleGrid columns={[1, 2]} spacing={8}>
-          <Box>
-            <Image
-              src={cms}
-              alt={"Software Development Services"}
-              style={{ marginBottom: "2rem" }}
-            />
-            <Text>CMS</Text>
-            <Heading mb={8}>Publish Content</Heading>
-            <Text>
-              Managing your web, iOS, and Android app text, images, and even
-              videos is easy! My software development services include a content
-              management system. Now you can easily add, update, and remove
-              content at any time.
-            </Text>
-          </Box>
-          <Box>
-            <Image
-              src={analytics}
-              alt={"Software Development Services"}
-              style={{ marginBottom: "2rem" }}
-            />
-            <Text>Analytics</Text>
-            <Heading mb={8}>Find Customers</Heading>
-            <Text>
-              There are many new people out there waiting to meet you that are
-              very interested in what you do! My software development services
-              come with web analytics at now extra charge. Learn more about your
-              current audience while also discovering new ones with analytics.{" "}
-              <Link
-                as={NextLink}
-                href={"https://stupendousanalytics.com"}
-                title={"NextJS Website Analytics Dashboard"}
-              >
-                Learn more
-              </Link>
-            </Text>
-          </Box>
-        </SimpleGrid>
-      </Container>
+      <Solutions />
       <Container maxW={"container.lg"} py={[16, 32]}>
         <Text>Web &amp; Phone Apps</Text>
         <Heading mb={8}>Engage with your Audience</Heading>
@@ -435,10 +294,10 @@ export default function Home({ articles }) {
           ways:
         </Text>
         <List spacing={4}>
-          {solutions.map((solution) => (
-            <ListItem key={solution}>
+          {apps.map((app) => (
+            <ListItem key={app}>
               <ListIcon as={RiCheckFill} />
-              {solution}
+              {app}
             </ListItem>
           ))}
         </List>

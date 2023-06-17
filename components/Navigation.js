@@ -13,6 +13,7 @@ export default function Navigation() {
 
   return (
     <Box
+      bg={"black"}
       w={"100%"}
       position={"fixed"}
       top={0}
