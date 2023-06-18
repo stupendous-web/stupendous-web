@@ -33,7 +33,12 @@ export default function Navigation() {
     >
       <Container maxW={"container.xl"}>
         <Flex>
-          <Box w={16}>
+          <Box
+            w={16}
+            borderRight={"solid 1px"}
+            borderLeft={"solid 1px"}
+            borderColor={colorMode === "dark" ? "white" : "gray.900"}
+          >
             <Link
               as={NextLink}
               href={"/"}
