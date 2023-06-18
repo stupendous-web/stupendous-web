@@ -165,7 +165,7 @@ export default function Articles({ articles, tags }) {
                         <AspectRatio maxW={"100%"} ratio={16 / 9} mb={8}>
                           <Image
                             src={article?.featured_image}
-                            alt={article?.title}
+                            alt={`${article?.title} | Software Development Services | Stupendous Web`}
                             fill
                             style={{ objectFit: "cover" }}
                           />
