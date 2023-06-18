@@ -19,7 +19,7 @@ import Image from "next/image";
 
 export default function CTA() {
   return (
-    <Container maxW={"container.xl"} pt={[0, 16]}>
+    <Container maxW={"container.xl"} pt={[4, 16]}>
       <SimpleGrid columns={8} spacing={2} height={["100%", "600px"]}>
         <GridItem colSpan={[8, 3]}>
           <Flex
@@ -27,7 +27,6 @@ export default function CTA() {
             direction={"column"}
             justify={"space-between"}
             bg={"primary.500"}
-            _hover={{ bg: "primary.400" }}
             p={4}
           >
             <Box>

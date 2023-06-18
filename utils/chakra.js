@@ -128,6 +128,14 @@ const theme = extendTheme({
           _hover: { bg: mode("gray.200", "gray.800")(props) },
         },
       }),
+      variants: {
+        transparent: {
+          container: {
+            bg: "transparent",
+            _hover: { bg: "transparent" },
+          },
+        },
+      },
     },
     Popover: {
       baseStyle: {

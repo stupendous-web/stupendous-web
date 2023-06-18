@@ -30,14 +30,20 @@ export default function Blog({ articles }) {
         {articles?.slice(0, 4)?.map((article) => (
           <Fragment key={article?.ID}>
             <GridItem colSpan={[8, 1]}>
-              <Box h={"100%"} position={"relative"} overflow={"hidden"}>
-                <Image
-                  src={article?.featured_image}
-                  alt={`${article?.title} | Software Development Services | Stupendous Web`}
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
-              </Box>
+              <Link
+                as={NextLink}
+                href={`/articles/${article?.slug}`}
+                title={`${article?.title} | Software Development Services | Stupendous Web`}
+              >
+                <Box h={"100%"} position={"relative"} overflow={"hidden"}>
+                  <Image
+                    src={article?.featured_image}
+                    alt={`${article?.title} | Software Development Services | Stupendous Web`}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </Box>
+              </Link>
             </GridItem>
             <GridItem colSpan={[8, 1]}>
               <Card>

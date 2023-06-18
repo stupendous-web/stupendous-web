@@ -70,7 +70,7 @@ export default function Footer() {
   ];
 
   return (
-    <Container maxW={"container.xl"} color={"white"} pt={16} pb={8}>
+    <Container maxW={"container.xl"} pt={[4, 16]}>
       <Grid
         templateColumns={["repeat(1, 1fr)", "repeat(8, 1fr)"]}
         gap={"2px"}
