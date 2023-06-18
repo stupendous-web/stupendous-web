@@ -8,6 +8,7 @@ import {
   Box,
   Flex,
   SimpleGrid,
+  Card,
 } from "@chakra-ui/react";
 import { Fragment } from "react";
 import Image from "next/image";
@@ -39,31 +40,26 @@ export default function Blog({ articles }) {
               </Box>
             </GridItem>
             <GridItem colSpan={[8, 1]}>
-              <Flex
-                h={"100%"}
-                direction={"column"}
-                justify={"space-between"}
-                bg={"gray.900"}
-                _hover={{ bg: "gray.800" }}
-                p={4}
-              >
-                <Box>
+              <Card>
+                <Flex h={"100%"} direction={"column"} justify={"space-between"}>
+                  <Box>
+                    <Link
+                      as={NextLink}
+                      href={`/articles/${article?.slug}`}
+                      title={`${article?.title} | Software Development Services | Stupendous Web`}
+                    >
+                      <Text lineHeight={1.5}>{article?.title}</Text>
+                    </Link>
+                  </Box>
                   <Link
                     as={NextLink}
                     href={`/articles/${article?.slug}`}
                     title={`${article?.title} | Software Development Services | Stupendous Web`}
                   >
-                    <Text lineHeight={1.5}>{article?.title}</Text>
+                    <RiArrowRightLine size={16} />
                   </Link>
-                </Box>
-                <Link
-                  as={NextLink}
-                  href={`/articles/${article?.slug}`}
-                  title={`${article?.title} | Software Development Services | Stupendous Web`}
-                >
-                  <RiArrowRightLine size={16} />
-                </Link>
-              </Flex>
+                </Flex>
+              </Card>
             </GridItem>
           </Fragment>
         ))}

@@ -1,5 +1,6 @@
 import {
   Box,
+  Card,
   Container,
   Flex,
   GridItem,
@@ -7,9 +8,12 @@ import {
   SimpleGrid,
   Tag,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 
 export default function AppsIndustries() {
+  const { colorMode } = useColorMode();
+
   const apps = [
     "CRM, Customer Relationship Managers",
     "Project Management Systems",
@@ -58,59 +62,59 @@ export default function AppsIndustries() {
     <Container maxW={"container.xl"} pt={[0, 16]}>
       <SimpleGrid columns={8} spacing={2} h={["100%", "800px"]}>
         <GridItem colSpan={[8, 4]}>
-          <Flex
-            h={"100%"}
-            direction={"column"}
-            justify={"space-between"}
-            bg={"gray.900"}
-            p={4}
-          >
-            <Box>
-              <Heading>Engage with your Audience</Heading>
-              <Text>
-                My software development services will excel you and your work
-                far past your competitors and their websites! With the added
-                power of a database and powerful server technologies, your web
-                and phone apps will be full of useful features. This power [use
-                it wisely] let&apos;s you engage with your audiences in many
-                fun, creative, and profitable ways:
-              </Text>
-            </Box>
-            <Box>
-              {apps.map((app) => (
-                <Tag key={app} mr={2}>
-                  {app}
-                </Tag>
-              ))}
-            </Box>
-          </Flex>
+          <Card>
+            <Flex h={"100%"} direction={"column"} justify={"space-between"}>
+              <Box>
+                <Heading>Engage with your Audience</Heading>
+                <Text>
+                  My software development services will excel you and your work
+                  far past your competitors and their websites! With the added
+                  power of a database and powerful server technologies, your web
+                  and phone apps will be full of useful features. This power
+                  [use it wisely] let&apos;s you engage with your audiences in
+                  many fun, creative, and profitable ways:
+                </Text>
+              </Box>
+              <Box>
+                {apps.map((app) => (
+                  <Tag
+                    key={app}
+                    bg={colorMode === "dark" ? "gray.700" : "gray.300"}
+                    mr={2}
+                  >
+                    {app}
+                  </Tag>
+                ))}
+              </Box>
+            </Flex>
+          </Card>
         </GridItem>
         <GridItem colSpan={[8, 4]}>
-          <Flex
-            h={"100%"}
-            direction={"column"}
-            justify={"space-between"}
-            bg={"gray.900"}
-            p={4}
-          >
-            <Box>
-              <Heading>Expand your Reach</Heading>
-              <Text>
-                Do what you do! Web and phone apps can be useful in any
-                industry. My software development services provide people like
-                you with the tools they need to grow their business while
-                reaching existing and new customers and increasing profitability
-                so you can continue to do what you love.
-              </Text>
-            </Box>
-            <Box>
-              {industries.map((industry) => (
-                <Tag key={industry} mr={2}>
-                  {industry}
-                </Tag>
-              ))}
-            </Box>
-          </Flex>
+          <Card>
+            <Flex h={"100%"} direction={"column"} justify={"space-between"}>
+              <Box>
+                <Heading>Expand your Reach</Heading>
+                <Text>
+                  Do what you do! Web and phone apps can be useful in any
+                  industry. My software development services provide people like
+                  you with the tools they need to grow their business while
+                  reaching existing and new customers and increasing
+                  profitability so you can continue to do what you love.
+                </Text>
+              </Box>
+              <Box>
+                {industries.map((industry) => (
+                  <Tag
+                    key={industry}
+                    bg={colorMode === "dark" ? "gray.700" : "gray.300"}
+                    mr={2}
+                  >
+                    {industry}
+                  </Tag>
+                ))}
+              </Box>
+            </Flex>
+          </Card>
         </GridItem>
       </SimpleGrid>
     </Container>

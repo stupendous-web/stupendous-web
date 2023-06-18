@@ -1,5 +1,6 @@
 import {
   Box,
+  Card,
   Container,
   GridItem,
   Heading,
@@ -46,8 +47,12 @@ export default function Solutions() {
             src={stock5}
             alt={"Software Solutions | Software Development Services"}
           />
-          <GridItem colSpan={[8, 3]} bg={"gray.900"} p={4}>
-            <Heading as={"h1"}>Software Development Services</Heading>{" "}
+          <GridItem colSpan={[8, 3]}>
+            <Card>
+              <Heading as={"h1"} m={0}>
+                Software Development Services
+              </Heading>
+            </Card>
           </GridItem>
         </SimpleGrid>
         {solutions?.map((solution, index) => (

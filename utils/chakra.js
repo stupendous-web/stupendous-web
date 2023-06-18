@@ -1,6 +1,8 @@
+import { mode } from "@chakra-ui/theme-tools";
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
+  config: { initialColorMode: "dark" },
   colors: {
     primary: {
       50: "#fff0f7",
@@ -46,17 +48,17 @@ const theme = extendTheme({
     },
   },
   styles: {
-    global: {
+    global: (props) => ({
       "html, body": {
-        bg: "black",
-        color: "gray.200",
+        bg: mode("gray.50", "black")(props),
+        color: mode("gray.800", "gray.100")(props),
         overflowX: "hidden",
         lineHeight: 2,
       },
       body: {
         mt: "65px",
       },
-    },
+    }),
   },
   fonts: {
     heading: "transducer, sans-serif",
@@ -88,13 +90,16 @@ const theme = extendTheme({
     "3xl": 0,
     full: 0,
   },
+  shadows: {
+    base: "none",
+  },
   components: {
     Heading: {
-      baseStyle: {
-        color: "white",
+      baseStyle: (props) => ({
+        color: mode("gray.900", "white")(props),
         fontWeight: "bold",
         mb: 8,
-      },
+      }),
     },
     Text: {
       baseStyle: {
@@ -105,28 +110,24 @@ const theme = extendTheme({
       baseStyle: {
         textTransform: "uppercase",
       },
-      variants: {
-        bonkers: {
-          color: "white",
-          border: "1px solid white",
-          boxShadow: "white .5rem .5rem 0 0, white .5rem .5rem 0 1px",
-          _hover: {
-            background: "primary.500",
-          },
-          _focus: {
-            boxShadow:
-              "white .5rem .5rem 0 0, white .5rem .5rem 0 1px !important",
-          },
-        },
-      },
     },
     Link: {
-      baseStyle: {
-        color: "white",
+      baseStyle: (props) => ({
+        color: mode("black", "white")(props),
         _hover: {
           textDecoration: "none",
         },
-      },
+      }),
+    },
+    Card: {
+      baseStyle: (props) => ({
+        container: {
+          bg: mode("gray.100", "gray.900")(props),
+          h: "100%",
+          p: 4,
+          _hover: { bg: mode("gray.200", "gray.800")(props) },
+        },
+      }),
     },
     Popover: {
       baseStyle: {

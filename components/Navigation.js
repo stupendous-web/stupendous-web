@@ -1,9 +1,18 @@
 import NextLink from "next/link";
-import { Box, Container, Flex, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Link,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import logo from "../images/logo.png";
 
 export default function Navigation() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   const links = [
     { href: "projects", title: "Projects" },
     { href: "mood", title: "Mood" },
@@ -13,12 +22,13 @@ export default function Navigation() {
 
   return (
     <Box
-      bg={"black"}
+      bg={colorMode === "dark" ? "black" : "gray.50"}
       w={"100%"}
       position={"fixed"}
       top={0}
       left={0}
-      borderBottom={"solid 1px white"}
+      borderBottom={"solid 1px"}
+      borderColor={colorMode === "dark" ? "white" : "gray.900"}
       hideBelow={"sm"}
     >
       <Container maxW={"container.xl"}>
@@ -42,14 +52,14 @@ export default function Navigation() {
               key={key}
               align={"center"}
               p={4}
-              borderRight={"solid 1px white"}
+              borderRight={"solid 1px"}
+              borderColor={colorMode === "dark" ? "white" : "gray.900"}
             >
               <Link
                 key={link.href}
                 as={NextLink}
                 href={`/${link.href}`}
                 title={`${link.title} | Software Development Services | Stupendous Web`}
-                color={"white"}
                 fontWeight={"bold"}
               >
                 <Text lineHeight={1} m={0} px={4}>
@@ -58,6 +68,15 @@ export default function Navigation() {
               </Link>
             </Flex>
           ))}
+          <Flex
+            align={"center"}
+            ml={"auto"}
+            pl={4}
+            cursor={"pointer"}
+            onClick={() => toggleColorMode()}
+          >
+            {colorMode === "dark" ? "🌝" : "🌚"}
+          </Flex>
         </Flex>
       </Container>
     </Box>

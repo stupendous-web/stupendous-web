@@ -49,18 +49,18 @@ export default function Home({ articles }) {
       />
       <Intro />
       <Solutions />
-      <Container maxW={"container.xl"} pt={[0, 16]}>
-        <Text>
-          I&apos;m a certified web developer and have many years of experience
-          offering intentional and powerful software development services. I can
-          create your tools with a combination of HTML, CSS, Less, UI Kit,
-          Bootstrap, Material UI, Tailwind, Javascript, React, Next.js, jQuery,
-          PHP, Laravel, MySQL, MongoDB, and many other tools.
-        </Text>
-        <Icon as={DiReact} boxSize={16} />
-      </Container>
-      <Testimonials />
-      <Questions />
+      {/*<Container maxW={"container.xl"} pt={[0, 16]}>*/}
+      {/*  <Text>*/}
+      {/*    I&apos;m a certified web developer and have many years of experience*/}
+      {/*    offering intentional and powerful software development services. I can*/}
+      {/*    create your tools with a combination of HTML, CSS, Less, UI Kit,*/}
+      {/*    Bootstrap, Material UI, Tailwind, Javascript, React, Next.js, jQuery,*/}
+      {/*    PHP, Laravel, MySQL, MongoDB, and many other tools.*/}
+      {/*  </Text>*/}
+      {/*  <Icon as={DiReact} boxSize={16} />*/}
+      {/*</Container>*/}
+      {/*<Testimonials />*/}
+      {/*<Questions />*/}
       <AppsIndustries />
       <Blog articles={articles} />
       <CTA />

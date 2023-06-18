@@ -9,6 +9,7 @@ import {
   GridItem,
   Divider,
   SimpleGrid,
+  Card,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import stock1 from "../images/stock/1.jpg";
@@ -17,7 +18,7 @@ import CarbonGridImage from "./CarbonGridImage";
 
 export default function CTA() {
   return (
-    <Container maxW={"container.xl"} pt={[0, 16]} color={"white"}>
+    <Container maxW={"container.xl"} pt={[0, 16]}>
       <SimpleGrid columns={8} spacing={2} height={["100%", "600px"]}>
         <GridItem colSpan={[8, 3]}>
           <Flex
@@ -29,10 +30,15 @@ export default function CTA() {
             p={4}
           >
             <Box>
-              <Heading as={"p"} fontSize={["2rem", "4rem"]} mb={4}>
+              <Heading
+                as={"p"}
+                color={"white"}
+                fontSize={["2rem", "4rem"]}
+                mb={4}
+              >
                 Your two consultations are now FREE!
               </Heading>
-              <Text>
+              <Text color={"white"}>
                 Find your audience, refine your product, and create solutions
                 for your customers in the first of your two free consultations.
               </Text>
@@ -62,7 +68,7 @@ export default function CTA() {
           alt={"Women Working | Software Development Services"}
         />
         <GridItem colSpan={[8, 2]}>
-          <Box bg={"gray.900"} p={4} h={"100%"} _hover={{ bg: "gray.800" }}>
+          <Card>
             <Link
               as={NextLink}
               href={"mailto:topher@stupendousweb.com"}
@@ -83,7 +89,7 @@ export default function CTA() {
               <RiPhoneLine size={32} />
             </Link>
             <Divider mt={4} />
-          </Box>
+          </Card>
         </GridItem>
       </SimpleGrid>
     </Container>
