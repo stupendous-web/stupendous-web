@@ -18,8 +18,8 @@ import CarbonGridImage from "./CarbonGridImage";
 export default function CTA() {
   return (
     <Container maxW={"container.xl"} pt={[0, 16]} color={"white"}>
-      <SimpleGrid columns={8} spacing={2} height={"600px"}>
-        <GridItem colSpan={3}>
+      <SimpleGrid columns={8} spacing={2} height={["100%", "600px"]}>
+        <GridItem colSpan={[8, 3]}>
           <Flex
             h={"100%"}
             direction={"column"}
@@ -61,7 +61,7 @@ export default function CTA() {
           src={cTA}
           alt={"Women Working | Software Development Services"}
         />
-        <GridItem colSpan={2}>
+        <GridItem colSpan={[8, 2]}>
           <Box bg={"gray.900"} p={4} h={"100%"} _hover={{ bg: "gray.800" }}>
             <Link
               as={NextLink}

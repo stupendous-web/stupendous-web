@@ -54,7 +54,9 @@ export default function Solutions() {
           <SimpleGrid columns={8} spacing={2} key={index}>
             <GridItem colSpan={[8, 2]} />
             <GridItem colSpan={[8, 3]} p={4}>
-              <Heading as={"h3"}>{solution.heading}</Heading>
+              <Heading as={"h3"} mb={0}>
+                {solution.heading}
+              </Heading>
             </GridItem>
             <GridItem
               colSpan={[8, 3]}

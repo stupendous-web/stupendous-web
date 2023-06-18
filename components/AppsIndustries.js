@@ -56,8 +56,8 @@ export default function AppsIndustries() {
 
   return (
     <Container maxW={"container.xl"} pt={[0, 16]}>
-      <SimpleGrid columns={8} spacing={2} h={"800px"}>
-        <GridItem colSpan={4}>
+      <SimpleGrid columns={8} spacing={2} h={["100%", "800px"]}>
+        <GridItem colSpan={[8, 4]}>
           <Flex
             h={"100%"}
             direction={"column"}
@@ -85,8 +85,7 @@ export default function AppsIndustries() {
             </Box>
           </Flex>
         </GridItem>
-
-        <GridItem colSpan={4}>
+        <GridItem colSpan={[8, 4]}>
           <Flex
             h={"100%"}
             direction={"column"}

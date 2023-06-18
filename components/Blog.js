@@ -25,10 +25,10 @@ export default function Blog({ articles }) {
           What&apos;s Good
         </Link>
       </Heading>
-      <SimpleGrid columns={8} spacing={2} h={"200px"}>
+      <SimpleGrid columns={8} spacing={2} h={["100%", "200px"]}>
         {articles?.slice(0, 4)?.map((article) => (
           <Fragment key={article?.ID}>
-            <GridItem colSpan={1}>
+            <GridItem colSpan={[8, 1]}>
               <Box h={"100%"} position={"relative"} overflow={"hidden"}>
                 <Image
                   src={article?.featured_image}
@@ -38,7 +38,7 @@ export default function Blog({ articles }) {
                 />
               </Box>
             </GridItem>
-            <GridItem>
+            <GridItem colSpan={[8, 1]}>
               <Flex
                 h={"100%"}
                 direction={"column"}
