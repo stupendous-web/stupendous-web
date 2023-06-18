@@ -7,7 +7,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import CarbonGridImage from "./CarbonGridImage";
-import cTA from "../images/cTA.png";
+import stock5 from "../images/stock/5.jpg";
 
 export default function Solutions() {
   const solutions = [
@@ -43,7 +43,7 @@ export default function Solutions() {
         <SimpleGrid columns={8} spacing={2} h={["100%", "600px"]} mb={4}>
           <CarbonGridImage
             colSpan={[8, 5]}
-            src={cTA}
+            src={stock5}
             alt={"Software Solutions | Software Development Services"}
           />
           <GridItem colSpan={[8, 3]} bg={"gray.900"} p={4}>

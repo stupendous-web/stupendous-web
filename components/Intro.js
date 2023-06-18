@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { RiArrowRightLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
-import cTA from "../images/cTA.png";
+import stock4 from "../images/stock/4.jpg";
 import { useGlobal } from "../lib/context";
 import Image from "next/image";
 
@@ -62,7 +62,7 @@ export default function Intro() {
         <GridItem colSpan={[8, 3]}>
           <AspectRatio ratio={1}>
             <Image
-              src={cTA}
+              src={stock4}
               alt={"Women Working | Software Development Services"}
               fill
               style={{ objectFit: "cover" }}

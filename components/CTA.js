@@ -11,7 +11,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import cTA from "../images/cTA.png";
+import stock1 from "../images/stock/1.jpg";
 import { RiMailLine, RiPhoneLine, RiArrowRightLine } from "react-icons/ri";
 import CarbonGridImage from "./CarbonGridImage";
 
@@ -58,7 +58,7 @@ export default function CTA() {
         </GridItem>
         <CarbonGridImage
           colSpan={3}
-          src={cTA}
+          src={stock1}
           alt={"Women Working | Software Development Services"}
         />
         <GridItem colSpan={[8, 2]}>
