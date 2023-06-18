@@ -10,11 +10,12 @@ import {
   Divider,
   SimpleGrid,
   Card,
+  AspectRatio,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import stock1 from "../images/stock/1.jpg";
 import { RiMailLine, RiPhoneLine, RiArrowRightLine } from "react-icons/ri";
-import CarbonGridImage from "./CarbonGridImage";
+import Image from "next/image";
 
 export default function CTA() {
   return (
@@ -62,11 +63,18 @@ export default function CTA() {
             </Box>
           </Flex>
         </GridItem>
-        <CarbonGridImage
-          colSpan={3}
-          src={stock1}
-          alt={"Women Working | Software Development Services"}
-        />
+        <GridItem colSpan={[8, 3]}>
+          <AspectRatio ratio={1} h={"100%"}>
+            <Image
+              src={stock1}
+              alt={
+                "Web Developer Giving a Consultation | Software Development Services"
+              }
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </AspectRatio>
+        </GridItem>
         <GridItem colSpan={[8, 2]}>
           <Card>
             <Link

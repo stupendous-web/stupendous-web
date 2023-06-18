@@ -58,7 +58,7 @@ export default function Intro() {
           </Card>
         </GridItem>
         <GridItem colSpan={[8, 3]}>
-          <AspectRatio ratio={2 / 2.1}>
+          <AspectRatio ratio={1} h={"100%"}>
             <Image
               src={stock4}
               alt={"Women Working | Software Development Services"}

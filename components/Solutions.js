@@ -7,8 +7,8 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import CarbonGridImage from "./CarbonGridImage";
 import stock5 from "../images/stock/5.jpg";
+import Image from "next/image";
 
 export default function Solutions() {
   const solutions = [
@@ -39,41 +39,46 @@ export default function Solutions() {
   ];
 
   return (
-    <Box>
-      <Container maxW={"container.xl"} pt={[0, 16]}>
-        <SimpleGrid columns={8} spacing={2} h={["100%", "600px"]} mb={4}>
-          <CarbonGridImage
-            colSpan={[8, 5]}
-            src={stock5}
-            alt={"Software Solutions | Software Development Services"}
-          />
-          <GridItem colSpan={[8, 3]}>
-            <Card>
-              <Heading as={"h1"} m={0}>
-                Software Development Services
-              </Heading>
-            </Card>
+    <Container maxW={"container.xl"} pt={[0, 16]}>
+      <SimpleGrid columns={8} spacing={2} h={["100%", "600px"]} mb={2}>
+        <GridItem colSpan={[8, 5]}>
+          <Box h={"100%"} position={"relative"} overflow={"hidden"}>
+            <Image
+              src={stock5}
+              alt={
+                "Web Developer Giving a Consultation | Software Development Services"
+              }
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </Box>
+        </GridItem>
+        <GridItem colSpan={[8, 3]}>
+          <Card>
+            <Heading as={"h1"} m={0}>
+              Software Development Services
+            </Heading>
+          </Card>
+        </GridItem>
+      </SimpleGrid>
+      {solutions?.map((solution, index) => (
+        <SimpleGrid columns={8} spacing={2} key={index}>
+          <GridItem colSpan={[8, 2]} />
+          <GridItem colSpan={[8, 3]} p={4}>
+            <Heading as={"h3"} mb={0}>
+              {solution.heading}
+            </Heading>
+          </GridItem>
+          <GridItem
+            colSpan={[8, 3]}
+            p={4}
+            borderBottom={index < solutions.length - 1 ? "solid 1px" : null}
+            borderColor={"gray.300"}
+          >
+            <Text m={0}>{solution.text}</Text>
           </GridItem>
         </SimpleGrid>
-        {solutions?.map((solution, index) => (
-          <SimpleGrid columns={8} spacing={2} key={index}>
-            <GridItem colSpan={[8, 2]} />
-            <GridItem colSpan={[8, 3]} p={4}>
-              <Heading as={"h3"} mb={0}>
-                {solution.heading}
-              </Heading>
-            </GridItem>
-            <GridItem
-              colSpan={[8, 3]}
-              p={4}
-              borderBottom={index < solutions.length - 1 ? "solid 1px" : null}
-              borderColor={"gray.300"}
-            >
-              <Text m={0}>{solution.text}</Text>
-            </GridItem>
-          </SimpleGrid>
-        ))}
-      </Container>
-    </Box>
+      ))}
+    </Container>
   );
 }
