@@ -16,6 +16,7 @@ import { useEffect } from "react";
 
 export default function Projects() {
   const { setIsLoading } = useGlobal();
+
   useEffect(() => {
     setIsLoading(false);
   }, []);
@@ -29,7 +30,7 @@ export default function Projects() {
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>
             <Card variant={"transparent"} pt={0}>
-              <Heading as={"h1"} fontSize={"4rem"}>
+              <Heading as={"h1"} fontSize={["2rem", "4rem"]}>
                 Projects
               </Heading>
               <Text as={"code"}>

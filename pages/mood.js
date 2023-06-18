@@ -25,7 +25,7 @@ export default function Mood() {
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>
             <Card variant={"transparent"} pt={0}>
-              <Heading as={"h1"} fontSize={"4rem"}>
+              <Heading as={"h1"} fontSize={["2rem", "4rem"]}>
                 Mood
               </Heading>
               <Text as={"code"}>
