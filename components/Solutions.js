@@ -41,7 +41,7 @@ export default function Solutions() {
             alt={"Software Solutions | Software Development Services"}
           />
           <GridItem colSpan={3} bg={"gray.900"} p={4}>
-            <Heading>Full-Service Hassle-Free Software Solutions</Heading>
+            <Heading as={"h1"}>Software Development Services</Heading>{" "}
           </GridItem>
         </CarbonGrid>
       </Container>
@@ -50,7 +50,7 @@ export default function Solutions() {
           <CarbonGrid key={index} height={1}>
             <GridItem colSpan={2} />
             <GridItem colSpan={3} p={4}>
-              <Heading>{solution.heading}</Heading>
+              <Heading as={"h3"}>{solution.heading}</Heading>
             </GridItem>
             <GridItem
               colSpan={3}

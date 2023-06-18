@@ -1,13 +1,11 @@
 import { useGlobal } from "../lib/context";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Cursor, Typewriter } from "react-simple-typewriter";
+import { Box, Text, Flex, Container } from "@chakra-ui/react";
+import { useState } from "react";
 
 export default function Loading() {
+  const [isTyping, setIsTyping] = useState(true);
   const { isLoading } = useGlobal();
-  const { text } = useTypewriter({
-    words: ["Hang in there..."],
-    typeSpeed: 30,
-  });
 
   return (
     <Box
@@ -15,16 +13,27 @@ export default function Loading() {
       position={"fixed"}
       top={0}
       left={0}
-      className={isLoading ? undefined : "slide-out-left"}
+      className={isLoading || isTyping ? undefined : "slide-out-left"}
       style={{
         animationDelay: ".5s",
       }}
     >
-      <Flex align={"center"} justify={"center"} bg={"primary.500"} h={"100vh"}>
-        <Text as={"code"} color={"white"}>
-          {text}
-          <Cursor cursorStyle={"█"} />
-        </Text>
+      <Flex align={"center"} bg={"primary.500"} h={"100vh"}>
+        <Container maxW={"container.sm"}>
+          <Text as={"code"} color={"white"}>
+            [topher@stupendous ~]$&nbsp;
+            <Typewriter
+              words={[
+                "If you want to build community, build stupendous software.",
+              ]}
+              typeSpeed={25}
+              onLoopDone={() => {
+                setTimeout(() => setIsTyping(false), 2500);
+              }}
+            />
+            <Cursor cursorStyle={"█"} />
+          </Text>
+        </Container>
       </Flex>
     </Box>
   );

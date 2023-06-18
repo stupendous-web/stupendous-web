@@ -6,7 +6,6 @@ import StupendousAnalytics from "stupendous-analytics-next";
 import { Analytics } from "@vercel/analytics/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../utils/chakra";
-import { ParallaxProvider } from "react-scroll-parallax";
 import "../styles/global.css";
 
 import Navigation from "../components/Navigation";
@@ -52,19 +51,17 @@ function MyApp({ Component, pageProps }) {
         <meta name={"viewport"} content={"width=device-width"} />
       </Head>
       <ChakraProvider theme={theme}>
-        <ParallaxProvider>
-          <Provider>
-            <Component {...pageProps} />
-            <Analytics />
-            <Footer />
-            <Pride />
-            <Navigation />
-            <Contact />
-            <Menu />
-            <Loading />
-            <Cursor />
-          </Provider>
-        </ParallaxProvider>
+        <Provider>
+          <Component {...pageProps} />
+          <Analytics />
+          <Footer />
+          <Pride />
+          <Navigation />
+          <Contact />
+          <Menu />
+          <Loading />
+          <Cursor />
+        </Provider>
       </ChakraProvider>
     </>
   );

@@ -1,17 +1,10 @@
-import Image from "next/image";
 import Head from "next/head";
 import NextLink from "next/link";
 import { useGlobal } from "../lib/context";
 import axios from "axios";
 import { LocalBusinessJsonLd } from "next-seo";
-import {
-  RiArrowRightLine,
-  RiCheckFill,
-  RiMailLine,
-  RiPhoneLine,
-} from "react-icons/ri";
+import { RiArrowRightLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
 import { DiReact } from "react-icons/di";
-import { Parallax } from "react-scroll-parallax";
 import {
   Box,
   Container,
@@ -19,85 +12,23 @@ import {
   Heading,
   Icon,
   Text,
-  SimpleGrid,
   Link,
-  ListItem,
-  ListIcon,
-  List,
   GridItem,
   Button,
   Divider,
 } from "@chakra-ui/react";
-
 import Testimonials from "../components/Testimonials";
 import Questions from "../components/Questions";
 import Blog from "../components/Blog";
 import CTA from "../components/CTA";
-
-import denversCupid from "/images/projects/denvers-cupid.jpg";
-import powerTripFitness from "/images/projects/power-trip-fitness.jpg";
-import radTraining from "/images/projects/rad-training.jpg";
-import securityEngineers from "/images/projects/security-engineers.jpg";
-import brontezPurnell from "/images/projects/brontez-purnell.jpg";
-import deriddle from "/images/projects/deriddle.jpg";
-import graceAvila from "/images/projects/grace-avila.jpg";
-import iWannaBeFit from "/images/projects/iwannabe-fit.jpg";
-import jFitness from "/images/projects/j-fitness.jpg";
-import kendraHicks from "/images/projects/kendra-hicks.jpg";
-import lPSolutions from "/images/projects/lp-solutions.jpg";
-import luckyArtists from "/images/projects/lucky-artists.jpg";
-
 import cTA from "../images/cTA.png";
 import CarbonGrid from "../components/CarbonGrid";
 import CarbonGridImage from "../components/CarbonGridImage";
 import Solutions from "../components/Solutions";
+import AppsIndustries from "../components/AppsIndustries";
 
 export default function Home({ articles }) {
   const { setIsLoading } = useGlobal();
-
-  const apps = [
-    "CRM, Customer Relationship Managers",
-    "Project Management Systems",
-    "Collaboration Software Apps",
-    "Data and Analytics Dashboards",
-    "Patient Portals and CRM’s",
-    "Inventory and Delivery Managers",
-    "Maps",
-    "Language Support Apps",
-    "Support Ticket Managers",
-    "Tax Filing Systems",
-    "Ecommerce Web Apps",
-    "Partner Portal Apps",
-    "LMS, Learning Management Systems",
-    "Financial and Tax Systems",
-    "Client and Customer Logins",
-    "Online Submission Forms",
-    "Discussion Forum Apps",
-    "Social Media Platforms",
-    "Bookings and Events Calendars",
-    "Direct Messaging and Chat Rooms",
-    "Email, SMS, and Browser Notifications",
-    "Media Upload and Management System",
-    "File Scanning and Conversion",
-    "Online Review Apps",
-  ];
-
-  const industries = [
-    "Healthcare",
-    "Finance",
-    "Manufacturing",
-    "Retail",
-    "Telecommunication",
-    "Insurance",
-    "Law",
-    "Art and Design",
-    "Crypto and NFT's",
-    "Sustainability",
-    "Marketing and Advertising",
-    "Professional Services",
-    "Logistics",
-    "Much More",
-  ];
 
   return (
     <>
@@ -204,104 +135,7 @@ export default function Home({ articles }) {
           </GridItem>
         </CarbonGrid>
       </Container>
-      <Container maxW={"container.sm"} py={"200px"}>
-        <Heading as={"h1"} mb={4}>
-          Software Development Services
-        </Heading>
-        <Text mb={8}>
-          If you want to build community, build stupendous software.
-        </Text>
-        <Text as={"code"} color={"primary.500"}>
-          [topher@stupendous ~]$ <span className={"flash"}>▌</span>
-        </Text>
-      </Container>
-      <Container maxW={"container.lg"} pt={[16, 32]} mb={8}>
-        <Text w={["100%", "50%"]}>
-          I build engaging software. Together we can create web, iOS, and
-          Android apps, broaden your digital presence, and build stronger
-          digital communities.
-        </Text>
-      </Container>
-      <Container maxW={"100%"} pb={[16, 32]}>
-        <Parallax translateY={[0, 0]} translateX={[100, -100]}>
-          <SimpleGrid columns={4} spacing={[4, 8]} mb={[4, 8]}>
-            <Box>
-              <Image src={denversCupid} alt={"Software Development Services"} />
-            </Box>
-            <Box>
-              <Image
-                src={powerTripFitness}
-                alt={"Software Development Services"}
-              />
-            </Box>
-            <Box>
-              <Image src={radTraining} alt={"Software Development Services"} />
-            </Box>
-            <Box>
-              <Image
-                src={securityEngineers}
-                alt={"Software Development Services"}
-              />
-            </Box>
-          </SimpleGrid>
-        </Parallax>
-        <Parallax translateY={[0, 0]} translateX={[100, -100]}>
-          <SimpleGrid columns={4} spacing={[4, 8]} mb={[4, 8]}>
-            <Box>
-              <Image
-                src={brontezPurnell}
-                alt={"Software Development Services"}
-              />
-            </Box>
-            <Box>
-              <Image src={deriddle} alt={"Software Development Services"} />
-            </Box>
-            <Box>
-              <Image src={graceAvila} alt={"Software Development Services"} />
-            </Box>
-            <Box>
-              <Image src={iWannaBeFit} alt={"Software Development Services"} />
-            </Box>
-          </SimpleGrid>
-        </Parallax>
-        <Parallax translateY={[0, 0]} translateX={[100, -100]}>
-          <SimpleGrid columns={4} spacing={[4, 8]} mb={[4, 8]}>
-            <Box>
-              <Image src={jFitness} alt={"Software Development Services"} />
-            </Box>
-            <Box>
-              <Image src={kendraHicks} alt={"Software Development Services"} />
-            </Box>
-            <Box>
-              <Image src={lPSolutions} alt={"Software Development Services"} />
-            </Box>
-            <Box>
-              <Image src={luckyArtists} alt={"Software Development Services"} />
-            </Box>
-          </SimpleGrid>
-        </Parallax>
-      </Container>
       <Solutions />
-      <Container maxW={"container.lg"} py={[16, 32]}>
-        <Text>Web &amp; Phone Apps</Text>
-        <Heading mb={8}>Engage with your Audience</Heading>
-        <Text mb={8}>
-          My software development services will excel you and your work far past
-          your competitors and their websites! With the added power of a
-          database and powerful server technologies, your web and phone apps
-          will be full of useful features. This power [use it wisely] let&apos;s
-          you engage with your audiences in many fun, creative, and profitable
-          ways:
-        </Text>
-        <List spacing={4}>
-          {apps.map((app) => (
-            <ListItem key={app}>
-              <ListIcon as={RiCheckFill} />
-              {app}
-            </ListItem>
-          ))}
-        </List>
-      </Container>
       <Container maxW={"container.xl"} pt={[16, 32]} mb={8}>
         <Text w={["100%", "66.66%"]} mb={4}>
           I&apos;m a certified web developer and have many years of experience
@@ -314,25 +148,7 @@ export default function Home({ articles }) {
       </Container>
       <Testimonials />
       <Questions />
-      <Container maxW={"container.lg"} py={[16, 32]}>
-        <Text>Business</Text>
-        <Heading mb={8}>Expand your Reach</Heading>
-        <Text mb={8}>
-          Do what you do! Web and phone apps can be useful in any industry. My
-          software development services provide people like you with the tools
-          they need to grow their business while reaching existing and new
-          customers and increasing profitability so you can continue to do what
-          you love.
-        </Text>
-        <List spacing={4}>
-          {industries.map((industry) => (
-            <ListItem key={industry}>
-              <ListIcon as={RiCheckFill} />
-              {industry}
-            </ListItem>
-          ))}
-        </List>
-      </Container>
+      <AppsIndustries />
       <Blog articles={articles} />
       <CTA />
     </>
