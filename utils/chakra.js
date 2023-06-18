@@ -132,6 +132,7 @@ const theme = extendTheme({
         transparent: {
           container: {
             bg: "transparent",
+            pl: 0,
             _hover: { bg: "transparent" },
           },
         },
