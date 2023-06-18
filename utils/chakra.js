@@ -53,6 +53,9 @@ const theme = extendTheme({
         overflowX: "hidden",
         lineHeight: 2,
       },
+      body: {
+        mt: "65px",
+      },
     },
   },
   fonts: {

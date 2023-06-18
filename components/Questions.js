@@ -34,7 +34,7 @@ export default function Questions() {
   ];
 
   return (
-    <Container maxW={"container.lg"} py={[16, 32]}>
+    <Container maxW={"container.xl"} pt={[0, 16]}>
       <Text>FAQ&apos;s</Text>
       <Heading>Software Development Questions</Heading>
       <Accordion>

@@ -1,5 +1,11 @@
-import { Container, GridItem, Heading, Text } from "@chakra-ui/react";
-import CarbonGrid from "./CarbonGrid";
+import {
+  Box,
+  Container,
+  GridItem,
+  Heading,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
 import CarbonGridImage from "./CarbonGridImage";
 import cTA from "../images/cTA.png";
 
@@ -32,37 +38,35 @@ export default function Solutions() {
   ];
 
   return (
-    <>
-      <Container maxW={"container.xl"} py={"200px"}>
-        <CarbonGrid height={3}>
+    <Box>
+      <Container maxW={"container.xl"} pt={[0, 16]}>
+        <SimpleGrid columns={8} spacing={2} h={["100%", "600px"]} mb={4}>
           <CarbonGridImage
-            colSpan={5}
+            colSpan={[8, 5]}
             src={cTA}
             alt={"Software Solutions | Software Development Services"}
           />
-          <GridItem colSpan={3} bg={"gray.900"} p={4}>
+          <GridItem colSpan={[8, 3]} bg={"gray.900"} p={4}>
             <Heading as={"h1"}>Software Development Services</Heading>{" "}
           </GridItem>
-        </CarbonGrid>
-      </Container>
-      <Container maxW={"container.xl"} py={"200px"}>
+        </SimpleGrid>
         {solutions?.map((solution, index) => (
-          <CarbonGrid key={index} height={1}>
-            <GridItem colSpan={2} />
-            <GridItem colSpan={3} p={4}>
+          <SimpleGrid columns={8} spacing={2} key={index}>
+            <GridItem colSpan={[8, 2]} />
+            <GridItem colSpan={[8, 3]} p={4}>
               <Heading as={"h3"}>{solution.heading}</Heading>
             </GridItem>
             <GridItem
-              colSpan={3}
+              colSpan={[8, 3]}
               p={4}
               borderBottom={index < solutions.length - 1 ? "solid 1px" : null}
               borderColor={"gray.300"}
             >
               <Text m={0}>{solution.text}</Text>
             </GridItem>
-          </CarbonGrid>
+          </SimpleGrid>
         ))}
       </Container>
-    </>
+    </Box>
   );
 }

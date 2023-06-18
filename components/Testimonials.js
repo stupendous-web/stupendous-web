@@ -37,7 +37,7 @@ export default function Testimonials() {
     },
   ];
   return (
-    <Container maxW={"container.xl"} pb={[16, 32]}>
+    <Container maxW={"container.xl"} pt={[0, 16]}>
       <SimpleGrid columns={[1, 4]} spacing={8}>
         {testimonials.map((testimonial, key) => (
           <Box key={key}>

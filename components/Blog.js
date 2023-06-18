@@ -7,15 +7,15 @@ import {
   Text,
   Box,
   Flex,
+  SimpleGrid,
 } from "@chakra-ui/react";
-import CarbonGrid from "./CarbonGrid";
 import { Fragment } from "react";
 import Image from "next/image";
 import { RiArrowRightLine } from "react-icons/ri";
 
 export default function Blog({ articles }) {
   return (
-    <Container maxW={"container.xl"} py={"200px"}>
+    <Container maxW={"container.xl"} pt={[0, 16]}>
       <Heading>
         <Link
           as={NextLink}
@@ -25,7 +25,7 @@ export default function Blog({ articles }) {
           What&apos;s Good
         </Link>
       </Heading>
-      <CarbonGrid height={1}>
+      <SimpleGrid columns={8} spacing={2} h={"200px"}>
         {articles?.slice(0, 4)?.map((article) => (
           <Fragment key={article?.ID}>
             <GridItem colSpan={1}>
@@ -67,7 +67,7 @@ export default function Blog({ articles }) {
             </GridItem>
           </Fragment>
         ))}
-      </CarbonGrid>
+      </SimpleGrid>
     </Container>
   );
 }

@@ -1,40 +1,45 @@
 import {
+  AspectRatio,
   Box,
   Button,
   Container,
-  Flex,
-  Heading,
-  Text,
-  Link,
-  GridItem,
   Divider,
+  Flex,
+  GridItem,
+  Heading,
+  Link,
   SimpleGrid,
+  Text,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { RiArrowRightLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
 import cTA from "../images/cTA.png";
-import { RiMailLine, RiPhoneLine, RiArrowRightLine } from "react-icons/ri";
-import CarbonGridImage from "./CarbonGridImage";
+import { useGlobal } from "../lib/context";
+import Image from "next/image";
 
-export default function CTA() {
+export default function Intro() {
+  const { setIsLoading } = useGlobal();
+
   return (
-    <Container maxW={"container.xl"} pt={[0, 16]} color={"white"}>
-      <SimpleGrid columns={8} spacing={2} height={"600px"}>
-        <GridItem colSpan={3}>
+    <Container maxW={"container.xl"} color={"white"} pt={[4, 16]}>
+      <SimpleGrid columns={8} spacing={2} h={["100%", "600px"]}>
+        <GridItem colSpan={[8, 3]}>
           <Flex
             h={"100%"}
             direction={"column"}
             justify={"space-between"}
-            bg={"primary.500"}
-            _hover={{ bg: "primary.400" }}
+            bg={"gray.900"}
+            _hover={{ bg: "gray.800" }}
             p={4}
           >
             <Box>
               <Heading as={"p"} fontSize={["2rem", "4rem"]} mb={4}>
-                Your two consultations are now FREE!
+                Websites, Web Apps, and Phone Apps
               </Heading>
               <Text>
-                Find your audience, refine your product, and create solutions
-                for your customers in the first of your two free consultations.
+                I help people with something to share who want to engage with
+                their community by delivering software development services that
+                improve their brand awareness and authority.
               </Text>
             </Box>
             <Box>
@@ -43,10 +48,8 @@ export default function CTA() {
                 href={"https://cal.com/stupendousweb/consultation"}
               >
                 <Button
-                  bg={"white"}
-                  color={"primary.500"}
+                  colorScheme={"primary"}
                   size={"lg"}
-                  _hover={{ bg: "white", color: "primary.500" }}
                   mr={12}
                   rightIcon={<RiArrowRightLine />}
                 >
@@ -56,12 +59,18 @@ export default function CTA() {
             </Box>
           </Flex>
         </GridItem>
-        <CarbonGridImage
-          colSpan={3}
-          src={cTA}
-          alt={"Women Working | Software Development Services"}
-        />
-        <GridItem colSpan={2}>
+        <GridItem colSpan={[8, 3]}>
+          <AspectRatio ratio={1}>
+            <Image
+              src={cTA}
+              alt={"Women Working | Software Development Services"}
+              fill
+              style={{ objectFit: "cover" }}
+              onLoadingComplete={setIsLoading(false)}
+            />
+          </AspectRatio>
+        </GridItem>
+        <GridItem colSpan={[8, 2]}>
           <Box bg={"gray.900"} p={4} h={"100%"} _hover={{ bg: "gray.800" }}>
             <Link
               as={NextLink}

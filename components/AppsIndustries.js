@@ -4,10 +4,10 @@ import {
   Flex,
   GridItem,
   Heading,
+  SimpleGrid,
   Tag,
   Text,
 } from "@chakra-ui/react";
-import CarbonGrid from "./CarbonGrid";
 
 export default function AppsIndustries() {
   const apps = [
@@ -55,8 +55,8 @@ export default function AppsIndustries() {
   ];
 
   return (
-    <Container maxW={"container.xl"} py={"200px"}>
-      <CarbonGrid height={4}>
+    <Container maxW={"container.xl"} pt={[0, 16]}>
+      <SimpleGrid columns={8} spacing={2} h={"800px"}>
         <GridItem colSpan={4}>
           <Flex
             h={"100%"}
@@ -113,7 +113,7 @@ export default function AppsIndustries() {
             </Box>
           </Flex>
         </GridItem>
-      </CarbonGrid>
+      </SimpleGrid>
     </Container>
   );
 }
