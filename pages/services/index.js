@@ -6,9 +6,6 @@ import {
   Heading,
   Text,
   Link,
-  List,
-  ListItem,
-  ListIcon,
   GridItem,
   Card,
   SimpleGrid,
@@ -17,7 +14,7 @@ import {
   Box,
   Flex,
 } from "@chakra-ui/react";
-import { RiArrowRightLine, RiCheckFill } from "react-icons/ri";
+import { RiArrowRightLine } from "react-icons/ri";
 import CTA from "../../components/CTA";
 import { useEffect } from "react";
 
@@ -91,7 +88,7 @@ export default function Services() {
           <GridItem colSpan={[8, 5]}>
             <SimpleGrid columns={5} spacing={2}>
               <GridItem colSpan={5}>
-                <Card>
+                <Card variant={"transparent"}>
                   <Text>
                     Your project is more than just a pretty website. My software
                     development services are more comprehensive than that.
@@ -136,7 +133,7 @@ export default function Services() {
                 </Card>
               </GridItem>
               <GridItem colSpan={5}>
-                <Card>
+                <Card variant={"transparent"}>
                   <Heading>1.0 Strategy</Heading>
                   <Text>
                     I enjoy offering these consultations at no charge because I
@@ -164,7 +161,7 @@ export default function Services() {
                 </Card>
               </GridItem>
               <GridItem colSpan={5}>
-                <Card>
+                <Card variant={"transparent"}>
                   <Heading>2.0 Design</Heading>
                   <Text>
                     A website or even a web app is still a must-have. It is my
@@ -190,7 +187,7 @@ export default function Services() {
                 </Card>
               </GridItem>
               <GridItem colSpan={5}>
-                <Card>
+                <Card variant={"transparent"}>
                   <Heading>3.0 Development</Heading>
                   <Text>
                     Are you and your product tapping into all the available
@@ -253,141 +250,141 @@ export default function Services() {
                   </Card>
                 </GridItem>
               ))}
-              <GridItem colSpan={5}>
-                <Card>
-                  <Heading as={"h3"} size={"lg"}>
-                    iOS and Android Apps
-                  </Heading>
-                  <Text>
-                    Bring the hard work you do to everyone&apos;s pocket. Your
-                    life&apos;s work, products, services, and ideas can be
-                    accessible all day every day via a phone app. That&apos;s
-                    why my software development services also include iOS and
-                    Android app development. Your iOS and Android apps will be
-                    about your, your brand, and what you do and make them all
-                    more accessible to new and existing audiences. With phone
-                    apps we will easily connect you and what you do with more
-                    people.
-                  </Text>
-                  <Heading as={"h3"} size={"lg"}>
-                    Secure, Managed Domain and Hosting
-                  </Heading>
-                  <Text>
-                    There are many things that go into getting your project
-                    online quickly, safely, and hassle-free. I&apos;m here to
-                    help with those too. I&apos;ll setup and manage your domain
-                    name, SSL certificates, and on-page SEO. In addition, I will
-                    get your iOS and Android apps listed. I&apos;m also
-                    available for support via text, phone, email, video chat,
-                    and more! Let me take all the dirty work out of launching
-                    and maintaining your web, iOS, and Android apps with my
-                    software development services.
-                  </Text>
-                  <List mb={4}>
-                    {[
-                      "Domain Name",
-                      "SSL Certificate",
-                      "Web Hosting",
-                      "Apple App Store Listing",
-                      "Google Play Listing",
-                      "SEO",
-                      "Technical Support",
-                    ].map((item) => (
-                      <ListItem key={item}>
-                        <ListIcon as={RiCheckFill} />
-                        {item}
-                      </ListItem>
-                    ))}
-                  </List>
-                  <Heading as={"h3"} size={"lg"}>
-                    Long Term Support (LTS)
-                  </Heading>
-                  <Text>
-                    Even well-working machines need their oil changed. Web, iOS,
-                    and Android applications are just the same. They will need
-                    upgrades and security updates from time to time. You may
-                    even want to make minor changes occasionally. I&apos;ll keep
-                    your application up-to-date with the latest technology and
-                    safe against security breaches. I&apos;ll even make minor
-                    updates as needed. Long term support will keep your
-                    technology fresh, your data safe, and your brand unique and
-                    desirable even after your software development services are
-                    completed.
-                  </Text>
-                  <List mb={4}>
-                    {[
-                      "Keep your Apps Active",
-                      "Productivity Tools",
-                      "1-3 FREE Hours of Updates a Month",
-                    ].map((item) => (
-                      <ListItem key={item}>
-                        <ListIcon as={RiCheckFill} />
-                        {item}
-                      </ListItem>
-                    ))}
-                  </List>
-                  <Heading as={"h3"} size={"lg"}>
-                    Website or App?
-                  </Heading>
-                  <Text>
-                    Your customers need power and utility, and not just another
-                    still, inactive, and even boring website. Engaging with your
-                    customers means investing in more than just a website. My
-                    software development services will bring value to your
-                    product via your new web app. Not to be entirely confused
-                    with apps on your phone, web apps integrate the latest web
-                    technologies with your data to bring your audiences
-                    something better than just a landing page. Don&apos;t leave
-                    your customers in the dust; give them the latest, greatest,
-                    and most value with a sparkly new web app.
-                  </Text>
-                  <Heading as={"h3"} size={"lg"}>
-                    iOS and Android
-                  </Heading>
-                  <Text>
-                    Keep your product at your customers&apos; finger tips. In
-                    addition to building something powerful and useful, together
-                    we can build something your customers can access easily
-                    anywhere in the world. In addition to building for the web,
-                    my software development services also include building apps
-                    for phones. With the latest technologies we&apos;ll create
-                    easier access to you and your brand in the form of a iOS and
-                    Android apps. Keep your customer engagement high, increasing
-                    your product value, by allowing your customers to take you
-                    in their pockets anywhere.
-                  </Text>
-                  <Heading as={"h3"} size={"lg"}>
-                    Strategy
-                  </Heading>
-                  <Text>
-                    Tell me about your values, the communities your serve, your
-                    mission, and your objectives! Better knowing you, your
-                    brand, and your product or service creates a stronger and
-                    more valuable application. My software development services
-                    are focused on and centered around your mission and
-                    objectives throughout the entire development process.
-                    Before, during, and even after production, we&apos;ll
-                    continue to fine-tune your product and pitch. I will ensure
-                    your web, iOS, and Android apps embody you and your values
-                    boldly and proudly.
-                  </Text>
-                  <Heading as={"h3"} size={"lg"}>
-                    Process
-                  </Heading>
-                  <Text>
-                    Let&apos;s get you up and running with software development
-                    services in three easy steps. First, schedule the first of
-                    your two FREE 1-hour consultations. After your first
-                    consultation, you&apos;ll receive a creative brief and
-                    project plan. Secondly, we&apos;ll build you a secret
-                    website where you can preview our progress anytime. Then,
-                    when the time is right, we&apos;ll launch your apps to the
-                    web and app stores publicly. I&apos;m always here to answer
-                    questions, maintain your software and make updates to it,
-                    and be your guide to making this fast, easy, and even fun!
-                  </Text>
-                </Card>
-              </GridItem>
+              {/*<GridItem colSpan={5}>*/}
+              {/*  <Card variant={"transparent"}>*/}
+              {/*    <Heading as={"h3"} size={"lg"}>*/}
+              {/*      iOS and Android Apps*/}
+              {/*    </Heading>*/}
+              {/*    <Text>*/}
+              {/*      Bring the hard work you do to everyone&apos;s pocket. Your*/}
+              {/*      life&apos;s work, products, services, and ideas can be*/}
+              {/*      accessible all day every day via a phone app. That&apos;s*/}
+              {/*      why my software development services also include iOS and*/}
+              {/*      Android app development. Your iOS and Android apps will be*/}
+              {/*      about your, your brand, and what you do and make them all*/}
+              {/*      more accessible to new and existing audiences. With phone*/}
+              {/*      apps we will easily connect you and what you do with more*/}
+              {/*      people.*/}
+              {/*    </Text>*/}
+              {/*    <Heading as={"h3"} size={"lg"}>*/}
+              {/*      Secure, Managed Domain and Hosting*/}
+              {/*    </Heading>*/}
+              {/*    <Text>*/}
+              {/*      There are many things that go into getting your project*/}
+              {/*      online quickly, safely, and hassle-free. I&apos;m here to*/}
+              {/*      help with those too. I&apos;ll setup and manage your domain*/}
+              {/*      name, SSL certificates, and on-page SEO. In addition, I will*/}
+              {/*      get your iOS and Android apps listed. I&apos;m also*/}
+              {/*      available for support via text, phone, email, video chat,*/}
+              {/*      and more! Let me take all the dirty work out of launching*/}
+              {/*      and maintaining your web, iOS, and Android apps with my*/}
+              {/*      software development services.*/}
+              {/*    </Text>*/}
+              {/*    <List mb={4}>*/}
+              {/*      {[*/}
+              {/*        "Domain Name",*/}
+              {/*        "SSL Certificate",*/}
+              {/*        "Web Hosting",*/}
+              {/*        "Apple App Store Listing",*/}
+              {/*        "Google Play Listing",*/}
+              {/*        "SEO",*/}
+              {/*        "Technical Support",*/}
+              {/*      ].map((item) => (*/}
+              {/*        <ListItem key={item}>*/}
+              {/*          <ListIcon as={RiCheckFill} />*/}
+              {/*          {item}*/}
+              {/*        </ListItem>*/}
+              {/*      ))}*/}
+              {/*    </List>*/}
+              {/*    <Heading as={"h3"} size={"lg"}>*/}
+              {/*      Long Term Support (LTS)*/}
+              {/*    </Heading>*/}
+              {/*    <Text>*/}
+              {/*      Even well-working machines need their oil changed. Web, iOS,*/}
+              {/*      and Android applications are just the same. They will need*/}
+              {/*      upgrades and security updates from time to time. You may*/}
+              {/*      even want to make minor changes occasionally. I&apos;ll keep*/}
+              {/*      your application up-to-date with the latest technology and*/}
+              {/*      safe against security breaches. I&apos;ll even make minor*/}
+              {/*      updates as needed. Long term support will keep your*/}
+              {/*      technology fresh, your data safe, and your brand unique and*/}
+              {/*      desirable even after your software development services are*/}
+              {/*      completed.*/}
+              {/*    </Text>*/}
+              {/*    <List mb={4}>*/}
+              {/*      {[*/}
+              {/*        "Keep your Apps Active",*/}
+              {/*        "Productivity Tools",*/}
+              {/*        "1-3 FREE Hours of Updates a Month",*/}
+              {/*      ].map((item) => (*/}
+              {/*        <ListItem key={item}>*/}
+              {/*          <ListIcon as={RiCheckFill} />*/}
+              {/*          {item}*/}
+              {/*        </ListItem>*/}
+              {/*      ))}*/}
+              {/*    </List>*/}
+              {/*    <Heading as={"h3"} size={"lg"}>*/}
+              {/*      Website or App?*/}
+              {/*    </Heading>*/}
+              {/*    <Text>*/}
+              {/*      Your customers need power and utility, and not just another*/}
+              {/*      still, inactive, and even boring website. Engaging with your*/}
+              {/*      customers means investing in more than just a website. My*/}
+              {/*      software development services will bring value to your*/}
+              {/*      product via your new web app. Not to be entirely confused*/}
+              {/*      with apps on your phone, web apps integrate the latest web*/}
+              {/*      technologies with your data to bring your audiences*/}
+              {/*      something better than just a landing page. Don&apos;t leave*/}
+              {/*      your customers in the dust; give them the latest, greatest,*/}
+              {/*      and most value with a sparkly new web app.*/}
+              {/*    </Text>*/}
+              {/*    <Heading as={"h3"} size={"lg"}>*/}
+              {/*      iOS and Android*/}
+              {/*    </Heading>*/}
+              {/*    <Text>*/}
+              {/*      Keep your product at your customers&apos; finger tips. In*/}
+              {/*      addition to building something powerful and useful, together*/}
+              {/*      we can build something your customers can access easily*/}
+              {/*      anywhere in the world. In addition to building for the web,*/}
+              {/*      my software development services also include building apps*/}
+              {/*      for phones. With the latest technologies we&apos;ll create*/}
+              {/*      easier access to you and your brand in the form of a iOS and*/}
+              {/*      Android apps. Keep your customer engagement high, increasing*/}
+              {/*      your product value, by allowing your customers to take you*/}
+              {/*      in their pockets anywhere.*/}
+              {/*    </Text>*/}
+              {/*    <Heading as={"h3"} size={"lg"}>*/}
+              {/*      Strategy*/}
+              {/*    </Heading>*/}
+              {/*    <Text>*/}
+              {/*      Tell me about your values, the communities your serve, your*/}
+              {/*      mission, and your objectives! Better knowing you, your*/}
+              {/*      brand, and your product or service creates a stronger and*/}
+              {/*      more valuable application. My software development services*/}
+              {/*      are focused on and centered around your mission and*/}
+              {/*      objectives throughout the entire development process.*/}
+              {/*      Before, during, and even after production, we&apos;ll*/}
+              {/*      continue to fine-tune your product and pitch. I will ensure*/}
+              {/*      your web, iOS, and Android apps embody you and your values*/}
+              {/*      boldly and proudly.*/}
+              {/*    </Text>*/}
+              {/*    <Heading as={"h3"} size={"lg"}>*/}
+              {/*      Process*/}
+              {/*    </Heading>*/}
+              {/*    <Text>*/}
+              {/*      Let&apos;s get you up and running with software development*/}
+              {/*      services in three easy steps. First, schedule the first of*/}
+              {/*      your two FREE 1-hour consultations. After your first*/}
+              {/*      consultation, you&apos;ll receive a creative brief and*/}
+              {/*      project plan. Secondly, we&apos;ll build you a secret*/}
+              {/*      website where you can preview our progress anytime. Then,*/}
+              {/*      when the time is right, we&apos;ll launch your apps to the*/}
+              {/*      web and app stores publicly. I&apos;m always here to answer*/}
+              {/*      questions, maintain your software and make updates to it,*/}
+              {/*      and be your guide to making this fast, easy, and even fun!*/}
+              {/*    </Text>*/}
+              {/*  </Card>*/}
+              {/*</GridItem>*/}
             </SimpleGrid>
           </GridItem>
         </SimpleGrid>
