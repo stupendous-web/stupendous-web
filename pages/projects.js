@@ -1,52 +1,49 @@
-import Image from "next/image";
 import Head from "next/head";
 import { useGlobal } from "../lib/context";
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import {
+  Card,
+  Container,
+  GridItem,
+  Heading,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
 
 import Project from "../components/Project";
 import CTA from "../components/CTA";
 
-import isometric from "../images/isometrics/isometric-1-1.png";
+import { useEffect } from "react";
 
 export default function Projects() {
   const { setIsLoading } = useGlobal();
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
 
   return (
     <>
       <Head>
         <title>Projects | Software Development Services | Stupendous Web</title>
       </Head>
-      <Container maxW={"container.xl"} pt={32} pb={8}>
-        <Flex direction={["column", "row"]} align={"center"}>
-          <Box w={["100%", "33.33%"]} pr={4} mb={[8, 0]}>
-            <Image
-              src={isometric}
-              alt={"Software Development Services"}
-              priority
-              onLoadingComplete={() => setIsLoading(false)}
-            />
-          </Box>
-          <Box w={["100%", "66.66%"]}>
-            <Text as={"code"} color={"white"}>
-              Let&apos;s build internet community through my custom software
-              development services. Look at a few of the certified,
-              award-winning, and engaging apps I’ve created. They&apos;ve helped
-              build my clients stronger brand awareness and authority.{" "}
-              <Text as={"span"} className={"flash"}>
-                ▌
+      <Container maxW={"container.xl"} pt={[4, 16]}>
+        <SimpleGrid columns={8} spacing={2}>
+          <GridItem colSpan={[8, 3]}>
+            <Card variant={"transparent"} pt={0}>
+              <Heading as={"h1"} fontSize={"4rem"}>
+                Projects
+              </Heading>
+              <Text as={"code"}>
+                Let&apos;s build internet community through my custom software
+                development services. Look at a few of the certified,
+                award-winning, and engaging apps I’ve created. They&apos;ve
+                helped build my clients stronger brand awareness and authority.{" "}
+                <Text as={"span"} className={"flash"}>
+                  ▌
+                </Text>
               </Text>
-            </Text>
-          </Box>
-        </Flex>
-      </Container>
-      <Container maxW={"container.xl"} py={8}>
-        <Heading as={"h1"} fontSize={["4rem", "12rem"]}>
-          Projects
-        </Heading>
-      </Container>
-      <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
-        <Flex justify={"flex-end"}>
-          <Box w={["100%", "66.66%"]}>
+            </Card>
+          </GridItem>
+          <GridItem colSpan={[8, 5]}>
             <Project
               images={[
                 "pixel-shop-1.png",
@@ -211,10 +208,9 @@ export default function Projects() {
                 generating reliable and turstworthy leads.
               </Text>
             </Project>
-          </Box>
-        </Flex>
+          </GridItem>
+        </SimpleGrid>
       </Container>
-
       <CTA />
     </>
   );

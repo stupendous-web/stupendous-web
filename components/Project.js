@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import { Card, GridItem, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 
 export default function Project({
   children,
@@ -21,13 +21,13 @@ export default function Project({
   );
 
   return (
-    <Box py={[16, 32]}>
+    <Card h={"object-fit"} mb={4}>
       <Image src={context[images[0]]} alt={"Software Development Services"} />
-      <SimpleGrid columns={3} spacing={4} mt={4}>
+      <SimpleGrid columns={5} spacing={4} mt={4}>
         {images?.slice(1, 4).map((image) => (
-          <div key={image}>
+          <GridItem colSpan={1} key={image}>
             <Image src={context[image]} alt={"Software Development Services"} />
-          </div>
+          </GridItem>
         ))}
       </SimpleGrid>
       <Heading my={4}>{name}</Heading>
@@ -46,6 +46,6 @@ export default function Project({
           </Text>
         </Text>
       )}
-    </Box>
+    </Card>
   );
 }
