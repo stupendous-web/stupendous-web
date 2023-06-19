@@ -126,9 +126,8 @@ export default function Article({ article }) {
               </AspectRatio>
             )}
           </GridItem>
-          <GridItem colSpan={2} />
-          <GridItem colSpan={2} />
-          <GridItem colSpan={[8, 6]}>
+          <GridItem colSpan={3} />
+          <GridItem colSpan={[8, 5]}>
             <Card variant={"transparent"}>
               <Box
                 dangerouslySetInnerHTML={{ __html: article?.content }}
