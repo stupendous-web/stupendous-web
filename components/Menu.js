@@ -70,7 +70,7 @@ export default function Menu() {
           })}
         </List>
       </Center>
-      <Flex position={"fixed"} top={4} right={4}>
+      <Flex position={"fixed"} top={4} right={4} hideFrom={"md"}>
         <Box cursor={"pointer"} pr={4} onClick={() => toggleColorMode()}>
           {colorMode === "dark" ? "🌝" : "🌚"}
         </Box>
