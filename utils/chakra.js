@@ -108,7 +108,7 @@ const theme = extendTheme({
     },
     Button: {
       baseStyle: {
-        textTransform: "uppercase",
+        fontWeight: "normal",
       },
     },
     Link: {

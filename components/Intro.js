@@ -50,7 +50,7 @@ export default function Intro() {
                     mr={12}
                     rightIcon={<RiArrowRightLine />}
                   >
-                    Get yours Now
+                    <Box mr={4}>Get yours Now</Box>
                   </Button>
                 </Link>
               </Box>

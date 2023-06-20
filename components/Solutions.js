@@ -1,84 +1,87 @@
 import {
-  Box,
   Card,
   Container,
+  Flex,
   GridItem,
   Heading,
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import stock5 from "../images/stock/5.jpg";
-import Image from "next/image";
+import {
+  RiServerLine,
+  RiCustomerServiceLine,
+  RiSearchLine,
+  RiBankCardLine,
+  RiArticleLine,
+  RiLineChartLine,
+} from "react-icons/ri";
 
 export default function Solutions() {
   const solutions = [
     {
       heading: "Hosting",
-      text: "I'll handle the technical work of getting you, your brand, and your message online. I'll set you up with your managed, fast, and secure website hosting and Google Play and Apple App Store listings as part of my software development services. Sit back, relax, and continue to do the work you love.",
+      icon: <RiServerLine size={32} />,
     },
     {
       heading: "Support",
-      text: "Let's get this right! We'll work closely together to make sure your web, iOS, and Android apps are perfect as part of my software development services. I'm available via email, phone, video chat, and even in person in Las Vegas. You can email me anytime with your required updates and concerns. I'm always here.",
+      icon: <RiCustomerServiceLine size={32} />,
     },
     {
       heading: "SEO & ASO",
-      text: "Search engine and app store optimization play important roles in getting your product to your audiences. So, let's keep your web, iOS, and Android apps up to date with the latest SEO and ASO. My software development services get more people to your app. Let's work some magic!",
+      icon: <RiSearchLine size={32} />,
     },
     {
       heading: "Payment Processing",
-      text: "Let's keep your work sustainable. My software development services integrate with your Stripe and Paypal accounts. Let your software make you money so you can focus on your work.",
+      icon: <RiBankCardLine size={32} />,
     },
     {
       heading: "Publishing",
-      text: "Managing your web, iOS, and Android app text, images, and even videos is easy! My software development services include a content management system. Now you can easily add, update, and remove content at any time.",
+      icon: <RiArticleLine size={32} />,
     },
     {
       heading: "Analytics",
-      text: "There are many new people out there waiting to meet you that are very interested in what you do! My software development services come with web analytics at now extra charge. Learn more about your current audience while also discovering new ones with analytics.",
+      icon: <RiLineChartLine size={32} />,
     },
   ];
 
   return (
     <Container maxW={"container.xl"} pt={[0, 16]}>
-      <SimpleGrid columns={8} spacing={2} h={["100%", "600px"]} mb={2}>
-        <GridItem colSpan={[8, 5]}>
-          <Box h={"100%"} position={"relative"} overflow={"hidden"}>
-            <Image
-              src={stock5}
-              alt={
-                "Web Developer Giving a Consultation | Software Development Services"
-              }
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </Box>
+      <SimpleGrid columns={8} spacing={2} h={["100%", "400px"]} mb={2}>
+        <GridItem colSpan={[8, 4]}>
+          <SimpleGrid columns={4} spacing={2} h={["100%", "400px"]}>
+            {solutions.map((solution) => (
+              <GridItem
+                key={solution.heading}
+                colSpan={1}
+                h={["100%", "200px"]}
+              >
+                <Card>
+                  <Flex
+                    direction={"column"}
+                    justify={"space-between"}
+                    h={"100%"}
+                  >
+                    <Heading as={"h3"} fontSize={"1rem"} mb={4}>
+                      {solution.heading}
+                    </Heading>
+                    {solution?.icon}
+                  </Flex>
+                </Card>
+              </GridItem>
+            ))}
+          </SimpleGrid>
         </GridItem>
-        <GridItem colSpan={[8, 3]}>
-          <Card>
-            <Heading as={"h1"} m={0}>
-              Software Development Services
-            </Heading>
+        <GridItem colSpan={[8, 2]}>
+          <Card variant={"transparent"} pt={3} pl={4}>
+            <Heading as={"h1"}>Software Development Services</Heading>
+            <Text>
+              I love offering a comprehensive list of software development
+              services, leaving <Text as={"i"}>you</Text> more time and
+              creativity to focus on what you love.
+            </Text>
           </Card>
         </GridItem>
       </SimpleGrid>
-      {solutions?.map((solution, index) => (
-        <SimpleGrid columns={8} spacing={2} key={index}>
-          <GridItem colSpan={[8, 2]} />
-          <GridItem colSpan={[8, 3]} p={4}>
-            <Heading as={"h3"} mb={0}>
-              {solution.heading}
-            </Heading>
-          </GridItem>
-          <GridItem
-            colSpan={[8, 3]}
-            p={4}
-            borderBottom={index < solutions.length - 1 ? "solid 1px" : null}
-            borderColor={"gray.300"}
-          >
-            <Text m={0}>{solution.text}</Text>
-          </GridItem>
-        </SimpleGrid>
-      ))}
     </Container>
   );
 }
