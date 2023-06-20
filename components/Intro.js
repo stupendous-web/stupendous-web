@@ -25,10 +25,10 @@ export default function Intro() {
     <Container maxW={"container.xl"} pt={[4, 16]}>
       <SimpleGrid columns={8} spacing={2} h={["100%", "600px"]}>
         <GridItem colSpan={[8, 3]}>
-          <Card>
+          <Card pt={1}>
             <Flex h={"100%"} direction={"column"} justify={"space-between"}>
               <Box>
-                <Heading as={"p"} fontSize={["2rem", "4rem"]} mb={4}>
+                <Heading as={"p"} fontSize={["2rem", "4rem"]}>
                   Websites, Web Apps, &amp; Phone Apps
                 </Heading>
                 <Text>

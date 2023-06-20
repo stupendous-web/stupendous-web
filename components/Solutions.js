@@ -77,7 +77,7 @@ export default function Solutions() {
           </SimpleGrid>
         </GridItem>
         <GridItem colSpan={[8, 2]}>
-          <Card variant={"transparent"} pt={3} pl={4}>
+          <Card variant={"transparent"} pt={2} pl={4}>
             <Flex direction={"column"} justify={"space-between"} h={"100%"}>
               <Box>
                 <Heading as={"h1"}>Software Development Services</Heading>
