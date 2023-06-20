@@ -15,7 +15,6 @@ export default function AppsIndustries() {
   const { colorMode } = useColorMode();
 
   const apps = [
-    "CRM, Customer Relationship Managers",
     "Project Management Systems",
     "Collaboration Software Apps",
     "Data and Analytics Dashboards",
@@ -36,7 +35,6 @@ export default function AppsIndustries() {
     "Bookings and Events Calendars",
     "Direct Messaging and Chat Rooms",
     "Email, SMS, and Browser Notifications",
-    "Media Upload and Management System",
     "File Scanning and Conversion",
     "Online Review Apps",
   ];

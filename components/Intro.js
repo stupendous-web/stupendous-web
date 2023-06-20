@@ -29,7 +29,7 @@ export default function Intro() {
             <Flex h={"100%"} direction={"column"} justify={"space-between"}>
               <Box>
                 <Heading as={"p"} fontSize={["2rem", "4rem"]} mb={4}>
-                  Websites, Web Apps, and Phone Apps
+                  Websites, Web Apps, &amp; Phone Apps
                 </Heading>
                 <Text>
                   I help people with something to share who want to engage with
