@@ -16,26 +16,21 @@ export default function AppsIndustries() {
 
   const apps = [
     "Project Management Systems",
-    "Collaboration Software Apps",
-    "Data and Analytics Dashboards",
-    "Patient Portals and CRM’s",
+    "Collaboration Software",
+    "Analytics Dashboards",
+    "Patient Portals",
+    "CRM's",
     "Inventory and Delivery Managers",
-    "Maps",
-    "Language Support Apps",
-    "Support Ticket Managers",
     "Tax Filing Systems",
-    "Ecommerce Web Apps",
-    "Partner Portal Apps",
-    "LMS, Learning Management Systems",
-    "Financial and Tax Systems",
-    "Client and Customer Logins",
-    "Online Submission Forms",
-    "Discussion Forum Apps",
+    "Ecommerce Apps",
+    "Partner Portals",
+    "Learning Management Systems",
+    "Financial Systems",
+    "Discussion Forums",
     "Social Media Platforms",
     "Bookings and Events Calendars",
-    "Direct Messaging and Chat Rooms",
-    "Email, SMS, and Browser Notifications",
-    "File Scanning and Conversion",
+    "Chat Rooms",
+    "Email, SMS, and Notifications",
     "Online Review Apps",
   ];
 
@@ -58,8 +53,8 @@ export default function AppsIndustries() {
 
   return (
     <Container maxW={"container.xl"} pt={[4, 16]}>
-      <SimpleGrid columns={8} spacing={2} h={["100%", "800px"]}>
-        <GridItem colSpan={[8, 4]}>
+      <SimpleGrid columns={8} spacing={2} h={["100%", "600px"]}>
+        <GridItem colSpan={[8, 3]}>
           <Card>
             <Flex h={"100%"} direction={"column"} justify={"space-between"}>
               <Box>
@@ -87,7 +82,7 @@ export default function AppsIndustries() {
             </Flex>
           </Card>
         </GridItem>
-        <GridItem colSpan={[8, 4]}>
+        <GridItem colSpan={[8, 3]}>
           <Card>
             <Flex h={"100%"} direction={"column"} justify={"space-between"}>
               <Box>
