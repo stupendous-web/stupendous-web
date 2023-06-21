@@ -32,7 +32,7 @@ export default function Home({ articles }) {
           "I help people with something to share who want to engage with their community by delivering software development services that improve their brand awareness and authority."
         }
         url={"https://stupendousweb.com"}
-        telephone={"+15108906429"}
+        telephone={"+17023089375"}
         address={{
           streetAddress: "5150 Spyglass Hill Dr.",
           addressLocality: "Las Vegas",
