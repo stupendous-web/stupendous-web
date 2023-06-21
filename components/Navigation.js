@@ -22,7 +22,7 @@ export default function Navigation() {
 
   return (
     <Box
-      bg={colorMode === "dark" ? "black" : "gray.50"}
+      bg={colorMode === "dark" ? "black" : "white"}
       w={"100%"}
       position={"fixed"}
       top={0}
@@ -37,7 +37,7 @@ export default function Navigation() {
             w={16}
             borderRight={"solid 1px"}
             borderLeft={"solid 1px"}
-            borderColor={colorMode === "dark" ? "white" : "gray.900"}
+            borderColor={colorMode === "dark" ? "white" : "black"}
           >
             <Link
               as={NextLink}
@@ -58,7 +58,7 @@ export default function Navigation() {
               align={"center"}
               p={4}
               borderRight={"solid 1px"}
-              borderColor={colorMode === "dark" ? "white" : "gray.900"}
+              borderColor={colorMode === "dark" ? "white" : "black"}
             >
               <Link
                 key={link.href}

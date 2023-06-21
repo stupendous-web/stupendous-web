@@ -9,6 +9,7 @@ import {
   Card,
 } from "@chakra-ui/react";
 import { RiStarFill } from "react-icons/ri";
+import { Fragment } from "react";
 
 export default function Testimonials() {
   const testimonials = [
@@ -46,8 +47,8 @@ export default function Testimonials() {
             <Heading>What they&apos;re saying</Heading>
           </Card>
         </GridItem>
-        {testimonials.map((testimonial, key) => (
-          <>
+        {testimonials.map((testimonial) => (
+          <Fragment key={testimonial.name}>
             <GridItem colSpan={2} hideBelow={"sm"} />
             <GridItem colSpan={[8, 3]}>
               <Card variant={"transparent"}>
@@ -57,7 +58,7 @@ export default function Testimonials() {
                 </Heading>
               </Card>
             </GridItem>
-            <GridItem colSpan={[8, 3]} key={key}>
+            <GridItem colSpan={[8, 3]}>
               <Card variant={"transparent"}>
                 <Text>{testimonial.review}</Text>
                 <Flex align={"center"}>
@@ -72,7 +73,7 @@ export default function Testimonials() {
                 </Flex>
               </Card>
             </GridItem>
-          </>
+          </Fragment>
         ))}
       </SimpleGrid>
     </Container>

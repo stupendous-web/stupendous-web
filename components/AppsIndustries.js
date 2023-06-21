@@ -72,7 +72,7 @@ export default function AppsIndustries() {
                 {apps.map((app) => (
                   <Tag
                     key={app}
-                    bg={colorMode === "dark" ? "gray.700" : "gray.300"}
+                    bg={colorMode === "dark" ? "gray.800" : "gray.150"}
                     mr={2}
                   >
                     {app}
@@ -99,7 +99,7 @@ export default function AppsIndustries() {
                 {industries.map((industry) => (
                   <Tag
                     key={industry}
-                    bg={colorMode === "dark" ? "gray.700" : "gray.300"}
+                    bg={colorMode === "dark" ? "gray.800" : "gray.150"}
                     mr={2}
                   >
                     {industry}

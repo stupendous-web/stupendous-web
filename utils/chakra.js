@@ -29,16 +29,25 @@ const theme = extendTheme({
       900: "#061727",
     },
     gray: {
-      50: "#f4f4f4",
-      100: "#e0e0e0",
-      200: "#c6c6c6",
-      300: "#a8a8a8",
-      400: "#8d8d8d",
-      500: "#6f6f6f",
-      600: "#525252",
-      700: "#393939",
-      800: "#262626",
-      900: "#161616",
+      50: "#f8f8f8",
+      100: "#ebebeb",
+      150: "#dddddd",
+      200: "#d0d0d0",
+      250: "#c3c3c3",
+      300: "#b5b5b5",
+      350: "#a8a8a8",
+      400: "#9a9a9a",
+      450: "#8d8d8d",
+      500: "#808080",
+      550: "#727272",
+      600: "#656565",
+      650: "#575757",
+      700: "#4a4a4a",
+      750: "#3c3c3c",
+      800: "#2f2f2f",
+      850: "#222222",
+      900: "#141414",
+      950: "#070707",
     },
     red: {
       300: "#ffb3b8", // Error on Magenta
@@ -50,8 +59,8 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       "html, body": {
-        bg: mode("gray.50", "black")(props),
-        color: mode("gray.800", "gray.100")(props),
+        bg: mode("white", "black")(props),
+        color: mode("gray.800", "gray.200")(props),
         overflowX: "hidden",
         lineHeight: 2,
       },
@@ -96,7 +105,7 @@ const theme = extendTheme({
   components: {
     Heading: {
       baseStyle: (props) => ({
-        color: mode("gray.900", "white")(props),
+        color: mode("black", "white")(props),
         fontWeight: "bold",
         mb: 8,
       }),
@@ -122,10 +131,10 @@ const theme = extendTheme({
     Card: {
       baseStyle: (props) => ({
         container: {
-          bg: mode("gray.100", "gray.900")(props),
+          bg: mode("gray.50", "gray.900")(props),
           h: "100%",
           p: 4,
-          _hover: { bg: mode("gray.200", "gray.800")(props) },
+          _hover: { bg: mode("gray.100", "gray.850")(props) },
         },
       }),
       variants: {
@@ -134,16 +143,6 @@ const theme = extendTheme({
             bg: "transparent",
             _hover: { bg: "transparent" },
           },
-        },
-      },
-    },
-    Popover: {
-      baseStyle: {
-        body: {
-          bg: "gray.900",
-        },
-        content: {
-          border: "none",
         },
       },
     },
