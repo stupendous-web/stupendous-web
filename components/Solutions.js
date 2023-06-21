@@ -88,7 +88,11 @@ export default function Solutions() {
                 </Text>
               </Box>
               <Link as={NextLink} href={"/services"}>
-                <Button variant={"outline"} rightIcon={<RiArrowRightLine />}>
+                <Button
+                  variant={"outline"}
+                  mb={[0, -2]}
+                  rightIcon={<RiArrowRightLine />}
+                >
                   <Box mr={4}>Discover More</Box>
                 </Button>
               </Link>
