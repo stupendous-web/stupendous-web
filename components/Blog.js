@@ -16,7 +16,7 @@ import { RiArrowRightLine } from "react-icons/ri";
 
 export default function Blog({ articles }) {
   return (
-    <Container maxW={"container.xl"} pt={[0, 16]}>
+    <Container maxW={"container.xl"} pt={[4, 16]}>
       <Heading>
         <Link
           as={NextLink}

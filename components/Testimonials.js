@@ -1,11 +1,12 @@
 import {
-  Box,
   Container,
   Heading,
   Icon,
   SimpleGrid,
   Text,
   Flex,
+  GridItem,
+  Card,
 } from "@chakra-ui/react";
 import { RiStarFill } from "react-icons/ri";
 
@@ -37,30 +38,41 @@ export default function Testimonials() {
     },
   ];
   return (
-    <Container maxW={"container.xl"} pt={[0, 16]}>
-      <SimpleGrid columns={[1, 4]} spacing={8}>
+    <Container maxW={"container.xl"} pt={[4, 16]}>
+      <SimpleGrid columns={8} spacing={2}>
+        <GridItem colSpan={2} hideBelow={"sm"} />
+        <GridItem colSpan={[8, 6]}>
+          <Card variant={"transparent"}>
+            <Heading>What they&apos;re saying</Heading>
+          </Card>
+        </GridItem>
         {testimonials.map((testimonial, key) => (
-          <Box key={key}>
-            <Flex h={"100%"} direction={"column"} justify={"space-between"}>
-              <Box>
-                <Text>{testimonial.name}</Text>
-                <Heading size={"lg"} mb={8}>
+          <>
+            <GridItem colSpan={2} hideBelow={"sm"} />
+            <GridItem colSpan={[8, 3]}>
+              <Card variant={"transparent"}>
+                <Text m={0}>{testimonial.name}</Text>
+                <Heading as={"h3"} fontSize={"1rem"}>
                   {testimonial.title}
                 </Heading>
-                <Text mb={8}>{testimonial.review}</Text>
-              </Box>
-              <Box>
-                <Flex>
-                  <Icon as={RiStarFill} color={"cyan.500"} />
-                  <Icon as={RiStarFill} color={"cyan.500"} />
-                  <Icon as={RiStarFill} color={"cyan.500"} />
-                  <Icon as={RiStarFill} color={"cyan.500"} />
-                  <Icon as={RiStarFill} color={"cyan.500"} />
+              </Card>
+            </GridItem>
+            <GridItem colSpan={[8, 3]} key={key}>
+              <Card variant={"transparent"}>
+                <Text>{testimonial.review}</Text>
+                <Flex align={"center"}>
+                  <Text mb={0} mr={4}>
+                    5.0
+                  </Text>
+                  <Icon as={RiStarFill} color={"yellow.500"} />
+                  <Icon as={RiStarFill} color={"yellow.500"} />
+                  <Icon as={RiStarFill} color={"yellow.500"} />
+                  <Icon as={RiStarFill} color={"yellow.500"} />
+                  <Icon as={RiStarFill} color={"yellow.500"} />
                 </Flex>
-                5.0
-              </Box>
-            </Flex>
-          </Box>
+              </Card>
+            </GridItem>
+          </>
         ))}
       </SimpleGrid>
     </Container>

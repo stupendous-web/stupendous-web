@@ -57,7 +57,7 @@ export default function AppsIndustries() {
   ];
 
   return (
-    <Container maxW={"container.xl"} pt={[0, 16]}>
+    <Container maxW={"container.xl"} pt={[4, 16]}>
       <SimpleGrid columns={8} spacing={2} h={["100%", "800px"]}>
         <GridItem colSpan={[8, 4]}>
           <Card>
