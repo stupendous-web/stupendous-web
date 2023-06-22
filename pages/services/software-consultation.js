@@ -146,7 +146,7 @@ export default function WebAppDevelopment() {
                   </Link>
                   <Text>
                     All consultations are conducted through Google Meet. For
-                    partial consultations, email{" "}
+                    customized consultations, email{" "}
                     <Link
                       as={NextLink}
                       href={"mailto:topher@stupendousweb.com"}

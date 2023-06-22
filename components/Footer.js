@@ -37,6 +37,10 @@ export default function Footer() {
       href: "/services/mvp-software-development",
       title: "MVP Software Development",
     },
+    {
+      href: "/services/software-consultation",
+      title: "Software Consultation",
+    },
   ];
 
   const projects = [

@@ -20,7 +20,7 @@ import Image from "next/image";
 export default function CTA() {
   return (
     <Container maxW={"container.xl"} pt={[4, 16]}>
-      <SimpleGrid columns={8} spacing={2} height={["100%", "600px"]}>
+      <SimpleGrid columns={8} spacing={2}>
         <GridItem colSpan={[8, 3]}>
           <Flex
             h={"100%"}
@@ -40,7 +40,8 @@ export default function CTA() {
               </Heading>
               <Text color={"white"}>
                 Find your audience, refine your product, and create solutions
-                for your customers in your software consultation.
+                for your customers with a web or phone app in your software
+                consultation.
               </Text>
             </Box>
             <Box>
@@ -73,7 +74,7 @@ export default function CTA() {
           </Flex>
         </GridItem>
         <GridItem colSpan={[8, 3]}>
-          <AspectRatio ratio={1} h={"100%"}>
+          <AspectRatio ratio={1}>
             <Image
               src={stock1}
               alt={

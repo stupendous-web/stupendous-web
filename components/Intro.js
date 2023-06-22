@@ -1,7 +1,5 @@
 import {
   AspectRatio,
-  Box,
-  Button,
   Card,
   Container,
   Divider,
@@ -13,7 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { RiArrowRightLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
+import { RiMailLine, RiPhoneLine } from "react-icons/ri";
 import stock4 from "../images/stock/4.jpg";
 import { useGlobal } from "../lib/context";
 import Image from "next/image";
@@ -23,42 +21,23 @@ export default function Intro() {
 
   return (
     <Container maxW={"container.xl"} pt={[4, 16]}>
-      <SimpleGrid columns={8} spacing={2} h={["100%", "600px"]}>
+      <SimpleGrid columns={8} spacing={2}>
         <GridItem colSpan={[8, 3]}>
           <Card pt={1}>
             <Flex h={"100%"} direction={"column"} justify={"space-between"}>
-              <Box>
-                <Heading as={"p"} fontSize={["2rem", "4rem"]}>
-                  Websites, Web Apps, &amp; Phone Apps
-                </Heading>
-                <Text>
-                  I help people with something to share who want to engage with
-                  their community by delivering software development services
-                  that improve their brand awareness and authority.
-                </Text>
-              </Box>
-              <Box>
-                <Link
-                  as={NextLink}
-                  href={"https://cal.com/stupendousweb/consultation"}
-                >
-                  <Button
-                    bg={"primary.500"}
-                    color={"white"}
-                    size={"lg"}
-                    _hover={{ bg: "primary.500" }}
-                    mr={12}
-                    rightIcon={<RiArrowRightLine />}
-                  >
-                    <Box mr={4}>Get yours Now</Box>
-                  </Button>
-                </Link>
-              </Box>
+              <Heading as={"p"} fontSize={["2rem", "4rem"]}>
+                Websites, Web Apps, &amp; Phone Apps
+              </Heading>
+              <Text mb={0}>
+                I help people with something to share who want to engage with
+                their community by delivering software development services that
+                improve their brand awareness and authority.
+              </Text>
             </Flex>
           </Card>
         </GridItem>
         <GridItem colSpan={[8, 3]}>
-          <AspectRatio ratio={1} h={"100%"}>
+          <AspectRatio ratio={1}>
             <Image
               src={stock4}
               alt={"Women Working | Software Development Services"}
