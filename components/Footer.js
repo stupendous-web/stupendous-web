@@ -1,13 +1,14 @@
 import NextLink from "next/link";
 import {
+  Card,
   Container,
   Flex,
-  Grid,
   GridItem,
   Icon,
   Link,
   List,
   ListItem,
+  SimpleGrid,
   Text,
 } from "@chakra-ui/react";
 import {
@@ -27,13 +28,20 @@ export default function Footer() {
     { href: "/contact", title: "Contact" },
     { href: "/2022", title: "2022 Review" },
     { href: "/articles", title: "Articles" },
+  ];
+
+  const services = [
     { href: "/services/web-app-development", title: "Web App Development" },
     { href: "/services/web-site-development", title: "Web Site Development" },
     {
       href: "/services/mvp-software-development",
       title: "MVP Software Development",
     },
+  ];
+
+  const projects = [
     { href: "https://stupendousanalytics.com", title: "Stupendous Analytics" },
+    { href: "https://devgotchas.com", title: "Dev Gotchas" },
   ];
 
   const socialLinks = [
@@ -70,62 +78,92 @@ export default function Footer() {
   ];
 
   return (
-    <Container maxW={"container.xl"} pt={[4, 16]}>
-      <Grid
-        templateColumns={["repeat(1, 1fr)", "repeat(8, 1fr)"]}
-        gap={"2px"}
-        h={"200px"}
-      >
-        <GridItem colSpan={4}>
-          <Text as={"strong"} fontSize={"lg"}>
-            <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
-              topher@stupendousweb.com
-            </Link>
-          </Text>
-          <Flex mt={2} mb={8}>
-            {socialLinks?.map((link) => (
-              <Link
-                as={NextLink}
-                key={link.href}
-                href={link.href}
-                title={`Find me on ${link.title}!`}
-                target={"_blank"}
-                mr={4}
-              >
-                <Icon as={link.icon} />
-              </Link>
-            ))}
-          </Flex>
-          <Text fontSize={"xs"} color={"gray.500"}>
-            &copy; Copyright{" "}
-            <Link
-              as={NextLink}
-              href={"/"}
-              title={
-                "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
-              }
-            >
-              Stupendous Web
-            </Link>{" "}
-            2022. All rights reserved.
-          </Text>
+    <Container maxW={"container.xl"} pt={[4, 16]} mb={[4, 16]}>
+      <SimpleGrid columns={8} spacing={2} h={["100%", "200px"]}>
+        <GridItem colSpan={[8, 2]}>
+          <Card variant={"transparent"} pb={[0, 4]}>
+            <List mb={[4, 0]} style={{ columns: 1 }}>
+              {links.map((link, key) => (
+                <ListItem key={key}>
+                  <Link
+                    as={NextLink}
+                    href={link.href}
+                    title={`${link.title} | Software Development Services | Stupendous Web`}
+                  >
+                    {link.title}
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+          </Card>
         </GridItem>
-        <GridItem colSpan={4}>
-          <List>
-            {links.map((link, key) => (
-              <ListItem key={key}>
+        <GridItem colSpan={[8, 2]}>
+          <Card variant={"transparent"} pt={[0, 4]}>
+            <List mb={4} style={{ columns: 1 }}>
+              {services.map((link, key) => (
+                <ListItem key={key}>
+                  <Link
+                    as={NextLink}
+                    href={link.href}
+                    title={`${link.title} | Software Development Services | Stupendous Web`}
+                  >
+                    {link.title}
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+            <List mb={[4, 0]} style={{ columns: 1 }}>
+              {projects.map((link, key) => (
+                <ListItem key={key}>
+                  <Link
+                    as={NextLink}
+                    href={link.href}
+                    title={`${link.title} | Software Development Services | Stupendous Web`}
+                  >
+                    {link.title}
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+          </Card>
+        </GridItem>
+        <GridItem colSpan={[8, 4]}>
+          <Card variant={"transparent"}>
+            <Text as={"strong"} fontSize={"lg"}>
+              <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
+                topher@stupendousweb.com
+              </Link>
+            </Text>
+            <Flex mt={2} mb={8}>
+              {socialLinks?.map((link) => (
                 <Link
                   as={NextLink}
+                  key={link.href}
                   href={link.href}
-                  title={`${link.title} | Software Development Services | Stupendous Web`}
+                  title={`Find me on ${link.title}!`}
+                  target={"_blank"}
+                  mr={4}
                 >
-                  {link.title}
+                  <Icon as={link.icon} />
                 </Link>
-              </ListItem>
-            ))}
-          </List>
+              ))}
+            </Flex>
+            <Text fontSize={"xs"} color={"gray.500"}>
+              &copy; Copyright{" "}
+              <Link
+                as={NextLink}
+                href={"/"}
+                title={
+                  "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
+                }
+              >
+                Stupendous Web
+              </Link>{" "}
+              2022. All rights reserved.
+            </Text>
+          </Card>
         </GridItem>
-      </Grid>
+      </SimpleGrid>
     </Container>
   );
 }
