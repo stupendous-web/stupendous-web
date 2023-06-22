@@ -86,7 +86,7 @@ export default function Footer() {
       <SimpleGrid columns={8} spacing={2} h={["100%", "200px"]}>
         <GridItem colSpan={[8, 2]}>
           <Card variant={"transparent"} pb={[0, 4]}>
-            <List mb={[4, 0]} style={{ columns: 1 }}>
+            <List mb={[4, 0]}>
               {links.map((link, key) => (
                 <ListItem key={key}>
                   <Link
@@ -103,7 +103,7 @@ export default function Footer() {
         </GridItem>
         <GridItem colSpan={[8, 2]}>
           <Card variant={"transparent"} pt={[0, 4]}>
-            <List mb={4} style={{ columns: 1 }}>
+            <List mb={4}>
               {services.map((link, key) => (
                 <ListItem key={key}>
                   <Link
@@ -116,7 +116,7 @@ export default function Footer() {
                 </ListItem>
               ))}
             </List>
-            <List mb={[4, 0]} style={{ columns: 1 }}>
+            <List mb={[4, 0]}>
               {projects.map((link, key) => (
                 <ListItem key={key}>
                   <Link

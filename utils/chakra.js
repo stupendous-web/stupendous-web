@@ -134,6 +134,7 @@ const theme = extendTheme({
           bg: mode("gray.50", "gray.900")(props),
           h: "100%",
           p: 4,
+          transition: "all .66s",
           _hover: { bg: mode("gray.100", "gray.850")(props) },
         },
       }),
@@ -146,10 +147,17 @@ const theme = extendTheme({
         },
       },
     },
-    List: {
+    Accordion: {
       baseStyle: {
-        container: {
-          columns: 2,
+        button: {
+          px: 0,
+          py: 4,
+          _hover: {
+            bg: "transparent",
+          },
+        },
+        panel: {
+          p: 0,
         },
       },
     },

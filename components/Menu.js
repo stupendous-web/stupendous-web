@@ -48,7 +48,7 @@ export default function Menu() {
           transform: "translateX(100%)",
         }}
       >
-        <List spacing={6} style={{ columns: 1 }}>
+        <List spacing={6}>
           {links.map((link, key) => {
             return (
               <ListItem key={key}>

@@ -49,7 +49,7 @@ export default function Review2022() {
           </GridItem>
           <GridItem colSpan={[8, 5]}>
             <Card variant={"transparent"} pt={1}>
-              <List mb={4} __css={{ columns: 1 }}>
+              <List mb={4}>
                 <ListItem py={2}>🤝 6 amazing new clients</ListItem>
                 <ListItem py={2}>☕ ~1,095 cups of coffee</ListItem>
               </List>

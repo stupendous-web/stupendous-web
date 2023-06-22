@@ -102,7 +102,7 @@ export default function Contact() {
             <SimpleGrid columns={5} spacing={2}>
               <GridItem colSpan={5}>
                 <Card variant={"transparent"}>
-                  <List fontSize={"lg"} mb={8} __css={{ columns: 1 }}>
+                  <List fontSize={"lg"} mb={8}>
                     {contactLinks.map((link, index) => (
                       <ListItem
                         key={link.href}
@@ -131,7 +131,7 @@ export default function Contact() {
                   <Heading as={"h2"} size={"lg"} mb={4}>
                     Clients
                   </Heading>
-                  <List fontSize={"lg"} mb={8} __css={{ columns: 1 }}>
+                  <List fontSize={"lg"} mb={8}>
                     {adminLinks.map((link, index) => (
                       <ListItem
                         key={link.href}

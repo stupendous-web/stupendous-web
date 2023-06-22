@@ -48,8 +48,8 @@ export default function Home({ articles }) {
       <Intro />
       <Solutions />
       <Testimonials />
-      {/*<Questions />*/}
       <AppsIndustries />
+      <Questions />
       <Blog articles={articles} />
       <CTA />
     </>

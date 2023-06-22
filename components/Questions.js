@@ -4,9 +4,11 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
+  Card,
   Container,
+  GridItem,
   Heading,
-  Text,
+  SimpleGrid,
 } from "@chakra-ui/react";
 
 export default function Questions() {
@@ -34,22 +36,27 @@ export default function Questions() {
   ];
 
   return (
-    <Container maxW={"container.xl"} pt={[0, 16]}>
-      <Text>FAQ&apos;s</Text>
-      <Heading>Software Development Questions</Heading>
-      <Accordion>
-        {faqs.map((faq) => (
-          <AccordionItem key={faq.question}>
-            <AccordionButton>
-              <Heading as={"h3"} fontSize={"1rem"} m={0}>
-                {faq.question}
-              </Heading>
-              <AccordionIcon />
-            </AccordionButton>
-            <AccordionPanel pb={4}>{faq.answer}</AccordionPanel>
-          </AccordionItem>
-        ))}
-      </Accordion>
+    <Container maxW={"container.xl"} pt={[4, 16]}>
+      <SimpleGrid columns={8} spacing={2}>
+        <GridItem colSpan={[8, 6]}>
+          <Card variant={"transparent"}>
+            <Heading>FAQ&apos;s</Heading>
+            <Accordion allowToggle>
+              {faqs.map((faq) => (
+                <AccordionItem key={faq.question}>
+                  <AccordionButton>
+                    <Heading as={"h3"} fontSize={"1rem"} mb={0} mr={"auto"}>
+                      {faq.question}
+                    </Heading>
+                    <AccordionIcon />
+                  </AccordionButton>
+                  <AccordionPanel pb={4}>{faq.answer}</AccordionPanel>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </Card>
+        </GridItem>
+      </SimpleGrid>
     </Container>
   );
 }
