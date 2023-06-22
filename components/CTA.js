@@ -36,11 +36,11 @@ export default function CTA() {
                 fontSize={["2rem", "4rem"]}
                 mb={4}
               >
-                Your two consultations are now FREE!
+                Your Audience is Waiting
               </Heading>
               <Text color={"white"}>
                 Find your audience, refine your product, and create solutions
-                for your customers in the first of your two free consultations.
+                for your customers in your software consultation.
               </Text>
             </Box>
             <Box>
@@ -51,12 +51,22 @@ export default function CTA() {
                 <Button
                   bg={"white"}
                   color={"primary.500"}
-                  size={"lg"}
                   _hover={{ bg: "white", color: "primary.500" }}
-                  mr={12}
+                  mr={4}
                   rightIcon={<RiArrowRightLine />}
                 >
                   <Box mr={4}>Get yours Now</Box>
+                </Button>
+              </Link>
+              <Link as={NextLink} href={"/services/software-consultation"}>
+                <Button
+                  bg={"transparent"}
+                  color={"white"}
+                  border={"solid 1px"}
+                  _hover={{ bg: "transparent" }}
+                  rightIcon={<RiArrowRightLine />}
+                >
+                  <Box mr={4}>Learn More</Box>
                 </Button>
               </Link>
             </Box>

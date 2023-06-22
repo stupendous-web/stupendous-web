@@ -12,7 +12,12 @@ import {
   Box,
   Flex,
 } from "@chakra-ui/react";
-import { RiArrowRightLine, RiSearchLine, RiChat1Line } from "react-icons/ri";
+import {
+  RiArrowRightLine,
+  RiSearchLine,
+  RiChat1Line,
+  RiSmartphoneLine,
+} from "react-icons/ri";
 import CTA from "../../components/CTA";
 import { useEffect } from "react";
 
@@ -31,8 +36,8 @@ export default function Services() {
   const developmentServices = [
     { href: "web-app-development", anchor: "Web App Development" },
     { href: "web-site-development", anchor: "Web Site Development" },
-    { href: "phone-apps", anchor: "Phone Apps" },
     { href: "mvp-software-development", anchor: "MVP Software Development" },
+    { anchor: "Phone Apps", icon: <RiSmartphoneLine /> },
   ];
 
   return (
