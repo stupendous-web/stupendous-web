@@ -7,24 +7,31 @@ import {
   Flex,
   GridItem,
   Card,
+  Box,
+  Link,
+  useColorMode,
 } from "@chakra-ui/react";
-import { RiStarFill } from "react-icons/ri";
-import { Fragment } from "react";
+import { RiStarFill, RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri";
+import { useState } from "react";
 
 export default function Testimonials() {
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const { colorMode } = useColorMode();
+
   const testimonials = [
-    {
-      name: "Grace Avila",
-      title: "Nutritionist",
-      review:
-        "Working with Topher on my new site was a dream. He worked quickly, thoughtfully and was very responsive. I had a lot of questions on updating the site myself. He walked me through all of my concerns, polished out all the details and completed the site very quickly. I love the look of my new site! I would recommend Topher highly.",
-    },
     {
       name: "Masumi Johnson",
       title: "Pixel Pusher",
       review:
         "Topher is a web design wizard. He was incredible to work with from start to finish and was able to build us a completely custom web site. He leverages several useful tools to facilitate the process and maintained great communication and transparency through the whole process. I highly recommend Stupendous Web if you’re in the market for a professional website!",
     },
+    {
+      name: "Grace Avila",
+      title: "Nutritionist",
+      review:
+        "Working with Topher on my new site was a dream. He worked quickly, thoughtfully and was very responsive. I had a lot of questions on updating the site myself. He walked me through all of my concerns, polished out all the details and completed the site very quickly. I love the look of my new site! I would recommend Topher highly.",
+    },
+
     {
       name: "Chidi Ononuju",
       title: "Masseur",
@@ -39,43 +46,72 @@ export default function Testimonials() {
     },
   ];
   return (
-    <Container maxW={"container.xl"} pt={[4, 16]}>
-      <SimpleGrid columns={8} spacing={2}>
-        <GridItem colSpan={2} hideBelow={"sm"} />
-        <GridItem colSpan={[8, 6]}>
-          <Card variant={"transparent"}>
-            <Heading>What they&apos;re saying</Heading>
-          </Card>
-        </GridItem>
-        {testimonials.map((testimonial) => (
-          <Fragment key={testimonial.name}>
-            <GridItem colSpan={2} hideBelow={"sm"} />
-            <GridItem colSpan={[8, 3]}>
-              <Card variant={"transparent"}>
-                <Text m={0}>{testimonial.name}</Text>
-                <Heading as={"h3"} fontSize={"1rem"}>
-                  {testimonial.title}
-                </Heading>
-              </Card>
-            </GridItem>
-            <GridItem colSpan={[8, 3]}>
-              <Card variant={"transparent"}>
-                <Text>{testimonial.review}</Text>
-                <Flex align={"center"}>
-                  <Text mb={0} mr={4}>
-                    5.0
-                  </Text>
-                  <Icon as={RiStarFill} color={"yellow.500"} />
-                  <Icon as={RiStarFill} color={"yellow.500"} />
-                  <Icon as={RiStarFill} color={"yellow.500"} />
-                  <Icon as={RiStarFill} color={"yellow.500"} />
-                  <Icon as={RiStarFill} color={"yellow.500"} />
-                </Flex>
-              </Card>
-            </GridItem>
-          </Fragment>
-        ))}
-      </SimpleGrid>
-    </Container>
+    <Box
+      bg={colorMode === "dark" ? "gray.800" : "gray.150"}
+      py={[4, 8]}
+      mt={[4, 16]}
+    >
+      <Container maxW={"container.xl"}>
+        <SimpleGrid columns={8} spacing={2}>
+          <GridItem colSpan={[8, 6]}>
+            <Card variant={"transparent"}>
+              <Heading>What they&apos;re saying</Heading>
+            </Card>
+          </GridItem>
+          <GridItem colSpan={[8, 3]}>
+            <Card variant={"transparent"}>
+              <Text m={0}>{testimonials[activeTestimonial].name}</Text>
+              <Heading as={"h3"} fontSize={"1rem"}>
+                {testimonials[activeTestimonial].title}
+              </Heading>
+            </Card>
+          </GridItem>
+          <GridItem colSpan={[8, 5]}>
+            <Card variant={"transparent"}>
+              <Text>{testimonials[activeTestimonial].review}</Text>
+              <Flex align={"center"}>
+                <Text mb={0} mr={4}>
+                  5.0
+                </Text>
+                <Icon as={RiStarFill} color={"yellow.500"} />
+                <Icon as={RiStarFill} color={"yellow.500"} />
+                <Icon as={RiStarFill} color={"yellow.500"} />
+                <Icon as={RiStarFill} color={"yellow.500"} />
+                <Icon as={RiStarFill} color={"yellow.500"} />
+              </Flex>
+            </Card>
+          </GridItem>
+          <GridItem colSpan={8}>
+            <Card variant={"transparent"}>
+              <Flex>
+                <Link
+                  mr={8}
+                  onClick={() => {
+                    if (activeTestimonial > 0) {
+                      setActiveTestimonial(activeTestimonial - 1);
+                    } else {
+                      setActiveTestimonial(testimonials.length - 1);
+                    }
+                  }}
+                >
+                  <RiArrowLeftLine size={32} />
+                </Link>
+                <Link
+                  onClick={() => {
+                    if (activeTestimonial < testimonials.length - 1) {
+                      setActiveTestimonial(activeTestimonial + 1);
+                    } else {
+                      setActiveTestimonial(0);
+                    }
+                  }}
+                >
+                  <RiArrowRightLine size={32} />
+                </Link>
+              </Flex>
+            </Card>
+          </GridItem>
+        </SimpleGrid>
+      </Container>
+    </Box>
   );
 }
