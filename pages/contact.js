@@ -5,10 +5,10 @@ import {
   RiExternalLinkLine,
   RiMailLine,
   RiPhoneLine,
-  RiVideoFill,
-  RiToolsFill,
-  RiPieChartFill,
-  RiFileTextFill,
+  RiVideoLine,
+  RiToolsLine,
+  RiPieChartLine,
+  RiFileTextLine,
 } from "react-icons/ri";
 import {
   Container,
@@ -49,23 +49,23 @@ export default function Contact() {
     {
       anchor: "1-1",
       href: "https://cal.com/stupendousweb/client-1-1",
-      icon: RiVideoFill,
+      icon: RiVideoLine,
     },
     {
       anchor: "Feature Requests",
       href: "https://stupendousweb.atlassian.net/jira/projects",
-      icon: RiToolsFill,
+      icon: RiToolsLine,
     },
     {
       anchor: "Analytics",
       title: "NextJS Website Analytics Dashboard",
       href: "https://stupendousanalytics.com",
-      icon: RiPieChartFill,
+      icon: RiPieChartLine,
     },
     {
       anchor: "Content Management",
       href: "https://wordpress.com",
-      icon: RiFileTextFill,
+      icon: RiFileTextLine,
     },
   ];
 
@@ -110,7 +110,7 @@ export default function Contact() {
                       as={NextLink}
                       href={"https://forms.gle/eoSWDZcKSLdEdmez6"}
                     >
-                      <Heading color={"white"} mb={0}>
+                      <Heading color={"white"} mb={4}>
                         Get Started Now
                       </Heading>
                       <Text color={"white"}>
@@ -137,7 +137,7 @@ export default function Contact() {
                       h={"100%"}
                     >
                       <Link as={NextLink} href={link.href}>
-                        <Heading mb={0}>{link.heading}</Heading>
+                        <Heading mb={4}>{link.heading}</Heading>
                         <Text>{link.text}</Text>
                       </Link>
                       <Link as={NextLink} href={link.href}>
