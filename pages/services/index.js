@@ -11,13 +11,9 @@ import {
   SimpleGrid,
   Box,
   Flex,
+  Button,
 } from "@chakra-ui/react";
-import {
-  RiArrowRightLine,
-  RiSearchLine,
-  RiChat1Line,
-  RiSmartphoneLine,
-} from "react-icons/ri";
+import { RiArrowRightLine, RiSmartphoneLine } from "react-icons/ri";
 import CTA from "../../components/CTA";
 import { useEffect } from "react";
 
@@ -27,11 +23,6 @@ export default function Services() {
   useEffect(() => {
     setIsLoading(false);
   }, []);
-
-  const strategyServices = [
-    { anchor: "Research", icon: <RiSearchLine /> },
-    { anchor: "Brand Messaging", icon: <RiChat1Line /> },
-  ];
 
   const developmentServices = [
     { href: "web-app-development", anchor: "Web App Development" },
@@ -91,68 +82,22 @@ export default function Services() {
                     designed for us to better deliver your product in a more
                     impactful way.
                   </Text>
-                </Card>
-              </GridItem>
-              {strategyServices?.map((service) => (
-                <GridItem
-                  key={service.anchor}
-                  colSpan={[5, 1]}
-                  h={["100%", "200px"]}
-                >
-                  <Card>
-                    <Flex
-                      h={"100%"}
-                      direction={"column"}
-                      justify={"space-between"}
+                  <Link
+                    as={NextLink}
+                    href={"https://forms.gle/eoSWDZcKSLdEdmez6"}
+                  >
+                    <Button
+                      bg={"primary.500"}
+                      color={"white"}
+                      size={"lg"}
+                      rightIcon={<RiArrowRightLine />}
+                      _hover={{ bg: "primary.500" }}
+                      mt={4}
+                      mb={8}
                     >
-                      <Box>
-                        {service?.href ? (
-                          <Link
-                            as={NextLink}
-                            href={`/services/${service.href}`}
-                            title={`${service.anchor} | Software Development Services | Stupendous Web`}
-                          >
-                            <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-                              {service.anchor}
-                            </Heading>
-                          </Link>
-                        ) : (
-                          <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-                            {service.anchor}
-                          </Heading>
-                        )}
-                      </Box>
-                      <Box>
-                        {service?.href ? (
-                          <Link
-                            as={NextLink}
-                            href={`/services/${service.href}`}
-                            title={`${service.anchor} | Software Development Services | Stupendous Web`}
-                          >
-                            <>
-                              {service?.icon ? (
-                                service?.icon
-                              ) : (
-                                <RiArrowRightLine size={16} />
-                              )}
-                            </>
-                          </Link>
-                        ) : (
-                          <>
-                            {service?.icon ? (
-                              service?.icon
-                            ) : (
-                              <RiArrowRightLine size={16} />
-                            )}
-                          </>
-                        )}
-                      </Box>
-                    </Flex>
-                  </Card>
-                </GridItem>
-              ))}
-              <GridItem colSpan={5}>
-                <Card variant={"transparent"}>
+                      <Box mr={4}>Get Started Now</Box>
+                    </Button>
+                  </Link>
                   <Heading mt={4}>2.0 Design</Heading>
                   <Text>
                     A website or even a web app is still a must-have. It is my

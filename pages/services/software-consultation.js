@@ -138,6 +138,7 @@ export default function WebAppDevelopment() {
                       color={"white"}
                       size={"lg"}
                       rightIcon={<RiArrowRightLine />}
+                      _hover={{ bg: "primary.500" }}
                       mt={4}
                       mb={8}
                     >
