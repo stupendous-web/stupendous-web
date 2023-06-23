@@ -131,7 +131,7 @@ export default function WebAppDevelopment() {
                   </Text>
                   <Link
                     as={NextLink}
-                    href={"https://cal.com/stupendousweb/consultation"}
+                    href={"https://forms.gle/eoSWDZcKSLdEdmez6"}
                   >
                     <Button
                       bg={"primary.500"}
@@ -141,7 +141,7 @@ export default function WebAppDevelopment() {
                       mt={4}
                       mb={8}
                     >
-                      <Box mr={4}>Schedule yours Now</Box>
+                      <Box mr={4}>Get Started Now</Box>
                     </Button>
                   </Link>
                   <Text>

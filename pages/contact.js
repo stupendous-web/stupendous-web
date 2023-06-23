@@ -108,15 +108,20 @@ export default function Contact() {
                   >
                     <Link
                       as={NextLink}
-                      href={"https://cal.com/stupendousweb/consultation"}
+                      href={"https://forms.gle/eoSWDZcKSLdEdmez6"}
                     >
-                      <Heading color={"white"}>
-                        Schedule your Consultation
+                      <Heading color={"white"} mb={0}>
+                        Get Started Now
                       </Heading>
+                      <Text color={"white"}>
+                        Request an estimate for your consultation in under two
+                        minutes and receive it in under a few hours right to
+                        your inbox!
+                      </Text>
                     </Link>
                     <Link
                       as={NextLink}
-                      href={"https://cal.com/stupendousweb/consultation"}
+                      href={"https://forms.gle/eoSWDZcKSLdEdmez6"}
                     >
                       <RiExternalLinkLine size={32} color={"white"} />
                     </Link>
@@ -131,17 +136,11 @@ export default function Contact() {
                       justify={"space-between"}
                       h={"100%"}
                     >
-                      <Link
-                        as={NextLink}
-                        href={"https://cal.com/stupendousweb/consultation"}
-                      >
+                      <Link as={NextLink} href={link.href}>
                         <Heading mb={0}>{link.heading}</Heading>
                         <Text>{link.text}</Text>
                       </Link>
-                      <Link
-                        as={NextLink}
-                        href={"https://cal.com/stupendousweb/consultation"}
-                      >
+                      <Link as={NextLink} href={link.href}>
                         {link.icon}
                       </Link>
                     </Flex>

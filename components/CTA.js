@@ -36,19 +36,15 @@ export default function CTA() {
                 fontSize={["2rem", "4rem"]}
                 mb={4}
               >
-                Your Audience is Waiting
+                2-Minute Consultation Estimate
               </Heading>
               <Text color={"white"}>
-                Find your audience, refine your product, and create solutions
-                for your customers with a web or phone app in your software
-                consultation.
+                Request an estimate for your consultation in under two minutes
+                and receive it in under a few hours right to your inbox!
               </Text>
             </Box>
             <Box>
-              <Link
-                as={NextLink}
-                href={"https://cal.com/stupendousweb/consultation"}
-              >
+              <Link as={NextLink} href={"https://forms.gle/eoSWDZcKSLdEdmez6"}>
                 <Button
                   bg={"white"}
                   color={"primary.500"}
@@ -56,7 +52,7 @@ export default function CTA() {
                   mr={4}
                   rightIcon={<RiArrowRightLine />}
                 >
-                  <Box mr={4}>Get yours Now</Box>
+                  <Box mr={4}>Get Started Now</Box>
                 </Button>
               </Link>
               <Link as={NextLink} href={"/services/software-consultation"}>
