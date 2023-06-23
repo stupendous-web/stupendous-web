@@ -13,11 +13,13 @@ import {
   Box,
 } from "@chakra-ui/react";
 import {
-  RiCompassLine,
+  RiArticleLine,
   RiSurveyLine,
   RiSearchLine,
   RiPaintBrushLine,
+  RiChat1Line,
   RiSlideshowLine,
+  RiComputerLine,
   RiArrowRightLine,
 } from "react-icons/ri";
 import { useEffect } from "react";
@@ -28,13 +30,18 @@ export default function WebAppDevelopment() {
 
   const cards = [
     {
-      heading: "Mission & Product Guide",
-      icon: <RiCompassLine size={32} />,
+      heading: "Product Brief",
+      icon: <RiArticleLine size={32} />,
     },
-    { heading: "Market Research", icon: <RiSurveyLine size={32} /> },
-    { heading: "SEO Research", icon: <RiSearchLine size={32} /> },
+    { heading: "Market Report", icon: <RiSurveyLine size={32} /> },
+    { heading: "SEO Report", icon: <RiSearchLine size={32} /> },
     { heading: "Design Guide", icon: <RiPaintBrushLine size={32} /> },
+    { heading: "Brand Guide", icon: <RiChat1Line size={32} /> },
     { heading: "Project Plan", icon: <RiSlideshowLine size={32} /> },
+    {
+      heading: "In-House Development Quote",
+      icon: <RiComputerLine size={32} />,
+    },
   ];
 
   useEffect(() => {
