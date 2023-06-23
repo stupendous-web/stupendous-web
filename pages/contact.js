@@ -2,9 +2,10 @@ import Head from "next/head";
 import NextLink from "next/link";
 import { useGlobal } from "../lib/context";
 import {
+  RiExternalLinkLine,
+  RiMailLine,
+  RiPhoneLine,
   RiVideoFill,
-  RiMailFill,
-  RiPhoneFill,
   RiToolsFill,
   RiPieChartFill,
   RiFileTextFill,
@@ -21,6 +22,7 @@ import {
   Card,
   SimpleGrid,
   useColorMode,
+  Flex,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 
@@ -30,19 +32,16 @@ export default function Contact() {
 
   const contactLinks = [
     {
-      anchor: "FREE consultation",
-      href: "https://cal.com/stupendousweb/consultation",
-      icon: RiVideoFill,
-    },
-    {
-      anchor: "topher@stupendousweb.com",
+      text: "topher@stupendousweb.com",
+      heading: "Email",
       href: "mailto:topher@stupendousweb.com",
-      icon: RiMailFill,
+      icon: <RiMailLine size={32} />,
     },
     {
-      anchor: "+1 702.308.9375",
+      text: "+1 702.308.9375 ",
+      heading: "Text or Call",
       href: "tel:7023089375",
-      icon: RiPhoneFill,
+      icon: <RiPhoneLine size={32} />,
     },
   ];
 
@@ -81,56 +80,77 @@ export default function Contact() {
       </Head>
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
-          <GridItem colSpan={[8, 3]}>
+          <GridItem colSpan={[8, 2]}>
             <Card variant={"transparent"} pt={0}>
               <Heading as={"h1"} fontSize={["2rem", "4rem"]}>
                 Contact
               </Heading>
               <Text as={"code"}>
-                Let&apos;s talk goals. Get in touch below or schedule your 2
-                FREE consultations. You&apos;ll receive a creative brief,
-                project plan, and secret website where you can preview your
-                project. Lastly, we&apos;ll launch your website and app to the
-                internet!{" "}
+                After your consultation, you&apos;ll receive a product brief,
+                design guide, project plan, quote, and many other resources.
+                Once you approve your quote, you&apos;ll receive a secret
+                website where you can preview progress at any time. And, when
+                you&apos;re ready, we&apos;ll launch your project to the web!{" "}
                 <Text as={"span"} className={"flash"}>
                   ▌
                 </Text>
               </Text>
             </Card>
           </GridItem>
-          <GridItem colSpan={[8, 5]}>
-            <SimpleGrid columns={5} spacing={2}>
-              <GridItem colSpan={5}>
-                <Card variant={"transparent"}>
-                  <List fontSize={"lg"} mb={8}>
-                    {contactLinks.map((link, index) => (
-                      <ListItem
-                        key={link.href}
-                        borderBottom={
-                          index < contactLinks.length - 1 ? "solid 1px" : "none"
-                        }
-                        borderColor={
-                          colorMode === "dark" ? "gray.700" : "gray.200"
-                        }
-                        display={"flex"}
-                        py={4}
+          <GridItem colSpan={[8, 6]}>
+            <SimpleGrid columns={6} spacing={2}>
+              <GridItem colSpan={[6, 2]} h={["100%", "394px"]}>
+                <Card bg={"primary.500"} _hover={{ bg: "primary.500" }}>
+                  <Flex
+                    direction={"column"}
+                    justify={"space-between"}
+                    h={"100%"}
+                  >
+                    <Link
+                      as={NextLink}
+                      href={"https://cal.com/stupendousweb/consultation"}
+                    >
+                      <Heading color={"white"}>
+                        Schedule your Consultation
+                      </Heading>
+                    </Link>
+                    <Link
+                      as={NextLink}
+                      href={"https://cal.com/stupendousweb/consultation"}
+                    >
+                      <RiExternalLinkLine size={32} color={"white"} />
+                    </Link>
+                  </Flex>
+                </Card>
+              </GridItem>
+              {contactLinks.map((link) => (
+                <GridItem key={link.href} colSpan={[6, 2]}>
+                  <Card>
+                    <Flex
+                      direction={"column"}
+                      justify={"space-between"}
+                      h={"100%"}
+                    >
+                      <Link
+                        as={NextLink}
+                        href={"https://cal.com/stupendousweb/consultation"}
                       >
-                        <ListIcon as={link.icon} color={"primary.500"} mr={4} />
-                        <Link
-                          as={NextLink}
-                          href={link.href}
-                          title={link.title}
-                          lineHeight={1}
-                          color={"primary.500"}
-                        >
-                          {link.anchor}
-                        </Link>
-                      </ListItem>
-                    ))}
-                  </List>
-                  <Heading as={"h2"} size={"lg"} mb={4}>
-                    Clients
-                  </Heading>
+                        <Heading mb={0}>{link.heading}</Heading>
+                        <Text>{link.text}</Text>
+                      </Link>
+                      <Link
+                        as={NextLink}
+                        href={"https://cal.com/stupendousweb/consultation"}
+                      >
+                        {link.icon}
+                      </Link>
+                    </Flex>
+                  </Card>
+                </GridItem>
+              ))}
+              <GridItem colSpan={[8, 6]}>
+                <Card variant={"transparent"} mt={[4, 16]}>
+                  <Heading>Clients</Heading>
                   <List fontSize={"lg"} mb={8}>
                     {adminLinks.map((link, index) => (
                       <ListItem
@@ -144,13 +164,12 @@ export default function Contact() {
                         display={"flex"}
                         py={4}
                       >
-                        <ListIcon as={link.icon} color={"primary.500"} mr={4} />
+                        <ListIcon as={link.icon} mr={4} />
                         <Link
                           as={NextLink}
                           href={link.href}
                           title={link.title}
                           lineHeight={1}
-                          color={"primary.500"}
                         >
                           {link.anchor}
                         </Link>
