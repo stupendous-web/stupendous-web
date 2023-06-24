@@ -8,7 +8,6 @@ import {
   GridItem,
   Card,
   Box,
-  Link,
   useColorMode,
 } from "@chakra-ui/react";
 import { RiStarFill, RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri";
@@ -84,8 +83,9 @@ export default function Testimonials() {
           <GridItem colSpan={8}>
             <Card variant={"transparent"}>
               <Flex>
-                <Link
+                <Box
                   mr={8}
+                  cursor={"pointer"}
                   onClick={() => {
                     if (activeTestimonial > 0) {
                       setActiveTestimonial(activeTestimonial - 1);
@@ -95,8 +95,9 @@ export default function Testimonials() {
                   }}
                 >
                   <RiArrowLeftLine size={32} />
-                </Link>
-                <Link
+                </Box>
+                <Box
+                  cursor={"pointer"}
                   onClick={() => {
                     if (activeTestimonial < testimonials.length - 1) {
                       setActiveTestimonial(activeTestimonial + 1);
@@ -106,7 +107,7 @@ export default function Testimonials() {
                   }}
                 >
                   <RiArrowRightLine size={32} />
-                </Link>
+                </Box>
               </Flex>
             </Card>
           </GridItem>
