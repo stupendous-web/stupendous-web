@@ -11,6 +11,8 @@ import {
   ListItem,
   useColorMode,
 } from "@chakra-ui/react";
+import Image from "next/image";
+import logo from "../images/logo.png";
 
 export default function Menu() {
   const [backgroundClass, setBackgroundClass] = useState("");
@@ -70,7 +72,21 @@ export default function Menu() {
           })}
         </List>
       </Center>
-      <Flex position={"fixed"} top={4} right={4} hideFrom={"md"}>
+      <Box w={16} position={"fixed"} top={0} hideFrom={"sm"}>
+        <Link
+          as={NextLink}
+          href={"/"}
+          title={
+            "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
+          }
+        >
+          <Image
+            src={logo}
+            alt={"Navigation Logo | Software Development Services"}
+          />
+        </Link>
+      </Box>
+      <Flex position={"fixed"} top={4} right={4} hideFrom={"sm"}>
         <Box cursor={"pointer"} pr={4} onClick={() => toggleColorMode()}>
           {colorMode === "dark" ? "🌝" : "🌚"}
         </Box>
