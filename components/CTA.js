@@ -55,7 +55,13 @@ export default function CTA() {
                   <Box mr={4}>Get Started Now</Box>
                 </Button>
               </Link>
-              <Link as={NextLink} href={"/services/software-consultation"}>
+              <Link
+                as={NextLink}
+                href={"/services/software-consultation"}
+                title={
+                  "Software Consultation | Software Development Services | Stupendous Web"
+                }
+              >
                 <Button
                   bg={"transparent"}
                   color={"white"}

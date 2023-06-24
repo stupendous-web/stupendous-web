@@ -152,7 +152,7 @@ export default function Footer() {
                 </Link>
               ))}
             </Flex>
-            <Text fontSize={"xs"} color={"gray.500"}>
+            <Text fontSize={"xs"}>
               &copy; Copyright{" "}
               <Link
                 as={NextLink}
