@@ -1,5 +1,6 @@
 import {
   AspectRatio,
+  Box,
   Card,
   Container,
   Divider,
@@ -40,33 +41,36 @@ export default function Intro() {
           <AspectRatio ratio={1}>
             <Image
               src={stock4}
-              alt={"Women Working | Software Development Services"}
+              alt={
+                "Web Developer on Computer Talking | Software Development Services"
+              }
               fill
               style={{ objectFit: "cover" }}
               onLoadingComplete={setIsLoading(false)}
+              priority
             />
           </AspectRatio>
         </GridItem>
         <GridItem colSpan={[8, 2]}>
           <Card>
-            <Link
-              as={NextLink}
-              href={"mailto:topher@stupendousweb.com"}
-              color={"primary.500"}
-            >
-              <Text fontWeight={"bold"} m={0}>
+            <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
+              <Text fontWeight={"bold"} color={"primary.500"} m={0}>
                 topher@stupendousweb.com
               </Text>
-              <Text color={"gray.500"}>Say hi!</Text>
-              <RiMailLine size={32} />
+              <Text>Say hi!</Text>
+              <Box color={"primary.500"}>
+                <RiMailLine size={32} />
+              </Box>
             </Link>
             <Divider mt={4} mb={8} />
-            <Link as={NextLink} href={"tel:7023089375"} color={"primary.500"}>
-              <Text fontWeight={"bold"} m={0}>
+            <Link as={NextLink} href={"tel:7023089375"}>
+              <Text fontWeight={"bold"} color={"primary.500"} m={0}>
                 +1 702.308.9375
               </Text>
-              <Text color={"gray.500"}>Text or Call</Text>
-              <RiPhoneLine size={32} />
+              <Text>Text or Call</Text>
+              <Box color={"primary.500"}>
+                <RiPhoneLine size={32} />
+              </Box>
             </Link>
             <Divider mt={4} />
           </Card>

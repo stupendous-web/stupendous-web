@@ -38,7 +38,7 @@ export default function Questions() {
   return (
     <Container maxW={"container.xl"} pt={[4, 16]}>
       <SimpleGrid columns={8} spacing={2}>
-        <GridItem colSpan={[8, 6]}>
+        <GridItem colSpan={8}>
           <Card variant={"transparent"}>
             <Heading>FAQ&apos;s</Heading>
             <Accordion allowToggle>
