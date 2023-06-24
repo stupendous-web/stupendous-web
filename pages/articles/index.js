@@ -21,6 +21,16 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import CTA from "../../components/CTA";
+import {
+  RiPaintLine,
+  RiPencilRulerLine,
+  RiBankLine,
+  RiHospitalLine,
+  RiAuctionLine,
+  RiSunLine,
+  RiArticleLine,
+} from "react-icons/all";
+
 dayjs.extend(relativeTime);
 
 export default function Articles({ articles, tags }) {
@@ -32,6 +42,25 @@ export default function Articles({ articles, tags }) {
       setIsLoading(false);
     }
   }, [articles, tags]);
+
+  const tagIcon = (tag) => {
+    switch (tag) {
+      case "art":
+        return <RiPaintLine />;
+      case "design":
+        return <RiPencilRulerLine />;
+      case "finance":
+        return <RiBankLine />;
+      case "healthcare":
+        return <RiHospitalLine />;
+      case "law":
+        return <RiAuctionLine />;
+      case "sustainability":
+        return <RiSunLine />;
+      default:
+        return <RiArticleLine />;
+    }
+  };
 
   return (
     <>
@@ -67,7 +96,12 @@ export default function Articles({ articles, tags }) {
           </GridItem>
           <GridItem colSpan={[8, 6]}>
             <Card>
-              <Text>featured</Text>
+              <Flex align={"center"} mb={4}>
+                <Box mr={4}>
+                  <RiArticleLine />
+                </Box>
+                <Text mb={0}>Featured</Text>
+              </Flex>
               {articles[0]?.featured_image && (
                 <Link
                   href={"/articles/" + articles[0]?.slug}
@@ -138,11 +172,19 @@ export default function Articles({ articles, tags }) {
               <Fragment key={article.ID}>
                 <GridItem colSpan={[8, 2]}>
                   <Card>
-                    {tag && (
-                      <Link as={NextLink} href={`/articles/tags/${tag}`}>
-                        <Text>{tag}</Text>
-                      </Link>
-                    )}
+                    <Link as={NextLink} href={`/articles/tags/${tag}`}>
+                      <Flex align={"center"} mb={4}>
+                        <Box mr={4}>{tagIcon(tag)}</Box>
+                        <Text mb={0}>
+                          {tag
+                            ? `${tag?.charAt(0)?.toUpperCase()}${tag?.slice(
+                                1,
+                                tag.length
+                              )}`
+                            : "Article"}
+                        </Text>
+                      </Flex>
+                    </Link>
                     {article?.featured_image && (
                       <Link
                         href={"/articles/" + article?.slug}
