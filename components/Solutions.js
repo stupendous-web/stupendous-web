@@ -89,9 +89,11 @@ export default function Solutions() {
               </Box>
               <Link as={NextLink} href={"/services"}>
                 <Button
-                  variant={"outline"}
-                  mb={[0, -2]}
+                  bg={"transparent"}
+                  border={"solid 1px"}
+                  _hover={{ bg: "transparent" }}
                   rightIcon={<RiArrowRightLine />}
+                  mb={[0, -2]}
                 >
                   <Box mr={4}>Discover More</Box>
                 </Button>
