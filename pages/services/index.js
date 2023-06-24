@@ -119,6 +119,9 @@ export default function Services() {
                     <Link
                       as={NextLink}
                       href={"/services/software-consultation"}
+                      title={
+                        "Software Consultation | Software Development Services | Stupendous Web"
+                      }
                     >
                       <Button
                         bg={"transparent"}
