@@ -19,8 +19,6 @@ import {
 
 import CTA from "../../../components/CTA";
 
-import isometric from "../../../images/isometrics/isometric-1-2.png";
-
 dayjs.extend(relativeTime);
 
 export default function Articles({ articles }) {
@@ -41,125 +39,96 @@ export default function Articles({ articles }) {
       <Head>
         <title>{`${tag} | Software Development Services | Stupendous Web`}</title>
       </Head>
-      <Container maxW={"container.xl"} pt={32} pb={8}>
-        <Flex direction={["column", "row"]} align={"center"}>
-          <Box w={["100%", "33.33%"]} pr={4} mb={[8, 0]}>
-            <Image
-              src={isometric}
-              alt={"Software Development Services"}
-              priority
-              onLoadingComplete={() => setIsLoading(false)}
-            />
-          </Box>
-          <Box w={["100%", "66.66%"]}>
-            <Text as={"code"} color={"white"}>
-              Enjoy some inspiration for getting you, your work, and your
-              service to the people that need it most. Email{" "}
-              <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
-                topher@stupendousweb.com
-              </Link>{" "}
-              to contribute your story!{" "}
-              <Text as={"span"} className={"flash"}>
-                ▌
-              </Text>
-            </Text>
-          </Box>
-        </Flex>
-      </Container>
       <Container maxW={"container.xl"} py={8}>
-        <Heading as={"h1"} fontSize={["4rem", "12rem"]}>
+        <Heading as={"h1"} fontSize={"2rem"}>
           {tag}
         </Heading>
       </Container>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
-        <Flex justify={"flex-end"}>
-          <Box w={["100%", "66.66%"]}>
-            {articles
-              ?.filter((article) => article?.tags[tag])
-              ?.map((article) => {
-                let excerpt = "";
-                article?.excerpt
-                  .split(" ")
-                  .slice(0, 20)
-                  .map((word, index) => {
-                    excerpt = excerpt + `${index ? " " : ""}${word}`;
-                  });
-                excerpt = excerpt + "...</p>";
+        {articles
+          ?.filter((article) => article?.tags[tag])
+          ?.map((article) => {
+            let excerpt = "";
+            article?.excerpt
+              .split(" ")
+              .slice(0, 20)
+              .map((word, index) => {
+                excerpt = excerpt + `${index ? " " : ""}${word}`;
+              });
+            excerpt = excerpt + "...</p>";
 
-                return (
-                  <Flex key={article.ID}>
-                    <Box w={"66.66%"} pr={8} mb={4}>
-                      <Flex align={"center"} mb={4}>
-                        <Image
-                          src={article?.author?.avatar_URL}
-                          alt={article?.author?.name}
-                          height={32}
-                          width={32}
-                          style={{
-                            borderRadius: "16px",
-                            marginRight: "1rem",
-                          }}
-                        />
-                        <Link as={NextLink} href={article?.author?.URL}>
-                          {article?.author?.name}
-                        </Link>
-                      </Flex>
-                      <Heading size={"lg"} mb={4}>
-                        <Link
-                          href={"/articles/" + article?.slug}
-                          title={
-                            article?.title +
-                            " | Software Development Services | Stupendous Web"
-                          }
-                        >
-                          {article?.title}
-                        </Link>
-                      </Heading>
-                      <Box
-                        mb={4}
-                        dangerouslySetInnerHTML={{
-                          __html: excerpt,
-                        }}
-                      />
-                      <Text fontSize={"sm"} color={"gray.300"}>
-                        <Text
-                          as={"time"}
-                          dateTime={dayjs(article?.date).format("YYYY-MM-DD")}
-                        >
-                          {dayjs(article?.date).from(dayjs())}
-                        </Text>{" "}
-                        &middot;{" "}
-                        {Math.round(article?.content.split(" ").length / 200)}{" "}
-                        min read
-                      </Text>
-                    </Box>
-                    <Box w={"33.33%"}>
-                      {article?.featured_image && (
-                        <Link
-                          href={"/articles/" + article?.slug}
-                          title={
-                            article?.title +
-                            " | Software Development Services | Stupendous Web"
-                          }
-                        >
-                          <div className={"uk-height-small uk-cover-container"}>
-                            <AspectRatio maxW={"100%"} ratio={16 / 9} mb={8}>
-                              <Image
-                                src={article?.featured_image}
-                                alt={article?.title}
-                                fill
-                                style={{ objectFit: "cover" }}
-                              />
-                            </AspectRatio>
-                          </div>
-                        </Link>
-                      )}
-                    </Box>
+            return (
+              <Flex key={article.ID}>
+                <Box w={"66.66%"} pr={8} mb={4}>
+                  <Flex align={"center"} mb={4}>
+                    <Image
+                      src={article?.author?.avatar_URL}
+                      alt={article?.author?.name}
+                      height={32}
+                      width={32}
+                      style={{
+                        borderRadius: "16px",
+                        marginRight: "1rem",
+                      }}
+                    />
+                    <Link as={NextLink} href={article?.author?.URL}>
+                      {article?.author?.name}
+                    </Link>
                   </Flex>
-                );
-              })}
-          </Box>
-        </Flex>
+                  <Heading size={"lg"} mb={4}>
+                    <Link
+                      href={"/articles/" + article?.slug}
+                      title={
+                        article?.title +
+                        " | Software Development Services | Stupendous Web"
+                      }
+                    >
+                      {article?.title}
+                    </Link>
+                  </Heading>
+                  <Box
+                    mb={4}
+                    dangerouslySetInnerHTML={{
+                      __html: excerpt,
+                    }}
+                  />
+                  <Text fontSize={"sm"} color={"gray.300"}>
+                    <Text
+                      as={"time"}
+                      dateTime={dayjs(article?.date).format("YYYY-MM-DD")}
+                    >
+                      {dayjs(article?.date).from(dayjs())}
+                    </Text>{" "}
+                    &middot;{" "}
+                    {Math.round(article?.content.split(" ").length / 200)} min
+                    read
+                  </Text>
+                </Box>
+                <Box w={"33.33%"}>
+                  {article?.featured_image && (
+                    <Link
+                      href={"/articles/" + article?.slug}
+                      title={
+                        article?.title +
+                        " | Software Development Services | Stupendous Web"
+                      }
+                    >
+                      <div className={"uk-height-small uk-cover-container"}>
+                        <AspectRatio maxW={"100%"} ratio={16 / 9} mb={8}>
+                          <Image
+                            src={article?.featured_image}
+                            alt={article?.title}
+                            fill
+                            style={{ objectFit: "cover" }}
+                          />
+                        </AspectRatio>
+                      </div>
+                    </Link>
+                  )}
+                </Box>
+              </Flex>
+            );
+          })}
       </Container>
       <CTA />
     </>
