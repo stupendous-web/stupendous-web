@@ -40,122 +40,11 @@ export default function Articles({ articles, tags }) {
       </Head>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <SimpleGrid columns={8} spacing={2}>
-          <GridItem colSpan={6}>
-            <SimpleGrid columns={6} spacing={2}>
-              {articles?.map((article) => {
-                let excerpt = "";
-                article?.excerpt
-                  .split(" ")
-                  .slice(0, 20)
-                  .map((word, index) => {
-                    excerpt = excerpt + `${index ? " " : ""}${word}`;
-                  });
-                excerpt = excerpt + "...</p>";
-                const tag = Object.keys(article.tags)[0]?.toLowerCase();
-
-                return (
-                  <Fragment key={article.ID}>
-                    <GridItem colSpan={4}>
-                      <Card>
-                        <Flex
-                          direction={"column"}
-                          justify={"space-between"}
-                          h={"100%"}
-                        >
-                          <Box>
-                            <Heading size={"lg"} mb={4}>
-                              <Link
-                                href={"/articles/" + article?.slug}
-                                title={
-                                  article?.title +
-                                  " | Software Development Services | Stupendous Web"
-                                }
-                              >
-                                {article?.title}
-                              </Link>
-                            </Heading>
-                            <Box
-                              mb={4}
-                              dangerouslySetInnerHTML={{
-                                __html: excerpt,
-                              }}
-                            />
-                            <Text fontSize={"sm"} color={"gray.300"}>
-                              <Text
-                                as={"time"}
-                                dateTime={dayjs(article?.date).format(
-                                  "YYYY-MM-DD"
-                                )}
-                              >
-                                {dayjs(article?.date).from(dayjs())}
-                              </Text>{" "}
-                              {tag && (
-                                <span>
-                                  &middot;{" "}
-                                  <Link
-                                    as={NextLink}
-                                    href={`/articles/tags/${tag}`}
-                                    color={"gray.300"}
-                                  >
-                                    {tag}
-                                  </Link>{" "}
-                                </span>
-                              )}
-                              &middot;{" "}
-                              {Math.round(
-                                article?.content.split(" ").length / 200
-                              )}{" "}
-                              min read
-                            </Text>
-                          </Box>
-                          <Flex align={"center"}>
-                            <Image
-                              src={article?.author?.avatar_URL}
-                              alt={article?.author?.name}
-                              height={32}
-                              width={32}
-                              style={{
-                                borderRadius: "16px",
-                                marginRight: "1rem",
-                              }}
-                            />
-                            <Link as={NextLink} href={article?.author?.URL}>
-                              {article?.author?.name}
-                            </Link>
-                          </Flex>
-                        </Flex>
-                      </Card>
-                    </GridItem>
-                    <GridItem colSpan={2}>
-                      {article?.featured_image && (
-                        <Link
-                          href={"/articles/" + article?.slug}
-                          title={
-                            article?.title +
-                            " | Software Development Services | Stupendous Web"
-                          }
-                        >
-                          <AspectRatio ratio={1}>
-                            <Image
-                              src={article?.featured_image}
-                              alt={`${article?.title} | Software Development Services | Stupendous Web`}
-                              fill
-                              style={{ objectFit: "cover" }}
-                            />
-                          </AspectRatio>
-                        </Link>
-                      )}
-                    </GridItem>
-                  </Fragment>
-                );
-              })}
-            </SimpleGrid>
-          </GridItem>
-          <GridItem colSpan={2}>
+          <GridItem colSpan={[8, 2]}>
             <Card variant={"transparent"} h={"fit-content"} pt={0}>
               <Box>
                 <Heading as={"h2"} lineHeight={1}>
-                  Discover More
+                  Topics
                 </Heading>
                 {tags?.map((tag) => (
                   <Link
@@ -163,17 +52,165 @@ export default function Articles({ articles, tags }) {
                     href={`/articles/tags/${tag.slug}`}
                     title={`${tag.name} | Software Development Services | Stupendous Web`}
                   >
-                    <Tag
-                      bg={colorMode === "dark" ? "gray.700" : "gray.300"}
-                      mr={2}
-                    >
-                      {tag.name}
-                    </Tag>
+                    <Box>
+                      <Tag
+                        bg={colorMode === "dark" ? "gray.700" : "gray.300"}
+                        mr={2}
+                      >
+                        {tag.name}
+                      </Tag>
+                    </Box>
                   </Link>
                 ))}
               </Box>
             </Card>
           </GridItem>
+          <GridItem colSpan={[8, 6]}>
+            <Card>
+              <Text>featured</Text>
+              {articles[0]?.featured_image && (
+                <Link
+                  href={"/articles/" + articles[0]?.slug}
+                  title={
+                    articles[0]?.title +
+                    " | Software Development Services | Stupendous Web"
+                  }
+                >
+                  <AspectRatio ratio={2} mb={4}>
+                    <Image
+                      src={articles[0]?.featured_image}
+                      alt={`${articles[0]?.title} | Software Development Services | Stupendous Web`}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </AspectRatio>
+                </Link>
+              )}
+              <Flex direction={"column"} justify={"space-between"} h={"100%"}>
+                <Box>
+                  <Heading fontSize={["2rem", "4rem"]}>
+                    <Link
+                      href={"/articles/" + articles[0]?.slug}
+                      title={
+                        articles[0]?.title +
+                        " | Software Development Services | Stupendous Web"
+                      }
+                    >
+                      {articles[0]?.title}
+                    </Link>
+                  </Heading>
+                </Box>
+                <Text fontSize={"sm"} mb={0}>
+                  <Link
+                    as={NextLink}
+                    href={
+                      articles[0]?.author?.URL || "https://stupendousweb.com"
+                    }
+                  >
+                    {articles[0]?.author?.name}
+                  </Link>{" "}
+                  &middot;{" "}
+                  <Text
+                    as={"time"}
+                    dateTime={dayjs(articles[0]?.date).format("YYYY-MM-DD")}
+                  >
+                    {dayjs(articles[0]?.date).from(dayjs())}
+                  </Text>{" "}
+                  &middot;{" "}
+                  {Math.round(articles[0]?.content.split(" ").length / 200)} min
+                  read
+                </Text>
+              </Flex>
+            </Card>
+          </GridItem>
+          {articles?.slice(1, articles.length)?.map((article) => {
+            let excerpt = "";
+            article?.excerpt
+              .split(" ")
+              .slice(0, 20)
+              .map((word, index) => {
+                excerpt = excerpt + `${index ? " " : ""}${word}`;
+              });
+            excerpt = excerpt + "...</p>";
+            const tag = Object.keys(article.tags)[0]?.toLowerCase();
+
+            return (
+              <Fragment key={article.ID}>
+                <GridItem colSpan={[8, 2]}>
+                  <Card>
+                    {tag && (
+                      <Link as={NextLink} href={`/articles/tags/${tag}`}>
+                        <Text>{tag}</Text>
+                      </Link>
+                    )}
+                    {article?.featured_image && (
+                      <Link
+                        href={"/articles/" + article?.slug}
+                        title={
+                          article?.title +
+                          " | Software Development Services | Stupendous Web"
+                        }
+                      >
+                        <AspectRatio ratio={2} mb={4}>
+                          <Image
+                            src={article?.featured_image}
+                            alt={`${article?.title} | Software Development Services | Stupendous Web`}
+                            fill
+                            style={{ objectFit: "cover" }}
+                          />
+                        </AspectRatio>
+                      </Link>
+                    )}
+                    <Flex
+                      direction={"column"}
+                      justify={"space-between"}
+                      h={"100%"}
+                    >
+                      <Box>
+                        <Heading>
+                          <Link
+                            href={"/articles/" + article?.slug}
+                            title={
+                              article?.title +
+                              " | Software Development Services | Stupendous Web"
+                            }
+                          >
+                            {article?.title}
+                          </Link>
+                        </Heading>
+                        <Box
+                          mb={4}
+                          dangerouslySetInnerHTML={{
+                            __html: excerpt,
+                          }}
+                        />
+                      </Box>
+                      <Text fontSize={"sm"} mb={0}>
+                        <Link
+                          as={NextLink}
+                          href={
+                            article?.author?.URL || "https://stupendousweb.com"
+                          }
+                        >
+                          {article?.author?.name}
+                        </Link>{" "}
+                        &middot;{" "}
+                        <Text
+                          as={"time"}
+                          dateTime={dayjs(article?.date).format("YYYY-MM-DD")}
+                        >
+                          {dayjs(article?.date).from(dayjs())}
+                        </Text>{" "}
+                        &middot;{" "}
+                        {Math.round(article?.content.split(" ").length / 200)}{" "}
+                        min read
+                      </Text>
+                    </Flex>
+                  </Card>
+                </GridItem>
+              </Fragment>
+            );
+          })}
         </SimpleGrid>
       </Container>
       <CTA />
