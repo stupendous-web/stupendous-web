@@ -29,7 +29,7 @@ import {
   RiAuctionLine,
   RiSunLine,
   RiArticleLine,
-} from "react-icons/all";
+} from "react-icons/ri";
 
 dayjs.extend(relativeTime);
 
