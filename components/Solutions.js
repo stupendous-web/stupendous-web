@@ -11,12 +11,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import {
-  RiServerLine,
-  RiCustomerServiceLine,
-  RiSearchLine,
-  RiBankCardLine,
-  RiArticleLine,
-  RiLineChartLine,
+  RiPagesLine,
+  RiWindowLine,
+  RiSmartphoneLine,
   RiArrowRightLine,
 } from "react-icons/ri";
 import NextLink from "next/link";
@@ -24,40 +21,28 @@ import NextLink from "next/link";
 export default function Solutions() {
   const solutions = [
     {
-      heading: "Hosting",
-      icon: <RiServerLine size={32} />,
+      heading: "Websites",
+      icon: <RiPagesLine size={32} />,
     },
     {
-      heading: "Support",
-      icon: <RiCustomerServiceLine size={32} />,
+      heading: "Web Apps",
+      icon: <RiWindowLine size={32} />,
     },
     {
-      heading: "SEO & ASO",
-      icon: <RiSearchLine size={32} />,
-    },
-    {
-      heading: "Payment Processing",
-      icon: <RiBankCardLine size={32} />,
-    },
-    {
-      heading: "Publishing",
-      icon: <RiArticleLine size={32} />,
-    },
-    {
-      heading: "Analytics",
-      icon: <RiLineChartLine size={32} />,
+      heading: "iOS and Android Apps",
+      icon: <RiSmartphoneLine size={32} />,
     },
   ];
 
   return (
     <Container maxW={"container.xl"} pt={[4, 16]}>
       <SimpleGrid columns={8} spacing={2} h={["100%", "400px"]} mb={2}>
-        <GridItem colSpan={[8, 4]}>
-          <SimpleGrid columns={4} spacing={2} h={["100%", "400px"]}>
+        <GridItem colSpan={[8, 3]}>
+          <SimpleGrid columns={3} spacing={2} h={["100%", "400px"]}>
             {solutions.map((solution) => (
               <GridItem
                 key={solution.heading}
-                colSpan={[2, 1]}
+                colSpan={[3, 1]}
                 h={["100%", "200px"]}
               >
                 <Card>
@@ -82,9 +67,9 @@ export default function Solutions() {
               <Box>
                 <Heading as={"h1"}>Software Development Services</Heading>
                 <Text>
-                  I love offering a comprehensive list of software development
-                  services, leaving <Text as={"i"}>you</Text> more time and
-                  creativity to focus on what you love.
+                  All my software development services include hosting, support,
+                  search engine optimization (SEO), app store optimization
+                  (ASO), payment processing, publishing, analytics, and more.
                 </Text>
               </Box>
               <Link as={NextLink} href={"/services"}>

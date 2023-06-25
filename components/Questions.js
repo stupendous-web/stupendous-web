@@ -105,15 +105,21 @@ export default function Questions() {
 
   return (
     <Container maxW={"container.xl"} pt={[4, 16]}>
+      <Heading p={4}>FAQ&apos;s</Heading>
       <SimpleGrid columns={8} spacing={2}>
         <GridItem colSpan={8}>
           <Card variant={"transparent"}>
-            <Heading>FAQ&apos;s</Heading>
             <Accordion allowToggle>
               {faqs.map((faq) => (
                 <AccordionItem key={faq.question}>
                   <AccordionButton>
-                    <Heading as={"h3"} fontSize={"1rem"} mb={0} mr={"auto"}>
+                    <Heading
+                      as={"h3"}
+                      fontSize={"1rem"}
+                      mb={0}
+                      mr={"auto"}
+                      textAlign={"left"}
+                    >
                       {faq.question}
                     </Heading>
                     <AccordionIcon />

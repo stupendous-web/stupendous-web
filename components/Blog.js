@@ -17,15 +17,13 @@ import { RiArrowRightLine } from "react-icons/ri";
 export default function Blog({ articles }) {
   return (
     <Container maxW={"container.xl"} pt={[4, 16]}>
-      <Heading>
-        <Link
-          as={NextLink}
-          href={"/articles"}
-          title={"Articles | Software Development Services | Stupendous Web"}
-        >
-          What&apos;s Good
-        </Link>
-      </Heading>
+      <Link
+        as={NextLink}
+        href={"/articles"}
+        title={"Articles | Software Development Services | Stupendous Web"}
+      >
+        <Heading p={4}>What&apos;s Good</Heading>
+      </Link>
       <SimpleGrid columns={8} spacing={2} h={["100%", "200px"]}>
         {articles?.slice(0, 4)?.map((article) => (
           <Fragment key={article?.ID}>
