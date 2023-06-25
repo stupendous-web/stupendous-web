@@ -80,7 +80,11 @@ export default function WebAppDevelopment() {
                 </Card>
               </GridItem>
               {cards.map((card) => (
-                <GridItem key={card.heading} colSpan={1} h={["100%", "200px"]}>
+                <GridItem
+                  key={card.heading}
+                  colSpan={[5, 1]}
+                  h={["100%", "200px"]}
+                >
                   <Card>
                     <Flex
                       direction={"column"}
