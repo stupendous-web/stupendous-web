@@ -20,7 +20,6 @@ export default function AppsIndustries() {
     "Analytics Dashboards",
     "Patient Portals",
     "CRM's",
-    "Inventory and Delivery Managers",
     "Tax Filing Systems",
     "Ecommerce Apps",
     "Partner Portals",

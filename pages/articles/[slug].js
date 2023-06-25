@@ -112,7 +112,7 @@ export default function Article({ article }) {
               </Flex>
             </Card>
           </GridItem>
-          <GridItem colSpan={3}>
+          <GridItem colSpan={[8, 3]}>
             {article?.featured_image && (
               <AspectRatio ratio={1}>
                 <Image

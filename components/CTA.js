@@ -50,6 +50,7 @@ export default function CTA() {
                   color={"primary.500"}
                   _hover={{ bg: "white", color: "primary.500" }}
                   mr={4}
+                  mb={[4, 0]}
                   rightIcon={<RiArrowRightLine />}
                 >
                   <Box mr={4}>Get Started Now</Box>

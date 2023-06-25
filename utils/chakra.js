@@ -16,18 +16,6 @@ const theme = extendTheme({
       800: "#510224",
       900: "#2a0a18",
     },
-    cyan: {
-      50: "#e5f6ff",
-      100: "#bae6ff",
-      200: "#82cfff",
-      300: "#33b1ff",
-      400: "#1192e8",
-      500: "#0072c3",
-      600: "#00539a",
-      700: "#393939",
-      800: "#003a6d",
-      900: "#061727",
-    },
     gray: {
       50: "#f8f8f8",
       100: "#ebebeb",
@@ -49,23 +37,18 @@ const theme = extendTheme({
       900: "#141414",
       950: "#070707",
     },
-    red: {
-      300: "#ffb3b8", // Error on Magenta
-    },
-    green: {
-      300: "#6fdc8c", // Success on Magenta
-    },
   },
   styles: {
     global: (props) => ({
       "html, body": {
         bg: mode("white", "black")(props),
         color: mode("gray.800", "gray.200")(props),
+        fontSize: 18,
         overflowX: "hidden",
         lineHeight: 2,
       },
       body: {
-        mt: "65px",
+        mt: "6rem",
       },
     }),
   },
