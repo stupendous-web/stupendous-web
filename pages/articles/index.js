@@ -70,7 +70,7 @@ export default function Articles({ articles, tags }) {
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 2]}>
-            <Card variant={"transparent"} h={"fit-content"} pt={0}>
+            <Card variant={"transparent"}>
               <Box>
                 <Heading as={"h2"} lineHeight={1}>
                   Topics
@@ -121,19 +121,17 @@ export default function Articles({ articles, tags }) {
                 </Link>
               )}
               <Flex direction={"column"} justify={"space-between"} h={"100%"}>
-                <Box>
-                  <Heading fontSize={["2rem", "4rem"]}>
-                    <Link
-                      href={"/articles/" + articles[0]?.slug}
-                      title={
-                        articles[0]?.title +
-                        " | Software Development Services | Stupendous Web"
-                      }
-                    >
-                      {articles[0]?.title}
-                    </Link>
-                  </Heading>
-                </Box>
+                <Heading fontSize={["2rem", "4rem"]} mb={4}>
+                  <Link
+                    href={"/articles/" + articles[0]?.slug}
+                    title={
+                      articles[0]?.title +
+                      " | Software Development Services | Stupendous Web"
+                    }
+                  >
+                    {articles[0]?.title}
+                  </Link>
+                </Heading>
                 <Text fontSize={"sm"} mb={0}>
                   <Link
                     as={NextLink}
@@ -209,7 +207,7 @@ export default function Articles({ articles, tags }) {
                       h={"100%"}
                     >
                       <Box>
-                        <Heading>
+                        <Heading mb={4}>
                           <Link
                             href={"/articles/" + article?.slug}
                             title={
