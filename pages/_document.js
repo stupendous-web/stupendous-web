@@ -7,6 +7,10 @@ export default function Document() {
     <Html lang={"en"}>
       <Head>
         <link rel={"stylesheet"} href={"https://use.typekit.net/aqk5kto.css"} />
+        <meta
+          property={"og:image"}
+          content={"https://stupendousweb.com/images/social.jpg"}
+        />
       </Head>
       <body>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />

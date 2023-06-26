@@ -18,7 +18,19 @@ export default function Home({ articles }) {
           community, build stupendous software
         </title>
         <meta
+          property={"og:title"}
+          content={
+            "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
+          }
+        />
+        <meta
           name={"description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering software development services that improve their brand awareness and authority."
+          }
+        />
+        <meta
+          property={"og:description"}
           content={
             "I help people with something to share who want to engage with their community by delivering software development services that improve their brand awareness and authority."
           }
