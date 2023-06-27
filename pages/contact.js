@@ -23,10 +23,13 @@ import {
   SimpleGrid,
   useColorMode,
   Flex,
+  Box,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import CTAModal from "../components/CTAModal";
 
 export default function Contact() {
+  const [isModalShowing, setIsModalShowing] = useState(false);
   const { setIsLoading } = useGlobal();
   const { colorMode } = useColorMode();
 
@@ -100,16 +103,18 @@ export default function Contact() {
           <GridItem colSpan={[8, 6]}>
             <SimpleGrid columns={6} spacing={2}>
               <GridItem colSpan={[6, 2]} h={["100%", "394px"]}>
-                <Card bg={"primary.500"} _hover={{ bg: "primary.500" }}>
+                <Card
+                  bg={"primary.500"}
+                  _hover={{ bg: "primary.500" }}
+                  cursor={"pointer"}
+                  onClick={() => setIsModalShowing(true)}
+                >
                   <Flex
                     direction={"column"}
                     justify={"space-between"}
                     h={"100%"}
                   >
-                    <Link
-                      as={NextLink}
-                      href={"https://forms.gle/eoSWDZcKSLdEdmez6"}
-                    >
+                    <Box>
                       <Heading color={"white"} mb={4}>
                         Get Started Now
                       </Heading>
@@ -118,13 +123,8 @@ export default function Contact() {
                         minutes and receive it in under a few hours right to
                         your inbox!
                       </Text>
-                    </Link>
-                    <Link
-                      as={NextLink}
-                      href={"https://forms.gle/eoSWDZcKSLdEdmez6"}
-                    >
-                      <RiExternalLinkLine size={32} color={"white"} />
-                    </Link>
+                    </Box>
+                    <RiExternalLinkLine size={32} color={"white"} />
                   </Flex>
                 </Card>
               </GridItem>
@@ -181,6 +181,7 @@ export default function Contact() {
           </GridItem>
         </SimpleGrid>
       </Container>
+      <CTAModal isOpen={isModalShowing} setIsOpen={setIsModalShowing} />
     </>
   );
 }
