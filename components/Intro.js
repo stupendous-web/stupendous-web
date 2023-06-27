@@ -62,7 +62,6 @@ export default function Intro() {
                   >
                     <Button
                       bg={"transparent"}
-                      color={"white"}
                       border={"solid 1px"}
                       _hover={{ bg: "transparent" }}
                       rightIcon={<RiArrowRightLine />}
