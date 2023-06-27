@@ -59,7 +59,7 @@ export default function CTA() {
                   rightIcon={<RiArrowRightLine />}
                   onClick={() => setIsModalShowing(true)}
                 >
-                  <Box mr={4}>Request Yours Now</Box>
+                  <Box mr={4}>Request yours Now</Box>
                 </Button>
                 <Link
                   as={NextLink}
