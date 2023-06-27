@@ -2,7 +2,7 @@ import { mode } from "@chakra-ui/theme-tools";
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
-  config: { initialColorMode: "dark" },
+  config: { initialColorMode: "light" },
   colors: {
     primary: {
       50: "#fff0f7",
@@ -41,7 +41,7 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       "html, body": {
-        bg: mode("white", "black")(props),
+        bg: mode("gray.50", "black")(props),
         color: mode("gray.800", "gray.200")(props),
         fontSize: 18,
         overflowX: "hidden",
@@ -72,18 +72,18 @@ const theme = extendTheme({
     },
   },
   radii: {
-    none: 0,
-    sm: 0,
-    base: 0,
-    md: 0,
-    lg: 0,
-    xl: 0,
-    "2xl": 0,
-    "3xl": 0,
-    full: 0,
+    none: "8px",
+    sm: "8px",
+    base: "8px",
+    md: "8px", // Card and Button
+    lg: "8px",
+    xl: "8px",
+    "2xl": "8px",
+    "3xl": "8px",
   },
   shadows: {
-    base: "none",
+    base: "0 4px 6px rgba(0,0,0,.04)",
+    hover: "0 6px 14px rgba(0,0,0,.08)",
   },
   components: {
     Heading: {
@@ -114,18 +114,23 @@ const theme = extendTheme({
     Card: {
       baseStyle: (props) => ({
         container: {
-          bg: mode("gray.50", "gray.900")(props),
+          bg: mode("white", "gray.900")(props),
           h: "100%",
+          border: "solid 1px",
+          borderColor: mode("gray.100 !important", "black !important")(props),
           p: 4,
           transition: "all .66s",
-          _hover: { bg: mode("gray.100", "gray.850")(props) },
+          _hover: {
+            shadow: "hover",
+          },
         },
       }),
       variants: {
         transparent: {
           container: {
             bg: "transparent",
-            _hover: { bg: "transparent" },
+            border: "none",
+            _hover: { shadow: "none" },
           },
         },
       },

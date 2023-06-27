@@ -28,17 +28,12 @@ export default function Navigation() {
       top={0}
       left={0}
       borderBottom={"solid 1px"}
-      borderColor={colorMode === "dark" ? "white" : "gray.900"}
+      borderColor={colorMode === "dark" ? "white" : "gray.100"}
       hideBelow={"sm"}
     >
       <Container maxW={"container.xl"}>
         <Flex>
-          <Box
-            w={16}
-            borderRight={"solid 1px"}
-            borderLeft={"solid 1px"}
-            borderColor={colorMode === "dark" ? "white" : "black"}
-          >
+          <Box w={16} mr={4}>
             <Link
               as={NextLink}
               href={"/"}
@@ -57,7 +52,6 @@ export default function Navigation() {
               key={key}
               align={"center"}
               p={4}
-              borderRight={"solid 1px"}
               borderColor={colorMode === "dark" ? "white" : "black"}
             >
               <Link

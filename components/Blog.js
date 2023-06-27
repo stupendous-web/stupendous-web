@@ -33,7 +33,15 @@ export default function Blog({ articles }) {
                 href={`/articles/${article?.slug}`}
                 title={`${article?.title} | Software Development Services | Stupendous Web`}
               >
-                <Box h={"100%"} position={"relative"} overflow={"hidden"}>
+                <Box
+                  h={"100%"}
+                  position={"relative"}
+                  shadow={"md"}
+                  transition={"all .66s"}
+                  borderRadius={"md"}
+                  overflow={"hidden"}
+                  _hover={{ shadow: "hover" }}
+                >
                   <Image
                     src={article?.featured_image}
                     alt={`${article?.title} | Software Development Services | Stupendous Web`}

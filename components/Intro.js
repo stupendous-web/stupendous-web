@@ -11,6 +11,7 @@ import {
   Link,
   SimpleGrid,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { RiArrowRightLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
@@ -22,6 +23,7 @@ import { useState } from "react";
 
 export default function Intro() {
   const [isModalShowing, setIsModalShowing] = useState(false);
+  const { colorMode } = useColorMode();
   const { setIsLoading } = useGlobal();
 
   return (
@@ -61,9 +63,10 @@ export default function Intro() {
                     }
                   >
                     <Button
-                      bg={"transparent"}
+                      bg={colorMode === "dark" ? "white" : "black"}
+                      color={colorMode === "dark" ? "black" : "white"}
                       border={"solid 1px"}
-                      _hover={{ bg: "transparent" }}
+                      _hover={{ bg: colorMode === "dark" ? "white" : "black" }}
                       rightIcon={<RiArrowRightLine />}
                     >
                       <Box mr={4}>Learn More</Box>
@@ -74,7 +77,14 @@ export default function Intro() {
             </Card>
           </GridItem>
           <GridItem colSpan={[8, 3]}>
-            <AspectRatio ratio={1}>
+            <AspectRatio
+              ratio={1}
+              shadow={"md"}
+              transition={"all .66s"}
+              borderRadius={"md"}
+              overflow={"hidden"}
+              _hover={{ shadow: "hover" }}
+            >
               <Image
                 src={stock4}
                 alt={

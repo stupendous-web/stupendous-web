@@ -27,62 +27,65 @@ export default function CTA() {
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>
-            <Flex
-              h={"100%"}
-              direction={"column"}
-              justify={"space-between"}
-              bg={"primary.500"}
-              p={4}
-            >
-              <Box>
-                <Heading
-                  as={"p"}
-                  color={"white"}
-                  fontSize={["2rem", "4rem"]}
-                  mb={4}
-                >
-                  Quick Estimate
-                </Heading>
-                <Text color={"white"}>
-                  Your audiences are waiting. Take the first step in building
-                  your website, web app, and iOS and Android apps. Click below
-                  to receive your estimate in just a few hours!
-                </Text>
-              </Box>
-              <Box>
-                <Button
-                  bg={"white"}
-                  color={"primary.500"}
-                  _hover={{ bg: "white", color: "primary.500" }}
-                  mr={4}
-                  mb={[4, 0]}
-                  rightIcon={<RiArrowRightLine />}
-                  onClick={() => setIsModalShowing(true)}
-                >
-                  <Box mr={4}>Request yours Now</Box>
-                </Button>
-                <Link
-                  as={NextLink}
-                  href={"/services/software-consultation"}
-                  title={
-                    "Software Consultation | Software Development Services | Stupendous Web"
-                  }
-                >
-                  <Button
-                    bg={"transparent"}
+            <Card bg={"primary.500"}>
+              <Flex h={"100%"} direction={"column"} justify={"space-between"}>
+                <Box>
+                  <Heading
+                    as={"p"}
                     color={"white"}
-                    border={"solid 1px"}
-                    _hover={{ bg: "transparent" }}
-                    rightIcon={<RiArrowRightLine />}
+                    fontSize={["2rem", "4rem"]}
+                    mb={4}
                   >
-                    <Box mr={4}>Learn More</Box>
+                    Quick Estimate
+                  </Heading>
+                  <Text color={"white"}>
+                    Your audiences are waiting. Take the first step in building
+                    your website, web app, and iOS and Android apps. Click below
+                    to receive your estimate in just a few hours!
+                  </Text>
+                </Box>
+                <Box>
+                  <Button
+                    bg={"white"}
+                    color={"primary.500"}
+                    _hover={{ bg: "white", color: "primary.500" }}
+                    mr={4}
+                    mb={[4, 0]}
+                    rightIcon={<RiArrowRightLine />}
+                    onClick={() => setIsModalShowing(true)}
+                  >
+                    <Box mr={4}>Request yours Now</Box>
                   </Button>
-                </Link>
-              </Box>
-            </Flex>
+                  <Link
+                    as={NextLink}
+                    href={"/services/software-consultation"}
+                    title={
+                      "Software Consultation | Software Development Services | Stupendous Web"
+                    }
+                  >
+                    <Button
+                      bg={"transparent"}
+                      color={"white"}
+                      border={"solid 1px"}
+                      _hover={{ bg: "transparent" }}
+                      rightIcon={<RiArrowRightLine />}
+                    >
+                      <Box mr={4}>Learn More</Box>
+                    </Button>
+                  </Link>
+                </Box>
+              </Flex>
+            </Card>
           </GridItem>
           <GridItem colSpan={[8, 3]}>
-            <AspectRatio ratio={1}>
+            <AspectRatio
+              ratio={1}
+              shadow={"md"}
+              transition={"all .66s"}
+              borderRadius={"md"}
+              overflow={"hidden"}
+              _hover={{ shadow: "hover" }}
+            >
               <Image
                 src={stock1}
                 alt={

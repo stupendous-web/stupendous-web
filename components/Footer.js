@@ -82,7 +82,7 @@ export default function Footer() {
   ];
 
   return (
-    <Container maxW={"container.xl"} pt={[4, 16]} mb={[4, 16]}>
+    <Container maxW={"container.xl"} pt={[4, 16]} mb={[4, 32]}>
       <SimpleGrid columns={8} spacing={2} h={["100%", "200px"]}>
         <GridItem colSpan={[8, 2]}>
           <Card variant={"transparent"} pb={[0, 4]}>
