@@ -1,7 +1,19 @@
 import nodemailer from "nodemailer";
 
 export default function handler(request, response) {
-  const body = request?.body;
+  const {
+    email,
+    name,
+    product,
+    productBrief,
+    marketReport,
+    sEOReport,
+    designGuide,
+    projectPlan,
+    estimate,
+    other,
+    note,
+  } = request?.body;
 
   let transporter = nodemailer.createTransport({
     service: "SendinBlue",
@@ -15,7 +27,7 @@ export default function handler(request, response) {
     from: "topher@stupendousweb.com",
     to: "topher@stupendousweb.com",
     subject: "New Development Lead!",
-    text: `Email: ${body?.email}\n\r\nMessage: ${body?.message}`,
+    text: `Email: ${email}\n\r\nName: ${name}\n\r\nProduct Description: ${product}\n\r\nDELIVERABLES\n\r\nProduct Brief: ${productBrief}\n\r\nMarket Research Report: ${marketReport}\n\r\nSEO Research Report: ${sEOReport}\n\r\nDesign Guide: ${designGuide}\n\r\nSuggested Project Plan: ${projectPlan}\n\r\nIn-House Development Estimate: ${estimate}\n\r\nOther: ${other}\n\r\nNotes: ${note}`,
   };
 
   transporter
