@@ -88,7 +88,7 @@ export default function WebAppDevelopment() {
                     we’re going to do this right by starting with a
                     consultation!
                   </Text>
-                  <Heading>A Productive Software Consultation</Heading>
+                  <Heading>What you&apos;ll Receive</Heading>
                   <Text>
                     A good software consultation means walking away with the
                     tools you need to succeed with your web app, website, iOS or
@@ -152,15 +152,14 @@ export default function WebAppDevelopment() {
                     <Box mr={4}>Get Started Now</Box>
                   </Button>
                   <Text>
-                    All consultations are conducted through Google Meet. For
-                    customized consultations, email{" "}
+                    Still have questions? Email{" "}
                     <Link
                       as={NextLink}
                       href={"mailto:topher@stupendousweb.com"}
                     >
                       topher@stupendousweb.com
                     </Link>{" "}
-                    for next steps.
+                    for more information.
                   </Text>
                 </Card>
               </GridItem>
