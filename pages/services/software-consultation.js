@@ -22,10 +22,12 @@ import {
   RiComputerLine,
   RiArrowRightLine,
 } from "react-icons/ri";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import NextLink from "next/link";
+import CTAModal from "../../components/CTAModal";
 
 export default function WebAppDevelopment() {
+  const [isModalShowing, setIsModalShowing] = useState(false);
   const { setIsLoading } = useGlobal();
 
   const cards = [
@@ -136,22 +138,19 @@ export default function WebAppDevelopment() {
                     working on, and draw up some really strong strategies for
                     seeing you get your product out to the world!
                   </Text>
-                  <Link
-                    as={NextLink}
-                    href={"https://forms.gle/eoSWDZcKSLdEdmez6"}
+                  <Button
+                    size={"lg"}
+                    rightIcon={<RiArrowRightLine />}
+                    bg={"primary.500"}
+                    color={"white"}
+                    w={"fit-content"}
+                    mt={4}
+                    mb={8}
+                    _hover={{ bg: "primary.500" }}
+                    onClick={() => setIsModalShowing(true)}
                   >
-                    <Button
-                      bg={"primary.500"}
-                      color={"white"}
-                      size={"lg"}
-                      rightIcon={<RiArrowRightLine />}
-                      _hover={{ bg: "primary.500" }}
-                      mt={4}
-                      mb={8}
-                    >
-                      <Box mr={4}>Get Started Now</Box>
-                    </Button>
-                  </Link>
+                    <Box mr={4}>Get Started Now</Box>
+                  </Button>
                   <Text>
                     All consultations are conducted through Google Meet. For
                     customized consultations, email{" "}
@@ -169,6 +168,7 @@ export default function WebAppDevelopment() {
           </GridItem>
         </SimpleGrid>
       </Container>
+      <CTAModal isOpen={isModalShowing} setIsOpen={setIsModalShowing} />
     </>
   );
 }
