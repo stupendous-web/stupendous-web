@@ -37,7 +37,7 @@ export default function Intro() {
                   <Heading as={"p"} fontSize={["2rem", "4rem"]}>
                     Websites, Web Apps, &amp; Phone Apps
                   </Heading>
-                  <Text mb={0}>
+                  <Text mb={[4, 0]}>
                     I help people with something to share who want to engage
                     with their community by delivering software development
                     services that improve their brand awareness and authority.
@@ -45,12 +45,12 @@ export default function Intro() {
                 </Box>
                 <Box>
                   <Button
+                    rightIcon={<RiArrowRightLine />}
                     bg={"primary.500"}
                     color={"white"}
-                    _hover={{ bg: "primary.500" }}
-                    rightIcon={<RiArrowRightLine />}
                     mr={4}
                     mb={[4, 0]}
+                    _hover={{ bg: "primary.500" }}
                     onClick={() => setIsModalShowing(true)}
                   >
                     <Box mr={4}>Request an Estimate</Box>
@@ -63,11 +63,11 @@ export default function Intro() {
                     }
                   >
                     <Button
+                      rightIcon={<RiArrowRightLine />}
                       bg={colorMode === "dark" ? "white" : "black"}
                       color={colorMode === "dark" ? "black" : "white"}
                       border={"solid 1px"}
                       _hover={{ bg: colorMode === "dark" ? "white" : "black" }}
-                      rightIcon={<RiArrowRightLine />}
                     >
                       <Box mr={4}>Learn More</Box>
                     </Button>

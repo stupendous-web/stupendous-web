@@ -133,12 +133,10 @@ export default function Footer() {
         </GridItem>
         <GridItem colSpan={[8, 4]}>
           <Card variant={"transparent"}>
-            <Text as={"strong"} fontSize={"lg"}>
-              <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
-                topher@stupendousweb.com
-              </Link>
-            </Text>
-            <Flex mt={2} mb={8}>
+            <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
+              <Text fontWeight={"bold"}>topher@stupendousweb.com</Text>
+            </Link>
+            <Flex>
               {socialLinks?.map((link) => (
                 <Link
                   as={NextLink}

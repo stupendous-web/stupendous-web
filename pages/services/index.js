@@ -12,12 +12,16 @@ import {
   Box,
   Flex,
   Button,
+  useColorMode,
 } from "@chakra-ui/react";
 import { RiArrowRightLine, RiSmartphoneLine } from "react-icons/ri";
 import CTA from "../../components/CTA";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import CTAModal from "../../components/CTAModal";
 
 export default function Services() {
+  const [isModalShowing, setIsModalShowing] = useState(false);
+  const { colorMode } = useColorMode();
   const { setIsLoading } = useGlobal();
 
   useEffect(() => {
@@ -98,24 +102,19 @@ export default function Services() {
                     services will minimize risk and help you and your project to
                     succeed.
                   </Text>
-                  <Flex>
-                    <Link
-                      as={NextLink}
-                      href={"https://forms.gle/eoSWDZcKSLdEdmez6"}
+                  <Box my={8}>
+                    <Button
+                      size={"lg"}
+                      rightIcon={<RiArrowRightLine />}
+                      bg={"primary.500"}
+                      color={"white"}
                       mr={4}
+                      mb={[4, 0]}
+                      _hover={{ bg: "primary.500" }}
+                      onClick={() => setIsModalShowing(true)}
                     >
-                      <Button
-                        bg={"primary.500"}
-                        color={"white"}
-                        size={"lg"}
-                        rightIcon={<RiArrowRightLine />}
-                        _hover={{ bg: "primary.500" }}
-                        mt={4}
-                        my={8}
-                      >
-                        <Box mr={4}>Get Started Now</Box>
-                      </Button>
-                    </Link>
+                      <Box mr={4}>Request an Estimate</Box>
+                    </Button>
                     <Link
                       as={NextLink}
                       href={"/services/software-consultation"}
@@ -124,19 +123,19 @@ export default function Services() {
                       }
                     >
                       <Button
-                        bg={"transparent"}
-                        color={"primary.500"}
-                        border={"solid 1px"}
                         size={"lg"}
                         rightIcon={<RiArrowRightLine />}
-                        _hover={{ bg: "transparent", color: "primary.500" }}
-                        mt={4}
-                        my={8}
+                        bg={colorMode === "dark" ? "white" : "black"}
+                        color={colorMode === "dark" ? "black" : "white"}
+                        border={"solid 1px"}
+                        _hover={{
+                          bg: colorMode === "dark" ? "white" : "black",
+                        }}
                       >
                         <Box mr={4}>Learn More</Box>
                       </Button>
                     </Link>
-                  </Flex>
+                  </Box>
                   <Heading mt={4}>2.0 Design</Heading>
                   <Text>
                     A good design is more than making something flashy; it’s
@@ -242,6 +241,7 @@ export default function Services() {
         </SimpleGrid>
       </Container>
       <CTA />
+      <CTAModal isOpen={isModalShowing} setIsOpen={setIsModalShowing} />
     </>
   );
 }
