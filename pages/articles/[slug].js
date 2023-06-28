@@ -114,7 +114,14 @@ export default function Article({ article }) {
           </GridItem>
           <GridItem colSpan={[8, 3]}>
             {article?.featured_image && (
-              <AspectRatio ratio={1}>
+              <AspectRatio
+                ratio={1}
+                shadow={"md"}
+                transition={"all .66s"}
+                borderRadius={"md"}
+                overflow={"hidden"}
+                _hover={{ shadow: "hover" }}
+              >
                 <Image
                   src={article?.featured_image}
                   alt={article?.title}
