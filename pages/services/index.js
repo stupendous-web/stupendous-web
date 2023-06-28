@@ -14,7 +14,7 @@ import {
   Button,
   useColorMode,
 } from "@chakra-ui/react";
-import { RiArrowRightLine, RiSmartphoneLine } from "react-icons/ri";
+import { RiArrowRightLine } from "react-icons/ri";
 import CTA from "../../components/CTA";
 import { useEffect, useState } from "react";
 import CTAModal from "../../components/CTAModal";
@@ -31,8 +31,11 @@ export default function Services() {
   const developmentServices = [
     { href: "web-app-development", anchor: "Web App Development" },
     { href: "web-site-development", anchor: "Web Site Development" },
+    {
+      href: "iphone-app-development-services",
+      anchor: "iPhone App Development Services",
+    },
     { href: "mvp-software-development", anchor: "MVP Software Development" },
-    { anchor: "Phone Apps", icon: <RiSmartphoneLine /> },
   ];
 
   return (
@@ -191,21 +194,11 @@ export default function Services() {
                         )}
                       </Box>
                       <Box>
-                        {service?.href ? (
-                          <Link
-                            as={NextLink}
-                            href={`/services/${service.href}`}
-                            title={`${service.anchor} | Software Development Services | Stupendous Web`}
-                          >
-                            <>
-                              {service?.icon ? (
-                                service?.icon
-                              ) : (
-                                <RiArrowRightLine size={16} />
-                              )}
-                            </>
-                          </Link>
-                        ) : (
+                        <Link
+                          as={NextLink}
+                          href={`/services/${service.href}`}
+                          title={`${service.anchor} | Software Development Services | Stupendous Web`}
+                        >
                           <>
                             {service?.icon ? (
                               service?.icon
@@ -213,7 +206,7 @@ export default function Services() {
                               <RiArrowRightLine size={16} />
                             )}
                           </>
-                        )}
+                        </Link>
                       </Box>
                     </Flex>
                   </Card>
