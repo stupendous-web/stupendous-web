@@ -21,15 +21,21 @@ import NextLink from "next/link";
 export default function Solutions() {
   const solutions = [
     {
-      heading: "Websites",
+      href: "web-site-development",
+      anchor: "Websites",
+      title: "Web Site Development",
       icon: <RiPagesLine size={32} />,
     },
     {
-      heading: "Web Apps",
+      href: "web-app-development",
+      anchor: "Web Apps",
+      title: "Web App Development",
       icon: <RiWindowLine size={32} />,
     },
     {
-      heading: "iOS and Android Apps",
+      href: "iphone-app-development-services",
+      anchor: "iPhone and Android Apps",
+      title: "iPhone App Development Services",
       icon: <RiSmartphoneLine size={32} />,
     },
   ];
@@ -45,18 +51,24 @@ export default function Solutions() {
                 colSpan={[3, 1]}
                 h={["100%", "200px"]}
               >
-                <Card>
-                  <Flex
-                    direction={"column"}
-                    justify={"space-between"}
-                    h={"100%"}
-                  >
-                    <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-                      {solution.heading}
-                    </Heading>
-                    {solution?.icon}
-                  </Flex>
-                </Card>
+                <Link
+                  as={NextLink}
+                  href={`/services/${solution.href}`}
+                  title={`${solution.title} | Software Development Services | Stupendous Web`}
+                >
+                  <Card>
+                    <Flex
+                      direction={"column"}
+                      justify={"space-between"}
+                      h={"100%"}
+                    >
+                      <Heading as={"h3"} fontSize={"1rem"} mb={4}>
+                        {solution.anchor}
+                      </Heading>
+                      {solution?.icon}
+                    </Flex>
+                  </Card>
+                </Link>
               </GridItem>
             ))}
           </SimpleGrid>
