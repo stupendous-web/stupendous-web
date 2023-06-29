@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import { Show } from "@chakra-ui/react";
 
 export default function Cursor() {
-  const [x, setX] = useState(-101);
-  const [y, setY] = useState(-101);
+  const [x, setX] = useState(-145);
+  const [y, setY] = useState(-145);
   const [opacity, setOpacity] = useState(1);
   const [transform, setTransform] = useState("scale(1)");
 
   useEffect(() => {
     const setCursorCoordinates = (event) => {
-      setX(event.clientX - 50);
-      setY(event.clientY - 50);
+      setX(event.clientX - 72);
+      setY(event.clientY - 72);
     };
     const showCursor = () => {
       setOpacity(1);
@@ -19,7 +19,7 @@ export default function Cursor() {
       setOpacity(0);
     };
     const expandCursor = (event) => {
-      if (event.target.closest("a")) {
+      if (event.target.closest("a") || event.target.closest("button")) {
         setTransform("scale(2)");
       } else {
         setTransform("scale(1)");
@@ -47,8 +47,8 @@ export default function Cursor() {
         xmlns={"http://www.w3.org/2000/svg"}
         viewBox={"0 0 100 100"}
         style={{
-          height: "100px",
-          width: "100px",
+          height: "144px",
+          width: "144px",
           pointerEvents: "none",
           position: "fixed",
           top: y,
