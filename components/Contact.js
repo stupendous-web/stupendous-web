@@ -19,7 +19,14 @@ export default function Contact() {
   ];
 
   return (
-    <Flex direction={"column"} position={"fixed"} right={0} bottom={0} p={4}>
+    <Flex
+      direction={"column"}
+      position={"fixed"}
+      right={0}
+      bottom={0}
+      pr={[1, 4]}
+      pb={[1, 4]}
+    >
       {links.map((link) => (
         <Tooltip key={link.href} label={link.tooltip} placement={"left"}>
           <Link
