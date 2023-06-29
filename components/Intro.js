@@ -31,19 +31,19 @@ export default function Intro() {
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>
-            <Card pt={1}>
+            <Card pt={3}>
               <Flex h={"100%"} direction={"column"} justify={"space-between"}>
                 <Box>
-                  <Heading as={"p"} fontSize={["2rem", "4rem"]}>
-                    Websites, Web Apps, &amp; Phone Apps
+                  <Heading as={"p"} fontSize={["2rem", "3rem"]}>
+                    Build an engaging website or app for your community.
                   </Heading>
-                  <Text mb={[4, 0]}>
+                </Box>
+                <Box>
+                  <Text>
                     I help people with something to share who want to engage
                     with their community by delivering software development
                     services that improve their brand awareness and authority.
                   </Text>
-                </Box>
-                <Box>
                   <Button
                     rightIcon={<RiArrowRightLine />}
                     bg={"primary.500"}
