@@ -24,7 +24,7 @@ export default function handler(request, response) {
   });
 
   let message = {
-    from: "topher@stupendousweb.com",
+    from: email,
     to: "topher@stupendousweb.com",
     subject: "New Development Lead!",
     text: `Email: ${email}\n\r\nName: ${name}\n\r\nProduct Description: ${product}\n\r\nDELIVERABLES\n\r\nProduct Brief: ${productBrief}\n\r\nMarket Research Report: ${marketReport}\n\r\nSEO Research Report: ${sEOReport}\n\r\nDesign Guide: ${designGuide}\n\r\nSuggested Project Plan: ${projectPlan}\n\r\nIn-House Development Estimate: ${estimate}\n\r\nOther: ${other}\n\r\nNotes: ${note}`,
