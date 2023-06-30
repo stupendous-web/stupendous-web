@@ -30,26 +30,29 @@ export default function Intro() {
     <>
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
-          <GridItem colSpan={[8, 3]}>
+          <GridItem colSpan={[8, 8, 8, 8, 8, 3]}>
             <Card pt={3}>
               <Flex h={"100%"} direction={"column"} justify={"space-between"}>
                 <Box>
-                  <Heading as={"p"} fontSize={["2rem", "3rem"]}>
+                  <Heading
+                    as={"p"}
+                    fontSize={["2rem", "4rem", "4rem", "4rem", "4rem", "3rem"]}
+                  >
                     Build an engaging website or app for your community.
                   </Heading>
                 </Box>
                 <Box>
                   <Text>
-                    I help people with something to share who want to engage
-                    with their community by delivering software development
-                    services that improve their brand awareness and authority.
+                    I help people with something to share to engage with their
+                    community with software development services that improve
+                    their brand credibility.
                   </Text>
                   <Button
                     rightIcon={<RiArrowRightLine />}
                     bg={"primary.500"}
                     color={"white"}
                     mr={4}
-                    mb={[4, 0]}
+                    mb={[4, 4, 4, 4, 4, 0]}
                     _hover={{ bg: "primary.500" }}
                     onClick={() => setIsModalShowing(true)}
                   >
@@ -67,6 +70,7 @@ export default function Intro() {
                       bg={colorMode === "dark" ? "white" : "black"}
                       color={colorMode === "dark" ? "black" : "white"}
                       border={"solid 1px"}
+                      mb={[0, 4, 4, 4, 4, 0]}
                       _hover={{ bg: colorMode === "dark" ? "white" : "black" }}
                     >
                       <Box mr={4}>Learn More</Box>
@@ -76,10 +80,9 @@ export default function Intro() {
               </Flex>
             </Card>
           </GridItem>
-          <GridItem colSpan={[8, 3]}>
+          <GridItem colSpan={[8, 8, 8, 8, 8, 3]}>
             <AspectRatio
               ratio={1}
-              h={"100%"}
               shadow={"md"}
               transition={"all .66s"}
               borderRadius={"md"}
@@ -98,7 +101,7 @@ export default function Intro() {
               />
             </AspectRatio>
           </GridItem>
-          <GridItem colSpan={[8, 2]}>
+          <GridItem colSpan={[8, 8, 8, 8, 8, 2]}>
             <Card>
               <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
                 <Text fontWeight={"bold"} color={"primary.500"} m={0}>

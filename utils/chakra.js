@@ -71,6 +71,13 @@ const theme = extendTheme({
       xl: "102rem",
     },
   },
+  breakpoints: {
+    sm: "34rem",
+    md: "34rem",
+    lg: "62rem",
+    xl: "79rem",
+    "2xl": "96rem",
+  },
   radii: {
     none: "8px",
     sm: "8px",
