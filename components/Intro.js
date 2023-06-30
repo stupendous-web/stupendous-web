@@ -30,15 +30,12 @@ export default function Intro() {
     <>
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
-          <GridItem colSpan={[8, 8, 8, 8, 8, 3]}>
+          <GridItem colSpan={[8, 3]}>
             <Card pt={3}>
               <Flex h={"100%"} direction={"column"} justify={"space-between"}>
                 <Box>
-                  <Heading
-                    as={"p"}
-                    fontSize={["2rem", "4rem", "4rem", "4rem", "4rem", "3rem"]}
-                  >
-                    Build an engaging website or app for your community.
+                  <Heading as={"p"} fontSize={["2rem", "3rem"]} mb={[8, 4]}>
+                    Build engaging websites or apps for your community.
                   </Heading>
                 </Box>
                 <Box>
@@ -52,7 +49,7 @@ export default function Intro() {
                     bg={"primary.500"}
                     color={"white"}
                     mr={4}
-                    mb={[4, 4, 4, 4, 4, 0]}
+                    mb={[4, 0]}
                     _hover={{ bg: "primary.500" }}
                     onClick={() => setIsModalShowing(true)}
                   >
@@ -80,7 +77,7 @@ export default function Intro() {
               </Flex>
             </Card>
           </GridItem>
-          <GridItem colSpan={[8, 8, 8, 8, 8, 3]}>
+          <GridItem colSpan={[8, 3]}>
             <AspectRatio
               ratio={1}
               shadow={"md"}
@@ -101,7 +98,7 @@ export default function Intro() {
               />
             </AspectRatio>
           </GridItem>
-          <GridItem colSpan={[8, 8, 8, 8, 8, 2]}>
+          <GridItem colSpan={[8, 2]}>
             <Card>
               <Link as={NextLink} href={"mailto:topher@stupendousweb.com"}>
                 <Text fontWeight={"bold"} color={"primary.500"} m={0}>

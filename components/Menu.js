@@ -90,7 +90,7 @@ export default function Menu() {
         <Box cursor={"pointer"} pr={4} onClick={() => toggleColorMode()}>
           {colorMode === "dark" ? "🌝" : "🌚"}
         </Box>
-        <>
+        <Box cursor={"pointer"}>
           {isOpen ? (
             <RiCloseFill
               color={colorMode === "dark" ? "white" : "black"}
@@ -104,7 +104,7 @@ export default function Menu() {
               onClick={showMenu}
             />
           )}
-        </>
+        </Box>
       </Flex>
     </>
   );
