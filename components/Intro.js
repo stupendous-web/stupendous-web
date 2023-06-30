@@ -79,6 +79,7 @@ export default function Intro() {
           <GridItem colSpan={[8, 3]}>
             <AspectRatio
               ratio={1}
+              h={"100%"}
               shadow={"md"}
               transition={"all .66s"}
               borderRadius={"md"}

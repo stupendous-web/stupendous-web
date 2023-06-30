@@ -73,7 +73,7 @@ export default function Solutions() {
             ))}
           </SimpleGrid>
         </GridItem>
-        <GridItem colSpan={[8, 2]}>
+        <GridItem colSpan={[8, 8, 8, 8, 5, 2]}>
           <Card variant={"transparent"} pt={2} pl={4}>
             <Flex direction={"column"} justify={"space-between"} h={"100%"}>
               <Box>
