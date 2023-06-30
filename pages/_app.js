@@ -18,6 +18,7 @@ import Cursor from "../components/Cursor";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
+    console.log("env", process.env.NODE_ENV);
     console.log(
       "%c🦸 STUPENDOUS WEB\nEmail topher@stupendousweb.com to learn more.\n",
       "color: #d02670"

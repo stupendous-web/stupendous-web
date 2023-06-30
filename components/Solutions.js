@@ -47,7 +47,7 @@ export default function Solutions() {
           <SimpleGrid columns={3} spacing={2} h={["100%", "400px"]}>
             {solutions.map((solution) => (
               <GridItem
-                key={solution.heading}
+                key={solution.anchor}
                 colSpan={[3, 1]}
                 h={["100%", "200px"]}
               >
