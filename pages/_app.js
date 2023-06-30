@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Script from "next/script";
 import { Provider } from "../lib/context";
@@ -17,8 +17,10 @@ import Loading from "../components/Loading";
 import Cursor from "../components/Cursor";
 
 function MyApp({ Component, pageProps }) {
+  const [isProduction, setIsProduction] = useState(false);
+
   useEffect(() => {
-    console.log("env", process.env.NODE_ENV);
+    window.location.hostname === "stupendousweb.com" && setIsProduction(true);
     console.log(
       "%c🦸 STUPENDOUS WEB\nEmail topher@stupendousweb.com to learn more.\n",
       "color: #d02670"
@@ -28,14 +30,14 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <StupendousAnalytics site={"642cf18729b904f37d859011"} />
-      {process.env.NODE_ENV !== "development" && (
+      {isProduction && (
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
           strategy={"afterInteractive"}
         />
       )}
       <Head>
-        {process.env.NODE_ENV !== "development" && (
+        {isProduction && (
           <>
             <script>
               {`
