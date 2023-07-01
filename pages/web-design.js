@@ -25,7 +25,7 @@ export default function WebAppDevelopment() {
     { heading: "Brand Awareness", icon: <RiEyeLine size={32} /> },
     { heading: "E-Commerce", icon: <RiShoppingCartLine size={32} /> },
     { heading: "Publishing", icon: <RiArticleLine size={32} /> },
-    { heading: "SEO", icon: <RiSearchLine size={32} /> },
+    { heading: "Search Engine Optimization", icon: <RiSearchLine size={32} /> },
   ];
 
   useEffect(() => {
@@ -67,19 +67,19 @@ export default function WebAppDevelopment() {
                     Getting your message to those who need to hear it most can
                     be hard.
                   </Text>
-                  <Heading>The Importance of Web Site Development</Heading>
+                  <Heading>The Value of Quality Web Design</Heading>
                   <Text>
-                    Strong and impactful web design and development will help
-                    you stand out amidst the crowd. You can highlight your work
-                    and your message visually and even interactively with strong
-                    web site development. A clear website can get your message
-                    to those who need to hear it. A functional website can keep
-                    your work financially stable. Web site development keeps you
-                    and your work accessible, interesting, engaging, and simply
-                    stunning. A website gives your brand authority and value.
-                    Your customers are on Google right now searching for you.
-                    Let’s give them something to land on with some solid web
-                    development services.
+                    Web design services help make you, your product, and your
+                    messaging unique and valuable. An easy-to-digest website
+                    will even help your followers find your valuable product
+                    faster. Keeping your site accessible means anyone can access
+                    it expanding your reach. Keeping your site beautiful,
+                    engaging, and memorable will expand your reach even more.
+                    Web design services help you, help your clients, and keep
+                    your work sustainable. Not to mention ecommerce website
+                    development will keep you making money even while you sleep.
+                    Add value to your existing website or create something new
+                    and amazing with my freelance web development services.
                   </Text>
                 </Card>
               </GridItem>
