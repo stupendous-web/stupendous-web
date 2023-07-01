@@ -9,6 +9,7 @@ module.exports = {
   autoLastmod: false,
   priority: false,
   changefreq: "monthly",
+  exclude: ["/website-design-services"],
   additionalPaths: async () => {
     const result = [];
     await axios
