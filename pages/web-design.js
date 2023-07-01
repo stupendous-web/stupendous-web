@@ -36,8 +36,7 @@ export default function WebAppDevelopment() {
     <>
       <Head>
         <title>
-          Website Design Services | Software Development Services | Stupendous
-          Web
+          Web Design | Software Development Services | Stupendous Web
         </title>
       </Head>
       <Container maxW={"container.xl"} pt={[4, 16]}>
@@ -45,7 +44,7 @@ export default function WebAppDevelopment() {
           <GridItem colSpan={[8, 3]}>
             <Card variant={"transparent"} pt={0}>
               <Heading as={"h1"} fontSize={["2rem", "4rem"]}>
-                Website Design Services
+                Web Design
               </Heading>
               <Text as={"code"}>
                 You’ve got something to say whether it be about your products
