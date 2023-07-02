@@ -150,6 +150,44 @@ export default function WebAppDevelopment() {
                     to you to make the process of building your website fast,
                     easy, fun, and most of all valuable!
                   </Text>
+                  <Heading>Small Business Website Design</Heading>
+                  <Text>
+                    You’re working on something amazing. Web design is the key
+                    to sharing it with interested people and getting it to the
+                    people who want and need it most. I love helping small
+                    businesses with their website design because I learn about
+                    them, their values, and their products. Whether you&apos;re
+                    selling a powerful new product, offering a helpful service,
+                    or sharing an inspirational message, you’ll need a good web
+                    design. A good web design is a connection between you, your
+                    work, and your fans.
+                  </Text>
+                  <Heading>Screen Size</Heading>
+                  <Text>
+                    People surf the web from their computers, their phones, and
+                    even their watches! With a plethora of screen sizes
+                    available to access your website form, it’s a very important
+                    thing to consider when designing your website. We’ll use
+                    responsive web design to make sure your website is
+                    accessible and looks great from just about any device. You
+                    can easily lose your potential visitors with a web design
+                    that is not responsive. So, we’ll keep your website
+                    accessible and responsive to ensure all your fans can find
+                    you from any device.
+                  </Text>
+                  <Heading>Conversion Rate</Heading>
+                  <Text>
+                    A high conversion rate could mean selling and shipping
+                    products to all your visitors, turning your visitors into
+                    leads, or convincing them to download your book or listen to
+                    your podcast. Each of these actions is a conversion and
+                    contributes to your conversion rate. Getting you a high
+                    conversion rate is always a priority when designing your
+                    website. Conversions also contribute to your wallet and
+                    support the wonderful work you do to keep it around for
+                    years to come. A good web design keeps your product and
+                    message sustainable and your conversion rates high.
+                  </Text>
                   <Heading>Process</Heading>
                   <Text>
                     The process is simple. First, we strategize. Then we design,
