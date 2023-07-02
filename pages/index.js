@@ -1,6 +1,5 @@
 import Head from "next/head";
 import axios from "axios";
-import { LocalBusinessJsonLd } from "next-seo";
 import Testimonials from "../components/Testimonials";
 import Questions from "../components/Questions";
 import Blog from "../components/Blog";
@@ -8,6 +7,7 @@ import CTA from "../components/CTA";
 import Solutions from "../components/Solutions";
 import AppsIndustries from "../components/AppsIndustries";
 import Intro from "../components/Intro";
+import ProfessionalService from "../components/json-ld/ProfessionalService";
 
 export default function Home({ articles }) {
   return (
@@ -36,27 +36,7 @@ export default function Home({ articles }) {
           }
         />
       </Head>
-      <LocalBusinessJsonLd
-        type={"ProfessionalService"}
-        id={"https://stupendousweb.com"}
-        name={"Stupendous Software Development Services"}
-        description={
-          "I help people with something to share who want to engage with their community by delivering software development services that improve their brand awareness and authority."
-        }
-        url={"https://stupendousweb.com"}
-        telephone={"+17023089375"}
-        address={{
-          streetAddress: "5150 Spyglass Hill Dr.",
-          addressLocality: "Las Vegas",
-          addressRegion: "NV",
-          postalCode: "89142",
-          addressCountry: "US",
-        }}
-        geo={{
-          latitude: "36.140720",
-          longitude: "-115.061710",
-        }}
-      />
+      <ProfessionalService />
       <Intro />
       <Solutions />
       <Testimonials />
