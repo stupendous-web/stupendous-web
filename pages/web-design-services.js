@@ -36,7 +36,7 @@ export default function WebAppDevelopment() {
     <>
       <Head>
         <title>
-          Web Design | Software Development Services | Stupendous Web
+          Web Design Services | Software Development Services | Stupendous Web
         </title>
       </Head>
       <Container maxW={"container.xl"} pt={[4, 16]}>
@@ -44,7 +44,7 @@ export default function WebAppDevelopment() {
           <GridItem colSpan={[8, 3]}>
             <Card variant={"transparent"} pt={0}>
               <Heading as={"h1"} fontSize={["2rem", "4rem"]}>
-                Web Design
+                Web Design Services
               </Heading>
               <Text as={"code"}>
                 You’ve got something to say whether it be about your products
@@ -67,7 +67,7 @@ export default function WebAppDevelopment() {
                     Getting your message to those who need to hear it most can
                     be hard.
                   </Text>
-                  <Heading>The Value of Quality Web Design</Heading>
+                  <Heading>The Value of Quality Web Design Services</Heading>
                   <Text>
                     Web design services help make you, your product, and your
                     messaging unique and valuable. An easy-to-digest website
