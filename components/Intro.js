@@ -19,12 +19,29 @@ import stock4 from "../images/stock/4.jpg";
 import { useGlobal } from "../lib/context";
 import Image from "next/image";
 import CTAModal from "./CTAModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Intro() {
   const [isModalShowing, setIsModalShowing] = useState(false);
+  const [productIndex, setProductIndex] = useState(0);
+  const [className, setClassName] = useState(undefined);
   const { colorMode } = useColorMode();
   const { setIsLoading } = useGlobal();
+
+  const products = ["websites", "web apps", "mobile apps"];
+  const colors = ["primary.500", "blue.500", "teal.500"];
+
+  useEffect(() => {
+    setTimeout(() => {
+      setClassName("fade-in");
+      setProductIndex(
+        productIndex < products.length - 1 ? productIndex + 1 : 0
+      );
+      setTimeout(() => {
+        setClassName(undefined);
+      }, [1000]);
+    }, 2500);
+  }, [productIndex]);
 
   return (
     <>
@@ -35,7 +52,17 @@ export default function Intro() {
               <Flex h={"100%"} direction={"column"} justify={"space-between"}>
                 <Box>
                   <Heading as={"p"} fontSize={["2rem", "3rem"]} mb={[8, 4]}>
-                    Build engaging websites or apps for your community.
+                    Build engaging
+                    <br />
+                    <Text
+                      as={"span"}
+                      color={colors[productIndex]}
+                      className={className}
+                    >
+                      {products[productIndex]}
+                    </Text>
+                    <br />
+                    for your community.
                   </Heading>
                 </Box>
                 <Box>
