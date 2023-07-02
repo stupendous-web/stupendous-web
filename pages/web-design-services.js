@@ -17,6 +17,7 @@ import {
 } from "react-icons/ri";
 import CTA from "../components/CTA";
 import { useEffect } from "react";
+import { LocalBusinessJsonLd } from "next-seo";
 
 export default function WebAppDevelopment() {
   const { setIsLoading } = useGlobal();
@@ -39,6 +40,22 @@ export default function WebAppDevelopment() {
           Web Design Services | Software Development Services | Stupendous Web
         </title>
       </Head>
+      <LocalBusinessJsonLd
+        type={"ProfessionalService"}
+        id={"https://stupendousweb.com"}
+        name={"Stupendous Web Design Services"}
+        description={
+          "I help people with something to share who want to engage with their community by delivering software development services that improve their brand awareness and authority."
+        }
+        address={{
+          streetAddress: "5150 Spyglass Hill Dr.",
+          addressLocality: "Las Vegas",
+          addressRegion: "NV",
+          postalCode: "89142",
+          addressCountry: "US",
+        }}
+        rating={{ ratingValue: 5, ratingCount: 5 }}
+      />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>
