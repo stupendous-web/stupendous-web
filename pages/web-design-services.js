@@ -8,6 +8,7 @@ import {
   SimpleGrid,
   GridItem,
   Card,
+  Divider,
 } from "@chakra-ui/react";
 import {
   RiEyeLine,
@@ -28,6 +29,20 @@ export default function WebAppDevelopment() {
     { heading: "Publishing", icon: <RiArticleLine size={32} /> },
     { heading: "Search Engine Optimization", icon: <RiSearchLine size={32} /> },
   ];
+
+  const Section = ({ heading, text }) => (
+    <>
+      <Divider borderColor={"gray.500"} mb={4} />
+      <SimpleGrid columns={5}>
+        <GridItem colSpan={[5, 2]}>
+          <Heading as={"h3"} fontSize={"1rem"} mb={4}>
+            {heading}
+          </Heading>
+        </GridItem>
+        <GridItem colSpan={[5, 3]}>{text}</GridItem>
+      </SimpleGrid>
+    </>
+  );
 
   useEffect(() => {
     setIsLoading(false);
@@ -150,6 +165,87 @@ export default function WebAppDevelopment() {
                     to you to make the process of building your website fast,
                     easy, fun, and most of all valuable!
                   </Text>
+                  <Section
+                    heading={"Hosting"}
+                    text={
+                      <Text>
+                        Your website needs a place to live and an address so
+                        people can come to visit. We’ll utilize cloud hosting
+                        and a domain name to do this. Your project includes
+                        website hosting and a domain name. This will get your
+                        work on the web and out to the people you need to see
+                        it. You’ll have the chance to brand your domain name,
+                        too. Now you’ll have a place to showcase your work to
+                        anyone with an internet connection and you can share
+                        your work easily with others online and even in person.
+                      </Text>
+                    }
+                  />
+                  <Section
+                    heading={"Support"}
+                    text={
+                      <Text>
+                        I live and breathe my work and love working closely with
+                        clients. And, I know you’re going to have questions,
+                        concerns, and work that needs to be done. I’m available
+                        via email anytime and you can always schedule a 1-1 to
+                        discuss things more in-depth! You shouldn’t feel like
+                        you’re alone or letting a robot do all the work for you.
+                        I’m a real live boy here to guide you through the whole
+                        process, start to finish! We’ll work together to get you
+                        a quality product up and running smoothly and quickly.
+                      </Text>
+                    }
+                  />
+                  <Section
+                    heading={"Payment Processing"}
+                    text={
+                      <Text>
+                        Let your customers pay you while you sleep. Your payment
+                        processing integrations for your products, bookings,
+                        donations, or anything else will work around the clock,
+                        seven days a week for you. With the power of Stripe,
+                        Paypal, or any other payment processing integrations,
+                        you’ll be able to accept payments. These are designed to
+                        make accepting your visitor&apos;s payment methods easy,
+                        anytime, and deposit them to your bank account. The
+                        ability to take payment directly from your website
+                        creates authority, builds trust between you and your
+                        clients, and keeps the lights on for you and your
+                        business.
+                      </Text>
+                    }
+                  />
+                  <Section
+                    heading={"Content Management"}
+                    text={
+                      <Text>
+                        Take control of your website. With the power of a
+                        content management system (CMS), you don’t need a
+                        developer to go in and make minor changes to the content
+                        of your website. We’ll build your website with an
+                        easy-to-use dashboard where you can log in and write and
+                        publish content to your website day or night. Changes
+                        you make will reflect almost immediately. This can save
+                        you time and headaches!
+                      </Text>
+                    }
+                  />
+                  <Section
+                    heading={"Analytics"}
+                    text={
+                      <Text>
+                        Grow your business with the right web analytics tools.
+                        Analytics is a powerful way to track and understand
+                        visitors as well as generate new ones. You’ll receive
+                        access to a variety of analytics dashboards that will be
+                        connected to your website. They provide all sorts of
+                        helpful information. Website analytics will become your
+                        new and powerful best friend as you watch it grow your
+                        business, your reach, and your community.
+                      </Text>
+                    }
+                  />
                   <Heading>Small Business Website Design</Heading>
                   <Text>
                     You’re working on something amazing. Web design is the key
@@ -193,46 +289,63 @@ export default function WebAppDevelopment() {
                     The process is simple. First, we strategize. Then we design,
                     develop, and repeat.
                   </Text>
-                  <Text>
-                    The thoroughness of the process will minimize the risk of
-                    getting your product out to the masses through your website.
-                    This is why we start you off with a consultation. In your
-                    consultation, we’ll talk about your brand and your product.
-                    We’ll talk about your values, what communities you serve,
-                    who wants and needs your product the most, and how to get it
-                    to them via your website. You’ll receive your product brief,
-                    and optionally a market report, design guide, brand guide,
-                    suggested project plan, in-house development quote, and much
-                    more. This is sometimes the most enriching part of the
-                    process. Clients almost always walk away from these
-                    consultations feeling inspired and eager to build something
-                    revolutionary.
-                  </Text>
-                  <Text>
-                    Let’s put this hard work to good use! The next part of the
-                    process is design and development. We’ll create a design for
-                    your website, pulling all the stops. Your website will be
-                    excellently branded, unique and memorable, communicative of
-                    your products, services, and messaging, accessible, and
-                    exciting. This all is to build trust within your community,
-                    increase action and sales, expand your community, and grow
-                    your work. Everything we do in your consultation will help
-                    us complete this work faster and more efficiently.
-                  </Text>
-                  <Text>
-                    Congratulations! Now you’ve got a superior product. But
-                    there’s still work to be done. In a fast-changing world,
-                    you’ll want to make minor changes, security updates, feature
-                    updates, and just have occasional questions or concerns.
-                    That’s why I also offer a long-term support plan. I’ll
-                    provide additional services to keep your website modern,
-                    fresh, and popular. The process is iterative to keep your
-                    product the best it can be and very exciting as the world
-                    changes around it. But it all starts with a consultation.
-                    I’m eager to learn about you, your brand, and your product,
-                    and strategize a unique and powerful new website for your
-                    business.
-                  </Text>
+                  <Section
+                    heading={"Strategize"}
+                    text={
+                      <Text>
+                        The thoroughness of the process will minimize the risk
+                        of getting your product out to the masses through your
+                        website. This is why we start you off with a
+                        consultation. In your consultation, we’ll talk about
+                        your brand and your product. We’ll talk about your
+                        values, what communities you serve, who wants and needs
+                        your product the most, and how to get it to them via
+                        your website. You’ll receive your product brief, and
+                        optionally a market report, design guide, brand guide,
+                        suggested project plan, in-house development quote, and
+                        much more. This is sometimes the most enriching part of
+                        the process. Clients almost always walk away from these
+                        consultations feeling inspired and eager to build
+                        something revolutionary.
+                      </Text>
+                    }
+                  />
+                  <Section
+                    heading={"Design & Develop"}
+                    text={
+                      <Text>
+                        Let’s put this hard work to good use! The next part of
+                        the process is design and development. We’ll create a
+                        design for your website, pulling all the stops. Your
+                        website will be excellently branded, unique and
+                        memorable, communicative of your products, services, and
+                        messaging, accessible, and exciting. This all is to
+                        build trust within your community, increase action and
+                        sales, expand your community, and grow your work.
+                        Everything we do in your consultation will help us
+                        complete this work faster and more efficiently.
+                      </Text>
+                    }
+                  />
+                  <Section
+                    heading={"Repeat"}
+                    text={
+                      <Text>
+                        Congratulations! Now you’ve got a superior product. But
+                        there’s still work to be done. In a fast-changing world,
+                        you’ll want to make minor changes, security updates,
+                        feature updates, and just have occasional questions or
+                        concerns. That’s why I also offer a long-term support
+                        plan. I’ll provide additional services to keep your
+                        website modern, fresh, and popular. The process is
+                        iterative to keep your product the best it can be and
+                        very exciting as the world changes around it. But it all
+                        starts with a consultation. I’m eager to learn about
+                        you, your brand, and your product, and strategize a
+                        unique and powerful new website for your business.
+                      </Text>
+                    }
+                  />
                   <Heading>How does it Work?</Heading>
                   <Text>
                     I make getting started with your website fast, easy, and
