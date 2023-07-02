@@ -132,6 +132,24 @@ export default function WebAppDevelopment() {
                     not just a pretty wall of text; it’s a gateway to generating
                     fans that will keep your work profitable and sustainable.
                   </Text>
+                  <Heading>Full-Service Web Design Services</Heading>
+                  <Text>
+                    Building a website should be easy. It shouldn’t cost you
+                    hardly any effort or time. That’s why I offer a
+                    fully-managed website design and development process. Your
+                    project includes design, development, hosting, support,
+                    payment processing, content management, analytics, and more.
+                    After your design is finalized and your website is built,
+                    we’ll launch it to the cloud where everyone can access it,
+                    connecting you with your audiences. Your visitors will be
+                    able to pay for products and services, keeping your work
+                    sustainable. You’ll be able to easily manage content in a
+                    way that saves you time. And you’ll be able to access your
+                    visitor analytics allowing you to revise your strategy and
+                    continue to build up your network. This and more is offered
+                    to you to make the process of building your website fast,
+                    easy, fun, and most of all valuable!
+                  </Text>
                   <Heading>Process</Heading>
                   <Text>
                     The process is simple. First, we strategize. Then we design,
