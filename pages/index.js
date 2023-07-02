@@ -1,7 +1,7 @@
 import Head from "next/head";
 import axios from "axios";
 import Testimonials from "../components/Testimonials";
-import Questions from "../components/Questions";
+import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions";
 import Blog from "../components/Blog";
 import CTA from "../components/CTA";
 import Solutions from "../components/Solutions";
@@ -41,7 +41,7 @@ export default function Home({ articles }) {
       <Solutions />
       <Testimonials />
       <AppsIndustries />
-      <Questions />
+      <FrequentlyAskedQuestions />
       <Blog articles={articles} />
       <CTA />
     </>

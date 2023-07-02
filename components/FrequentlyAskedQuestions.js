@@ -12,7 +12,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-export default function Questions() {
+export default function FrequentlyAskedQuestions() {
   const faqs = [
     {
       question: "What's the difference between a website and a web app?",
