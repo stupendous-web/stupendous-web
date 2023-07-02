@@ -11,10 +11,11 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import {
-  RiEyeLine,
-  RiShoppingCartLine,
-  RiArticleLine,
-  RiSearchLine,
+  RiCoinLine,
+  RiStarLine,
+  RiCursorLine,
+  RiPaintBrushLine,
+  RiSearchEyeLine,
 } from "react-icons/ri";
 import CTA from "../components/CTA";
 import { useEffect } from "react";
@@ -24,10 +25,11 @@ export default function WebAppDevelopment() {
   const { setIsLoading } = useGlobal();
 
   const cards = [
-    { heading: "Brand Awareness", icon: <RiEyeLine size={32} /> },
-    { heading: "E-Commerce", icon: <RiShoppingCartLine size={32} /> },
-    { heading: "Publishing", icon: <RiArticleLine size={32} /> },
-    { heading: "Search Engine Optimization", icon: <RiSearchLine size={32} /> },
+    { heading: "Valuable", icon: <RiCoinLine size={32} /> },
+    { heading: "Unique", icon: <RiStarLine size={32} /> },
+    { heading: "Engaging", icon: <RiCursorLine size={32} /> },
+    { heading: "Branded", icon: <RiPaintBrushLine size={32} /> },
+    { heading: "Accessible", icon: <RiSearchEyeLine size={32} /> },
   ];
 
   const Section = ({ heading, text }) => (
