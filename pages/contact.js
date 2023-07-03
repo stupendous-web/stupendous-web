@@ -2,7 +2,7 @@ import Head from "next/head";
 import NextLink from "next/link";
 import { useGlobal } from "../lib/context";
 import {
-  RiExternalLinkLine,
+  RiCursorLine,
   RiMailLine,
   RiPhoneLine,
   RiVideoLine,
@@ -23,26 +23,31 @@ import {
   SimpleGrid,
   useColorMode,
   Flex,
-  Box,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import CTAModal from "../components/CTAModal";
+import { useEffect } from "react";
 
 export default function Contact() {
-  const [isModalShowing, setIsModalShowing] = useState(false);
   const { setIsLoading } = useGlobal();
   const { colorMode } = useColorMode();
 
   const contactLinks = [
     {
-      text: "topher@stupendousweb.com",
+      heading: "Get Started Now!",
+      text: "Request an estimate for your consultation in under two minutes and receive it in under a few hours right to your inbox!",
+      href: "/services/software-consultation",
+      title:
+        "Software Consultation | Software Development Services | Stupendous Web",
+      icon: <RiCursorLine size={32} />,
+    },
+    {
       heading: "Email",
+      text: "topher@stupendousweb.com",
       href: "mailto:topher@stupendousweb.com",
       icon: <RiMailLine size={32} />,
     },
     {
-      text: "+1 702.308.9375 ",
       heading: "Text or Call",
+      text: "+1 702.308.9375 ",
       href: "tel:7023089375",
       icon: <RiPhoneLine size={32} />,
     },
@@ -102,45 +107,38 @@ export default function Contact() {
           </GridItem>
           <GridItem colSpan={[8, 6]}>
             <SimpleGrid columns={6} spacing={2}>
-              <GridItem colSpan={[6, 2]} h={["100%", "394px"]}>
-                <Card
-                  bg={"primary.500"}
-                  _hover={{ bg: "primary.500" }}
-                  cursor={"pointer"}
-                  onClick={() => setIsModalShowing(true)}
+              {contactLinks.map((link, index) => (
+                <GridItem
+                  key={link.href}
+                  colSpan={[6, 2]}
+                  h={["100%", "394px"]}
                 >
-                  <Flex
-                    direction={"column"}
-                    justify={"space-between"}
-                    h={"100%"}
+                  <Card
+                    bg={index === 0 ? "primary.500" : undefined}
+                    _hover={{ bg: index === 0 ? "primary.500" : undefined }}
                   >
-                    <Box>
-                      <Heading color={"white"} mb={4}>
-                        Get Started Now
-                      </Heading>
-                      <Text color={"white"}>
-                        Request an estimate for your consultation in under two
-                        minutes and receive it in under a few hours right to
-                        your inbox!
-                      </Text>
-                    </Box>
-                    <RiExternalLinkLine size={32} color={"white"} />
-                  </Flex>
-                </Card>
-              </GridItem>
-              {contactLinks.map((link) => (
-                <GridItem key={link.href} colSpan={[6, 2]}>
-                  <Card>
                     <Flex
                       direction={"column"}
                       justify={"space-between"}
                       h={"100%"}
                     >
-                      <Link as={NextLink} href={link.href}>
-                        <Heading mb={4}>{link.heading}</Heading>
-                        <Text>{link.text}</Text>
+                      <Link as={NextLink} href={link.href} title={link.title}>
+                        <Heading
+                          color={index === 0 ? "white" : undefined}
+                          mb={4}
+                        >
+                          {link.heading}
+                        </Heading>
+                        <Text color={index === 0 ? "white" : undefined}>
+                          {link.text}
+                        </Text>
                       </Link>
-                      <Link as={NextLink} href={link.href}>
+                      <Link
+                        as={NextLink}
+                        href={link.href}
+                        title={link.title}
+                        color={index === 0 ? "white" : undefined}
+                      >
                         {link.icon}
                       </Link>
                     </Flex>
@@ -181,7 +179,6 @@ export default function Contact() {
           </GridItem>
         </SimpleGrid>
       </Container>
-      <CTAModal isOpen={isModalShowing} setIsOpen={setIsModalShowing} />
     </>
   );
 }

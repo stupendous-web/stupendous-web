@@ -9,6 +9,10 @@ import {
   GridItem,
   Card,
   Divider,
+  Link,
+  Button,
+  Box,
+  useColorMode,
 } from "@chakra-ui/react";
 import {
   RiCoinLine,
@@ -16,13 +20,17 @@ import {
   RiCursorLine,
   RiPaintBrushLine,
   RiSearchEyeLine,
+  RiArrowRightLine,
 } from "react-icons/ri";
 import CTA from "../components/CTA";
 import { useEffect } from "react";
 import ProfessionalService from "../components/json-ld/ProfessionalService";
+import CTAModal from "../components/CTAModal";
+import NextLink from "next/link";
 
 export default function WebAppDevelopment() {
   const { setIsLoading } = useGlobal();
+  const { colorMode } = useColorMode();
 
   const cards = [
     { heading: "Valuable", icon: <RiCoinLine size={32} /> },
@@ -260,6 +268,29 @@ export default function WebAppDevelopment() {
                       </Text>
                     }
                   />
+                  <Box my={8}>
+                    <CTAModal size={"lg"} />
+                    <Link
+                      as={NextLink}
+                      href={"/services/software-consultation"}
+                      title={
+                        "Software Consultation | Software Development Services | Stupendous Web"
+                      }
+                    >
+                      <Button
+                        size={"lg"}
+                        rightIcon={<RiArrowRightLine />}
+                        bg={colorMode === "dark" ? "white" : "black"}
+                        color={colorMode === "dark" ? "black" : "white"}
+                        border={"solid 1px"}
+                        _hover={{
+                          bg: colorMode === "dark" ? "white" : "black",
+                        }}
+                      >
+                        <Box mr={4}>Learn More</Box>
+                      </Button>
+                    </Link>
+                  </Box>
                   <Heading>Small Business Website Design</Heading>
                   <Text>
                     You’re working on something unique. Web design services are

@@ -16,11 +16,10 @@ import {
 } from "@chakra-ui/react";
 import { RiArrowRightLine } from "react-icons/ri";
 import CTA from "../../components/CTA";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import CTAModal from "../../components/CTAModal";
 
 export default function Services() {
-  const [isModalShowing, setIsModalShowing] = useState(false);
   const { colorMode } = useColorMode();
   const { setIsLoading } = useGlobal();
 
@@ -109,18 +108,7 @@ export default function Services() {
                     succeed.
                   </Text>
                   <Box my={8}>
-                    <Button
-                      size={"lg"}
-                      rightIcon={<RiArrowRightLine />}
-                      bg={"primary.500"}
-                      color={"white"}
-                      mr={4}
-                      mb={[4, 0]}
-                      _hover={{ bg: "primary.500" }}
-                      onClick={() => setIsModalShowing(true)}
-                    >
-                      <Box mr={4}>Request an Estimate</Box>
-                    </Button>
+                    <CTAModal size={"lg"} />
                     <Link
                       as={NextLink}
                       href={"/services/software-consultation"}
@@ -237,7 +225,6 @@ export default function Services() {
         </SimpleGrid>
       </Container>
       <CTA />
-      <CTAModal isOpen={isModalShowing} setIsOpen={setIsModalShowing} />
     </>
   );
 }
