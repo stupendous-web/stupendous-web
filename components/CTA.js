@@ -32,12 +32,13 @@ export default function CTA() {
                   fontSize={["2rem", "4rem"]}
                   mb={4}
                 >
-                  Quick Estimate
+                  Start your Project Now
                 </Heading>
                 <Text color={"white"}>
-                  Your audiences are waiting. Take the first step in building
-                  your website, web app, and iOS and Android apps. Click below
-                  to receive your estimate in just a few hours!
+                  Requesting your estimate takes as little as seconds and
+                  you&apos;ll receive it via email in just a few hours after.
+                  Click below to take the first step to connecting with your
+                  audiences.
                 </Text>
               </Box>
               <Box>

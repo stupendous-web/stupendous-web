@@ -82,7 +82,7 @@ export default function CTAModal({ light, size = "md" }) {
         }}
         onClick={() => setIsOpen(true)}
       >
-        <Box mr={4}>Request an Estimate</Box>
+        <Box mr={4}>Request your Estimate</Box>
       </Button>
       <Modal onClose={() => setIsOpen(false)} size={"full"} isOpen={isOpen}>
         <ModalContent bg={"primary.500"} color={"white"}>

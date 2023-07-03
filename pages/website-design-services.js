@@ -13,6 +13,7 @@ import {
   Button,
   Box,
   useColorMode,
+  AspectRatio,
 } from "@chakra-ui/react";
 import {
   RiCoinLine,
@@ -27,6 +28,8 @@ import { useEffect } from "react";
 import ProfessionalService from "../components/json-ld/ProfessionalService";
 import CTAModal from "../components/CTAModal";
 import NextLink from "next/link";
+import Image from "next/image";
+import stock0 from "../images/stock/0.jpg";
 
 export default function WebAppDevelopment() {
   const { setIsLoading } = useGlobal();
@@ -268,29 +271,74 @@ export default function WebAppDevelopment() {
                       </Text>
                     }
                   />
-                  <Box my={8}>
-                    <CTAModal size={"lg"} />
-                    <Link
-                      as={NextLink}
-                      href={"/services/software-consultation"}
-                      title={
-                        "Software Consultation | Software Development Services | Stupendous Web"
-                      }
-                    >
-                      <Button
-                        size={"lg"}
-                        rightIcon={<RiArrowRightLine />}
-                        bg={colorMode === "dark" ? "white" : "black"}
-                        color={colorMode === "dark" ? "black" : "white"}
-                        border={"solid 1px"}
-                        _hover={{
-                          bg: colorMode === "dark" ? "white" : "black",
-                        }}
+                </Card>
+              </GridItem>
+              <GridItem colSpan={[5, 2]}>
+                <AspectRatio
+                  ratio={1}
+                  shadow={"md"}
+                  transition={"all .66s"}
+                  borderRadius={"md"}
+                  overflow={"hidden"}
+                  _hover={{ shadow: "hover" }}
+                >
+                  <Image
+                    src={stock0}
+                    alt={
+                      "People gathered around computer talking about website design services"
+                    }
+                    fill
+                    style={{ objectFit: "cover" }}
+                    onLoadingComplete={setIsLoading(false)}
+                    priority
+                  />
+                </AspectRatio>
+              </GridItem>
+              <GridItem colSpan={[5, 3]}>
+                <Card>
+                  <Flex
+                    h={"100%"}
+                    direction={"column"}
+                    justify={"space-between"}
+                  >
+                    <Box>
+                      <Heading as={"p"} mb={4}>
+                        Start your Project Now
+                      </Heading>
+                      <Text>
+                        Requesting your estimate takes as little as seconds and
+                        you&apos;ll receive it via email in just a few hours
+                        after. Click below to take the first step to connecting
+                        with your audiences.
+                      </Text>
+                    </Box>
+                    <Box>
+                      <CTAModal />
+                      <Link
+                        as={NextLink}
+                        href={"/services/software-consultation"}
+                        title={
+                          "Software Consultation | Software Development Services | Stupendous Web"
+                        }
                       >
-                        <Box mr={4}>Learn More</Box>
-                      </Button>
-                    </Link>
-                  </Box>
+                        <Button
+                          rightIcon={<RiArrowRightLine />}
+                          bg={colorMode === "dark" ? "white" : "black"}
+                          color={colorMode === "dark" ? "black" : "white"}
+                          border={"solid 1px"}
+                          _hover={{
+                            bg: colorMode === "dark" ? "white" : "black",
+                          }}
+                        >
+                          <Box mr={4}>Learn More</Box>
+                        </Button>
+                      </Link>
+                    </Box>
+                  </Flex>
+                </Card>
+              </GridItem>
+              <GridItem colSpan={5}>
+                <Card variant={"transparent"}>
                   <Heading>Small Business Website Design</Heading>
                   <Text>
                     You’re working on something unique. Web design services are
