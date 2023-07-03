@@ -31,8 +31,8 @@ export default function Footer() {
   ];
 
   const services = [
+    { href: "/website-design-services", title: "Website Design Services" },
     { href: "/services/web-app-development", title: "Web App Development" },
-    { href: "/services/web-site-development", title: "Web Site Development" },
     {
       href: "/services/iphone-app-development-services",
       title: "iPhone App Development Services",

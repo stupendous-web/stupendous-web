@@ -28,14 +28,17 @@ export default function Services() {
     setIsLoading(false);
   }, []);
 
-  const developmentServices = [
-    { href: "web-app-development", anchor: "Web App Development" },
-    { href: "web-site-development", anchor: "Web Site Development" },
+  const services = [
+    { href: "/website-design-services", anchor: "Website Design Services" },
+    { href: "/services/web-app-development", anchor: "Web App Development" },
     {
-      href: "iphone-app-development-services",
+      href: "/services/iphone-app-development-services",
       anchor: "iPhone App Development Services",
     },
-    { href: "mvp-software-development", anchor: "MVP Software Development" },
+    {
+      href: "/services/mvp-software-development",
+      anchor: "MVP Software Development",
+    },
   ];
 
   return (
@@ -164,7 +167,7 @@ export default function Services() {
                   </Text>
                 </Card>
               </GridItem>
-              {developmentServices?.map((service) => (
+              {services?.map((service) => (
                 <GridItem
                   key={service.anchor}
                   colSpan={[5, 1]}
@@ -180,7 +183,7 @@ export default function Services() {
                         {service?.href ? (
                           <Link
                             as={NextLink}
-                            href={`/services/${service.href}`}
+                            href={`/${service.href}`}
                             title={`${service.anchor} | Software Development Services | Stupendous Web`}
                           >
                             <Heading as={"h3"} fontSize={"1rem"} mb={4}>
@@ -196,7 +199,7 @@ export default function Services() {
                       <Box>
                         <Link
                           as={NextLink}
-                          href={`/services/${service.href}`}
+                          href={`/${service.href}`}
                           title={`${service.anchor} | Software Development Services | Stupendous Web`}
                         >
                           <>
