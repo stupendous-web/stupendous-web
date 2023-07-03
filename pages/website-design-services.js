@@ -57,10 +57,6 @@ export default function WebAppDevelopment() {
     </>
   );
 
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
-
   return (
     <>
       <Head>
