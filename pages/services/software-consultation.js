@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useGlobal } from "../../lib/context";
 import {
   Container,
@@ -23,6 +22,7 @@ import {
 import { useEffect } from "react";
 import NextLink from "next/link";
 import CTAModal from "../../components/CTAModal";
+import FluidHead from "../../components/FluidHead";
 
 export default function WebAppDevelopment() {
   const { setIsLoading } = useGlobal();
@@ -49,11 +49,7 @@ export default function WebAppDevelopment() {
 
   return (
     <>
-      <Head>
-        <title>
-          Software Consultation | Software Development Services | Stupendous Web
-        </title>
-      </Head>
+      <FluidHead title={"Software Consultation"} />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>

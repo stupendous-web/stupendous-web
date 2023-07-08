@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useGlobal } from "../../lib/context";
 import {
   Container,
@@ -17,6 +16,7 @@ import {
 } from "react-icons/ri";
 import CTA from "../../components/CTA";
 import { useEffect } from "react";
+import FluidHead from "../../components/FluidHead";
 
 export default function WebAppDevelopment() {
   const { setIsLoading } = useGlobal();
@@ -34,11 +34,7 @@ export default function WebAppDevelopment() {
 
   return (
     <>
-      <Head>
-        <title>
-          Web App Development | Software Development Services | Stupendous Web
-        </title>
-      </Head>
+      <FluidHead title={"Web App Development"} />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Head from "next/head";
 import { useGlobal } from "../lib/context";
 import {
   Box,
@@ -12,15 +11,14 @@ import {
 } from "@chakra-ui/react";
 import CTA from "../components/CTA";
 import me from "../images/me.png";
+import FluidHead from "../components/FluidHead";
 
 export default function Mood() {
   const { setIsLoading } = useGlobal();
 
   return (
     <>
-      <Head>
-        <title>Mood | Software Development Services | Stupendous Web</title>
-      </Head>
+      <FluidHead title={"Mood"} />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>

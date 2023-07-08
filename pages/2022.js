@@ -1,4 +1,3 @@
-import Head from "next/head";
 import NextLink from "next/link";
 import { useGlobal } from "../lib/context";
 import CTA from "../components/CTA";
@@ -14,6 +13,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
+import FluidHead from "../components/FluidHead";
 
 export default function Review2022() {
   const { setIsLoading } = useGlobal();
@@ -24,11 +24,7 @@ export default function Review2022() {
 
   return (
     <>
-      <Head>
-        <title>
-          2022 Review | Software Development Services | Stupendous Web
-        </title>
-      </Head>
+      <FluidHead title={"2022 in Review"} />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>

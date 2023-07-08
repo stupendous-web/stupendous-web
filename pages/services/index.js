@@ -1,4 +1,3 @@
-import Head from "next/head";
 import NextLink from "next/link";
 import { useGlobal } from "../../lib/context";
 import {
@@ -18,6 +17,7 @@ import { RiArrowRightLine } from "react-icons/ri";
 import CTA from "../../components/CTA";
 import { useEffect } from "react";
 import CTAModal from "../../components/CTAModal";
+import FluidHead from "../../components/FluidHead";
 
 export default function Services() {
   const { colorMode } = useColorMode();
@@ -42,9 +42,7 @@ export default function Services() {
 
   return (
     <>
-      <Head>
-        <title>Services | Software Development Services | Stupendous Web</title>
-      </Head>
+      <FluidHead title={"Services"} />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>

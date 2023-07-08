@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useGlobal } from "../../lib/context";
 import {
   Container,
@@ -12,6 +11,7 @@ import {
 import { RiHandCoinLine, RiHandHeartLine, RiGroupLine } from "react-icons/ri";
 import CTA from "../../components/CTA";
 import { useEffect } from "react";
+import FluidHead from "../../components/FluidHead";
 
 export default function MVPSoftwareDevelopment() {
   const { setIsLoading } = useGlobal();
@@ -28,12 +28,7 @@ export default function MVPSoftwareDevelopment() {
 
   return (
     <>
-      <Head>
-        <title>
-          MVP Software Development | Software Development Services | Stupendous
-          Web
-        </title>
-      </Head>
+      <FluidHead title={"MVP Software Development"} />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>

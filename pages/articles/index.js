@@ -1,5 +1,4 @@
 import { Fragment, useEffect } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import NextLink from "next/link";
 import { useGlobal } from "../../lib/context";
@@ -30,6 +29,7 @@ import {
   RiSunLine,
   RiArticleLine,
 } from "react-icons/ri";
+import FluidHead from "../../components/FluidHead";
 
 dayjs.extend(relativeTime);
 
@@ -64,9 +64,7 @@ export default function Articles({ articles, tags }) {
 
   return (
     <>
-      <Head>
-        <title>Articles | Software Development Services | Stupendous Web</title>
-      </Head>
+      <FluidHead title={"Articles"} />
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 2]}>

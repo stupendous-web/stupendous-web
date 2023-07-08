@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useGlobal } from "../lib/context";
 import {
   Card,
@@ -13,6 +12,7 @@ import Project from "../components/Project";
 import CTA from "../components/CTA";
 
 import { useEffect } from "react";
+import FluidHead from "../components/FluidHead";
 
 export default function Projects() {
   const { setIsLoading } = useGlobal();
@@ -23,9 +23,7 @@ export default function Projects() {
 
   return (
     <>
-      <Head>
-        <title>Projects | Software Development Services | Stupendous Web</title>
-      </Head>
+      <FluidHead title={"Projects"} />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>
