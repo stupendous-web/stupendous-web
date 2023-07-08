@@ -1,4 +1,4 @@
-import Head from "next/head";
+import FluidHead from "../components/FluidHead";
 import axios from "axios";
 import Testimonials from "../components/Testimonials";
 import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions";
@@ -7,36 +7,13 @@ import CTA from "../components/CTA";
 import Solutions from "../components/Solutions";
 import AppsIndustries from "../components/AppsIndustries";
 import Intro from "../components/Intro";
-import ProfessionalService from "../components/json-ld/ProfessionalService";
+import LocalBusiness from "../components/json-ld/LocalBusiness";
 
 export default function Home({ articles }) {
   return (
     <>
-      <Head>
-        <title>
-          Software Development Services | Stupendous Web | If you want to build
-          community, build stupendous software
-        </title>
-        <meta
-          property={"og:title"}
-          content={
-            "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
-          }
-        />
-        <meta
-          name={"description"}
-          content={
-            "I help people with something to share who want to engage with their community by delivering software development services that improve their brand awareness and authority."
-          }
-        />
-        <meta
-          property={"og:description"}
-          content={
-            "I help people with something to share who want to engage with their community by delivering software development services that improve their brand awareness and authority."
-          }
-        />
-      </Head>
-      <ProfessionalService />
+      <FluidHead />
+      <LocalBusiness />
       <Intro />
       <Solutions />
       <Testimonials />

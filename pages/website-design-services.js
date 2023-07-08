@@ -1,4 +1,4 @@
-import Head from "next/head";
+import FluidHead from "../components/FluidHead";
 import { useGlobal } from "../lib/context";
 import {
   Container,
@@ -24,8 +24,7 @@ import {
   RiArrowRightLine,
 } from "react-icons/ri";
 import CTA from "../components/CTA";
-import { useEffect } from "react";
-import ProfessionalService from "../components/json-ld/ProfessionalService";
+import LocalBusiness from "../components/json-ld/LocalBusiness";
 import CTAModal from "../components/CTAModal";
 import NextLink from "next/link";
 import Image from "next/image";
@@ -59,13 +58,17 @@ export default function WebAppDevelopment() {
 
   return (
     <>
-      <Head>
-        <title>
-          Website Design Services | Software Development Services | Stupendous
-          Web
-        </title>
-      </Head>
-      <ProfessionalService />
+      <FluidHead
+        title={"Website Design Services"}
+        description={
+          "Need a new website that does more than the rest? Discover web design services that help you achieve your goals. Schedule your FREE consultation to receive your..."
+        }
+      />
+      <LocalBusiness
+        description={
+          "Need a new website that does more than the rest? Discover web design services that help you achieve your goals. Schedule your FREE consultation to receive your..."
+        }
+      />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>

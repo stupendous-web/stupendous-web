@@ -1,14 +1,14 @@
 import { LocalBusinessJsonLd } from "next-seo";
 
-export default function ProfessionalService() {
+export default function LocalBusiness({
+  description = "I help people with something to share who want to engage with their community by delivering software development services that improve their brand awareness and authority.",
+}) {
   return (
     <LocalBusinessJsonLd
       type={"ProfessionalService"}
       id={"https://stupendousweb.com"}
       name={"Stupendous Software Development Services"}
-      description={
-        "I help people with something to share who want to engage with their community by delivering software development services that improve their brand awareness and authority."
-      }
+      description={description}
       url={"https://stupendousweb.com"}
       telephone={"+17023089375"}
       address={{
