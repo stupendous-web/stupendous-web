@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Head from "next/head";
 import NextLink from "next/link";
-import { useGlobal } from "../../lib/context";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { ArticleJsonLd } from "next-seo";
@@ -23,9 +22,7 @@ import CTA from "../../components/CTA";
 dayjs.extend(relativeTime);
 
 export default function Article({ article }) {
-  const { setIsLoading } = useGlobal();
   const { colorMode } = useColorMode();
-
   const tag = Object.keys(article.tags)[0]?.toLowerCase();
 
   return (
@@ -128,7 +125,6 @@ export default function Article({ article }) {
                   fill
                   style={{ objectFit: "cover" }}
                   priority
-                  onLoadingComplete={() => setIsLoading(false)}
                 />
               </AspectRatio>
             )}

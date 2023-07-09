@@ -1,4 +1,3 @@
-import { useGlobal } from "../../lib/context";
 import {
   Container,
   Flex,
@@ -15,22 +14,15 @@ import {
   RiSearchLine,
 } from "react-icons/ri";
 import CTA from "../../components/CTA";
-import { useEffect } from "react";
 import FluidHead from "../../components/FluidHead";
 
 export default function WebAppDevelopment() {
-  const { setIsLoading } = useGlobal();
-
   const cards = [
     { heading: "Brand Awareness", icon: <RiEyeLine size={32} /> },
     { heading: "E-Commerce", icon: <RiShoppingCartLine size={32} /> },
     { heading: "Publishing", icon: <RiArticleLine size={32} /> },
     { heading: "SEO", icon: <RiSearchLine size={32} /> },
   ];
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
 
   return (
     <>
@@ -120,7 +112,6 @@ export default function WebAppDevelopment() {
           </GridItem>
         </SimpleGrid>
       </Container>
-
       <CTA />
     </>
   );

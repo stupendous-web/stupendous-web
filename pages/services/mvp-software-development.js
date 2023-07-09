@@ -1,4 +1,3 @@
-import { useGlobal } from "../../lib/context";
 import {
   Container,
   Flex,
@@ -10,21 +9,14 @@ import {
 } from "@chakra-ui/react";
 import { RiHandCoinLine, RiHandHeartLine, RiGroupLine } from "react-icons/ri";
 import CTA from "../../components/CTA";
-import { useEffect } from "react";
 import FluidHead from "../../components/FluidHead";
 
 export default function MVPSoftwareDevelopment() {
-  const { setIsLoading } = useGlobal();
-
   const cards = [
     { heading: "Find Investors", icon: <RiHandCoinLine size={32} /> },
     { heading: "Attract Donors", icon: <RiHandHeartLine size={32} /> },
     { heading: "Build your Network", icon: <RiGroupLine size={32} /> },
   ];
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
 
   return (
     <>

@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Script from "next/script";
-import { Provider } from "../lib/context";
 import StupendousAnalytics from "stupendous-analytics-next";
 import { Analytics } from "@vercel/analytics/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../utils/chakra";
 import "../styles/global.css";
-
 import Navigation from "../components/Navigation";
 import Contact from "../components/Contact";
 import Pride from "../components/Pride";
@@ -53,16 +51,14 @@ function MyApp({ Component, pageProps }) {
         <meta name={"viewport"} content={"width=device-width"} />
       </Head>
       <ChakraProvider theme={theme}>
-        <Provider>
-          <Component {...pageProps} />
-          <Analytics />
-          <Footer />
-          <Pride />
-          <Navigation />
-          <Contact />
-          <Menu />
-          <Cursor />
-        </Provider>
+        <Component {...pageProps} />
+        <Analytics />
+        <Footer />
+        <Pride />
+        <Navigation />
+        <Contact />
+        <Menu />
+        <Cursor />
       </ChakraProvider>
     </>
   );

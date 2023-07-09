@@ -1,4 +1,3 @@
-import { useGlobal } from "../../lib/context";
 import {
   Container,
   Heading,
@@ -15,22 +14,15 @@ import {
   RiCustomerServiceLine,
 } from "react-icons/ri";
 import CTA from "../../components/CTA";
-import { useEffect } from "react";
 import FluidHead from "../../components/FluidHead";
 
 export default function WebAppDevelopment() {
-  const { setIsLoading } = useGlobal();
-
   const cards = [
     { heading: "CMS", icon: <RiFileSettingsLine size={32} /> },
     { heading: "E-Commerce", icon: <RiShoppingCartLine size={32} /> },
     { heading: "Help Desks", icon: <RiQuestionnaireLine size={32} /> },
     { heading: "CRM", icon: <RiCustomerServiceLine size={32} /> },
   ];
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
 
   return (
     <>

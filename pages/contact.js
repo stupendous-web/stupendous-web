@@ -1,5 +1,4 @@
 import NextLink from "next/link";
-import { useGlobal } from "../lib/context";
 import {
   RiCursorLine,
   RiMailLine,
@@ -23,11 +22,9 @@ import {
   useColorMode,
   Flex,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
 import FluidHead from "../components/FluidHead";
 
 export default function Contact() {
-  const { setIsLoading } = useGlobal();
   const { colorMode } = useColorMode();
 
   const contactLinks = [
@@ -76,10 +73,6 @@ export default function Contact() {
       icon: RiFileTextLine,
     },
   ];
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
 
   return (
     <>

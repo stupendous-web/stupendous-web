@@ -16,7 +16,6 @@ import {
 import NextLink from "next/link";
 import { RiArrowRightLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
 import stock4 from "../images/stock/4.jpg";
-import { useGlobal } from "../lib/context";
 import Image from "next/image";
 import CTAButton from "./CTAButton";
 import { useEffect, useState } from "react";
@@ -25,7 +24,6 @@ export default function Intro() {
   const [productIndex, setProductIndex] = useState(0);
   const [className, setClassName] = useState(undefined);
   const { colorMode } = useColorMode();
-  const { setIsLoading } = useGlobal();
 
   const products = ["websites", "web apps", "mobile apps"];
   const colors = ["primary.500", "blue.500", "teal.500"];
@@ -38,7 +36,7 @@ export default function Intro() {
       );
       setTimeout(() => {
         setClassName(undefined);
-      }, [1000]);
+      }, 1000);
     }, 2500);
   }, [productIndex]);
 
@@ -108,7 +106,6 @@ export default function Intro() {
               }
               fill
               style={{ objectFit: "cover" }}
-              onLoadingComplete={setIsLoading(false)}
               priority
             />
           </AspectRatio>

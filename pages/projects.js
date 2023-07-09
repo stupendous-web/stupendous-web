@@ -1,4 +1,3 @@
-import { useGlobal } from "../lib/context";
 import {
   Card,
   Container,
@@ -7,20 +6,11 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-
 import Project from "../components/Project";
 import CTA from "../components/CTA";
-
-import { useEffect } from "react";
 import FluidHead from "../components/FluidHead";
 
 export default function Projects() {
-  const { setIsLoading } = useGlobal();
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
-
   return (
     <>
       <FluidHead title={"Projects"} />

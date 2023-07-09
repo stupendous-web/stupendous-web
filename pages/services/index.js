@@ -1,5 +1,4 @@
 import NextLink from "next/link";
-import { useGlobal } from "../../lib/context";
 import {
   Container,
   Heading,
@@ -15,17 +14,11 @@ import {
 } from "@chakra-ui/react";
 import { RiArrowRightLine } from "react-icons/ri";
 import CTA from "../../components/CTA";
-import { useEffect } from "react";
 import CTAButton from "../../components/CTAButton";
 import FluidHead from "../../components/FluidHead";
 
 export default function Services() {
   const { colorMode } = useColorMode();
-  const { setIsLoading } = useGlobal();
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
 
   const services = [
     { href: "/website-design-services", anchor: "Website Design Services" },

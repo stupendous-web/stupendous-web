@@ -1,4 +1,3 @@
-import { useGlobal } from "../../lib/context";
 import {
   Container,
   Flex,
@@ -19,14 +18,11 @@ import {
   RiSlideshowLine,
   RiComputerLine,
 } from "react-icons/ri";
-import { useEffect } from "react";
 import NextLink from "next/link";
 import CTAButton from "../../components/CTAButton";
 import FluidHead from "../../components/FluidHead";
 
 export default function WebAppDevelopment() {
-  const { setIsLoading } = useGlobal();
-
   const cards = [
     {
       heading: "Product Brief",
@@ -42,10 +38,6 @@ export default function WebAppDevelopment() {
       icon: <RiComputerLine size={32} />,
     },
   ];
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
 
   return (
     <>

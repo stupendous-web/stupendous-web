@@ -1,5 +1,4 @@
 import FluidHead from "../components/FluidHead";
-import { useGlobal } from "../lib/context";
 import {
   Container,
   Flex,
@@ -31,7 +30,6 @@ import Image from "next/image";
 import stock0 from "../images/stock/0.jpg";
 
 export default function WebAppDevelopment() {
-  const { setIsLoading } = useGlobal();
   const { colorMode } = useColorMode();
 
   const cards = [
@@ -288,7 +286,6 @@ export default function WebAppDevelopment() {
                     }
                     fill
                     style={{ objectFit: "cover" }}
-                    onLoadingComplete={setIsLoading(false)}
                     priority
                   />
                 </AspectRatio>

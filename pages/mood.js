@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useGlobal } from "../lib/context";
 import {
   Box,
   Card,
@@ -14,8 +13,6 @@ import me from "../images/me.png";
 import FluidHead from "../components/FluidHead";
 
 export default function Mood() {
-  const { setIsLoading } = useGlobal();
-
   return (
     <>
       <FluidHead title={"Mood"} />
@@ -51,7 +48,6 @@ export default function Mood() {
                         marginRight: "1rem",
                       }}
                       width={100}
-                      onLoadingComplete={() => setIsLoading(false)}
                     />
                     <Text mt={-2}>
                       Hello, pioneers. I&apos;m Topher. People say I&apos;m INFP

@@ -1,7 +1,6 @@
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 import Image from "next/image";
 import NextLink from "next/link";
-import { useGlobal } from "../../lib/context";
 import axios from "axios";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -34,14 +33,7 @@ import FluidHead from "../../components/FluidHead";
 dayjs.extend(relativeTime);
 
 export default function Articles({ articles, tags }) {
-  const { setIsLoading } = useGlobal();
   const { colorMode } = useColorMode();
-
-  useEffect(() => {
-    if (!!articles?.length && !!tags?.length) {
-      setIsLoading(false);
-    }
-  }, [articles, tags]);
 
   const tagIcon = (tag) => {
     switch (tag) {

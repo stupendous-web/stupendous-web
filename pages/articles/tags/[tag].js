@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import Image from "next/image";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import { useGlobal } from "../../../lib/context";
 import axios from "axios";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -26,17 +24,10 @@ import FluidHead from "../../../components/FluidHead";
 dayjs.extend(relativeTime);
 
 export default function Articles({ articles }) {
-  const { setIsLoading } = useGlobal();
   const router = useRouter();
   const tag = `${router.query?.tag
     ?.charAt(0)
     .toUpperCase()}${router.query?.tag?.slice(1, router.query?.tag.length)}`;
-
-  useEffect(() => {
-    if (!!articles?.length) {
-      setIsLoading(false);
-    }
-  }, [articles]);
 
   return (
     <>

@@ -1,4 +1,3 @@
-import { useGlobal } from "../../lib/context";
 import {
   Container,
   Heading,
@@ -16,12 +15,9 @@ import {
   RiCoinLine,
 } from "react-icons/ri";
 import CTA from "../../components/CTA";
-import { useEffect } from "react";
 import FluidHead from "../../components/FluidHead";
 
 export default function WebAppDevelopment() {
-  const { setIsLoading } = useGlobal();
-
   const cards = [
     { heading: "iOS & Android Stores", icon: <RiShoppingBagLine size={32} /> },
     { heading: "Beautiful", icon: <RiPaintBrushLine size={32} /> },
@@ -29,10 +25,6 @@ export default function WebAppDevelopment() {
     { heading: "Sharable", icon: <RiShareLine size={32} /> },
     { heading: "Valuable", icon: <RiCoinLine size={32} /> },
   ];
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
 
   return (
     <>

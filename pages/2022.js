@@ -1,5 +1,4 @@
 import NextLink from "next/link";
-import { useGlobal } from "../lib/context";
 import CTA from "../components/CTA";
 import {
   Container,
@@ -12,16 +11,9 @@ import {
   Card,
   SimpleGrid,
 } from "@chakra-ui/react";
-import { useEffect } from "react";
 import FluidHead from "../components/FluidHead";
 
 export default function Review2022() {
-  const { setIsLoading } = useGlobal();
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
-
   return (
     <>
       <FluidHead title={"2022 in Review"} />
