@@ -16,7 +16,7 @@ import {
 import { RiArrowRightLine } from "react-icons/ri";
 import CTA from "../../components/CTA";
 import { useEffect } from "react";
-import CTAModal from "../../components/CTAModal";
+import CTAButton from "../../components/CTAButton";
 import FluidHead from "../../components/FluidHead";
 
 export default function Services() {
@@ -106,7 +106,7 @@ export default function Services() {
                     succeed.
                   </Text>
                   <Box my={8}>
-                    <CTAModal size={"lg"} />
+                    <CTAButton size={"lg"} />
                     <Link
                       as={NextLink}
                       href={"/services/software-consultation"}

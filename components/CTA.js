@@ -16,7 +16,7 @@ import NextLink from "next/link";
 import stock1 from "../images/stock/1.jpg";
 import { RiMailLine, RiPhoneLine, RiArrowRightLine } from "react-icons/ri";
 import Image from "next/image";
-import CTAModal from "./CTAModal";
+import CTAButton from "./CTAButton";
 
 export default function CTA() {
   return (
@@ -42,7 +42,7 @@ export default function CTA() {
                 </Text>
               </Box>
               <Box>
-                <CTAModal light />
+                <CTAButton light />
                 <Link
                   as={NextLink}
                   href={"/services/software-consultation"}

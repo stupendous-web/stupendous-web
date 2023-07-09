@@ -25,7 +25,7 @@ import {
 } from "react-icons/ri";
 import CTA from "../components/CTA";
 import LocalBusiness from "../components/json-ld/LocalBusiness";
-import CTAModal from "../components/CTAModal";
+import CTAButton from "../components/CTAButton";
 import NextLink from "next/link";
 import Image from "next/image";
 import stock0 from "../images/stock/0.jpg";
@@ -312,7 +312,7 @@ export default function WebAppDevelopment() {
                       </Text>
                     </Box>
                     <Box>
-                      <CTAModal />
+                      <CTAButton />
                       <Link
                         as={NextLink}
                         href={"/services/software-consultation"}

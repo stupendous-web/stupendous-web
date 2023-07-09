@@ -21,7 +21,7 @@ import {
 } from "react-icons/ri";
 import { useEffect } from "react";
 import NextLink from "next/link";
-import CTAModal from "../../components/CTAModal";
+import CTAButton from "../../components/CTAButton";
 import FluidHead from "../../components/FluidHead";
 
 export default function WebAppDevelopment() {
@@ -132,7 +132,7 @@ export default function WebAppDevelopment() {
                     seeing you get your product out to the world!
                   </Text>
                   <Box mt={4} mb={[4, 8]}>
-                    <CTAModal size={"lg"} />
+                    <CTAButton size={"lg"} />
                   </Box>
                   <Text>
                     Still have questions? Email{" "}

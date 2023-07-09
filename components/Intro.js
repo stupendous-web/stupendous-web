@@ -18,7 +18,7 @@ import { RiArrowRightLine, RiMailLine, RiPhoneLine } from "react-icons/ri";
 import stock4 from "../images/stock/4.jpg";
 import { useGlobal } from "../lib/context";
 import Image from "next/image";
-import CTAModal from "./CTAModal";
+import CTAButton from "./CTAButton";
 import { useEffect, useState } from "react";
 
 export default function Intro() {
@@ -69,7 +69,7 @@ export default function Intro() {
                   community with software development services that improve
                   their brand credibility.
                 </Text>
-                <CTAModal />
+                <CTAButton />
                 <Link
                   as={NextLink}
                   href={"/services/software-consultation"}
