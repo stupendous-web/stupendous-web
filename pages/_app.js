@@ -13,7 +13,6 @@ import Contact from "../components/Contact";
 import Pride from "../components/Pride";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
-import Loading from "../components/Loading";
 import Cursor from "../components/Cursor";
 
 function MyApp({ Component, pageProps }) {
@@ -62,7 +61,6 @@ function MyApp({ Component, pageProps }) {
           <Navigation />
           <Contact />
           <Menu />
-          <Loading />
           <Cursor />
         </Provider>
       </ChakraProvider>
