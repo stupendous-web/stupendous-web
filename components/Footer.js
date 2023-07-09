@@ -96,7 +96,7 @@ export default function Footer() {
                   <Link
                     as={NextLink}
                     href={link.href}
-                    title={`${link.title} | Software Development Services | Stupendous Web`}
+                    title={`${link.title} | Web and App Development Services | Stupendous Web`}
                   >
                     {link.title}
                   </Link>
@@ -113,7 +113,7 @@ export default function Footer() {
                   <Link
                     as={NextLink}
                     href={link.href}
-                    title={`${link.title} | Software Development Services | Stupendous Web`}
+                    title={`${link.title} | Web and App Development Services | Stupendous Web`}
                   >
                     {link.title}
                   </Link>
@@ -126,7 +126,7 @@ export default function Footer() {
                   <Link
                     as={NextLink}
                     href={link.href}
-                    title={`${link.title} | Software Development Services | Stupendous Web`}
+                    title={`${link.title} | Web and App Development Services | Stupendous Web`}
                   >
                     {link.title}
                   </Link>
@@ -160,12 +160,12 @@ export default function Footer() {
                 as={NextLink}
                 href={"/"}
                 title={
-                  "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
+                  "Web and App Development Services | Stupendous Web | If you want to build community, build stupendous software"
                 }
               >
                 Stupendous Web
               </Link>{" "}
-              2022. All rights reserved.
+              2021 - 2023. All rights reserved.
             </Text>
           </Card>
         </GridItem>

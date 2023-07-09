@@ -42,9 +42,9 @@ export default function Solutions() {
 
   return (
     <Container maxW={"container.xl"} pt={[4, 16]}>
-      <SimpleGrid columns={8} spacing={2} h={["100%", "400px"]} mb={2}>
+      <SimpleGrid columns={8} spacing={2} mb={2}>
         <GridItem colSpan={[8, 3]}>
-          <SimpleGrid columns={3} spacing={2} h={["100%", "400px"]}>
+          <SimpleGrid columns={3} spacing={2}>
             {solutions.map((solution) => (
               <GridItem
                 key={solution.anchor}
@@ -54,7 +54,7 @@ export default function Solutions() {
                 <Link
                   as={NextLink}
                   href={`/${solution.href}`}
-                  title={`${solution.title} | Software Development Services | Stupendous Web`}
+                  title={`${solution.title} | Web and App Development Services | Stupendous Web`}
                 >
                   <Card>
                     <Flex
@@ -73,29 +73,31 @@ export default function Solutions() {
             ))}
           </SimpleGrid>
         </GridItem>
-        <GridItem colSpan={[8, 8, 8, 8, 5, 2]}>
+        <GridItem colSpan={[8, 3]}>
           <Card variant={"transparent"} pt={2} pl={4}>
-            <Flex direction={"column"} justify={"space-between"} h={"100%"}>
-              <Box>
-                <Heading as={"h1"}>Software Development Services</Heading>
-                <Text>
-                  All my software development services include hosting, support,
-                  search engine optimization (SEO), app store optimization
-                  (ASO), payment processing, publishing, analytics, and more.
-                </Text>
-              </Box>
-              <Link as={NextLink} href={"/services"}>
-                <Button
-                  bg={"transparent"}
-                  border={"solid 1px"}
-                  _hover={{ bg: "transparent" }}
-                  rightIcon={<RiArrowRightLine />}
-                  mb={[0, -2]}
-                >
-                  <Box mr={4}>Discover More</Box>
-                </Button>
-              </Link>
-            </Flex>
+            <Heading as={"h1"}>Web and App Development Services</Heading>
+            <Text>
+              Do your thing. All of my web and app development services include
+              hosting, support, a payment processor, a CMS, analytics, and more
+              so you can focus on creating your product.
+            </Text>
+            <Link
+              as={NextLink}
+              href={"/services"}
+              title={
+                "Services | Web and App Development Services | Stupendous Web"
+              }
+            >
+              <Button
+                bg={"transparent"}
+                border={"solid 1px"}
+                _hover={{ bg: "transparent" }}
+                rightIcon={<RiArrowRightLine />}
+                mb={[0, -2]}
+              >
+                <Box mr={4}>Discover More</Box>
+              </Button>
+            </Link>
           </Card>
         </GridItem>
       </SimpleGrid>

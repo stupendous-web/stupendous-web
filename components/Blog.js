@@ -20,7 +20,7 @@ export default function Blog({ articles }) {
       <Link
         as={NextLink}
         href={"/articles"}
-        title={"Articles | Software Development Services | Stupendous Web"}
+        title={"Articles | Web and App Development Services | Stupendous Web"}
       >
         <Heading p={4}>What&apos;s Good</Heading>
       </Link>
@@ -31,7 +31,7 @@ export default function Blog({ articles }) {
               <Link
                 as={NextLink}
                 href={`/articles/${article?.slug}`}
-                title={`${article?.title} | Software Development Services | Stupendous Web`}
+                title={`${article?.title} | Web and App Development Services | Stupendous Web`}
               >
                 <Box
                   h={"100%"}
@@ -44,7 +44,7 @@ export default function Blog({ articles }) {
                 >
                   <Image
                     src={article?.featured_image}
-                    alt={`${article?.title} | Software Development Services | Stupendous Web`}
+                    alt={`${article?.title} | Web and App Development Services | Stupendous Web`}
                     fill
                     style={{ objectFit: "cover" }}
                   />
@@ -58,7 +58,7 @@ export default function Blog({ articles }) {
                     <Link
                       as={NextLink}
                       href={`/articles/${article?.slug}`}
-                      title={`${article?.title} | Software Development Services | Stupendous Web`}
+                      title={`${article?.title} | Web and App Development Services | Stupendous Web`}
                     >
                       <Text lineHeight={1.5}>{article?.title}</Text>
                     </Link>
@@ -66,7 +66,7 @@ export default function Blog({ articles }) {
                   <Link
                     as={NextLink}
                     href={`/articles/${article?.slug}`}
-                    title={`${article?.title} | Software Development Services | Stupendous Web`}
+                    title={`${article?.title} | Web and App Development Services | Stupendous Web`}
                   >
                     <RiArrowRightLine size={16} />
                   </Link>

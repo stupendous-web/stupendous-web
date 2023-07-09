@@ -38,12 +38,14 @@ export default function Navigation() {
               as={NextLink}
               href={"/"}
               title={
-                "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
+                "Web and App Development Services | Stupendous Web | If you want to build community, build stupendous software"
               }
             >
               <Image
                 src={logo}
-                alt={"Navigation Logo | Software Development Services"}
+                alt={
+                  "The Logo for Stupendous Web's web and app development services"
+                }
               />
             </Link>
           </Box>
@@ -58,7 +60,7 @@ export default function Navigation() {
                 key={link.href}
                 as={NextLink}
                 href={`/${link.href}`}
-                title={`${link.title} | Software Development Services | Stupendous Web`}
+                title={`${link.title} | Web and App Development Services | Stupendous Web`}
                 fontWeight={"bold"}
               >
                 <Text lineHeight={1} m={0} px={4}>

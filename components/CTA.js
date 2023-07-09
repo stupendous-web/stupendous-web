@@ -29,16 +29,14 @@ export default function CTA() {
                 <Heading
                   as={"p"}
                   color={"white"}
-                  fontSize={["2rem", "4rem"]}
+                  fontSize={["2rem", "3rem"]}
                   mb={4}
                 >
-                  Start your Project Now
+                  Your Consultation is now FREE!
                 </Heading>
                 <Text color={"white"}>
-                  Requesting your estimate takes as little as seconds and
-                  you&apos;ll receive it via email in just a few hours after.
-                  Click below to take the first step to connecting with your
-                  audiences.
+                  Click below to schedule your consultation. Your audience is
+                  waiting. Take the first step to connecting with them.
                 </Text>
               </Box>
               <Box>
@@ -47,7 +45,7 @@ export default function CTA() {
                   as={NextLink}
                   href={"/services/software-consultation"}
                   title={
-                    "Software Consultation | Software Development Services | Stupendous Web"
+                    "Software Consultation | Web and App Development Services | Stupendous Web"
                   }
                 >
                   <Button
@@ -76,7 +74,7 @@ export default function CTA() {
             <Image
               src={stock1}
               alt={
-                "Web Developer Giving a Consultation | Software Development Services"
+                "A professional developer giving a consultation as part of his web and app development services"
               }
               fill
               style={{ objectFit: "cover" }}

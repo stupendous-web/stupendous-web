@@ -63,16 +63,16 @@ export default function Intro() {
               </Box>
               <Box>
                 <Text>
-                  I help people with something to share to engage with their
-                  community with software development services that improve
-                  their brand credibility.
+                  Got something to share? Engage with your community and improve
+                  your brand and credibility with my web and app development
+                  services.
                 </Text>
                 <CTAButton />
                 <Link
                   as={NextLink}
                   href={"/services/software-consultation"}
                   title={
-                    "Software Consultation | Software Development Services | Stupendous Web"
+                    "Software Consultation | Web and App Development Services | Stupendous Web"
                   }
                 >
                   <Button
@@ -102,7 +102,7 @@ export default function Intro() {
             <Image
               src={stock4}
               alt={
-                "Web Developer on Computer Talking | Software Development Services"
+                "Web developer on computer talking about web and app development services"
               }
               fill
               style={{ objectFit: "cover" }}

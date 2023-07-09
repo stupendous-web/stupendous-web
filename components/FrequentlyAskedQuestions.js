@@ -29,19 +29,19 @@ export default function FrequentlyAskedQuestions() {
       ),
     },
     {
-      question: "Do you build iOS and Android apps?",
+      question: "Do you build mobile apps? Even Android?",
       answer: (
         <Text>
-          Yes! In fact, a phone app is a powerful tool for keeping close to
-          existing and even new audiences. Building a website, web app, and
-          phone app side by side is actually pretty easy to do with the tools I
-          use. It&apos;s a great idea to take advantage of an app version of
-          your project early on in the process.
+          Yes, I build both iOS and Android apps! In fact, a mobile app is a
+          powerful tool for keeping close to existing and even new audiences.
+          Building a website, web app, and mobile app side by side is actually
+          pretty common. It&apos;s a great idea to take advantage of a mobile
+          version of your project early on in the process.
         </Text>
       ),
     },
     {
-      question: "How much does software development cost?",
+      question: "How much do your services cost?",
       answer: (
         <Text>
           That depends on the scope of the project. I charge a flat hourly rate
@@ -51,11 +51,11 @@ export default function FrequentlyAskedQuestions() {
           necessary and you will be charged every two weeks during development
           via an invoice to your email that you can pay online. I also offer
           monthly long term support to keep your project online and running
-          smoothly for a monthly fee. First we need to meet! I want to
-          understand who you are and what you&apos;re working on. Then,
-          we&apos;ll discuss what you need and I can provide a more accurate
-          estimate of the cost of your project. Schedule a consultation to learn
-          more about my pricing.
+          smoothly for a monthly fee after your project is complete. First we
+          need to meet! I want to understand who you are and what you&apos;re
+          working on. Then, we&apos;ll discuss what you need and I can provide a
+          more accurate estimate of the cost of your project. Schedule your free
+          consultation to learn more about my pricing.
         </Text>
       ),
     },
@@ -63,21 +63,21 @@ export default function FrequentlyAskedQuestions() {
       question: "How long do I have to wait for my website or software?",
       answer: (
         <Text>
-          I can deliver a website or web app in just a few weeks, sometimes
-          sooner. Obviously it may take longer for more demanding projects and
-          we have to account for being thorough. Being thorough means saving
-          time and expenses on reworking issues as well as creating you a more
-          valuable product.
+          I can deliver a website or app in just a few weeks, sometimes sooner.
+          Obviously it may take longer for more demanding projects and we have
+          to account for being thorough. Being thorough means saving time and
+          expenses on reworking issues as well as creating you a more valuable
+          product.
         </Text>
       ),
     },
     {
-      question: "What are your qualifications as a web designer and developer?",
+      question: "What are your qualifications?",
       answer: (
         <Text>
           I love exercising both the creative and logical sides of my brain to
           build awesome and useful products for people like you. Not only do I
-          have a knack for both but I have a degree in web application
+          have a knack for both, but I have a degree in web application
           development from Colorado State University as well as many years of
           experience.
         </Text>

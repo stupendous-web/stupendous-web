@@ -59,12 +59,12 @@ export default function AppsIndustries() {
               <Box>
                 <Heading>Engage with your Audience</Heading>
                 <Text>
-                  My software development services will excel you and your work
-                  far past your competitors and their websites! With the added
-                  power of a database and powerful server technologies, your web
-                  and phone apps will be full of useful features. This power
-                  [use it wisely] let&apos;s you engage with your audiences in
-                  many fun, creative, and profitable ways:
+                  My web and app development services will excel you and your
+                  work far past others and their websites! With the power of
+                  cloud computing technology, your web and mobile apps will be
+                  full of useful features. This power [use it wisely] let&apos;s
+                  you engage with your audiences in many fun, creative, and
+                  profitable ways:
                 </Text>
               </Box>
               <Box>
@@ -87,10 +87,10 @@ export default function AppsIndustries() {
               <Box>
                 <Heading>Expand your Reach</Heading>
                 <Text>
-                  Do what you do! Web and phone apps can be useful in any
-                  industry. My software development services provide people like
-                  you with the tools they need to grow their business while
-                  reaching existing and new customers and increasing
+                  Websites, web apps, and mobile apps are useful in any
+                  industry. My web and app development services provide people
+                  like you with the tools they need to grow their business.
+                  You&apos;ll reach existing and new customers and increase
                   profitability so you can continue to do what you love.
                 </Text>
               </Box>
