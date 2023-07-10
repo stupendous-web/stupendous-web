@@ -22,7 +22,10 @@ export default function Services() {
 
   const services = [
     { href: "/website-design-services", anchor: "Website Design Services" },
-    { href: "/services/web-app-development", anchor: "Web App Development" },
+    {
+      href: "/web-application-development-services",
+      anchor: "Web Application Development Services",
+    },
     {
       href: "/services/iphone-app-development-services",
       anchor: "iPhone App Development Services",

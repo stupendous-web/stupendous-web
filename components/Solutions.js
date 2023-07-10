@@ -27,9 +27,9 @@ export default function Solutions() {
       icon: <RiPagesLine size={32} />,
     },
     {
-      href: "/services/web-app-development",
+      href: "/web-application-development-services",
       anchor: "Web Apps",
-      title: "Web App Development",
+      title: "Web Application Development",
       icon: <RiWindowLine size={32} />,
     },
     {

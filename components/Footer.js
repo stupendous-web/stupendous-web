@@ -32,7 +32,10 @@ export default function Footer() {
 
   const services = [
     { href: "/website-design-services", title: "Website Design Services" },
-    { href: "/services/web-app-development", title: "Web App Development" },
+    {
+      href: "/web-application-development-services",
+      title: "Web Application Development Services",
+    },
     {
       href: "/services/iphone-app-development-services",
       title: "iPhone App Development Services",
