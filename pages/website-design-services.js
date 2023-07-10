@@ -8,11 +8,6 @@ import {
   GridItem,
   Card,
   Divider,
-  Link,
-  Button,
-  Box,
-  useColorMode,
-  AspectRatio,
 } from "@chakra-ui/react";
 import {
   RiCoinLine,
@@ -20,18 +15,12 @@ import {
   RiCursorLine,
   RiPaintBrushLine,
   RiSearchEyeLine,
-  RiArrowRightLine,
 } from "react-icons/ri";
 import CTA from "../components/CTA";
 import CustomLocalBusinessJsonLd from "../components/json-ld/CustomLocalBusinessJsonLd";
-import CTAButton from "../components/CTAButton";
-import NextLink from "next/link";
-import Image from "next/image";
-import stock0 from "../images/stock/0.jpg";
+import CTARow from "../CTARow";
 
 export default function WebAppDevelopment() {
-  const { colorMode } = useColorMode();
-
   const cards = [
     { heading: "Valuable", icon: <RiCoinLine size={32} /> },
     { heading: "Unique", icon: <RiStarLine size={32} /> },
@@ -270,69 +259,7 @@ export default function WebAppDevelopment() {
                   />
                 </Card>
               </GridItem>
-              <GridItem colSpan={[5, 2]}>
-                <AspectRatio
-                  ratio={1}
-                  shadow={"md"}
-                  transition={"all .66s"}
-                  borderRadius={"md"}
-                  overflow={"hidden"}
-                  _hover={{ shadow: "hover" }}
-                >
-                  <Image
-                    src={stock0}
-                    alt={
-                      "People gathered around computer talking about website design services"
-                    }
-                    fill
-                    style={{ objectFit: "cover" }}
-                    priority
-                  />
-                </AspectRatio>
-              </GridItem>
-              <GridItem colSpan={[5, 3]}>
-                <Card>
-                  <Flex
-                    h={"100%"}
-                    direction={"column"}
-                    justify={"space-between"}
-                  >
-                    <Box>
-                      <Heading as={"p"} mb={4}>
-                        Start your Project Now
-                      </Heading>
-                      <Text>
-                        Requesting your estimate takes as little as seconds and
-                        you&apos;ll receive it via email in just a few hours
-                        after. Click below to take the first step to connecting
-                        with your audiences.
-                      </Text>
-                    </Box>
-                    <Box>
-                      <CTAButton />
-                      <Link
-                        as={NextLink}
-                        href={"/services/software-consultation"}
-                        title={
-                          "Software Consultation | Web and App Development Services | Stupendous Web"
-                        }
-                      >
-                        <Button
-                          rightIcon={<RiArrowRightLine />}
-                          bg={colorMode === "dark" ? "white" : "black"}
-                          color={colorMode === "dark" ? "black" : "white"}
-                          border={"solid 1px"}
-                          _hover={{
-                            bg: colorMode === "dark" ? "white" : "black",
-                          }}
-                        >
-                          <Box mr={4}>Learn More</Box>
-                        </Button>
-                      </Link>
-                    </Box>
-                  </Flex>
-                </Card>
-              </GridItem>
+              <CTARow />
               <GridItem colSpan={5}>
                 <Card variant={"transparent"}>
                   <Heading>Small Business Website Design</Heading>
