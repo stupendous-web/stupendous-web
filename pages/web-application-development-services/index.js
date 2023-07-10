@@ -46,12 +46,12 @@ export default function WebAppDevelopment() {
       <FluidHead
         title={"Web Application Development Services"}
         description={
-          "Need a new website that does more than the rest? Discover web design services that help you achieve your goals. Schedule your FREE consultation to receive your..."
+          "Have an idea for a new online tool that your customers will love? Access web application planning, design, and development now. Start yours today for your FREE..."
         }
       />
       <CustomLocalBusinessJsonLd
         description={
-          "Need a new website that does more than the rest? Discover web design services that help you achieve your goals. Schedule your FREE consultation to receive your..."
+          "Have an idea for a new online tool that your customers will love? Access web application planning, design, and development now. Start yours today for your FREE..."
         }
       />
       <Container maxW={"container.xl"} pt={[4, 16]}>
