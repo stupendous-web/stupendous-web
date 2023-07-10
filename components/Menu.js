@@ -59,7 +59,7 @@ export default function Menu() {
                   href={"/" + link.href}
                   title={
                     link.title +
-                    " | Software Development Services | Stupendous Web"
+                    " | Web and App Development Services | Stupendous Web"
                   }
                   onClick={() => hideMenu()}
                 >
@@ -77,12 +77,12 @@ export default function Menu() {
           as={NextLink}
           href={"/"}
           title={
-            "Software Development Services | Stupendous Web | If you want to build community, build stupendous software"
+            "Web and App Development Services | Stupendous Web | If you want to build community, build stupendous software"
           }
         >
           <Image
             src={logo}
-            alt={"Navigation Logo | Software Development Services"}
+            alt={"Logo for Stupendous Web's web and app development services"}
           />
         </Link>
       </Box>

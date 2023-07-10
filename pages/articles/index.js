@@ -69,7 +69,7 @@ export default function Articles({ articles, tags }) {
                   <Link
                     key={tag.slug}
                     href={`/articles/tags/${tag.slug}`}
-                    title={`${tag.name} | Software Development Services | Stupendous Web`}
+                    title={`${tag.name} | Web and App Development Services | Stupendous Web`}
                   >
                     <Box>
                       <Tag
@@ -97,13 +97,13 @@ export default function Articles({ articles, tags }) {
                   href={"/articles/" + articles[0]?.slug}
                   title={
                     articles[0]?.title +
-                    " | Software Development Services | Stupendous Web"
+                    " | Web and App Development Services | Stupendous Web"
                   }
                 >
                   <AspectRatio ratio={2} mb={4}>
                     <Image
                       src={articles[0]?.featured_image}
-                      alt={`${articles[0]?.title} | Software Development Services | Stupendous Web`}
+                      alt={`${articles[0]?.title} | Web and App Development Services | Stupendous Web`}
                       fill
                       style={{ objectFit: "cover" }}
                     />
@@ -116,7 +116,7 @@ export default function Articles({ articles, tags }) {
                     href={"/articles/" + articles[0]?.slug}
                     title={
                       articles[0]?.title +
-                      " | Software Development Services | Stupendous Web"
+                      " | Web and App Development Services | Stupendous Web"
                     }
                   >
                     {articles[0]?.title}
@@ -178,13 +178,13 @@ export default function Articles({ articles, tags }) {
                         href={"/articles/" + article?.slug}
                         title={
                           article?.title +
-                          " | Software Development Services | Stupendous Web"
+                          " | Web and App Development Services | Stupendous Web"
                         }
                       >
                         <AspectRatio ratio={2} mb={4}>
                           <Image
                             src={article?.featured_image}
-                            alt={`${article?.title} | Software Development Services | Stupendous Web`}
+                            alt={`${article?.title} | Web and App Development Services | Stupendous Web`}
                             fill
                             style={{ objectFit: "cover" }}
                           />
@@ -202,7 +202,7 @@ export default function Articles({ articles, tags }) {
                             href={"/articles/" + article?.slug}
                             title={
                               article?.title +
-                              " | Software Development Services | Stupendous Web"
+                              " | Web and App Development Services | Stupendous Web"
                             }
                           >
                             {article?.title}

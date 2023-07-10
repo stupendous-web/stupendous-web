@@ -33,7 +33,7 @@ export default function Contact() {
       text: "Request an estimate for your consultation in under two minutes and receive it in under a few hours right to your inbox!",
       href: "/services/software-consultation",
       title:
-        "Software Consultation | Software Development Services | Stupendous Web",
+        "Software Consultation | Web and App Development Services | Stupendous Web",
       icon: <RiCursorLine size={32} />,
     },
     {

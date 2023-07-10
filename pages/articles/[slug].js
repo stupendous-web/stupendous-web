@@ -28,7 +28,7 @@ export default function Article({ article }) {
   return (
     <>
       <Head>
-        <title>{`${article?.title} | Software Development Services | Stupendous Web`}</title>
+        <title>{`${article?.title} | Web and App Development Services | Stupendous Web`}</title>
         <meta
           name={"description"}
           content={article?.excerpt
@@ -41,7 +41,7 @@ export default function Article({ article }) {
         />
         <meta
           property={"og:title"}
-          content={`${article?.title} | Software Development Services | Stupendous Web`}
+          content={`${article?.title} | Web and App Development Services | Stupendous Web`}
         />
         <meta property={"og:image"} content={article?.featured_image} />
         <meta property={"og:type"} content={"website"} />

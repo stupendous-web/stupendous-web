@@ -22,11 +22,17 @@ export default function Project({
 
   return (
     <Card h={"object-fit"} mb={4}>
-      <Image src={context[images[0]]} alt={"Software Development Services"} />
+      <Image
+        src={context[images[0]]}
+        alt={"Web and App Development Services"}
+      />
       <SimpleGrid columns={5} spacing={4} mt={4}>
         {images?.slice(1, 4).map((image) => (
           <GridItem colSpan={1} key={image}>
-            <Image src={context[image]} alt={"Software Development Services"} />
+            <Image
+              src={context[image]}
+              alt={"Web and App Development Services"}
+            />
           </GridItem>
         ))}
       </SimpleGrid>

@@ -319,7 +319,7 @@ export default function WebAppDevelopment() {
                         as={NextLink}
                         href={"/services/software-consultation"}
                         title={
-                          "Software Consultation | Software Development Services | Stupendous Web"
+                          "Software Consultation | Web and App Development Services | Stupendous Web"
                         }
                       >
                         <Button

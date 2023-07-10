@@ -107,7 +107,7 @@ export default function Services() {
                       as={NextLink}
                       href={"/services/software-consultation"}
                       title={
-                        "Software Consultation | Software Development Services | Stupendous Web"
+                        "Software Consultation | Web and App Development Services | Stupendous Web"
                       }
                     >
                       <Button
@@ -166,7 +166,7 @@ export default function Services() {
                           <Link
                             as={NextLink}
                             href={`/${service.href}`}
-                            title={`${service.anchor} | Software Development Services | Stupendous Web`}
+                            title={`${service.anchor} | Web and App Development Services | Stupendous Web`}
                           >
                             <Heading as={"h3"} fontSize={"1rem"} mb={4}>
                               {service.anchor}
@@ -182,7 +182,7 @@ export default function Services() {
                         <Link
                           as={NextLink}
                           href={`/${service.href}`}
-                          title={`${service.anchor} | Software Development Services | Stupendous Web`}
+                          title={`${service.anchor} | Web and App Development Services | Stupendous Web`}
                         >
                           <>
                             {service?.icon ? (

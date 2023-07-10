@@ -9,7 +9,9 @@ export default function Pride() {
         src={pride}
         height={36}
         width={36}
-        alt={"Gay Owned Software Development Services"}
+        alt={
+          "LGBTQ+ heart to reflect pride in these web and app development services and our community"
+        }
       />
     </Box>
   );

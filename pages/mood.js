@@ -25,9 +25,9 @@ export default function Mood() {
               </Heading>
               <Text as={"code"}>
                 Do you value meaningful work, tolerance, equality, creativity,
-                and authenticity? My software development services help people
-                like you to engage with their audiences and tribes in creative
-                and impactful ways.{" "}
+                and authenticity? My web and app development services help
+                people like you to engage with their audiences and tribes in
+                creative and impactful ways.{" "}
                 <Text as={"span"} className={"flash"}>
                   ▌
                 </Text>
@@ -41,7 +41,9 @@ export default function Mood() {
                   <Box>
                     <Image
                       src={me}
-                      alt={"It's me dears! | Software Development Services"}
+                      alt={
+                        "Topher excited about web and app development services"
+                      }
                       style={{
                         borderRadius: "50px",
                         float: "left",

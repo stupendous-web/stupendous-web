@@ -32,7 +32,7 @@ export default function Articles({ articles }) {
   return (
     <>
       <FluidHead
-        title={`${tag} | Software Development Services | Stupendous Web`}
+        title={`${tag} | Web and App Development Services | Stupendous Web`}
       />
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <SimpleGrid columns={8} spacing={2}>
@@ -56,13 +56,13 @@ export default function Articles({ articles }) {
                   href={"/articles/" + articles[0]?.slug}
                   title={
                     articles[0]?.title +
-                    " | Software Development Services | Stupendous Web"
+                    " | Web and App Development Services | Stupendous Web"
                   }
                 >
                   <AspectRatio ratio={2} mb={4}>
                     <Image
                       src={articles[0]?.featured_image}
-                      alt={`${articles[0]?.title} | Software Development Services | Stupendous Web`}
+                      alt={`${articles[0]?.title} | Web and App Development Services | Stupendous Web`}
                       fill
                       style={{ objectFit: "cover" }}
                     />
@@ -76,7 +76,7 @@ export default function Articles({ articles }) {
                       href={"/articles/" + articles[0]?.slug}
                       title={
                         articles[0]?.title +
-                        " | Software Development Services | Stupendous Web"
+                        " | Web and App Development Services | Stupendous Web"
                       }
                     >
                       {articles[0]?.title}
@@ -132,7 +132,7 @@ export default function Articles({ articles }) {
                             href={"/articles/" + article?.slug}
                             title={
                               article?.title +
-                              " | Software Development Services | Stupendous Web"
+                              " | Web and App Development Services | Stupendous Web"
                             }
                           >
                             <AspectRatio maxW={"100%"} ratio={2} mb={4}>
@@ -150,7 +150,7 @@ export default function Articles({ articles }) {
                             href={"/articles/" + article?.slug}
                             title={
                               article?.title +
-                              " | Software Development Services | Stupendous Web"
+                              " | Web and App Development Services | Stupendous Web"
                             }
                           >
                             {article?.title}
