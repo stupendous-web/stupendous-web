@@ -3,7 +3,6 @@ import Head from "next/head";
 import NextLink from "next/link";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
-import { ArticleJsonLd } from "next-seo";
 import axios from "axios";
 import {
   AspectRatio,
@@ -19,6 +18,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import CTA from "../../components/CTA";
+import CustomArticleJsonLd from "../../components/json-ld/CustomArticleJsonLd";
 dayjs.extend(relativeTime);
 
 export default function Article({ article }) {
@@ -46,21 +46,12 @@ export default function Article({ article }) {
         <meta property={"og:image"} content={article?.featured_image} />
         <meta property={"og:type"} content={"website"} />
       </Head>
-      <ArticleJsonLd
+      <CustomArticleJsonLd
         url={`https://stupendousweb.com/articles/${article?.slug}`}
         title={article?.title}
         description={article?.excerpt}
-        images={[article?.featured_image]}
+        image={article?.featured_image}
         datePublished={dayjs(article?.date).toDate()}
-        authorName={[
-          {
-            name: "Topher",
-            url: "https://stupendousweb.com",
-          },
-        ]}
-        publisherName={"Stupendous Web"}
-        publisherLogo={"https://stupendousweb.com/images/logo.png"}
-        isAccessibleForFree={true}
       />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>

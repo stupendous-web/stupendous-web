@@ -23,7 +23,7 @@ import {
   RiArrowRightLine,
 } from "react-icons/ri";
 import CTA from "../components/CTA";
-import LocalBusiness from "../components/json-ld/LocalBusiness";
+import CustomLocalBusinessJsonLd from "../components/json-ld/CustomLocalBusinessJsonLd";
 import CTAButton from "../components/CTAButton";
 import NextLink from "next/link";
 import Image from "next/image";
@@ -62,7 +62,7 @@ export default function WebAppDevelopment() {
           "Need a new website that does more than the rest? Discover web design services that help you achieve your goals. Schedule your FREE consultation to receive your..."
         }
       />
-      <LocalBusiness
+      <CustomLocalBusinessJsonLd
         description={
           "Need a new website that does more than the rest? Discover web design services that help you achieve your goals. Schedule your FREE consultation to receive your..."
         }

@@ -7,13 +7,13 @@ import CTA from "../components/CTA";
 import Solutions from "../components/Solutions";
 import AppsIndustries from "../components/AppsIndustries";
 import Intro from "../components/Intro";
-import LocalBusiness from "../components/json-ld/LocalBusiness";
+import CustomLocalBusinessJsonLd from "../components/json-ld/CustomLocalBusinessJsonLd";
 
 export default function Home({ articles }) {
   return (
     <>
       <FluidHead />
-      <LocalBusiness />
+      <CustomLocalBusinessJsonLd />
       <Intro />
       <Solutions />
       <Testimonials />
