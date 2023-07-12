@@ -20,7 +20,18 @@ export default function FluidHead({
             : "Stupendous Web"
         }`}
       </title>
-      <meta property={"og:title"} content={title} />
+      <meta
+        property={"og:title"}
+        content={`${title} | ${
+          router.pathname === "/"
+            ? "Stupendous Web"
+            : "Web and App Development Services"
+        } | ${
+          router.pathname === "/"
+            ? "If you want to build community, build stupendous software."
+            : "Stupendous Web"
+        }`}
+      />
       <meta name={"description"} content={description} />
       <meta property={"og:description"} content={description} />
     </Head>
