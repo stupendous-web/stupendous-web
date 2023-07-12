@@ -6,32 +6,20 @@ export default function FluidHead({
   description = "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority.",
 }) {
   const router = useRouter();
+  const tail = `${
+    router.pathname === "/"
+      ? "Stupendous Web"
+      : "Web and App Development Services"
+  } | ${
+    router.pathname === "/"
+      ? "If you want to build community, build stupendous software."
+      : "Stupendous Web"
+  }`;
 
   return (
     <Head>
-      <title>
-        {`${title} | ${
-          router.pathname === "/"
-            ? "Stupendous Web"
-            : "Web and App Development Services"
-        } | ${
-          router.pathname === "/"
-            ? "If you want to build community, build stupendous software."
-            : "Stupendous Web"
-        }`}
-      </title>
-      <meta
-        property={"og:title"}
-        content={`${title} | ${
-          router.pathname === "/"
-            ? "Stupendous Web"
-            : "Web and App Development Services"
-        } | ${
-          router.pathname === "/"
-            ? "If you want to build community, build stupendous software."
-            : "Stupendous Web"
-        }`}
-      />
+      <title>{`${title} | ${tail}`}</title>
+      <meta property={"og:title"} content={`${title} | ${tail}`} />
       <meta name={"description"} content={description} />
       <meta property={"og:description"} content={description} />
     </Head>
