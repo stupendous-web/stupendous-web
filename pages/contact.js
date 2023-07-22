@@ -30,10 +30,8 @@ export default function Contact() {
   const contactLinks = [
     {
       heading: "Get Started Now!",
-      text: "Request an estimate for your consultation in under two minutes and receive it in under a few hours right to your inbox!",
-      href: "/services/software-consultation",
-      title:
-        "Software Consultation | Web and App Development Services | Stupendous Web",
+      text: "Schedule your free consultation.",
+      href: "https://cal.com/stupendousweb/consultation",
       icon: <RiCursorLine size={32} />,
     },
     {
@@ -63,8 +61,7 @@ export default function Contact() {
     },
     {
       anchor: "Analytics",
-      title: "NextJS Website Analytics Dashboard",
-      href: "https://stupendousanalytics.com",
+      href: "https://analytics.google.com",
       icon: RiPieChartLine,
     },
     {
@@ -113,7 +110,7 @@ export default function Contact() {
                       justify={"space-between"}
                       h={"100%"}
                     >
-                      <Link as={NextLink} href={link.href} title={link.title}>
+                      <Link as={NextLink} href={link.href}>
                         <Heading
                           color={index === 0 ? "white" : undefined}
                           mb={4}
@@ -127,7 +124,6 @@ export default function Contact() {
                       <Link
                         as={NextLink}
                         href={link.href}
-                        title={link.title}
                         color={index === 0 ? "white" : undefined}
                       >
                         {link.icon}
@@ -153,12 +149,7 @@ export default function Contact() {
                         py={4}
                       >
                         <ListIcon as={link.icon} mr={4} />
-                        <Link
-                          as={NextLink}
-                          href={link.href}
-                          title={link.title}
-                          lineHeight={1}
-                        >
+                        <Link as={NextLink} href={link.href} lineHeight={1}>
                           {link.anchor}
                         </Link>
                       </ListItem>
