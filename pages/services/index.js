@@ -12,7 +12,12 @@ import {
   Button,
   useColorMode,
 } from "@chakra-ui/react";
-import { RiArrowRightLine } from "react-icons/ri";
+import {
+  RiPagesLine,
+  RiWindowLine,
+  RiSmartphoneLine,
+  RiArrowRightLine,
+} from "react-icons/ri";
 import CTA from "../../components/CTA";
 import CTAButton from "../../components/CTAButton";
 import FluidHead from "../../components/FluidHead";
@@ -21,18 +26,20 @@ export default function Services() {
   const { colorMode } = useColorMode();
 
   const services = [
-    { href: "/website-design-services", anchor: "Website Design Services" },
     {
-      href: "/web-application-development-services",
+      href: "website-design-services",
+      anchor: "Website Design Services",
+      icon: <RiPagesLine size={32} />,
+    },
+    {
+      href: "web-application-development-services",
       anchor: "Web Application Development Services",
+      icon: <RiWindowLine size={32} />,
     },
     {
-      href: "/services/iphone-app-development-services",
+      href: "iphone-app-development-services",
       anchor: "iPhone App Development Services",
-    },
-    {
-      href: "/services/mvp-software-development",
-      anchor: "MVP Software Development",
+      icon: <RiSmartphoneLine size={32} />,
     },
   ];
 
@@ -155,46 +162,26 @@ export default function Services() {
                   colSpan={[5, 1]}
                   h={["100%", "200px"]}
                 >
-                  <Card>
-                    <Flex
-                      h={"100%"}
-                      direction={"column"}
-                      justify={"space-between"}
-                    >
-                      <Box>
-                        {service?.href ? (
-                          <Link
-                            as={NextLink}
-                            href={`/${service.href}`}
-                            title={`${service.anchor} | Web and App Development Services | Stupendous Web`}
-                          >
-                            <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-                              {service.anchor}
-                            </Heading>
-                          </Link>
-                        ) : (
+                  <Link
+                    as={NextLink}
+                    href={`/services/${service.href}`}
+                    title={`${service.anchor} | Web and App Development Services | Stupendous Web`}
+                  >
+                    <Card>
+                      <Flex
+                        h={"100%"}
+                        direction={"column"}
+                        justify={"space-between"}
+                      >
+                        <Box>
                           <Heading as={"h3"} fontSize={"1rem"} mb={4}>
                             {service.anchor}
                           </Heading>
-                        )}
-                      </Box>
-                      <Box>
-                        <Link
-                          as={NextLink}
-                          href={`/${service.href}`}
-                          title={`${service.anchor} | Web and App Development Services | Stupendous Web`}
-                        >
-                          <>
-                            {service?.icon ? (
-                              service?.icon
-                            ) : (
-                              <RiArrowRightLine size={16} />
-                            )}
-                          </>
-                        </Link>
-                      </Box>
-                    </Flex>
-                  </Card>
+                        </Box>
+                        <Box>{service?.icon}</Box>
+                      </Flex>
+                    </Card>
+                  </Link>
                 </GridItem>
               ))}
               <GridItem colSpan={5}>

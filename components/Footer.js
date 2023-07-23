@@ -31,28 +31,15 @@ export default function Footer() {
   ];
 
   const services = [
-    { href: "/website-design-services", title: "Website Design Services" },
+    { href: "website-design-services", title: "Website Design Services" },
     {
-      href: "/web-application-development-services",
+      href: "web-application-development-services",
       title: "Web Application Development Services",
     },
     {
-      href: "/services/iphone-app-development-services",
+      href: "services/iphone-app-development-services",
       title: "iPhone App Development Services",
     },
-    {
-      href: "/services/mvp-software-development",
-      title: "MVP Software Development",
-    },
-    {
-      href: "/services/software-consultation",
-      title: "Software Consultation",
-    },
-  ];
-
-  const projects = [
-    { href: "https://stupendousanalytics.com", title: "Stupendous Analytics" },
-    { href: "https://devgotchas.com", title: "Dev Gotchas" },
   ];
 
   const socialLinks = [
@@ -98,7 +85,7 @@ export default function Footer() {
                 <ListItem key={key}>
                   <Link
                     as={NextLink}
-                    href={link.href}
+                    href={`/${link.href}`}
                     title={`${link.title} | Web and App Development Services | Stupendous Web`}
                   >
                     {link.title}
@@ -115,20 +102,7 @@ export default function Footer() {
                 <ListItem key={key}>
                   <Link
                     as={NextLink}
-                    href={link.href}
-                    title={`${link.title} | Web and App Development Services | Stupendous Web`}
-                  >
-                    {link.title}
-                  </Link>
-                </ListItem>
-              ))}
-            </List>
-            <List mb={[4, 0]}>
-              {projects.map((link, key) => (
-                <ListItem key={key}>
-                  <Link
-                    as={NextLink}
-                    href={link.href}
+                    href={`/services/${link.href}`}
                     title={`${link.title} | Web and App Development Services | Stupendous Web`}
                   >
                     {link.title}

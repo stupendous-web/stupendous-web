@@ -1,4 +1,4 @@
-import FluidHead from "../../components/FluidHead";
+import FluidHead from "../../../components/FluidHead";
 import {
   Container,
   Flex,
@@ -16,9 +16,9 @@ import {
   RiPaintBrushLine,
   RiSearchEyeLine,
 } from "react-icons/ri";
-import CTA from "../../components/CTA";
-import CustomLocalBusinessJsonLd from "../../components/json-ld/CustomLocalBusinessJsonLd";
-import CTARow from "../../CTARow";
+import CTA from "../../../components/CTA";
+import CustomLocalBusinessJsonLd from "../../../components/json-ld/CustomLocalBusinessJsonLd";
+import CTARow from "../../../CTARow";
 
 export default function WebAppDevelopment() {
   const cards = [

@@ -21,19 +21,19 @@ import NextLink from "next/link";
 export default function Solutions() {
   const solutions = [
     {
-      href: "/website-design-services",
+      href: "website-design-services",
       anchor: "Websites",
       title: "Website Design Services",
       icon: <RiPagesLine size={32} />,
     },
     {
-      href: "/web-application-development-services",
+      href: "web-application-development-services",
       anchor: "Web Apps",
       title: "Web Application Development",
       icon: <RiWindowLine size={32} />,
     },
     {
-      href: "/services/iphone-app-development-services",
+      href: "iphone-app-development-services",
       anchor: "Mobile Apps",
       title: "iPhone App Development Services",
       icon: <RiSmartphoneLine size={32} />,
@@ -53,7 +53,7 @@ export default function Solutions() {
               >
                 <Link
                   as={NextLink}
-                  href={`/${solution.href}`}
+                  href={`/services/${solution.href}`}
                   title={`${solution.title} | Web and App Development Services | Stupendous Web`}
                 >
                   <Card>
