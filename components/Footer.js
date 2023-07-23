@@ -22,12 +22,12 @@ import {
 
 export default function Footer() {
   const links = [
-    { href: "/projects", title: "Projects" },
-    { href: "/mood", title: "Mood" },
-    { href: "/services", title: "Services" },
-    { href: "/contact", title: "Contact" },
-    { href: "/2022", title: "2022 Review" },
-    { href: "/articles", title: "Articles" },
+    { href: "projects", title: "Projects" },
+    { href: "mood", title: "Mood" },
+    { href: "services", title: "Services" },
+    { href: "contact", title: "Contact" },
+    { href: "2022", title: "2022 Review" },
+    { href: "articles", title: "Articles" },
   ];
 
   const services = [
