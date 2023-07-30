@@ -33,9 +33,9 @@ export default function Solutions() {
       icon: <RiWindowLine size={32} />,
     },
     {
-      href: "iphone-app-development-services",
+      href: "mobile-app-development-services",
       anchor: "Mobile Apps",
-      title: "iPhone App Development Services",
+      title: "Mobile App Development Services",
       icon: <RiSmartphoneLine size={32} />,
     },
   ];

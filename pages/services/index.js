@@ -37,8 +37,8 @@ export default function Services() {
       icon: <RiWindowLine size={32} />,
     },
     {
-      href: "iphone-app-development-services",
-      anchor: "iPhone App Development Services",
+      href: "mobile-app-development-services",
+      anchor: "Mobile App Development Services",
       icon: <RiSmartphoneLine size={32} />,
     },
   ];

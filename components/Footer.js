@@ -37,8 +37,8 @@ export default function Footer() {
       title: "Web Application Development Services",
     },
     {
-      href: "services/iphone-app-development-services",
-      title: "iPhone App Development Services",
+      href: "mobile-app-development-services",
+      title: "Mobile App Development Services",
     },
   ];
 
