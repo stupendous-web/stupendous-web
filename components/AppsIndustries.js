@@ -2,7 +2,6 @@ import {
   Box,
   Card,
   Container,
-  Flex,
   GridItem,
   Heading,
   SimpleGrid,
@@ -52,60 +51,51 @@ export default function AppsIndustries() {
 
   return (
     <Container maxW={"container.xl"} pt={[4, 16]}>
-      <SimpleGrid columns={8} spacing={2} h={["100%", "600px"]}>
-        <GridItem colSpan={[8, 3]}>
-          <Card>
-            <Flex h={"100%"} direction={"column"} justify={"space-between"}>
-              <Box>
-                <Heading>Engage with your Audience</Heading>
-                <Text>
-                  My web and app development services will excel you and your
-                  work far past others and their websites! With the power of
-                  cloud computing technology, your web and mobile apps will be
-                  full of useful features. This power [use it wisely] let&apos;s
-                  you engage with your audiences in many fun, creative, and
-                  profitable ways:
-                </Text>
-              </Box>
-              <Box>
-                {apps.map((app) => (
-                  <Tag
-                    key={app}
-                    bg={colorMode === "dark" ? "gray.800" : "gray.150"}
-                    mr={2}
-                  >
-                    {app}
-                  </Tag>
-                ))}
-              </Box>
-            </Flex>
+      <SimpleGrid columns={8} spacing={2}>
+        <GridItem colSpan={[8, 4]}>
+          <Card variant={"transparent"}>
+            <Heading>Engage with your Audience</Heading>
+            <Text>
+              My web and app development services will excel you and your work
+              far past others and their websites! With the power of cloud
+              computing technology, your web and mobile apps will be full of
+              useful features. This power [use it wisely] let&apos;s you engage
+              with your audiences in many fun, creative, and profitable ways:
+            </Text>
+            <Box>
+              {apps.map((app) => (
+                <Tag
+                  key={app}
+                  bg={colorMode === "dark" ? "gray.800" : "gray.150"}
+                  mr={2}
+                >
+                  {app}
+                </Tag>
+              ))}
+            </Box>
           </Card>
         </GridItem>
-        <GridItem colSpan={[8, 3]}>
-          <Card>
-            <Flex h={"100%"} direction={"column"} justify={"space-between"}>
-              <Box>
-                <Heading>Expand your Reach</Heading>
-                <Text>
-                  Websites, web apps, and mobile apps are useful in any
-                  industry. My web and app development services provide people
-                  like you with the tools they need to grow their business.
-                  You&apos;ll reach existing and new customers and increase
-                  profitability so you can continue to do what you love.
-                </Text>
-              </Box>
-              <Box>
-                {industries.map((industry) => (
-                  <Tag
-                    key={industry}
-                    bg={colorMode === "dark" ? "gray.800" : "gray.150"}
-                    mr={2}
-                  >
-                    {industry}
-                  </Tag>
-                ))}
-              </Box>
-            </Flex>
+        <GridItem colSpan={[8, 4]}>
+          <Card variant={"transparent"}>
+            <Heading>Expand your Reach</Heading>
+            <Text>
+              Websites, web apps, and mobile apps are useful in any industry. My
+              web and app development services provide people like you with the
+              tools they need to grow their business. You&apos;ll reach existing
+              and new customers and increase profitability so you can continue
+              to do what you love.
+            </Text>
+            <Box>
+              {industries.map((industry) => (
+                <Tag
+                  key={industry}
+                  bg={colorMode === "dark" ? "gray.800" : "gray.150"}
+                  mr={2}
+                >
+                  {industry}
+                </Tag>
+              ))}
+            </Box>
           </Card>
         </GridItem>
       </SimpleGrid>

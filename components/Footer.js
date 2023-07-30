@@ -27,7 +27,6 @@ export default function Footer() {
     { href: "services", title: "Services" },
     { href: "contact", title: "Contact" },
     { href: "2022", title: "2022 Review" },
-    { href: "articles", title: "Articles" },
   ];
 
   const services = [
