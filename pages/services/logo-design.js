@@ -194,8 +194,8 @@ export default function LogoDesign() {
                   <Heading>Impactful Logo Design</Heading>
                   <Text>
                     A great logo communicates the essence of your brand and
-                    makes a lasting impact on your audience's minds. Your logo
-                    will provoke their curiosity, start conversations, and
+                    makes a lasting impact on your audience&apos;s minds. Your
+                    logo will provoke their curiosity, start conversations, and
                     strengthen brand awareness, paving the way for better
                     customer engagement and loyalty.
                   </Text>
