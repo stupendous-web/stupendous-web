@@ -7,12 +7,14 @@ import {
   GridItem,
   Card,
   Divider,
+  Link,
 } from "@chakra-ui/react";
 import { RiStarLine, RiCursorLine, RiPaintBrushLine } from "react-icons/ri";
 import CTA from "../../components/CTA";
 import CustomLocalBusinessJsonLd from "../../components/json-ld/CustomLocalBusinessJsonLd";
 import CTARow from "../../CTARow";
 import Head from "next/head";
+import NextLink from "next/link";
 
 export default function LogoDesign() {
   const cards = [
@@ -43,24 +45,24 @@ export default function LogoDesign() {
           property={"og:title"}
           content={"Logo Design | Web and App Development Services"}
         />
-        {/*<meta*/}
-        {/*  name={"description"}*/}
-        {/*  content={*/}
-        {/*    "Have an idea for a revolutionary new mobile app? Connect with your audience with my mobile app development services. Schedule your consultation to receive your..."*/}
-        {/*  }*/}
-        {/*/>*/}
-        {/*<meta*/}
-        {/*  property={"og:description"}*/}
-        {/*  content={*/}
-        {/*    "Have an idea for a revolutionary new mobile app? Connect with your audience with my mobile app development services. Schedule your consultation to receive your..."*/}
-        {/*  }*/}
-        {/*/>*/}
+        <meta
+          name={"description"}
+          content={
+            "Looking to create or refine your brand? Share what you do with your audiences. Schedule a consultation to receive a logo design as part of my development services."
+          }
+        />
+        <meta
+          property={"og:description"}
+          content={
+            "Looking to create or refine your brand? Share what you do with your audiences. Schedule a consultation to receive a logo design as part of my development services."
+          }
+        />
       </Head>
-      {/*<CustomLocalBusinessJsonLd*/}
-      {/*  description={*/}
-      {/*    "Need a new website that does more than the rest? Discover web design services that help you achieve your goals. Schedule your FREE consultation to receive your..."*/}
-      {/*  }*/}
-      {/*/>*/}
+      <CustomLocalBusinessJsonLd
+        description={
+          "Looking to create or refine your brand? Share what you do with your audiences. Schedule a consultation to receive a logo design as part of my development services."
+        }
+      />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>
@@ -69,8 +71,8 @@ export default function LogoDesign() {
                 Logo Design
               </Heading>
               <Text as={"code"}>
-                Unleash the power of your brand with impactful web and app
-                design and logo design by Amanda Boesen.{" "}
+                A logo design by Amanda Boesen will unleash the power of your
+                brand. Consider adding a logo to your web and mobile app.{" "}
                 <Text as={"span"} className={"flash"}>
                   ▌
                 </Text>
@@ -209,9 +211,38 @@ export default function LogoDesign() {
                   </Text>
                   <Heading>How does it Work?</Heading>
                   <Text>
-                    It all starts with a consultation, so schedule yours today!
-                    And, if you’re only looking for an impeccably branded logo
-                    design without a website or app, contact Amanda Boesen now!
+                    We&apos;ll make this fast, easy, and even fun! Our attention
+                    to detail, fully managed services give you the time to focus
+                    on your product. First, let’s get you a consultation! You
+                    can schedule a free consultation on the website in just a
+                    few seconds. In your consultation with Amanda and myself,
+                    we’ll discuss you and your brand, refine your product,
+                    identify your target audience and their wants and needs, and
+                    strategize an action plan for your product. You&apos;ll
+                    receive many documents and, by the time the project is done,
+                    a logo to help you make your dreams of a web app come true.
+                    You’ll also receive an in-house development quote. Once
+                    approved, you’ll receive a link to a beta website or
+                    application to preview progress anytime. You may give
+                    feedback or make requests via email, schedule a 1-1, or
+                    submit requirements via your Kanban board at any point. Once
+                    you’re happy with your website or app, we’ll publish it to
+                    the real live world wide web and airwaves for all your
+                    customers to see! You’ll receive an invoice once a week
+                    during development. I also recommend my long-term support
+                    plan after the project is completed. This process all begins
+                    with a consultation. Take the first step to connecting with
+                    your community by scheduling a quote now. And, if you’re
+                    only looking for an impeccably branded logo design without a
+                    website or app, contact{" "}
+                    <Link
+                      as={NextLink}
+                      href={"https://www.amandaboesen.com/"}
+                      color={"primary.500"}
+                    >
+                      Amanda Boesen
+                    </Link>{" "}
+                    now!
                   </Text>
                 </Card>
               </GridItem>
