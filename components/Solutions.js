@@ -15,6 +15,7 @@ import {
   RiWindowLine,
   RiSmartphoneLine,
   RiArrowRightLine,
+  RiPaintBrushLine,
 } from "react-icons/ri";
 import NextLink from "next/link";
 
@@ -37,6 +38,12 @@ export default function Solutions() {
       anchor: "Mobile Apps",
       title: "Mobile App Development Services",
       icon: <RiSmartphoneLine size={32} />,
+    },
+    {
+      href: "logo-design",
+      anchor: "Branding",
+      title: "Logo Design",
+      icon: <RiPaintBrushLine size={32} />,
     },
   ];
 

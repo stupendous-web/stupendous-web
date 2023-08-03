@@ -39,6 +39,10 @@ export default function Footer() {
       href: "mobile-app-development-services",
       title: "Mobile App Development Services",
     },
+    {
+      href: "logo-design",
+      title: "Logo Design",
+    },
   ];
 
   const socialLinks = [
