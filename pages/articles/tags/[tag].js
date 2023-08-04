@@ -19,7 +19,6 @@ import {
 
 import CTA from "../../../components/CTA";
 import { RiArticleLine } from "react-icons/ri";
-import FluidHead from "../../../components/FluidHead";
 
 dayjs.extend(relativeTime);
 
@@ -31,9 +30,6 @@ export default function Articles({ articles }) {
 
   return (
     <>
-      <FluidHead
-        title={`${tag} | Web and App Development Services | Stupendous Web`}
-      />
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 2]}>

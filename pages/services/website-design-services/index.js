@@ -1,4 +1,3 @@
-import FluidHead from "../../../components/FluidHead";
 import {
   Container,
   Flex,
@@ -19,6 +18,7 @@ import {
 import CTA from "../../../components/CTA";
 import CustomLocalBusinessJsonLd from "../../../components/json-ld/CustomLocalBusinessJsonLd";
 import CTARow from "../../../CTARow";
+import Head from "next/head";
 
 export default function WebAppDevelopment() {
   const cards = [
@@ -45,12 +45,30 @@ export default function WebAppDevelopment() {
 
   return (
     <>
-      <FluidHead
-        title={"Website Design Services"}
-        description={
-          "Need a new website that does more than the rest? Discover web design services that help you achieve your goals. Schedule your FREE consultation to receive your..."
-        }
-      />
+      <Head>
+        <title>
+          Website Design Services | Web and App Development Services |
+          Stupendous Web
+        </title>
+        <meta
+          property={"og:title"}
+          content={
+            "Website Design Services | Web and App Development Services | Stupendous Web"
+          }
+        />
+        <meta
+          name={"description"}
+          content={
+            "Need a new website that does more than the rest? Discover web design services that help you achieve your goals. Schedule your FREE consultation to receive your..."
+          }
+        />
+        <meta
+          property={"og:description"}
+          content={
+            "Need a new website that does more than the rest? Discover web design services that help you achieve your goals. Schedule your FREE consultation to receive your..."
+          }
+        />
+      </Head>
       <CustomLocalBusinessJsonLd
         description={
           "Need a new website that does more than the rest? Discover web design services that help you achieve your goals. Schedule your FREE consultation to receive your..."

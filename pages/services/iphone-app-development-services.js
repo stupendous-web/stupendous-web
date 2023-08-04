@@ -15,7 +15,7 @@ import {
   RiCoinLine,
 } from "react-icons/ri";
 import CTA from "../../components/CTA";
-import FluidHead from "../../components/FluidHead";
+import Head from "next/head";
 
 export default function WebAppDevelopment() {
   const cards = [
@@ -28,7 +28,30 @@ export default function WebAppDevelopment() {
 
   return (
     <>
-      <FluidHead title={"iPhone App Development Services"} />
+      <Head>
+        <title>
+          iPhone App Development Services | Web and App Development Services |
+          Stupendous Web
+        </title>
+        <meta
+          property={"og:title"}
+          content={
+            "iPhone App Development Services | Web and App Development Services | Stupendous Web"
+          }
+        />
+        <meta
+          name={"description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+        <meta
+          property={"og:description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+      </Head>
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>
