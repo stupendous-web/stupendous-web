@@ -28,7 +28,7 @@ import {
   RiSunLine,
   RiArticleLine,
 } from "react-icons/ri";
-import FluidHead from "../../components/FluidHead";
+import Head from "next/head";
 
 dayjs.extend(relativeTime);
 
@@ -56,7 +56,29 @@ export default function Articles({ articles, tags }) {
 
   return (
     <>
-      <FluidHead title={"Articles"} />
+      <Head>
+        <title>
+          Articles | Web and App Development Services | Stupendous Web
+        </title>
+        <meta
+          property={"og:title"}
+          content={
+            "Articles | Web and App Development Services | Stupendous Web"
+          }
+        />
+        <meta
+          name={"description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+        <meta
+          property={"og:description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+      </Head>
       <Container maxW={"container.xl"} pt={8} pb={[16, 32]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 2]}>

@@ -1,4 +1,3 @@
-import FluidHead from "../../../components/FluidHead";
 import {
   Container,
   Flex,
@@ -18,6 +17,7 @@ import {
 import CTA from "../../../components/CTA";
 import CustomLocalBusinessJsonLd from "../../../components/json-ld/CustomLocalBusinessJsonLd";
 import CTARow from "../../../CTARow";
+import Head from "next/head";
 
 export default function WebAppDevelopment() {
   const cards = [
@@ -43,12 +43,30 @@ export default function WebAppDevelopment() {
 
   return (
     <>
-      <FluidHead
-        title={"Web Application Development Services"}
-        description={
-          "Have an idea for a new online tool that your customers will love? Access web application planning, design, and development now. Start yours today for your FREE..."
-        }
-      />
+      <Head>
+        <title>
+          Web Application Development Services | Web and App Development
+          Services | Stupendous Web
+        </title>
+        <meta
+          property={"og:title"}
+          content={
+            "Web Application Development Services | Web and App Development Services | Stupendous Web"
+          }
+        />
+        <meta
+          name={"description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+        <meta
+          property={"og:description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+      </Head>
       <CustomLocalBusinessJsonLd
         description={
           "Have an idea for a new online tool that your customers will love? Access web application planning, design, and development now. Start yours today for your FREE..."
