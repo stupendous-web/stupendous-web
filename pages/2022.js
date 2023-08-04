@@ -11,12 +11,34 @@ import {
   Card,
   SimpleGrid,
 } from "@chakra-ui/react";
-import FluidHead from "../components/FluidHead";
+import Head from "next/head";
 
 export default function Review2022() {
   return (
     <>
-      <FluidHead title={"2022 in Review"} />
+      <Head>
+        <title>
+          2022 in Review | Web and App Development Services | Stupendous Web
+        </title>
+        <meta
+          property={"og:title"}
+          content={
+            "2022 in Review | Web and App Development Services | Stupendous Web"
+          }
+        />
+        <meta
+          name={"description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+        <meta
+          property={"og:description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+      </Head>
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>

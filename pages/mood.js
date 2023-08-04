@@ -10,12 +10,30 @@ import {
 } from "@chakra-ui/react";
 import CTA from "../components/CTA";
 import me from "../images/me.png";
-import FluidHead from "../components/FluidHead";
+import Head from "next/head";
 
 export default function Mood() {
   return (
     <>
-      <FluidHead title={"Mood"} />
+      <Head>
+        <title>Mood | Web and App Development Services | Stupendous Web</title>
+        <meta
+          property={"og:title"}
+          content={"Mood | Web and App Development Services | Stupendous Web"}
+        />
+        <meta
+          name={"description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+        <meta
+          property={"og:description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+      </Head>
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <SimpleGrid columns={8} spacing={2}>
           <GridItem colSpan={[8, 3]}>
