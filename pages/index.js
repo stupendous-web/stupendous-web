@@ -1,4 +1,3 @@
-import FluidHead from "../components/FluidHead";
 // import axios from "axios";
 import Testimonials from "../components/Testimonials";
 import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions";
@@ -8,11 +7,35 @@ import Solutions from "../components/Solutions";
 import AppsIndustries from "../components/AppsIndustries";
 import Intro from "../components/Intro";
 import CustomLocalBusinessJsonLd from "../components/json-ld/CustomLocalBusinessJsonLd";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
-      <FluidHead />
+      <Head>
+        <title>
+          Web and App Development Services | Stupendous Web | If you want to
+          build community, build stupendous software.
+        </title>
+        <meta
+          property={"og:title"}
+          content={
+            "Web and App Development Services | Stupendous Web | If you want to build community, build stupendous software."
+          }
+        />
+        <meta
+          name={"description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+        <meta
+          property={"og:description"}
+          content={
+            "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority."
+          }
+        />
+      </Head>
       <CustomLocalBusinessJsonLd />
       <Intro />
       <Solutions />
