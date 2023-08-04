@@ -6,7 +6,6 @@ import {
   SimpleGrid,
   GridItem,
   Card,
-  Divider,
 } from "@chakra-ui/react";
 import {
   RiChat1Line,
@@ -18,6 +17,7 @@ import CTA from "../../../components/CTA";
 import CustomLocalBusinessJsonLd from "../../../components/json-ld/CustomLocalBusinessJsonLd";
 import CTARow from "../../../CTARow";
 import Head from "next/head";
+import Section from "../../../components/Section";
 
 export default function WebAppDevelopment() {
   const cards = [
@@ -26,20 +26,6 @@ export default function WebAppDevelopment() {
     { heading: "Build to be Flawless", icon: <RiHammerLine size={32} /> },
     { heading: "Launch and Market", icon: <RiRocket2Line size={32} /> },
   ];
-
-  const Section = ({ heading, text }) => (
-    <>
-      <Divider borderColor={"gray.500"} mb={4} />
-      <SimpleGrid columns={5}>
-        <GridItem colSpan={[5, 2]}>
-          <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-            {heading}
-          </Heading>
-        </GridItem>
-        <GridItem colSpan={[5, 3]}>{text}</GridItem>
-      </SimpleGrid>
-    </>
-  );
 
   return (
     <>

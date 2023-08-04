@@ -6,7 +6,6 @@ import {
   SimpleGrid,
   GridItem,
   Card,
-  Divider,
   Link,
 } from "@chakra-ui/react";
 import { RiStarLine, RiCursorLine, RiPaintBrushLine } from "react-icons/ri";
@@ -15,6 +14,7 @@ import CustomLocalBusinessJsonLd from "../../components/json-ld/CustomLocalBusin
 import CTARow from "../../CTARow";
 import Head from "next/head";
 import NextLink from "next/link";
+import Section from "../../components/Section";
 
 export default function LogoDesign() {
   const cards = [
@@ -22,20 +22,6 @@ export default function LogoDesign() {
     { heading: "Engaging", icon: <RiCursorLine size={32} /> },
     { heading: "Branded", icon: <RiPaintBrushLine size={32} /> },
   ];
-
-  const Section = ({ heading, text }) => (
-    <>
-      <Divider borderColor={"gray.500"} mb={4} />
-      <SimpleGrid columns={5}>
-        <GridItem colSpan={[5, 2]}>
-          <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-            {heading}
-          </Heading>
-        </GridItem>
-        <GridItem colSpan={[5, 3]}>{text}</GridItem>
-      </SimpleGrid>
-    </>
-  );
 
   return (
     <>
