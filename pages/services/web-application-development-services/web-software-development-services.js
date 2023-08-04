@@ -98,10 +98,18 @@ export default function WebSoftwareDevelopmentServices() {
                   </Heading>
                   <Text>
                     I understand that technology can sometimes be overwhelming.
-                    That&apos;s why my web software development services are
-                    here to simplify complexity and amplify efficiency. My team
-                    of experts will work closely with you to understand your
-                    unique needs and goals, ensuring that every piece of
+                    That&apos;s why my{" "}
+                    <Link
+                      as={NextLink}
+                      href={"/services/web-application-development-services"}
+                      title={"Web Application Development Services"}
+                      color={"primary.500"}
+                    >
+                      web software development services
+                    </Link>{" "}
+                    are here to simplify complexity and amplify efficiency. My
+                    team of experts will work closely with you to understand
+                    your unique needs and goals, ensuring that every piece of
                     software we create aligns perfectly with your vision. Leave
                     the technical aspects to us, and focus on what truly matters
                     – making a meaningful difference in the world. Together,

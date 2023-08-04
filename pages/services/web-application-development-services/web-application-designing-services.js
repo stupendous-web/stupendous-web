@@ -92,15 +92,23 @@ export default function WebApplicationDesigningServices() {
                   <Heading>Future-Proof your Business</Heading>
                   <Text>
                     In a world where technology continuously evolves, it&apos;s
-                    crucial to future-proof your business or project. My web
-                    application designs are not just aesthetically pleasing but
-                    also built to withstand the tests of time. I adopt the
-                    latest industry standards and trends to ensure that your web
-                    application remains cutting-edge and relevant, even as the
-                    digital landscape constantly evolves. With my
-                    forward-thinking approach, you can confidently navigate the
-                    ever-changing technological landscape and stay steps ahead
-                    of the competition.
+                    crucial to future-proof your business or project. My{" "}
+                    <Link
+                      as={NextLink}
+                      href={"/services/web-application-development-services"}
+                      title={"Web Application Development Services"}
+                      color={"primary.500"}
+                    >
+                      web application designs
+                    </Link>{" "}
+                    are not just aesthetically pleasing but also built to
+                    withstand the tests of time. I adopt the latest industry
+                    standards and trends to ensure that your web application
+                    remains cutting-edge and relevant, even as the digital
+                    landscape constantly evolves. With my forward-thinking
+                    approach, you can confidently navigate the ever-changing
+                    technological landscape and stay steps ahead of the
+                    competition.
                   </Text>
                   <Text>
                     Embrace the power of engagement and impact with my

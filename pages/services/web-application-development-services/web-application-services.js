@@ -97,7 +97,15 @@ export default function WebApplicationServices() {
                   <Heading>Simplify Complexity and Amplify Impact</Heading>
                   <Text>
                     I understand that technology can sometimes feel
-                    overwhelming. That&apos;s why my web application services
+                    overwhelming. That&apos;s why my{" "}
+                    <Link
+                      as={NextLink}
+                      href={"/services/web-application-development-services"}
+                      title={"Web Application Development Services"}
+                      color={"primary.500"}
+                    >
+                      web application services
+                    </Link>
                     are here to simplify the complex and amplify your impact. My
                     team of experts will guide you through every step of the
                     process, ensuring that your unique needs and goals are at

@@ -51,8 +51,8 @@ export default function WebAppDevelopmentServices() {
                   <Text>
                     Are you ready to revolutionize the digital landscape and
                     create a lasting impact? Look no further, for I offer more
-                    than just web app development services. I provide a platform
-                    for engagement, authenticity, and meaningful work.
+                    than just web app development services . I provide a
+                    platform for engagement, authenticity, and meaningful work.
                   </Text>
                   <Heading>Ignite your Vision, Amplify your Impact</Heading>
                   <Text>
@@ -103,7 +103,15 @@ export default function WebAppDevelopmentServices() {
                   </Text>
                   <Text>
                     Empower your vision, ignite your impact, and join the web
-                    app revolution. Together, let&apos;s craft a web application
+                    app revolution. Together, let&apos;s craft a{" "}
+                    <Link
+                      as={NextLink}
+                      href={"/services/web-application-development-services"}
+                      title={"Web Application Development Services"}
+                      color={"primary.500"}
+                    >
+                      web application
+                    </Link>
                     that goes beyond expectations, resonates with your tribe,
                     and creates sustainable change. Are you ready to make your
                     mark? Join our community, and let&apos;s build a digital
