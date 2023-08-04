@@ -25,6 +25,7 @@ export default function Footer() {
     { href: "projects", title: "Projects" },
     { href: "mood", title: "Mood" },
     { href: "services", title: "Services" },
+    { href: "faqs", title: "FAQ's" },
     { href: "contact", title: "Contact" },
     { href: "2022", title: "2022 Review" },
   ];

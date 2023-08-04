@@ -72,7 +72,7 @@ export default function Menu() {
           })}
         </List>
       </Center>
-      <Box w={16} position={"fixed"} top={0} hideFrom={"sm"}>
+      <Box w={16} position={"fixed"} top={0} hideFrom={"sm"} ml={4}>
         <Link
           as={NextLink}
           href={"/"}
