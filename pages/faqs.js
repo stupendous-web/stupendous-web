@@ -1,3 +1,12 @@
+import {
+  Card,
+  Container,
+  GridItem,
+  Heading,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
+import CTA from "../components/CTA";
 import Head from "next/head";
 import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions";
 
@@ -6,11 +15,14 @@ export default function FAQs() {
     <>
       <Head>
         <title>
-          FAQ&apos;s | Web and App Development Services | Stupendous Web
+          Web and App Development FAQ&apos;s | Web and App Development Services
+          | Stupendous Web
         </title>
         <meta
           property={"og:title"}
-          content={"FAQ's | Web and App Development Services | Stupendous Web"}
+          content={
+            "Web and App Development FAQ's | Web and App Development Services | Stupendous Web"
+          }
         />
         <meta
           name={"description"}
@@ -25,7 +37,34 @@ export default function FAQs() {
           }
         />
       </Head>
-      <FrequentlyAskedQuestions />
+      <Container maxW={"container.xl"} pt={[4, 16]}>
+        <SimpleGrid columns={8} spacing={2}>
+          <GridItem colSpan={[8, 3]}>
+            <Card variant={"transparent"} pt={0}>
+              <Heading as={"h1"} fontSize={["2rem", "4rem"]}>
+                Web and App Development FAQ&apos;s
+              </Heading>
+              <Text as={"code"}>
+                Hey there, fellow dreamers and innovators! I know that
+                navigating the world of web and app development can be
+                overwhelming at times, which is why I&apos;ve compiled a list of
+                frequently asked questions to provide you with some clarity.
+                Whether you&apos;re a seasoned pro or a newbie on the block,
+                I’ve got you covered. I’m here to empower you with a platform
+                for engagement and impact. So, let&apos;s dive in and explore
+                the world of web and app development together!{" "}
+                <Text as={"span"} className={"flash"}>
+                  ▌
+                </Text>
+              </Text>
+            </Card>
+          </GridItem>
+          <GridItem colSpan={[8, 5]}>
+            <FrequentlyAskedQuestions />
+          </GridItem>
+        </SimpleGrid>
+      </Container>
+      <CTA />
     </>
   );
 }

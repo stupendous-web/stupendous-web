@@ -8,6 +8,7 @@ import AppsIndustries from "../components/AppsIndustries";
 import Intro from "../components/Intro";
 import CustomLocalBusinessJsonLd from "../components/json-ld/CustomLocalBusinessJsonLd";
 import Head from "next/head";
+import { Container } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -40,8 +41,10 @@ export default function Home() {
       <Intro />
       <Solutions />
       <Testimonials />
-      <AppsIndustries />
-      <FrequentlyAskedQuestions />
+      <AppsIndustries />{" "}
+      <Container maxW={"container.xl"} pt={[4, 16]}>
+        <FrequentlyAskedQuestions hasHeading />
+      </Container>
       {/*<Blog articles={articles} />*/}
       <CTA />
     </>

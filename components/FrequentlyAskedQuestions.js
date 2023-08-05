@@ -5,14 +5,11 @@ import {
   AccordionItem,
   AccordionPanel,
   Card,
-  Container,
-  GridItem,
   Heading,
-  SimpleGrid,
   Text,
 } from "@chakra-ui/react";
 
-export default function FrequentlyAskedQuestions() {
+export default function FrequentlyAskedQuestions({ hasHeading }) {
   const faqs = [
     {
       question: "What's the difference between a website and a web app?",
@@ -104,33 +101,29 @@ export default function FrequentlyAskedQuestions() {
   ];
 
   return (
-    <Container maxW={"container.xl"} pt={[4, 16]}>
-      <Heading p={4}>FAQ&apos;s</Heading>
-      <SimpleGrid columns={8} spacing={2}>
-        <GridItem colSpan={8}>
-          <Card variant={"transparent"}>
-            <Accordion allowToggle>
-              {faqs.map((faq) => (
-                <AccordionItem key={faq.question}>
-                  <AccordionButton>
-                    <Heading
-                      as={"h3"}
-                      fontSize={"1rem"}
-                      mb={0}
-                      mr={"auto"}
-                      textAlign={"left"}
-                    >
-                      {faq.question}
-                    </Heading>
-                    <AccordionIcon />
-                  </AccordionButton>
-                  <AccordionPanel>{faq.answer}</AccordionPanel>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </Card>
-        </GridItem>
-      </SimpleGrid>
-    </Container>
+    <>
+      {hasHeading && <Heading p={4}>FAQ&apos;s</Heading>}
+      <Card variant={"transparent"}>
+        <Accordion allowToggle>
+          {faqs.map((faq) => (
+            <AccordionItem key={faq.question}>
+              <AccordionButton>
+                <Heading
+                  as={"h3"}
+                  fontSize={"1rem"}
+                  mb={0}
+                  mr={"auto"}
+                  textAlign={"left"}
+                >
+                  {faq.question}
+                </Heading>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel>{faq.answer}</AccordionPanel>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </Card>
+    </>
   );
 }
