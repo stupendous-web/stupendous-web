@@ -45,14 +45,10 @@ export default function FAQs() {
                 Web and App Development FAQ&apos;s
               </Heading>
               <Text as={"code"}>
-                Hey there, fellow dreamers and innovators! I know that
-                navigating the world of web and app development can be
-                overwhelming at times, which is why I&apos;ve compiled a list of
-                frequently asked questions to provide you with some clarity.
-                Whether you&apos;re a seasoned pro or a newbie on the block,
-                I’ve got you covered. I’m here to empower you with a platform
-                for engagement and impact. So, let&apos;s dive in and explore
-                the world of web and app development together!{" "}
+                Hey there, fellow dreamers and innovators! Here is a list of
+                frequently asked questions. I’m here to empower you with a
+                platform for engagement and impact. So, let&apos;s dive in and
+                explore the world of web and app development together!{" "}
                 <Text as={"span"} className={"flash"}>
                   ▌
                 </Text>
