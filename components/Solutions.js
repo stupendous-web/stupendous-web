@@ -103,15 +103,15 @@ export default function Solutions() {
                   <Image src={nextJS} alt={"Nextjs"} height={54} width={54} />
                 </Link>
               </Box>
-              {/*<Link*/}
-              {/*  as={NextLink}*/}
-              {/*  href={"/services/expo"}*/}
-              {/*  title={*/}
-              {/*    "Expo | Web and App Development Services | Stupendous Web"*/}
-              {/*  }*/}
-              {/*>*/}
-              {/*  <Image src={expo} alt={"Expo"} height={54} width={54} />*/}
-              {/*</Link>*/}
+              <Link
+                as={NextLink}
+                href={"/services/expo"}
+                title={
+                  "Expo | Web and App Development Services | Stupendous Web"
+                }
+              >
+                <Image src={expo} alt={"Expo"} height={54} width={54} />
+              </Link>
             </Flex>
             <Link
               as={NextLink}
