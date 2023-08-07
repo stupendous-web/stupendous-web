@@ -18,6 +18,9 @@ import {
   RiPaintBrushLine,
 } from "react-icons/ri";
 import NextLink from "next/link";
+import Image from "next/image";
+import nextJS from "../images/technologies/nextjs.svg";
+import expo from "../images/technologies/expo.svg";
 
 export default function Solutions() {
   const solutions = [
@@ -88,6 +91,28 @@ export default function Solutions() {
               hosting, support, a payment processor, a CMS, analytics, and more
               so you can focus on creating your product.
             </Text>
+            <Flex mb={8}>
+              <Box mr={4}>
+                <Link
+                  as={NextLink}
+                  href={"/services/nextjs"}
+                  title={
+                    "NextJS | Web and App Development Services | Stupendous Web"
+                  }
+                >
+                  <Image src={nextJS} alt={"Nextjs"} height={54} width={54} />
+                </Link>
+              </Box>
+              {/*<Link*/}
+              {/*  as={NextLink}*/}
+              {/*  href={"/services/expo"}*/}
+              {/*  title={*/}
+              {/*    "Expo | Web and App Development Services | Stupendous Web"*/}
+              {/*  }*/}
+              {/*>*/}
+              {/*  <Image src={expo} alt={"Expo"} height={54} width={54} />*/}
+              {/*</Link>*/}
+            </Flex>
             <Link
               as={NextLink}
               href={"/services"}
