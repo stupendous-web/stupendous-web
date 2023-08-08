@@ -175,9 +175,9 @@ export default function Services() {
                     Websites and apps are powerful tools that can be accessed
                     from just about any screen. My software development services
                     utilize my outstanding skills, education in web application
-                    development from Colorado State Unisverity, and extensive
+                    development from Colorado State University, and extensive
                     experience in development to put you on the internet and on
-                    people&apos;s smart phones. Making your brand, message,
+                    people&apos;s smartphones. Making your brand, message,
                     product, or service available across technologies makes them
                     easier to access and more likely for them to sell keeping
                     your work sustainable.
@@ -214,6 +214,15 @@ export default function Services() {
               ))}
               <GridItem colSpan={5}>
                 <Card variant={"transparent"}>
+                  <Text>
+                    With my software development services, you can establish a
+                    robust online presence and increase accessibility across
+                    various platforms. My skills, education, and experience make
+                    me the ideal partner to create websites and apps that
+                    captivate your audience and drive success. Don&apos;t miss
+                    out on the opportunity to take your product, service, or
+                    message to new heights in the digital world.
+                  </Text>
                   <Heading mt={4}>4.0 QA &amp; Support</Heading>
                   <Text>
                     It’s important to change the oil in your website or app
@@ -222,10 +231,16 @@ export default function Services() {
                     even want to make minor changes occasionally. I&apos;ll keep
                     your application up-to-date with the latest technology and
                     safe against security breaches. I&apos;ll even make minor
-                    updates as needed. Good quality assurance and long term
+                    updates as needed. Good quality assurance and long-term
                     support will keep your technology fresh, your data safe, and
                     your brand unique and desirable even after your software
                     development services are completed.
+                  </Text>
+                  <Text>
+                    Schedule your consultation today to learn more about how I
+                    can help you establish a strong online presence and unlock
+                    the full potential of your work. Let&apos;s embark on this
+                    journey together and pave the way to your online success.
                   </Text>
                 </Card>
               </GridItem>
