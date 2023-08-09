@@ -1,3 +1,4 @@
-export default function handler() {
-  console.log("test");
+export default async function handler(request, response) {
+  await console.log("test");
+  response.send("Done!");
 }
