@@ -1,8 +1,10 @@
+import { NextResponse } from "next/server";
+
 export const config = {
   runtime: "edge",
 };
 
-export default async function handler(request, response) {
-  await console.log("test");
-  response.send("Done!");
-}
+export default (request) => {
+  console.log("test");
+  return NextResponse.next();
+};
