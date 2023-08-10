@@ -38,6 +38,12 @@ export default function Testimonials() {
         "Topher has been great, and I've actually had him create a second site for me after he recreated an old one I had. Good value for money, attentive and good at brainstorming togive a better work. I'd definitely recommend.",
     },
     {
+      name: "Euzibio S.",
+      title: "Social Media Influencer",
+      review:
+        "Besides being a very communicative person, his works are excellent. Following the creation of your many sites, I could see your resilience when a problem appears, always going after solutions, in addition to a high-level design, making projects in 3D. All his sites feel and see ease in using what becomes good for me and for my customers as a result. I can always access and get in touch with him when I need, through message or call, which has been very useful in unforeseen events. Thank you very much for your services, I see a difference from you, success!",
+    },
+    {
       name: "Cloe Server",
       title: "Dog Trainer",
       review:

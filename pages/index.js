@@ -41,7 +41,7 @@ export default function Home() {
       <Intro />
       <Solutions />
       <Testimonials />
-      <AppsIndustries />{" "}
+      <AppsIndustries />
       <Container maxW={"container.xl"} pt={[4, 16]}>
         <FrequentlyAskedQuestions hasHeading />
       </Container>

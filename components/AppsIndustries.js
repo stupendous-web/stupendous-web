@@ -4,11 +4,13 @@ import {
   Container,
   GridItem,
   Heading,
+  Link,
   SimpleGrid,
   Tag,
   Text,
   useColorMode,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 export default function AppsIndustries() {
   const { colorMode } = useColorMode();
@@ -33,20 +35,21 @@ export default function AppsIndustries() {
   ];
 
   const industries = [
-    "Healthcare",
-    "Finance",
-    "Manufacturing",
-    "Retail",
-    "Telecommunication",
-    "Insurance",
-    "Law",
-    "Art and Design",
-    "Crypto and NFT's",
-    "Sustainability",
-    "Marketing and Advertising",
-    "Professional Services",
-    "Logistics",
-    "Much More",
+    { href: "healthcare-web-development-services", anchor: "Healthcare" },
+    { href: "finance-web-development-services", anchor: "Finance" },
+    { anchor: "Real Estate" },
+    { anchor: "Insurance" },
+    { anchor: "Manufacturing" },
+    { anchor: "Retail" },
+    { anchor: "Telecommunication" },
+    { anchor: "Law" },
+    { anchor: "Art and Design" },
+    { anchor: "Crypto and NFT's" },
+    { anchor: "Sustainability" },
+    { anchor: "Marketing and Advertising" },
+    { anchor: "Professional Services" },
+    { anchor: "Logistics" },
+    { anchor: "Many More" },
   ];
 
   return (
@@ -87,13 +90,29 @@ export default function AppsIndustries() {
             </Text>
             <Box>
               {industries.map((industry) => (
-                <Tag
-                  key={industry}
-                  bg={colorMode === "dark" ? "gray.800" : "gray.150"}
-                  mr={2}
-                >
-                  {industry}
-                </Tag>
+                <>
+                  {industry.href ? (
+                    <Link
+                      key={industry.anchor}
+                      as={NextLink}
+                      href={`/industries/${industry.href}`}
+                    >
+                      <Tag
+                        bg={colorMode === "dark" ? "gray.800" : "gray.150"}
+                        mr={2}
+                      >
+                        {industry.anchor}
+                      </Tag>
+                    </Link>
+                  ) : (
+                    <Tag
+                      bg={colorMode === "dark" ? "gray.800" : "gray.150"}
+                      mr={2}
+                    >
+                      {industry.anchor}
+                    </Tag>
+                  )}
+                </>
               ))}
             </Box>
           </Card>
