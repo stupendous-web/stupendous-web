@@ -8,8 +8,11 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 export default function FrequentlyAskedQuestions({ hasHeading }) {
+  const router = useRouter();
+
   const faqs = [
     {
       question: "What's the difference between a website and a web app?",
@@ -98,6 +101,96 @@ export default function FrequentlyAskedQuestions({ hasHeading }) {
         </Text>
       ),
     },
+    {
+      question: "What is front-end development?",
+      answer: (
+        <Text>
+          Front-end development refers to the development of the visual and
+          interactive components of a website or application – in other words,
+          what the user sees and interacts with.
+        </Text>
+      ),
+    },
+    {
+      question: "What is back-end development?",
+      answer: (
+        <Text>
+          Back-end development refers to the development of the
+          behind-the-scenes components of a website or app, such as servers,
+          databases, and APIs.
+        </Text>
+      ),
+    },
+    {
+      question: "What is full-stack development?",
+      answer: (
+        <Text>
+          Full-stack development refers to the development of both the front-end
+          and back-end components of a website or application.
+        </Text>
+      ),
+    },
+    {
+      question: "What is responsive design?",
+      answer: (
+        <Text>
+          Your website and/or web app will be completely responsive. Responsive
+          design refers to the practice of designing websites and applications
+          that adapt to different devices and screen sizes, providing an optimal
+          user experience across all devices.
+        </Text>
+      ),
+    },
+    {
+      question: "What is user experience design?",
+      answer: (
+        <Text>
+          UX design refers to the process of designing user-centered products
+          that are easy to use, engaging, and effective.
+        </Text>
+      ),
+    },
+    {
+      question: "What is a content management system?",
+      answer: (
+        <Text>
+          If you need a CMS I&apos;ll provide it! A CMS is a software
+          application that allows users to create, manage, and publish digital
+          content, such as text, images, videos, and more, without needing
+          technical expertise.
+        </Text>
+      ),
+    },
+    {
+      question: "What is website cloud hosting?",
+      answer: (
+        <Text>
+          Website hosting refers to the service of storing website and app files
+          on a remote server that can be accessed by users via the internet.
+        </Text>
+      ),
+    },
+    {
+      question: "What is long term support?",
+      answer: (
+        <Text>
+          I offer long term support (LTS), also known as website maintenance.
+          Website maintenance refers to the ongoing process of keeping a website
+          or app up-to-date, secure, and functioning properly.
+        </Text>
+      ),
+    },
+    {
+      question: "What is website accessibility?",
+      answer: (
+        <Text>
+          It&apos;s very importnat that your website, web app, or mobile app be
+          accessible. Website accessibility refers to the practice of designing
+          websites and apps that can be used by people with disabilities,
+          ensuring equal access and experience for all users.
+        </Text>
+      ),
+    },
   ];
 
   return (
@@ -105,23 +198,25 @@ export default function FrequentlyAskedQuestions({ hasHeading }) {
       {hasHeading && <Heading p={4}>FAQ&apos;s</Heading>}
       <Card variant={"transparent"}>
         <Accordion allowToggle>
-          {faqs.map((faq) => (
-            <AccordionItem key={faq.question}>
-              <AccordionButton>
-                <Heading
-                  as={"h3"}
-                  fontSize={"1rem"}
-                  mb={0}
-                  mr={"auto"}
-                  textAlign={"left"}
-                >
-                  {faq.question}
-                </Heading>
-                <AccordionIcon />
-              </AccordionButton>
-              <AccordionPanel>{faq.answer}</AccordionPanel>
-            </AccordionItem>
-          ))}
+          {(router.pathname === "/faqs" ? faqs : faqs.slice(0, 6)).map(
+            (faq) => (
+              <AccordionItem key={faq.question}>
+                <AccordionButton>
+                  <Heading
+                    as={"h3"}
+                    fontSize={"1rem"}
+                    mb={0}
+                    mr={"auto"}
+                    textAlign={"left"}
+                  >
+                    {faq.question}
+                  </Heading>
+                  <AccordionIcon />
+                </AccordionButton>
+                <AccordionPanel>{faq.answer}</AccordionPanel>
+              </AccordionItem>
+            )
+          )}
         </Accordion>
       </Card>
     </>
