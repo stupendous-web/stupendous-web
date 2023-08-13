@@ -14,6 +14,7 @@ import CustomLocalBusinessJsonLd from "../components/json-ld/CustomLocalBusiness
 import CTARow from "../CTARow";
 import Head from "next/head";
 import Section from "../components/Section";
+import HowDoesItWork from "../components/HowDoesItWork";
 
 export default function CustomWebAppDevelopmentServices() {
   const cards = [
@@ -536,6 +537,7 @@ export default function CustomWebAppDevelopmentServices() {
                     heights. Schedule a free consultation to unleash your
                     business&apos;s digital potential today!
                   </Text>
+                  <HowDoesItWork />
                 </Card>
               </GridItem>
             </SimpleGrid>
