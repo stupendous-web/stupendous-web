@@ -177,7 +177,7 @@ export default function CustomWebAppDevelopmentServices() {
                     }
                   />
                   <Section
-                    heading={"Customer Relationship Management (CRM) Web Apps"}
+                    heading={"Customer Relationship Management Web Apps"}
                     text={
                       <Text>
                         CRM web apps help businesses manage and analyze customer
@@ -188,7 +188,7 @@ export default function CustomWebAppDevelopmentServices() {
                     }
                   />
                   <Section
-                    heading={"Content Management System (CMS) Web Apps"}
+                    heading={"Content Management System Web Apps"}
                     text={
                       <Text>
                         CMS web apps allow businesses to create, edit, and
@@ -223,7 +223,7 @@ export default function CustomWebAppDevelopmentServices() {
                     some essential features I incorporate:
                   </Text>
                   <Section
-                    heading={"User Authentication and Authorization"}
+                    heading={"User Authentication"}
                     text={
                       <Text>
                         I will implement secure user login and registration
@@ -243,7 +243,7 @@ export default function CustomWebAppDevelopmentServices() {
                     }
                   />
                   <Section
-                    heading={"Personalization and Customization"}
+                    heading={"Personalization"}
                     text={
                       <Text>
                         I can provide options for users to personalize their
@@ -253,7 +253,7 @@ export default function CustomWebAppDevelopmentServices() {
                     }
                   />
                   <Section
-                    heading={"Notifications and Alerts"}
+                    heading={"Notifications"}
                     text={
                       <Text>
                         I will implement notifications and alerts to keep users
@@ -263,7 +263,7 @@ export default function CustomWebAppDevelopmentServices() {
                     }
                   />
                   <Section
-                    heading={"Analytics and Reporting"}
+                    heading={"Analytics"}
                     text={
                       <Text>
                         I can easily Integrate analytics and reporting tools to
@@ -273,7 +273,7 @@ export default function CustomWebAppDevelopmentServices() {
                     }
                   />
                   <Section
-                    heading={"Integration with Third-party Services"}
+                    heading={"Integrations"}
                     text={
                       <Text>
                         I can enable integration with popular third-party
@@ -284,7 +284,7 @@ export default function CustomWebAppDevelopmentServices() {
                     }
                   />
                   <Heading>
-                    User Experience and Interface Design in my Web App
+                    User Experience and Interface Design in your Web App
                     Development
                   </Heading>
                   <Text>
@@ -295,7 +295,7 @@ export default function CustomWebAppDevelopmentServices() {
                     consider:
                   </Text>
                   <Section
-                    heading={"Simple Navigation"}
+                    heading={"Navigation"}
                     text={
                       <Text>
                         I ensure that your web app has a clear and intuitive
@@ -305,7 +305,7 @@ export default function CustomWebAppDevelopmentServices() {
                     }
                   />
                   <Section
-                    heading={"Consistency in Design"}
+                    heading={"Design Consistency"}
                     text={
                       <Text>
                         I maintain a consistent design across different pages
@@ -336,7 +336,7 @@ export default function CustomWebAppDevelopmentServices() {
                     }
                   />
                   <Section
-                    heading={"Error Handling and Feedback"}
+                    heading={"Error Feedback"}
                     text={
                       <Text>
                         I provide clear and helpful error messages to users when
@@ -455,7 +455,7 @@ export default function CustomWebAppDevelopmentServices() {
                     }
                   />
                   <Section
-                    heading={"Ongoing Updates and Maintenance"}
+                    heading={"Ongoing Maintenance"}
                     text={
                       <Text>
                         I will regularly, with long-term support, update your
