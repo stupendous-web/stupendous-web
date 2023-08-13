@@ -16,7 +16,9 @@ import CTAButton from "./components/CTAButton";
 import NextLink from "next/link";
 import { RiArrowRightLine } from "react-icons/ri";
 
-export default function CTARow() {
+export default function CTARow({
+  alt = "People gathered around computer talking about web application development services",
+}) {
   const { colorMode } = useColorMode();
 
   return (
@@ -32,9 +34,7 @@ export default function CTARow() {
         >
           <Image
             src={stock0}
-            alt={
-              "People gathered around computer talking about web application development services"
-            }
+            alt={alt}
             fill
             style={{ objectFit: "cover" }}
             priority

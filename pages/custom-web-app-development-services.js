@@ -504,7 +504,7 @@ export default function CustomWebAppDevelopmentServices() {
                       height={"315"}
                       src={"https://www.youtube.com/embed/rD-4NemBpdg"}
                       title={
-                        "What's the difference between a website and a web app\n"
+                        "What's the difference between a website and a web app"
                       }
                       allow={
                         "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

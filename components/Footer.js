@@ -32,17 +32,12 @@ export default function Footer() {
 
   const services = [
     {
-      href: "web-application-development-services",
-      title: "Web Application Development Services",
-    },
-    { href: "website-design-services", title: "Website Design Services" },
-    {
-      href: "mobile-app-development-services",
-      title: "Mobile App Development Services",
+      href: "custom-web-app-development-services",
+      title: "Custom Web App Development Services",
     },
     {
-      href: "logo-design",
-      title: "Logo Design",
+      href: "mobile-app-design-service",
+      title: "Mobile App Design Services",
     },
   ];
 
@@ -102,22 +97,11 @@ export default function Footer() {
         <GridItem colSpan={[8, 2]}>
           <Card variant={"transparent"} pt={[0, 4]}>
             <List mb={4}>
-              <ListItem>
-                <Link
-                  as={NextLink}
-                  href={"/custom-web-app-development-services"}
-                  title={
-                    "Custom Web App Development Services | Web and App Development Services | Stupendous Web"
-                  }
-                >
-                  Custom Web App Development Services
-                </Link>
-              </ListItem>
               {services.map((link, key) => (
                 <ListItem key={key}>
                   <Link
                     as={NextLink}
-                    href={`/services/${link.href}`}
+                    href={`/${link.href}`}
                     title={`${link.title} | Web and App Development Services | Stupendous Web`}
                   >
                     {link.title}
