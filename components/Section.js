@@ -4,7 +4,7 @@ export default function Section({ heading, text }) {
   return (
     <>
       <Divider borderColor={"gray.500"} mb={4} />
-      <SimpleGrid columns={5}>
+      <SimpleGrid columns={5} spacing={4}>
         <GridItem colSpan={[5, 2]}>
           <Heading as={"h3"} fontSize={"1rem"} mb={4}>
             {heading}
