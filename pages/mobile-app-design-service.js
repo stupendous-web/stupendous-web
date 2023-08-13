@@ -1,6 +1,5 @@
 import {
   Container,
-  Flex,
   Heading,
   Text,
   SimpleGrid,
@@ -8,21 +7,15 @@ import {
   Card,
   AspectRatio,
 } from "@chakra-ui/react";
-import { RiSurveyLine, RiPaintBrushLine, RiShipLine } from "react-icons/ri";
 import CTA from "../components/CTA";
 import CustomLocalBusinessJsonLd from "../components/json-ld/CustomLocalBusinessJsonLd";
 import CTARow from "../CTARow";
 import Head from "next/head";
 import Section from "../components/Section";
 import HowDoesItWork from "../components/HowDoesItWork";
+import HighlightCards from "../components/HighlightCards";
 
 export default function MobileAppDesignService() {
-  const cards = [
-    { heading: "Market Research", icon: <RiSurveyLine size={32} /> },
-    { heading: "UX/UI Design", icon: <RiPaintBrushLine size={32} /> },
-    { heading: "Distribution", icon: <RiShipLine size={32} /> },
-  ];
-
   return (
     <>
       <Head>
@@ -77,26 +70,7 @@ export default function MobileAppDesignService() {
                   </Text>
                 </Card>
               </GridItem>
-              {cards.map((card) => (
-                <GridItem
-                  key={card.heading}
-                  colSpan={[5, 1]}
-                  h={["100%", "200px"]}
-                >
-                  <Card>
-                    <Flex
-                      direction={"column"}
-                      justify={"space-between"}
-                      h={"100%"}
-                    >
-                      <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-                        {card.heading}
-                      </Heading>
-                      {card.icon}
-                    </Flex>
-                  </Card>
-                </GridItem>
-              ))}
+              <HighlightCards />
               <GridItem colSpan={5}>
                 <Card variant={"transparent"}>
                   <Text>
