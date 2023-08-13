@@ -19,11 +19,10 @@ export default function Cursor() {
       setOpacity(0);
     };
     const expandCursor = (event) => {
-      if (event.target.closest("a") || event.target.closest("button")) {
-        setTransform("scale(2)");
-      } else {
-        setTransform("scale(1)");
-      }
+      event.target.closest("iframe") ? setOpacity(0) : setOpacity(1);
+      event.target.closest("a") || event.target.closest("button")
+        ? setTransform("scale(2)")
+        : setTransform("scale(1)");
     };
     document.addEventListener("mousemove", (event) =>
       setCursorCoordinates(event)

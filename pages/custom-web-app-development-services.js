@@ -6,6 +6,7 @@ import {
   SimpleGrid,
   GridItem,
   Card,
+  AspectRatio,
 } from "@chakra-ui/react";
 import { RiSettings5Line, RiClipboardLine, RiTeamLine } from "react-icons/ri";
 import CTA from "../components/CTA";
@@ -496,6 +497,20 @@ export default function CustomWebAppDevelopmentServices() {
                     role in driving business growth, improving operational
                     efficiency, and delivering exceptional user experiences.
                   </Text>
+                  <AspectRatio ratio={16 / 9} mb={4}>
+                    <iframe
+                      width={"560"}
+                      height={"315"}
+                      src={"https://www.youtube.com/embed/rD-4NemBpdg"}
+                      title={
+                        "What's the difference between a website and a web app\n"
+                      }
+                      allow={
+                        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      }
+                      allowFullScreen
+                    />
+                  </AspectRatio>
                   <Heading>
                     Taking Your Business to the Next Level with Custom Web App
                     Development

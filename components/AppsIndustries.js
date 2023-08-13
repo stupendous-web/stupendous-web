@@ -11,6 +11,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { Fragment } from "react";
 
 export default function AppsIndustries() {
   const { colorMode } = useColorMode();
@@ -66,9 +67,9 @@ export default function AppsIndustries() {
               with your audiences in many fun, creative, and profitable ways:
             </Text>
             <Box>
-              {apps.map((app) => (
+              {apps.map((app, index) => (
                 <Tag
-                  key={app}
+                  key={index}
                   bg={colorMode === "dark" ? "gray.800" : "gray.150"}
                   mr={2}
                 >
@@ -90,13 +91,9 @@ export default function AppsIndustries() {
             </Text>
             <Box>
               {industries.map((industry) => (
-                <>
+                <Fragment key={industry.anchor}>
                   {industry.href ? (
-                    <Link
-                      key={industry.anchor}
-                      as={NextLink}
-                      href={`/industries/${industry.href}`}
-                    >
+                    <Link as={NextLink} href={`/industries/${industry.href}`}>
                       <Tag
                         bg={colorMode === "dark" ? "gray.800" : "gray.150"}
                         mr={2}
@@ -112,7 +109,7 @@ export default function AppsIndustries() {
                       {industry.anchor}
                     </Tag>
                   )}
-                </>
+                </Fragment>
               ))}
             </Box>
           </Card>
