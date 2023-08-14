@@ -35,7 +35,7 @@ export default function FinanceWebDevelopment() {
           <GridItem colSpan={[8, 3]}>
             <Card variant={"transparent"} pt={0}>
               <Heading as={"h1"} fontSize={["2rem", "4rem"]}>
-                Finance Web Development Services
+                Finance Web Development
               </Heading>
               <Text as={"code"}>
                 Welcome, fellow dreamers, innovators, and changemakers! Are you
@@ -114,7 +114,7 @@ export default function FinanceWebDevelopment() {
                   </Text>
                 </Card>
               </GridItem>
-              <CTARow alt={"Custom Web App Development Services"} />
+              <CTARow alt={"Finance Web Development"} />
               <GridItem colSpan={5}>
                 <Card variant={"transparent"}>
                   <Heading>Financial Software</Heading>

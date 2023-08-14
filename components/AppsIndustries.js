@@ -36,9 +36,9 @@ export default function AppsIndustries() {
   ];
 
   const industries = [
-    { href: "healthcare-web-development-services", anchor: "Healthcare" },
-    { href: "finance-web-development-services", anchor: "Finance" },
-    { anchor: "Real Estate" },
+    { href: "healthcare-web-development", anchor: "Healthcare" },
+    { href: "finance-web-development", anchor: "Finance" },
+    { href: "real-estate-page-design", anchor: "Real Estate" },
     { anchor: "Insurance" },
     { anchor: "Manufacturing" },
     { anchor: "Retail" },
@@ -93,7 +93,7 @@ export default function AppsIndustries() {
               {industries.map((industry) => (
                 <Fragment key={industry.anchor}>
                   {industry.href ? (
-                    <Link as={NextLink} href={`/industries/${industry.href}`}>
+                    <Link as={NextLink} href={`/${industry.href}`}>
                       <Tag
                         bg={colorMode === "dark" ? "gray.800" : "gray.150"}
                         mr={2}
