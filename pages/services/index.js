@@ -17,7 +17,6 @@ import {
   RiWindowLine,
   RiSmartphoneLine,
   RiArrowRightLine,
-  RiPaintBrushLine,
 } from "react-icons/ri";
 import CTA from "../../components/CTA";
 import CTAButton from "../../components/CTAButton";
@@ -41,11 +40,6 @@ export default function Services() {
       href: "mobile-app-design-service",
       anchor: "Mobile App Design Services",
       icon: <RiSmartphoneLine size={32} />,
-    },
-    {
-      href: "logo-design-services",
-      anchor: "Logo Design Services",
-      icon: <RiPaintBrushLine size={32} />,
     },
   ];
 
