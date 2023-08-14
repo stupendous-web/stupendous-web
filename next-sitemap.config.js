@@ -8,7 +8,7 @@ module.exports = {
   generateIndexSitemap: false,
   autoLastmod: false,
   priority: false,
-  exclude: ["/articles", "/services/logo-design"],
+  exclude: ["/articles"],
   changefreq: "monthly",
   additionalPaths: async () => {
     const result = [];
