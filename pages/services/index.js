@@ -28,24 +28,23 @@ export default function Services() {
 
   const services = [
     {
-      href: "web-application-development-services",
-      anchor: "Web Application Development Services",
+      href: "custom-web-app-development-services",
+      anchor: "Custom Web App Development Services",
       icon: <RiWindowLine size={32} />,
     },
     {
-      href: "website-design-services",
-      anchor: "Website Design Services",
+      href: "website-development-services",
+      anchor: "Website Development Services",
       icon: <RiPagesLine size={32} />,
     },
-
     {
-      href: "mobile-app-development-services",
-      anchor: "Mobile App Development Services",
+      href: "mobile-app-design-service",
+      anchor: "Mobile App Design Services",
       icon: <RiSmartphoneLine size={32} />,
     },
     {
-      href: "logo-design",
-      anchor: "Logo Design",
+      href: "logo-design-services",
+      anchor: "Logo Design Services",
       icon: <RiPaintBrushLine size={32} />,
     },
   ];
@@ -185,32 +184,6 @@ export default function Services() {
                   </Text>
                 </Card>
               </GridItem>
-              <GridItem colSpan={[5, 1]} h={["100%", "200px"]}>
-                <Link
-                  as={NextLink}
-                  href={"/custom-web-app-development-services"}
-                  title={
-                    "Custom Web App Development Services | Web and App Development Services | Stupendous Web"
-                  }
-                >
-                  <Card>
-                    <Flex
-                      h={"100%"}
-                      direction={"column"}
-                      justify={"space-between"}
-                    >
-                      <Box>
-                        <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-                          Custom Web App Development Services
-                        </Heading>
-                      </Box>
-                      <Box>
-                        <RiWindowLine size={32} />
-                      </Box>
-                    </Flex>
-                  </Card>
-                </Link>
-              </GridItem>
               {services?.map((service) => (
                 <GridItem
                   key={service.anchor}
@@ -219,7 +192,7 @@ export default function Services() {
                 >
                   <Link
                     as={NextLink}
-                    href={`/services/${service.href}`}
+                    href={`/${service.href}`}
                     title={`${service.anchor} | Web and App Development Services | Stupendous Web`}
                   >
                     <Card>

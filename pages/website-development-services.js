@@ -15,18 +15,18 @@ import Section from "../components/Section";
 import HowDoesItWork from "../components/HowDoesItWork";
 import HighlightCards from "../components/HighlightCards";
 
-export default function CustomWebAppDevelopmentServices() {
+export default function WebsiteDevelopmentServices() {
   return (
     <>
       <Head>
         <title>
-          Custom Web App Development Services | Web and App Development Services
-          | Stupendous Web
+          Website Development Services | Web and App Development Services |
+          Stupendous Web
         </title>
         <meta
           property={"og:title"}
           content={
-            "Custom Web App Development Services | Web and App Development Services | Stupendous Web"
+            "Website Development Services | Web and App Development Services | Stupendous Web"
           }
         />
       </Head>
@@ -36,11 +36,11 @@ export default function CustomWebAppDevelopmentServices() {
           <GridItem colSpan={[8, 3]}>
             <Card variant={"transparent"} pt={0}>
               <Heading as={"h1"} fontSize={["2rem", "4rem"]}>
-                Custom Web App Development Services
+                Website Development Services
               </Heading>
               <Text as={"code"}>
-                Unleash your digital potential and elevate your business with
-                custom web app development services{" "}
+                Unlock the power of website development services to maximize
+                your online success{" "}
                 <Text as={"span"} className={"flash"}>
                   ▌
                 </Text>
@@ -187,7 +187,7 @@ export default function CustomWebAppDevelopmentServices() {
                   />
                 </Card>
               </GridItem>
-              <CTARow alt={"Custom Web App Development Services"} />
+              <CTARow alt={"Website Development Services"} />
               <GridItem colSpan={5}>
                 <Card variant={"transparent"}>
                   <Heading>
@@ -476,8 +476,8 @@ export default function CustomWebAppDevelopmentServices() {
                     <iframe
                       width={"560"}
                       height={"315"}
-                      src={"https://www.youtube.com/embed/bAgp3mGk_0w"}
-                      title={"Building your online presence"}
+                      src={"https://www.youtube.com/embed/2rsI05vBsD4"}
+                      title={"How websites work"}
                       allow={
                         "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       }

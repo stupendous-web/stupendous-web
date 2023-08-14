@@ -36,8 +36,16 @@ export default function Footer() {
       title: "Custom Web App Development Services",
     },
     {
+      href: "website-development-services",
+      title: "Website Development Services",
+    },
+    {
       href: "mobile-app-design-service",
       title: "Mobile App Design Services",
+    },
+    {
+      href: "logo-design-services",
+      title: "Logo Design Services",
     },
   ];
 

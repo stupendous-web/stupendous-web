@@ -25,27 +25,23 @@ import expo from "../images/technologies/expo.svg";
 export default function Solutions() {
   const solutions = [
     {
-      href: "website-design-services",
-      anchor: "Websites",
-      title: "Website Design Services",
-      icon: <RiPagesLine size={32} />,
-    },
-    {
-      href: "web-application-development-services",
+      href: "custom-web-app-development-services",
       anchor: "Web Apps",
-      title: "Web Application Development",
       icon: <RiWindowLine size={32} />,
     },
     {
-      href: "mobile-app-development-services",
+      href: "website-development-services",
+      anchor: "Websites",
+      icon: <RiPagesLine size={32} />,
+    },
+    {
+      href: "mobile-app-design-service",
       anchor: "Mobile Apps",
-      title: "Mobile App Development Services",
       icon: <RiSmartphoneLine size={32} />,
     },
     {
-      href: "logo-design",
+      href: "logo-design-services",
       anchor: "Branding",
-      title: "Logo Design",
       icon: <RiPaintBrushLine size={32} />,
     },
   ];
@@ -63,7 +59,7 @@ export default function Solutions() {
               >
                 <Link
                   as={NextLink}
-                  href={`/services/${solution.href}`}
+                  href={`/${solution.href}`}
                   title={`${solution.title} | Web and App Development Services | Stupendous Web`}
                 >
                   <Card>
