@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Card,
   Container,
   GridItem,
@@ -11,7 +12,6 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { Fragment } from "react";
 
 export default function AppsIndustries() {
   const { colorMode } = useColorMode();
@@ -35,22 +35,37 @@ export default function AppsIndustries() {
     "Online Review Apps",
   ];
 
+  const industryArticles = [
+    {
+      href: "healthcare-web-development",
+      anchor: "Healthcare",
+      title: "Healthcare Web Development",
+    },
+    {
+      href: "finance-web-development",
+      anchor: "Finance",
+      title: "Finance Web Development",
+    },
+    {
+      href: "real-estate-page-design",
+      anchor: "Real Estate",
+      title: "Real Estate Page Design",
+    },
+  ];
+
   const industries = [
-    { href: "healthcare-web-development", anchor: "Healthcare" },
-    { href: "finance-web-development", anchor: "Finance" },
-    { href: "real-estate-page-design", anchor: "Real Estate" },
-    { anchor: "Insurance" },
-    { anchor: "Manufacturing" },
-    { anchor: "Retail" },
-    { anchor: "Telecommunication" },
-    { anchor: "Law" },
-    { anchor: "Art and Design" },
-    { anchor: "Crypto and NFT's" },
-    { anchor: "Sustainability" },
-    { anchor: "Marketing and Advertising" },
-    { anchor: "Professional Services" },
-    { anchor: "Logistics" },
-    { anchor: "Many More" },
+    "Insurance",
+    "Manufacturing",
+    "Retail",
+    "Telecommunication",
+    "Law",
+    "Art and Design",
+    "Crypto and NFT's",
+    "Sustainability",
+    "Marketing and Advertising",
+    "Professional Services",
+    "Logistics",
+    "Many More",
   ];
 
   return (
@@ -90,26 +105,32 @@ export default function AppsIndustries() {
               to do what you love.
             </Text>
             <Box>
+              {industryArticles.map((industry) => (
+                <Link
+                  key={industry.href}
+                  as={NextLink}
+                  href={`/${industry.href}`}
+                  title={`${industry.title} | Web and App Development Services | Stupendous Web`}
+                >
+                  <Button
+                    bg={colorMode === "dark" ? "gray.800" : "gray.150"}
+                    mr={2}
+                    mb={2}
+                  >
+                    {industry.anchor}
+                  </Button>
+                </Link>
+              ))}
+            </Box>
+            <Box>
               {industries.map((industry) => (
-                <Fragment key={industry.anchor}>
-                  {industry.href ? (
-                    <Link as={NextLink} href={`/${industry.href}`}>
-                      <Tag
-                        bg={colorMode === "dark" ? "gray.800" : "gray.150"}
-                        mr={2}
-                      >
-                        {industry.anchor}
-                      </Tag>
-                    </Link>
-                  ) : (
-                    <Tag
-                      bg={colorMode === "dark" ? "gray.800" : "gray.150"}
-                      mr={2}
-                    >
-                      {industry.anchor}
-                    </Tag>
-                  )}
-                </Fragment>
+                <Tag
+                  key={industry}
+                  bg={colorMode === "dark" ? "gray.800" : "gray.150"}
+                  mr={2}
+                >
+                  {industry}
+                </Tag>
               ))}
             </Box>
           </Card>
