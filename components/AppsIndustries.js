@@ -12,6 +12,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { RiArrowRightLine } from "react-icons/ri";
 
 export default function AppsIndustries() {
   const { colorMode } = useColorMode();
@@ -108,7 +109,7 @@ export default function AppsIndustries() {
               and new customers and increase profitability so you can continue
               to do what you love.
             </Text>
-            <Box>
+            <Box mb={4}>
               {industryArticles.map((industry) => (
                 <Link
                   key={industry.href}
@@ -117,11 +118,14 @@ export default function AppsIndustries() {
                   title={`${industry.title} | Web and App Development Services | Stupendous Web`}
                 >
                   <Button
-                    bg={colorMode === "dark" ? "gray.800" : "gray.150"}
+                    bg={"transparent"}
+                    border={"solid 1px"}
+                    _hover={{ bg: "transparent" }}
+                    rightIcon={<RiArrowRightLine />}
                     mr={2}
                     mb={2}
                   >
-                    {industry.anchor}
+                    <Box mr={4}>{industry.anchor}</Box>
                   </Button>
                 </Link>
               ))}
