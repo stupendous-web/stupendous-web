@@ -51,10 +51,14 @@ export default function AppsIndustries() {
       anchor: "Real Estate",
       title: "Real Estate Page Design",
     },
+    {
+      href: "insurance-web-development-services",
+      anchor: "Insurance",
+      title: "Insurance Web Development Services",
+    },
   ];
 
   const industries = [
-    "Insurance",
     "Manufacturing",
     "Retail",
     "Telecommunication",
