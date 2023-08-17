@@ -60,7 +60,7 @@ export default function Solutions() {
                 <Link
                   as={NextLink}
                   href={`/${solution.href}`}
-                  title={`${solution.title} | Web and App Development Services | Stupendous Web`}
+                  title={`${solution.anchor} | Web and App Development Services | Stupendous Web`}
                 >
                   <Card>
                     <Flex

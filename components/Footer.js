@@ -49,6 +49,36 @@ export default function Footer() {
     },
   ];
 
+  const industries = [
+    {
+      href: "healthcare-web-development",
+      title: "Healthcare Web Development",
+    },
+    {
+      href: "finance-web-development",
+      title: "Finance Web Development",
+    },
+    {
+      href: "real-estate-page-design",
+      title: "Real Estate Page Design",
+    },
+    {
+      href: "insurance-web-development-services",
+      title: "Insurance Web Development Services",
+    },
+  ];
+
+  const technologies = [
+    {
+      href: "nextjs",
+      title: "NextJS",
+    },
+    {
+      href: "expo",
+      title: "Expo",
+    },
+  ];
+
   const socialLinks = [
     {
       title: "LinkedIn",
@@ -87,9 +117,9 @@ export default function Footer() {
       <SimpleGrid columns={8} spacing={2} h={["100%", "200px"]}>
         <GridItem colSpan={[8, 2]}>
           <Card variant={"transparent"} pb={[0, 4]}>
-            <List mb={[4, 0]}>
-              {links.map((link, key) => (
-                <ListItem key={key}>
+            <List mb={4}>
+              {links.map((link) => (
+                <ListItem key={link.href}>
                   <Link
                     as={NextLink}
                     href={`/${link.href}`}
@@ -105,14 +135,46 @@ export default function Footer() {
         <GridItem colSpan={[8, 2]}>
           <Card variant={"transparent"} pt={[0, 4]}>
             <List mb={4}>
-              {services.map((link, key) => (
-                <ListItem key={key}>
+              {services.map((service) => (
+                <ListItem key={service.href}>
                   <Link
                     as={NextLink}
-                    href={`/${link.href}`}
-                    title={`${link.title} | Web and App Development Services | Stupendous Web`}
+                    href={`/${service.href}`}
+                    title={`${service.title} | Web and App Development Services | Stupendous Web`}
                   >
-                    {link.title}
+                    {service.title}
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+            <Text fontSize={".75rem"} fontWeight={"bold"} mb={0}>
+              Some Industries
+            </Text>
+            <List mb={4}>
+              {industries.map((industry) => (
+                <ListItem key={industry.href}>
+                  <Link
+                    as={NextLink}
+                    href={`/${industry.href}`}
+                    title={`${industry.title} | Web and App Development Services | Stupendous Web`}
+                  >
+                    {industry.title}
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+            <Text fontSize={".75rem"} fontWeight={"bold"} mb={0}>
+              Some Technologies
+            </Text>
+            <List mb={4}>
+              {technologies.map((technology) => (
+                <ListItem key={technology.href}>
+                  <Link
+                    as={NextLink}
+                    href={`/${technology.href}`}
+                    title={`${technology.title} | Web and App Development Services | Stupendous Web`}
+                  >
+                    {technology.title}
                   </Link>
                 </ListItem>
               ))}
