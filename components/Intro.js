@@ -70,9 +70,9 @@ export default function Intro() {
                 <CTAButton />
                 <Link
                   as={NextLink}
-                  href={"/services/software-consultation"}
+                  href={"/services"}
                   title={
-                    "Software Consultation | Web and App Development Services | Stupendous Web"
+                    "Services | Web and App Development Services | Stupendous Web"
                   }
                 >
                   <Button

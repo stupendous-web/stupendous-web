@@ -139,6 +139,7 @@ export default function Footer() {
                   as={NextLink}
                   href={"https://hellostupendous.com"}
                   title={"The Stupendous Web Blog"}
+                  target={"_blank"}
                 >
                   Hello Stupendous
                 </Link>
@@ -150,6 +151,7 @@ export default function Footer() {
                   title={
                     "Dev Gotchas | Stupendous Web | If you want to build community, build stupendous software"
                   }
+                  target={"_blank"}
                 >
                   Dev Gotchas
                 </Link>

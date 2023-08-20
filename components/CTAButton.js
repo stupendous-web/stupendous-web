@@ -18,7 +18,7 @@ export default function CTAButton({ light, size = "md" }) {
           color: light ? "primary.500" : "white",
         }}
       >
-        <Box mr={4}>Get yours Now</Box>
+        <Box mr={4}>Book your Consultation</Box>
       </Button>
     </Link>
   );

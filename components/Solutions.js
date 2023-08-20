@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Card,
   Container,
   Flex,
@@ -14,7 +13,6 @@ import {
   RiPagesLine,
   RiWindowLine,
   RiSmartphoneLine,
-  RiArrowRightLine,
   RiPaintBrushLine,
 } from "react-icons/ri";
 import NextLink from "next/link";
@@ -87,7 +85,7 @@ export default function Solutions() {
               hosting, support, a payment processor, a CMS, analytics, and more
               so you can focus on creating your product.
             </Text>
-            <Flex mb={8}>
+            <Flex>
               <Box mr={4}>
                 <Link
                   as={NextLink}
@@ -109,23 +107,6 @@ export default function Solutions() {
                 <Image src={expo} alt={"Expo"} height={54} width={54} />
               </Link>
             </Flex>
-            <Link
-              as={NextLink}
-              href={"/services"}
-              title={
-                "Services | Web and App Development Services | Stupendous Web"
-              }
-            >
-              <Button
-                bg={"transparent"}
-                border={"solid 1px"}
-                _hover={{ bg: "transparent" }}
-                rightIcon={<RiArrowRightLine />}
-                mb={[0, -2]}
-              >
-                <Box mr={4}>Discover More</Box>
-              </Button>
-            </Link>
           </Card>
         </GridItem>
       </SimpleGrid>
