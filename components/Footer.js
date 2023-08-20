@@ -130,6 +130,31 @@ export default function Footer() {
                 </ListItem>
               ))}
             </List>
+            <Text fontSize={".75rem"} fontWeight={"bold"} mb={0}>
+              Blogs
+            </Text>
+            <List mb={4}>
+              <ListItem>
+                <Link
+                  as={NextLink}
+                  href={"https://hellostupendous.com"}
+                  title={"The Stupendous Web Blog"}
+                >
+                  Hello Stupendous
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  as={NextLink}
+                  href={"https://devgotchas.com"}
+                  title={
+                    "Dev Gotchas | Stupendous Web | If you want to build community, build stupendous software"
+                  }
+                >
+                  Dev Gotchas
+                </Link>
+              </ListItem>
+            </List>
           </Card>
         </GridItem>
         <GridItem colSpan={[8, 2]}>

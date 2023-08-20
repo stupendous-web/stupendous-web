@@ -17,7 +17,7 @@
     "axios": "^0.27.2",
     "dayjs": "^1.11.6",
     "framer-motion": "^10.12.8",
-    "next": "^13.4.1",
+    "next": "^13.4.17",
     "next-seo": "^5.14.1",
     "next-sitemap": "^3.1.52",
     "nodemailer": "^6.9.2",
@@ -29,6 +29,6 @@
   },
   "devDependencies": {
     "eslint": "8.19.0",
-    "eslint-config-next": "^13.4.1"
+    "eslint-config-next": "^13.4.17"
   }
 }
