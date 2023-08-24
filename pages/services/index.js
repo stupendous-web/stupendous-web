@@ -28,17 +28,17 @@ export default function Services() {
   const services = [
     {
       href: "custom-web-app-development-services",
-      anchor: "Custom Web App Development Services",
+      anchor: "Web Apps",
       icon: <RiWindowLine size={32} />,
     },
     {
       href: "website-development-services",
-      anchor: "Website Development Services",
+      anchor: "Websites",
       icon: <RiPagesLine size={32} />,
     },
     {
       href: "mobile-app-design-service",
-      anchor: "Mobile App Design Services",
+      anchor: "Mobile Apps",
       icon: <RiSmartphoneLine size={32} />,
     },
   ];
@@ -46,15 +46,8 @@ export default function Services() {
   return (
     <>
       <Head>
-        <title>
-          Services | Web and App Development Services | Stupendous Web
-        </title>
-        <meta
-          property={"og:title"}
-          content={
-            "Services | Web and App Development Services | Stupendous Web"
-          }
-        />
+        <title>Services | Stupendous Web</title>
+        <meta property={"og:title"} content={"Services | Stupendous Web"} />
         <meta
           name={"description"}
           content={
@@ -217,7 +210,7 @@ export default function Services() {
                     out on the opportunity to take your product, service, or
                     message to new heights in the digital world.
                   </Text>
-                  <Heading mt={4}>4.0 QA &amp; Support</Heading>
+                  <Heading mt={4}>4.0 Support</Heading>
                   <Text>
                     It’s important to change the oil in your website or app
                     frequently and keep the filters clean. They will need
