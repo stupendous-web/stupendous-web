@@ -23,7 +23,7 @@ export default function CTA() {
     <Container maxW={"container.xl"} pt={[4, 16]}>
       <SimpleGrid columns={8} spacing={2}>
         <GridItem colSpan={[8, 3]}>
-          <Card bg={"primary.500"}>
+          <Card variant={"primary"}>
             <Flex h={"100%"} direction={"column"} justify={"space-between"}>
               <Box>
                 <Heading

@@ -157,6 +157,11 @@ const theme = extendTheme({
         },
       }),
       variants: {
+        primary: {
+          container: {
+            bg: "linear-gradient(90deg, var(--chakra-colors-primary-600), var(--chakra-colors-primary-500))",
+          },
+        },
         transparent: {
           container: {
             bg: "transparent",

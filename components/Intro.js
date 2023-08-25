@@ -26,7 +26,11 @@ export default function Intro() {
   const { colorMode } = useColorMode();
 
   const products = ["websites", "web apps", "mobile apps"];
-  const colors = ["primary.500", "blue.500", "teal.500"];
+  const backgrounds = [
+    "linear-gradient(90deg, var(--chakra-colors-green-600), var(--chakra-colors-green-200))",
+    "linear-gradient(90deg, var(--chakra-colors-blue-600), var(--chakra-colors-blue-200))",
+    "linear-gradient(90deg, var(--chakra-colors-orange-600), var(--chakra-colors-orange-200))",
+  ];
 
   useEffect(() => {
     setTimeout(() => {
@@ -52,8 +56,14 @@ export default function Intro() {
                   <br />
                   <Text
                     as={"span"}
-                    color={colors[productIndex]}
                     className={className}
+                    fontSize={["3rem", "4rem"]}
+                    style={{
+                      backgroundImage: backgrounds[productIndex],
+                      "-webkit-background-clip": "text",
+                      backgroundClip: "text",
+                      "-webkit-text-fill-color": "transparent",
+                    }}
                   >
                     {products[productIndex]}
                   </Text>

@@ -124,7 +124,7 @@ export default function Contact() {
                   h={["100%", "394px"]}
                 >
                   <Card
-                    bg={index === 0 ? "primary.500" : undefined}
+                    variant={index === 0 ? "primary" : undefined}
                     _hover={{ bg: index === 0 ? "primary.500" : undefined }}
                   >
                     <Flex
