@@ -200,8 +200,8 @@ export default function Nextjs() {
                     help you build a beautiful, blazing-fast{" "}
                     <Link
                       as={NextLink}
-                      href={"/services/website-design-services"}
-                      title={"Website Design Services"}
+                      href={"/website-development-services"}
+                      title={"Website Development Services | Stupendous Web"}
                       color={"primary.500"}
                     >
                       website
@@ -209,8 +209,10 @@ export default function Nextjs() {
                     or{" "}
                     <Link
                       as={NextLink}
-                      href={"/services/web-application-development-services"}
-                      title={"Web Application Development Services"}
+                      href={"/custom-web-app-development-services"}
+                      title={
+                        "Custom Web App Development Services | Stupendous Web"
+                      }
                       color={"primary.500"}
                     >
                       web app

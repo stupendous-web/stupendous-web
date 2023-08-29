@@ -89,7 +89,7 @@ export default function Solutions() {
               <Box mr={4}>
                 <Link
                   as={NextLink}
-                  href={"/services/nextjs"}
+                  href={"/nextjs"}
                   title={
                     "NextJS | Web and App Development Services | Stupendous Web"
                   }
@@ -99,7 +99,7 @@ export default function Solutions() {
               </Box>
               <Link
                 as={NextLink}
-                href={"/services/expo"}
+                href={"/expo"}
                 title={
                   "Expo | Web and App Development Services | Stupendous Web"
                 }

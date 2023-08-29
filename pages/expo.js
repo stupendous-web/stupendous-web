@@ -236,8 +236,8 @@ export default function Expo() {
                     embraces meaningful work and equality. With{" "}
                     <Link
                       as={NextLink}
-                      href={"/services/mobile-app-development-services"}
-                      title={"Mobile App Development Services"}
+                      href={"/mobile-app-design-services"}
+                      title={"Mobile App Design Services | Stupendous Web"}
                       color={"primary.500"}
                     >
                       Expo

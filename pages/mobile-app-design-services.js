@@ -15,7 +15,7 @@ import Section from "../components/Section";
 import HowDoesItWork from "../components/HowDoesItWork";
 import HighlightCards from "../components/HighlightCards";
 
-export default function MobileAppDesignService() {
+export default function MobileAppDesignServices() {
   return (
     <>
       <Head>
