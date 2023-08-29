@@ -1,7 +1,7 @@
 import { LocalBusinessJsonLd } from "next-seo";
 
 export default function CustomLocalBusinessJsonLd({
-  description = "I help people with something to share who want to engage with their community by delivering web and app development services that improve their brand awareness and authority.",
+  description = "Got something to share? Engage with your community and improve your brand and credibility with my web and app development services.",
 }) {
   return (
     <LocalBusinessJsonLd
