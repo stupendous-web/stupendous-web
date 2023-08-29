@@ -18,11 +18,8 @@ export default function Expo() {
   return (
     <>
       <Head>
-        <title>Expo | Web and App Development Services | Stupendous Web</title>
-        <meta
-          property={"og:title"}
-          content={"Expo | Web and App Development Services | Stupendous Web"}
-        />
+        <title>Expo | Stupendous Web</title>
+        <meta property={"og:title"} content={"Expo | Stupendous Web"} />
         <meta
           name={"description"}
           content={

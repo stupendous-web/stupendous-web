@@ -58,7 +58,7 @@ export default function Solutions() {
                 <Link
                   as={NextLink}
                   href={`/${solution.href}`}
-                  title={`${solution.anchor} | Web and App Development Services | Stupendous Web`}
+                  title={`${solution.anchor} | Stupendous Web`}
                 >
                   <Card>
                     <Flex
@@ -90,9 +90,7 @@ export default function Solutions() {
                 <Link
                   as={NextLink}
                   href={"/nextjs"}
-                  title={
-                    "NextJS | Web and App Development Services | Stupendous Web"
-                  }
+                  title={"NextJS | Stupendous Web"}
                 >
                   <Image src={nextJS} alt={"Nextjs"} height={54} width={54} />
                 </Link>
@@ -100,9 +98,7 @@ export default function Solutions() {
               <Link
                 as={NextLink}
                 href={"/expo"}
-                title={
-                  "Expo | Web and App Development Services | Stupendous Web"
-                }
+                title={"Expo | Stupendous Web"}
               >
                 <Image src={expo} alt={"Expo"} height={54} width={54} />
               </Link>

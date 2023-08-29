@@ -17,15 +17,10 @@ export default function HealthcareWebDevelopment() {
   return (
     <>
       <Head>
-        <title>
-          Healthcare Web Development | Web and App Development Services |
-          Stupendous Web
-        </title>
+        <title>Healthcare Web Development | Stupendous Web</title>
         <meta
           property={"og:title"}
-          content={
-            "Healthcare Web Development | Web and App Development Services | Stupendous Web"
-          }
+          content={"Healthcare Web Development | Stupendous Web"}
         />
       </Head>
       <CustomLocalBusinessJsonLd />

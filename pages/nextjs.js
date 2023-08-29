@@ -18,13 +18,8 @@ export default function Nextjs() {
   return (
     <>
       <Head>
-        <title>
-          NextJS | Web and App Development Services | Stupendous Web
-        </title>
-        <meta
-          property={"og:title"}
-          content={"NextJS | Web and App Development Services | Stupendous Web"}
-        />
+        <title>NextJS | Stupendous Web</title>
+        <meta property={"og:title"} content={"NextJS | Stupendous Web"} />
         <meta
           name={"description"}
           content={

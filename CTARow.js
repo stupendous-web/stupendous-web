@@ -59,9 +59,7 @@ export default function CTARow({
               <Link
                 as={NextLink}
                 href={"/services/software-consultation"}
-                title={
-                  "Software Consultation | Web and App Development Services | Stupendous Web"
-                }
+                title={"Software Consultation | Stupendous Web"}
               >
                 <Button
                   rightIcon={<RiArrowRightLine />}

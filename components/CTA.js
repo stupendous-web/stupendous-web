@@ -44,9 +44,7 @@ export default function CTA() {
                 <Link
                   as={NextLink}
                   href={"/services"}
-                  title={
-                    "Services | Web and App Development Services | Stupendous Web"
-                  }
+                  title={"Services | Stupendous Web"}
                 >
                   <Button
                     bg={"transparent"}

@@ -18,15 +18,10 @@ export default function RealEstatePageDesign() {
   return (
     <>
       <Head>
-        <title>
-          Real Estate Page Design | Web and App Development Services |
-          Stupendous Web
-        </title>
+        <title>Real Estate Page Design | Stupendous Web</title>
         <meta
           property={"og:title"}
-          content={
-            "Real Estate Page Design | Web and App Development Services | Stupendous Web"
-          }
+          content={"Real Estate Page Design | Stupendous Web"}
         />
       </Head>
       <CustomLocalBusinessJsonLd />

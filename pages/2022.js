@@ -17,14 +17,10 @@ export default function Review2022() {
   return (
     <>
       <Head>
-        <title>
-          2022 in Review | Web and App Development Services | Stupendous Web
-        </title>
+        <title>2022 in Review | Stupendous Web</title>
         <meta
           property={"og:title"}
-          content={
-            "2022 in Review | Web and App Development Services | Stupendous Web"
-          }
+          content={"2022 in Review | Stupendous Web"}
         />
         <meta
           name={"description"}

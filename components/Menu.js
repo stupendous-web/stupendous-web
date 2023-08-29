@@ -57,10 +57,7 @@ export default function Menu() {
                 <Link
                   as={NextLink}
                   href={"/" + link.href}
-                  title={
-                    link.title +
-                    " | Web and App Development Services | Stupendous Web"
-                  }
+                  title={link.title + " | Stupendous Web"}
                   onClick={() => hideMenu()}
                 >
                   <Heading as={"p"} size={["2xl", "3xl"]}>
@@ -77,7 +74,7 @@ export default function Menu() {
           as={NextLink}
           href={"/"}
           title={
-            "Web and App Development Services | Stupendous Web | If you want to build community, build stupendous software"
+            "Stupendous Web | If you want to build community, build stupendous software"
           }
         >
           <Image

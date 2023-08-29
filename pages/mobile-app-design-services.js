@@ -19,15 +19,10 @@ export default function MobileAppDesignServices() {
   return (
     <>
       <Head>
-        <title>
-          Mobile App Design Services | Web and App Development Services |
-          Stupendous Web
-        </title>
+        <title>Mobile App Design Services | Stupendous Web</title>
         <meta
           property={"og:title"}
-          content={
-            "Mobile App Design Services | Web and App Development Services | Stupendous Web"
-          }
+          content={"Mobile App Design Services | Stupendous Web"}
         />
       </Head>
       <CustomLocalBusinessJsonLd />

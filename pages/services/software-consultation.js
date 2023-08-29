@@ -42,15 +42,10 @@ export default function WebAppDevelopment() {
   return (
     <>
       <Head>
-        <title>
-          Software Consultation | Web and App Development Services | Stupendous
-          Web
-        </title>
+        <title>Software Consultation | Stupendous Web</title>
         <meta
           property={"og:title"}
-          content={
-            "Software Consultation | Web and App Development Services | Stupendous Web"
-          }
+          content={"Software Consultation | Stupendous Web"}
         />
         <meta
           name={"description"}

@@ -38,7 +38,7 @@ export default function Navigation() {
               as={NextLink}
               href={"/"}
               title={
-                "Web and App Development Services | Stupendous Web | If you want to build community, build stupendous software"
+                "Stupendous Web | If you want to build community, build stupendous software"
               }
             >
               <Image
@@ -60,7 +60,7 @@ export default function Navigation() {
                 key={link.href}
                 as={NextLink}
                 href={`/${link.href}`}
-                title={`${link.title} | Web and App Development Services | Stupendous Web`}
+                title={`${link.title} | Stupendous Web`}
                 fontWeight={"bold"}
               >
                 <Text lineHeight={1} m={0} px={4}>

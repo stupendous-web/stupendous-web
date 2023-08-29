@@ -18,15 +18,10 @@ export default function InsuranceWebDevelopmentServices() {
   return (
     <>
       <Head>
-        <title>
-          Insurance Web Development Services | Web and App Development Services
-          | Stupendous Web
-        </title>
+        <title>Insurance Web Development Services | Stupendous Web</title>
         <meta
           property={"og:title"}
-          content={
-            "Insurance Web Development Services | Web and App Development Services | Stupendous Web"
-          }
+          content={"Insurance Web Development Services | Stupendous Web"}
         />
       </Head>
       <CustomLocalBusinessJsonLd />

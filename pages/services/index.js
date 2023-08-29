@@ -128,9 +128,7 @@ export default function Services() {
                     <Link
                       as={NextLink}
                       href={"/services/software-consultation"}
-                      title={
-                        "Software Consultation | Web and App Development Services | Stupendous Web"
-                      }
+                      title={"Software Consultation | Stupendous Web"}
                     >
                       <Button
                         size={"lg"}
@@ -180,7 +178,7 @@ export default function Services() {
                   <Link
                     as={NextLink}
                     href={`/${service.href}`}
-                    title={`${service.anchor} | Web and App Development Services | Stupendous Web`}
+                    title={`${service.anchor} | Stupendous Web`}
                   >
                     <Card>
                       <Flex

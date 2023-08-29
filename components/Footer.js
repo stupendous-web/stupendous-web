@@ -123,7 +123,7 @@ export default function Footer() {
                   <Link
                     as={NextLink}
                     href={`/${link.href}`}
-                    title={`${link.title} | Web and App Development Services | Stupendous Web`}
+                    title={`${link.title} | Stupendous Web`}
                   >
                     {link.title}
                   </Link>
@@ -167,7 +167,7 @@ export default function Footer() {
                   <Link
                     as={NextLink}
                     href={`/${service.href}`}
-                    title={`${service.title} | Web and App Development Services | Stupendous Web`}
+                    title={`${service.title} | Stupendous Web`}
                   >
                     {service.title}
                   </Link>
@@ -183,7 +183,7 @@ export default function Footer() {
                   <Link
                     as={NextLink}
                     href={`/${industry.href}`}
-                    title={`${industry.title} | Web and App Development Services | Stupendous Web`}
+                    title={`${industry.title} | Stupendous Web`}
                   >
                     {industry.title}
                   </Link>
@@ -199,7 +199,7 @@ export default function Footer() {
                   <Link
                     as={NextLink}
                     href={`/${technology.href}`}
-                    title={`${technology.title} | Web and App Development Services | Stupendous Web`}
+                    title={`${technology.title} | Stupendous Web`}
                   >
                     {technology.title}
                   </Link>
@@ -233,7 +233,7 @@ export default function Footer() {
                 as={NextLink}
                 href={"/"}
                 title={
-                  "Web and App Development Services | Stupendous Web | If you want to build community, build stupendous software"
+                  "Stupendous Web | If you want to build community, build stupendous software"
                 }
               >
                 Stupendous Web

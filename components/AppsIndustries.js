@@ -115,7 +115,7 @@ export default function AppsIndustries() {
                   key={industry.href}
                   as={NextLink}
                   href={`/${industry.href}`}
-                  title={`${industry.title} | Web and App Development Services | Stupendous Web`}
+                  title={`${industry.title} | Stupendous Web`}
                 >
                   <Button
                     bg={"transparent"}

@@ -74,15 +74,8 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>
-          Contact | Web and App Development Services | Stupendous Web
-        </title>
-        <meta
-          property={"og:title"}
-          content={
-            "Contact | Web and App Development Services | Stupendous Web"
-          }
-        />
+        <title>Contact | Stupendous Web</title>
+        <meta property={"og:title"} content={"Contact | Stupendous Web"} />
         <meta
           name={"description"}
           content={

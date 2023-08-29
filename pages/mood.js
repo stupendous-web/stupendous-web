@@ -16,11 +16,8 @@ export default function Mood() {
   return (
     <>
       <Head>
-        <title>Mood | Web and App Development Services | Stupendous Web</title>
-        <meta
-          property={"og:title"}
-          content={"Mood | Web and App Development Services | Stupendous Web"}
-        />
+        <title>Mood | Stupendous Web</title>
+        <meta property={"og:title"} content={"Mood | Stupendous Web"} />
         <meta
           name={"description"}
           content={

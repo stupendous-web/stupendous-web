@@ -50,15 +50,12 @@ export default function Articles({ articles }) {
               {articles[0]?.featured_image && (
                 <Link
                   href={"/articles/" + articles[0]?.slug}
-                  title={
-                    articles[0]?.title +
-                    " | Web and App Development Services | Stupendous Web"
-                  }
+                  title={articles[0]?.title + " | Stupendous Web"}
                 >
                   <AspectRatio ratio={2} mb={4}>
                     <Image
                       src={articles[0]?.featured_image}
-                      alt={`${articles[0]?.title} | Web and App Development Services | Stupendous Web`}
+                      alt={`${articles[0]?.title} | Stupendous Web`}
                       fill
                       style={{ objectFit: "cover" }}
                     />
@@ -70,10 +67,7 @@ export default function Articles({ articles }) {
                   <Heading fontSize={["2rem", "4rem"]} mb={4}>
                     <Link
                       href={"/articles/" + articles[0]?.slug}
-                      title={
-                        articles[0]?.title +
-                        " | Web and App Development Services | Stupendous Web"
-                      }
+                      title={articles[0]?.title + " | Stupendous Web"}
                     >
                       {articles[0]?.title}
                     </Link>
@@ -126,10 +120,7 @@ export default function Articles({ articles }) {
                         {article?.featured_image && (
                           <Link
                             href={"/articles/" + article?.slug}
-                            title={
-                              article?.title +
-                              " | Web and App Development Services | Stupendous Web"
-                            }
+                            title={article?.title + " | Stupendous Web"}
                           >
                             <AspectRatio maxW={"100%"} ratio={2} mb={4}>
                               <Image
@@ -144,10 +135,7 @@ export default function Articles({ articles }) {
                         <Heading mb={4}>
                           <Link
                             href={"/articles/" + article?.slug}
-                            title={
-                              article?.title +
-                              " | Web and App Development Services | Stupendous Web"
-                            }
+                            title={article?.title + " | Stupendous Web"}
                           >
                             {article?.title}
                           </Link>

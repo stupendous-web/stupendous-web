@@ -18,15 +18,10 @@ export default function FinanceWebDevelopment() {
   return (
     <>
       <Head>
-        <title>
-          Finance Web Development | Web and App Development Services |
-          Stupendous Web
-        </title>
+        <title>Finance Web Development | Stupendous Web</title>
         <meta
           property={"og:title"}
-          content={
-            "Finance Web Development | Web and App Development Services | Stupendous Web"
-          }
+          content={"Finance Web Development |  Stupendous Web"}
         />
       </Head>
       <CustomLocalBusinessJsonLd />

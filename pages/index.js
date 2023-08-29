@@ -15,13 +15,13 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Web and App Development Services | Stupendous Web | If you want to
-          build community, build stupendous software.
+          Stupendous Web | If you want to build community, build stupendous
+          software.
         </title>
         <meta
           property={"og:title"}
           content={
-            "Web and App Development Services | Stupendous Web | If you want to build community, build stupendous software."
+            "Stupendous Web | If you want to build community, build stupendous software."
           }
         />
         <meta

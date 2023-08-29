@@ -14,15 +14,10 @@ export default function FAQs() {
   return (
     <>
       <Head>
-        <title>
-          Web and App Development FAQ&apos;s | Web and App Development Services
-          | Stupendous Web
-        </title>
+        <title>Web and App Development FAQ&apos;s | Stupendous Web</title>
         <meta
           property={"og:title"}
-          content={
-            "Web and App Development FAQ's | Web and App Development Services | Stupendous Web"
-          }
+          content={"Web and App Development FAQ's | Stupendous Web"}
         />
         <meta
           name={"description"}

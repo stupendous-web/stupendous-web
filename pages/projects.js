@@ -14,15 +14,8 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>
-          Projects | Web and App Development Services | Stupendous Web
-        </title>
-        <meta
-          property={"og:title"}
-          content={
-            "Projects | Web and App Development Services | Stupendous Web"
-          }
-        />
+        <title>Projects | Stupendous Web</title>
+        <meta property={"og:title"} content={"Projects | Stupendous Web"} />
         <meta
           name={"description"}
           content={

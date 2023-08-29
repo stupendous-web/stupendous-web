@@ -19,15 +19,10 @@ export default function CustomWebAppDevelopmentServices() {
   return (
     <>
       <Head>
-        <title>
-          Custom Web App Development Services | Web and App Development Services
-          | Stupendous Web
-        </title>
+        <title>Custom Web App Development Services | Stupendous Web</title>
         <meta
           property={"og:title"}
-          content={
-            "Custom Web App Development Services | Web and App Development Services | Stupendous Web"
-          }
+          content={"Custom Web App Development Services | Stupendous Web"}
         />
       </Head>
       <CustomLocalBusinessJsonLd />
