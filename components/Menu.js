@@ -12,7 +12,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import logo from "../images/logo.png";
+import logo from "../images/logo-black-256.png";
 
 export default function Menu() {
   const [backgroundClass, setBackgroundClass] = useState("");
