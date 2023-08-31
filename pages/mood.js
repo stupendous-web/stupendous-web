@@ -11,6 +11,12 @@ import {
 import CTA from "../components/CTA";
 import me from "../images/me.png";
 import Head from "next/head";
+import HighlightCards from "../components/HighlightCards";
+import {
+  RiBriefcaseLine,
+  RiServiceLine,
+  RiPaintBrushLine,
+} from "react-icons/ri";
 
 export default function Mood() {
   return (
@@ -77,6 +83,28 @@ export default function Mood() {
                       CSU, award-winning projects, and years of work experience
                       are all at your disposal.
                     </Text>
+                  </Box>
+                </Card>
+              </GridItem>
+              <HighlightCards
+                cards={[
+                  {
+                    heading: "Meaningful Authentic Work",
+                    icon: <RiBriefcaseLine size={32} />,
+                  },
+                  {
+                    heading: "Tolerance & Equality",
+                    icon: <RiServiceLine size={32} />,
+                  },
+                  {
+                    heading: "Creativity",
+                    icon: <RiPaintBrushLine size={32} />,
+                  },
+                ]}
+              />
+              <GridItem colSpan={[5]}>
+                <Card variant={"transparent"}>
+                  <Box>
                     <Heading>Values</Heading>
                     <Text>
                       Our values come up in everything we do. I value meaningful
@@ -88,68 +116,6 @@ export default function Mood() {
                       tolerant world through inventiveness.
                     </Text>
                   </Box>
-                </Card>
-              </GridItem>
-              <GridItem colSpan={[5, 2]} h={["100%", "400px"]}>
-                <Card>
-                  <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-                    Meaningful Work
-                  </Heading>
-                  <Text>
-                    I want to make an impact and help others make an impact in
-                    our lives that benefits ourselves, benefits each other, and
-                    make the world a little more fun!
-                  </Text>
-                </Card>
-              </GridItem>
-              <GridItem colSpan={[5, 2]} h={["100%", "400px"]}>
-                <Card>
-                  <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-                    Tolerance
-                  </Heading>
-                  <Text>
-                    Diversity is what brings the most revolutionary
-                    problem-solvers to the table and I want to and support
-                    others who embrace and foster it.
-                  </Text>
-                </Card>
-              </GridItem>
-              <GridItem colSpan={[5, 2]} h={["100%", "400px"]}>
-                <Card>
-                  <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-                    Equality
-                  </Heading>
-                  <Text>
-                    I&apos;ve seen so much inequality during my time and have
-                    experienced it myself so I want to help create equality in
-                    the world by donating a portion of my work to important
-                    causes.
-                  </Text>
-                </Card>
-              </GridItem>
-              <GridItem colSpan={[5, 2]} h={["100%", "400px"]}>
-                <Card>
-                  <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-                    Creativity
-                  </Heading>
-                  <Text>
-                    I&apos;ve always enjoyed art of all kinds, especially visual
-                    art, and find myself coming up with creative solutions that
-                    I would like to extend to you, your work, and your
-                    community.
-                  </Text>
-                </Card>
-              </GridItem>
-              <GridItem colSpan={[5, 2]} h={["100%", "400px"]}>
-                <Card>
-                  <Heading as={"h3"} fontSize={"1rem"} mb={4}>
-                    Authenticity
-                  </Heading>
-                  <Text>
-                    Trust is important to me, so I want to be transparent about
-                    myself and about my work with others and do my best to
-                    deliver a truly authentic product.
-                  </Text>
                 </Card>
               </GridItem>
             </SimpleGrid>
