@@ -60,9 +60,9 @@ export default function Intro() {
                     fontSize={["3rem", "4rem"]}
                     style={{
                       backgroundImage: backgrounds[productIndex],
-                      "-webkit-background-clip": "text",
+                      WebkitBackgroundClip: 'text',
                       backgroundClip: "text",
-                      "-webkit-text-fill-color": "transparent",
+                      WebkitTextFillColor: 'transparent',
                     }}
                   >
                     {products[productIndex]}

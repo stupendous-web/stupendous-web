@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Script from "next/script";
-import StupendousAnalytics from "stupendous-analytics-next";
-import { Analytics } from "@vercel/analytics/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../utils/chakra";
 import "../styles/global.css";
@@ -26,7 +24,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <StupendousAnalytics site={"642cf18729b904f37d859011"} />
       {isProduction && (
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
@@ -52,7 +49,6 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />
-        <Analytics />
         <Footer />
         <Pride />
         <Navigation />
