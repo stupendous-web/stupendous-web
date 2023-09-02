@@ -68,11 +68,11 @@ const theme = extendTheme({
         bg: mode("gray.50", "black")(props),
         color: mode("gray.800", "gray.200")(props),
         fontSize: 18,
-        overflowX: "hidden",
         lineHeight: 2,
       },
       body: {
         mt: "6rem",
+        overflowX: "hidden",
       },
     }),
   },
