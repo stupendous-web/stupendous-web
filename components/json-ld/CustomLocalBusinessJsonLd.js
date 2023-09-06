@@ -12,15 +12,15 @@ export default function CustomLocalBusinessJsonLd({
       url={"https://stupendousweb.com"}
       telephone={"+17023089375"}
       address={{
-        streetAddress: "228 Park Ave S PMB",
-        addressLocality: "New York",
-        addressRegion: "NY",
-        postalCode: "10003",
+        streetAddress: "5150 Spyglass Hill Dr.",
+        addressLocality: "Las Vegas",
+        addressRegion: "NV",
+        postalCode: "89142",
         addressCountry: "US",
       }}
       geo={{
-        latitude: "40.737560",
-        longitude: "-73.988500",
+        latitude: "36.140720",
+        longitude: "-115.061710",
       }}
       rating={{ ratingValue: 5, ratingCount: 6 }}
     />
